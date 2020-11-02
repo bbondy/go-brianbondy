@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>{{.Title}}</title>
+    <script src="/static/js/analytics.js" async></script>
+    <link rel="stylesheet" href="/static/css/main.css">
+    <link rel="stylesheet" href="/static/css/font-awesome/font-awesome.css">
+    <link rel="stylesheet" href="/static/css/highlight-default.css">
+    <link rel="shortcut icon" href="/static/img/favicon.ico">
+    <meta name="theme-color" content="#9AC0FF">
+    {{if (avail "FBTitle" .)}}
+    <meta property="og:title" content="{{.FBTitle}}">
+    {{end}}
+    {{if (avail "FBSiteName" .)}}
+    <meta property="og:site_name" content={{.FBSiteName}}>
+    {{end}}
+    {{if (avail "FBShareUrl" .)}}
+    <meta property="og:url" content={{.FBShareUrl}}>
+    {{end}}
+    {{if (avail "FBDescription" .)}}
+    <meta property="og:description" content={{.FBDescription}}>
+    {{end}}
+    {{if (avail "FBImageUrl" .)}}
+    <meta property="og:image" content={{.FBImageUrl}}>
+    {{else}}
+    <meta property="og:image" content="https://brianbondy.com/img/avatar.png">
+    {{end}}
+    
+  </head>
+  <body>
+    <div class="topBar"><a href="/"><img title="Brian R. Bondy" src="/static/img/logo.png"></a><ul class="topBarLinks"><a href="/"><li class="current">Blog</li></a><a href="/blog/filters"><li class="">Filters</li></a><a href="/projects"><li class="">Projects</li></a><a href="/other"><li class="">Other</li></a><a href="/about"><li class="">About</li></a><a href="/contact"><li class="">Contact</li></a><a href="/feeds/rss" target="_blank" rel="noopener noreferrer"><li class="social"><span title="RSS" class="fa fa-rss"></span></li></a><a href="https://twitter.com/brianbondy" target="_blank" rel="noopener noreferrer"><li class="social"><span title="Twitter" class="fa fa-twitter"></span></li></a><a href="https://github.com/bbondy" target="_blank" rel="noopener noreferrer"><li class="social"><span title="GitHub" class="fa fa-github"></span></li></a><a href="https://www.linkedin.com/in/bbondy" target="_blank" rel="noopener noreferrer"><li class="social"><span title="LinkedIn" class="fa fa-linkedin"></span></li></a></ul></div>
+    <h1>{{.Title}}</h1>
+    <p>{{.Content}}</p>
+    <div id="mountPoint"/>
+    {{block "content" .}}Default content{{end}}
+  </body>
+</html>
