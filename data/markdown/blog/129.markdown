@@ -1,0 +1,101 @@
+<img src='/static/img/blogpost_129/Windows8Logo-2.jpg'>
+
+As of Monday of this week, development work began on Firefox for Metro.
+
+---
+
+## A bit of background on Windows 8 Metro and Firefox
+
+
+It turns out that on Windows 8 there are 3 types of applications:
+
+1. Classic desktop applications
+2. Metro applications
+3. Metro style enabled desktop browsers
+
+<div style='float:left'>
+<img src='/static/img/blogpost_118/firefox-logo.png' style='float:left; padding:10px;'>
+
+Firefox will fall into the third category, meaning you can run Firefox as a desktop application, and you can run it as a Metro application.
+Supporting the Metro side of things will require a lot of new code, so this is a very large project.
+
+Unlike Metro applications, Metro style enabled desktop browsers have the ability to run outside of the Metro sandbox.  Meaning not only can we build a browser, but we can build a powerful browser which gives an experience equal to that of a classic Desktop browser.
+</div>
+
+Metro style enabled desktop browsers have access to most Win32 API and the entire new WinRT API.
+
+Unfortunately a browser can only participate in Metro mode if it is the default browser.  So if Firefox is not the default browser on a system, you can't use it in Metro mode.  This is a decision made by Microsoft.
+
+The Firefox Metro enabled desktop browser can be, and will be included and packaged in the traditional way.  I'm not certain if it will be allowed on the Windows store or not since it is not of Metro application type.
+
+---
+
+## Languages we'll be programming in
+
+We will be using the Windows Runtime C++ Template Library (WRL) which is similar to C++ / ATL.
+
+We may also be using C++/CX which does compile down to native code but has some non-standard C++ extensions that allow for code to be about 1/10 the size.
+
+Our hesitation in using any C++/CX code is that it will definitely require a new build environment.  Personally I think it would be worth using C++/CX in the long run.
+WRL and C++/CX code can freely be mixed even in the same source file.
+
+The GUI will be made mostly by painting to DirectX.   XAML may be used in a very limited fashion. XAML is the main presentation layer in Windows 8 Metro if you are using a .NET enabled language or native C++.  XAML is a declarative XML-based language similar to Mozilla's own XUL.  XAML is familiar to WPF and Silverlight developers.  XUL will most likely still be rendered to the DirectX surface.
+
+Windows 8 has a minimum requirement of hardware that supports Direct X 9 and I'm not aware of any alternative like GDI available. So the Direct X blacklist of graphic cards we currently maintain may not be applicable in Metro mode.
+
+
+---
+
+## Development milestones
+
+Our first major goal is to get an experimental build of Fennec or Firefox running in Metro.
+This work is mainly being tracked in [Bug 732518][732518].
+
+To get started we read the MSDN whitepaper entitled [Developing a Metro style enabled Desktop Browser][1]. This document lacked quite a bit of information though so a lot of registry hacking was needed to get things working. Jim and I documented a lot of this missing information [here][missinginfo] and [here][missinginfo2].
+
+Most of our week was spent with registry exports, diffs, [Process Monitor][procmon] logs, and other tools.  The first couple minor goals were to get a recognized Metro tile showing up, getting it to launch our process, and then finally displaying a Metro app.
+
+Jim and I hit those first milestones and made a basic application which launches in Metro mode as a medium integrity process. The application doesn't do anything exciting except display a DirectX surface and draw some text to the surface that tracks mouse movement.
+
+As a developer, your job gets pretty hard when you do a Google search for topics surrounding this barely supported third Metro application type and consistently get zero, one, or if you are lucky, two search results.   All results being only slightly on topic.
+
+---
+
+## Next development steps
+
+We have several smaller goals that we want to tackle next week:
+
+- Figure out how to make our own PRI files with our own resources.
+- Get a C++/XAML application working
+- Get our app launching through a delegate DLL instead of an EXE
+- Figure out how to interop XAML / DirectX.
+- Start to figure out how we will paint content to our DirectX surface with the graphics layer
+- Figure out how to implement other contracts
+- Look into native theme rendering
+- Probably others
+
+
+---
+
+## Meetings
+
+We had our first weekly developer meeting half way through the week with attendees: [Robert Strong][rstrong], [Tim Abraldes][tabraldes], [Jim Mathies][jimm] and [myself (Brian R. Bondy)][bbondy].
+
+---
+
+## Helping out
+
+We're still extremely early in development so we're not ready for help with things like how the UI should look yet.
+
+If you want to help with the development effort to get Firefox up and running in Metro, we'd love to hear from you. Please sync up with us in #windev on [IRC][irc] or email me directly at netzen at gmail.com.
+
+[732518]: https://bugzilla.mozilla.org/show_bug.cgi?id=732518
+[1]: http://go.microsoft.com/fwlink/?LinkID=243079
+[jimm]: http://www.mathies.com/weblog/
+[bbondy]: https://brianbondy.com/
+[rstrong]: http://blog.mozilla.com/rstrong/
+[tabraldes]: http://www.linkedin.com/in/timabraldes
+[irc]: https://wiki.mozilla.org/IRC
+[procmon]: http://technet.microsoft.com/en-us/sysinternals/bb896645
+[missinginfo]: https://bugzilla.mozilla.org/show_bug.cgi?id=732518#c12
+[missinginfo2]: https://bugzilla.mozilla.org/show_bug.cgi?id=732518#c13

@@ -1,0 +1,27 @@
+<p>★★★★★ (<span itemprop="rating">5</span> stars out of 5)</p>
+
+If like me, the last time you read about HTML you read that XHTML was the future, and you are wondering what happened since then, this book is for you.  
+
+[Mark Pilgrim][4] does a great job of showing you:
+
+1. The direction that web standards are going
+2. How web browsers and hence web standards have evolved to get to where they are today
+3. Introduction to the main new HTML5 elements and DOM APIs
+4. How HTML5 is already thriving, and how you can use it today.   (Including the Javascript library [Modernizr][1] for detecting HTML5 features)
+
+If you work on websites, web apps, have a blog, have a company website, or are just curious about how HTML is evolving, [HTML5: Up and Running published by O'Reilly][2] is for you.
+
+Before reading this book I always had the feeling of: “how can I improve my blog and company website”.  Now I have a long TODO list of things I know I can do to improve them.
+
+HTML5 was designed around already existing browser features. The latest versions of Safari, Chrome, Firefox, IE9, and Opera all support most HTML5 features, and do it consistently according to what the standard says.  Default browsers on iPhone, iPads, and Android phones also support most HTML5 features already, and also do it well.  Many parts of HTML5 can be used with fallback methods if HTML5 support does not exist already for older browsers.
+
+This book contains very enjoyable coverage on new HTML5 elements, new DOM APIs, and some other related web technologies.  Some topics covered include: canvas, video, local storage, web workers, offline web applications, geolocation API,  microformats, and adding semantics to your web pages.    The book is a quick read and leaves you feeling that you have learnt something which will help you in the future.
+
+I would have liked to see coverage on Drag-and-drop and also when to use SVG over the new canvas element and canvas APIs.
+
+This book is derived from [Dive into HTML5][3] which is by the author.
+
+[1]: http://www.modernizr.com/
+[2]: http://oreilly.com/catalog/9780596806033
+[3]: http://diveintohtml5.org/
+[4]: http://diveintomark.org/

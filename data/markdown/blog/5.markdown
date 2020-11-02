@@ -1,0 +1,108 @@
+Compilation in C/C++ is a very big operation due to C/C++'s complex grammar.   Source files typically residing in `.cpp` are always only compiled one time; however, header files typically residing in `.h` files are compiled once per compiler execution.   Each header file needs to be recompiled because there could be different effects made from the preprocessor.  
+
+Since an individual header file is often compiled many times, header compilation as a whole can make up a large part of your total C/C++ compilation time.
+
+Two of  ways you can do to reduce this portion of compilation time is:
+
+1. Forward declarations
+2. Precompiled headers
+
+---
+
+## Forward declarations
+
+Extensively using forward declarations at all times will give you the biggest performance in compilation time.
+
+Forward declaration means to declare something without defining it in a header file.  Include the header file instead in the source file where it will be compiled and parsed only once.
+
+**c.h:**
+
+    class C
+    {
+    public:
+      C()
+      {
+      }
+    };
+
+
+**d.h:**
+
+    class C; //<--- This is a forward declaration
+
+    class D
+    {
+    public:
+      D()
+      {
+      }
+
+      C c;
+    };
+
+Notice that d.h does not include c.h even though it uses a class declared in c.h
+
+
+**main.cpp:**
+
+    #include "c.h"
+    #include "d.h"
+
+    int main(int argc, char **argv)
+    {
+      D d;
+      return 0;
+    }
+
+In main.cpp it is important that you include `c.h` before `d.h`; otherwise, the compiler will complain about C being an undefined type.
+
+
+Note you can also perform forward declarations with template types:
+
+    template <typename T>
+    class CMyClass;
+
+---
+
+## Precompiled headers
+
+Precompiled headers allow you to speed up compile time when *compiling* C++ source code.  You typically put anything in a precompiled header that doesn't change often or ever such as the standard library includes or boost includes.
+
+Precompiled headers are available for most C++ compilers including [GCC][1] and [Visual C++][2].  Both of those implementations are similar.
+
+Only 1 precompiled header can be included per compilation, so therefore at a minimum per file.  But in a single project you can have several different precompiled headers.
+
+In Visual C++ the compiled headers have an extension of `.pch` and in GCC they have an extension of `.gch`.
+
+In GCC you compile headers just like any other file but you put the output inside a file with a suffix of .gch.
+
+So for example if you precompile stdafx.h you will have a precompiled header that will be automatically searched for called stdafx.h.gch anytime you include stdafx.h
+
+
+
+
+**stdafx.h:**
+
+    #include <string>
+    #include <stdio.h>
+
+**a.cpp:**
+
+    #include "stdafx.h"
+
+    int main(int argc, char**argv)
+    {
+      std::string s = "Hi";
+      return 0;
+    }
+
+**Then compile as:**
+
+    > g++ -c stdafx.h -o stdafx.h.gch
+    > g++ a.cpp
+    > ./a.out
+
+Your compilation will work even if you remove stdafx.h after step 1.
+
+[1]: http://gcc.gnu.org/onlinedocs/gcc/Precompiled-Headers.html
+[2]: http://msdn.microsoft.com/en-us/library/hd8sctab(VS.80).aspx

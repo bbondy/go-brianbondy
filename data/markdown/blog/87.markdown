@@ -1,0 +1,120 @@
+About 7 years ago my company and I created a program called Remote Task Manager.  It was exactly like the Windows Task Manager, but it had an extra left bar which showed all the computers you wanted to control.  And it had a button for *View This Process*.
+
+The button made any process magically show up on your screen remotely.  
+
+This program didn't last long though, my company's focus went to backup software and we shelfed the product at a young age.   This program was built by taking screenshots and sending them from computer to computer and was built with a custom protocol.
+
+This article investigates more proper ways for implementing remote-control-computer software.
+
+## An introduction to some terms:
+
+Images on computers can be categorized into 2 groups:
+
+1. **Vector graphics:** Graphic that are built from stored instructions.  These stored instructions are used to draw primitives such as points, lines, curves, shapes, polygons.  
+  Examples of vector graphic file formats include: SVG, Adobe Illustrator files.
+
+- **Raster graphics:** Graphic that are built from a grid of pixels and their color values.  Examples include: BMP files, GIF files, JPG files.
+
+Likewise, displays can also be categorized into 2 groups:
+
+
+1. **Vector graphic displays:** Video output display whose source comes from vector graphics.
+-  **A framebuffer display:** Video output display whose source comes from a memory buffer containing a frame of data.   That is to say it stores a raster graphic.
+
+
+The VNC protocol works for any framebuffer display.   That is to say it relates to #2s above, but not the #1s above.  That means it applies to just about every operating system whether it is Linux, Solaris, OS X, or Windows.
+
+[The remote framebuffer (RFB) protocol][4] is a protocol used for remotely accessing a GUI.  The VNC protocol is built from the RFB protocol.  The RFB protocol, like most (but not all) other protocols can be divided into a client and server.
+
+## The RFB Client:
+
+The computer that wants to control the remote computer is called the RFB Client.  Programming an RFB Client is easier relative to programming an RFB server, mostly because the client is stateless.  
+
+Having a stateless protocol is an absolute gift from god.  It means that **when** you disconnect, you can reconnect  easily, whether on purpose, or by accident, or by hardware/software failure.
+An example of a completely stateless protocol is HTTP.  An example of a completely stateful protocol is FTP.
+
+After setting the frame format that the RFB Client wants, the RFB Client will request updated frames as it wants them from the RFB Server.  For every update the RFB Client obtains, it displays it on the screen.    The RFB Client does not need to request the entire frame each time. It can request an x,y position and width,height as well.
+
+The RFB Client also sends Input events such as keyboard presses, mouse presses, mouse moves, and more to the RFB Server.  
+
+
+I won't go into much more details about how things work at the RFB protocol level, but if you'd like to know more [please read this document][5].
+
+## The RFB Server:
+
+The computer that actually has the framebuffer that you want to see is called the RFB server.  Programming this is harder relative to the RFB Client because it needs to 1) manage one or more RFB Clients, 2) respond to input events from the RFB Client, and 3) Provide updated frames to the RFB Client.
+
+Several requests can occur from the RFB Client and the server may decide to simply send only one frame update.
+
+The RFB Server needs to only send incremental updates to the RFB Client, unless the RFB Client specifically sets the Incremental value to false.  Typically all requests form the RFB Client will have Incremental set to True.  Except of course for the first request and any first request after a reconnect.
+
+Both the RFB Server and RFB Client can also notify each other about cut text, and the RFB Server can notify the RFB Client to ring a bell if it has one.
+
+## TCP hole punching:
+
+One thing that the RFB protocol does not address directly is connecting 2 endpoints that are behind a router/NAT (henceforth referred to as a NAT).
+
+Just about everyone on the internet now days has  a NAT.  A NAT connects multiple computers to 1 Internet connection.  That means that each computer behind that NAT has an inside IP address of its own, but they all share the same outside IP address.  
+
+The way that the NAT knows which computer to send which data coming in to its IP to, is via a network address translation table.  
+
+When a computer behind a NAT initiates a connection to a server and a port, the NAT stores the internal IP and performs the connection for that computer.  Any data coming back from that server then gets routed back to the original computer that initiated the connection.
+
+This works nicely if the computer behind the NAT initiates the connection, but what if an outside computer wants to connect to one of your internal computers, and it wants to initiate the connection?   It's not possible.   The outside computer knows only about your outside IP and knows nothing about internal IPs of the computers behind that external IP.
+
+The way around this problem, if you have the source code to the programs you want to make the connections between, is known as TCP hole punching.  
+
+TCP hole punching means that both computers connect to a known server, and then the communication will continue after that between the 2 computers.  I will not do it justice by explaining it; however, you can read a great article called [Peer-to-Peer Communication Across Network Address Translators][1] on the matter by Bryan Ford, Pyda Srisuresh, and Dan Kegel.
+
+Getting across NATs is probably one of the hardest things when doing network programming.  The problem is that just about everyone on the internet now days has a NAT.   This problem is also shared with P2P protocols such as the Gnutella protocol.  Google Talk is another example.
+
+A commonly used library for doing all of this work for you and getting across NATs is [STUNT][8].  STUNT stands for: Simple Traversal of UDP Through NATs and TCP too.
+
+## Getting across firewalls:
+
+If possible it is best to put your connection to a port like 443 (HTTPS)  or port 80 (HTTP).  Because almost all firewalls will let you have outgoing socket connections on those ports.
+
+
+## Windows specific, sessions and more:
+
+More advanced Windows specific functionality relating to remotely controlling computers has to do with sessions.  
+
+In windows you can have 1 or more sessions.   Each session represents one logged on user.  A single user can login multiple times and belong to multiple sessions.  Each session can have one or more Desktop's.  An example of a Desktop is what you are looking at now, another example is your screensaver.  Both your screensaver and what you are looking at now belong to the same session, but have a different Desktops.
+
+Every application in windows that is started can be started in any session and in any Desktop.  But that Session and Desktop cannot be changed once the application is already started.   For this reason, it is typical to see desktop software  of all types that have a core program, plus a viewer.  The core program can be started on any session and in any desktop, it has no GUI.  The viewer can then be started on one or more sessions and desktops and communicates with the Core program and displays a GUI to you.
+
+In Windows Vista and later, Microsoft introduced something called Session 0 isolation.  They discuss its impact in this article aptly entitled [Impact of Session 0 Isolation on Services and Drivers in Windows Vista][2].  Did it ever have an impact...
+
+The Session 0 isolation change  broke many programs that were compatible with Windows XP and Windows 2003.  The change created hundreds of thousand of developer hours needed from 3rd party developers.  Suddenly complete programs needed to be restructured to accommodate for Session 0 isolation.   In general this change means that all Windows services now run in Session 0.  Session 0 cannot have any GUI associated with it.  No GUI can be seen across sessions anymore.   And the applications you see now cannot be in the same session as Session 0.  The problems that this causes are far reaching, but for the most part most companies worked around them.
+
+Sessions can be controlled by programmers using the WTS API which is now called the [Remote Desktop Services API][3].  This article focus' on the RFB Protocol but you can also accomplish Remote Control in Windows by using the RDP Protocol and related API.
+
+If multiple Sessions and Desktops exist, the RFB Server must decide which one to use.  This may or may not be the same as which session and desktop the RFB Server runs from.
+
+## Hooking user input:
+
+Another important aspect of remotely controlling computers is called a [Hook][7].  
+
+A Hook allows you to get feedback system wide, or per process wide about what events are happening on the system.  A typical Hook that you would install is a keyboard and mouse hook.   These hooks would be installed on the RFB Server so it can better detect changes to send to the RFB Client.
+
+In Windows, Hooks are implemented in a DLL and Windows will load that DLL and notify it of the events of what the hook is registered to do.
+
+## Web Versions:
+
+In some software for remotely controlling computers, the Client side is on the web.  This is simply done by HTTP and a lot of AJAX.  The web page itself makes the requests directly to the Server and updates the web browser dynamically with the content of the retrieved framebuffers.
+
+## Remote-Control-Computer Software:
+
+There are many VNC client/server implementations.  Most are open source and licensed under the GPL.  
+
+There are also VNC client/server implementations that are based on the VNC protocol but don't follow it exactly.   An example is [Fog Creek Copilot][6].  I go into more detail about the [Fog creek Copilot project here][9].
+
+[1]: http://www.brynosaurus.com/pub/net/p2pnat/
+[2]: http://www.microsoft.com/whdc/system/vista/services.mspx
+[3]: http://msdn.microsoft.com/en-us/library/aa383464(VS.85).aspx
+[4]: http://www.csd.uwo.ca/~magi/doc/vnc/rfbproto.pdf
+[5]: http://www.csd.uwo.ca/~magi/doc/vnc/rfbproto.pdf
+[6]: https://www.copilot.com/
+[7]: http://stackoverflow.com/questions/310576/low-level-keyboard-input-on-windows/310602#310602
+[8]: http://nutss.gforge.cis.cornell.edu/stunt.php
+[9]: http://stackoverflow.com/questions/879028/remote-control-api-or-how-to-start/1459492#1459492

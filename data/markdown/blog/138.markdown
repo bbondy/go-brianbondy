@@ -1,0 +1,13 @@
+In case you missed it, Harvey Anderson - Mozilla General Counsel, just published a great blog post about what's going on with Windows on ARM support.
+
+Without competition there is no innovation.  You can read the post here:
+
+[Windows on ARM Users Need Browser Choice Too][1]
+
+To be clear, we will still have a Metro browser as previously blogged about on non ARM platforms.
+
+To see why ARM matters, see Asa's post here:
+[Why Windows Classic on ARM Matters][2]
+
+[1]: http://blog.mozilla.org/blog/2012/05/09/windows-on-arm-users-need-browser-choice-too/
+[2]: http://weblogs.mozillazine.org/asa/

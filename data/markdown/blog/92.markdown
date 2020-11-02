@@ -1,0 +1,174 @@
+## What are abstract functions?
+
+Abstract functions, are functions whose implementation is not yet specified.
+
+They are useful because:
+
+- They allow you to define an interface without defining an implementation.  
+- A base class may not have a specific default definition for a function, but you know that derived types will.
+
+In C++ both interfaces, and abstract classes are done via pure virtual functions.  Pure virtual functions simply say that derived types must override the function.  The base type can have a default  implementation (that the derived types can use by calling the base function directly) but the base functions typically have no implementation at all.
+
+In C# there are different constructs for interfaces (`interface`) and undefined base functions (`abstract`).
+
+This post discusses what pure virtual function call errors are, and how they work across the following languages: C++, C#, and Python.
+
+## What is a pure virtual function call error?
+
+Pure virtual function call errors could potentially happen, in a programming language that allows you to create partially implemented classes.  Although not all programming languages can have pure virtual function call errors.
+
+Pure virtual function call errors occur when a call is made to a pure virtual function.   Since an abstract base type cannot be created in most languages, they will typically occur before a derived type is fully created, or after a derived type is already destroyed.   The call is therefore usually called from the base type.  Pure virtual function call errors could potentially also occur when using a pointer to call a function of an already deleted object.
+
+---
+
+## Can C++ have pure virtual function errors?
+
+Yes.
+
+Consider the order of construction for the following C++ code:
+
+    class Animal
+    {
+    public:
+      virtual ~Animal() {}
+      virtual void Speak() = 0;
+      Animal() {}
+    };
+
+    class Dog : public Animal
+    {
+    public:
+      virtual void Speak() { }
+    };
+
+    //....
+    Dog leia;
+
+When you create an instance of `Dog` the following happens:
+
+1. Construct `Animal`
+- Construct `Dog`
+
+When the instance of `Dog` named `leia` falls out of scope, the following happens on destruction:
+
+1. Destruct `Dog`
+- Destruct `Animal`
+
+If you happen to call `Speak()` in the destructor of Animal, or in the constructor of Animal, then a pure virtual function error will occur.  Most C++ compilers will give you a compiling error; however, you can get around this compiling error by calling a function that calls a pure virtual function.  
+
+Here is a code sample that will produce a pure virtual function runtime error in g++, Visual Studio 2005, and Visual Studio 2008.
+
+    class Animal
+    {
+    public:
+    	virtual ~Animal() {}
+    	virtual void Speak() = 0;
+     	void SpeakPlease()
+    	{
+    		Speak();
+    	}
+    	Animal()
+    	{
+    		SpeakPlease();
+    	}
+    };
+
+    class Dog : public Animal
+    {
+    public:
+    	virtual void Speak() { }
+    };
+
+
+    int main(int argc, char* argv[])
+    {
+    	Dog leia;
+    	return 0;
+    }
+
+
+
+---
+
+## Can C# have pure virtual function errors?
+
+No.
+
+C# allows you to create pure virtual functions by using the abstract keyword on each of your abstract function/methods.
+And if you have even one abstract function/method in your class you must also use abstract before your class declaration.
+
+C# gets around pure virtual function calls though, but arguably in a worse way.
+
+    public abstract class Animal
+    {
+        public Animal()
+        {
+            Speak();
+        }
+
+        ~Animal()
+        {
+            Speak();
+        }
+
+        public abstract void Speak();
+    }
+
+    public class Dog : Animal
+    {
+        public override void Speak()
+        {
+            Console.WriteLine("Woof!");
+        }
+
+        ~Dog()
+        {
+        }
+    }
+
+`Dog::Speak()` will be called in the destructor of `Animal` even though Dog is already destructed.  Obviously this can lead to many problems.
+
+---
+
+## Can Python have pure virtual function errors?
+
+Kind of, and only if you follow certain conventions.
+
+Python can't define abstract functions directly, instead you simply raise an exception of type NotImplemented.  
+
+In Python all functions/methods are virtual.
+
+This is to say pure virtual function support is defined in Python simply by convention instead of language constructs.
+
+Therefore unlike C++ and C#, you can create objects of a class that have some of it's functions/methods as abstract.
+In that sence you can have pure virtual function errors (via NotImplementedError exceptions)
+
+But Python works like C# in the sense that even before the derived type is constructed, it will call into it.
+The end result is that it throws an exception that can be caught.
+
+
+    class Animal(object):
+      def __init__(self):
+        print("Constructing animal")
+        self.Speak()
+      def Speak(self):
+        raise NotImplementedError
+      def __del__(self):
+        print("Destructing animal")
+
+    class Dog(Animal):
+      def __init__(self):
+        super(Dog, self).__init__()
+        print("Constructing Dog")
+      def Speak(self):
+        print("Woof!")
+      def __del__(self):
+        print("Destructing dog")
+        super(Dog, self).__del__()
+
+    def Test():
+      leia = Dog()
+
+---
+
+Next time you get an error like: `"R6025 Pure virtual function call"`, perhaps you will wonder less about the source of the error.

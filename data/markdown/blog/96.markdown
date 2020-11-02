@@ -1,0 +1,12 @@
+July 1st 2010 I was happy to receive an email from Microsoft notifying me that I won one of the [Microsoft Most Valuable Professional][1] awards.   Specifically I was awarded for Visual C++. 
+
+From the award website:
+
+> The Microsoft MVP Award recognizes exceptional technical community leaders from around the world who voluntarily share their high quality, real world expertise with others. Microsoft MVPs are a highly select group of experts representing technology's best and brightest who share a deep commitment to community and a willingness to help others. Worldwide, there are over 100 million participants in technical communities; of these participants, there are fewer than 4,000 active Microsoft MVPs.
+
+The award is well known and recognized in the tech industry and I'm very honored to have received it.
+
+The award comes with many perks but the recognition and other MVP contacts that you make are invaluable.
+
+It seems that the primary reasons for winning the award was for contributions to stackoverflow (Q&A site for programmers), my blog website, MSDN related forums, and codeproject (Q&A)
+[1]: http://mvp.support.microsoft.com/gp/mvpfaqs

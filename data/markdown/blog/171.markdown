@@ -1,0 +1,52 @@
+<img src="//brianbondy.com/static/img/blogpost_171/linkbubble.png" style="float:right; margin-left: 40px; margin-bottom: 5px; width:250px">
+My company and I are excited to announce that the Android based Link Bubble web browser has gone fully free.
+
+Link Bubble makes the Android mobile web more efficient. When you click on a link in any app, Link Bubble loads that webpage in the background and presents it in a floating bubble, leaving you free to continue using your current app.
+Unique amongst Android web browsers, it saves precious time normally spent watching pages load. You can [get a good idea of what Link Bubble's all about from this video](https://www.youtube.com/watch?v=82ulEBkk7k0).
+
+You can [download Link Bubble on the Google play store today](https://play.google.com/store/apps/details?id=com.linkbubble.playstore&hl=en).
+
+Link Bubble going free means that all users of Link Bubble can now update and get:
+
+- An infinite number of bubbles (tabs)
+- Themes base on website color
+- Article mode
+- Article mode for Android wear
+
+## Acquiring Link Bubble
+
+At the start of August, my startup [acquired Link Bubble](http://theblerg.net/post/2015/08/05/ive-sold-link-bubble-tappath-and-all-related-assets) from an innovative independent developer named [Chris Lacy](https://twitter.com/chrismlacy).
+Together we worked with Chris on the 1.5.0 release, and then continued to do releases at a weekly cadence.
+
+We're currently doing business as Link Bubble.
+
+## Since we acquired
+
+Some of the new features since we acquired Link Bubble that were released include:
+
+- Material design overhaul
+- Colored toolbars
+- Custom domain redirects
+- Support for HTML drop down elements
+- Support for HTML file pickers
+- Request desktop site option
+- Auto reconnect when offline support
+- Various improvements for reading mode
+- Various crash fixes
+- Many more new languages and translations
+
+## Future plans
+
+We're excited to be able to put more resources into Link Bubble and we have a lot of great additions planned. Our immediate focus is towards better performance, bug fixes, and customer satisfaction/support. Next, we will work on additional web browsing and navigation features.
+
+Please follow [@Link_Bubble](https://twitter.com/Link_Bubble) for future updates.
+
+## Users with Link Bubble Pro
+
+Users of Link Bubble Pro can uninstall the Pro version and simply update the existing Link Bubble application which is also installed.
+
+For the next month we're also offering a refund to recent Pro orders.  If you've purchased the Pro version since the product was acquired on August 4th 2015, we'd be happy to refund your order.
+Simply contact [support@linkbubble.com](mailto:support@linkbubble.com) with your transaction ID.
+
+Unfortunately we aren't able to refund purchases prior to the acquisition due to lack of prior purchase data.
+If your purchase falls before that time-frame, look on the bright side! You'll get everything you paid for plus a renewed focus on making Link Bubble the best that it can be.

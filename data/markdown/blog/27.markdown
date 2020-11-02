@@ -1,0 +1,3 @@
+This kid uses [echo location][1] to find out where he is.
+
+[1]: http://www.nogged.com/viewvideo.php?videoID=89

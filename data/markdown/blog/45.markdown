@@ -1,0 +1,1 @@
+When adding a header file include that is not from a directory in your include directories, it should ask you: "Would you like to add [path] to your include directories?"

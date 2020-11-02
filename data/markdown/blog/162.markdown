@@ -1,0 +1,36 @@
+<img src='https://brianbondy.com/static/img/blogpost_129/Windows8Logo-2.jpg' height=64>
+
+On Friday, Mozilla announced it would not ship its [Modern UI Firefox browser][1] due to low adoption.
+
+Is Windows 8.1 modern UI in trouble?
+
+No.
+
+---
+
+Did Mozilla make the right decision with Metro given the current circumstances?
+
+Yes.
+
+---
+
+Modern UI Firefox usage, in Mozilla's measurements, is not necessarily a true reflection of Modern UI usage in general.
+
+> Modern UI Firefox Usage != Modern UI usage
+
+I do believe that Microsoft's modern UI is important for touch hardware, and I do believe that touch hardware is something people are adopting and will adopt more.
+
+---
+
+I believe that the Modern UI Firefox usage was low, at least in part, for 2 specific reasons:
+
+1. Microsoft doesn't allow your browser to run in Modern UI unless you are the default browser. Several people could have had a Modern UI capable Firefox pre-releases installed, but just never knew it.
+
+2. Microsoft makes it a lot harder to set your browser as the default in Windows 8. Before Windows 8, each browser could prompt you, and then they could set your default for you.  As of Windows 8 you need to ask first, then tell Microsoft to show a prompt that shows a list of browsers (confusing). And that only sets the HTTP default.  If you want all defaults, such as HTML and HTTP, then you have to send the user to control panel, make them search for the browser, then make them select your browser and set all defaults.
+
+---
+
+It would be great if Microsoft could fix these issues around default status.   More competition leads to better software, and having good software on your platform is important.  Every Windows Modern UI user loses when there's only one Modern UI browser choice.
+
+
+[1]: https://blog.mozilla.org/futurereleases/2014/03/14/metro/

@@ -1,0 +1,11 @@
+I decided to try to stop spam without CAPTCHA.  I'm using a service called [Akismet][1].  It is free for personal blog use.
+
+Akismet was originally developed for integration with  WordPress. You can now use it's public API anywhere though.  I'm using it via the Django comment framework.
+
+For commercial use it's anywhere from $50 / month up to $1,000 / month depending on the frequency of usage.
+
+I also setup email notifications for myself so I get emailed whenever a new comment gets posted.
+
+For the news item I also set `rel="nofollow"` so any link posted won't count for search engine optimization (SEO).
+
+[1]: https://akismet.com

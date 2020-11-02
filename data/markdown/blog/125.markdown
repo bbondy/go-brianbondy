@@ -1,0 +1,130 @@
+<img src='https://brianbondy.com/static/img/blogpost_118/firefox-logo.png' style='position:relative;top:-5px;float:left;padding-right:10px'>Mozilla's [rapid release process][1] allows us to deliver features, speed optimizations, memory reductions, and much more... faster.
+Keeping up to date fast is an essential need for the ever changing web.
+
+There is a new release of Firefox every 6 weeks instead of every year. Even with this shortened release cycle, these releases still include major enhancements.  These faster updates are possible because Mozilla is growing significantly, and the community of Mozillians at large is growing month over month.  
+
+The rapid release process has some very positive side effects, like delivering new web technologies faster, and attracting world class developers who like to see their code ship fast.
+But rapid releases also have some negative side effects.
+
+One of the negative side effects is that minor annoyances with software updates suddenly become much more noticeable. Most users don't want to think about software updates nor version numbers and now they are being forced to do so every six weeks.
+
+---
+
+## One such minor annoyance is User Account Control (UAC):
+
+Starting with Windows Vista Microsoft introduced UAC, and with it users across the world see this familiar dialog when doing any operation that requires administrative access: <br>  
+<img src='https://brianbondy.com/static/img/blogpost_125/UAC.png'>
+
+UAC in particular makes every process run with limited permissions, and if you want to do something like write into `Program Files`, then the user has to give permissions to the application to do this.
+This makes things like automated software updates hard to do without user interaction.  If we don't have access to write into `Program Files` to perform an update, then we have to ask for elevated permissions.  We ask for elevated permissions today when applying updates.
+
+If a user with administrative access gives permissions to Firefox one time via a UAC prompt, and that user has automatic updates on, then
+there is no reason we should continue to ask them to elevate the permissions each and every time we want to apply an update.  The user has already explicitly given permission to do it.
+
+If this worries you, just remember that you can change your mind at any time by configuring silent updates on the `Options > Advanced > Update` tab.
+
+The feature page for this task is located here: [Remove requirement for the Windows UAC dialog when applying an update][rs4].  I am the lead developer on this UAC task and the estimated target is the first quarter of 2012.
+
+---
+
+## What's being done to solve the UAC annoyance:
+
+There are several ways to tackle this issue.  For example, some browsers that offer silent software updates will install into the user's application data folder and hence do not have this problem.  We could do the same, but we chose not to because it can be an administrative headache for some people who manage updates themselves and have to maintain an installation for every user.
+
+We are currently experimenting with a Windows service approach.  
+
+This means that an optional component will be installed that automates the software update process better without giving UAC prompts.
+
+<img src='https://brianbondy.com/static/img/blogpost_125/mozilla_service_scrn.png'>
+
+---
+
+## Only one Firefox service:
+
+There are four different Firefox development channels you can use.  At any time there is a [Firefox Release channel][2], [Beta channel][3], [Aurora channel][4], and [Nightly builds channel][5].  These channels give you access to Firefox releases at different stages of the development cycle.
+
+A user can have multiple installations across channels, but only one Firefox service will exist in Windows Services.
+
+---
+
+## Firefox service as an optional component:
+
+The Firefox service will be an optional component.  It doesn't need to be installed, and if it is stopped or disabled, updates will work as they did before in every other recent Firefox release.
+
+A user can also uninstall the Firefox service at any time.  Updates will continue to occur using the old method.  
+
+---
+
+## Other uses of the Firefox service:
+
+<img src='https://brianbondy.com/static/img/blogpost_125/services.png' style='float:right;padding-left:5px;position:relative;top:-15px;'>
+Having a Windows service installed means that we can investigate other integration and maintenance points.  The possibilities are very exciting.
+
+The Windows service may be used later on for a wider selection of maintenance related things including faster browser startup via prefetching, but initially will be only for software updates.
+
+---
+
+## High level overview of other new Silent update features
+
+Above I mostly talked about silent updates on Windows, but there are other update issues being addressed in several new features across all platforms.  This section was originally written by [Robert Strong][rs10] with help from Chris Lee, and Lawrence Mandel and describes these features.
+
+All of the [silent update work can be tracked on the wiki][rs11].
+
+<div style='position:relative;left:-20px;'>
+
+- **[Lessen how often the "What’s New" page is shown][rs1]**<br>Estimated target: fourth quarter of 2011.<br><br>Every six weeks Firefox informs you of what is new in the release. The feedback from our users is that the information is not required and is actually an irritant. We are looking at ways of displaying information only when it provides benefit.  The ability to control if the "What’s New" page should be displayed after an update was added to Firefox 4. The server side capability should be completed soon.
+
+- **[Lessen how often the update user interface is displayed][rs2]**<br>Estimated target: first quarter of 2012.<br><br>After an update is downloaded in the background Firefox waits 12 hours before notifying the user to restart to apply the update and since this can interrupt tasks the wait time is being increased to 24 hours. More details including how we decided upon 24 hours are available on [this feature page][rs2] and the bugs referenced on that page.
+
+- **[Add-ons Default to Compatible][rs3]**<br>Estimated target: first quarter of 2012.<br><br>By default, Firefox requires consent to update if there are add-ons that are enabled and compatible with the current version of Firefox and are incompatible with the update’s version. With this feature there should be significantly fewer cases where consent is required to update Firefox while keeping your add-ons installed and up-to-date as well.
+
+- **[Apply updates on shutdown][rs5]**<br>Estimated target: to be determined.<br><br>After an update is downloaded users notice that it takes longer to start up Firefox on the next run. This wait time is due to the installation of the software update. To eliminate the wait time on startup to apply an update the majority of an update’s operations will be performed prior to shutdown and the few remaining operations will be performed after Firefox has exited. This applies to all desktop platforms though on Windows the service that will remove the requirement for the Windows UAC dialog will typically apply the update.
+
+- **[Improved process flow for updating when there are incompatible add-ons][rs6]**<br>Estimated target: to be determined.<br><br>If an update is declined when there are incompatible add-ons the time to wait until next notification will be increased. This feature is in the planning stage and the amount of time to wait until the next notification hasn’t been decided as of yet.
+</div>
+
+---
+
+## Other Mozilla products:
+
+<img src='https://brianbondy.com/static/img/blogpost_125/thunderbird.png' style='float:right;padding-left:5px;position:relative;top:-15px;'>
+
+Other Mozilla products may use the service described above.  We currently plan to have only one Windows service across all products.  All supported architectures are also planned to share the same Windows service.
+
+Every feature described in this post either applies to or can be done for other Mozilla based applications such as [SeaMonkey][rs7], [Thunderbird][rs8], and [SongBird][rs9].
+
+---
+
+## Platform Integration team:
+
+<img src='https://brianbondy.com/static/img/blogpost_125/windows_linux_mac_small3.png' style='float:left;margin-right:10px;position:relative;top:-7px;'>
+
+Mozilla started a new Platform Integration team which focuses on issues which need Operating System specific solutions.  
+
+I am a member of this new team led by [Robert Strong][rs10].  Some of the tasks being worked on by this team are described above.
+
+
+
+
+
+
+
+[1]: http://blog.mozilla.com/channels/2011/07/18/every-six-weeks/
+[2]: http://www.mozilla.org/firefox/new/
+[3]: http://www.mozilla.org/firefox/channel/
+[4]: http://www.mozilla.org/firefox/channel/
+[5]: http://nightly.mozilla.org/
+[6]: https://wiki.mozilla.org/Silent_Update
+[7]: https://wiki.mozilla.org/Silent_Update_OS_Dialogs
+
+[rs1]: https://wiki.mozilla.org/Silent_Update_whatsnew
+[rs2]: https://wiki.mozilla.org/Firefox/Features/Lessen_App_Update_Displayed_UI
+[rs3]: https://wiki.mozilla.org/Features/Add-ons/Add-ons_Default_to_Compatible
+[rs4]: https://wiki.mozilla.org/Silent_Update_OS_Dialogs
+[rs5]: https://wiki.mozilla.org/Silent_Update_updater
+[rs6]: https://wiki.mozilla.org/Silent_Update_not_now_prompt
+[rs7]: http://www.seamonkey-project.org/
+[rs8]: http://www.mozilla.org/en-GB/thunderbird/
+[rs9]: http://getsongbird.com/
+[rs10]: http://blog.mozilla.com/rstrong/
+[rs11]: https://wiki.mozilla.org/Program_Management/Programs/Silent_Update

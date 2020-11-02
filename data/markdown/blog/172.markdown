@@ -1,0 +1,31 @@
+Since June of last year, I’ve been co-founding a new startup called [Brave Software][0] with [Brendan Eich][1].
+With our amazing team, we're developing something pretty epic.
+
+We're building the next-generation of browsers for smartphones and laptops as part of our new ad-tech platform.
+Our terms of use give our users control over their personal data by blocking ad trackers and third party cookies.
+We re-integrate fewer and better ads directly into programmatic ad positions, paying revenue shares to users and publishers to support both of these essential parties in the web ecosystem.
+
+Coming built in, we have new faster engines for tracking protection, ad block, HTTPS Everywhere, safe ads with rev-share, and more.
+We're seeing massive web page load time speedups.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/kHWf6hRV-GM" frameborder="0" allowfullscreen></iframe>
+
+We're starting to bring people in for early developer build access on all platforms.
+
+I’m happy to share that the browsers we’re developing were made fully open sourced.
+We welcome contributors, and would love your help.
+
+Some of the repositories include:
+
+- [Brave OSX and Windows x64 browsers][3]: Prototyped as a Gecko based browser, but now replaced with a powerful new browser built on top of the electron framework. The electron framework is the same one in use by Slack and the Atom editor.  It uses the latest libchromiumcontent and Node.
+- [Brave for Android][4]: Formerly Link Bubble, working as a background service so you can use other apps as your pages load.
+- [Brave for iOS][5]: Originally forked from Firefox for iOS but with all of the built-in greatness described above.
+- And many others: Website, updater code, vault, electron fork, and others.
+
+[0]: https://brave.com/
+[1]: https://en.wikipedia.org/wiki/Brendan_Eich
+[2]: http://www.cnet.com/news/mystery-startup-from-ex-mozilla-ceo-aims-to-go-where-tech-titans-wont/
+[3]: https://github.com/brave/browser-laptop
+[4]: https://github.com/brave/link-bubble
+[5]: https://github.com/brave/browser-ios
+[6]: https://github.com/brave

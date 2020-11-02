@@ -1,0 +1,99 @@
+This post is a continuation of the Windows 8 status update first started on this [blog post][0].
+
+We're now past the hardly documented parts of development we were fighting with last week, and things are really starting to heat up.
+From here, most WinRT development topics should be nicely documented because they are now similar to any work done in a C++ Metro application.
+
+We're keeping organized via an etherpad similar to how the [snappy project][5] stays connected.
+Please ping someone on #windev on IRC if you'd like the URL.
+
+---
+
+## Languages we'll be programming in
+
+We're moving ahead with C++/CX and dropping down into WRL when needed.
+It is still possible that we will one day port the C++/CX parts to only WRL.
+
+In the end though, with C++/CX you get native code, code that is 10x less the size, and code that is less prone to leaks.
+Less code means less to maintain and faster innovation.
+C++/CX is also documented and supported a lot better than WRL.
+
+We have a XAML window and we use DirectX to paint to it taking up the entire area of the screen.
+
+---
+
+## Development milestones
+
+This week [Jim Mathies][jimm] was a rock star and made significant progress in many areas:
+
+- He added in the build config needed to build Fennec or Firefox as a Metro application.
+- He started work on a new widget layer.
+- He also got events working.
+Getting events working was hard because the UI thread is not the main thread.
+
+This week I spent some of my time finishing an old project and the rest on Windows 8 work:
+
+- I hooked up the WinRT window to our graphics code (WinRT to Thebes).
+Metro does not give us easy and reliable access to an `HWND` and instead has a `CoreWindow`, so extra new code was needed inside the graphics module.
+In particular I added most of this new code in `gfx/thebes` and in `gfx/cairo`.  We don't have support for the [Azure back end][4] yet. The new code added in the graphics modules does not use C++/CX.
+- I also implemented support for Metro snap in regards to our rendering code.  This means you can have a metro application beside our browser when in Metro mode.
+
+Firefox on Metro will not simply be Firefox desktop copied into the Metro environment, we are embracing the framework instead of fighting it.
+
+---
+
+## How to get the development environment setup yourself
+
+The code for this project is happening in the elm branch, you can [see the changelog and checkout the project using hg here][2].  The metro subfolder contains our research but most of the new code is going in `widget/windows/winrt`.
+
+We're currently compiling and working with a [fennec mozconfig][6] setup with the following options added:
+
+    ac_add_options --enable-win8metro
+    ac_add_options --with-windows-version=602
+
+The option `--enable-win8metro` adds in the `-ZW` flag in the `widget/windows/winrt` module only, which makes it so C++/CX code is allowed.
+[This LIBPATH environment variable][1] must also exist.
+
+---
+
+## UX milestones
+
+Stephen Horlander started work on the Metro splashscreen and tile.
+You can see some [experimentation on the tile and splashscreen here][735008].
+
+I added these resources into the elm repository, it's definitely more exciting to develop when you click on a meaningful tile and see a cool splashscreen.
+
+---
+
+## New contributors
+
+Several developers have expressed interest in helping the project including Tim Abraldes, Wes Johnston, David Woolbright, Burak Yigit Kaya, and Berker Peksag.
+I'm excited to have more hands on the project in the coming weeks.
+
+---
+
+## Next development steps
+
+Now that we have event handling and thebes hooked up, we should be pretty close to getting something resembling a browser.
+We're still very early in development but we're making great progress.
+
+---
+
+## Meetings
+
+We didn't have a meeting this week because we were actively keeping each other up to date on #windev on IRC.
+
+---
+
+## Next update
+
+I'll be away next week so probably won't write another update for a couple weeks.
+Feel free to email me if you'd like to get involved.
+
+[0]: https://brianbondy.com/blog/id/129/firefox-metro-development-begins-status-update
+[1]: https://bugzilla.mozilla.org/show_bug.cgi?id=732518#c25
+[2]: http://hg.mozilla.org/projects/elm
+[735008]: https://bugzilla.mozilla.org/show_bug.cgi?id=735008
+[4]: http://blog.mozilla.com/joe/2011/04/26/introducing-the-azure-project/
+[5]: https://wiki.mozilla.org/Performance/Snappy
+[6]: https://wiki.mozilla.org/Mobile/Build/Fennec
+[jimm]: http://www.mathies.com/weblog/

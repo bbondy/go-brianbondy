@@ -1,0 +1,93 @@
+It is no surprise that the following function returns true
+
+    bool test()
+    {
+      bool b1(true), b2(false);
+      return b1 || b2;
+    }
+
+But why does it return true?  Most people think that there are 2 expressions here, b1 and b2 and that if either of them are true then the language magically evaluates the total expression to true.
+
+But what's actually happening is that there is a built in global operator that is defined.
+
+    bool operator||(bool, bool)
+
+This function is called for every 2 boolean values that you stick an `||` in between.
+
+This raises the question, if there is an `||` operator for boolean values, can you define some for other types too?  The answer is: Yes!  (But not for built-in types)
+
+It is not obvious, because most people haven't seen code like this, but you can also overload logical operators to work with types other than boolean values.
+
+    bool test()
+    {
+      A a1, a2;
+      return a1 || a2;
+    }
+
+Is a1 and a2 implicitly converted to bool?  No.   What's happening here is that the class A has an overloaded logical operator.  
+
+Here's how to overload the logical OR operator:
+
+    class A
+    {
+      public:
+        A(bool b) : b(b)
+        {
+        }
+        bool operator||(A & a)
+        {
+          return b || a.b;
+        }
+
+      bool b;
+    };
+
+What we have above is an overloaded operator for logical OR and it takes in 2 different A types.
+
+So what happens if you stick a bool value on the right hand side of a value with type A?  It will give you a compiling error.
+
+    bool test()
+    {
+      A a;
+      bool b(true);
+      return a || b; // Error no overloaded operator defined for bool A::operator||(bool)
+    }
+
+What's seems even more strange though, is that you can overload logical operators so that they do not return a bool type.
+
+Why would you ever want to do that?  One good reason comes to mind.  
+
+Consider you would like to define a new type similar in every way to boolean values, but it can have 3 states: `true`, `false`, and `not_set`.  You could define a tristate type which works exactly the same way as a boolean value in every way, but that has 3 different states.  
+
+This is in fact how boost::tribool is implemented:
+
+    namespace boost {
+      namespace logic {
+        class tribool;
+        bool indeterminate(tribool, unspecified = unspecified);
+        tribool operator!(tribool);
+        tribool operator&&(tribool, tribool);
+        tribool operator&&(tribool, bool);
+        tribool operator&&(bool, tribool);
+        tribool operator&&(indeterminate_keyword_t, tribool);
+        tribool operator&&(tribool, indeterminate_keyword_t);
+        tribool operator||(tribool, tribool);
+        tribool operator||(tribool, bool);
+        tribool operator||(bool, tribool);
+        tribool operator||(indeterminate_keyword_t, tribool);
+        tribool operator||(tribool, indeterminate_keyword_t);
+        tribool operator==(tribool, tribool);
+        tribool operator==(tribool, bool);
+        tribool operator==(bool, tribool);
+        tribool operator==(indeterminate_keyword_t, tribool);
+        tribool operator==(tribool, indeterminate_keyword_t);
+        tribool operator!=(tribool, tribool);
+        tribool operator!=(tribool, bool);
+        tribool operator!=(bool, tribool);
+        tribool operator!=(indeterminate_keyword_t, tribool);
+        tribool operator!=(tribool, indeterminate_keyword_t);
+      }
+    }
+
+
+Overaloading logical operators can be powerful, but I would advise to only do it if your type can be logically and implicitly considered true or false.

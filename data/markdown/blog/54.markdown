@@ -1,0 +1,11 @@
+URL redirecting via [this page][1] is temporarily disabled because of this email I received from abuse@myspace.com with a CC to abuse@godaddy.com. So much for trying to provide an innocent good service to users for free with no ads:
+
+BrianBondy.com is hosting numerous files being used to redirect users to third party affiliate sites for commercial gain.
+
+The user accounts posting the redirects were compromised through illegal means. Immediately remove the redirects on your webserver, and desist in any continued use and abuse of the MySpace.com site and userbase.
+
+MySpace.com can and will take legal action against BrianBondy.com for it's involvement in these illegal activities.
+
+MySpace.com
+
+[1]: https://brianbondy.com/other/smallURL.aspx

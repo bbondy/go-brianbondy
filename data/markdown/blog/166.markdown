@@ -1,0 +1,20 @@
+The Khan Academy Healthy Hackathon is a 3 day period where people from Khan Academy
+get together and work on something they think would be cool.
+
+The theme for my hackathon idea was to **<span style="color:#8AAB1C">make programming easier</span>** on Khan Academy.
+
+I could describe it with a few hundred words and pictures, but let's instead:
+
+<div style="font-size: larger; border: 1px #8AAB1C solid; padding:20px; text-align: center">
+
+
+<a href="https://www.youtube.com/watch?v=Pq0OSkFhmhk" target="_blank">
+<i style="font-size:60px; vertical-align:middle" class="fa fa-youtube-play" title="YouTube channel"></i></a>
+
+
+&nbsp;&nbsp;<a style="font-weight:900;" href="https://www.youtube.com/watch?v=Pq0OSkFhmhk">Watch a demo highlighting my project!</a></div>
+
+
+
+
+...and after watching the video, try things out yourself [here](https://znd-bbondy-hackathon-2014-dot-khan-academy.appspot.com/cs/new).

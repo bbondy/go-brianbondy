@@ -1,0 +1,70 @@
+As you probably already know, Windows 8 introduces the new default Tablet interface, and the old normal Desktop interface.  It uses the new tablet interface as the startup interface even on Desktops though.  For a good rundown on [all of the new features, see here][0].
+
+When you first boot up into Windows 8, it takes you briefly for about 1/2 of a second to the desktop interface and then switches directly to the tablet interface.
+I had read previously that the desktop/explorer process was only loaded into memory if you clicked it, but it seems to not be the case for this early pre-beta release.
+
+The next thing you notice is that once in the Desktop interface, the start menu button no longer brings up a menu.  It brings you back to the tablet interface.
+Pressing the Start/Windows keyboard button will take you between the 2 interfaces.
+
+---
+
+## Firefox on Windows 8:
+
+The first thing I did was install Firefox.  
+
+After installing Firefox, Windows will ask you which web browser you would like to use by default.
+It shows you a picture of Firefox and IE and lets you pick.  Nice interface. It shows you this dialog even before our process starts.  If you change focus to another tab or application though, the dialog goes away forever unless you uninstall and reinstall Firefox.
+
+<img src='/static/img/blogpost_123/firefoxwin_8_3.png'>
+
+After installing we show automatically into the tablet interface as a new tile.
+
+<img src='/static/img/blogpost_123/firefoxwin_8_2.png'>
+
+But when you click on the Firefox icon in the tablet interface, it takes you directly to the old Desktop environment and loads the Firefox process as normal.
+I think it'll be possible for integration like IE does into the tablet interface direclty.  Although the solution may have to be 'creative'.
+
+<img src='/static/img/blogpost_123/firefoxwin_8.png'>
+
+
+Full screen mode in Firefox works the same as previous versions currently.  If you start in full screen it will switch you first to the Desktop mode, and then launch full screen.  Exiting full screen leaves you at the Desktop interface.  
+
+---
+
+## Internet Explorer Tablet Mode:
+
+If you start Internet Explorer from the tablet mode you'll see a full screen app with no switch to Desktop.  It has a nice interface and allows you to pin any web page to your Tablet interface as a tile.
+
+The problem with this is that even though I set Firefox as my default browser, through the Windows interface, it still launches IE for these shortcut tiles.
+
+Here is a tile created on the far left from a pinned page in IE of the mozilla.org page:
+
+<img src='/static/img/blogpost_123/firefoxwin_8_4.png'>
+
+
+---
+
+## Work to be done for Firefox on Windows 8:
+
+
+There's probably a ton, but here are a few things that come to mind:
+
+- We need to support the VS2011 developer tools for MozillaBuild
+- It would be nice to not need to switch to Desktop to launch the browser.
+- Platform integration for apps seems very important.  We should be showing up as tiles for web applications that launch Firefox full screen.
+- The Firefox tile can be leveraged to have more functionality built into it.
+
+---
+
+## Related bugs:
+
+- [Bug 686835][1] - Investigate using XPCOM in a metro style application, and providing Firefox as a Metro app
+- [Bug 686837][3] - Add VS2011 support for mozilla-build
+- [Bug 686839][4] - Investigate Windows 8 metro tile integration
+- [Bug 686840][5] - Investigate the ability to toggle between a metro app and a native app
+
+[0]: http://www.foxnews.com/scitech/2011/09/14/windows-8-developer-preview-hands-on-inside-all-new-features/
+[1]: https://bugzilla.mozilla.org/show_bug.cgi?id=686835
+[3]: https://bugzilla.mozilla.org/show_bug.cgi?id=686837
+[4]: https://bugzilla.mozilla.org/show_bug.cgi?id=686839
+[5]: https://bugzilla.mozilla.org/show_bug.cgi?id=686840

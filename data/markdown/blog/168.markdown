@@ -1,0 +1,35 @@
+Originally the [computer programming](https://www.khanacademy.org/computing/computer-programming) section at Khan Academy only focused on learning JavaScript by using ProcessingJS.  This still remains our biggest environment and still has lots of plans for further growth, but we recently generalized and abstracted the whole framework to allow for new environments.
+
+The first environment we added was HTML/CSS which was [announced here](http://cs-blog.khanacademy.org/2014/11/learn-how-to-make-webpages-with-html.html).  You can [try it out here](https://www.khanacademy.org/computer-programming/new/webpage). We also have a lot of [content for learning how to make webpages](https://www.khanacademy.org/computing/computer-programming/html-css) already created.
+
+
+## SQL on Khan Academy
+
+<img src="https://brianbondy.com/static/img/blogpost_168/sql.png" style="float:right; width:130px">
+We recently also experimented with the ability to teach SQL on Khan Academy.  This wasn't a near term priority for us, so we used our [hack week](http://hackweek.khanacademy.org/) as an opportunity to bring an SQL environment to Khan Academy.  
+
+You can [try out the SQL environment here](https://www.khanacademy.org/computer-programming/hack-week-projects-database/6421938156339200).
+
+## Implementation
+
+To implement the environment, one would think of [WebSQL](http://caniuse.com/#feat=sql-storage), but there are a couple major browser vendors (Mozilla and Microsoft) who do not plan to implement it and W3C stopped working on the specification at the end of 2010,
+
+Our implementation of SQL is based off of [SQLite](https://www.sqlite.org/) which is compiled down to [asm.js](http://asmjs.org/) by [Emscripten](https://github.com/kripken/emscripten) packaged into [sqljs](https://github.com/kripken/sql.js/).  
+
+All of these technologies I just mentioned, other than SQLite which is sponsored by Mozilla, are Mozilla based projects.  In particular, largely thanks to [Alon Zakai](http://mozakai.blogspot.ca/).
+
+## The environment
+
+The environment looks like this, the entire code for creating, inserting, updating, and querying a database occur in a single editor. Behind the scenes, we re-create the entire state of the database and result sets on each code edit.  Things run smoothly in the browser and you don't notice that.
+
+<img src="https://brianbondy.com/static/img/blogpost_168/sql-env.png" style="width:700px">
+
+
+Unlike many online SQL tutorials, this environment is entirely client side.  It has no limitations on what you can do, and if we wanted, we could even let you export the SQL databases you create.
+
+One of the other main highlights is that you can modify the `inserts` in the editor, and see the results in real time without having to run the code.  This can lead to some cool insights on how changing data affects aggregate queries.
+
+## Hour of Code
+
+Unlike the HTML/CSS work, we don’t have a huge number of tutorials created, but we do have some videos, coding talk throughs, challenges and a project setup in a single tutorial which we’ll be using for one of our [hour of code](https://www.khanacademy.org/hourofcode)
+ offerings: [Hour of Databases](https://www.khanacademy.org/computing/hour-of-code/hour-of-sql/v/welcome-to-sql).

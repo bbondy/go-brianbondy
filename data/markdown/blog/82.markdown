@@ -1,0 +1,33 @@
+I just purchased a new 64-Bit AMD computer and installed Windows 64-Bit AMD for the first time.
+
+Here’s a short rundown on what I found out during my first night of using it.
+
+There are 2 main types of 64-bit processors, IA64 and x64, and they run different versions of windows 64-bit.  
+That means that every driver built for Windows 64-Bit needs to be compiled twice.  
+
+The IA64 processor was called the Itanium.  It was a huge flop because of problems with the way they did the caching.  It was replaced with the Itanium 2, which has a better design for cache.  Itanium 2 does not mean dual processors, but instead it means the 2nd design of Itanium (version 2).  It is referred to the Itanium 2 CPU.  It is now referred to as IA64 only.
+
+With x64 you can install both Windows 32 bit or Windows 64 bit.  With IA64 you can only install the IA64 Windows.   You can run 32-bit apps on all variants.  For the 64-bit Windows versions you can run the applications through an emulator that works transparently called Windows 32 on Windows 64 (WOW64)
+
+The same does not hold for 32-bit drivers though.  WOW64 is only for user mode applications.
+
+On 64-bit machines there are actually 2 different registries.  A 32-bit registry and a 64-bit registry.  They are treated as different registries by 32-bit and 64-bit applications but the 32-bit registry is just a subkey for the 64-bit registry. Windows will automatically route an application to the proper registry depending on if it’s 32-bit or 64-bit.
+
+Because of WOW64, any application that was compiled before on a 32-bit machine, will still work in 64-bit Windows.  This isn't because it supports it direclty, but because windows is using WOW64 to translate the 32-bit calls to 64-bit ones.  If however a program depends on a driver, or if it integrates with the windows shell, then that program will no longer work.  I believe IPC is also translated on the fly by WOW64.
+
+Some other useful information.
+
+These 2 directories are both for 64-bit applications/drivers only.  Pretty great naming! :), but I'm sure it will save many headaches for inf file authors.
+
+- `C:\Windows\System32\ `
+- `C:\Program Files\`
+
+
+These 2 directories are for 32-bit apps and drivers only, they use 32-bit emulation
+
+-  `C:\Windows\SysWOW64\`
+-  `C:\Program Files (x86)\`
+
+So developing for 64-bit machines can get a little tricky if you actually want it to run as a 64-bit program.  If it's running as a 32-bit program, then your ints will still be 4 bytes, and everything else you hold true will also still hold.  
+
+Right now, when I want to make a 64-bit program, I use a makefile instead of using Visual Studio directly.  You can use different NSIS .exes to generate the different installers. I suggest to build each project with 3 different versions of NSIS. Then if you want to, you can build a 32-bit installer wrapper that combines each of your installers.

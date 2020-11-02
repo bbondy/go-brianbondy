@@ -1,0 +1,31 @@
+I just wanted to post a quick follow up to my [Firefox on Windows 8 post][1] on how Thunderbird works with screenshots.
+
+As with Firefox and other applications, as soon as you install Thunderbird it shows up as a Tile in the metro interface.
+
+<img src='/static/img/blogpost_124/thunderbird_1.png'>
+
+Clicking on it exits the tablet metro interface and goes into the old interface and launches Thunderbird.
+
+One important thing is that if you click on a `mailto:` link in Internet Explorer it won't launch the default mail client.  Instead it prompts with this error:
+
+> Windows Internet Explorer  
+> Could not perform this operation because the default mail client is not properly installed.
+
+Here's a screenshot of that error message:
+
+<img src='/static/img/blogpost_124/thunderbird_2.png'>
+
+I assume once this registration problem is fixed it'll launch the Desktop mode and then launch the email client.
+It would be nice to have a metro interface for Thunderbird as well.
+
+Perhaps even a metro style compose email window application only for when a user is browsing in tablet full screen mode and they click to send an email with their default email client.
+
+---
+
+## Related Bug:
+
+- [Bug 686836][2] - Launching default email client in Windows 8 results in error
+
+[1]: https://brianbondy.com/blog/id/123/windows-8-and-firefox-first-looks
+
+[2]: https://bugzilla.mozilla.org/show_bug.cgi?id=686836

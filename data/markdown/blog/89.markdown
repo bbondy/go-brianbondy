@@ -1,0 +1,9 @@
+I'm currently reading:
+
+1. [Gray Hat Python: Python Programming for hackers and reverse engineers][1]  by Justin Seitz
+- [C# in depth 2nd edition][2] by John Skeet
+
+I'm about half way through both books.  They're both great books so far.
+
+[1]: http://oreilly.com/catalog/9781593271923
+[2]: http://www.manning.com/skeet/

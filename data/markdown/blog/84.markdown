@@ -1,0 +1,107 @@
+Vectors, strings, and maps are all part of the C++ standard template library (STL).  You can use them in any C++ program.  It doesn't matter what operating system you're programming on, if it has C++ support, then it has STL support.
+
+Before using this tutorial you should have a good grasp at C++ templates,  as well as everyting that you should know before templates.  A great tutorial for beginners is at [cplusplus.com][1]
+
+To use STL you need the following includes:
+
+    //If you want to use maps
+    #include <map>
+
+    //If you want to use vectors
+    #include <vector>
+
+    //If you want to use strings
+    #include <string>
+
+
+And you will need to always prefix string, vector and map with `std::` unless you put this:
+
+    using namespace std;
+
+
+## Here is an example on how to use STL strings:
+
+    string s = “hi”;//s holds "hi"
+    s += “ Brian”;//s now holds “hi Brian”
+    int iSize = s.size();//iSize holds 8
+    char *p = s.c_str();//p holds a pointer to an array of characters with a 0 at the end.
+
+All character arrays, when holding strings, have a 0 at the end, this is very important.  They don’t have the character “0” at the end, but they have an ascii value of 0 at the end.  This zero is used to indicate the end of the char array.  When you call the string's c_str() method, it will append a 0 for you at the end of the char array that it returns.  You could have also used s.data(), which means the exact same thing as s.c_str().
+
+Many people don't know this, but strings can also store binary data.  By binary data I just mean any data that is non text.  I.e. there may be zero's intermixed througout the string.  
+
+So for example:
+
+    string s;
+    //The size of pBinaryData is uiLen1; copy a new string object into s that holds the binary data from pBinaryData
+    s = string(pBinaryData, uiLen1);
+    s.append(pMoreBinaryData, uiLen2);
+    assert(s.size() == uiLen1 + uiLen2);
+
+In the example above s.c_str() will now hold the binary data from both calls. You no longer have to worry about forgetting to delete binary data that you allocate.  If you created pBinaryData and pMoreBinaryData on the heap, you can delete[] them after the call to append.  Anything that you put in a string will have it's own memory, you don't need to worry about freeing it.
+
+## Here is an example on how to use STL vectors:
+
+You use a vector to store a list of values.  A value can be a number, string, or any other class object that you create.  This list can grow to any number of elements, unlike an array.
+
+    vector<string> v;
+    v.push_back(“hi”);
+    v.push_back(“hi2”);
+    v.push_back(“hi3”);
+    assert(v.size() == 3);
+
+    for(int a = 0; a < v.size(); ++a)
+    {
+      string s = v[a];
+      s += “Brian”;
+    }
+
+    //The above "for loop" is pointless obviously :).  It will go through each element in the vector, and copy the vector element's data to a variable "s"
+    // When I go s+= "Brian" it won’t modify the vector contents in any way.  Because when you access each element v[a], it will create a copy of the string.
+    // After the for loop, the vector is left unchanged.
+
+Notice how I wrote vector<string>, that means a vector that holds strings.  You could have also wrote vector<int>, or vector<AnyOtherType>.
+
+## Vector of your own class objects:
+
+    class Cat
+    {
+    public:
+    string str1;
+      string str2;
+      string str3;
+      int x;
+    };
+
+    vector<Cat> vMyCats;
+
+    Cat minou;
+
+    minou.str1 = “hi”;
+    minou.str2 = “hi2”;
+    minou.str3 = “hi3”;
+    minou.x = 5;
+    vMyCats.push_back(minou);
+    assert(vMyCats.size() == 1);
+    //vMyCats holds a vector of Cat objects.  Each cat has 3 strings and 1 integer.
+
+## Here is an example on how to use STL maps:
+
+You use a map to store a lookup table.  i.e. to associate something with something else.
+
+    map<string, string> myMap;
+    myMap.insert(pair<string,string>(“firstName”, “brian”);
+    myMap.insert(pair<string,string>(“lastName”, “bondy”);
+    myMap.insert(pair<string,string>(“age”, “24”);
+    string strFirstName = myMap[“firstName”];
+    assert(strFirstName == "brian");
+
+You can use a map with other things then a string:  map<FROM, TO> myMap;
+
+FROM can be any type, for example int, Cat, string,  
+TO can be any type, for example int, Cat, string
+
+The type you use for the FROM you use in the brackets to do lookups  
+The type you use in the TO is the value that’s associated with it.
+
+[1]: http://www.cplusplus.com

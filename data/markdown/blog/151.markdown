@@ -1,0 +1,90 @@
+## Front end team
+
+As of the end of August, two awesome Mozilla hackers, [Matt Brubeck][mbrubeck] and [Frank Yan][fyan] started tearing through front end bugs for the Metro browser.
+
+[Mark Finkle][mfinkle] who is the mobile front end lead has also been joining in and sharing invaluable insight.
+
+Jonathan Wilde has been working on making the [Metro UI mockups][1] a reality for the past few months.  Jonathan Wilde's internship is complete, but he is still contributing.
+
+[Tim Abraldes][tabraldes], [Jim Mathies][jmathies],and [I][bbondy] do some work in front end code, but are all mostly focused on the core platform code.
+
+---
+
+## Front end progress
+
+Several keyboard shortcuts were added,  the new tab page is now the default home page, and a ton of small glitches on the front end are now fixed.
+
+There are 2 modes for tabs in the Metro Firefox front end. You can have tab previews above the URL bar when you swipe down, or you can have classic style tabs that are always showing.  The mode-selection persists now when you toggle between the 2 modes.
+
+---
+
+## An actual installer
+
+We updated the Firefox installer to do the necessary metro registration and include all of the new Metro bits.  
+
+We also have zip builds which will do the needed Metro registration after you set the default browser from within Firefox preferences.
+
+---
+
+## Default browser handling changes
+
+In Windows 8 RTM, Microsoft protects both the default protocol handler, and the default file type handlers (such as .html) with a cryptographic hash.
+
+The only way for a browser to set itself as default now, is to ask the OS to do it.  And the OS asks the user to do it.
+
+For this reason, we're switching the startup check to be a nice Windows 8 fly out which asks you to select your default browser.  This fly out only has the ability to set the HTTP defaults though.  
+
+The check in preferences is also updated to simply open control panel's `Control Panel\Programs\Default Programs\Set Default Programs`.
+
+When you set your defaults in control panel, you can set both HTTP and HTML defaults at the same time.  We're opting for not showing the control panel screen for startup checks because the UI is complex.  I'm hoping a new UI will be introduced in Windows 9 that will more easily allow the user to set both HTTP and HTML defaults at once without using the Control Panel screen.
+
+We also added code to do the needed Metro registration on Windows 8 after each upgrade. So when we release support on Windows 8, you'll have the needed registration.
+
+---
+
+## Default browser handling and UAC
+
+Due to the way default browser registration works, depending on what your default browser was previously, Firefox would sometimes have to prompt you with a UAC window on Windows 7 and Vista.  In Windows 8 Microsoft changed this so that you can do this registration entirely in HKCU.
+
+We updated our code to take advantage of this, so as of Windows 8, you will never see a UAC dialog for default browser handling in Firefox.
+
+---
+
+## Things we disabled
+
+We disabled the code for loading external add-ons since we don't plan to have add-on support for the initial release.  We will have add-ons through the add-on SDK after the initial release though.
+
+The Flash support that we currently do have is disabled for the preview as well.
+
+---
+
+## Build changes
+
+The platform splitting bug that was holding us up from landing on mozilla-central is complete as far as our needs are concerned.  It landed on elm which is where we'll do the Metro preview from.  There was a lot of fallout from these changes that got fixed up as well.
+
+---
+
+## Various other changes
+
+We synced up the user agent string with the desktop one, did some crash reporting fixes, improved text selection, fixed up things for mouse and touch, fixed the Metro clipboard handling, added support for anonymous opt-in telemetry data reporting, and fixed several other bugs.  
+
+We added a save file picker,  context menu items for saving images, enabled spell checking, and more.
+
+---
+
+## Landing on mozilla-central
+
+The platform splitting bug is complete enough for our needs but I think there is still a bit of work before it can land on m-c.  
+
+We also need to make a decision on if we will wait for Microsoft to add VS2012 Windows XP targeting support.  They will be adding it soon, but if we don't hear an exact date we'll be switching out all of our C++/CX code for WRL code.  
+
+That switch won't take us too long, I would guess a week of long hours, or slightly more. Dropping C++/CX support would mean we can use VS2010 and the Windows 8 SDK.
+
+
+[1]: https://blog.mozilla.org/ux/2012/05/video-sketching-firefox-metro-start-page/
+[mfinkle]: http://starkravingfinkle.org/blog/
+[fyan]: http://frankyan.wordpress.com/
+[mbrubeck]: http://limpet.net/mbrubeck/
+[jmathies]: http://www.mathies.com/weblog/
+[bbondy]: https://brianbondy.com
+[tabraldes]: https://blog.mozilla.org/tabraldes/

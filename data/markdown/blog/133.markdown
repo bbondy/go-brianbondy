@@ -1,0 +1,101 @@
+I will answer some commonly asked questions relating to the [series of tasks that make up the silent update project][0] in this post.
+
+---
+
+
+## Will silent updates first land in Firefox 13?
+
+No, the silent updates work is a series of tasks, and some of it has already landed.
+
+Three of the biggest pieces of work in this new series of tasks are:
+
+1. Add-ons default to compatible.
+2. The [Mozilla Maintenance Service][1], which gives truly silent updates on Windows.
+3. [Background updates][3], which applies updates in the background while Firefox is running on all platforms.
+
+Add-ons default to compatible landed in Firefox 10.
+
+The Mozilla Maintenance Service fixes the problem of updates not being truly silent on Vista and above due to UAC prompts.  Silent updates will occur without this UAC prompt as of Firefox 12.
+
+Firefox 15 will have background updates.
+
+---
+
+## Are background updates the same as silent updates?
+
+No, background updates is a task that makes silent updates better, it is a component of the silent update project.
+
+In Firefox 12, updates will be silent, but they will still be applied at startup.  Meaning when there is an update, it will take slightly longer to startup.
+
+In Firefox 15, updates will be applied in the background while Firefox is running.
+Meaning when there is an update, it will take about the same amount of time to startup as normal.
+
+---
+
+## Will Firefox force me into silent updates?
+
+No, you have always been able to configure how you get updates.
+
+Simply go to: `Options -> Advanced -> Update`.
+
+These options are not changing, in fact you will have more control over how your Firefox updates as of Firefox 12.
+
+You can choose to:
+
+- Automatically download and install updates
+- Check for updates but don't install them without permission
+- Don't check for updates
+
+Furthermore, you can specify whether or not to use the Mozilla Maintenance Service to apply the update.  If checked on, you will not have a UAC prompt.
+
+---
+
+## If I uninstall the Mozilla Maintenance Service will the next update just reinstall it?
+
+No, the Mozilla Maintenance Service will only be installed once.
+If you uninstall the service after that, it will never be installed via an update again.
+
+---
+
+## Will Firefox silently install other things than updates?
+
+No, the only things that will be silently installed, if the silent update option is on, are Firefox updates.
+The updates cannot be tampered with, if they are, they will not be installed.
+
+---
+
+
+## Will the Mozilla Maintenance Service slow down my computer?
+
+No, the Mozilla Maintenance Service will take up a small amount of disk space and only be run during an update.
+If an update is not in the middle of being applied, the service will not be running and will have absolutely no effect on the performance of Firefox and your machine.
+
+---
+
+
+## Will the Mozilla Maintenance Service make updating less secure?
+
+No, we have worked closely with the security team to ensure this feature was delivered securely.
+Firefox will only apply updates issued by Mozilla designed specifically for Firefox.
+
+---
+
+## Is updating more often less secure?
+
+No, if you are not updating your browser, then you do not have the most recent security fixes.
+These are the most dangerous security problems because they are well known and can be exploited.
+
+---
+
+## Will I see the effects of the silent update service in Firefox 12?
+
+No, although the Mozilla Maintenance Service will first be installed in Firefox 12, users will not experience the benefits of the service until the first update after Firefox 12.
+
+The update that installs Firefox 12 will install the service, and so the service itself can't be used to install that update.
+
+The next update after Firefox 12 may be Firefox 13 or may be a minor update after Firefox 12.
+
+[0]: http://lawrencemandel.com/2012/02/03/improving-the-firefox-update-experience/
+[1]: https://brianbondy.com/blog/id/125/mozilla-firefox-and-silent-updates
+[2]: http://blog.mozilla.com/rstrong/
+[3]: http://ehsanakhgari.org/blog/2011-11-11/updating-firefox-background

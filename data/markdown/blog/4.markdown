@@ -1,0 +1,4 @@
+I used [this program][1] to do my taxes (and my wife's). Once done using the program, it will give you a .tax file which you can use to file your taxes online. You simply upload the .tax file to the government's [online site here][2].
+
+[1]: http://www.etaxcanada.com/default.aspx
+[2]: http://www.netfile.gc.ca/menu-e.html

@@ -1,0 +1,102 @@
+Up until recently, Metro Firefox was designed to use a separate profile from desktop Firefox.
+We had planned to rely on sync to bring the data from the 2 profiles together.
+
+We've had feedback around this, and we've found that a better experience would be obtained by sharing a single profile.
+
+We're in the process of implementing shared profiles.
+
+---
+
+## What is a profile?
+
+A profile in Firefox stores all of your personal settings, including: bookmarks, preferences, extensions, passwords, history, and more.
+
+We'll be sharing profiles from both applications, but there are some exceptions:
+
+- Since addons are not initially supported in Metro Firefox, they won't be used in Metro Firefox even if they exist in the profile.
+- To avoid unexpected problems with changed preferences exposed in one environment but not in the other, we're planning to keep most preferences separate.
+
+---
+
+## What are the upsides of having a shared profile?
+
+Sharing a single profile would allow you to instantly retain bookmarks, login status, cookies, and other profile data between environments.
+
+You would never need to wait for some kind of 'sync service' to complete its work to see your data in the other environment.
+
+Another task highly related to sharing a single profile is adding a "Relaunch in Desktop" option from Metro Firefox and a "Relaunch in Metro" option from Desktop Firefox.
+
+---
+
+## Are there any downsides to having a shared profile?
+
+Yes, but we believe them to be corner case issues that the user can work around, see below.
+
+The main disadvantage is that before you could run both Metro and Desktop browsers at the same time.
+This will change so that you can only run either one or the other at any given time.
+
+Windows 8 is a clash of 2 environments:
+
+1. a Desktop environment which is optimized for mouse and keyboard
+2. an immersive environment which is optimized for touch
+
+If you're using a keyboard and mouse, and since we will be having a shared profile, there is no reason you'd want to use the Metro browser.
+If you really want to you can, but surely you don't need to use both Desktop and Metro at the same time.
+
+The opposite argument is also true for touch.  Most of the time when using touch you'll want to use the Metro browser, but there are special cases where you'll want to switch, like if you need an addon or plugin to take effect.
+
+For users who really want to run both at the same time, they can force the use of a different profile using the -ProfileManager command line argument from Desktop Firefox.
+
+---
+
+## Will having a shared profile change the release date?
+
+Having a shared profile is not expected to change the release of Metro Firefox.
+A smooth async panning and zooming experience is being worked on before we want to release, and during that time we're implementing shared profiles.
+
+The switch to Desktop / Metro feature may not retain all opened tabs and filled in form status in v1 if time does not permit. We plan to use session restore to do this, but there's some non trivial work to do there.
+
+---
+
+## Where is this work being tracked?
+
+Shared profile work is being tracked in [bug 924860][924860].
+
+---
+
+## Other implementation details
+
+- Browser chrome cache (not HTTP content cache) will be stored separately to avoid unexpected startup problems. Both browsers use the same User-Agent.
+- We'll be using session restore to accomplish the Metro -> Desktop and Desktop -> Metro switch should time permit.
+- If the Metro browser is already open, and you open a link from either Metro or Desktop, it will open in the already opened Metro browser. You have to switch to Desktop from within Metro to move environments.
+- The same is true for the Desktop browser when already opened, and opening links from either environment.
+- If the browser is not already open, a link click will open a new browser instance in the environment you are currently in.
+- After the initial work is done, we'll want to add options to allow users to make their environment choice either i) act like above, or ii) make the mode switch persistent across launches.
+
+---
+
+## Current progress
+
+If you'd like to see general progress of Metro Firefox you should use either the [Nightly][nightly] or [Aurora][aurora] builds.
+
+Current progress for profile sharing can be seen in [Oak builds][oak] (Not recommended for general use).  These patches will also move to mozilla-central (Nightly builds) after QA'ing is done to ensure there is no harm to the Desktop profile.
+
+The completed list of tasks related to this feature so far include:
+
+- Shared base app name which implies a shared profile
+- Relaunch in Desktop feature (From the Metro browser)
+- Relaunch in Metro feature (From the Desktop browser)
+- Split preference files within the same profile
+- Split startup cache files within the same profile
+
+---
+
+## Feedback
+
+Constructive feedback is appreciated and wanted. Please feel free to leave a comment here or post in the profile sharing tracking bug: [Bug 924860][924860].
+
+
+[924860]: https://bugzilla.mozilla.org/show_bug.cgi?id=924860
+[oak]: http://ftp.mozilla.org/pub/mozilla.org/firefox/nightly/latest-oak/firefox-28.0a1.en-US.win32.installer.exe
+[nightly]: http://ftp.mozilla.org/pub/mozilla.org/firefox/nightly/latest-mozilla-central/firefox-28.0a1.en-US.win32.installer.exe
+[aurora]: https://ftp.mozilla.org/pub/mozilla.org/firefox/nightly/latest-mozilla-aurora/firefox-27.0a2.en-US.win32.installer-stub.exe

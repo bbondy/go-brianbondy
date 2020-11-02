@@ -1,0 +1,8 @@
+I found a VS plug-in that allows you to define solution level build environment variables. This is something I've been wishing Visual Studio had built in for several years now. One of the reasons that it's so important is that you can easily define include directories for all of your projects while keeping them in sync. This is important when administering multiple build configurations.
+
+Typically a simple project only has 2 configs (Debug, and Release) so the problem is not that apparent. But a production level product has at least (Release + Debug) * (x64 + x86 + ia64) = 6 configurations that you have to try and keep in sync. You can download the Solution Build Environment plug-in [here][1].
+
+Also it is important to patch Visual Studio because they have a bug in VS2005 SP1 where plug-ins don't work if you run via command line. You can download this fix [here][2]
+
+[1]: http://www.workspacewhiz.com/SolutionBuildEnvironmentReadme.html
+[2]: http://support.microsoft.com/kb/934517

@@ -1,0 +1,138 @@
+As per this [Future of Firefox announcement][1], we have a work-in-progress, Metro Firefox preview!
+
+<figure style="text-align:left; padding:0px; margin-left:0px">
+<img src="//brianbondy.com/static/img/blogpost_153/metropreview-start.jpg" style="display:block">
+<figcaption style="display:block;">
+</figcaption>
+</figure>
+
+This preview will give you a glimpse of what Firefox on Metro will be like, but it is not meant to be complete.  Several incomplete features will exist, which is normal at this point in development.
+
+<figure style="text-align:left; padding:0px; margin-left:0px">
+<a href="//brianbondy.com/static/img/blogpost_153/metro-screenshot.jpg"><img src="//brianbondy.com/static/img/blogpost_153/metro-screenshot-small.jpg" style="display:block"></a>
+<figcaption style="display:block;">
+</figcaption>
+</figure>
+
+The preview is meant to be installed on Windows 8 RTM and later.  It is built with PGO optimizations turned off, so it will be slightly slower than the default installs.  PGO will be turned on at some point in a future update.
+
+<div style="clear:left;"></div>
+
+Builds are available in the [Firefox Windows 8 wiki][3].  Please feel free to file [feature requests and post bug reports][2].  
+
+<figure style="text-align:left; padding:0px; margin-left:0px">
+<a href="//brianbondy.com/static/img/blogpost_153/metro-screenshot2.jpg"><img src="//brianbondy.com/static/img/blogpost_153/metro-screenshot2-small.jpg" style="display:block"></a>
+<figcaption style="display:block;">
+</figcaption>
+</figure>
+
+---
+
+## The Metro Firefox Preview has nightly updates enabled
+
+<img src="//brianbondy.com/static/img/blogpost_135/windows-8-logo-small.jpg" style="float:left; padding-right:15px; padding-bottom:2px;">
+
+
+The Firefox Metro preview will have updates enabled on its own channel. That means that from here on out, you can keep up to date on what we're up to with the Metro browser by actually trying it.  
+
+<img src="//brianbondy.com/static/img/blogpost_153/softwareUpdates.png" style="float:right; padding-left:10px; padding-bottom:2px;">
+
+Desktop Firefox is responsible for applying the updates for both the Desktop and Metro front ends currently.  You may encounter an update error where updates will fail to apply if both of your Desktop and Metro browsers are open at the same time.    This will be resolved at some point in a future update.
+
+---
+
+## Some features to look for in the Metro Firefox Preview
+
+
+This preview will also include the following highlights:
+
+- Metro browser registration capable installer
+- Zip builds which do registration upon setting default browser from within Firefox
+- Updates enabled
+- New navigation URL bar inspired by the australis theme
+- New tab bar with tab previews (double swipe from the top edge or bottom edge to expose the tab previews)
+- Alternate tab bar with always visible tabs
+- Auto complete screen with tile suggestions as you type
+- New touch optimized start screen with tiles
+- Windows 8 App bar with common functionality
+- Changes to the default theme to fit into Metro
+- Various new touch capabilities
+- Various keyboard shortcuts
+- On screen keyboard handling
+- Gesture support
+- In-page text selection
+- Crash reporting
+- Telemetry support
+- Context sensitive default handling, if in Metro stay in Metro for link clicks
+- Sync support with browser through remote Firefox sync (Set it up through settings)
+- Support for the share data contract to share the current page with another Metro application
+- Support for the search contract to search inside Firefox whether or not Firefox is already open
+- Support for the settings contract accessible via the settings charm
+- Support for snap and filled states, to use Firefox and another Metro application at the same time
+- Metro open and save file picker support
+- Support for secondary tiles (pinned websites to your start screen)
+- View current page on desktop functionality
+- Support for pdfjs: In content PDF viewer built in JavaScript
+- Spell checking enabled
+- And a lot more
+
+---
+
+## Reminder on defaults handling
+
+Metro browsers can only be used in Windows 8 if the browser is set as your default.  So if you want to keep this preview installed and get updates, you'll need to keep it as the default.
+
+<img src="//brianbondy.com/static/img/blogpost_153/Default.jpg" style="float:left; padding-right:15px; padding-bottom:10px;">
+
+To set the default browser, simply open Desktop Firefox options, go to the advanced -> General tab, and click on the "Make Firefox the default browser" button.  This will launch Control Panel, you will need to select the browser from the list and set all defaults.
+
+<div style="clear:left"></div>
+
+---
+
+## Things not yet implemented or disabled
+
+Although we have plans for Flash support, the preview currently has it disabled.  You can add support for windowless plugins by setting plugin.disable to false in about:config.
+
+As previously mentioned, for the Metro environment only, even in the initial release, we will not have add-ons enabled. We will eventually add support for add-ons through the add-on SDK.
+
+Panning and zooming support is currently disabled.  <strike>Scrolling with the mouse wheel is broken at the moment as well.</strike>  Scrolling with the mouse wheel was fixed on the Nightly update the day after the initial preview.  You will have to use your keyboard for scrolling, or use touch.  [Minimum system requirements][8] are the same as Windows 8 except that DirectX 9 is not supported yet.
+
+
+---
+
+## Sources
+
+- [Future of Firefox Releases][6]
+- [Video Sketching Firefox Metro Start Page][5]
+- [Jonathan Wilde's intern presentation][4]
+- [Metro Preview tile icon][7]
+
+---
+
+## Related Posts
+
+- [Firefox Metro development begins, status update 1][129]
+- [Firefox Metro development heating up, status update 2][130]
+- [A working Firefox Windows 8 Metro prototype, status update 3][135]
+- [The latest on Firefox for Windows 8 Metro, status update 4][136]
+- [Firefox for Windows 8 Metro, status update 5][137]
+- [Firefox for Windows 8 Metro - Front end updates, crash reporting, pdfs, and more, status update 6][150]
+- [Preparing for the Firefox for Windows 8 Metro preview, status update 7][151]
+
+
+[129]: https://brianbondy.com/blog/id/129/
+[130]: https://brianbondy.com/blog/id/130/
+[135]: https://brianbondy.com/blog/id/135/
+[136]: https://brianbondy.com/blog/id/136/
+[137]: https://brianbondy.com/blog/id/137/
+[150]: https://brianbondy.com/blog/id/150/
+[151]: https://brianbondy.com/blog/id/151/
+[1]: https://blog.mozilla.org/futurereleases/
+[2]: https://bugzilla.mozilla.org/enter_bug.cgi?product=Firefox
+[3]: https://wiki.mozilla.org/Firefox/Windows_8_Integration#Elm_Nightly_Builds
+[4]: http://mfx.jwilde.me/
+[5]: http://blog.mozilla.org/ux/2012/05/video-sketching-firefox-metro-start-page/
+[6]: https://blog.mozilla.org/futurereleases/
+[7]: https://bugzilla.mozilla.org/show_bug.cgi?id=735008
+[8]: http://en.wikipedia.org/wiki/Windows_8#Hardware_requirements

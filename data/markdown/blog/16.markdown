@@ -1,0 +1,5 @@
+Every version of windows allowed each application to stop the computer from entering sleep mode.
+
+This is an important function and is required by several applications (for example backup software). This ability was removed in Windows Vista. I.e. Windows Vista (without manual tweaking of a group policy) does not allow an application to veto sleep mode.
+
+This is just another reason why Windows Vista sucks.

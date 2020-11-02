@@ -1,0 +1,14 @@
+I've implemented comments on this site for all blog posts.  I've been wanting to add comments for a long time, especially in case I have errors in any of my postings.  
+
+I decided to build off of Django's built in comment framework [django.contrib.comments][1].  I was very impressed on how easy it is to integrate and customize.   The Django  comment framework allows you to attach comments to any model you have.  So I didn't need to do any additional database work.
+
+I'm going to attempt to hold off on [CAPTCHA][2] for the moment to see how their honeypot feature works.  But I expect that I'll have to implement a CAPTCHA system eventually.  Basically the honeypot feature is an extra field in the form that's used as a trap. If any data is entered in that field, the comment will be considered spam.  Spam robots will typically fill out all fields when attempting to make a form submission.
+
+The sliding and collapsing effects are basically done with a single line of jQuery code.
+
+	$("#id-of-div").slideToggle();
+
+You can also optionally pass in a duration or 'fast' and 'slow' keywords to the `slideToggle` function.  Some other cool cross browser things you can do with jQuery are: adding animated effects, Making XML HTTP (AJAX) requests, DOM navigation, DOM manipulation, drag and drop, complex client side operations, and validation.
+
+[1]: http://docs.djangoproject.com/en/dev/ref/contrib/comments/
+[2]: http://en.wikipedia.org/wiki/CAPTCHA

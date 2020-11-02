@@ -1,0 +1,6 @@
+Google code search allows programmers to search source code. Works very well.
+
+[![Google Code Search Logo][1]][2]
+
+[1]: http://www.google.com/intl/en/images/codesearch_logo.gif
+[2]: http://www.google.com/codesearch

@@ -1,0 +1,1 @@
+Added tools and descriptions for the following topics: Base64 encoding, Base64 decoding, URL encoding, URL decoding, and obtaining HTTP headers. You can access these pages and tools via the 'Other' link on the left hand navigation bar.

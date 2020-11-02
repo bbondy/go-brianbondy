@@ -1,0 +1,1 @@
+Long URL paths that you want to send to people via email often aren't clickable because email clients will insert line breaks in the middle of the URL. I created a page that will allow you to turn a long url into a small URL. You can access it here

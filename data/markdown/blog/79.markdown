@@ -1,0 +1,41 @@
+Several months ago I decided that this website needed a revamping.  
+
+The work since that thought is finally being released today.  The work on the site is still slowly in progress, but I feel that enough of the site is done to be better than the last site.
+
+[![Powered by Django][9]][8]
+
+Some stats on the new site:
+
+-  Was developed on my mac
+-  Was written using vi for all editing
+-  Was built using [Django][4] 1.1
+- Is running with [Python][5] 2.6
+- Is served through IIS with [PyISAPIe][6].   (PyISAPIe is a great project created by Phillip Sitbon which brings Django to IIS.)
+- [JQuery][10] was used for a couple of post page served alterations
+- The database is built using [SQLite][12]
+- The blog posts with code samples are made with [Google's code prettify][13]
+- All blog posts are rendered using [Django Markdown][2] (which makes for easy posting of great content)
+
+[Markdown][3] is a hassle free, easy to use markup language that allows you to easily post links, post images, and format great blog posts with little work.
+
+[The old site][11] was built in ASP .NET beta, and slowly upgraded over time to newer versions.
+Overall for me, coding in Django is a much better and funner experience than coding in ASP .NET ever was.
+
+Before deciding on Django for the new site, I also had an attempt at [Ruby on Rails][7].  I wasn't a fan from the start, the language was simply too different from what I am used to and know.
+
+I like the new design a lot better than the old one.  I hired [Bradd Bezaire to do this design][1] over 2 years ago in August of 2007.  This design sat in my inbox since then because I've been extremely busy, but I'm glad his work didn't go to waste after all.
+
+
+[1]: http://b-raddical.com/
+[2]: http://www.freewisdom.org/projects/python-markdown/
+[3]: http://en.wikipedia.org/wiki/Markdown
+[4]: http://www.djangoproject.com/
+[5]: http://www.python.org/
+[6]: http://pypi.python.org/pypi/PyISAPIe/1.0.130
+[7]: http://rubyonrails.org/
+[8]: http://www.djangoproject.com/
+[9]: https://brianbondy.com/static/img/poweredByDjango.gif
+[10]: http://jquery.com/
+[11]: http://oldsite.brianbondy.com
+[12]: http://www.sqlite.org/
+[13]: http://code.google.com/p/google-code-prettify/

@@ -1,0 +1,175 @@
+<img src='/static/img/blogpost_119/browser_icons.png'>
+
+This article will cover the following topics:
+
+- An overview of the basics of HTTP
+- What is HTTP pipelining?
+- What problems can appear with HTTP pipelining?
+- Why you should care about HTTP pipelining?
+- Which web servers support HTTP pipelining?
+- Which browsers support HTTP pipelining? (And how to enable it)
+- Which programming languages/libraries support HTTP pipelining?
+
+---
+
+## An overview of the basics of HTTP
+
+The HTTP protocol works by sending requests and getting responses back for those requests.
+
+I will not get into the details of the HTTP protocol syntax.  Details about headers, HTTP methods, paths, parameters, etc., as this post would be too long.  Instead I'll just cover some basics and then dive right into explaining HTTP pipelining.
+But I will show a basic HTTP GET request and response.
+
+A typical HTTP request looks something like this:
+
+    GET / HTTP/1.1
+    Host: www.brianbondy.com
+    User-Agent: Mozilla/5.0
+    Connection: keep-alive
+
+A typical HTTP response looks something like this:
+
+
+    HTTP/1.1 200 OK
+    Content-Type: text/html; charset=utf-8
+    Content-Encoding: gzip
+    Server: Google Frontend
+    Content-Length: 12100
+    ...content...
+
+
+<img src='/static/img/blogpost_119/nopersistent.png' style='float:right;padding-left:10px;padding-bottom:10px;padding-top:10px;'>
+
+On a single socket, a single request is sent out, and then a single response is retrieved.
+
+A browser or other HTTP client could create multiple sockets to a server and make multiple requests.  The picture on the right shows 2 HTTP requests and responses on 2 different sockets.
+
+Pretty much all web browsers do multiple connections per server today.
+
+In Firefox you can adjust this amount by going to `about:config` and adjusting:  
+`network.http.max-connections-per-server`
+
+Mine was initially defaulted to 15.
+
+---
+
+<img src='/static/img/blogpost_119/nopipelining.png' style='float:right;padding-left:10px;padding-bottom:10px;padding-top:10px;'>
+
+Several requests to a single server are very typical.  For example an HTML file can have several referenced images.
+
+To avoid creating several connections, HTTP 1.1 introduced persistent connections.
+
+The picture on the right shows 3 requests and responses on a single persistent connection.
+
+Having several connections can give better speed, but if you need to create a new connection for each and every request, it will use much more resources, require more TCP handshakes, and will be susceptible to [TCP slow-start][1].
+
+If you look back at the example HTTP request above, the HTTP header: "Connection: keep-alive" indicates that you would like to use a persistent connection.
+The default is to use a persistent connection, but the server is not forced to do this, and it can send a "Connection: close" header.
+
+---
+
+## What is HTTP pipelining?
+
+<img src='/static/img/blogpost_119/pipelining6requests.png' style='float:right;padding-left:10px;padding-bottom:10px;'>
+
+
+HTTP pipelining is a feature of HTTP 1.1 persistent connections.
+It means that you can send multiple requests on the same socket without waiting for each response.
+
+The picture on the right shows 6 requests and responses using at most 3 requests at a time.
+
+HTTP is based on TCP, and one of TCP's guarantees is ordered delivery.  This means that all of the requests sent out on the same socket, will be received in that order on the server.
+An HTTP server that supports HTTP pipelining will send its responses in the same order.
+
+HTTPS pipelining is also possible with secure HTTP connections and it gives an even greater degree of speed because of the extra needed SSL/TLS handshakes.
+
+---
+
+## What problems can appear with HTTP pipelining?
+
+Although the HTTP [1.1 RFC][5] indicates that HTTP implementations **should** support persistent connections, it is possible that they will not.
+
+You can't be sure if an HTTP server supports HTTP pipelining before making a request.  
+The server may even send a "Connection: Close" header after your first request is sent indicating it does not want to use a persistent connection.
+
+There could be proxies in between as well which cause problems, making an HTTP client black list approach to determining which servers support persistent connections not ideal.
+
+Based on the HTTP 1.1 RFC, if a client finds that a pipelined connection is not supported, the client should re-attempt the failed requests.
+
+To avoid problems with a server getting 2 of the same requests and the client not knowing it, the client should only use pipelining on HTTP methods which are [idempotent][2].
+In general, idempotence means that you can apply the same operation 1 or many times, and it will have the same effect.  Example: setting a variable x to the value of 3 is an idempotent operation.
+Setting a variable to one more than its last value is NOT an idempotent operation.
+
+In terms of HTTP, PUT and DELETE are idempotent operations, GET, HEAD, OPTIONS and TRACE should be idempotent and HTTP POST is probably not.
+In practice, most browsers that do support pipelining only do so for GET and HEAD requests.
+
+Sometimes it's hard for a client to determine if the server's response is valid or garbage.
+Requests using pipelining to servers which don't support pipelining need to be retried and so it would be slower.  
+
+It would be nice, but servers do not currently tell a client that they support pipelining.  If all servers did, then only the first request would need to be non-pipelined if the client didn't already know if the server had support.
+
+---
+
+## Why you should care about HTTP pipelining?
+
+TCP/IP packets can be reduced.  The typical [maximum segment size (MSS)][6] is in the range of 536 to 1460 bytes, and so several HTTP requests could fit into a single packet.  It would also reduce the total number of packets.
+Also there are wins with the congestion control strategy, connection handshake, connection teardown and SSL handshake.
+
+What this means is that you can get much faster page loads by using HTTP pipelining.
+
+I've been using it in Opera and Firefox and have not run into problems.
+
+---
+
+## Which web servers support HTTP pipelining
+
+Most modern web servers support HTTP pipelining.  IIS 4.0 is said to not have support for it.
+
+---
+
+## Which browsers support HTTP pipelining? (And how to enable it)
+
+- Google Chrome: No
+- Safari: No
+- Internet Explorer: No
+- Opera: Yes
+- Firefox: Yes, but you need to enable it by following the below steps.
+
+You can adjust HTTP pipelining settings in Firefox by changing the following settings in `about:config`
+
+For HTTP pipelining:
+Set `network.http.pipelining` to `true`
+
+For HTTP proxy pipelining: (Use this if you want to try pipelining and you use a proxy server)
+Set `network.http.proxy.pipelining` to `true`
+
+For HTTPS pipelining:
+Set `network.http.pipelining.ssl ` to `true`
+
+To adjust the number of requests to send at once:
+Set `network.http.pipelining.maxrequests` to 8.  The pipelining picture above would have a value of 3 here.
+
+Note:
+
+- The `network.http.max-connections-per-server` setting is clamped between 1 and 255. (This setting has nothing to do with pipelining but you can adjust it)
+- The `network.http.pipelining.maxrequests` setting is clamped between 1 and NS_HTTP_MAX_PIPELINED_REQUESTS which is defined to be 8.  Unless you compile your own builds, a value of 8 is the most you can try with Firefox.
+
+---
+
+## Which programming languages/libraries support HTTP pipelining?
+
+Many popular programming libraries across most programming languages support pipelining.
+
+For example, here's a small subset list of libraries that support pipelining:
+
+- Python: httplib2, Twisted
+- .NET Framework: System.Net.HttpWebRequest
+- C++: Qt's QNetworkRequest, libcurl
+
+
+
+[1]: http://en.wikipedia.org/wiki/Slow-start
+[2]: http://en.wikipedia.org/wiki/Idempotence
+[3]: https://bugzilla.mozilla.org/show_bug.cgi?id=603503
+[4]: http://egonitron.com/2007/05/25/the-truth-about-the-firefox-pipelining-trick/
+[5]: http://www.w3.org/Protocols/rfc2616/rfc2616-sec8.html#sec8.1
+[6]: http://en.wikipedia.org/wiki/Transmission_Control_Protocol#Maximum_segment_size

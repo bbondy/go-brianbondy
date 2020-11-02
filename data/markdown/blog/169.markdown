@@ -1,0 +1,99 @@
+I'm happy to announce that the [Khan Academy Firefox OS app](https://marketplace.firefox.com/app/khan-academy) is now available in the Firefox Marketplace!
+
+<img src="https://brianbondy.com/static/img/blogpost_169/fox.png#2" style="width:700px">
+
+Khan Academy’s mission is to provide a free world-class education for anyone anywhere.
+The goal of the Firefox OS app is to help with the “anyone anywhere” part of the KA mission.
+
+
+## Why?
+
+There's something **exciting** about being able to hold a world class education in your pocket for the cheap price of a Firefox OS phone.  Firefox OS devices are mostly deployed in countries where the cost of an iPhone or Android based smart phone is out of reach for most people.
+
+The app enables developing countries, lower income families, and anyone else to take advantage of the Khan Academy content.
+A persistent internet connection is not required.
+
+What's that.... you say you want another use case? Well OK, here goes: A parent wanting each of their kids to have access to Khan Academy at the same time could be very expensive in device costs.  Not anymore.
+
+## Screenshots!
+
+<img src="https://brianbondy.com/static/img/blogpost_169/1.png" style="border: 1px solid #999; margin-right: 10px; margin-bottom: 10px; width: 175px">
+<img src="https://brianbondy.com/static/img/blogpost_169/2.png" style="border: 1px solid #999; margin-right: 10px;margin-bottom: 10px; width: 175px">
+<img src="https://brianbondy.com/static/img/blogpost_169/4.png" style="border: 1px solid #999; margin-right: 10px;margin-bottom: 10px; width: 175px">
+<img src="https://brianbondy.com/static/img/blogpost_169/5.png" style="border: 1px solid #999; margin-right: 10px;margin-bottom: 10px; width: 175px">
+<img src="https://brianbondy.com/static/img/blogpost_169/6.png" style="border: 1px solid #999; margin-right: 10px;margin-bottom: 10px; width: 175px">
+<img src="https://brianbondy.com/static/img/blogpost_169/3.png" style="border: 1px solid #999; margin-right: 10px;margin-bottom: 10px; height: 175px">
+
+## App features
+
+- Access to the full library of Khan Academy videos and articles.
+- Search for videos and articles.
+- Ability to sign into your account for:
+  - Profile access.
+  - Earning points for watching videos.
+  - Continuing where you left off from previous partial video watches, even if that was on the live site.
+  - Partial and full completion status of videos and articles.
+- Downloading videos, articles, or entire topics for later use.
+- Sharing functionality.
+- Significant effort was put in, to minify topic tree sizes for minimal memory use and faster loading.
+- Scrolling transcripts for videos as you watch.
+- The UI is highly influenced by the first generation iPhone app.
+
+## Development statistics
+
+- 340 commits
+- 4 months of consecutive commits with at least 1 commit per day
+- 30 minutes - 2 hours per day max
+
+## Technologies used
+
+Technologies used to develop the app include:
+
+- [The Khan Academy API](http://api-explorer.khanacademy.org/)
+- [React](http://facebook.github.io/react/)
+- [Backbone](http://backbonejs.org/)
+- [Web APIs](https://wiki.mozilla.org/WebAPI)
+
+
+## Localization
+
+The app is fully localized for English, Portuguese, French, and Spanish, and will use those locales automatically depending on the system locale.
+The content (videos, articles, subtitles) that the app hosts will also automatically change.
+
+I was lucky enough to have several amazing and kind translators for the app volunteer their time.
+
+- [Rodrigo Silveira](http://blog.rodms.com) - Portuguese app translation
+- [Romain Sertelon](https://www.bluepyth.fr/) - French app translation
+- [Pablo Solares Acebal]( http://pablo.edicionescamelot.com) - Spanish translation
+
+
+The translations are hosted and managed on Transifex.
+
+## Want to contribute?
+
+The [Khan Academy Firefox OS app source](https://github.com/bbondy/khan-academy-fxos) is hosted in one of my github repositories and periodically mirrored on the Khan Academy github page.
+
+If you'd like to contribute there's a lot of future [tasks posted as issues](https://github.com/bbondy/khan-academy-fxos/issues) on github.
+
+
+## Current minimum system requirements
+
+- Around 8MB of space.
+- 512 MB of RAM
+
+## Low memory devices
+
+By default, apps on the Firefox marketplace are only served to devices with at least 500MB of RAM.  To get them on 256MB devices, you need to do a low memory review.
+
+One of the major enhancements I'd like to add next, is to add an option to use the YouTube player instead of HTML5 video.
+This may use less memory and may be a way onto 256MB devices.
+
+## How about exercises?
+
+They're coming in a future release.
+
+## Getting preinstalled on devices
+
+It's possible to request to get pre-installed on devices and I'll be looking into that in the near future after getting some more initial feedback.
+
+Projects like [Matchstick](https://www.kickstarter.com/projects/matchstick/matchstick-the-streaming-stick-built-on-firefox-os) also seem like a great opportunity for this app.

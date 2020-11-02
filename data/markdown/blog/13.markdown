@@ -1,0 +1,11 @@
+I have multiple Macs and PCs. I like to use the Macs more, but I do most of my development in windows. I tried using parallels at first, but it turned out to be slow for several apps.
+
+I've been using parallels with my MBP for a few months now. My MBP had 2GB of RAM and is a 2.33GHz Intel Core 2 Duo. Parallels always made OS X slow, and running applications like Visual Studio was painfully slow.
+
+I decided to replace one of my 1GB sticks of RAM with a 2GB stick of RAM to reach the maximum available 3GB of RAM in my MBP. Apparently if you try to use two 2GB sticks of RAM, then there could be memory address overlap and problems can arrive.
+
+What did I find? The performance difference after installing the extra 1GB of RAM is amazing. Windows runs extremely fast in parallels, and there are no delays at all. I have parallels configured to use 16MB video and 1500MB of RAM. It runs better than my best PC. Before I had parallels configured to use 1GB of RAM.
+
+I even keep parallels open during my normal work day while in OS X just for convenience's sake. This is something I wouldn't dream of doing with my old configuration.
+
+In conclusion, if you're going to buy a MBP and you are going to use parallels. Make sure you select the 3GB RAM maximum. It makes all the difference in the world.

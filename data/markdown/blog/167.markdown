@@ -1,0 +1,70 @@
+<img src="https://brianbondy.com/static/img/blogpost_164/KA.png" style="float:right; width:130px">Developers at Khan Academy are responsible for shipping new stuff they create to [khanacademy.org](http://khanacademy.org/) as it's ready.
+As a whole, the site is deployed several times per day.  Testing deploys of khanacademy.org can take up a lot of time.
+
+We have tons of JavaScript and Python unit tests, but they do not catch various errors that can only happen on the live site, such as Content Security Policy (CSP) errors.
+
+We recently deployed a new testing environment for end to end testing which will result in safer deploys.
+End to end testing is not meant to replace manual testing at deploy time completely, but over time, it will reduce the amount of time taken for manual testing.
+
+---
+
+## Which types of errors do the tests catch?
+
+The end to end tests catch things like missing resources on pages, JavaScript errors, and CSP errors.
+They do not replace unit tests, and unit tests should be favoured when it's possible.
+
+---
+
+## Which frameworks are we using?
+
+<div style="float:right">
+<img src="https://brianbondy.com/static/img/blogpost_167/slimerjs.png" style="width: 100px; padding-bottom: 15px;"><br>
+<img src="https://brianbondy.com/static/img/blogpost_167/casperjs.png" style="width: 100px">
+</div>
+
+We chose to implement the end to end testing with [CasperJS](http://casperjs.org/) powered by the [SlimerJS](http://slimerjs.org/) engine.  Actually we even have one more abstraction on top of that so that tests are very simple and clean to write.
+
+SlimerJS is similar and mostly compatible with the more known [PhantomJS](http://phantomjs.org/), but SlimerJS is based on Firefox's Gecko rendering engine instead of WebKit.  At the time of this writing, it's based on Gecko 33.  CasperJS is a set of higher level APIs and can be configured to use PhantomJS or SlimerJS.
+
+The current version of PhantomJS is based on Webkit and is too far behind to be useful to end to end tests for our site yet. There's a newer version of PhantomJS coming, but it's not ready yet.  We also considered using Selenium to automate browsers to do the testing, but it didn't meet our objectives for various reasons.
+
+---
+
+## What do the tests do?
+
+They test the actual live site.  They can load a list of pages, run scripts on the pages, and detect errors.
+The scripts emulate a user of the site who fills out forms, logs in, clicks things, waits for things, etc.
+
+We also have scripts for creating and saving programs in our CS learning environment, doing challenges, and we'll even have some for playing videos.
+
+---
+
+## Example script
+
+Here's an example end-to-end test script that logs in, and tests a couple pages.
+It will return an error if there are any JavaScript errors, CSP errors, network errors, or missing resources:
+
+    EndToEnd.test("Basic logged in page load tests", function(casper, test) {
+        Auth.thenLogin(casper);
+        [
+            [ "Home page", "/"],
+            [ "Mission dashboard", "/mission/cc-sixth-grade-math"]
+        ].map(function(testPage) {
+            thenEcho(casper, "Loading page: " + testPage[0]);
+            KAPageNav.thenOpen(casper, testPage[1]);
+        });
+        Auth.thenLogout(casper);
+    });
+
+
+
+---
+
+## When are tests run?
+
+Developers are currently prompted to run the tests when they do a deploy, but we'll be moving this to run automatically from Jenkins during the deploy process.
+Tests are run both on the staged website version before it is set as the default, and after it is set as the default version.
+
+The output of tests looks like this:
+
+<img src="https://brianbondy.com/static/img/blogpost_167/test-output.png" style="width: 400px">

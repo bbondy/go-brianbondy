@@ -1,0 +1,20 @@
+The Windows 8 Consumer Preview introduced a great new feature called [XAML interop for DirectX applications][1].
+Since Firefox on Metro is a Direct X application, we took advantage of that feature.
+
+Using XAML interop made the following things easier:
+
+- Platform integration features
+- Input related work
+- The appbar
+- Edge detection
+- Other areas where we would use XAML based WinRT APIs
+
+We ran into a bug in Windows where our process would crash on suspend though.
+This bug was confirmed in Windows 8 and was expected to be fixed for the release preview.
+Unfortunately since then, it was decided that this functionality would not be supported for metro style enabled desktop browsers.
+
+This doesn't cause us major pain, but does take some extra time.  We need to backout the XAML interop support.  I'll be working on doing that this weekend, and expect to be finished by Monday.
+
+We are currently using XUL for UI, if we ever did decide to switch to native UI like Android did, then this may be a problem.  The appbar support will be reimplemented in XUL.
+
+[1]: http://msdn.microsoft.com/en-us/library/hh825871.aspx  

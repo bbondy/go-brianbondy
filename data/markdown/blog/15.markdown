@@ -1,0 +1,5 @@
+Apple not licensing its OS to other hardware vendors, gives Apple a big advantage overall.
+
+Anytime there is any type of hardware upgrade, Apple gets the credit (and traffic/hits/sales). When a new processor gets released by Intel (for example today's 8-core release), Microsoft will not get any new traffic from it; However, Apple will get millions of unique hits (once they release it) because of the hardware release.
+
+The other good part, is that Apple can guarantee that anyone that has an Apple, has a good reliable, fast, non-sluggish experience. With Microsoft, they can't guarantee this since Windows runs on any PC hardware which is not sold by Microsoft.

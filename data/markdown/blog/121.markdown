@@ -1,0 +1,57 @@
+We see the http a URL scheme, just about every day:
+
+> https://brianbondy.com
+
+The `http` part in the example above is the URL scheme.
+
+But there are also dozens of other URL schemes, including: ftp, mailto, irc, smb, chrome, about, snmp, and data.
+This post talks about one called the [data URL scheme][1].
+
+The data URL scheme, amongst other things, allows you to embed images into your HTML pages.
+That means that no separate HTTP request/response is needed to obtain such an image.
+It looks like this:
+
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO9TXL0Y4OHwAAAABJRU5ErkJggg==" alt="Red dot" />
+
+The first part of the URL is the scheme `data`, followed by the mime type `image/png`, optionally followed by base64 (if not specified assumes ASCII characters with encoded non printable characters).
+The last part of the URI after the comma is the content of the file in the appropriate encoding.
+
+
+The data URL scheme was specified in 1998 in [RFC 2397][2] and has been implemented by most major browsers as of HTML4.
+Most major browsers already have pretty good coverage for HTML5.  IE1-IE7 lack support.
+
+The benefit of using the data URL scheme is that if the image is small, the overhead is less than the HTTP request/response headers.
+It also frees up concurrent connections since each browser has a maximum amount of connections it can make total and to each domain.
+
+You wouldn't want to use the data URL scheme for large images, or if you require support for IE7 and below.
+Your image won't be separately cached either, so this means that it will be downloaded with each request to the parent HTML page.
+You can get around this last limitation though by specifying your data URL inside an already cached CSS file with a CSS rule background:url('data:image/png;base64,...);
+
+Overall it is a good thing to use and I'd use it for social icons in HTML.  
+There are also many other uses of the data URL scheme mentioned below.
+
+---
+
+## Uses of the data URI scheme:
+
+You may have noticed that sometimes emails with images don't have a separate attachment.
+You can use the data URI scheme inside HTML email messages without having a separate image attachment.
+
+The new HTML5 `<canvas>` element allows you to export your canvas to a data URL.
+You can do this with [&lt;canvas&gt;.toDataURL][3]
+
+---
+
+## How it relates to me:
+
+I recently improved the BMP and ICO decoder (refactoring plus adding support for PNG ICOs) for Firefox.
+I also have to implement BMP and ICO encoders so that we can have better shell integration with Windows 7.
+
+A side effect of doing these ICO and BMP encoders is that Firefox will support BMP and ICO generation via the `<canvas>.toDataURL('image/ico')` and `<canvas>.toDataURL('image/bmp')`.
+This makes Firefox a pretty good image conversion program.
+This also makes it possible for example, for a web page developer to implement a [favicon][4] creator without server side code.  No other browsers currently implement BMP and ICO mime types for canvas exporting.
+
+[1]: http://en.wikipedia.org/wiki/Data_URI_scheme
+[2]: http://www.ietf.org/rfc/rfc2397
+[3]: http://www.w3.org/TR/html5/the-canvas-element.html#dom-canvas-todataurl
+[4]: http://en.wikipedia.org/wiki/Favicon

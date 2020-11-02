@@ -1,0 +1,1 @@
+ou can now go to http://urlzip.org and "zip" your long URLs into small URLs. Converting long URLs to short URLs is useful when sending long URLs via email. You can also set keywords for your URLs, so that you can always access long URLs just by remembering a short URL.

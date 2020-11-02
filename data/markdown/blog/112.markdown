@@ -1,0 +1,33 @@
+<p>★★★☆☆ (<span itemprop="rating">3</span> stars out of 5)</p>
+
+The book [97 Things Every Programmer Should Know][1] was edited by [Kevlin Henney][4] and has no single author.
+Instead of a typical book with one, two or three authors, this book has almost 1 author per topic covered.
+The book does re-use some authors across topics, so naturally there are not quite 97 contributors.
+
+Each of the 97 chapters in the book covers one topic, each topic being 2 pages long.
+The depth of each topic would be equivalent to what you would find on a blog post, or a well written [StackOverflow][2] or [programmers.stackexchange.com][3] answer.
+
+As expected with dozens of contributors for the book, I had various opinions which can be grouped into:
+
+- I completely agreed with some points
+- I completely disagreed with some points
+- Other topics I found were acceptable points but really didn't matter as much as the author thought
+
+It was nice to have so many varying contributors and perspectives, all from successful and knowledgeable authors; However, personally
+I prefer reading from a single author or very small group of authors.
+
+I found it a little annoying that the description of who was giving the advise on each topic wasn't inline with the topic for each chapter.  
+Instead readers need to flip to the back of the book to read up on each author.
+
+Personally, I like to know about the author when I'm reading any article; it adds more depth and credibility to what is being said.
+At the very least, it would have been nice to have a page number reference to where the contributor description is exactly.
+
+Strangely enough, I think the best way to read this book may be to start with the contributor list at the end of the book, and read each person's description, and then what they have to say.  
+The page references to each author's articles are inline with each contributor in the back of the book.
+
+If you haven't read the Joel on Software book series, I'd recommend reading those first.  If you have read them and want more, then this book is a great fit.
+
+[1]: http://oreilly.com/catalog/9780596809492
+[2]: http://stackoverflow.com/
+[3]: http://programmers.stackexchange.com/
+[4]: http://en.wikipedia.org/wiki/Kevlin_Henney

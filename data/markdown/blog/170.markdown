@@ -1,0 +1,26 @@
+<img width="130" height="161" src="//brianbondy.com/static/img/blogpost_164/KA.png" style="float:right; margin-bottom: 5px">
+
+Today is my last day at Khan Academy (KA). At just over a year, it was much less time than I'd like to have spent at KA.  In the end though, I feel like it's not the amount of time that you spend at a company that matters, but the impact that you made.
+
+I don't regret one second of my time here, nor do I regret the decision to go to KA.
+
+Over the past year I've had the chance to work with some amazing people.
+Coming in, I was primarily a C++ developer with some JS and Python experience.
+Thanks to KA, today I think I'm just as strong in JS, and Python now.
+
+Some of the impactful moments I had during the year includes:
+
+- As a hackweek project, created an [environment for learning SQL](/blog/id/168/sql-on-khan-academy-enabled-by-sqlite-sqljs-asmjs-and-emscripten/) which Pamela Fox has now created a [full course](https://www.khanacademy.org/computing/computer-programming/sql) for.
+- Was a large part of making KA's CS environment not JS specific but able to handle multiple languages.
+- Co-authord an [environment for learning HTML and CSS](https://www.khanacademy.org/about/blog/post/103147672575/learn-how-to-make-webpages-with-html-css-on-khan) with John Resig, Pamela Fox, and Alex Rodrigues.
+- Along with Colin Fuller, lead the development of [LearnStorm](https://www.khanacademy.org/learnstorm) - A very successful Google funded Bay Area math competition.
+- Lead development for a [peer evaluations environment](/blog/id/165/peer-evaluations-for-coding-projects-on-khan-academy/) (code review feature) for Khan Academy CS users.
+- As a 3 day hackathon project, created an [autosuggest code editor feature](/blog/id/166/making-programming-easier-on-khan-academy---2014-hackathon-project/) for programs on KA's CS platform.
+- Suggested and implemented an automated [end-to-end testing framework](/blog/id/167/automated-end-to-end-testing-at-khan-academy-using-gecko/) in under 2 weeks which is used during each deploy today.
+- Sole primary developer for a 5 out of 5 star [Firefox OS Khan Academy app](/blog/id/169/developing-and-releasing-the-khan-academy-firefox-os-app/) as a side project which is still ongoing.
+- Was the developer lead for a team to work on various tasks to improve user satisfaction.
+- Totalling around 700 code commits, implemented various other general fixes, SEO fixes, discussion fixes, GAE integration, and privacy work.
+
+What will I be doing? I'll be working my butt off pursuing a startup that I'm co-founding.
+
+Thank you Khan Academy for an amazing experience. If anyone is thinking of [joining KA](https://www.khanacademy.org/careers), I'd highly encourage it. It's easily one of the most developer friendly, culturally perfect, fun, intrinsically motivating, and open place to work.

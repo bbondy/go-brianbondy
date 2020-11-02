@@ -1,0 +1,3 @@
+I purchased [this book][1] for learning more about compression and information retriaval. So far it's very good. The second chapter has a very good coverage of text compression.
+
+[1]: http://urlzip.org/managing_gigabytes

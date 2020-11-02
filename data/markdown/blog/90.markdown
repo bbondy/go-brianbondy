@@ -1,0 +1,47 @@
+I've long known about the rope data structure, but it hasn't dawned on me until now in what cases you'd actually want to use it.  I also didn't take the time to see how a rope was actually implemented until I looked it up tonight. 
+
+Here's an explanation:
+
+The problem with a string data structure is that it's very hard to do insertions into the middle of the string.  This means that if you are continually inserting text into the middle of your string, then you will need to re-allocate your buffer a lot of times.  
+
+Also to append 2 strings you are forced into copying the 2nd string into the first string's buffer.  Assuming the first string's buffer is large enough.  If the buffer is not large enough, then the first string will need to re-allocate and copy.
+
+If you have a really really large string, let's say 1GB worth of string data, then a simple insertion of a couple words means you need to move the rest of the characters over and then null terminate.  This is an O(N) operation, which means you have to process 1GB worth of data even for any insertion into a 1GB string.
+
+A rope is a special case of a binary tree data structure where each leaf node holds a substring (or an array of characters).   Nodes that are not leaf nodes do not hold an array of characters.  
+
+A left child that is a leaf is the left part of a string.  A right child that is a leaf node is the right part of the string.   To get the whole string you process the left child then the right child.
+
+You can concatenate 2 ropes easily by creating a common root node and joining them together.
+
+Example:
+
+    RootNode = "Hello"
+
+
+I want to append " World" so first I create a new rope with a single RootNode....
+
+    RootNode = " World"
+
+Then I combine both of those ropes:
+
+    RootNode:
+     - Left Child: "Hello"
+     - Right Child: " World"
+
+Now if we want to make an `insertion` into the middle of the stirng: "Hello Great World" we simply made a new node and join the leaf node "Hello" with this new node " Great".
+
+    RootNode:
+      LeftChild:
+       - LeftChild: "Hello"
+       - RightChild: " Great"
+      RightChild: " World"
+
+
+To get the full string you simply process the tree from the root node, following the left subtree first.
+
+Appending becomes an O(1) operation.  Indexing becomes O(logn), and printing everything is just as efficient, other than the rope having a constant factor overhead.
+
+If you are implementing your own rope data structure from scratch you can actually take advantage of the non leaf nodes.   They can be used for any type of hierarchical data that would apply to all of its children.  For example, perhaps special formatting.  Getting a whole item's format would simply involve getting the parent of the nodes all the way up to the root.  
+
+You could also do things like make each leaf node a single word.  Then you could implement a spell check pretty easily without having to process each node to find the distinct words in each node.

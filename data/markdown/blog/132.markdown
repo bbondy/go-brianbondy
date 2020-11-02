@@ -1,0 +1,33 @@
+<p>★★★★★ (<span itemprop="rating">5</span> stars out of 5)</p>
+
+<img src='/static/img/blogpost_132/nodejs.gif' style='float:left; padding-right:15px; padding-bottom:5px;'>
+
+The book [Node for Front-End Developers][1] by [Garann Means][2] presents a great introduction to Node and its surrounding modules.
+
+Not only is using the same language for both client-side and server-side awesome, but Node itself is fast, stable and production ready.
+Node was first created by Ryan Dahl and is built using Google's V8 JavaScript Engine.
+
+The book is nicely organized and lightly touches everything you'd want to have when starting with a new web framework.
+If you haven't done a ton of web development, you'll get lots of introductory bits on things to learn such as the key-value store Redis.
+
+The following topics (and more) are covered:
+
+  - Setting up Node and Node Package Manager (NPM)
+  - Testing with command line
+  - Serving static content
+  - Serving dynamic content
+  - URL routing
+  - Handling HTTP POST data
+  - Handling AJAX requests w/ JSON and JSONP
+  - Using node.js with HTML5 websockets (very cool!)
+  - Server side templates, passing server side data to templates
+  - Partial templates
+  - Working with persistent storage
+  - Working with files
+  - MVC pattern
+
+You won't go deep into any one topic; however, the book gives you just enough information to know where to go from there.
+I'd recommend this book to anyone with some JavaScript experience that wants to know what Node is all about.
+
+[1]: http://shop.oreilly.com/product/0636920023258.do
+[2]: http://www.garann.com/dev/

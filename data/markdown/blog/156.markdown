@@ -1,0 +1,56 @@
+I'd like to introduce a new site I'm working on named [Code Firefox][codefirefox].
+
+---
+
+## Elevator pitch
+
+Becoming a Mozilla contributor can be intimidating. There's a lot of information to consume, and that information can be dispersed in a variety of different places. This site aim to outline the process of becoming a Mozilla contributor, from the start, with gentle, short, consumable 2-10 minute videos.
+
+---
+
+## A long time coming
+
+In July 2012 I [blogged][1] about my first year at Mozilla, and where I'd like to go in the future.
+
+> I'm starting work on a project to bring videos for code contributors. The plan is to have short 5-10 minute videos
+> that each cover a single topic. This would be similar to Khan Academy videos in the 1 video per concept way, but
+> will be more like a tutorial and will be focused on contributing to Mozilla.
+
+It took me a while to actually start on that goal, partly because I kept making excuses for why it wasn't a good time to start yet.
+
+Maybe I was just scared of presenting something in a way that wasn't the best way.  But when it comes down to it, I know a lot of people can benefit from the content of the videos I'm creating. And because of that, I'm no longer afraid to be corrected.
+
+A couple month ago, sitting in the airport coming home from the Mozilla 2013 Summit, I registered [codefirefox.com][codefirefox].
+I also created a [github project][github] and started coding the site that would be used for those videos.
+
+---
+
+## The future of Code Firefox
+
+Code Firefox aims to focus on Desktop Firefox videos from the ground up. I'd love to also do videos on Firefox for Android, Firefox for Windows 8 style UI, and especially for Firefox OS.
+
+I'd like to eventually get to a place where the videos can be used for onramping new hires, and perhaps also used by some schools as the basis of a class.
+
+---
+
+## Status and focus
+
+Since I began posting videos, I've been posting an average of over 1 video per day, I'm close to 20 videos so far.
+
+These videos are not focused on perfection, partly because I'm far from it, and partly because I have so much content to go out, that there is more of a benefit to do new videos instead of focusing on old ones.
+
+One statistic I found interesting is that the average visit duration on [my blog][myblog] is under 1 minute; whereas, the average visit duration of the [Code Firefox][codefirefox] site is over 5 minutes.
+
+---
+
+## The process
+
+I’m using ScreenFlow on OS X to make the videos in a Windows 8 VMware Fusion VM, and a Blue Yeti microphone.
+
+As each video is posted, I post a message about it on this [twitter account][twitters].
+
+[1]: https://brianbondy.com/blog/id/144/retrospection-my-first-year-at-mozilla
+[myblog]: https://brianbondy.com
+[codefirefox]: http://codefirefox.com
+[twitters]: https://twitter.com/codefirefox
+[github]: https://github.com/bbondy/codefirefox/

@@ -1,0 +1,3 @@
+[Creator of Python talks about Python 3000[1] (Python 3.x series)
+
+[1]: http://video.google.com/videoplay?docid=-6459339159268485356&q=type%3Agoogle+engEDU

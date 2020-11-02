@@ -1,0 +1,27 @@
+In 2003 I purchased a [book][0] by O'Reilly on [Scalable Vector Graphics (SVG)][1].  It was a great book and I had high hopes for what I was learning, but it remains one of the only things I've learnt that I have not had the opportunity to use in a professional setting.
+
+SVG has long been deserving widespread adoption on the web, but the one browser that really matters has not had support for it.  Sure you could install 3rd party plug-ins, but [native support is needed for widespread adoption][2].  That one browser without support has been Internet Explorer 8 and below.
+
+That is up until now.  The [MIX 10 conference][3] was held from March 15-17, 2010 and the Internet Explorer team announced that they have support for SVG in version 9.  Looks like they're about 10 years late, but better late than never.  
+
+Some milestones:
+
+- SVG was initially released late 2001
+- Firefox and Camino have had support since 2005.
+- WebKit which Opera and Safari are based on has had support since 2006.
+- Microsoft relases .Net framework 3.0 which has support for XAML
+
+## Does SVG pose a threat to Silverlight/XAML?
+
+In 2006 Microsoft would probably of said yes.  Today they would say no.  I would also say no.
+
+Silverlight and its XAML markup provide a full application description format.
+
+SVG is more of a graphic file format and offers minimal programming support via a script tag typically using Javascript.  
+
+That being said, when possible I would prefer to use SVG.
+
+[0]: http://oreilly.com/catalog/9780596002237
+[1]: http://www.w3.org/TR/SVG/
+[2]: https://brianbondy.com/blog/id/17/the-trouble-with-internet-explorer
+[3]: http://live.visitmix.com/

@@ -1,0 +1,25 @@
+Introducing:
+## [The Mozilla Platform Development Cheat Sheet][1].
+
+Working on Firefox can be daunting when you first start as a developer.  
+
+There is an amazing amount of Mozilla specific technology you need to learn; in addition you may not have had the opportunity to work with things like [mercurial patch queues (MQ)][4].
+
+On one hand: Mozilla has a massive collection of awesome [Mozilla development specific documentation][3] on the [Mozilla Developer Network (MDN)][5].
+
+On the other hand: There is a massive collection of documentation that you have to keep looking up.
+
+When I started as a platform developer at Mozilla 3 months ago, I started making a [cheat sheet of common information][1] I would have to frequently look up.
+I will continue to update this page as I continue to learn every day at Mozilla.
+
+I highly encourage anyone looking to contribute to an open source project to look into [contributing to Mozilla][2].
+
+Not only will you be helping an open source non-profit organization, but you will also connect with extremely smart peers, have extra resume flair, and learn a ton.  The experience of contributing ([or working][6]) for Mozilla will forever change you as a developer.
+
+
+[1]: https://brianbondy.com/mozilla/cheatsheet/
+[2]: http://www.mozilla.org/contribute/
+[3]: https://developer.mozilla.org/En/Developer_Guide
+[4]: http://mercurial.selenic.com/wiki/MqExtension
+[5]: https://developer.mozilla.org/en-US/
+[6]: http://www.mozilla.org/en-US/about/careers.html

@@ -1,0 +1,4 @@
+I updated the DynamicDNS service so that you can pass paths directly to the mapped IP.
+
+For example:
+https://brianbondy.com/brianbondy/testing123/hi.html

@@ -1,0 +1,7 @@
+Wondering what the Windows 8 Metro UI will look and feel like? See the great work of [Stephen Horlander][1] and [Yuan Wang][2] here:
+
+[Video Sketching Firefox Metro Start Page][3]
+
+[1]: http://stephenhorlander.com/
+[2]: http://yuanwong.com/
+[3]: http://blog.mozilla.org/ux/2012/05/video-sketching-firefox-metro-start-page/

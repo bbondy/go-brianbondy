@@ -1,0 +1,11 @@
+I added tags support for my blog posts via using the [Django tagging library][1].  As you can see each blog post now has any number of tags associated with them.
+
+Overall Django tagging works a lot like Django comments in that you can attach tags to any model in your project.
+
+To implement Django tagging inside my site, I did need to make a slight model change to have a tags field in my blog news item table.  Apparently this field is only used for caching and so that it shows up in the Django administration.  When you modify your model in Django administration a new text field appears labeled Tags that you can enter in space separated tags for your model.
+
+I made each tag into a link which bring you to all posts on the site about the specified tag.  Also you can find a Tags link on the right hand bar which displays the list of tags in use and how many posts each tag has.
+
+The Django tagging framework has many other features which I didn't use, but from what I used it's a great and very easy to use library.
+
+[1]: http://code.google.com/p/django-tagging/

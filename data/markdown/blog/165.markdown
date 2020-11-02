@@ -1,0 +1,1 @@
+We just launched a pretty big new feature in the Computer Science section of Khan Academy called peer evaluations.  [I blogged more about it here](http://cs-blog.khanacademy.org/2014/07/peer-evaluations-for-coding-projects-on.html).

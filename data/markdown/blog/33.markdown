@@ -1,0 +1,3 @@
+Best homepage you can set is a random Wikipedia page. Simply add the following as your home page:
+
+http://en.wikipedia.org/wiki/Special:Random

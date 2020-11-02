@@ -1,0 +1,64 @@
+<img src='https://brianbondy.com/static/img/blogpost_164/KA.png' style="float:right">
+
+I had an amazing first week at [Khan Academy](https://www.khanacademy.org) as a remote employee.
+
+
+---
+
+## My first week
+
+For the week I, finished and pushed out 12 bugs fixes, posted 7 bugs, got myself added to the team page, and did a deploy of the site.
+I felt productive largely thanks to having great docs, and great people who helped on-ramp me.
+
+I don’t think I waited more than 30 minutes for any single review (Thanks John and Pamela!).
+
+Each day that I landed changes, I seen the change live on the site later that day.
+Having the code you write deployed on the same day to production, is an amazing and inspiring feeling.  
+
+I feel welcomed and included in everything.  People seem to live on [HipChat](https://www.hipchat.com/) which makes it feel like I’m with the team at all times.
+
+On Friday, I received an amazing care package delivered to my door. The highlight was a Khan Academy notebook who’s first page was signed by some members of the team.
+
+---
+
+<img src='https://brianbondy.com/static/img/blogpost_164/hopper.png' style="float:right">
+
+## Computer Science team
+
+I’m working on the computer science team along with 2 very decorated and talented developers:
+
+[Pamela Fox](http://www.pamelafox.org/) ([@pamelafox](https://twitter.com/pamelafox)) who teaches and develops for Khan Academy. She also teaches for an awesome program called [GirlDevelopIt](http://www.girldevelopit.com/). She previously worked at Coursera and Google.
+
+[John Resig](http://ejohn.org/) ([@jeresig](https://twitter.com/jeresig)) who created jQuery, Processing.js, and several other open source projects. He also comes from Mozilla and has authored a couple of very popular [JavaScript books](http://www.amazon.com/s?_encoding=UTF8&field-author=John%20Resig&search-alias=books-ca).
+
+---
+
+## A different world, but a good fit
+
+This is my first job doing web development. I’ve been mostly a C++ programmer for the past 20 years, but I’ve used a lot of technologies in use at Khan Academy.
+
+My personal blog is coded in Python / Flask for Google App Engine, and I run another site [Code Firefox](http://codefirefox.com) in Node.  Both sites use React and Backbone. These are all in use by Khan Academy.  I've also used JavaScript pretty extensively at Mozilla.
+
+---
+
+
+## A long time coming
+
+Before joining Mozilla, I actually applied and interviewed with Khan Academy back in 2011. I also previously wrote a [blog post about their development process][1].  Warning: The technical information on that post is very out of date.
+
+I didn’t get the job in early 2011 but another awesome place reached out to me a bit later, Mozilla. I never felt discouraged at the time though, sometimes you just aren’t the right, current best person for the job, but that doesn’t mean you won’t be in the future.  And that doesn’t mean you aren’t good at what you do.
+
+Later in 2011 I was also scheduled to go for a Stack Overflow conference in which [Sal](http://en.wikipedia.org/wiki/Salman_Khan_%28educator%29) ([@salkhanacademy](https://twitter.com/salkhanacademy)) and [Ben Kamens](http://bjk5.com/) ([@kamens](https://twitter.com/kamens)) were scheduled to talk. The conference got canceled, but Ben was nice enough to let me hang out at his office for the day instead.  The development team was a lot smaller back then, but it was an awesome experience to meet the team.
+
+Over the years, I continued to align the technologies I was learning with what Khan Academy was doing.  I launched a Khan Academy inspired site for on-boarding Firefox contributors, I contributed significantly to [one of their open source projects](https://github.com/Khan/khan-windows-8). And I eventually made it in on my next round of interviews.
+
+Soon enough I was flying out to the Khan Academy offices to meet Sal, Shantanu, and [the rest of the team](https://www.khanacademy.org/about/the-team). I started on my first day April 21, 2014.
+
+---
+
+## Next steps?
+
+Learn, consistently work extremely hard, and try to do epic things.
+
+
+[1]: https://brianbondy.com/blog/id/109/the-big-picture-of-how-khan-academy-development-works/

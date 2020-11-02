@@ -1,0 +1,49 @@
+<img src='/static/img/blogpost_118/mozilla-logo.png' style='float:right;padding-right:10px;'>
+
+On July 6th, I will be going through a major change in my life: I’ll be leaving the company I co-founded and worked at for nearly a decade, and will be starting at Mozilla as a contractor.
+
+I'm confident that the company I co-founded will continue to prosper under its new parent company, and I will be excited to hear about the company's success over time.
+
+I'll leave behind many great memories, exciting projects, and extremely intelligent co-workers.
+
+A few months ago, I was approached by a Mozilla technical recruiter and after careful consideration actually turned down the offer for contract work.  For several months, I was torn on whether to stay at my current comfy job, or to [step out of my comfort zone][2], and do what I've always wanted to do.
+
+Several months later, reading [John Resig][3]'s (creator of jQuery) advice, I reconsidered and took the job.
+
+> It’s been an incredible experience working with everyone at Mozilla.
+> The company is easily one of the most developer-friendly organizations I can imagine, with some of the smartest coders in the world.
+> Mozilla is hiring across the board – I strongly encourage you to apply if you’re looking for one of the best jobs you’ve ever had.
+
+<img src='/static/img/blogpost_118/firefox-logo.png' style='float:left;padding-right:20px;'>
+
+I'll be working as a contractor at Mozilla with the title of Platform Engineer.  I'll be working on Firefox and Core components which includes working with XPCOM, XUL, XBL, JavaScript, CSS, Python, and C++.  I feel very privileged to be working on such an exciting project.
+
+<br>
+
+---
+
+## Why I chose Mozilla
+
+A few reasons why I chose Mozilla:
+
+- Much of the web's technology and innovation was developed at least in part by Mozilla.
+- The Internet wouldn't be what it is today without Mozilla.
+- They are a relatively small and open source organization; your work will be seen.
+- They support openness and stand behind their beliefs to deliver a free and open web.
+- Some of the smartest people in the world work there, my old company also had this, but the other people had similar backgrounds to me.
+- Firefox has a significant market share and is used by millions of people around the world.
+- Mozilla has a thriving extremely intelligent community behind it.
+- They are not forcing me to move and they embrace a distributed team.
+- They do what is right, and not what makes the most money.
+- I get to be part of something larger than myself.
+- Mozilla is one of the coolest places and code bases I could ever have the privilege to work on and contribute to.
+
+Mozilla is accelerating their release cycle as well which is exciting in itself.  Firefox 4 was released in early 2011, and they plan to also release versions 5, 6 and 7 in 2011.
+
+If you are a developer interested in contributing to Mozilla related technologies, a good place to start is the [Developer Guide][1].  If you'd like to find out more [about pursuing a career at Mozilla, read here][4].
+
+
+[1]: https://developer.mozilla.org/En/Developer_Guide
+[2]: http://joel.is/post/6211105959/what-are-you-doing-to-feel-uncomfortable
+[3]: http://ejohn.org/
+[4]: http://www.mozilla.com/en-US/about/careers.html

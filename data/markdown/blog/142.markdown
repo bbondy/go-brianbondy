@@ -1,0 +1,24 @@
+Microsoft announced last week that Visual Studio 11 Express will not have support for building Desktop applications, by extension this also means that it will not have support for building metro style enabled desktop browsers.
+
+The workaround is to install Visual Studio 2010 and use the Windows 8 SDK.  This isn't a good solution, but it's even worse when you consider metro style enabled desktop browsers.  This workaround won't work for metro style enabled desktop browsers that need the Visual Studio 11 compiler.  The Windows 8 SDK no longer ships with a compiler of its own.
+
+Firefox can be built with a configuration option to disable the metro bits, so you'll still be able to use Visual Studio 2010 Express to develop on Windows 8, but not if you want to work on Metro related things.   In that case, you'll need to use a paid version of Visual Studio 11.
+
+As we've seen with Visual Studio 11 though, who itself can't target Windows XP, this will eventually become a problem as Windows versions increase if no change is made by Microsoft.
+
+I hope that Microsoft will come out with an edition of Visual Studio 11 Express for desktop development, because it hurts open source projects that want to develop for Windows 8 and beyond.
+
+If you also think this will hurt open source development in the long run, you can [vote to add support for desktop development back into Visual Studio 2010 Express][1].  Vote it, tweet it, blog it, add comments to it.
+
+[Microsoft has previously claimed][2] that it loves open source:
+
+> "We love open source," says Jean Paoli of Microsoft in a recent
+> interview with Network World.
+> "We have worked with open source for a long time now."
+
+Actions speak louder than words, please show us.
+
+
+
+[1]: http://visualstudio.uservoice.com/forums/121579-visual-studio/suggestions/2645679-visual-studio-11-express-on-windows-7-and-the-abil
+[2]: http://www.networkworld.com/news/2010/082310-microsoft-open-source.html?hpg1=bn

@@ -1,0 +1,30 @@
+<p>★★★★★ (<span itemprop="rating">5</span> stars out of 5)</p>
+
+When I previously thought about CSS I would only think about:
+
+  1. selectors, or selector hierarchies, and
+  2. properties related to those selectors
+
+
+Although both are covered in detail in [this book][1], the book really helped me discover things I had no idea I didn't know about CSS.
+The book does a great job of not explaining fundamentals of CSS and focuses instead on what's new in CSS3.
+
+Media queries in particular was great to know about for making your website capable on mobile devices.  
+After reading its chapter I immediately implemented media queries on my blog.
+
+I really liked how this book was organized, the first part deals with the CSS3 features that are already implemented in major browsers, followed by the parts which are partially implemented, and finally the things which are not yet implemented or agreed upon and are likely to change.  
+Every chapter ends with each major browser and the support it has for the features discussed in the chapter.
+
+Other features like opacity, RGBA & HSL & HSLA colors, drop shadows, rounded corners, and much more were great to know about.
+
+Several tips are provided for working with older browsers in a sane manner throughout the book for just about each section.
+
+My only criticism in this book is that it would have been ideal to know not what is expected in IE9 but what is actually in IE9.
+IE9 was released March 14th,2011 this book was released in April, 2011.  I can understand though that this would have delayed the release of the book.
+
+Update: The author [Peter Gasston][2] has up-to-date information on the [website which supports the book][3].
+
+
+[1]: http://oreilly.com/catalog/9781593272869/
+[2]: https://twitter.com/#!/stopsatgreen
+[3]: http://thebookofcss3.com

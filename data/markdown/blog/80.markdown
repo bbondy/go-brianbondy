@@ -1,0 +1,8 @@
+The [PyISAPIe][1] help files currently claim you have to use Python 2.5 and uses Django pre 1.0.
+
+But with some small changes to one of the config files, you can actually have Django 1.1 and Python 2.6.
+
+The only change from their help file that you need to do is replace their [pyisapie.py with this file that I modified][2].
+
+[1]: http://pypi.python.org/pypi/PyISAPIe/1.0.130
+[2]: https://brianbondy.com/static/downloads/pyisapie.zip

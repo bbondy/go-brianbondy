@@ -1,0 +1,2 @@
+Dynamic DNS now allows a real http path to point directly to your computer. After creating a dynamic DNS called for example 'brianbondy' you can now access the dynamic IP via https://brianbondy.com/brianbondy
+Since the dynamic host brianbondy is linked to 127.0.0.1, you can access the web page on your local host via that URL.

@@ -1,0 +1,89 @@
+The [Firefox Roadmap][1] lists a 2012 Q2 goal of providing a working Firefox prototype on Metro.
+
+As of last week, we have a working browser in Metro. It currently looks and feels the same as the Android browser.
+You can navigate the web, create tabs, bookmark pages, build history, retain cache, adjust preferences, and more.
+
+I don't consider that 2012 Q2 goal met yet, we still have some open design questions, and a ton of platform integration work to do.
+
+<figure style='text-align:left; padding:10px; margin-left:0px'>
+<img src='/static/img/blogpost_135/metro-start.jpg' style='display:block'>
+<figcaption style='display:block;'>
+Early tile design from [Bug 735008][735008] - design still in progress
+</figcaption>
+</figure>
+
+
+Our prototype in its current form is based on the Fennec XUL code.
+We used to use Fennec XUL on Android, but changed to a Native UI on Android for startup performance reasons.
+We haven't seen the same types of startup performance problems we've had on Android yet, even on VMs.
+
+
+<figure style='text-align:center; padding:10px'>
+<a href='/static/img/blogpost_135/metro-sidebar.jpg'>
+<img src='/static/img/blogpost_135/metro-sidebar-small.jpg'  style='padding-right:10px;'></a>
+<a href='/static/img/blogpost_135/metro-no-sidebar.jpg'><img src='/static/img/blogpost_135/metro-no-sidebar-small.jpg' style='padding-left:10px;'></a>
+<figcaption style='display:block;'>
+Firefox Metro screenshots - UI will be changing, Metro specific UI guidelines and Mozilla UX work feedback has not begun yet.
+</figcaption>
+</figure>
+
+We're currently writing up a proposal on how we should proceed with the Metro work and we will post it on [dev.planning][2].
+If we are able to keep using Fennec XUL we'll be ahead of schedule, but I anticipate some serious discussions once that is posted.
+
+Since our prototype is based on Fennec we have a multi-process capable browser for free.
+Currently there is only one content process, but I believe the longer term plans are to increase that.
+
+Jim put together an installer this week as well so that UX can get hands on with Firefox on Metro and provide design feedback and guidance.
+
+---
+
+## Platform integration
+
+<img src='/static/img/blogpost_135/metro-charms.png' style='float:right; padding-left:20px; padding-bottom:2px;'>
+
+As of this week, we have a lot of Metro platform integration working.  
+
+We have Metro snap working, you can snap another Metro app to the right or left of Firefox and continue browsing.
+
+We also have HTML file input controls tied up to the Metro file picker.
+We've implemented support for opening a file, opening multiple files, and saving files in Metro.  Unlike a normal sandboxed Metro application, the user can select any file from the computer.  The picker also allows you to select files shared by other applications.
+
+We also implemented the Windows 8 search contract, you can use the Search Charm from any screen on Windows 8.  If you enter a URL, it will be loaded.  If you enter anything else, it will be searched in your default search engine.
+
+We also implemented the Windows 8 share contract, you can use the Share Charm from any Firefox page to share that page to another application.
+Once you select the Share Charm it will list the applications you can share to, for example: Mail, Twitter, or Facebook.
+
+
+<figure style='text-align:center; padding:10px'>
+<a href='/static/img/blogpost_135/screenshot-search-charm.jpg'><img src='/static/img/blogpost_135/screenshot-search-charm-small.jpg' style='padding-right:10px;'></a>
+<a href='/static/img/blogpost_135/screenshot-share.jpg'><img src='/static/img/blogpost_135/screenshot-share-small.jpg' style='padding-left:10px;'></a>
+<figcaption style='display:block;'>
+Searching for the text "Firefox Windows 8" and Sharing while playing BrowserQuest</figcaption>
+</figure>
+
+<figure style='text-align:center; padding:10px'>
+<a href='/static/img/blogpost_135/screenshot-filepicker.jpg'>
+<img src='/static/img/blogpost_135/screenshot-filepicker-small.jpg'></a>
+<figcaption style='display:block;'>
+Metro file picker after clicking on an input file form control</figcaption>
+</figure>
+
+---
+<a name="metro-is-important" />
+
+## Why Windows 8 Metro support is really important
+
+<img src='/static/img/blogpost_135/windows-8-logo-small.jpg' style='float:left; padding-right:15px; padding-bottom:2px;'>
+
+If a browser is awesome on Metro, the only way to use this awesome browser in Metro is for it to become the default.
+If a browser is default on Metro, it will also be default on the Desktop.
+
+If a browser does not support Metro, it is seriously at risk of losing the default browser status, and therefore significant market share.  A browser without support for Metro, if default, would be taking away a Metro browser completely from the user's computer.
+
+Even if a user spends most of their time in the Desktop interface, having a really good Metro browser may be enough for the user to change their default browser.  A browser with great Metro support can gain significant browser market share for this reason.
+
+It is extremely important that we deliver an awesome Firefox experience on Metro, one that is tightly integrated with the platform, fast, and feature rich.  Windows is by far the platform with the most users and which has the biggest effect on market share.
+
+[1]: https://wiki.mozilla.org/Firefox/Roadmap
+[2]: http://groups.google.com/group/mozilla.dev.planning/topics
+[735008]: https://bugzilla.mozilla.org/show_bug.cgi?id=735008

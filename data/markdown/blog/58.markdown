@@ -1,0 +1,1 @@
+After doing some package installs, and seeing how great Ubuntu is with upgrading and installing new software, I'll never go back to Fedora. Being based off of debian is awesome. 

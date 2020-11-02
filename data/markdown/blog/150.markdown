@@ -1,0 +1,31 @@
+Work on the Metro style enabled desktop browser has progressed steadily and things are looking really good.   
+
+
+<img src="//brianbondy.com/static/img/blogpost_135/windows-8-logo-small.jpg" style="float:left; padding-right:15px; padding-bottom:2px;">
+
+
+We have a [Q3 goal of delivering a Metro  preview][1].  This preview will include primary browser UI for navigation and tabs, and will be delivered as a combined classic + metro browser.  I believe there is a Q4 goal for a beta release as well.
+
+We made significant progress since the last update, but there is still a lot to do.
+
+In particular we got  the following working:
+
+- Crash reporting
+- pdfjs (Built in PDF viewer without the need for a plugin)
+- Windowless Flash, although full screen flash doesn't work yet
+- Some accessibility hooks
+- Front end event refactoring to be faster and to treat mouse input normally and distinct from touch input
+- File pickers updated to be asynchronous on all platforms because it was needed for WinRT
+- Front end awesomescreen work was done with results coming up as you type in the urlbar.  
+- While in metro, we also have the 'view this page on desktop' functionality working
+- Various keyboard shortcuts added
+- Various other fixes and refactoring
+
+Add-ons will not be part of the initial release, but we will eventually be supporting Add-ons via the Add-on SDK.  These initial limitations are only when in the Metro version of the browser on Windows 8.
+
+We'll have some kind of sync functionality to sync data between your Metro interface and your desktop interface.  We're hoping for a local, no setup sync functionality, but at worst it will be done through the current sync functionality.  
+
+We haven't merged to mozilla-central yet, which is where Nightly builds will show up.  This is mainly because we're waiting on [bug 755724][2] to be complete, which is to split platform and app resources up so that they can be loaded individually.
+
+[1]: https://wiki.mozilla.org/Firefox/Windows_8_Integration#Q3_Firefox_Goal
+[2]: https://bugzilla.mozilla.org/show_bug.cgi?id=755724

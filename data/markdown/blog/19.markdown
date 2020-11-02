@@ -1,0 +1,36 @@
+I wanted a high performance laptop that could run both Mac OSX and Windows. I ordered the 17 inch MacBook Pro 2.33 GHz 2GB RAM Dual Core laptop. This post will discuss my experience with the performance of the laptop, my disassembly of the laptop, my experience with apple phone support, my visit to the apple store, my experience with replacement parts and my overall impressions of the MacBook Pro.
+
+2 weeks ago I received my MacBook Pro directly from apple.com. I took it out of the great looking box and tried to turn it on, but there was no response. I figured the battery was dead, so i plugged the laptop to the wall and pressed the power button. Again no response, so I held down the power button, I noticed that the power button was loose.
+
+Eventually I got the computer to turn on. After working for a couple hours I figured the battery would be charged enough. The power plug is magnetic so I really wanted to try popping it out as I've seen so many times in their commercials. Once I pulled the plug, the laptop turned off right away. I plugged it back in, turned it on again and watched it boot back into OSX. I checked the power management settings and everything was OK. At this point I figured I was doing something wrong.
+
+Every MacBook Pro battery has a little button and 5 LEDs next to it. You press the button to see how charged your battery is. It's a very nice feature that allows you to see how much battery power you have before turning on your laptop. The next day, I noticed that my battery was fully charged. I again pulled the plug and realized that it turned off the computer. I figured I had a faulty battery and looked on the net for anyone with a similar problem. I found a couple forums that described the issue. From this forum I found the apple battery exchange program, but noticed that my serial number wasn't in their list of acceptable serial numbers for an exchange.
+
+I called support and found the customer support rep to be very helpful. They had me try 5 or 6 different things and then they put me on hold as they called a manager. A couple minutes later the support tech was back and told me that I did indeed have a faulty battery. He asked me if I had purchased the Apple One Care when I purchased my laptop. I informed him that I did. He asked for my credit card number in case I didn't return the faulty battery after the replacement battery arrived. I happily provided it.
+
+There are a couple important parts of the support call that I left out.
+
+1. The Apple One Care didn't arrive at my house yet, and they didn't have a problem helping me.
+- The laptop wasn't in my name, my business partner ordered the laptop online.
+
+On both issues, they understood and did NOT give me a hard time. They could have used either one of these as an excuse to not help me.
+
+They informed me that my battery would be at my house in 5-7 business days. I asked them if they could ship it express because I had a trip to San Francisco in a few days. He said that it was not possible for replacement parts even if I were to pay for the extra shipping cost. On the second business day my replacement battery arrived. I was very happy because it arrived within a couple days of my trip.
+
+The replacement battery fixed my problem. But another problem started to occur. The loose power button that I mentioned at the start of this posting started to move around and it became harder and harder to turn on the laptop. I didn't have time to deal with it yet so I went on the trip to San Fran.
+
+When I arrived there I realized that there was an Apple store only 5 minutes from my Hotel. I went in and asked a rep at the 'genius bar' if he could help. The genius bar is a big desk with several tech reps that can help you with any and every problem you have. He informed me that he would help me, but for future reference, I had to make an appointment to get help. He told me it would take 7 business days to fix the power button. He would have to replace the whole front panel.
+
+The apple store, by the way... was amazing. It was glass, 2 floors with translucent steps and all computer models and iPods were laid out with a lot of space. You were free to play with anything and everything. Upstairs they had their famous commercials playing from a projector. They had a few rows of chairs and they held tutorials on Mac OSX software every day.
+
+My trip to San Fran was only a few days, so I couldn't leave it with them for 7 days. I asked the genius bar tech rep if he could do the repair by the next day and he said that it wasn't possible. He mentioned that he saw this problem before and that it was a missing spring in my power button. So he wrote me up a case number and told me all I'd have to do would be to call apple and reference the case number. He also moved the laptop out of my business partners name and into my name.
+
+After arriving home I couldn't bring myself to return the MacBook Pro for what would probably be another 2 or 3 weeks while apple looked at it. It might even be longer because of the holidays. I decided to take the chance and take apart my MacBook Pro. Knowing that it was very possible to mess it up and void the warranty, I still thought I'd take the chance.
+
+Disassembling the laptop was pretty hard. Figuring out how to get the front panel off took me about an hour. Once I got the front panel open I had to figure out how to put the power button together properly. I was crossing my fingers that the 5 pieces that make up the power button was all I needed. After about 2 hours of playing with it I finally figured out how to get the power button working. It had nothing to do with a spring like the apple tech at the apple store mentioned. I don't think he was educated at all about the issue. If anything his suggestion cost me a lot of extra time because I was trying to rig the power button so it would touch a sensor on the main board. There was no spring and there is no spring involved in the power button.
+
+So now I finally have a fully working MacBook Pro. I've been using it for about 2 weeks now and the performance is nothing short of amazing. I love the glossy display, I love the speed and I love the performance. I'm overall very pleased with apple and their support, although the apple store techs at the genius booth didn't turn out to be of any help.
+
+As for working with the actual laptop, I love the way you can scroll left <-> right by dragging your index and middle finger from left to right. Ditto for scrolling top <-> bottom. I like that there is a single button and that you can right click by placing your index and middle finger on the pad and pressing the button. The build in speakers are very loud and clear. The symmetry in the laptop and the silver finish is beautiful.
+
+The end result is that I'm extremely satisfied with apple support, I'm extremely satisfied with the performance of the laptop, I'm a little disappointed that I had a laptop with a bad battery and a broken power button. And I believe that in the future I'll only buy apple hardware. That has to say a lot, that even after all the problems above I still would only buy apple.

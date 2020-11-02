@@ -1,0 +1,178 @@
+Update December 11, 2011: StackOverflow recently implemented removing nofollow links on high rated posts.  It is very strict, but it's a start.
+
+Update November 12, 2012: I don't know how many answers have nofollow removed, but I think it's a very, very, very small number. I'd bet much less than 0.1%.
+
+For example see [this accepted answer][acp] with 74 upvotes from a user with almost 100k reputation. The links are to MSDN (which is probably not spam by definition) and to a quoted source on techbubbles.com.
+
+I personally chose to stop answering questions in the same capacity as I used to for the reasons outlined in this post.
+
+Update November 16, 2012: The link mentioned on November 12th was fixed by StackOverflow's Kevin Montrose.  I'm not sure if this had a wide effect on less strict nofollow removal, or if it was special cased to remove the nofollow.
+
+---
+
+Everyone with any exposure to HTML knows what a link element looks like:
+
+    <a  href="http://wwww.brianbondy.com">My Website</a>
+
+This is a link called `My Website` with a link target of `https://brianbondy.com`.
+Links like this can be easily marked up with a `rel` attribute to add extra information about the link.
+One particular usage of the `rel` attribute is `rel="nofollow"`.
+
+    <a  rel="nofollow" href="http://wwww.brianbondy.com">My Website</a>
+
+The `rel=nofollow` attribute and value is used to inform a search engine that the link's target should not benefit in ranking from search engines.
+
+
+## What problem is nofollow supposed to solve?
+
+`nofollow` was supposed to allow search engines to detect links on a page which could be subject to spam.  
+
+A perfect example of where this is useful would be on a blog site where comments are allowed.  
+
+The `nofollow` convention was created because in theory, if you take away the [PageRank][14] benefit from a link's target, spammers should feel discouraged from spamming their links on random blogs.
+
+## Who came up with the nofollow convention and who follows it?
+
+Members of Google originally came up with `nofollow` mainly for blogger.com in 2005.
+This convention of not affecting page rank of the target was adopted by Google in 2005 and later by Yahoo and Bing as well.
+
+Each search engine has its own interpretation of `nofollow` but in general they all agree that PageRank should not be attributed to the link's target.
+
+## Does nofollow work?
+
+`nofollow` doesn't solve the problem it was intended to solve.
+
+Spammers still want direct clicks into their site, and they have no guarantee that search engines will actually do like they say and ignore the links, so spamming is still useful to the spammers.
+Spammers also know that on many sites the content of the site is duplicated on other domains, sometimes these duplicated sites do not use the `nofollow` convention.
+
+## Repurposing nofollow
+
+`nofollow` has since its original inception tried to be repurposed to be used for paid advertising links.  However this affects an entire market of people who pay for links so that they get the benefit of SEO.
+
+Internally to a site, for links inside that site `nofollow` has been used to indicate pages that aren't as important as other pages such as the privacy policy page.
+
+## What is nofollow abuse?
+
+`nofollow` abuse is when a site uses `nofollow` not to indicate potential spam, but instead for its own selfish benefit.
+
+In particular, if a site marks a link as `nofollow` when credit is due to the attributed source, and the site knows the link is not spam, then you have `nofollow` abuse.
+
+## Does abusing nofollow hurt the Internet?
+
+Yes.  
+
+Abusing `nofollow` means that the sites that should get credit for good content no longer are getting credit for good content.
+This will in turn mean that you will receive search results that aren't the best possible ones.
+
+## Why do sites abuse nofollow?
+
+The problem is that many sites want to be the highest rated site on searches from search engines.  When the abusing site refers to sources, they will always mark the links to other sources with `nofollow`.
+That way the abusing sites will have a better chance of coming up in searches before the people they are quoting and referring to.
+
+Sites do this for selfish benefit and also because they believe their site has the best content available on the Internet.  If it is the best content on the Internet though they shouldn't need to do dirty tricks with `nofollow`.  
+
+## Who abuses nofollow?
+
+Many major players do, and many major players do not.
+
+Particularly responsible are those sites with a reputation system in place.
+The site in particular that I want to talk about is [stackoverflow.com][9].  
+
+StackOverflow is a site for programming Q&A and is also the same framework used by many other Q&A sites on a variety of other subjects called StackExchange.  
+
+StackOverflow and the entire StackExchange network are some of the biggest abusers of `nofollow`.  
+
+One of the co-founders and lead developers Jeff Atwood has stated:
+
+> You get a followed link in the "website" field of your user profile at 2000 reputation.
+> Beyond that, everything outside the network is nofollowed as a simple matter of standard policy.
+> Exactly like, and for all the same reasons as, Wikipedia.
+
+The heart of the abuse though doesn't come from attributing user pages with a bonus link to their website.
+
+The abuse comes into play when questions and answers link to references that their answers are based on.  Links highlighted in orange indicate nofollow abuse.  
+
+[![Abuse number 1][img_abuse1]][13]
+
+
+In Jeff's quote above, he doesn't address the fact that Wikipedia and Stackoverflow are very different sites.  
+
+Wikipedia organizes it's content by topic only.
+Stackoverflow organizes it's content first by topic, and then by author.  And each author has a reputation which could be used to determine if their answer is trustworthy.  Each answer also gets up-votes which could be used to determine if the answer is trustworthy.  Each open question is also not a closed question which counts as well.
+
+Wikipedia adds `nofollow` to all of their external links, but this does not make them right.  They are almost as guilty as Stackoverflow.
+Stackoverflow is even more guilty because they have a reputation system in place and they know that the users with enough reputation will not spam their site.
+
+Stackoverflow does not want to compete with other sites over Google ranking positions, this is because over 87% of their incoming traffic comes from Google searches as of December 15th, 2010.
+
+## More on Stackoverflow nofollow abuse
+
+Jon Skeet, the #1 user on Stackoverflow has 250k reputation, [he is immune to many things][11]; however, the links he posts have `nofollow`.
+You can see this on his [about page][1], on his [questions][2], on his [answers][3], and on his [comments][4].
+
+[![Abuse number 1][img_abuse2]][12]
+
+Even [answers which are highly voted up][3] still use `nofollow`.
+The issue has been brought up on [meta Stackoverflow][6] many times in hopes of solving the abuse but it was declined each time:
+
+[nofollow Users with 3000+ reputation][7]? Status Declined!
+[nofollow Questions of a certain age][5]? Status Declined!  
+
+However [within 1 hour of a meta post about a bug with nofollow not being added][8] Status Completed!  
+
+Sponsored tags on Stackoverflow have `nofollow`, this was mentioned above as to Google trying to repurpose `nofollow`.
+
+The problem is made worse in that all StackExchange sites behave in the same way.  And also if you reference Stackoverflow from a StackExchange network they will actually remove the `nofollow`!
+
+## Stackoverflow is a nofollow Hypocrite
+
+On this post entitled [Attribution Required][10] Jeff Atwood explains how the content that their community creates, if used, must be linked without `nofollow`:
+
+> By “directly”, I mean each hyperlink must point directly to our domain, and not use a tinyurl or any other form of obfuscation or redirection. Furthermore, the links must not be nofollowed.
+
+This stance is good, it protects the content of the well deserved writers of Stackoverflow such as myself.  I am within the top 50 users and hence have spent a lot of my time writing great answers.  But these answers are not 100% of my own creation, they often build upon other people and other answers from other sites.  It's simply wrong that these other sites are not attributed page rank when I link to them.
+
+When Stackoverflow builds their answers upon other great articles, they fully abuse `nofollow`.   Even when an answer is a complete copy of another page with a reference link.  The link will be `nofollow`.  
+
+However when Stackoverflow benefits from not using `nofollow` they make sure that you don't abuse `nofollow`.  Stackoverflow will always strip `nofollow` if the link you post is on the Stackoverflow domain or StackExchange network, but it will not strip it for any other attributed site.
+
+Another place where they link back to their site is via the StackExchange flair which they want people to include on their websites.  These links of course do not contain a `nofllow`.
+
+Stackoverflow has always prided themselves as being less evil than [experts-exchange.com][15].  And in many ways they are less evil.  But one area where this is not true is that `nofollow` is not used on all links in experts-exchange..
+
+## Do all sites abuse nofollow?
+
+No.
+
+Slashdot is an example of a website which does not abuse `nofollow`.  
+
+It is a site which Stackoverflow should look to for inspiration in this respect.  
+
+Slashdot has per user karma and they will selectively remove `nofollow` from trusted sources.
+I verified this for both their comments and their article posts.
+
+## How can we solve this problem?
+
+One thing we can do is raise awareness of `nofollow` abuse.  That way the offending sites may eventually get the point of not abusing `nofollow`.
+
+I would hope that search engines will be powerful enough to not only ignore `nofollow` from abusing sites, but even punish these sites for trying to abuse the convention.
+
+[1]: http://stackoverflow.com/users/22656/jon-skeet
+[2]: http://stackoverflow.com/questions/215548/whats-the-hardest-or-most-misunderstood-aspect-of-linq
+[3]: http://stackoverflow.com/questions/247621/what-are-the-correct-version-numbers-for-c/247623#247623
+[4]: http://stackoverflow.com/questions/253757/why-events-cant-be-used-in-the-same-way-in-derived-classes-as-in-the-base-class/253803#253803
+[5]: http://meta.stackoverflow.com/questions/51136/remove-nofollow-on-links-at-a-certain-age
+[6]: http://meta.stackoverflow.com
+[7]: http://meta.stackoverflow.com/questions/6905/can-we-not-relnofollow-links-in-profile-about-me-for-users-with-3000-rep
+[8]: http://meta.stackoverflow.com/questions/69879/comment-nofollow-exploit
+[9]: http://www.stackoverflow.com
+[10]: http://blog.stackoverflow.com/2009/06/attribution-required/
+[11]: http://meta.stackoverflow.com/questions/9134/jon-skeet-facts/9182#9182
+[12]: http://stackoverflow.com/users/22656/jon-skeet
+[13]: http://stackoverflow.com/questions/588004/is-javascripts-math-broken/588014#588014
+[14]: http://en.wikipedia.org/wiki/PageRank
+[15]: http://experts-exchange.com
+[acp]: http://stackoverflow.com/questions/2660355/net-4-0-has-a-new-gac-why/2660366#2660366
+
+[img_abuse1]: https://brianbondy.com/static/img/nofollow_abuse/NoFollowAbuse1.png
+[img_abuse2]: https://brianbondy.com/static/img/nofollow_abuse/NoAbuse2.png

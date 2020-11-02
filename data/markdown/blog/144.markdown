@@ -1,0 +1,87 @@
+<img src='https://brianbondy.com/static/img/blogpost_118/firefox-logo.png' style='float:left;padding-right:10px'>
+
+About a year and a half ago, Priya Patel reached out to me and offered me a position as a contractor.  I [eventually accepted and started work][118] on July 6th 2011 under [Benjamin Smedberg][6].  
+
+I put my heart and soul into it, and a couple months later I was offered a full time position. I started working as an employee under [Robert Strong][7] as my manager.
+
+---
+
+## Early concerns:
+
+I was initially offered a position as a contractor for a 3 month term and no guarantee of anything past that. I was coming from a salaried position with benefits, and since I had twin 2 year old boys, this scared the !#$#!% out of me.  I knew the personal growth opportunities at Mozilla exceed those at my current position though, so I decided to take a chance.  
+
+---
+
+## Retrospection:
+
+I'm happy to say that when looking back, I'm glad I took the risk, and consider it to be one of the best decisions I've ever made.  I've had an amazing year.
+
+Mozilla's values and principles are aligned with my own.  They allow me to be open about what I work on.  Hundreds of millions of people get to see my work, and I feel like I am not constrained in any way.  
+
+The people I work with are awesome, each in their own way, and I have an implicit trust in each of their abilities.  QA, support, other developers, project managers, product managers... they've all taught me so much over the past year.
+
+---
+
+## What I've completed over the past year:
+
+Over the past year, not including any of the completed Windows 8 Metro work, I've pushed over 215 patches across over [170 resolved/fixed bugs][2].
+
+I've also [filed 200 bugs][200bugs] that need to be, or have been done.
+
+I'm a [module peer][3] for [Firefox, Toolkit, ImageLib, and Widget|Win32][4].  I've done a ton of reviews and [mentored][5] several bugs.  I'm also a member of the [coding stewards][10] group.
+
+Here's a list of some of the larger things I've completed over the past year:
+
+- A ton of [Windows 8 Metro work][win8work]
+    - Initial ground work along with Jim Mathies
+    - Graphics code integration
+    - Metro file picker
+    - Metro contracts
+    - Dozens of other tasks
+- Updater work:
+    - [Silent updates - Mozilla Maintenance Service][125]
+    - Security enhancement to the updater process, with and without the service.
+- [Startup performance tasks][127] under the [Snappy project][8].
+- Dozens of platform integration tasks to better integrate with Windows
+- Jump list icons generated from favicons
+- ImageLib work:
+    - BMP encoder
+    - ICO encoder
+    - Adding Vista style PNG ICO support.
+    - Refactoring of ICO decoder to use the BMP decoder inside of it removing the duplicated code.
+    - Adding hundreds of reftests
+- Adding a dozen different telemetry histograms
+- Firefox enhancements
+- Lots of crash fixes, memory leak fixes, and intermittent failure fixes
+- The [Mozilla development cheatsheet][11]
+- [Windows 8 Lightning talk][137]
+
+---
+
+## Where I'd like to go from here:
+
+<img src='/static/img/blogpost_118/mozilla-logo.png' style='float:right;padding-left:2px;'>
+
+As part of the coding stewards program, I'm starting work on a project to bring videos for code contributors.  The plan is to have short 5-10 minute videos that each cover a single topic.  This would be similar to Khan Academy videos in the 1 video per concept way, but will be more like a tutorial and will be focused on contributing to Mozilla.
+
+In my past job I managed a team of developers and I expressed interest in doing this at Mozilla.
+
+Lastly I want to continue doing what I'm already doing, I love making a difference and getting things done.
+
+[1]: https://wiki.mozilla.org/Modules/All
+[2]: http://goo.gl/XsQbB
+[3]: https://wiki.mozilla.org/Modules
+[4]: https://wiki.mozilla.org/Modules/All
+[5]: http://www.joshmatthews.net/deck.js/mentor/
+[6]: http://benjamin.smedbergs.us
+[7]: http://blog.mozilla.org/rstrong/
+[8]: https://wiki.mozilla.org/Performance/Snappy
+[10]: https://wiki.mozilla.org/Stewards/Coding
+[11]: https://brianbondy.com/mozilla/cheatsheet/
+
+[118]: https://brianbondy.com/blog/id/118/
+[127]: https://brianbondy.com/blog/id/127/
+[125]: https://brianbondy.com/blog/id/125/
+[137]: https://brianbondy.com/blog/id/137/
+[win8work]: https://brianbondy.com/blog/tagged/status-report/
+[200bugs]: http://goo.gl/K3X9o

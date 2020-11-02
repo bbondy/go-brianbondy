@@ -1,0 +1,7 @@
+I found this interesting, almost all sites that don't take up the whole screen are fit to an 800x600 screen resolution. I think the last time I myself used this screen resolution was 10 years ago. It seems that only 12% of people today still use this screen resolution. And there's a good chance that of that 12% of users most of them are not very tech savvy. So if you have a technology related site, or are selling software online. You might as well make your site look better for the masses and build it to fit 1024x768 instead.
+
+1. 1024 x 768 56.15%
+2. 1280 x 1024 15.79%
+3. 800 x 600 12.04%
+4. 1280 x 800 4.09%
+5. 1152 x 864 3.90%

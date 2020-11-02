@@ -1,0 +1,25 @@
+<img src='https://brianbondy.com/static/img/blogpost_107/socialIcons.png' width='480' height='170'>
+
+I refreshed [my lists][1] of social networking accounts (Twitter, LinkedIn, and Facebook) for StackExchange users.  The lists are sorted by reputation and updated for the April 2011 data dump.
+
+The data dumps surface every 2 months, so I will update the lists on my site around the same frequency.
+
+This month 7 new sites appeared since they came out of the StackExchange beta:
+
+- Android
+- Apple
+- Do It Yourself
+- Electronics
+- Geographic Information Systems
+- Unix
+- Wordpress
+
+You can [view all of the links for each list on this section of my site][1].
+
+For the first time there are over 20 StackExchange sites, and so I ran into a problem of Twitter only allowing you to host 20 lists.  For each site I use an automatically maintained list of the top 500 users.  
+
+I tried to contact Twitter support to raise my limit of 20 lists but they could not help.  I ended up getting my 2 sons to host the lists, so I have all automatic lists up and room for another 36 StackExchange sites.  Thanks [@linkbondy][2] and [@ronniebondy][3].
+
+[1]: https://brianbondy.com/stackexchange/
+[2]: https://twitter.com/linkbondy
+[3]: https://twitter.com/ronniebondy

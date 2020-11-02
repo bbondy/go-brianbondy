@@ -1,0 +1,54 @@
+We've made steady progress over the past 3 weeks on Firefox for Windows 8 Metro.
+
+## Platform Integration:
+
+We have secondary tiles working, you can pin secondary tiles temporarily via a menu item.  Like Internet Explorer 10, you can pin any number of sites to your start screen.  When you click on the secondary tile, it will load the pinned site in Metro whether or not Firefox is already open.
+
+We also hooked up the Windows 8 settings contract which means you can access Firefox preferences via the Windows 8 Settings charm.
+
+Work is in progress for the [Play To contract and the print contract][5].
+
+## Accessibility and Input:
+
+We now support the soft keyboard which is especially important for when a keyboard is not attached and you are using a touch device.
+
+We are also working on hooking up Windows 8 touch events, Windows 8 gestures, and W3C DOM touch events.
+
+## Core Changes:
+
+We added support for XAML interop.  This means that we can overlay XAML controls on top of our XUL / HTML  rendered DirectX surface.
+We don't know all of the use cases for this yet but we'll probably use this for at least the app bar.
+The app bar is a bar of controls you can slide up from the bottom edge or your screen or popup via right click.  
+
+We also figured out PRI files in Windows 8.  PRI files is an undocumented file type for storing resources.  
+
+We were using another program's PRI file until recently.  
+
+We fixed up some memory leaks on shutdown as well; these were not introduced but happened on Win32 Fennec which we are based on.
+
+## Approval for Current Plan:
+
+We're hoping to get approval for the [tentative plan][1] which includes moving over the work to the main mozilla-central repository.  The mozilla-central repository is where Nightly builds are made.
+
+Up until now we've been developing and landing code on the [elm repository][4].
+
+## Open Questions:
+
+There are still several open questions, but the one we've been investigating during the period of this update most is how to handle compiling with the Visual Studio 2011 Beta tools and still have support for running those binaries on Windows XP.
+
+To compile Firefox on Metro you have to use Visual Studio 11 Beta, but VS2011 cannot build binaries that are compatible for Windows XP.  In [bug 744942][744942] we're discussing either patching the CRT, compiling a DLL with the WinRT code separately (2 compiler build process), or packaging a Windows 8 installer separate from the existing Windows installers and updates.  
+
+In any case, we will be supporting Windows XP in the same way we always have. I'm personally disappointed that VS 2011 drops XP support given that Windows XP has extended support up until April 8th, 2014.
+
+## Firefox Work Week:
+
+Perhaps some of the most exciting work so far will happen this week coming up.
+
+On Monday I'm heading to Toronto for the Firefox work week.  One of the hacking goals during this week is to get some significant initial work done on the UI for Firefox on Metro.  This work will be based on the UX work from [Stephen Horlander][2] and [Yuan Wang][3].  In the initial work we'll have the tab bar and address bar on the top and site specific options such as pin site on an app bar accessible from the bottom edge.
+
+[1]: https://wiki.mozilla.org/Firefox/Windows_8_Integration#A_tentative_proposal
+[2]: http://www.stephenhorlander.com/
+[3]: http://yuanwong.com/
+[4]: http://hg.mozilla.org/projects/elm/
+[5]: http://msdn.microsoft.com/en-us/library/windows/apps/hh464906.aspx
+[744942]: https://bugzilla.mozilla.org/show_bug.cgi?id=744942

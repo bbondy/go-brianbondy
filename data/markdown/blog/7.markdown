@@ -1,0 +1,5 @@
+A quote from Bjarne Stroustrup, creator of the C++ programming language:
+
+> I think of math as a splendid way to learn to think straight. Exactly what math to learn and exactly where what kinds of math can be applied is secondary to me.
+
+I've always said that math teaches you above all how to think.  

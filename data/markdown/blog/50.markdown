@@ -1,0 +1,3 @@
+Web tracking tool Google analytics is now open [here[1]. I tried it out and it is far superior to any other website tracking tool I've used. It is still a little buggy though, but I'm sure the bugs will be worked out soon.
+
+[1]: http://www.google.com/analytics/

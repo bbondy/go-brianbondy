@@ -1,0 +1,280 @@
+Believe it or not the Windows 1.0 taskbar looked very similar to the Windows 7 taskbar.  But it obviously didn't have anywhere near same functionality.
+
+## indows 1.0:
+
+<img src='https://brianbondy.com/static/img/blogpost_111/Windows1Taskbar.png' width='480' height='263'>
+
+## Windows 7:
+
+<img src='https://brianbondy.com/static/img/blogpost_111/Windows7Taskbar.png' width='480' height='300'>
+
+The [Windows 7 taskbar is pretty awesome][15].  And it has some great functionality available to developers who wish to take advantage of it.
+
+---
+
+## The 5 features...
+
+**1) Application progress in the taskbar:** Progress for anything with visual displays of errors and warnings.
+
+<img src='https://brianbondy.com/static/img/blogpost_111/TaskbarProgressAndError.png' width='180' height='67'>
+
+
+**2) Overlay icons:** Small icons within your icon for any type of user notification (below shows the online status as an overlay)
+
+<img src='https://brianbondy.com/static/img/blogpost_111/Windows7TaskbarOverlayImages.png' width='97' height='50'>
+
+**3) Custom thumbnail preview groupings:** Thumbnail previews across processes or within a single process with tabs
+
+<img src='https://brianbondy.com/static/img/blogpost_111/TaskbarGroupings.png' width='480' height='147'>
+
+**4) Taskbar action buttons (Thumbnail toolbars):** Buttons inside the taskbar icon's thumbnail preview
+
+<img src='https://brianbondy.com/static/img/blogpost_111/Windows7ThumbnailPreviews.png' width='298' height='249'>
+
+**5) Jump lists:** Easily create shortcuts to different startup types and other custom actions.
+
+<img src='https://brianbondy.com/static/img/blogpost_111/Windows7JumpLists.png' width='370' height='509'>
+
+---
+
+## Before you start...
+
+Before jumping into the interesting stuff, you need to get notified that the taskbar button was created.
+
+There is a new message sent to your application called `TaskbarButtonCreated`, it is sent when Windows creates a taskbar button for your application on your application's behalf.
+
+And once this message is sent to you, you can interact with your taskbar button (Not before!).  To get the identifier of the message you need to call [RegisterWindowMessage][5] .
+
+The important elements here in a typical MFC application would look like so:
+
+    //Get the message identifier
+    const int TaskBarButtonCreated = RegisterWindowMessage(L"TaskbarButtonCreated");
+
+    //Put this in your message map to register a callback
+    ON_REGISTERED_MESSAGE( TaskBarButtonCreated, CTaskBarTestAppDlg::OnTarbarButtonCreated )
+
+
+    //The actual callback
+    LRESULT CTaskBarTestAppDlg::OnTarbarButtonCreated(WPARAM wParam, LPARAM lParam)
+    {
+      //Custom code here once the taskbar is created
+    }
+
+
+---
+
+**1) Application progress in the taskbar**
+
+To show progress in your application icon you need to use 2 simple API calls: [ITaskbarList3::SetProgressState][6] and [ITaskbarList3::SetProgressValue][7].
+
+Your taskbar icon can have one of the following states:
+
+- No progress (default)
+- Intermediate (green and cycles repeatedly along the length of the taskbar button)
+- Paused (yellow progress bar)
+- error (red progress bar)
+-  normal (green progress bar)
+
+You can see this in action yourself when Windows explorer is copying a set of files and it encounters a locked file, the windows explorer icon will change to the error progress status which is red.
+
+When you use `SHFileOperation` or the `IFileOperation` interface your taskbar icon will automatically update as well with progress.
+
+
+To get your application icon to show progress for an indeterminate amount of time:
+
+    m_pTaskBarlist->SetProgressState(GetSafeHwnd(), TBPF_INDETERMINATE);
+
+To set determinate progress you use one of `TBPF_NORMAL`, `TBPF_ERROR`, or `TBPF_PAUSED`.  For example:
+
+    m_pTaskBarlist->SetProgressState(GetSafeHwnd(), TBPF_NORMAL);
+    m_pTaskBarlist->SetProgressValue(GetSafeHwnd(), 10, 100);
+    //...
+    m_pTaskBarlist->SetProgressValue(GetSafeHwnd(), 20, 100);
+    //...
+    m_pTaskBarlist->SetProgressValue(GetSafeHwnd(), 100, 100);
+    //...
+    m_pTaskBarlist->SetProgressState(GetSafeHwnd(), TBPF_NOPROGRESS);
+
+The last parameter of `SetProgressValue` is the number of steps in your operation total, the second last parameter is the current number of steps already completed.
+
+
+---
+
+**2) Overlay icons**
+
+Icon overlays on the actual taskbar icon can be accomplished by calling [TaskbarList3::SetOverlayIcon][3].
+
+The overlay icon should be a small icon, measuring 16x16 pixels at 96 dpi.  In my experience though you can use any icon and Windows will scale it for you.
+Every time this method is called, the previous icons get removed.
+
+    m_pTaskBarlist->SetOverlayIcon(GetSafeHwnd(), hMyIcon, L"Descriptive string for accessibility");
+
+---
+
+**3) Custom thumbnail preview groupings:**
+
+A single application which has a single process with tabs (Or an MDI application) can have multiple previews available to it.
+
+Chrome 10 Beta does not take advantage of tab/thumbnail yet; however, IE9 does (as seen in my screenshot above in section #3).  
+
+Every time a tab is created you would call both RegisterTab and SetTabOrder like so:
+
+    HRESULT hr0 = m_pTaskBarlist->RegisterTab(hTab1, GetSafeHwnd());
+    m_pTaskBarlist->SetTabOrder(hTab1, NULL);
+
+
+`SetTabOrder` can be used to specify the order of previews, passing in NULL appends the tab to the end of the list of previews.
+
+You can remove a tab preview from your taskbar icon by calling UnregisterTab:
+
+    m_pTaskBarlist->UnregisterTab(hTab1);
+
+
+But sometimes applications today span multiple processes.  Both IE 9 and Chrome use one process per tab, and I believe that Firefox will eventually go this way too (They already do this for mobile phones).  
+The Windows 7 taskbar has this architecture covered (People bust Microsoft's ass a lot but in many cases they really deliver).
+
+[In this previous blog post, I talked about Sessions, Windows Stations, and Desktops][16].  Well as of Windows 7 there is also something called Application IDs.
+Application IDs allows Windows to know what you view as an individual application.  With multi process applications on the rise this becomes important.
+Application IDs can be associated with individual Windows.  An application ID is a string of up to 128 characters.
+
+The default application ID for a window is the same as the application ID for the process to which the Window belongs.
+Applications with the same application ID are grouped to the same taskbar icon.
+
+You can set the application ID of a process using the Win32 API [SetCurrentProcessExplicitAppUserModelID][17]
+You can set the application ID of a window using the Win32 API [SHGetPropertyStoreForWindow][18] and then calling functions on the return result which is of type `IPropertyStore`.
+
+Application IDs are assigned dynamically so they can be changed at any time which means you could do some pretty interesting things.
+
+---
+
+**4) Taskbar action buttons (Thumbnail toolbars):**
+
+Thumbnail toolbars allow you to add functionality and buttons available to the user without switching their current application.
+For example Windows Media Player adds previous, pause, and next button support.
+To do this you create an array of [THUMBBUTTON][19] structures.
+
+When a thumbnail button is clicked you receive a WM_COMMAND message with the high word of the wParam set to THBN_CLICKED and the low word set the button ID.
+
+Each button can have either an individual icon being used or a bitmap from the taskbar's image list which was set through ` ITaskbarList3::ThumbBarSetImageList`.
+
+    THUMBBUTTON thbButtons[2];
+
+    //Initialize the first button
+    thbButtons[0].dwMask = THB_BITMAP | THB_TOOLTIP | THB_FLAGS;
+    thbButtons[0].iId = 0;
+    thbButtons[0].iBitmap = 0;
+    wcscpy(thbButtons[0].szTip, L"Button 1");
+    thbButtons[0].dwFlags = THBF_DISMISSONCLICK;
+
+    //Initialize the second button
+    dwMask = THB_BITMAP | THB_TOOLTIP;
+    thbButtons[1].dwMask = THB_BITMAP | THB_TOOLTIP;
+    thbButtons[1].iId = 1;
+    thbButtons[1].iBitmap = 1;
+    wcscpy(thbButtons[1].szTip, L"Button 2");
+
+    //Add the buttons to the thumbnail window
+    m_pTaskBarlist->ThumbBarAddButtons(hTab1, _countof(thbButtons), thbButtons);
+
+Each tab thumbnail preview can have its own set of thumbnail buttons.
+
+You may notice that the first button above has the `THBF_DISMISSONCLICK` flag but the second does not.  The difference is that when the first button is clicked the thumbnail preview will be closed, whereas if the second button is clicked, the thumbnail preview remains open.
+[Other important flags][1] are `THBF_HIDDEN`, `THBF_ENABLED`, and `THBF_DISABLED`.
+
+After the buttons are created, they can be updated by using [ITaskbarList3::ThumbBarUpdateButtons][2].  You would want to update an existing button to for example disable it.
+
+Each time a button is clicked the `OnCommand` virtual function of your dialog is specified:
+
+    virtual BOOL OnCommand(WPARAM wParam, LPARAM lParam);
+
+So you simply need to override this function for the window that is associated with the thumbnail preview:
+
+    BOOL CTaskBarTestAppDlg::OnCommand(WPARAM wParam, LPARAM lParam)
+    {
+        UINT cmdID = LOWORD(wParam);
+        switch(cmdID)
+        {
+        case ID_BUTTON1:
+            MessageBox(_T("Button 1 was clicked"));
+            break;
+        case ID_BUTTON2:
+            MessageBox(_T("Button 2 was clicked"));
+            break;
+        default:
+            return CDialogEx::OnCommand(wParam, lParam);
+        }
+    }
+
+---
+
+
+**5) Jump lists:**
+
+There is a [great article here on Jump lists][8], but I will give a quick overview.
+
+Each application is associated with a Jump List.
+
+You can customize the tasks area which is a set of actions.
+You can also customize the destination area which is a list of Recent items or Frequent items.
+
+The recent items is calculated for you automatically as long as your application is the default handler for the associated document type.  If you want to add somethign to the list you can use the Win32 API [SHAddToRecentDocs][9].
+
+You can customize custom areas of the jump list, for example Chrome includes a "Most visited section" and a "Recently closed" section.
+
+Custom destinations are controlled by: [ICustomDestinationList][10].  
+
+
+---
+
+## A couple other things you can do:
+
+You can customize your taskbar thumbnails by specifying a clipped rectangle of your window:
+
+    RECT r = {0,0,100,100};
+    m_pTaskBarlist->SetThumbnailClip(GetSafeHwnd(), &r);
+
+You can set a tooltip for your thumbnail previews as follows:
+
+    m_pTaskBarlist->SetThumbnailTooltip(GetSafeHwnd(), L"Test1");
+
+Or if you have multiple tab thumbnail previews:
+
+    m_pTaskBarlist->SetThumbnailTooltip(hTab1, L"Test1");
+    m_pTaskBarlist->SetThumbnailTooltip(hTab2, L"Test1");
+
+---
+
+## What about managed code?
+
+There are a couple of good resources for tying into the taskbar API from managed languages:
+
+- [The Windows API Code Pack for the Microsoft .NET Framework][11]:  Provides a library that can be used to access new features such as the Taskbar API in Windows 7.
+- [Windows 7 taskbar Interop Sample library][12]: Supplies more features if not available above
+
+---
+
+## Other reading:
+
+- [Introducing the Taskbar APIs][4] (Nice introductory alternative tutorial covering some different things than I have above)
+- [ITaskbarList3 Interface][13] (The gateway to most of the above features)
+- [ICustomDestinationList Interface][14]  (For Jump lists)
+
+[1]: http://msdn.microsoft.com/en-us/library/dd562321(v=VS.85).aspx
+[2]: http://msdn.microsoft.com/en-us/library/dd391705(v=VS.85).aspx
+[3]: http://msdn.microsoft.com/en-us/library/dd391696(v=VS.85).aspx
+[4]: http://msdn.microsoft.com/en-us/magazine/dd942846.aspx
+[5]: http://msdn.microsoft.com/en-us/library/ms644947(v=vs.85).aspx
+[6]: http://msdn.microsoft.com/en-us/library/dd391697(v=vs.85).aspx
+[7]: http://msdn.microsoft.com/en-us/library/dd391698(v=vs.85).aspx
+[8]: http://windowsteamblog.com/windows/b/developers/archive/2009/06/25/developing-for-the-windows-7-taskbar-jump-into-jump-lists-part-2.aspx
+[9]: http://msdn.microsoft.com/en-us/library/bb762105(v=vs.85).aspx
+[10]: http://msdn.microsoft.com/en-us/library/dd378402(v=vs.85).aspx
+[11]: http://code.msdn.microsoft.com/WindowsAPICodePack
+[12]: http://code.msdn.microsoft.com/Windows7Taskbar
+[13]: http://msdn.microsoft.com/en-us/library/dd391692(v=vs.85).aspx
+[14]: http://msdn.microsoft.com/en-us/library/dd378402(v=vs.85).aspx
+[15]: http://en.wikipedia.org/wiki/Features_new_to_Windows_7#Taskbar
+[16]: https://brianbondy.com/blog/id/100/understanding-windows-at-a-deeper-level-sessions-window-stations-and-desktops
+[17]: http://msdn.microsoft.com/en-us/library/dd378422(v=vs.85).aspx
+[18]: http://msdn.microsoft.com/en-us/library/dd378430%28v=vs.85%29.aspx
+[19]: http://msdn.microsoft.com/en-us/library/dd391559%28v=vs.85%29.aspx

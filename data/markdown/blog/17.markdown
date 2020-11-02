@@ -1,0 +1,17 @@
+It took Microsoft 5 years to finally release version 7 of IE.
+
+Internet Explorer 7 has no original ideas and it is largely just copying Firefox and Opera's features. It is an improvement from version 6.0, but I'm largely disappointed overall.
+
+You would think that a company like Microsoft would have support for emerging standards like SVG. SVG is the acronym for Scalable Vector Graphics. I remember reading the SVG recommendation which was created by the W3C almost 6 years ago. I knew that although browsers didn't have built in support for SVG, that eventually they would.
+
+Today I see firefox and others with built in support. Microsoft decided that this extremely important technology should not be included.
+
+Had IE7 included SVG support, the internet would be a different, better place. Microsoft has ruined that, and as usual they have shown us just how little they care bout web standards.
+
+Does your browser support SVG?
+If you can't see [this][1] than go get firefox [here][2]
+
+Note that you can get SVG plug-ins from Corel Corporation and Adobe, but IE should have included built in support for it. Maybe adobe paid them off so that SVG wouldn't be a competitor to Flash and Microsoft's newer crappier similar product to flash.
+
+[1]: http://croczilla.com/svg/samples/rect2/rect2.svg
+[2]: http://www.getfirefox.com/

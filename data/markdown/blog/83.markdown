@@ -1,0 +1,96 @@
+Here's a quick tutorial on how email works, SMTP, POP3, IMAP, Webmail, ...
+
+## What is a Standard?
+
+A standard is a set of rules that are followed by all developers around the world.  Some standards include HTTP, SMTP, POP3, …
+There is official documentation that describes each individual standard and most standards have been around for 0 to 30 years.  
+Each standard document is a very detailed explanation of what the standard is and how it works.  Typically a standard has an RFC number associated with it, but there are many different types of standards.
+
+
+## Protocols
+
+SMTP and POP3 are ‘standards’.  Each standard describes a different protocol.  A protocol is any kind of communication between 2 or more computers.
+
+
+## What is SMTP?
+
+SMTP is the ‘standards’ protocol that is used to send email.  Your computer uses SMTP to send email.   [See RFC 821, August 1982][1]
+
+## What is POP3?
+
+POP3 is the ‘standards’ protocol that is used to receive email.  Your computer uses POP3 to receive email.  POP3 is also referred to as simply POP.  See [RFC 1939, May 1996][2].
+
+POP3 typically will connect to the mail server and download messages to your computer.  It can then optionally delete the message from the server (which it is usually setup to do).
+
+
+## How Email works
+
+1. User A wants to send an email to user B.  
+- User A writes up an email and presses send.  
+- User A’s computer, uses SMTP communication to send the email to User A’s (Yes A, not B) SMTP server.  
+- User A’s SMTP server, sends the email to user B’s SMTP server using SMTP communication.  
+- User B when he feels like it, contacts his SMTP server and uses POP3 to download the   messages.
+
+
+## Some important notes:
+
+The only way to send email is to use SMTP.  (Actually you can also use MAPI and some other things but let's not get into that)
+
+The only way to receive email is to use POP3. (Actually there is also IMAPv4, but we'll pretend that POP3 is the only way)
+
+
+## How Email Applications work:
+
+SMTP communication is present on your computer, no matter what email client you use.  Any time an email is sent out, your computer uses SMTP to send the email.  It doesn’t matter if you're using Eudora, Outlook, Outlook Express, Mozilla Thunderbird, or a custom made program.  All programs use SMTP to send emails.  
+
+By using standards you are guaranteed that, even though user A uses Outlook, and user B uses Eudora, and they both have different SMTP servers both of the users will be able to communicate.
+
+## What is HTTP?
+
+Before I can get to what web mail is, you first need to know what HTTP is.
+HTTP is just another standard protocol.  But HTTP is meant to download files and web pages, unlike SMTP which is meant to send emails.   See [HTTP 1.1 RFC 2616, June 1999][3].
+
+
+## What is web mail?
+
+Web mail is an online web page that allows you to send and receive emails using HTTP.
+
+
+But wait a minute, didn’t I just say that the ONLY way to send email was using SMTP?
+
+
+Yes!  What the web page does, is provide you with a form that you fill out.  Your computer doesn’t know that it is any different from a form that you fill out to enter your credit card information, or a form that you fill out to enter your home address, or a form that you fill out to sign into another web site.  All your computer knows is that you are filling out a form.
+
+
+When you press the send button, your web browser sends the form to the server.   The server knows that this form is for email though.  So the server interprets the form and extracts the needed information.  The HTTP server then uses SMTP to send the message.  Because the only way that a message is going to get from User A to User B is using SMTP.
+
+
+What the web browser has done is fooled you into thinking that you are sending an email.  But what’s really happening, is that your web browser is filling out a form, and then the web server is using SMTP to send your email.
+
+
+## Can you give me a web mail walk through ?
+
+1. User A wants to send an email to User B, User A is going to use web mail.
+- User A uses his browser to type in an internet address (for example: www.hotmail.com).
+- User A’s computer uses HTTP to contact the server and ask for the web page that is used for web mail in this case.
+- The server responds (using HTTP) to User A’s computer with a web page that gives him options to compose mail, check mail, …
+- User A clicks on the compose a message link. Again User A’s computer uses HTTP to contact the server.
+- The server responds (using HTTP) to User A’s computer with the web page (which contains a form) that allows User A to compose a message.
+- User A fills in the web page and presses send.  The page is sent back to the server using HTTP.
+- In the background, unknown to User A, the web server uses SMTP to send the email to User B. Why? Because the only way to send an email is to use SMTP
+- The server responds (using HTTP) to User A’s computer with a web page that says the email was sent.
+
+## How does the web server use SMTP?
+
+Since SMTP is a standard protocol it uses SMTP in the same way any program would use SMTP.  See the section ‘How email works’.  
+
+## What is IMAPv4?
+
+I mentioned IMAPv4 earlier.  IMAPv4 is a second method used by email clients to retrieve your emails. IMAPv4 is also referred to as more simply IMAP.  IMAPv4 is more complex than POP3, but gives you the ability to work on your email from multiple computers.  If you use more than one computer, and you'd like to access your email from both computers, IMAP is the way to go.  
+
+IMAP stores all of its data on the mail server.  In that way each mail client from each different computer can be in sync.  When you read an email from one computer, your work computer will also see that the message is read.  Since data is stored on the server, IMAP email accounts are typically more expensive.
+
+
+  [1]: http://james.apache.org/server/rfclist/smtp/rfc0821.txt
+  [2]: http://www.faqs.org/rfcs/rfc1939.html
+  [3]: http://www.w3.org/Protocols/rfc2616/rfc2616.html

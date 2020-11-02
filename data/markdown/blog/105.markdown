@@ -1,0 +1,55 @@
+Wondering who to follow on twitter to keep up to date on technology?
+
+I mined the latest StackOverflow (SO) data dump for all users with twitter accounts, then calculated each user's top tags based on most votes, and finally sorted the lists by user reputation.
+
+**The end result is that you can now easily stay connected with the people in your Stack Exchange community.**
+
+Here is a screenshot of what the SO list looks like, containing over 2300 Twitter accounts:
+
+[![Screenshot of the twitter list][img1]][1]
+
+If you'd like to have your account listed in the directories, simply make sure your twitter account is linked somewhere in your profile, and I'll update these lists again on a future data dump.
+
+I also mined the available Stack Exchange data dumps and extracted those twitter accounts as well.
+
+You can view the lists here:
+
+- [StackOverflow][1]
+- [ServerFault][2]
+- [SuperUser][3]
+- [Game Development][4]
+- [Webmasters][5]
+- [Web Applications][6]
+- [Ubuntu][7]
+- [Statistical Analysis][8]
+- [StackApps][9]
+- [Photography][10]
+- [Mathematics][11]
+- [Cooking][12]
+- [Gaming][13]
+
+## Updates:
+
+- Created real twitter lists which are self updating via the Twitter API.  You can access these twitter lists from the lists linked above.  Note: Twitter has a limit of 500 users per list so I include only the top 500 users.
+- Removed some meta tags for the "Known By" list such as "mistakes" so that I don't show anyone as being known for mistakes :)
+- Fixed a bug with non StackOverflow sites linking to the StackOverflow user pages.
+- Added better parsing to find twitter URLs
+- Added filtering of bad twitter URLs
+- Removed invalid twitter accounts that don't actually exist anymore
+- Added followers count,  following count, last tweet date, and twitter description
+
+[1]: https://brianbondy.com/stackexchange-twitter/stackoverflow
+[2]: https://brianbondy.com/stackexchange-twitter/serverfault
+[3]: https://brianbondy.com/stackexchange-twitter/superuser
+[4]: https://brianbondy.com/stackexchange-twitter/gamedevelopment
+[5]: https://brianbondy.com/stackexchange-twitter/webmasters
+[6]: https://brianbondy.com/stackexchange-twitter/webapplications
+[7]: https://brianbondy.com/stackexchange-twitter/ubuntu
+[8]: https://brianbondy.com/stackexchange-twitter/statisticalanalysis
+[9]: https://brianbondy.com/stackexchange-twitter/stackapps
+[10]: https://brianbondy.com/stackexchange-twitter/photography
+[11]: https://brianbondy.com/stackexchange-twitter/mathematics
+[12]: https://brianbondy.com/stackexchange-twitter/cooking
+[13]: https://brianbondy.com/stackexchange-twitter/gaming
+
+[img1]: https://brianbondy.com/static/img/blogpost_105/twitterSEScreenshot.png

@@ -1,0 +1,3 @@
+Added a page to the Other section that allows you to get your external IP address. You can access that page [here][1].
+
+[1]: https://brianbondy.com/other/whatsmyip.aspx

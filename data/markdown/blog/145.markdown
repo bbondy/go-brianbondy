@@ -1,0 +1,30 @@
+It's been a couple months since the last progress update on Firefox for Metro, but things have been progressing at a steady pace.
+
+A new intern working under Frank Yan named Jonathan Wilde started working with us.  He's focused on the Metro front-end code, and is really tearing through tasks fast.  He's implemented the new [URL bar and tab bar as seen here][3].
+
+Since the last update we've also more or less finished work on the appbar control (the orange bar that appears when doing an edge gesture in Windows 8).  
+
+We determined that sharing the same Firefox profile in both Desktop and Metro is out of scope for the initial version, so instead we plan to sync the settings between 2 profiles using Firefox Sync augmented with some key local events to force a sync right away by using Windows Messages, events, and the registry.
+
+We've cleaned up and tweaked a lot of the Windows 8 contracts work.  Fixed soft keyboard issues, improved gesture input support, fixed support for invoking external applications, and more.
+
+The graphics code has also been improved by getting rid of the Basic Layers support and moving to LayerManager.
+
+The upgrade from Windows 8 Consumer Preview to Windows 8 Release Preview came with several changes as well that were fixed up.
+
+We removed the XAML interop support because MS decided this was for Metro applications only and not Metro style enabled desktop browsers.  To do this we had to change some startup code, gfx code, and re-implement the appbar using XBL/XUL/JS.
+
+Tim Abraldes finished work on combining metrofirefox.exe with firefox.exe, so now there's only one shared exe that dynamically determines which front-end to use.  Metro Firefox uses a modified copy of Fennec XUL front-end which is found in browser/metro/.
+
+We also  implemented various bugs to support the registration for default browser in Metro.  In particular, Windows itself must  be responsible for invoking the default browser UI, so we added code to get Windows to prompt for it.  The code for detecting which browser is the default has also changed in Windows 8, so that was updated too.
+
+An existing open question was how we would distribute one build that worked both with Windows XP and Windows 8.  [Microsoft announced][winxp] that they will be providing support for this, so we won't have to worry too much about it.
+
+Of particular note is [Bug 755724][755724] which is to split up platform and app resources so that they can be loaded individually.  This is probably the main thing holding us up from landing on mozilla-central.  It needs an owner so please reach out to us on #windev if you have time to help out with this task.
+
+A new command line firefox.exe -metrodesktop can be used for viewing the metro front-end in desktop mode.  This is useful for things like debugging since Windows kills your process if you have it paused for too long.
+We're also starting to use this now to get tests running with the Metro front end.  There's another bug filed but not completed yet to get tests running actually in Metro mode.
+
+[755724]: https://bugzilla.mozilla.org/show_bug.cgi?id=755724
+[3]: http://blog.mozilla.org/ux/2012/05/video-sketching-firefox-metro-start-page/
+[winxp]: http://blogs.msdn.com/b/vcblog/archive/2012/06/15/10320645.aspx

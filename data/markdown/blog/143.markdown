@@ -1,0 +1,11 @@
+Two weeks ago I wrote [this tweet][3] that generated over 1500 link clicks alone, as well as several retweets with different untracked links.
+
+In this [blog post][2] I mentioned that actions speak louder than words and asked Microsoft to show us their commitment to open source.
+
+I'm happy to say that today [Microsoft announced][1] that they listened to user feedback and will now be offering a Visual Studio Express for Desktop applications.
+
+Not having a Visual Studio Express for Desktop applications would have had a negative impact on open source.  Thanks to everyone who retweeted and voted!
+
+[1]: http://blogs.msdn.com/b/visualstudio/archive/2012/06/08/visual-studio-express-2012-for-windows-desktop.aspx
+[2]: https://brianbondy.com/blog/id/142/visual-studio-11-express-no-support-for-building-desktop-applications-nor-metro-style-enabled-desktop-browsers
+[3]: https://twitter.com/brianbondy/status/205769318632398848

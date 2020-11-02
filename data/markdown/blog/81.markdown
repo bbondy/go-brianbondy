@@ -1,0 +1,102 @@
+[The official FTP standard is defined in RFC 959 [Postel and Reynolds 1985]][1].  This article is in no way complete nor should it be used as an implementation guide alone.
+
+## FTP uses two TCP connections to transfer files:
+
+1. The control connection
+
+The control connection is made by the server listening to the default port for FTP which is 21.  This port can differ, but the default is 21.   The FTP server waits for a connection from the FTP client.  The client does an active open from any port to port 21.  The control connection once established, remains open for the duration of the communication between client and server.  The control connection is used to specify what to do.
+
+2. The data connection
+
+Once the control connection is used to specify that it would like to transfer a file, a data connection is established to actually transfer the file.  The data connection is used for sending files, receiving files, and getting a list of files in the current directory.
+
+## FTP requests:
+
+All FTP requests are 3 or 4 digit ASCII commands.  Each command can have 0, 1, or more optional arguments.  The most popular FTP commands are as follows:
+
+- ABOR - abort a file transfer
+- ACCT - send account information
+- APPE  - append to a remote file
+- CDUP -  CWD to the parent of the current directory
+- CWD  - change working directory
+- HELP - return help on using the server
+- DELE - delete a remote file
+- LIST - list remote files
+- MDTM - return the modification time of a file
+- MKD - make a remote directory
+- MODE - set transfer mode
+- NLST - name list of remote directory
+- NOOP - do nothing
+- PASS - send password
+- PASV - enter passive mode
+- PORT - open a data port
+- PWD - print working directory
+- QUIT - terminate the connection
+- RETR - retrieve a remote file
+- REIN - reinitialize the connection
+- RMD - remove a remote directory
+- RNFR - rename from
+- RNTO - rename to
+- STAT - return server status
+- SITE - site-specific commands
+-SIZE - return the size of a file
+- STOR - store a file on the remote host
+- STOU - store a file uniquely
+- STRU - set file transfer structure
+- SYST - return system type
+- TYPE - set transfer type
+-USER - send username
+
+## FTP replies:
+
+All FTP replies start with 3 digit status code in ASCII. An optional message can follow this 3 digit status code.
+
+The first (left most) digit in the error code has special meaning.
+
+- `1xx`: Used for positive preliminary replies.
+- `2xx`: Used for positive completion replies.
+- `3xx`: Used for positive intermediate replies.  Which means everything was OK, but another command is expected.
+- `4xx`: Transient negative completion reply.
+- `5xx`: Permanent negative completion reply.
+
+The second (middle) digit in the error codes also have special meaning.
+
+- `x0x`: Syntax error
+- `x1x`: Information
+- `x2x`: Connection related
+- `x3x`: Authentication related
+- `x4x`: Unspecified
+- `x5x`: Filesystem status
+
+The third (right most) digit in the error code, is just used to be more specific.
+
+Most FTP replies are 1 line replies, and can be read up to the first CR LF.  However, some may be multi-line replies and you should therefore check to see if the 4th digit is a hyphen.  If the 4th digit is a hypen, then you should keep reading lines until the 4th digit is not a hypen.  All lines in a multiline reply will start with the same 3 digit status code.  The final line in a multi line reply will not have a hyphen.
+
+## Using telnet to communicate with FTP:
+
+As with many other ASCII protocols, you can communicate with an FTP server via telnet alone.
+To do this in windows, simply go to start menu | Run | command.com
+In the prompt type:
+
+> `>` telnet myservername.com 21  
+> 220 Microsoft FTP service  
+>
+> `>` USER brian  
+> 331 Password required for user brian  
+>
+> `>` PASS mypassword  
+> 230 User brian logged in.  
+>
+> `>` SYST  
+> 215 Windows_NT
+
+
+You won't be able to easily test your data connection this way, but you can test out many of the FTP commands and see the replies that they give.
+
+
+## Debugging FTP:
+
+As with every other protocol, when implementing or learning FTP, it is a good idea to use ethereal.  You can download [Ethereal/Wireshark][2]. If you are using ethereal 0.10.9 or above, you will not need to download winPCAP.
+
+[1]: http://www.faqs.org/rfcs/rfc959.html
+[2]: http://www.ethereal.com

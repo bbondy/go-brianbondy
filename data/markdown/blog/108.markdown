@@ -1,0 +1,126 @@
+The January 2011 data dump was released today.  Unfortunately new data dumps will only occur every 2 months officially now.
+
+Since the November 2010 data dump, four new sites have been added:
+
+1. [English Language and Usage][1]
+2. [Programmers][2]
+3. [TeX - LaTeX][3]
+4. [Theoretical Computer Science][4]
+
+
+There are around 400 new twitter users added to the StackOverflow data dump alone since the last data dump.  I would imagine that some of these users seen the first list and then updated their profiles.    Also there are new users.  
+
+Here is the full StackExchange social network user lists:
+
+**StackOverflow**  
+- [Twitter][t1] &nbsp;&nbsp; - [LinkedIn][l1] &nbsp;&nbsp; - [Facebook][f1]
+
+**ServerFault**  
+- [Twitter][t2] &nbsp;&nbsp; - [LinkedIn][l2] &nbsp;&nbsp; - [Facebook][f2]  
+
+**SuperUser**  
+- [Twitter][t3] &nbsp;&nbsp; - [LinkedIn][l3] &nbsp;&nbsp; - [Facebook][f3]
+
+**Game Development**  
+- [Twitter][t4] &nbsp;&nbsp; - [LinkedIn][l4] &nbsp;&nbsp; - [Facebook][f4]
+
+**Webmasters**  
+- [Twitter][t5] &nbsp;&nbsp; - [LinkedIn][l5] &nbsp;&nbsp; - [Facebook][f5]
+
+**Web Applications**  
+- [Twitter][t6] &nbsp;&nbsp; - [LinkedIn][l6] &nbsp;&nbsp; - [Facebook][f6]
+
+**Ubuntu**  
+- [Twitter][t7] &nbsp;&nbsp; - [LinkedIn][l7] &nbsp;&nbsp; - [Facebook][f7]
+
+**Statistical Analysis**  
+- [Twitter][t8] &nbsp;&nbsp; - [LinkedIn][l8] &nbsp;&nbsp; - [Facebook][f8]
+
+**StackApps**  
+- [Twitter][t9] &nbsp;&nbsp; - [LinkedIn][l9] &nbsp;&nbsp; - [Facebook][f9]
+
+**Photography**  
+- [Twitter][t10] &nbsp;&nbsp; - [LinkedIn][l10] &nbsp;&nbsp; - [Facebook][f10]
+
+**Mathematics**  
+- [Twitter][t11] &nbsp;&nbsp; - [LinkedIn][l11] &nbsp;&nbsp; - [Facebook][f11]
+
+**Cooking**  
+- [Twitter][t12] &nbsp;&nbsp; - [LinkedIn][l12] &nbsp;&nbsp; - [Facebook][f12]
+
+**Gaming**  
+- [Twitter][t13] &nbsp;&nbsp; - [LinkedIn][l13] &nbsp;&nbsp; - [Facebook][f13]
+
+**English Language and Usage**  
+- [Twitter][t14] &nbsp;&nbsp; - [LinkedIn][l14] &nbsp;&nbsp; - [Facebook][f14]
+
+**Programmers**  
+- [Twitter][t15] &nbsp;&nbsp; - [LinkedIn][l15] &nbsp;&nbsp; - [Facebook][f15]
+
+**TeX - LaTeX**  
+- [Twitter][t16] &nbsp;&nbsp; - [LinkedIn][l16] &nbsp;&nbsp; - [Facebook][f16]
+
+**Theoretical Computer Science**  
+- [Twitter][t17] &nbsp;&nbsp; - [LinkedIn][l17] &nbsp;&nbsp; - [Facebook][f17]
+
+
+
+[0]: http://www.stackoverflow.com/
+[t1]: https://brianbondy.com/stackexchange-twitter/stackoverflow
+[t2]: https://brianbondy.com/stackexchange-twitter/serverfault
+[t3]: https://brianbondy.com/stackexchange-twitter/superuser
+[t4]: https://brianbondy.com/stackexchange-twitter/gamedevelopment
+[t5]: https://brianbondy.com/stackexchange-twitter/webmasters
+[t6]: https://brianbondy.com/stackexchange-twitter/webapplications
+[t7]: https://brianbondy.com/stackexchange-twitter/ubuntu
+[t8]: https://brianbondy.com/stackexchange-twitter/statisticalanalysis
+[t9]: https://brianbondy.com/stackexchange-twitter/stackapps
+[t10]: https://brianbondy.com/stackexchange-twitter/photography
+[t11]: https://brianbondy.com/stackexchange-twitter/mathematics
+[t12]: https://brianbondy.com/stackexchange-twitter/cooking
+[t13]: https://brianbondy.com/stackexchange-twitter/gaming
+[t14]: https://brianbondy.com/stackexchange-twitter/englishusage
+[t15]: https://brianbondy.com/stackexchange-twitter/programmers
+[t16]: https://brianbondy.com/stackexchange-twitter/texlatex
+[t17]: https://brianbondy.com/stackexchange-twitter/theoreticalcs
+
+[l1]: https://brianbondy.com/stackexchange-linkedin/stackoverflow
+[l2]: https://brianbondy.com/stackexchange-linkedin/serverfault
+[l3]: https://brianbondy.com/stackexchange-linkedin/superuser
+[l4]: https://brianbondy.com/stackexchange-linkedin/gamedevelopment
+[l5]: https://brianbondy.com/stackexchange-linkedin/webmasters
+[l6]: https://brianbondy.com/stackexchange-linkedin/webapplications
+[l7]: https://brianbondy.com/stackexchange-linkedin/ubuntu
+[l8]: https://brianbondy.com/stackexchange-linkedin/statisticalanalysis
+[l9]: https://brianbondy.com/stackexchange-linkedin/stackapps
+[l10]: https://brianbondy.com/stackexchange-linkedin/photography
+[l11]: https://brianbondy.com/stackexchange-linkedin/mathematics
+[l12]: https://brianbondy.com/stackexchange-linkedin/cooking
+[l13]: https://brianbondy.com/stackexchange-linkedin/gaming
+[l14]: https://brianbondy.com/stackexchange-linkedin/englishusage
+[l15]: https://brianbondy.com/stackexchange-linkedin/programmers
+[l16]: https://brianbondy.com/stackexchange-linkedin/texlatex
+[l17]: https://brianbondy.com/stackexchange-linkedin/theoreticalcs
+
+[f1]: https://brianbondy.com/stackexchange-facebook/stackoverflow
+[f2]: https://brianbondy.com/stackexchange-facebook/serverfault
+[f3]: https://brianbondy.com/stackexchange-facebook/superuser
+[f4]: https://brianbondy.com/stackexchange-facebook/gamedevelopment
+[f5]: https://brianbondy.com/stackexchange-facebook/webmasters
+[f6]: https://brianbondy.com/stackexchange-facebook/webapplications
+[f7]: https://brianbondy.com/stackexchange-facebook/ubuntu
+[f8]: https://brianbondy.com/stackexchange-facebook/statisticalanalysis
+[f9]: https://brianbondy.com/stackexchange-facebook/stackapps
+[f10]: https://brianbondy.com/stackexchange-facebook/photography
+[f11]: https://brianbondy.com/stackexchange-facebook/mathematics
+[f12]: https://brianbondy.com/stackexchange-facebook/cooking
+[f13]: https://brianbondy.com/stackexchange-facebook/gaming
+[f14]: https://brianbondy.com/stackexchange-facebook/englishusage
+[f15]: https://brianbondy.com/stackexchange-facebook/programmers
+[f16]: https://brianbondy.com/stackexchange-facebook/texlatex
+[f17]: https://brianbondy.com/stackexchange-facebook/theoreticalcs
+
+[1]: http://english.stackexchange.com/
+[2]: http://programmers.stackexchange.com/
+[3]: http://tex.stackexchange.com/
+[4]: http://cstheory.stackexchange.com/

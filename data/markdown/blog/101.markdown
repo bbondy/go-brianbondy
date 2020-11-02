@@ -1,0 +1,71 @@
+For fun I decided to look into Windows Phone 7 (WP7) Operating System (OS) development.  Microsoft is definitely trying to reinvent its Mobile image with WP7 and they are spending over $400 million on marketing to do so.  WP7 is a fresh platform for Microsoft and competes against iOS, Android, and Blackberry OS. 
+
+I currently own an Android HTC phone but I'm not so keen on developing for it since the primary development language is Java.  Primarily I'm a Native C++ and .NET developer.
+
+At first I didn't want to even look at WP7, but after spending a few hours reading about it I've changed my initial perception completely. I decided to write my equivalent to "Hello World" which is a [Pi Memorize][1] program that I made in MFC around 13 years ago.  Pi Memorize is a small tool that helps you learn Pi to 10,000 digits.
+
+WP7 is Microsoft's entirely new mobile OS and it is not compatible with the existing Windows Mobile which was based on Windows CE.
+WP7 is expected to be released in November of 2010 and unlike iOS and Blackberry OS, it is not a closed platform.  Providers of the WP7 OS include HTC, Dell, Samsung, LG, and more.  Apps made for Windows Mobile cannot be used directly on WP7.
+
+WP7 development is based on Silverlight 3 (with some features from Silverlight 4), XNA Game Studio, and the .NET Compact Framework 4.  I was a little disappointed to see that there is no native development with access to lower level things via writing a hypothetical native VC++ app.  Windows Mobile had support for writing native apps with VC++ and also Windows Mobile had support for the .NET Compact Framework.  Another missing feature that used to exist is multi-tasking, and finally cut, copy, and paste functionality.
+
+Silverlight is the main way to make an app in WP7 and if you don't already know Silverlight is based on XAML and is similar but has a much nicer development stack (in my opinion) to Adobe's Flash.  User interfaces in Silverlight are made in a declarative language called Extensible Application Markup Language (XAML).  Silverlight is based on WPF and shares its XAML support.
+
+XNA is familiar to game developers for Xbox and it is also based on the .NET Compact Framework.
+
+To publish your application you need to buy a yearly renewable membership for $119 USD.  The submission process works by submitting a .xap package which is just a renamed .zip with all of the application files.  In order to successfully submit your app there is a known issue where you need to go to [http://xbox.com/live][4] and accept the agreement there first.   Otherwise the "Submit a Windows Phone 7" button simply redirects you back to [App Hub / create.msdn.com][5].
+
+To get started in development you can [download the WP7 development toolkit][2] which includes an emulator, Visual Studio 2010 Express, XNA Game Studio, and the needed WP7 development tools.  If you already have Visual Studio 2010 installed it will install the additional tools needed without installing Visual Studio 2010.
+From the Visual Studio New Project Window, you will notice you have additional tab pages for "XNA Game Studio 4.0 and "Silverlight for Windows Phone".
+
+I developed only a small application, but from start to finish it only took me 5 hours, including downloading and installation, and I've never used Silverlight before; however, I have developed some apps with WPF.
+
+Surprisingly the hardest part of the whole development was simply figuring out how to restrict a user to only be able to type numbers.  To do this you can simply use a Textbox.InputScope element:
+
+    <TextBox Name="digitsText" TextWrapping="Wrap" Height="340" HorizontalAlignment="Left" Margin="-5,31,0,0" Text="" VerticalAlignment="Top" Width="460" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled" DataContext="{Binding}" KeyDown="digitsKeyDown">
+      <TextBox.InputScope>  
+        <InputScope>
+          <InputScopeName NameValue="TelephoneNumber"/>
+        </InputScope>
+      </TextBox.InputScope>
+    </TextBox>
+
+
+This makes it so the textbox input consists of only the characters which are available to you when entering a phone number.
+
+To restrict the keys in that input scope such as #, *, . and space I had to write some code behind via handling the KeyDown event:
+
+    private void digitsKeyDown(object sender, KeyEventArgs e)
+    {
+        bool isValid = e.Key >= Key.NumPad0
+                            && e.Key <= Key.NumPad9;
+
+        //Don't allow input if we have # or * or ...
+        e.Handled = !isValid;
+        //...
+    }
+
+
+To embed the actual digits of Pi I simply added an embedded resource to the project called PiDigits.txt which contained Pi to 10,000 digits.
+I loaded that resource at runtime with the following code into a string variable called `correctPiDigits`.
+
+    Assembly asm = this.GetType().Assembly;  
+    Stream stream = asm.GetManifestResourceStream("PiMemorize.PiDigits.txt");
+    StreamReader reader = new StreamReader(stream);
+    correctPiDigits = reader.ReadToEnd();
+    //...
+
+
+Here are some screenshots of the WP7 app that I made:
+
+<img src='https://brianbondy.com/static/img/blogpost_101/piMemorize1.png' width='478' height='870'>
+
+<img src='https://brianbondy.com/static/img/blogpost_101/piMemorize2.png' width='478' height='870'>
+
+<img src='https://brianbondy.com/static/img/blogpost_101/piMemorize3.png' width='478' height='870'>
+
+[1]: https://brianbondy.com/math/pi
+[2]: http://create.msdn.com/en-us/home/getting_started
+[3]: https://brianbondy.com/blog/id/96/microsoft-mvp-for-visual-c-july-2010-july-2011
+[4]: http://www.xbox.com/live
+[5]: http://create.msdn.com

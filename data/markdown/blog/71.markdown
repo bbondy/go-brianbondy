@@ -1,0 +1,4 @@
+Added a page to sign up for an account at brianbondy.com. I plan to offer several services which will be announced over time, but they will need to store information, and therefore you wll need to create an account. You can create an account [here][1]
+
+
+[1]: https://brianbondy.com/members/createAccount.aspx

@@ -1,0 +1,17 @@
+<img src='https://brianbondy.com/static/img/blogpost_113/kineticd.png' width='196' height='42'> &nbsp;&nbsp;&nbsp;&nbsp; <img src='https://brianbondy.com/static/img/blogpost_113/robobak.png' width='196' height='32'>
+
+The [ROBOBAK][1] company which myself, Ben Puzzuoli, and Rob Puzzuoli co-founded, was acquired by [KineticD][7].  
+
+VisionWorks Solutions Inc. which primarily worked on ROBOBAK was founded in 2003.  Likewise ACPANA dba KineticD was also founded in 2003.
+
+You can read about it [here][2], [here][3], [here][4], [here][6], and [here][5].
+
+I am now working for the new company and still hold shares in the new company.
+
+[1]: http://www.robobak.com
+[2]: http://business.financialpost.com/2011/04/05/torontos-kineticd-buys-robobak/
+[3]: http://www.echannelline.com/usa/story.cfm?item=26706
+[4]: http://www.wwpi.com/index.php?option=com_content&view=article&id=11099:kineticd-acquires-hybrid-cloud-backup-software-vendor-robobak-&catid=236:backup-and-recovery&Itemid=2701320
+[5]: http://www.backupreview.info/2011/04/05/opinion-on-ma-toronto-based-online-data-backup-specialist-kineticd-buys-robobak/
+[6]: http://www.thestreet.com/story/11071955/1/online-backup-expert-kineticd-acquires-robobak-a-leading-provider-of-hybrid-cloud-backup-software.html
+[7]: http://www.kineticd.com

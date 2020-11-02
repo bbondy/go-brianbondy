@@ -1,0 +1,9 @@
+In all operating systems that I've seen the file copy dialog sucks. Why is this simple dialog that is used by everyone everyday so hard to come up with a good design?
+
+Mac is better than all versions of windows, but it still isn't ideal. Windows fails to give you a do not replace apply to all option.
+
+It would be nice to see a list of some sort detailing all of the status' of each file that was copied. It would be even nicer to be able to select this list and copy it into the clipboard.
+
+The main problem with windows is if a single file fails to copy, the entire copy operation is aborted.
+
+I could go on with several more points, but it just comes down to the developers lack of caring for the operating systems they develop.

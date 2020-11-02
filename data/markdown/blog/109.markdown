@@ -1,0 +1,102 @@
+If you haven't heard of [Khan Academy][26] yet, you need to start reading more news.   I first heard of Khan Academy when they were announced as a winner of [Google's Project 10^100][28] and have been telling people and tweeting about them ever since.  I didn't start looking into how their development process works until last night though.
+
+Khan Academy is a non profit company started by Salman Khan with the mission of educating the world.
+Sal himself has created over 2,000 videos on a range of topics from history to mathematics and everything in between.  The videos are nothing short of amazing and are broken down into 10 minute chunks which was originally because of the youtube limit imposed on Sal.
+
+Shantanu is the President and COO of the Khan Academy and also has a strong mathematical background like Sal.
+
+Khan Academy has a reputation/energy and badge system in place which makes the site just as addictive as [StackOverflow][29].  The badge system is especially cool, offering real time badge awards, something not easily done with a NoSQL implementation and a huge dataset behind the scenes.
+
+Khan Academy is [hosted on Google code][1] and uses <strike>subversion (SVN)</strike> Kiln Hg (They upgraded from SVN) for source control.
+There are currently [11 committers to the project][2], the current most active by far (with over a half dozen commits even on a Saturday afternoon) is someone named Ben Kamens ([@kamens][25]).
+
+Ben is a previous employee of Joel Spolsky's company [Fog Creek Software][5], [and has a great blog][3] with some interesting insight on how Khan Academy works.  He accomplished a lot within just a few months of working at Khan Academy.
+He also develops a couple of cool iPhone apps one called [RulerPhone][7] and the other [Precorder][8].
+
+Khan Academy runs on [Google App Engine (GAE)][4] which means they must either use Java or [Python 2.5][6] (Python 2.5 in sandboxed mode also minus the ability to run C extension modules).
+Khan Academy uses Python 2.5 along with GAE's default [webapp][9] module.  Since webapp does not include a template engine, they use the Django 0.96 template engine which the GAE runtime includes by default.
+As with all GAE applications, the main sitemap is configured via setting URL pattern matching with a [YAML][10] configuration file.
+GAE has a great [GAE getting started guide][12] if you are interested.  I was.
+
+
+
+GAE works off of a datastore which is automatically replicated and scaled and is based on [BigTable][21] and hence [Google Filesystem (GFS)][22].  GAE does not allow for you to host a relational database.
+Instead of using SQL to tie into the datastore and having write access to your filesystem, you need to use the Google Query Language (GQL).
+GQL looks exactly like SQL but you can't do joins and you can't select partial entities from your queries.  You must either select just the keys or the entire entity.
+
+GAE applications such as Khan make use of caching so that the datastore does not need to be contacted on each page load.
+This caching is typically handled with the [memcache][37] service included in GAE API.  Typically each model that you have would save to the memcache when you write the model to the datastore, and it would try to retrieve the object from the memcache before getting it from the datastore.
+
+Khan Academy does expose an [HTTP JSON API][11] but only for getting a list of playlists and videos per playlist.  
+It would be great to see additional APIs for read only access to the energy and badge system.
+
+The backup system used by Khan Academy takes around 3 days to complete and is run on an Amazon EC2 instance.  
+I think this could be improved by doing incremental/differential processes, and using deduplication.
+
+Khan Academy tries to fix all bugs before adding new features, which is a great mantra to have.  Other than GAE they use a few very cool Javascript libraries under the hood:
+
+- [jQuery][16] (who doesn't use jQuery?)
+- [ASCIIMathML][17] to formulate math equations, this works by automatically converting any math equation within back tick characters.
+- [ASCIIsvg][18] Graphing is accomplished using an iframe which contains generated SVG code (hurray for IE9 finally getting native SVG support)
+- [JavaScript InfoVis][30]: Provides tools for creating Interactive Data Visualizations for the Web.  Used for the old knowledge map.
+- [YUICompressor][19] to compress the Javascript, but better ratios could be accomplished using the [Google Closure compiler][20].
+- [Google Maps API v3][32] is used for the [exercise dashboard][31] using a custom map type and some other customizations on the controls and zoom.  Another cool aspect is that you are actually zooming around images from the Hubble telescope.
+- [Google Analytics][33] is a tracking tool for stats on your visitors
+- [Highcharts JS][34]: Interactive JavaScript charts.  They use this for user profile charts.
+- [Raphaël—JavaScript Library][38]: Used for the scratchpad when doing exercises, and for exercise drawings.  Raphaël is a Javascript library for creating SVG graphics, every graphic object is a DOM object which can be manipulated
+- [MathJax][39]: Math visualization library for inputs of MathML and LaTeX
+
+HTML5 is used by Khan Academy proved by their HTML doctype declaration; however, in the exercise modules some simple changes could improve the user interface and be compatible across all browsers and platforms.
+By simply making input boxes like so: `<input type="number">` this would mean that all popular mobile phones would display a numeric keypad by default right away.  All browsers default to `type="text"` if the `type` specified is unknown by old browsers that don't understand HTML5.
+
+Sal himself started the code but I would imagine most of his time is spent creating the actual content videos, handling press, and doing thousands of other things today.
+Dean Brettle and Omar Rizwan are also notable developers (sorry if I missed others).  Dean amongst other things handles release management, and created the scratch pad used in exercises.
+Omar has contributed at least 16 exercise modules. Jason Rosoff ([Jason's blog][23], [@jasonrr][24]) is also extremely involved in the project and is known as the lead designer also doing some coding.  Marcia Lee ([@marcia_lee][36]) is a recent hire and makes frequent commits.
+
+
+If you are interested in helping with the Khan Academy project you can get started by:
+
+- Reading the [Khan developer's guide][13]
+- Taking a look at the [open issues][14] or the [full issue list][15]
+- Checkout the project: <strike>`http://khanacademy.googlecode.com/svn/trunk`</strike> `https://khanacademy.kilnhg.com/Repo/Website/Group/stable`
+- Create a new module from the list of [modules pending development][35]
+- Start working on exercise modules and bug fixes!
+
+[1]: http://code.google.com/p/khanacademy/
+[2]: http://code.google.com/p/khanacademy/people/list
+[3]: http://bjk5.com/
+[4]: http://code.google.com/appengine/
+[5]: http://www.fogcreek.com/
+[6]: http://www.python.org/download/releases/2.5/
+[7]: http://benkamens.com/rulerphone/sale.html
+[8]: http://www.airshipsoftware.com/precorder
+[9]: http://code.google.com/appengine/docs/python/gettingstarted/usingwebapp.html
+[10]: http://en.wikipedia.org/wiki/YAML
+[11]: https://sites.google.com/a/khanacademy.org/forge/for-developers/technical/api
+[12]: http://code.google.com/appengine/docs/python/gettingstarted/
+[13]: https://sites.google.com/a/khanacademy.org/forge/for-developers
+[14]: http://code.google.com/p/khanacademy/issues/list?can=2&q=&sort=-opened&colspec=ID%20Type%20Component%20Status%20Stars%20Owner%20Summary%20Modified%20Opened
+[15]: http://code.google.com/p/khanacademy/issues/list
+[16]: http://jquery.com/
+[17]: http://www1.chapman.edu/~jipsen/mathml/asciimath.html
+[18]: http://www1.chapman.edu/~jipsen/svg/asciisvg.html
+[19]: http://developer.yahoo.com/yui/compressor/
+[20]: http://code.google.com/closure/compiler/docs/gettingstarted_ui.html
+[21]: http://en.wikipedia.org/wiki/BigTable
+[22]: http://en.wikipedia.org/wiki/Google_File_System
+[23]: http://shipordie.com/
+[24]: https://twitter.com/#!/jasonrr/
+[25]: https://twitter.com/#!/kamens
+[26]: http://www.khanacademy.org/
+[28]: http://www.project10tothe100.com/index.html
+[29]: http://www.stackoverflow.com
+[30]: http://thejit.org/
+[31]: http://www.khanacademy.org/exercisedashboard
+[32]: http://code.google.com/apis/maps/documentation/javascript/reference.html
+[33]: http://analytics.google.com/
+[34]: http://www.highcharts.com/
+[35]: https://spreadsheets.google.com/ccc?key=0AsgWawUKHSJldGlvX3RUX2FyMEpMdzdRRWlOLXg3TVE&hl=en&authkey=CJWi-LMM#gid=0
+[36]: https://twitter.com/#!/marcia_lee
+[37]: http://code.google.com/appengine/docs/python/memcache/usingmemcache.html
+[38]: http://raphaeljs.com/
+[39]: http://www.mathjax.org/

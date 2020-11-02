@@ -1,0 +1,80 @@
+## An overview of the initial work
+
+[Creating website shortcuts with favicons][2] was a Platform Integration task that has been pending development for almost a decade.  Thanks to a new contributor named Parth Mudgal, they're now live on Nightly builds.
+
+<figure style='text-align:center'>
+<img src='/static/img/blogpost_147/favicon_shortcuts.png'>
+<figcaption style='display:block; margin-left: auto; margin-right:auto'>
+Favicons of any image format as shortcut icons in Windows</figcaption>
+</figure>
+
+## Mentored bugs
+
+Having had done jump list icons built from favicons, I had a good idea of how to implement the task, but due to other priorities, I knew I wouldn't have time to work on it myself.  
+
+I knew this was a bigger than usual task for a new contributor, but I thought I might as well add the [mentor=bbondy whiteboard flag][1].  I honestly didn't expect someone to come along to take the bug, but to my surprise a brand new contributor, Parth Mudgal came along 2 months later and emailed me to begin development on the task.
+
+## Contrasting larger meaningful tasks to smaller trivial first bugs
+
+Smaller bugs get users more accustomed to the process of contributing to Mozilla. I think in most cases this is the best way to start, but tackling a bigger bug first has more meaning and will make the contributor feel (and rightly so) like they are making an impact at Mozilla.
+
+To help learn about a new contributor that worked on a large task first, I asked Parth for an interview, and he happily accepted.
+
+## An interview with the contributor
+
+Why did you decide to contribute to an open source project?
+
+> I had multiple reasons:
+>
+> - Initially, as a refresher
+> - I wanted to dive into the real world of C++ coding
+> - I suppose everyone wants to be a part of something big
+> - And as a bonus, it looks good on my Resume :p
+
+Why did you pick Mozilla to contribute to?
+
+> I asked myself what the one open source application that I use most was? Firefox!
+> I have always enjoyed Firefox and the effort by Mozilla to keep it up!
+
+How was the process of contributing to Mozilla?
+
+> There are a ton of help documents in the developer section, so I could understand a lot of things easily.
+
+> Bugzilla was easy to use and straightforward as well.
+
+Do you have any suggestions that we can use to meet the needs of contributors?
+
+> If developers understand the benefits of the contribution,
+> they will contribute more. I got to learn so much and for me it was a
+> sense of achievement when I completed it :D
+
+You worked on a large bug as your first patch, did you like working on it,
+or if you could have done it over again would you have picked several small
+bugs instead?
+
+> Well, yeah.  I had exams in between and other college things; there was a break many times during the course of development.  On each break it would take a few days to get back on track.  Perhaps some other people wouldn't come back after a break.
+
+
+Do you have any other feedback you'd like to share?
+
+> Better reference information would have been most helpful. How to use a particular function
+> X, so a new developer can refer it initially.
+>
+> I had a hard time finding
+> out how to do stuff like: How do I convert an object of type X to type Y.  I
+> know this will probably be a very big task considering the number of
+> functions. I know we already have DXR and MXR for search, but it was
+> still hard to find things.
+
+## My thoughts
+
+Mentored bugs are great, if you haven't done any, then I would highly recommend that you mark bugs you know how to do with the mentor=yourusername whiteboard flag.
+
+I can say for sure that this bug wouldn't be done if it wasn't for Parth coming along and working hard to complete the bug. I'd like to thank him from myself and from Mozilla for his hard work.
+
+Having a meaningful task completed at Mozilla means that this contributor can point future employers to his real world work.  Other than the intrinsic value, this is a great bonus for contributors.
+
+When you are mentoring a bug, please always share with the contributor that they are making a difference, and explain to them why they are making a difference, it may not be obvious.
+
+[1]: https://wiki.mozilla.org/Mentors
+[2]: https://bugzilla.mozilla.org/show_bug.cgi?id=110894

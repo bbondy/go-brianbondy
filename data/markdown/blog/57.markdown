@@ -1,0 +1,3 @@
+With [XULRunner][1] you can develop your own XUL applications without having Firefox nor Thunderbird installed. This leverages the power of XUL, XPCOM and it's extensibility. And of course it allows you to make cross platform applications. 
+
+[1]: http://developer.mozilla.org/en/docs/XULRunner

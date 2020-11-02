@@ -1,0 +1,4 @@
+[Read them here][1]
+
+
+[1]: http://paulgraham.com/startupmistakes.html

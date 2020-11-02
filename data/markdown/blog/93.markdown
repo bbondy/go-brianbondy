@@ -1,0 +1,34 @@
+Forward declaring things in C++ is very useful because it [dramatically speeds up compilation time][speedUp].  You can forward declare several things in C++ including: `struct`, `class`, `function`, etc...
+
+But can you forward declare an `enum` in C++?
+
+No you can't.  
+
+But why not allow it?  If it were allowed you could define your `enum` type in your header file, and your `enum` values in your source file.  Sounds like it should be allowed right?
+
+Wrong.
+
+In C++ there is no default type for `enum` like there is in C# (int).  In C++ your `enum` type will be determined by the compiler to be any type that will fit the range of values you have for your `enum`.
+
+What does that mean?
+
+It means that your `enum`'s underlying type cannot be fully determined until you have all of the values of the `enum` defined.  Which mans you cannot separate the declaration and definition of your `enum`.  And therefore you cannot forward declare an `enum` in C++.
+
+The ISO C++ standard S7.2.5:
+
+> The underlying type of an enumeration is an integral type that can represent all the enumerator values defined in the enumeration. It is implementation-defined which integral type is used as the underlying type for an enumeration except that the underlying type shall not be larger than `int` unless the value of an enumerator cannot fit in an `int` or `unsigned int`. If the enumerator-list is empty, the underlying type is as if the enumeration had a single enumerator with value 0. The value of `sizeof()` applied to an enumeration type, an object of enumeration type, or an enumerator, is the value of `sizeof()` applied to the underlying type.
+
+You can determine the size of an enumerated type in C++ by using the `sizeof` operator.  The size of the enumerated type is the size of its underlying type.   In this way you can guess which type your compiler is using for your `enum`.
+
+What if you specify the type of your `enum` explicitly like this:
+
+    enum Color : char { Red=0, Green=1, Blue=2};
+    assert(sizeof Color == 1);
+
+Can you then forward declare your `enum`?
+
+No.  But why not?
+
+Specifying the type of an `enum` is not actually part of the current C++ standard.  It is a VC++ extension.   It will be part of C++0x though.
+
+[speedUp]: https://brianbondy.com/blog/id/5/slow-compilation-time

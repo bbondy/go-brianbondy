@@ -1,0 +1,318 @@
+## Mozilla 2014 Goal
+
+<img src='/static/img/blogpost_158/deb.jpeg' width=64 height=64 style="float:left; margin-right: 15px">
+As <cite>Deb Cohen (VP, Chief of People)</cite> said:
+<br>
+<q lang="en-us">
+Our goal this year is to find new ways for people to become part of us.
+This year we have a very aggressive goal, for all of us to look inside our teams, our work, our organization, and create some of these pathways.
+</q>
+
+
+---
+
+<img src='/static/img/blogpost_118/firefox-logo.png' width=128 style="float:right; margin-left: 15px">
+
+## What is Code Firefox?
+
+The [Code Firefox site][0] ([@codefirefox][codefirefoxtwitter]), is a new video and exercise framework which is highly inspired by [Khan Academy][KA].  Its purpose is for on-boarding contributors and sharpening the skills of existing community members.  
+
+People learn differently. Providing different ways to consume information is crucial to growing Mozilla.  For many people, Code Firefox provides an easier, and more consumable approach to learning how to contribute to Mozilla.
+
+[Would you like to start contributing patches to Mozilla? Start here][getstarted]
+
+---
+
+## Testimonial
+
+One prime example of Code Firefox's usefulness is of a new contributor who joined last month, and actively uses Code Firefox.
+He has already [submitted 18 patches][1].
+
+<img src='/static/img/blogpost_158/anuj.jpg' width=64 height=64 style="float:left; margin-right: 15px">
+
+In a personal email <cite>Anuj Agarwal (Student at Vellore Institute of Technology)</cite> writes:
+<br>
+<q lang="en-us">
+Just for fun, [here is the patch I got reviewed today!][anujpatch]  And it was made possible only because of your tutorials. Thank you!
+</q>
+
+---
+
+## Code Firefox statistics
+
+
+<a title='Visits per region' href='/static/img/blogpost_158/stats.png'><img src='/static/img/blogpost_158/stats.png' width=300 style="float:right; margin-left: 15px"></a>
+
+The site has not been promoted yet, but it already has:
+
+- ~46,000 unique visits since it was released on October 30, 2013
+- ~10,000 full video views across the 53 videos
+- Most functionality is available without accounts, but there are still over 110 Code Firefox accounts and 35 YouTube subscribers.  Most of these accounts are new Bugzilla users as well and several have patches.
+
+
+
+---
+
+## What has Code Firefox accomplished?
+
+<i class="fa fa-check" style="color: green; margin-right: 10px"></i> 51 videos, 3 exercises focused mostly on on-boarding new Firefox developers<br>
+<i class="fa fa-check" style="color: green; margin-right: 10px"></i> Videos are captioned<br>
+<i class="fa fa-check" style="color: green; margin-right: 10px"></i> Ability to track watched videos and completed exercises when logged in<br>
+<i class="fa fa-check" style="color: green; margin-right: 10px"></i> Exercise framework that parses code and gives immediate feedback and experience<br>
+<i class="fa fa-check" style="color: green; margin-right: 10px"></i> Videos and Exercises are accessible and searchable through tags<br>
+
+---
+
+## Where is the Code Firefox site going? (Code Firefox Goals)
+
+<i class="fa fa-check" style="color: #B4A423; margin-right: 10px"></i> Opening up the ability to post videos to other people<br>
+<i class="fa fa-check" style="color: #B4A423; margin-right: 10px"></i> Ability to create different "Outline tracks", for example, a QA track.<br>
+<i class="fa fa-check" style="color: #B4A423; margin-right: 10px"></i> More video and exercise content being added, initially for Firefox OS and Desktop<br>
+<i class="fa fa-check" style="color: #B4A423; margin-right: 10px"></i> Integrate with Mozilla Open Badges<br>
+<i class="fa fa-check" style="color: #B4A423; margin-right: 10px"></i> Working more closely with Student Ambassadors<br>
+<i class="fa fa-check" style="color: #B4A423; margin-right: 10px"></i> Implement a point system<br>
+<i class="fa fa-check" style="color: #B4A423; margin-right: 10px"></i> Interoperability with Mozillians in creative ways<br>
+<i class="fa fa-check" style="color: #B4A423; margin-right: 10px"></i> Implementing hints for exercises<br>
+<i class="fa fa-check" style="color: #B4A423; margin-right: 10px"></i> [Other goals][othergoals]<br>
+
+---
+
+
+## Highlights of benefits gained by Mozilla from the site
+
+<i class="fa fa-check" style="color: green; margin-right: 10px"></i> Brings in new contributors<br>
+<i class="fa fa-check" style="color: green; margin-right: 10px"></i> Retains new and existing contributors<br>
+<i class="fa fa-check" style="color: green; margin-right: 10px"></i> Sharpens skills of existing members of our community<br>
+<i class="fa fa-check" style="color: green; margin-right: 10px"></i> Code Firefox uses and promotes Persona<br>
+<i class="fa fa-check" style="color: #B4A423; margin-right: 10px"></i> Code Firefox will use and promotes Open Badges<br>
+<i class="fa fa-check" style="color: #B4A423; margin-right: 10px"></i> Will train employees with advanced skills with advanced tracks<br>
+
+---
+
+## Media coverage of Code Firefox so far
+
+Some people have taken the time to write about Code Firefox:
+
+- [GigaOM: Mozilla developer creates curriculum to on-board new contributors to Firefox][gigaom] by Lauren Hockenson
+- [I Programmer: ABCs of Firefox Dev in Easy Videos][iprogrammer] by Ian Elliot
+- [Teaching people to think about code instead of acing a test][thinkcode] by Christian  Heilmann
+- [Very positive feedback from the software development community][hackernews]
+- [Hundreds of other tweets about Code Firefox][tweets]
+
+---
+
+## What our community is saying
+
+- <cite>Robert O'Callahan (Distinguished Engineer)</cite>:
+<br>
+<q lang="en-us">
+In all my years with Mozilla I've never seen such an exciting effort to engage new Firefox contributors. Well done!</q>
+
+
+- <cite>Josh Matthews (Community Engagement Lead)</cite>:
+<br>
+<q lang="en-us">
+To me, Code Firefox's value lies in the clear, forthright instruction provided, along with the bite-sized nature of the lessons, which provides a counterpoint to the existing long-winded and slightly overwhelming textual documentation. I have interacted with countless potential volunteers over the past several years, and there is a non-trivial segment of the population that immediately looks for instructional videos to aid in understanding. In addition, perhaps counter-intuitively, video explanations are often preferred by non-native English speakers as a visual reference to aid in comprehension, and I'm often asked at events whether these exist for Firefox development.
+</q>
+
+
+- <cite>Chris Peterson (Engineering Program Manager)</cite>:
+<br>
+<q lang="en-us">Facebook has its infamous bootcamp for new employees. Code Firefox should be required watching, end-to-end, for all new Mozilla engineers. Even non-engineers can benefit from the introductory videos.  Given the positive community response and patches to prove it, Brian has shown that this e-learning format works. More than just lessons, Brian has built Code Firefox as a platform. I would love to see other Mozilla teams contribute videos for their feature areas. Even within Mozilla we have some technology silos that could learn from each other.</q>
+
+
+- <cite>Lukas Blakk (Senior Release Manager)</cite>:
+<br>
+<q lang="en-us">
+Getting into Open Source contribution is not always a clear path.  In my experience, it took me 4 different attempts (MDN, Sumo, QA, AMO) before I found my path for a deeper dive and got 'hooked' on contributing to Mozilla.  These videos and the technical mentorship they provide is already proving to be a valuable resource for engaging new coders and that is an area that can be hardest for a newcomer to break into alone since we are now such a legacy project.  Fortunately Code Firefox is also a budding online community and that ensures no one is ever truly alone as they move up in their learning. Having someone (or several people) getting to focus more time on this particular pathway will ensure more robust community surrounds our software products and makes what we give back a product that is a reflection of that wider community. Win-win.</q>
+
+- <cite>Jared Wein (Firefox Engineer)</cite>:
+<br>
+<q lang="en-us">
+Code Firefox is an amazing site that is full of detailed, finely-crafted videos that guide interested people from being Firefox users to Firefox contributors. It is an invaluable tool and one that I wished was around when I was just getting started contributing to Firefox. Projects the size of Firefox can be very daunting and scary to newcomers. The tutorials on the site bring a level of comfort not found in many other places, and walk people through steps at a pace that they can handle. Before they know it they are knee deep in a great community of people who are working together to make Firefox and the Internet a better place for everyone.</q>
+
+- <cite>David Boswell (Community Engagement Lead)</cite>:
+<br>
+<q lang="en-us">
+Code Firefox and other efforts to help support coding contributors are crucial to growing and empowering new members of the Mozilla community.</q>
+
+
+- <cite>Kamil Jozwiak (QA Engineer)</cite>:
+<br>
+<q lang="en-us">
+Code Firefox has helped me out tremendously while I was contributing to Mozilla. It helped me complete my first patch and it's an amazing resource to sharpen your skills. I'm a Code Firefox lifer and visit the site on a daily basis to see if anything new has been added. I really believe in this project and I know from first hand experience how powerful this resource can be in helping people interested in the Mozilla mission.</q>
+
+
+- <cite>Rodrigo Silveira (Firefox Engineer)</cite>:
+<br>
+<q lang="en-us">
+Getting started with contributing to any code base can be daunting. Code Firefox videos are presented in such a friendly way that makes contributing to Firefox a lot more approachable. Being able to learn through video at your own pace is convenient too, you can get from zero to landing patches much faster. I liked it so much I had to help translate it so more people could benefit.</q>
+
+- <cite>Marco Mucci (Engineering Program Manager)</cite>:
+<br>
+<q lang="en-us">
+Part of wanting to make a difference is learning how to make one.  Code Firefox is the tool of choice for learning how to contribute to Mozilla.</q>
+
+- <cite>[Samuel Foster](https://twitter.com/samfosteriam/status/439504794164551680)</cite>
+<br>
+<q lang="en-us">
+@codefirefox has grown into a great resource for lifting you over the learning curve involved in making firefox awesomer. Nice work.</q>
+
+- <cite>[David Bolter](https://twitter.com/davidbolter/status/402811586823221248)</cite>:
+<br>
+<q lang="en-us">
+If you want to watch video tutorials on how to hack on Firefox, follow @codefirefox.</q>
+
+- <cite>[Mark Finkle](https://twitter.com/mfinkle/status/434421716274536448)</cite>:
+<br>
+<q lang="en-us">
+The Module Owner and Becoming A Reviewer videos on @codefirefox are awesome: http://codefirefox.com/#reviewing-code</q>
+
+- <cite>[Till Schneidereit](https://groups.google.com/forum/#!msg/mozilla.dev.platform/drDr1Ng3z94/516MAPe0U5EJ)</cite>:
+<br>
+<q lang="en-us">
+This really is fantastic - I wish I'd had something like these videos when I started contributing.</q>
+
+- <cite>[Margaret Leibovic](https://twitter.com/mleibovic/status/402313367181737985)</cite>:
+<br>
+<q lang="en-us">
+I know I'm late to the party, but @codefirefox is seriously awesome. Great work by @brianbondy!</q>
+
+- <cite>[Lucas Rocha](https://twitter.com/lucasratmundo/status/402775144760094720)</cite>:
+<br>
+<q lang="en-us">
+If you've been considering contributing to Firefox, @codefirefox is definitely a good start. Big thanks @brianbondy! http://buff.ly/18LSSZZ</q>
+
+- <cite>[Asa Dotzler](https://twitter.com/asadotzler/status/398534170294484992)</cite>:
+<br>
+<q lang="en-us">
+Mozillian @brianbondy has started publishing video tutorials on Firefox hacking. http://codefirefox.com/videos  Follow @codefirefox for updates.</q>
+
+- <cite>[Christian Heilmann](https://twitter.com/codepo8/status/413762634060554240)</cite>:
+<br>
+<q lang="en-us">
+Superb framework to create code tests by @brianbondy https://github.com/bbondy</q>
+
+- <cite>[Mozilla Pakistan](https://twitter.com/MozPk/status/411905711031857153)</cite>:
+<br>
+<q lang="en-us">
+@codefirefox.com now supports accounts via @MozillaPersona You can track which videos you’ve watched too - pic.twitter.com/I4EizTAzbk</q>
+
+- <cite>[Mozilla India](https://twitter.com/MozillaIN/status/404913422271537152)</cite>:
+<br>
+<q lang="en-us">
+Becoming a Mozilla contributor is now even more easy. http://codefirefox.com/  site aim to outline the process... http://fb.me/1ChAz9qPE</q>
+
+- <cite>[Ian Elliot](http://www.i-programmer.info/news/136-open-source/6620-abcs-of-firefox-dev-in-easy-videos.html)</cite>:
+<br>
+<q lang="en-us">
+Other open source projects could also benefit from the same sort of idea - are you listening Linus?</q>
+
+- <cite>[Alessio Placitelli](https://twitter.com/dexterp37/status/427099144096739329)</cite>:
+<br>
+<q lang="en-us">
+Thank you @brianbondy for both http://codefirefox.com  and http://goo.gl/bybZKK ! Very helpful for new #Firefox contributors!</q>
+
+- <cite>[Jennie Rose Halperin](https://twitter.com/little_wow/status/423191221306011648)</cite>:
+<br>
+<q lang="en-us">
+http://codefirefox.com/  wanna get deep with your code? totally digging this @mozilla</q>
+
+- <cite>[Azeem Arshad](https://twitter.com/z33m/status/420989777165697025)</cite>:
+<br>
+<q lang="en-us">
+codefirefox.com/  these videos are awesome. setting up firefox dev setup is pretty easy</q>
+
+- <cite>[Rodrigo Ludgero](https://twitter.com/rodrigoludgero/status/413784392922693639)</cite>:
+<br>
+<q lang="en-us">
+Do the right thing. Some lessons to be learned. http://codefirefox.com/  I thought it was a great initiative. #codefirefox @codefirefox</q>
+
+- <cite>[serge2k](https://news.ycombinator.com/item?id=6753999)</cite>:
+<br>
+<q lang="en-us">
+This is awesome, and I wish more projects would do it.</q>
+
+- <cite>[iamleppert](https://news.ycombinator.com/item?id=6755950)</cite>:
+<br>
+<q lang="en-us">
++1 for whoever's idea this was. We need more guides like this that ask that answer the basic questions on just dev process and work flows. Let's make it easier for people to contribute!</q>
+
+- <cite>[Thaddee Tyl](https://twitter.com/espadrine/status/412564049520369664)</cite>:
+<br>
+<q lang="en-us">
+@FremyCompany I agree. I think the http://codefirefox.com/  project is our best bet. Not sure if Chrome could have that (let alone Opera, IE…)</q>
+
+- <cite>[Michael Mahemoff](https://twitter.com/mahemoff/status/402487743176921088)</cite>:
+<br>
+<q lang="en-us">
+Encouraging open source contributions, done right by Moz at http://CodeFirefox.com</q>
+
+- <cite>[суперсолэ](https://twitter.com/supersole/status/403021453173325824)</cite>:
+<br>
+<q lang="en-us">
+(now a serious tweet) If you're interested in contributing to Firefox, this is a fantastic site: http://codefirefox.com</q>
+
+- <cite>[Ashley Myers](https://twitter.com/OrganizeFISH/status/402985803548094464)</cite>:
+<br>
+<q lang="en-us">
+OMG. This is so awesome. Videos on how the heck to actually contribute to Firefox: http://codefirefox.com  cc/ @codefirefox</q>
+
+- <cite>[Mike Rogers](https://twitter.com/MikeRogers0/status/402795189221085185)</cite>:
+<br>
+<q lang="en-us">
+Decided over my Xmas break I'm going to try and contribute to Firefox somehow http://codefirefox.com</q>
+
+
+- <cite>[Dongie Agnir](https://twitter.com/dongieagnir/status/403737452587646976)</cite>:
+<br>
+<q lang="en-us">
+@codefirefox Just wanted to let you know your website is an excellent resource!  Please keep up the great work! </q>
+
+
+- <cite>[Brian Graham](https://twitter.com/BrianJGraham/status/402426153828220928)</cite>:
+<br>
+<q lang="en-us">
+This is awesome. I wish this existed when I wrote my first #FireFox patch.</q>
+
+
+- <cite>[Swarnava Sengupta](https://twitter.com/SW4RN4V4/status/402418825464778752)</cite>:
+<br>
+<q lang="en-us">
+Thank you @codefirefox for such a great collection! Hope it will produce more developer all around the world! :)</q>
+
+
+- <cite>[Mike Evans](https://twitter.com/m_evans10/status/402907162248478720)</cite>:
+<br>
+<q lang="en-us">
+@angelinamagnum I like the style of @codefirefox, allows someone to get up to speed in an easy to digest manner. so more of that please :)</q>
+
+
+- <cite>[Michael Kohler](https://twitter.com/KohlerSolutions/status/408665795271479297)</cite>:
+<br>
+<q lang="en-us">
+That's how I did my first patches! RT @codefirefox: [...]feature from start to finish, without knowing the code</q>
+
+
+- [Hundreds of other tweets about Code Firefox][tweets]
+
+
+---
+
+## Would you like to create Code Firefox videos?
+
+Please contact me at bbondy[at]gmail.com if you'd like to make a series of videos on Code Firefox for your area of expertise.
+
+
+[0]: http://www.codefirefox.com
+[1]: https://bugzilla.mozilla.org/user_profile?login=anujagarwal464%40gmail.com
+[othergoals]: https://github.com/bbondy/codefirefox/issues?direction=desc&sort=updated&state=open
+[anujpatch]: https://bugzilla.mozilla.org/show_bug.cgi?id=477915
+[tweets]: https://twitter.com/search?q=codefirefox&src=typd&f=realtime
+[codefirefoxtwitter]: https://twitter.com/codefirefox
+[gigaom]: http://gigaom.com/2013/11/18/mozilla-developer-creates-curriculum-to-on-board-new-contributors-to-firefox/
+[iprogrammer]: http://www.i-programmer.info/news/136-open-source/6620-abcs-of-firefox-dev-in-easy-videos.html
+[thinkcode]: http://christianheilmann.com/2013/12/19/teaching-people-to-think-about-code-instead-of-acing-a-test/
+[hackernews]: https://news.ycombinator.com/item?id=6753583
+[getstarted]: http://codefirefox.com
+[KA]: http://khanacademy.org/

@@ -1,0 +1,7 @@
+Google has a new project named Unladen Swallow.  It's primary goal is to increase the performance of CPython by five times.   
+
+They will do these optimizations in a branch of CPython and those changes will hopefully be eventually merged into the CPython trunk.
+
+The open source Low Level Virtual Machine (LVVM) project provides a compiler infrastructure framework that can be used to construct virtual machines and native code generators.    Several front ends already exist including C and C++.  
+
+Google plans to use LVVM to build a just in time (JIT) compilation to replace Python's own virtual machine.

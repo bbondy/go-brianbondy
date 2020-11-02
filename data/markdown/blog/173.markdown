@@ -1,0 +1,7 @@
+On October 07, 2016 I'll be shutting down Code Firefox.
+
+With over 100k unique visits and over 30k full video views, it helped hundreds of Mozillians and Mozilla employees get ramped up for hacking on Firefox.  It was from the start a personal side project and wasn't funded or sponsored in any way.
+
+It isn't being shutdown because of a conflict of interest with Brave, but instead because over time the content naturally becomes more obsolete as better development methods surface.
+
+I'm happy with what it is and the purpose it had, but shutting it down is the responsible thing to do.

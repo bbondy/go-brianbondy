@@ -1,0 +1,40 @@
+A common mistake people make in C++ is thinking that arrays and pointers are the same thing.  They're not. 
+
+    char *p = "hello";
+    char q[] = "hello";
+
+These 2 lines are very different.  
+
+The first is a pointer to a string literal.  The string literal is in read only memory.   Changing p[i] for any index i is undefined.
+
+The second is a char array initialized with 'h', 'e', 'l', 'l', 'o', '\\0'.
+Changing q[i] for any index i in the range 0..5 is fine.
+
+Consequently:
+
+    assert(sizeof(p) == sizeof(char*));
+    assert(sizeof(q) != sizeof(char*));
+    assert(sizeof(q) == 6);
+
+
+Not only are pointers and arrays 2 different things completely, but you can also have pointers to arrays.  Most people think that a char* is a pointer to an array.  It's not.  
+
+    char sz[12];
+
+    //This is fine, p points to sz's first element's address
+    char *p1 = sz;
+
+    //Compiling error, Can't convert a pointer to 12 elements to a pointer to a char
+    char *p2 = &sz;
+
+    //This is the correct way to create a pointer to an array
+    char (*x)[12] = &sz;
+
+    //Compiling error, can't convert a pointer to 12 elements to a pointer to 10 elements
+    char (*y)[10] = &sz;
+
+
+And of course you can also create references to arrays.  But the syntax is just as ugly as the syntax for pointers to arrays.
+
+    //r is now a reference to sz
+    char (&r)[12] = sz;

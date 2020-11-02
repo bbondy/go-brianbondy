@@ -1,0 +1,30 @@
+<img src='/static/img/blogpost_118/firefox-logo.png' width=110 style="float:right; margin-left: 15px">
+I made one of the hardest decisions of my life, I'll be leaving [Mozilla](http://www.mozilla.org), a company that I thought I'd be at forever.  Mozilla has amazing people and culture, and is easily the best job I've ever had.
+
+I plan to remain a contributor, both on the [Code Firefox](http://www.codefirefox.com) site, and on Firefox Desktop itself.
+
+<div class='clearfloat'></div>
+
+---
+
+<img src='/static/img/blogpost_160/ka.png' width=110 style="float:left; margin-right: 15px; margin-bottom: 10px;">
+
+
+I'll be joining [Khan Academy](http://khanacademy.org), a like minded, mission oriented, open and non-profit company.
+
+
+Khan Academy provides a free, world class education, to anyone, anywhere.
+
+I'm leaving because the Khan Academy mission speaks more to me personally.
+<div class='clearfloat'></div>
+
+
+Along with that mission comes a lot of thoughts I believe in, such as:
+
+- Sense of agency: Students should be responsible for their own educational goals.
+- Mastery based learning: Students should have deep, sound understanding of concepts before progressing to concepts based on those concepts.
+- Self paced learning: Students should progress at their own pace, as they've mastered concepts.
+- Mentorship: Having peers teach, and having peers learn from each other comes with several amazing benefits.
+- Interactive: Human connection and tangible experiences are important.
+
+I'll be joining the Computer Science department at Khan Academy in particular.  I'm extremely excited for this new opportunity and I can't wait to do amazing things at Khan Academy.

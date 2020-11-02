@@ -1,0 +1,13 @@
+1.  Modify this registry entry:
+HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\TerminalServer\WinStations\RDP-Tcp\PortNumber
+Enter a new value for the port you would like.
+
+- Turn off the option in my computer properties to enable remote access.
+
+- Turn on the option in my computer properties to enable remote access.
+
+- Verify via command prompt that RDP is working with the current information:
+telnet localhost <newport>
+If a blank prompt comes up RDP is listening on the new port.
+
+- Configure your firewall/NAT to allow outside connections to this port.

@@ -1,0 +1,37 @@
+[StackExchange][1] is a group of Q&A sites created by [StackOverflow (SO)][2].
+
+But exactly which part of the new StackExchange Q&A sites are new users and which part of are shared from StackOverflow?
+
+I mined the November 2010 data dump [again][3] and came up with some interesting stats.
+
+To figure out the common percentage between StackOverflow and other sites, I created lists of in memory users for each site, and then figured out which users had the same email hash.  A user across sites with the same email hash can be considered the same user.
+
+I knew before doing this analysis that the percentage of common users to StackExchange users would be high because of the relative size of the StackOverflow community.  I do fully expect for this 73% to decrease for future data dumps though and it will be interesting to re-run these stats and compare when the next data dump comes out.
+
+## Here are the statistics per site:
+
+- **Cooking:** 2630 of 3155 in common (83.36%)
+- **Game Development:** 2497 of 2938 in common (84.99%)
+- **Gaming:** 3813 of 4418 in common (86.31%)
+- **Mathematics:** 2162 of 2965 in common (72.92%)
+- **Photography:** 1659 of 1916 in common (86.59%)
+- **Server Fault:** 28770 of 38434 in common (74.86%)
+- **StackApps:** 3656 of 3874 in common (94.37%)
+- **Statistical Analysis:** 1298 of 1728 in common (75.12%)
+- **Super User:** 31897 of 49157 in common (64.89%)
+- **Ubuntu:** 3245 of 5090 in common (63.75%)
+- **WebApplications:** 5575 of 6223 in common (89.59%)
+- **WebMasters:** 2612 of 2820 in common (92.62%)
+
+**Total:** 73.19% in common, 26.81% distinct
+
+Of particular interest are the sites with a very high common percentage and some overlapping questions like the WebMasters StackExchange site.  
+
+## Update:
+
+What percentage of SO users come from the other sites? I checked the registration dates and a surprising 5% of SO accounts come from the other sites.  This doesn't change the result much above though.  Almost all of these 5% of distinct accounts come from Ask Ubuntu, Super User, and Server Fault.
+
+
+[1]: http://stackexchange.com/
+[2]: http://stackoverflow.com/about
+[3]: https://brianbondy.com/blog/id/105/twitter-accounts-for-all-stackoverflow-users-by-reputation

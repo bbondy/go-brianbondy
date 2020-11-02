@@ -1,0 +1,21 @@
+User Account Control (UAC) is a security enhancement in Windows introduced in Vista.
+
+It makes applications that run by administrators, by default, only have access to what limited users would have access to.
+Another way to say this is that applications run at medium integrity level by default.
+
+If an application needs more privileges, it need to request it, and Windows will show a UAC dialog.
+If you press Yes to elevate on the UAC dialog, the process is said to be running as a high integrity process.
+
+UAC can be disabled, and when it is, applications in Windows Vista and Windows 7 run as high integrity processes by default.
+
+**This changes in Windows 8, if UAC is disabled, your applications will no longer run as a high integrity process, they will run as a medium integrity process**.
+
+Applications can request elevation to a high integrity process when UAC is off explicitly and no UAC dialog will be shown.
+
+We first realized this in Firefox because we noticed the update service was being used for all updates in Windows 8, even when UAC is off.
+We designed the update service to only use the service when UAC is on though.  
+So this change broke that design choice, and to fix it we need to check if the process is running on Windows 8 and if UAC is off.  
+If those conditions are met we would elevate our process which would not produce a UAC dialog.
+
+Overall this is a great change by Microsoft though. It makes Windows more secure when users disable UAC.
+It's good to know about if you develop software for Windows.

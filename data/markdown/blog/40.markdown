@@ -1,0 +1,3 @@
+[Pretty cool map of the Internet][1]
+
+[1]: http://www.caida.org/analysis/topology/as_core_network/pics-ipv6/ascore.center.200505-1256x979.png

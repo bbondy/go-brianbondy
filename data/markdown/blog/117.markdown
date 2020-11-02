@@ -1,0 +1,107 @@
+<img src='https://brianbondy.com/static/img/blogpost_117/stackexchange.png' width='196' height='52'>
+
+
+I thought it would be interesting to calculate the average age of users on each StackExchange site, and even more interesting to see each tag within those sites.
+I did a caculation using the April 2011 data dump and came up with the following data.
+I call the statistic the `Expected age of a tag` because it is calculated using the [Expected Value][expected_value].
+
+## Observations:
+
+- The expected age of the whole StackOverflow site is ~30 years old.
+- On StackOverlow the tag with the youngest expected age is 26 years old, the tag with the oldest is 36.  I was surprised they were so close together.
+- The site with the youngest users of the StackExchange network is: Gaming, then surprisingly Game dev, and Ask Ubuntu.
+- The site with the oldest users of the StackExchange network is: Do It Yourself, followed by Photography, and then by Geographic Information Systems.
+- A funny one, on ServerFault one of the tags with the oldest expected age is `old-hardware`.  Apparently older people know more about `old-hardware` than anything else.
+- I'm not sure if this is true, but perhaps the tags with younger ages are more cutting edge.  For example vb6 and COBOL have ages of over 36 on Programmers SE.  I don't think this assertion is true in general though.
+
+And as for the other sites, the expected age is:
+
+- [Android][2]: 30.02 years old.
+- [Apple][3]: 30.50 years old.
+- [Ask Ubuntu][4]: 28.08 years old.
+- [Cooking][5]: 33.18 years old.
+- [Do It Yourself][6]: 35.68
+- [Electronics][7]: 32.01 years old.
+- [English Language and Usage][8]: 32.22 years old.
+- [Game Development][9]: 27.72 years old.
+- [Gaming][10]: 27.39 years old.
+- [Geographic Information Systems][11]: 33.34 years old.
+- [Mathematics][12]: 30.19 years old.
+- [Photography][13]: 34.01 years old.
+- [Programmers][14]: 32.26 years old.
+- [Server Fault][15]: 31.63 years old.
+- [Stack Apps][16]: 28.31 years old.
+- [Stack Overflow][17]: 30.48 years old.
+- [Statistical Analysis][18]: 33.67 years old.
+- [Super User][19]: 30.09 years old.
+- [TeX - LaTeX][20]: 30.86 5years old.
+- [Theoretical Computer Science][21]: 30.58 years old.
+- [Unix][22]: 29.97 years old.
+- [Web Applications][23]: 29.85 years old.
+- [Webmasters][24]: 29.64 years old.
+- [Wordpress][25]: 30.32 years old
+
+You can see the [per user tag data][28] by clicking on the site name in the above list.
+
+You could probably say that the StackExchange network could use younger contributors.
+I've said this before, but I think it would be advantageous for the StackExchange team to do some events at Universities.
+When I previously helped with some Microsoft events at [University of Waterloo][26] (Top Computer Science University in Canada, and one of the top in the world) several students didn't know what StackOverflow was.
+
+
+## How I made the calculations per tag
+
+The below calculations were calculated with the April 2011 [StackOverflow][1] data dump.
+
+What I calculated was the average age per tag each answer comes from for each StackExchange site.
+
+To do this calculation I calculated the `Expected Age` of each site.
+
+> Expected Age = Summation over each age X of: P(X) * X
+
+Where `P(X)` is the probability that a user of age `X` will answer a given question.  You can calculate this probability by summing the number of answers by each age, divided by the total number of answers within that tag.
+
+I also only considered the top 3000 tags.  The top tags may not match up exactly since I only consider tags if the answerer has an age specified in their profile.
+
+## Other attempts at these stats
+
+I initially tried to do this statistic by weighing each age by the reputation of each user, but it turned out to not generate interesting data.
+The problem was that the data was weighted heavily to only include the top 1% or so of users.
+
+## Limitations of this study
+
+- Several users don't enter their age in their profile, so no answers from a user without an age specified counts.
+- Users that are very young and users that are very old may be more unlikely to enter their age.
+- Each user may be counted more than once, since I only count +1 for each age that answers a questions.
+- Some users may be entering fake age values, although I ignored age values out of an acceptable range.
+- We are talking about averages here, so this doesn't mean there aren't a lot of younger and older contributors.  
+  For example if an average is 20 years old, there could be an equal amount of 10 and 30 year olds answering, or there could be only 20 year olds answering.
+
+[1]: http://www.stackoverflow.com/
+[2]: https://brianbondy.com/stackexchange/expected-age/android/
+[3]: https://brianbondy.com/stackexchange/expected-age/apple/
+[4]: https://brianbondy.com/stackexchange/expected-age/ubuntu/
+[5]: https://brianbondy.com/stackexchange/expected-age/cooking/
+[6]: https://brianbondy.com/stackexchange/expected-age/doityourself/
+[7]: https://brianbondy.com/stackexchange/expected-age/electronics/
+[8]: https://brianbondy.com/stackexchange/expected-age/englishusage/
+[9]: https://brianbondy.com/stackexchange/expected-age/gamedevelopment/
+[10]: https://brianbondy.com/stackexchange/expected-age/gaming/
+[11]: https://brianbondy.com/stackexchange/expected-age/gis/
+[12]: https://brianbondy.com/stackexchange/expected-age/mathematics/
+[13]: https://brianbondy.com/stackexchange/expected-age/photography/
+[14]: https://brianbondy.com/stackexchange/expected-age/programmers/
+[15]: https://brianbondy.com/stackexchange/expected-age/serverfault/
+[16]: https://brianbondy.com/stackexchange/expected-age/stackapps/
+[17]: https://brianbondy.com/stackexchange/expected-age/stackoverflow/
+[18]: https://brianbondy.com/stackexchange/expected-age/statisticalanalysis/
+[19]: https://brianbondy.com/stackexchange/expected-age/superuser/
+[20]: https://brianbondy.com/stackexchange/expected-age/texlatex/
+[21]: https://brianbondy.com/stackexchange/expected-age/theoreticalcs/
+[22]: https://brianbondy.com/stackexchange/expected-age/unix/
+[23]: https://brianbondy.com/stackexchange/expected-age/webapplications/
+[24]: https://brianbondy.com/stackexchange/expected-age/webmasters/
+[25]: https://brianbondy.com/stackexchange/expected-age/wordpress/
+[expected_value]: http://en.wikipedia.org/wiki/Expected_value
+[26]: http://uwaterloo.ca/
+[27]: http://www.stackexchange.com/
+[28]: https://brianbondy.com/stackexchange/#expected-age
