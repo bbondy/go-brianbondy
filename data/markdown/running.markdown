@@ -1,11 +1,7 @@
-# Running
-
-I try to get out and run whenever I have the chance. It helps keep me sane and happy :)
-
-## Memerable runs
+# Memorable runs
 
 - September 2020 - Circumpolar Race Around the World
-- September 2020 - weULTRA Huron 40 (80mi)
+- September 2020 - weULTRA Huron 40 (86mi)
 - August 2020 - WeULTRA Junkyard 20
 - August 2020 - 4 marathon PBs in 4 consecutive weeks: [1](https://www.strava.com/activities/3760462325), [2](https://www.strava.com/activities/3795018600), [3](https://www.strava.com/activities/3826286031), [4](https://www.strava.com/activities/3882605862)
 - August 2020 - [weULTRA's Everest Challenge](https://www.facebook.com/groups/314354256632582/)
