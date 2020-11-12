@@ -29,8 +29,51 @@
     
   </head>
   <body>
-    <div class="topBar"><a href="/"><img title="Brian R. Bondy" src="/static/img/logo.png"></a><ul class="topBarLinks"><a href="/"><li class="current">Blog</li></a><a href="/blog/filters"><li class="">Filters</li></a><a href="/projects"><li class="">Projects</li></a><a href="/other"><li class="">Other</li></a><a href="/about"><li class="">About</li></a><a href="/contact"><li class="">Contact</li></a><a href="/feeds/rss" target="_blank" rel="noopener noreferrer"><li class="social"><span title="RSS" class="fa fa-rss"></span></li></a><a href="https://twitter.com/brianbondy" target="_blank" rel="noopener noreferrer"><li class="social"><span title="Twitter" class="fa fa-twitter"></span></li></a><a href="https://github.com/bbondy" target="_blank" rel="noopener noreferrer"><li class="social"><span title="GitHub" class="fa fa-github"></span></li></a><a href="https://www.linkedin.com/in/bbondy" target="_blank" rel="noopener noreferrer"><li class="social"><span title="LinkedIn" class="fa fa-linkedin"></span></li></a></ul></div>
-    <p>{{htmlSafe .Content}}</p>
-    <div id="mountPoint"/>
+    <div class="topBar">
+      <a href="/">
+        <img title="Brian R. Bondy" src="/static/img/logo.png">
+      </a>
+      <ul class="topBarLinks">
+        <a href="/">
+          <li class="current">Blog</li> 
+        </a>
+        <a href="/blog/filters">
+          <li class="">Filters</li>
+        </a>
+        <a href="/projects">
+          <li class="">Projects</li>
+        </a>
+        <a href="/other">
+          <li class="">Other</li>
+        </a>
+        <a href="/about">
+          <li class="">About</li>
+        </a>
+        <a href="/contact">
+          <li class="">Contact</li>
+        </a>
+        <a href="/feeds/rss" target="_blank" rel="noopener noreferrer">
+          <li class="social"><span title="RSS" class="fa fa-rss"></span></li>
+        </a>
+        <a href="https://twitter.com/brianbondy" target="_blank" rel="noopener noreferrer">
+          <li class="social"><span title="Twitter" class="fa fa-twitter"></span></li>
+        </a>
+        <a href="https://github.com/bbondy" target="_blank" rel="noopener noreferrer">
+          <li class="social"><span title="GitHub" class="fa fa-github"></span>
+          </li>
+        </a>
+        <a href="https://www.linkedin.com/in/bbondy" target="_blank" rel="noopener noreferrer">
+          <li class="social"><span title="LinkedIn" class="fa fa-linkedin"></span></li>
+        </a>
+      </ul>
+    </div>
+    <div id="mountPoint">
+      <div class="mainBody">
+        <div>
+        {{block "mountPoint" .}}
+        {{end}}
+        </div>
+      </div>
+    </div>
   </body>
 </html>

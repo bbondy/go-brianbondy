@@ -1,1 +1,30 @@
-{{define "content"}}Lorem Ipsum...{{end}}
+{{define "mountPoint"}}
+  <article class="blogPost">
+    <h1><a href="/176/diary-of-a-selfless-good-dog">{{.BlogPost.Title}}</a></h1>
+    <div class="datePosted">Posted on {{.BlogPostDate}}</div>
+    <div>
+      {{htmlSafe .BlogPostBody}}
+    </div>
+    <div class="tags">
+      {{range .BlogPost.Tags}}
+      <a href="/blog/tagged/{{.}}" class="tag">{{.}}</a>
+      {{end}}
+    </div>
+  </article>
+  {{if .Tag}}
+    {{if (ge .PrevPage 1)}}
+    <a href="/tagged/{{.Tag}}/page/{{.PrevPage}}"><span class="navigationButton">Previous page</span></a>
+    {{end}}
+    {{if (le .NextPage .MaxPage)}}
+    <a href="/tagged/{{.Tag}}/page/{{.NextPage}}"><span class="navigationButton">Next page</span></a>
+    {{end}}
+  {{else}}
+    {{if (ge .PrevPage 1)}}
+    <a href="/page/{{.PrevPage}}"><span class="navigationButton">Previous page</span></a>
+    {{end}}
+    {{if (le .NextPage .MaxPage)}}
+    <a href="/page/{{.NextPage}}"><span class="navigationButton">Next page</span></a>
+    {{end}}
+  {{end}}
+  </article>
+{{end}}
