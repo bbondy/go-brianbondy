@@ -9,12 +9,8 @@
     <link rel="stylesheet" href="/static/css/highlight-default.css">
     <link rel="shortcut icon" href="/static/img/favicon.ico">
     <meta name="theme-color" content="#9AC0FF">
-    {{if (avail "FBTitle" .)}}
-    <meta property="og:title" content="{{.FBTitle}}">
-    {{end}}
-    {{if (avail "FBSiteName" .)}}
-    <meta property="og:site_name" content={{.FBSiteName}}>
-    {{end}}
+    <meta property="og:title" content="{{.Title}}">
+    <meta property="og:site_name" content="Brian R. Bondy">
     {{if (avail "FBShareUrl" .)}}
     <meta property="og:url" content={{.FBShareUrl}}>
     {{end}}
@@ -35,22 +31,27 @@
       </a>
       <ul class="topBarLinks">
         <a href="/">
-          <li class="current">Blog</li> 
+          <li class="{{if eq .MarkdownSlug "blog"}}current{{end}}">Blog</li> 
         </a>
         <a href="/blog/filters">
-          <li class="">Filters</li>
+          <li class="{{if eq .MarkdownSlug "filters"}}current{{end}}">Filters</li>
         </a>
+        <!--
+        <a href="/running">
+          <li class="{{if eq .MarkdownSlug "running.markdown"}}current{{end}}">Running</li>
+        </a>
+        -->
         <a href="/projects">
-          <li class="">Projects</li>
+          <li class="{{if eq .MarkdownSlug "projects.markdown"}}current{{end}}">Projects</li>
         </a>
         <a href="/other">
-          <li class="">Other</li>
+          <li class="{{if eq .MarkdownSlug "other.markdown"}}current{{end}}">Other</li>
         </a>
         <a href="/about">
-          <li class="">About</li>
+          <li class="{{if eq .MarkdownSlug "about.markdown"}}current{{end}}">About</li>
         </a>
         <a href="/contact">
-          <li class="">Contact</li>
+          <li class="{{if eq .MarkdownSlug "contact.markdown"}}current{{end}}">Contact</li>
         </a>
         <a href="/feeds/rss" target="_blank" rel="noopener noreferrer">
           <li class="social"><span title="RSS" class="fa fa-rss"></span></li>

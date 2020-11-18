@@ -1,6 +1,6 @@
 {{define "mountPoint"}}
   <article class="blogPost">
-    <h1><a href="/176/diary-of-a-selfless-good-dog">{{.BlogPost.Title}}</a></h1>
+    <h1><a href="{{.BlogPostUri}}">{{.BlogPost.Title}}</a></h1>
     <div class="datePosted">Posted on {{.BlogPostDate}}</div>
     <div>
       {{htmlSafe .BlogPostBody}}
