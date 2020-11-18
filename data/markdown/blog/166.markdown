@@ -12,7 +12,7 @@ I could describe it with a few hundred words and pictures, but let's instead:
 <i style="font-size:60px; vertical-align:middle" class="fa fa-youtube-play" title="YouTube channel"></i></a>
 
 
-&nbsp;&nbsp;<a style="font-weight:900;" href="https://www.youtube.com/watch?v=Pq0OSkFhmhk">Watch a demo highlighting my project!</a></div>
+　　<a style="font-weight:900;" href="https://www.youtube.com/watch?v=Pq0OSkFhmhk">Watch a demo highlighting my project!</a></div>
 
 
 

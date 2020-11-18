@@ -9,43 +9,43 @@ A couple days later I added extra info to those lists showing the following, fol
 Today I added a couple more list types: LinkedIn, and Facebook.
 
 **StackOverflow**  
-- [Twitter][t1] &nbsp;&nbsp; - [LinkedIn][l1] &nbsp;&nbsp; - [Facebook][f1]
+- [Twitter][t1] 　　 - [LinkedIn][l1] 　　 - [Facebook][f1]
 
 **ServerFault**  
-- [Twitter][t2] &nbsp;&nbsp; - [LinkedIn][l2] &nbsp;&nbsp; - [Facebook][f2]  
+- [Twitter][t2] 　　 - [LinkedIn][l2] 　　 - [Facebook][f2]  
 
 **SuperUser**  
-- [Twitter][t3] &nbsp;&nbsp; - [LinkedIn][l3] &nbsp;&nbsp; - [Facebook][f3]
+- [Twitter][t3] 　　 - [LinkedIn][l3] 　　 - [Facebook][f3]
 
 **Game Development**  
-- [Twitter][t4] &nbsp;&nbsp; - [LinkedIn][l4] &nbsp;&nbsp; - [Facebook][f4]
+- [Twitter][t4] 　　 - [LinkedIn][l4] 　　 - [Facebook][f4]
 
 **Webmasters**  
-- [Twitter][t5] &nbsp;&nbsp; - [LinkedIn][l5] &nbsp;&nbsp; - [Facebook][f5]
+- [Twitter][t5] 　　 - [LinkedIn][l5] 　　 - [Facebook][f5]
 
 **Web Applications**  
-- [Twitter][t6] &nbsp;&nbsp; - [LinkedIn][l6] &nbsp;&nbsp; - [Facebook][f6]
+- [Twitter][t6] 　　 - [LinkedIn][l6] 　　 - [Facebook][f6]
 
 **Ubuntu**  
-- [Twitter][t7] &nbsp;&nbsp; - [LinkedIn][l7] &nbsp;&nbsp; - [Facebook][f7]
+- [Twitter][t7] 　　 - [LinkedIn][l7] 　　 - [Facebook][f7]
 
 **Statistical Analysis**  
-- [Twitter][t8] &nbsp;&nbsp; - [LinkedIn][l8] &nbsp;&nbsp; - [Facebook][f8]
+- [Twitter][t8] 　　 - [LinkedIn][l8] 　　 - [Facebook][f8]
 
 **StackApps**  
-- [Twitter][t9] &nbsp;&nbsp; - [LinkedIn][l9] &nbsp;&nbsp; - [Facebook][f9]
+- [Twitter][t9] 　　 - [LinkedIn][l9] 　　 - [Facebook][f9]
 
 **Photography**  
-- [Twitter][t10] &nbsp;&nbsp; - [LinkedIn][l10] &nbsp;&nbsp; - [Facebook][f10]
+- [Twitter][t10] 　　 - [LinkedIn][l10] 　　 - [Facebook][f10]
 
 **Mathematics**  
-- [Twitter][t11] &nbsp;&nbsp; - [LinkedIn][l11] &nbsp;&nbsp; - [Facebook][f11]
+- [Twitter][t11] 　　 - [LinkedIn][l11] 　　 - [Facebook][f11]
 
 **Cooking**  
-- [Twitter][t12] &nbsp;&nbsp; - [LinkedIn][l12] &nbsp;&nbsp; - [Facebook][f12]
+- [Twitter][t12] 　　 - [LinkedIn][l12] 　　 - [Facebook][f12]
 
 **Gaming**  
-- [Twitter][t13] &nbsp;&nbsp; - [LinkedIn][l13] &nbsp;&nbsp; - [Facebook][f13]
+- [Twitter][t13] 　　 - [LinkedIn][l13] 　　 - [Facebook][f13]
 
 Across all sites users are 2x more likely to have their twitter info vs. their LinkedIn info.
 

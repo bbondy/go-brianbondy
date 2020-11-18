@@ -1,4 +1,4 @@
-<img src='https://brianbondy.com/static/img/blogpost_113/kineticd.png' width='196' height='42'> &nbsp;&nbsp;&nbsp;&nbsp; <img src='https://brianbondy.com/static/img/blogpost_113/robobak.png' width='196' height='32'>
+<img src='https://brianbondy.com/static/img/blogpost_113/kineticd.png' width='196' height='42'>　　　　<img src='https://brianbondy.com/static/img/blogpost_113/robobak.png' width='196' height='32'>
 
 The [ROBOBAK][1] company which myself, Ben Puzzuoli, and Rob Puzzuoli co-founded, was acquired by [KineticD][7].  
 

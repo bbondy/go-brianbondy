@@ -1,5 +1,7 @@
 # Memorable runs
 
+- November 2020 - [Park Daze](https://www.strava.com/activities/4339042086) - hills (45km)
+- November 2020 - [Aunt Esther's half marathon](https://www.strava.com/activities/4302759498) - 82x up/down a nasty hill
 - September 2020 - Circumpolar Race Around the World
 - September 2020 - weULTRA Huron 40 (86mi)
 - August 2020 - WeULTRA Junkyard 20
