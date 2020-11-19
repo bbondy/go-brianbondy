@@ -6,6 +6,7 @@ import (
 	"github.com/bbondy/go-brianbondy/data"
 	"github.com/gomarkdown/markdown"
 	"github.com/gomarkdown/markdown/parser"
+	"github.com/codegangsta/negroni"
 	"github.com/gorilla/mux"
 	"html/template"
 	"io/ioutil"
@@ -61,6 +62,19 @@ func slugifyTitle(title string) string {
 	return strings.ReplaceAll(str, "--", "-")
 }
 
+func directToHttps(w http.ResponseWriter, r *http.Request, next http.HandlerFunc) {
+	if r.Host == "localhost:8080" ||
+			r.URL.Scheme == "https" ||
+			strings.HasPrefix(r.Proto, "HTTPS") ||
+			r.Header.Get("X-Forwarded-Proto") == "https" {
+		next(w, r)
+	} else {
+		target := "https://" + r.Host + r.URL.Path
+		http.Redirect(w, r, target,
+			http.StatusTemporaryRedirect)
+	}
+}
+
 func getTitle(titleSlug string) string {
 	return titleSlug + " - " + "Brian R. Bondy"
 }
@@ -110,7 +124,7 @@ func getMarkdownData(slug string) string {
 	return markdownMap[slug]
 }
 
-func redirect(w http.ResponseWriter, r *http.Request) {
+func redirectHandler(w http.ResponseWriter, r *http.Request) {
 	path := r.URL.Path
 	replacements := map[string]string{
 		"/blog/page/":   "/page/",
@@ -211,8 +225,8 @@ func filtersPageHandler(w http.ResponseWriter, r *http.Request) {
 	t.Execute(w, p)
 }
 
-func getMarkdownTemplateHandler(titleSlug string, markdownSlug string) func(w http.ResponseWriter, r *http.Request) {
-	return func(w http.ResponseWriter, r *http.Request) {
+func getMarkdownTemplateHandler(titleSlug string, markdownSlug string) *negroni.Negroni {
+	handler := func(w http.ResponseWriter, r *http.Request) {
 		p := &SimpleMarkdownPage{
 			Title:        getTitle(titleSlug),
 			Content:      getMarkdownData(markdownSlug),
@@ -221,6 +235,9 @@ func getMarkdownTemplateHandler(titleSlug string, markdownSlug string) func(w ht
 		t := template.Must(template.New("base.html").Funcs(funcMap).ParseFiles("templates/base.html", "templates/simpleMarkdown.html"))
 		t.Execute(w, p)
 	}
+	return negroni.New(
+		negroni.HandlerFunc(directToHttps),
+		negroni.Wrap(http.HandlerFunc(handler)))
 }
 
 func initializeBlogPosts() {
@@ -263,41 +280,53 @@ func initializeRoutes(router *mux.Router) {
 	fs := http.FileServer(http.Dir("static/"))
 	s := http.StripPrefix("/static/", fs)
 	router.PathPrefix("/static/").Handler(s)
-	router.HandleFunc("/", blogPostPageHandler)
-	router.HandleFunc("/blog/{id:[0-9]+}", blogPostPageHandler)
-	router.HandleFunc("/blog/{id:[0-9]+}/{slug}", blogPostPageHandler)
-	router.HandleFunc("/page/{page:[0-9]+}", blogPostPageHandler)
-	router.HandleFunc("/tagged/{tag}", blogPostPageHandler)
-	router.HandleFunc("/tagged/{tag}/page/{page:[0-9]+}", blogPostPageHandler)
-	router.HandleFunc("/posted/{year:[0-9]+}", blogPostPageHandler)
-	router.HandleFunc("/posted/{year:[0-9]+}/page/{page:[0-9]+}", blogPostPageHandler)
-	router.HandleFunc("/blog/page/{page}", redirect)
-	router.HandleFunc("/blog/tagged/{tag}", redirect)
-	router.HandleFunc("/blog/tagged/{tag}/page/{page}", redirect)
-	router.HandleFunc("/blog/posted/{year:[0-9]+}", redirect)
-	router.HandleFunc("/blog/posted/{year:[0-9]+}/page/{page:[0-9]+}", redirect)
-	router.HandleFunc("/blog/filters", filtersPageHandler)
-	router.HandleFunc("/about", getMarkdownTemplateHandler("About", "about.markdown"))
-	router.HandleFunc("/other", getMarkdownTemplateHandler("Other", "other.markdown"))
-	router.HandleFunc("/contact", getMarkdownTemplateHandler("Contact", "contact.markdown"))
-	router.HandleFunc("/projects", getMarkdownTemplateHandler("Projects", "projects.markdown"))
-	router.HandleFunc("/advice", getMarkdownTemplateHandler("Advice", "advice.markdown"))
-	router.HandleFunc("/books", getMarkdownTemplateHandler("Books", "books.markdown"))
-	router.HandleFunc("/braille", getMarkdownTemplateHandler("Braille", "braille.markdown"))
-	router.HandleFunc("/compression", getMarkdownTemplateHandler("Compression", "compression.markdown"))
-	router.HandleFunc("/compression/huffman", getMarkdownTemplateHandler("Huffman Compression", "compression/huffman.markdown"))
-	router.HandleFunc("/compression/BWT", getMarkdownTemplateHandler("Burrows-Wheeler", "compression/BWT.markdown"))
-	router.HandleFunc("/compression/PPM", getMarkdownTemplateHandler("Burrows-Wheeler", "compression/PPM.markdown"))
-	router.HandleFunc("/math", getMarkdownTemplateHandler("Mathematics", "math.markdown"))
-	router.HandleFunc("/math/main", getMarkdownTemplateHandler("Main", "math/main.markdown"))
-	router.HandleFunc("/math/pi", getMarkdownTemplateHandler("Pi", "math/pi.markdown"))
-	router.HandleFunc("/math/primes", getMarkdownTemplateHandler("Primes", "math/primes.markdown"))
-	router.HandleFunc("/math/numberTheory", getMarkdownTemplateHandler("Mathematics", "math/numberTheory.markdown"))
-	router.HandleFunc("/math/graphTheory", getMarkdownTemplateHandler("Mathematics", "math/graphTheory.markdown"))
-	router.HandleFunc("/math/mathTricks", getMarkdownTemplateHandler("Mathematics", "math/mathTricks.markdown"))
-	router.HandleFunc("/morseCode", getMarkdownTemplateHandler("Morse Code", "morseCode.markdown"))
-	router.HandleFunc("/resume", getMarkdownTemplateHandler("Resume", "resume.markdown"))
-	router.HandleFunc("/running", getMarkdownTemplateHandler("Running", "running.markdown"))
+
+
+	handleBlogPost := negroni.New(
+		negroni.HandlerFunc(directToHttps),
+		negroni.Wrap(http.HandlerFunc(blogPostPageHandler)))
+	handleRedirect := negroni.New(
+		negroni.HandlerFunc(directToHttps),
+		negroni.Wrap(http.HandlerFunc(redirectHandler)))
+	handleFilterPage := negroni.New(
+		negroni.HandlerFunc(directToHttps),
+		negroni.Wrap(http.HandlerFunc(filtersPageHandler)))
+
+	router.Handle("/", handleBlogPost)
+	router.Handle("/blog/{id:[0-9]+}", handleBlogPost)
+	router.Handle("/blog/{id:[0-9]+}/{slug}", handleBlogPost)
+	router.Handle("/page/{page:[0-9]+}", handleBlogPost)
+	router.Handle("/tagged/{tag}", handleBlogPost)
+	router.Handle("/tagged/{tag}/page/{page:[0-9]+}", handleBlogPost)
+	router.Handle("/posted/{year:[0-9]+}", handleBlogPost)
+	router.Handle("/posted/{year:[0-9]+}/page/{page:[0-9]+}", handleBlogPost)
+	router.Handle("/blog/page/{page}", handleRedirect)
+	router.Handle("/blog/tagged/{tag}", handleRedirect)
+	router.Handle("/blog/tagged/{tag}/page/{page}", handleRedirect)
+	router.Handle("/blog/posted/{year:[0-9]+}", handleRedirect)
+	router.Handle("/blog/posted/{year:[0-9]+}/page/{page:[0-9]+}", handleRedirect)
+	router.Handle("/blog/filters", handleFilterPage)
+	router.Handle("/about", getMarkdownTemplateHandler("About", "about.markdown"))
+	router.Handle("/other", getMarkdownTemplateHandler("Other", "other.markdown"))
+	router.Handle("/contact", getMarkdownTemplateHandler("Contact", "contact.markdown"))
+	router.Handle("/projects", getMarkdownTemplateHandler("Projects", "projects.markdown"))
+	router.Handle("/advice", getMarkdownTemplateHandler("Advice", "advice.markdown"))
+	router.Handle("/books", getMarkdownTemplateHandler("Books", "books.markdown"))
+	router.Handle("/braille", getMarkdownTemplateHandler("Braille", "braille.markdown"))
+	router.Handle("/compression", getMarkdownTemplateHandler("Compression", "compression.markdown"))
+	router.Handle("/compression/huffman", getMarkdownTemplateHandler("Huffman Compression", "compression/huffman.markdown"))
+	router.Handle("/compression/BWT", getMarkdownTemplateHandler("Burrows-Wheeler", "compression/BWT.markdown"))
+	router.Handle("/compression/PPM", getMarkdownTemplateHandler("Burrows-Wheeler", "compression/PPM.markdown"))
+	router.Handle("/math", getMarkdownTemplateHandler("Mathematics", "math.markdown"))
+	router.Handle("/math/main", getMarkdownTemplateHandler("Main", "math/main.markdown"))
+	router.Handle("/math/pi", getMarkdownTemplateHandler("Pi", "math/pi.markdown"))
+	router.Handle("/math/primes", getMarkdownTemplateHandler("Primes", "math/primes.markdown"))
+	router.Handle("/math/numberTheory", getMarkdownTemplateHandler("Mathematics", "math/numberTheory.markdown"))
+	router.Handle("/math/graphTheory", getMarkdownTemplateHandler("Mathematics", "math/graphTheory.markdown"))
+	router.Handle("/math/mathTricks", getMarkdownTemplateHandler("Mathematics", "math/mathTricks.markdown"))
+	router.Handle("/morseCode", getMarkdownTemplateHandler("Morse Code", "morseCode.markdown"))
+	router.Handle("/resume", getMarkdownTemplateHandler("Resume", "resume.markdown"))
+	router.Handle("/running", getMarkdownTemplateHandler("Running", "running.markdown"))
 }
 
 func main() {
