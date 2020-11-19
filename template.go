@@ -40,6 +40,7 @@ type BlogPostPage struct {
 	PrevPage                              int
 	MaxPage                               int
 	Tag                                   string
+	Year                                  int
 	FBShareUrl, FBDescription, FBImageUrl string
 }
 
@@ -114,6 +115,7 @@ func redirect(w http.ResponseWriter, r *http.Request) {
 	replacements := map[string]string{
 		"/blog/page/":   "/page/",
 		"/blog/tagged/": "/tagged/",
+		"/blog/posted/": "/posted/",
 	}
 	for from, to := range replacements {
 		path = strings.ReplaceAll(path, from, to)
@@ -145,8 +147,9 @@ func blogPostPageHandler(w http.ResponseWriter, r *http.Request) {
 
 	filteredBlogPosts := blogPosts
 	yearStr, yearOK := vars["year"]
+	year := 0
 	if yearOK {
-		year, _ := strconv.Atoi(yearStr)
+		year, _ = strconv.Atoi(yearStr)
 		filteredBlogPosts = blogPostYearMap[year]
 	}
 
@@ -182,6 +185,7 @@ func blogPostPageHandler(w http.ResponseWriter, r *http.Request) {
 		PrevPage:     blogPostIndex,
 		MaxPage:      len(filteredBlogPosts),
 		Tag:          tag,
+		Year:         year,
 		MarkdownSlug: "blog",
 	}
 	t := template.Must(template.New("base.html").Funcs(funcMap).ParseFiles("templates/base.html", "templates/blogPost.html"))
@@ -260,16 +264,18 @@ func initializeRoutes(router *mux.Router) {
 	s := http.StripPrefix("/static/", fs)
 	router.PathPrefix("/static/").Handler(s)
 	router.HandleFunc("/", blogPostPageHandler)
-	router.HandleFunc("/page/{page:[0-9]+}", blogPostPageHandler)
-	router.HandleFunc("/page/{page}", blogPostPageHandler)
-	router.HandleFunc("/tagged/{tag}", blogPostPageHandler)
-	router.HandleFunc("/tagged/{tag}/page/{page}", blogPostPageHandler)
 	router.HandleFunc("/blog/{id:[0-9]+}", blogPostPageHandler)
 	router.HandleFunc("/blog/{id:[0-9]+}/{slug}", blogPostPageHandler)
-	router.HandleFunc("/blog/posted/{year:[0-9]+}", blogPostPageHandler)
+	router.HandleFunc("/page/{page:[0-9]+}", blogPostPageHandler)
+	router.HandleFunc("/tagged/{tag}", blogPostPageHandler)
+	router.HandleFunc("/tagged/{tag}/page/{page:[0-9]+}", blogPostPageHandler)
+	router.HandleFunc("/posted/{year:[0-9]+}", blogPostPageHandler)
+	router.HandleFunc("/posted/{year:[0-9]+}/page/{page:[0-9]+}", blogPostPageHandler)
 	router.HandleFunc("/blog/page/{page}", redirect)
 	router.HandleFunc("/blog/tagged/{tag}", redirect)
 	router.HandleFunc("/blog/tagged/{tag}/page/{page}", redirect)
+	router.HandleFunc("/blog/posted/{year:[0-9]+}", redirect)
+	router.HandleFunc("/blog/posted/{year:[0-9]+}/page/{page:[0-9]+}", redirect)
 	router.HandleFunc("/blog/filters", filtersPageHandler)
 	router.HandleFunc("/about", getMarkdownTemplateHandler("About", "about.markdown"))
 	router.HandleFunc("/other", getMarkdownTemplateHandler("Other", "other.markdown"))

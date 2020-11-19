@@ -7,7 +7,7 @@
     </div>
     <div class="tags">
       {{range .BlogPost.Tags}}
-      <a href="/blog/tagged/{{.}}" class="tag">{{.}}</a>
+      <a href="/tagged/{{.}}" class="tag">{{.}}</a>
       {{end}}
     </div>
   </article>
@@ -17,6 +17,13 @@
     {{end}}
     {{if (le .NextPage .MaxPage)}}
     <a href="/tagged/{{.Tag}}/page/{{.NextPage}}"><span class="navigationButton">Next page</span></a>
+    {{end}}
+  {{else if .Year}}
+    {{if (ge .PrevPage 1)}}
+    <a href="/posted/{{.Year}}/page/{{.PrevPage}}"><span class="navigationButton">Previous page</span></a>
+    {{end}}
+    {{if (le .NextPage .MaxPage)}}
+    <a href="/posted/{{.Year}}/page/{{.NextPage}}"><span class="navigationButton">Next page</span></a>
     {{end}}
   {{else}}
     {{if (ge .PrevPage 1)}}

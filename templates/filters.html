@@ -1,12 +1,12 @@
 {{define "mountPoint"}}
 <h1>Blog posts by year</h1>
 {{range $i, $year := .Years}}
-<a href="/blog/posted/{{$year}}" class="yearTag">{{$year}}</a>
+<a href="/posted/{{$year}}" class="yearTag">{{$year}}</a>
 {{ end }}
 <h1>Blog posts by tag</h1>
 <div class="tagContainer">
 {{range $i, $tag := .SortedTags}}
-<div><a href="/blog/tagged/{{$tag}}" class="tag">{{$tag}}</a> x {{getTagCount $tag}}</div>
+<div><a href="/tagged/{{$tag}}" class="tag">{{$tag}}</a> x {{getTagCount $tag}}</div>
 {{ end }}
 </div>
 {{end}}
