@@ -17,6 +17,8 @@ I'm serving as CTO and as a member of the board at Brave Software.
 
 I used to work at some pretty cool places including Khan Academy, Mozilla, and Evernote.
 
+You can get in contact with me [here](/contact).
+
 
 <br class="clearfloat">
 

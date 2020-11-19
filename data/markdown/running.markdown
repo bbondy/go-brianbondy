@@ -2,16 +2,17 @@
 
 - November 2020 - [Park Daze](https://www.strava.com/activities/4339042086) - hills (45km)
 - November 2020 - [Aunt Esther's half marathon](https://www.strava.com/activities/4302759498) - 82x up/down a nasty hill
-- September 2020 - Circumpolar Race Around the World
-- September 2020 - weULTRA Huron 40 (86mi)
-- August 2020 - WeULTRA Junkyard 20
+- October 2020 - [Ronnie's first marathon](https://www.strava.com/activities/4207575851)
+- September 2020 - [Circumpolar Race Around the World](https://runsignup.com/Race/CHH/AnywhereAnyPlace/CircumpolarRaceAroundtheWorld)
+- September 2020 - [weULTRA Huron 40 (86mi)](https://www.strava.com/activities/4085216955)
+- August 2020 - [WeULTRA Junkyard 20](https://www.strava.com/activities/3950381716)
 - August 2020 - 4 marathon PBs in 4 consecutive weeks: [1](https://www.strava.com/activities/3760462325), [2](https://www.strava.com/activities/3795018600), [3](https://www.strava.com/activities/3826286031), [4](https://www.strava.com/activities/3882605862)
 - August 2020 - [weULTRA's Everest Challenge](https://www.facebook.com/groups/314354256632582/)
 - July 2020 - 7 days of consecutive marathons: [1](https://www.strava.com/activities/3712037732), [2](https://www.strava.com/activities/3717210665), [3](https://www.strava.com/activities/3721732263), [4](https://www.strava.com/activities/3726498295), [5](https://www.strava.com/activities/3731587943), [6](https://www.strava.com/activities/3736251559), [7](https://www.strava.com/activities/3740875589)
 - July 2020 - [The Big Canada Run](https://thebigcanadarun.ca/) (1 year 8000km run)
 - June 2020 - [weULTRA 7 Quarter challenge 80mi](https://www.facebook.com/groups/967548486992988/): [Q1](https://www.strava.com/activities/3636553872), [Q3](https://www.strava.com/activities/3638383164), [Q5](https://www.strava.com/activities/3640883832), [Q7](https://www.strava.com/activities/3643470703)
 - June 2020 - [FAwR 103mi bandit run](https://www.strava.com/activities/3575520487)
-- May - August 2020 - The Great Virtual Race Across Tennessee 1000K
+- May - August 2020 - [The Great Virtual Race Across Tennessee 1000K](https://runsignup.com/Race/TN/Memphis/TheGreatVirtualRaceAcrossTennessee1000K)
 - May 2020 - [Dawn to Dusk to Dawn (D3)](https://www.strava.com/activities/3425462721)
 - May 2020 (multi week) - [Quarantine 300 mile](https://www.facebook.com/groups/2624601264453712)
 - April 2020 - [Quarantine Backyard Ultra 186km](https://www.strava.com/activities/3259169846)
