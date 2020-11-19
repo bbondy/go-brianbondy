@@ -2,7 +2,7 @@
 
 ## General Information
 
-<img src="//www.brianbondy.com/static/img/family2.jpg" style="float:left; margin-right:20px; border: 1px solid black" height="250" width="375">
+<img src="/static/img/family2.jpg" style="float:left; margin-right:20px; border: 1px solid black" height="250" width="375">
 
 Family is my "raison d'être".  My wife Shannon and I have 3 sons: Link, Ronnie, and Asher.
 
@@ -22,7 +22,7 @@ I used to work at some pretty cool places including Khan Academy, Mozilla, and E
 
 ## Facts about me
 
-<img src="//www.brianbondy.com/static/img/brian-ronnie.jpg" width="219" height="476" style="float:right; margin-left:30px; border: 1px solid black">
+<img src="/static/img/brian-ronnie.jpg" width="219" height="476" style="float:right; margin-left:30px; border: 1px solid black">
 
 - I drink a lot of coffee and usually spill it on myself
 - I'm married to the beautiful Shannon L. Bondy (Formerly Gray)
