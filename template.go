@@ -11,9 +11,7 @@ import (
 	"html/template"
 	"io/ioutil"
 	"net/http"
-	"os"
 	"reflect"
-	"regexp"
 	"sort"
 	"strconv"
 	"strings"
@@ -24,43 +22,6 @@ const (
 	layoutISO = "2006-01-02"
 	layoutUS  = "January 2, 2006"
 )
-
-type SimpleMarkdownPage struct {
-	Title, Content                        string
-	MarkdownSlug                          string
-	FBShareUrl, FBDescription, FBImageUrl string
-}
-
-type BlogPostPage struct {
-	Title, Content, MarkdownSlug          string
-	BlogPost                              data.BlogPost
-	BlogPostBody                          string
-	BlogPostUri                           string
-	BlogPostDate                          string
-	NextPage                              int
-	PrevPage                              int
-	MaxPage                               int
-	Tag                                   string
-	Year                                  int
-	FBShareUrl, FBDescription, FBImageUrl string
-}
-
-type FiltersPage struct {
-	Title, Content                        string
-	MarkdownSlug                          string
-	TagCountMap                           map[string]int
-	SortedTags                            []string
-	Years                                 []int
-	FBShareUrl, FBDescription, FBImageUrl string
-}
-
-func slugifyTitle(title string) string {
-	title = strings.ToLower(title)
-	str := strings.ReplaceAll(title, " ", "-")
-	reg, _ := regexp.Compile("[^a-zA-Z0-9-]+")
-	str = reg.ReplaceAllString(str, "")
-	return strings.ReplaceAll(str, "--", "-")
-}
 
 func directToHttps(w http.ResponseWriter, r *http.Request, next http.HandlerFunc) {
 	if r.Host == "localhost:8080" ||
@@ -73,10 +34,6 @@ func directToHttps(w http.ResponseWriter, r *http.Request, next http.HandlerFunc
 		http.Redirect(w, r, target,
 			http.StatusTemporaryRedirect)
 	}
-}
-
-func getTitle(titleSlug string) string {
-	return titleSlug + " - " + "Brian R. Bondy"
 }
 
 func avail(name string, data interface{}) bool {
@@ -139,7 +96,7 @@ func redirectHandler(w http.ResponseWriter, r *http.Request) {
 
 func errorPage(w http.ResponseWriter, message string, slug string) {
 	w.WriteHeader(http.StatusNotFound)
-	p := &SimpleMarkdownPage{
+	p := &data.SimpleMarkdownPage{
 		Title:        "Error",
 		Content:      message,
 		MarkdownSlug: slug,
@@ -153,27 +110,26 @@ func errorPage(w http.ResponseWriter, message string, slug string) {
 func blogPostPageHandler(w http.ResponseWriter, r *http.Request) {
 	blogPostIndex := 0 //page
 	vars := mux.Vars(r)
-	page, pageOK := vars["page"]
-	if pageOK {
+
+	if page, ok := vars["page"]; ok {
 		blogPostIndex, _ = strconv.Atoi(page)
 		blogPostIndex -= 1
 	}
 
 	filteredBlogPosts := blogPosts
-	yearStr, yearOK := vars["year"]
 	year := 0
-	if yearOK {
+
+	if yearStr, ok := vars["year"]; ok {
 		year, _ = strconv.Atoi(yearStr)
 		filteredBlogPosts = blogPostYearMap[year]
 	}
 
-	tag, tagOK := vars["tag"]
-	if tagOK {
+	tag, tagOk := vars["tag"]
+	if tagOk {
 		filteredBlogPosts = blogPostTagMap[tag]
 	}
 
-	idStr, idOK := vars["id"]
-	if idOK {
+	if idStr, ok := vars["id"]; ok {
 		id, _ := strconv.Atoi(idStr)
 		if foundPost, ok := blogPostIdMap[id]; ok {
 			filteredBlogPosts = []data.BlogPost{foundPost}
@@ -189,11 +145,11 @@ func blogPostPageHandler(w http.ResponseWriter, r *http.Request) {
 
 	parsedDate, _ := time.Parse(layoutISO, filteredBlogPosts[blogPostIndex].Created)
 
-	p := &BlogPostPage{
-		Title:        getTitle("Blog posts"),
+	p := &data.BlogPostPage{
+		Title:        GetTitle("Blog posts"),
 		BlogPost:     filteredBlogPosts[blogPostIndex],
 		BlogPostBody: getMarkdownData("blog/" + strconv.Itoa(filteredBlogPosts[blogPostIndex].Id) + ".markdown"),
-		BlogPostUri:  "/blog/" + strconv.Itoa(filteredBlogPosts[blogPostIndex].Id) + "/" + slugifyTitle(filteredBlogPosts[blogPostIndex].Title),
+		BlogPostUri:  "/blog/" + strconv.Itoa(filteredBlogPosts[blogPostIndex].Id) + "/" + SlugifyTitle(filteredBlogPosts[blogPostIndex].Title),
 		BlogPostDate: parsedDate.Format(layoutUS),
 		NextPage:     blogPostIndex + 2,
 		PrevPage:     blogPostIndex,
@@ -213,8 +169,8 @@ func filtersPageHandler(w http.ResponseWriter, r *http.Request) {
 		year_range[i] = current_year - i
 	}
 
-	p := &FiltersPage{
-		Title:        getTitle("Filters"),
+	p := &data.FiltersPage{
+		Title:        GetTitle("Filters"),
 		Content:      "Test content - filters",
 		TagCountMap:  tagCountMap,
 		SortedTags:   sortedTags,
@@ -227,8 +183,8 @@ func filtersPageHandler(w http.ResponseWriter, r *http.Request) {
 
 func getMarkdownTemplateHandler(titleSlug string, markdownSlug string) *negroni.Negroni {
 	handler := func(w http.ResponseWriter, r *http.Request) {
-		p := &SimpleMarkdownPage{
-			Title:        getTitle(titleSlug),
+		p := &data.SimpleMarkdownPage{
+			Title:        GetTitle(titleSlug),
 			Content:      getMarkdownData(markdownSlug),
 			MarkdownSlug: markdownSlug,
 		}
@@ -244,18 +200,16 @@ func initializeBlogPosts() {
 	blogPostManifest, _ := ioutil.ReadFile("data/blogPostManifest.json")
 	err := json.Unmarshal([]byte(blogPostManifest), &blogPosts)
 	if err != nil {
-		fmt.Println("Error parsing JSON")
-		os.Exit(1)
+		panic(fmt.Errorf("Error parsing JSON"))
 	}
 
 	for _, blogPost := range blogPosts {
 		for _, tag := range blogPost.Tags {
 			blogPostTagMap[tag] = append(blogPostTagMap[tag], blogPost)
-			_, countOk := tagCountMap[tag]
-			if !countOk {
-				tagCountMap[tag] = 1
-			} else {
+			if _, ok := tagCountMap[tag]; ok {
 				tagCountMap[tag] += 1
+			} else {
+				tagCountMap[tag] = 1
 			}
 		}
 		parsedDate, _ := time.Parse(layoutISO, blogPost.Created)
@@ -280,7 +234,6 @@ func initializeRoutes(router *mux.Router) {
 	fs := http.FileServer(http.Dir("static/"))
 	s := http.StripPrefix("/static/", fs)
 	router.PathPrefix("/static/").Handler(s)
-
 
 	handleBlogPost := negroni.New(
 		negroni.HandlerFunc(directToHttps),
