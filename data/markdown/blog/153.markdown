@@ -1,7 +1,7 @@
 As per this [Future of Firefox announcement][1], we have a work-in-progress, Metro Firefox preview!
 
 <figure style="text-align:left; padding:0px; margin-left:0px">
-<img src="//brianbondy.com/static/img/blogpost_153/metropreview-start.jpg" style="display:block">
+<img src="//brianbondy.com/static/img/blogpost_153/metropreview-start.jpg" style="display:block; width: 90vw">
 <figcaption style="display:block;">
 </figcaption>
 </figure>
@@ -9,7 +9,7 @@ As per this [Future of Firefox announcement][1], we have a work-in-progress, Met
 This preview will give you a glimpse of what Firefox on Metro will be like, but it is not meant to be complete.  Several incomplete features will exist, which is normal at this point in development.
 
 <figure style="text-align:left; padding:0px; margin-left:0px">
-<a href="//brianbondy.com/static/img/blogpost_153/metro-screenshot.jpg"><img src="//brianbondy.com/static/img/blogpost_153/metro-screenshot-small.jpg" style="display:block"></a>
+<a href="//brianbondy.com/static/img/blogpost_153/metro-screenshot.jpg"><img src="//brianbondy.com/static/img/blogpost_153/metro-screenshot-small.jpg" style="display:block; width: 90vw"></a>
 <figcaption style="display:block;">
 </figcaption>
 </figure>
@@ -21,7 +21,7 @@ The preview is meant to be installed on Windows 8 RTM and later.  It is built wi
 Builds are available in the [Firefox Windows 8 wiki][3].  Please feel free to file [feature requests and post bug reports][2].  
 
 <figure style="text-align:left; padding:0px; margin-left:0px">
-<a href="//brianbondy.com/static/img/blogpost_153/metro-screenshot2.jpg"><img src="//brianbondy.com/static/img/blogpost_153/metro-screenshot2-small.jpg" style="display:block"></a>
+<a href="//brianbondy.com/static/img/blogpost_153/metro-screenshot2.jpg"><img src="//brianbondy.com/static/img/blogpost_153/metro-screenshot2-small.jpg" style="display:block; width: 90vw"></a>
 <figcaption style="display:block;">
 </figcaption>
 </figure>

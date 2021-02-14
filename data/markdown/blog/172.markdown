@@ -8,7 +8,7 @@ We re-integrate fewer and better ads directly into programmatic ad positions, pa
 Coming built in, we have new faster engines for tracking protection, ad block, HTTPS Everywhere, safe ads with rev-share, and more.
 We're seeing massive web page load time speedups.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/kHWf6hRV-GM" frameborder="0" allowfullscreen></iframe>
+<iframe src="https://www.youtube.com/embed/kHWf6hRV-GM" frameborder="0" allowfullscreen></iframe>
 
 We're starting to bring people in for early developer build access on all platforms.
 

@@ -18,7 +18,7 @@ If you're using Brave, just click the above link!
 
 By default, Brave will load the URI being requested via a public HTTP gateway; however, it will also show an infobar that asks you if you’d like to use a local node to resolve IPFS URIs.  If you choose to use a local node, Brave will automatically download go-ipfs as a component and will route future traffic through this node.  There is no need to manually manage an IPFS node or use an extension.  A user can optionally install the IPFS Companion extension, and it will make a suggestion to use the Brave managed node.
 
-<img src="/static/img/blogpost_177/infobar.png" style="margin-bottom: 5px; width:700px">
+<img src="/static/img/blogpost_177/infobar.png" style="width:90vw">
 
 # Using a Gateway vs using a local node
 

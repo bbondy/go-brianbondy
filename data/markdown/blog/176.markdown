@@ -7,14 +7,14 @@ All of my brothers and sisters are bigger than me. They said I'm the runt of the
 
 <table>
 <tr><td style="vertical-align: top">
-<img src="/static/img/blogpost_176/patches-1.jpg" style="margin-bottom: 5px; width:300px">
+<img src="/static/img/blogpost_176/patches-1.jpg" style="width:40vw">
 </td><td style="vertical-align: top">
-<img src="/static/img/blogpost_176/patches-2.jpg" style="margin-bottom: 5px; width:300px">
+<img src="/static/img/blogpost_176/patches-2.jpg" style="width:40vw">
 </td></tr>
 <tr><td style="vertical-align: top">
-<img src="/static/img/blogpost_176/patches-3.jpg" style="margin-bottom: 5px; width:300px">
+<img src="/static/img/blogpost_176/patches-3.jpg" style="width:40vw">
 </td><td style="vertical-align: top">
-<img src="/static/img/blogpost_176/patches-4.jpg" style="margin-bottom: 5px; width:300px">
+<img src="/static/img/blogpost_176/patches-4.jpg" style="width:40vw">
 </td></tr>
 </table>
 
@@ -24,9 +24,9 @@ A nice guy and girl came to visit us, they played with all of my brothers and si
 
 <table>
 <tr><td style="vertical-align: top">
-<img src="/static/img/blogpost_176/patches-6.png" style="margin-bottom: 5px; width:300px">
+<img src="/static/img/blogpost_176/patches-6.png" style="width:40vw">
 </td><td style="vertical-align: top">
-<img src="/static/img/blogpost_176/patches-5.jpg" style="margin-bottom: 5px; width:300px">
+<img src="/static/img/blogpost_176/patches-5.jpg" style="width:40vw">
 </td></tr>
 </table>
 
@@ -39,7 +39,7 @@ That guy from before came back and brought me in a car. I got so sick, I hate ca
 
 When we got to my new home, I met 2 new things called cats.  I guess cats are similar to dogs but more terrifying.
 
-<img src="/static/img/blogpost_176/meet-cats.jpg" style="margin-bottom: 5px; width:300px">
+<img src="/static/img/blogpost_176/meet-cats.jpg" style="width:90vw">
 
 The guy that called himself dad was running around like crazy.  He put a picture of himself holding a ring in my collar.  
 
@@ -47,9 +47,9 @@ The girl who I figured was my new mom came home and I ran to her.  I was so happ
 
 <table>
 <tr><td>
-<img src="/static/img/blogpost_176/engagement.jpg" style="margin-bottom: 5px; width:300px">
+<img src="/static/img/blogpost_176/engagement.jpg" style="width:40vw">
 </td><td>
-<img src="/static/img/blogpost_176/engagement-2.jpg" style="margin-bottom: 5px; width:300px">
+<img src="/static/img/blogpost_176/engagement-2.jpg" style="width:40vw">
 </tr></td>
 </table>
 
@@ -65,9 +65,9 @@ I met mom's older dog named Shelby today.  She lives at my grandparent's house. 
 
 <table>
 <tr><td>
-<img src="/static/img/blogpost_176/shelby-2.jpg" style="margin-bottom: 5px; width:300px">
+<img src="/static/img/blogpost_176/shelby-2.jpg" style="width:40vw">
 </td><td>
-<img src="/static/img/blogpost_176/leia-shelby.jpg" style="margin-bottom: 5px; width:300px">
+<img src="/static/img/blogpost_176/leia-shelby.jpg" style="width:40vw">
 </td></tr></table>
 
 ---
@@ -78,14 +78,14 @@ Mom and dad take me with them a lot when they go out. I hate the car part, but I
 
 <table>
 <tr><td>
-<img src="/static/img/blogpost_176/mom-leia.jpg" style="margin-bottom: 5px; width:300px">
+<img src="/static/img/blogpost_176/mom-leia.jpg" style="width:40vw">
 </td><td>
-<img src="/static/img/blogpost_176/friends-4.jpg" style="margin-bottom: 5px; width:300px">
+<img src="/static/img/blogpost_176/friends-4.jpg" style="width:40vw">
 </td></tr>
 <tr><td>
-<img src="/static/img/blogpost_176/friends.jpg" style="margin-bottom: 5px; width:300px">
+<img src="/static/img/blogpost_176/friends.jpg" style="width:40vw">
 </td><td>
-<img src="/static/img/blogpost_176/friends-3.jpg" style="margin-bottom: 5px; width:300px">
+<img src="/static/img/blogpost_176/friends-3.jpg" style="width:40vw">
 </td></tr>
 </table>
 
@@ -95,9 +95,9 @@ I learnt another trick called "Get the kitties!". I get to bark and chase away t
 
 <table>
 <tr><td>
-<img src="/static/img/blogpost_176/leia-kittie.jpg" style="margin-bottom: 5px; width:300px">
+<img src="/static/img/blogpost_176/leia-kittie.jpg" style="width:40vw">
 </td><td>
-<img src="/static/img/blogpost_176/leia-kitties-2.jpg" style="margin-bottom: 5px; width:300px">
+<img src="/static/img/blogpost_176/leia-kitties-2.jpg" style="width:40vw">
 </td></tr></table>
 
 ---
@@ -118,10 +118,10 @@ I played outside for the first time in the snow, I love it. Dad throws up some s
 
 <table>
 <tr><td style="vertical-align: top">
-<img src="/static/img/blogpost_176/leia-snow.jpg" style="margin-bottom: 5px; width:300px">
+<img src="/static/img/blogpost_176/leia-snow.jpg" style="width:40vw">
 </td><td style="vertical-align: top">
-<img src="/static/img/blogpost_176/snow-2.jpg" style="margin-bottom: 5px; width:300px; display: block">
-<img src="/static/img/blogpost_176/snow-3.jpg" style="margin-bottom: 5px; width:300px">
+<img src="/static/img/blogpost_176/snow-2.jpg" style="width:40vw; display: block">
+<img src="/static/img/blogpost_176/snow-3.jpg" style="width:40vw">
 </td></tr></table>
 
 ---
@@ -131,14 +131,14 @@ I love it when mom and dad throw me the ball, I catch it every time.
 
 <table>
 <tr><td>
-<img src="/static/img/blogpost_176/snuggle-1.jpg" style="margin-bottom: 5px; width:300px">
+<img src="/static/img/blogpost_176/snuggle-1.jpg" style="width:40vw">
 </td><td>
-<img src="/static/img/blogpost_176/snuggle-2.jpg" style="margin-bottom: 5px; width:300px">
+<img src="/static/img/blogpost_176/snuggle-2.jpg" style="width:40vw">
 </td></tr>
 <tr><td>
-<img src="/static/img/blogpost_176/leia-ball.jpg" style="margin-bottom: 5px; width:300px">
+<img src="/static/img/blogpost_176/leia-ball.jpg" style="width:40vw">
 </td><td>
-<img src="/static/img/blogpost_176/leia-ball-2.jpg" style="margin-bottom: 5px; width:300px">
+<img src="/static/img/blogpost_176/leia-ball-2.jpg" style="width:40vw">
 </table>
 
 ---
@@ -147,12 +147,12 @@ I'm not a fan of this thing called Halloween. Mom and dad dress me up in these w
 
 <table>
 <tr><td>
-<img src="/static/img/blogpost_176/halloween-1.jpg" style="margin-bottom: 5px; width:300px">
+<img src="/static/img/blogpost_176/halloween-1.jpg" style="width:40vw">
 </td><td>
-<img src="/static/img/blogpost_176/halloween-2.jpg" style="margin-bottom: 5px; width:300px">
+<img src="/static/img/blogpost_176/halloween-2.jpg" style="width:40vw">
 </td></tr>
 <tr><td>
-<img src="/static/img/blogpost_176/halloween-3.jpg" style="margin-bottom: 5px; width:300px">
+<img src="/static/img/blogpost_176/halloween-3.jpg" style="width:40vw">
 </td></tr>
 </table>
 
@@ -172,9 +172,9 @@ He's not very good at tug of war though.
 
 <table>
 <tr><td>
-<img src="/static/img/blogpost_176/belly-scratch.jpg" style="margin-bottom: 5px; width:300px">
+<img src="/static/img/blogpost_176/belly-scratch.jpg" style="width:40vw">
 </td><td>
-<img src="/static/img/blogpost_176/tug-of-war.jpg" style="margin-bottom: 5px; width:300px">
+<img src="/static/img/blogpost_176/tug-of-war.jpg" style="width:40vw">
 </td></tr>
 </table>
 
@@ -187,7 +187,7 @@ Mom and dad brought home a human baby boy today!
 
 I'm really worried about him, I'm going to protect him. They said his name is Ronnie.
 
-<img src="/static/img/blogpost_176/ronnie-home.jpg" style="margin-bottom: 5px; width:500px">
+<img src="/static/img/blogpost_176/ronnie-home.jpg" style="width:90vw">
 
 ---
 
@@ -197,23 +197,23 @@ Isn't it supposed to take 9 months to make a new baby human?
 
 Now I have to watch over 2 babies? I'm so stressed out, mom sent me to Nana's house so I could calm down. This new one is named Link.
 
-<img src="/static/img/blogpost_176/link-home.jpg" style="margin-bottom: 5px; width:500px">
+<img src="/static/img/blogpost_176/link-home.jpg" style="width:90vw">
 
 ---
 
 My boys are pretty great, I'm going to protect and love them forever. They're getting so big over the years.
 I love playing with them, it makes them so happy.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/FQHt-7K-moQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe src="https://www.youtube.com/embed/FQHt-7K-moQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 <table>
 <tr>
 <td style="vertical-align: top">
-<img src="/static/img/blogpost_176/leia-protect.jpg" style="margin-bottom: 5px; width:300px; vertical-align: top;">
+<img src="/static/img/blogpost_176/leia-protect.jpg" style="width:40vw; vertical-align: top;">
 </td>
 <td style="vertical-align: top">
-<img src="/static/img/blogpost_176/leia-link-3.jpg" style="margin-bottom: 5px; width:300px; vertical-align: top;">
-<img src="/static/img/blogpost_176/halloween.jpg" style="margin-bottom: 5px; width:300px; vertical-align: top;">
+<img src="/static/img/blogpost_176/leia-link-3.jpg" style="width:40vw; vertical-align: top;">
+<img src="/static/img/blogpost_176/halloween.jpg" style="width:40vw; vertical-align: top;">
 </td>
 </tr>
 </table>
@@ -229,7 +229,7 @@ Dad left me a treat on the couch! He unwrapped a 12" sub from Subway and then ra
 Later, I got in trouble though, I probably shouldn't have, but it was worth it.
 I felt really guilty when dad confronted me, I put my ears back.
 
-<img src="/static/img/blogpost_176/leia-subway.png" style="margin-bottom: 5px; width:300px; vertical-align: top;">
+<img src="/static/img/blogpost_176/leia-subway.png" style="width:40vw; vertical-align: top;">
 
 ---
 
@@ -238,11 +238,11 @@ My boys are chasing me around the house everywhere. It's so much fun. I love the
 <table>
 <tr>
 <td style="vertical-align: top">
-<img src="/static/img/blogpost_176/leia-chase.jpg" style="margin-bottom: 5px; width:300px; vertical-align: top; display:block">
-<img src="/static/img/blogpost_176/link-leia.jpg" style="margin-bottom: 5px; width:300px; vertical-align: top;">
+<img src="/static/img/blogpost_176/leia-chase.jpg" style="width:40vw; vertical-align: top; display:block">
+<img src="/static/img/blogpost_176/link-leia.jpg" style="width:40vw; vertical-align: top;">
 </td>
 <td style="vertical-align: top">
-<img src="/static/img/blogpost_176/ronnie-leia.jpg" style="margin-bottom: 5px; width:300px; vertical-align: top;">
+<img src="/static/img/blogpost_176/ronnie-leia.jpg" style="width:40vw; vertical-align: top;">
 </td>
 </tr>
 </table>
@@ -251,7 +251,7 @@ My boys are chasing me around the house everywhere. It's so much fun. I love the
 
 Mom, dad, and I did a 5k run for dogs today! It was called Santa Paws 5k.
 
-<img src="/static/img/blogpost_176/leia-run.jpg" style="margin-bottom: 5px; width:500px">
+<img src="/static/img/blogpost_176/leia-run.jpg" style="width:40vw">
 
 ---
 
@@ -259,7 +259,7 @@ Mom, dad, and I did a 5k run for dogs today! It was called Santa Paws 5k.
 
 They had another baby! Mom and dad already aren't throwing my toys as much to me even though I put big piles of toys in their lap.  That new baby is pretty cute, his name is Asher. I'm going to protect him too.
 
-<img src="/static/img/blogpost_176/asher-leia.jpg" style="margin-bottom: 5px; width:500px">
+<img src="/static/img/blogpost_176/asher-leia.jpg" style="width:90vw">
 
 ---
 
@@ -269,7 +269,7 @@ My 3 boys are so fun, they play with me a lot and they laugh when I do silly thi
 
 Oh god they did it again, they brought home another baby. A puppy this time.  This one is trouble.  Mom and dad keep saying bad dog to her as she pees in the house and bites things she isn't supposed to.
 
-<img src="/static/img/blogpost_176/nym-1.jpg" style="margin-bottom: 5px; width:500px">
+<img src="/static/img/blogpost_176/nym-1.jpg" style="width:90vw">
 
 ---
 
@@ -277,14 +277,14 @@ I'm starting to like this puppy they call Nym, when she gets out of line I put h
 
 As a wise old dog once taught me, I passed down the toilet water drinking trick to her. 
 
-<img src="/static/img/blogpost_176/nym-2.jpg" style="margin-bottom: 5px; width:500px">
+<img src="/static/img/blogpost_176/nym-2.jpg" style="width:40vw">
 
 ---
 
 This puppy is starting to get to be the same size as me. 
 I can't beat her at tug of war anymore.
 
-<img src="/static/img/blogpost_176/nym-3.jpg" style="margin-bottom: 5px; width:500px">
+<img src="/static/img/blogpost_176/nym-3.jpg" style="width:40vw">
 
 ---
 
@@ -292,10 +292,10 @@ It was my birthday again today, I think I might be getting old. Dad recently sai
 
 <table>
 <tr><td style="vertical-align: top">
-<img src="/static/img/blogpost_176/dad-leia.jpg" style="margin-bottom: 5px; width:300px">
+<img src="/static/img/blogpost_176/dad-leia.jpg" style="width:40vw">
 </td><td style="vertical-align: top">
-<img src="/static/img/blogpost_176/leia-birthday.jpg" style="margin-bottom: 5px; width:300px; display: block">
-<img src="/static/img/blogpost_176/leia-birthday-3.png" style="margin-bottom: 5px; width:300px; display: block">
+<img src="/static/img/blogpost_176/leia-birthday.jpg" style="width:40vw; display: block">
+<img src="/static/img/blogpost_176/leia-birthday-3.png" style="width:40vw; display: block">
 </td></tr>
 </table>
 
@@ -307,7 +307,7 @@ I can't even get balls properly anymore, my favourite thing in the world.  It hu
 
 I do chase Nym when she gets a ball and I wag my tail and bark at her. I wish I could still play ball though.
 
-<img src="/static/img/blogpost_176/leia-sad.jpg" style="margin-bottom: 5px; width:700px">
+<img src="/static/img/blogpost_176/leia-sad.jpg" style="width:90vw">
 
 ---
 
@@ -319,7 +319,7 @@ Mom and dad cut my walks down to just 2 streets.  It hurts to walk but I love be
 
 I feel really bad, I can't control my bladder and sometimes pee when I'm sleeping.  I'm so embarrassed. I didn't mean to.
 
-<img src="/static/img/blogpost_176/nym-old.jpg" style="margin-bottom: 5px; width:500px">
+<img src="/static/img/blogpost_176/nym-old.jpg" style="width:90vw">
 
 ---
 
@@ -340,12 +340,12 @@ Mom, dad, and my boys came to see me outside in a tent at the vet. They all seem
 When the vet came out she had a needle and they pricked me. I'm scared, but I'm with my family.  I just need to put my head down.  I'm getting sleepy, I need to sleep.
 
 <table><tr><td>
-<img src="/static/img/blogpost_176/last-day-3.jpg" style="margin-bottom: 5px; width:300px">
+<img src="/static/img/blogpost_176/last-day-3.jpg" style="width:40vw">
 </td>
 <td>
-<img src="/static/img/blogpost_176/last-day-1.jpg" style="margin-bottom: 5px; width:300px">
-<img src="/static/img/blogpost_176/last-day-2.jpg" style="margin-bottom: 5px; width:300px">
-<img src="/static/img/blogpost_176/last-day-4.jpg" style="margin-bottom: 5px; width:300px">
+<img src="/static/img/blogpost_176/last-day-1.jpg" style="width:40vw">
+<img src="/static/img/blogpost_176/last-day-2.jpg" style="width:40vw">
+<img src="/static/img/blogpost_176/last-day-4.jpg" style="width:40vw">
 </td>
 </tr>
 </table>
@@ -360,4 +360,4 @@ When I looked around after catching the ball, I saw that Shelby was there! She t
 
 Best of all, I learned that I could watch over and be with my family any time I wanted, so I got to keep the job of protecting my family.
 
-<img src="/static/img/blogpost_176/bondyfam-26.jpg" style="margin-bottom: 5px; width:600px">
+<img src="/static/img/blogpost_176/bondyfam-26.jpg" style="width:90vw">

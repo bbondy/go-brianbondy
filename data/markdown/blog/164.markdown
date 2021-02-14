@@ -1,4 +1,4 @@
-<img src='https://brianbondy.com/static/img/blogpost_164/KA.png' style="float:right">
+<img src='https://brianbondy.com/static/img/blogpost_164/KA.png' style="float:right; width: 25vw">
 
 I had an amazing first week at [Khan Academy](https://www.khanacademy.org) as a remote employee.
 
@@ -21,7 +21,7 @@ On Friday, I received an amazing care package delivered to my door. The highligh
 
 ---
 
-<img src='https://brianbondy.com/static/img/blogpost_164/hopper.png' style="float:right">
+<img src='https://brianbondy.com/static/img/blogpost_164/hopper.png' style="float:right; width: 25vw">
 
 ## Computer Science team
 

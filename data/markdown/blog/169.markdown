@@ -1,6 +1,6 @@
 I'm happy to announce that the [Khan Academy Firefox OS app](https://marketplace.firefox.com/app/khan-academy) is now available in the Firefox Marketplace!
 
-<img src="https://brianbondy.com/static/img/blogpost_169/fox.png#2" style="width:700px">
+<img src="https://brianbondy.com/static/img/blogpost_169/fox.png#2" style="width:90vw">
 
 Khan Academy’s mission is to provide a free world-class education for anyone anywhere.
 The goal of the Firefox OS app is to help with the “anyone anywhere” part of the KA mission.

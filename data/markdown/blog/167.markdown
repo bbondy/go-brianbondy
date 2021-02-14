@@ -67,4 +67,4 @@ Tests are run both on the staged website version before it is set as the default
 
 The output of tests looks like this:
 
-<img src="https://brianbondy.com/static/img/blogpost_167/test-output.png" style="width: 400px">
+<img src="https://brianbondy.com/static/img/blogpost_167/test-output.png" style="width: 90vw">

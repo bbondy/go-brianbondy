@@ -4,7 +4,7 @@ Every year the Firefox team gets together for a week of working together.  Last 
 
 Here is a talk I did on Windows 8 and Firefox:
 
-<iframe frameborder="0" width="420" height="236" name="vidly-frame" src="http://s.vid.ly/embeded.html?link=4v0i9q&autoplay=false"><a target='_blank' href='http://vid.ly/4v0i9q'><img src='http://cf.cdn.vid.ly/4v0i9q/poster.jpg' /></a></iframe>
+<iframe frameborder="0" name="vidly-frame" src="http://s.vid.ly/embeded.html?link=4v0i9q&autoplay=false"><a target='_blank' href='http://vid.ly/4v0i9q'><img src='http://cf.cdn.vid.ly/4v0i9q/poster.jpg' /></a></iframe>
 
 The [slides for the talk can be found here][1].  The slides were built in HTML5 from [this slides sample at html5rocks.com][2].
 

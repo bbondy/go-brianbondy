@@ -8,7 +8,7 @@ Our users help support over 300,000 registered content creators via micropayment
 And our community is growing and thriving more every day.
 
 Brave 2019 company event:
-<img src="/static/img/blogpost_174/brave-together.png" style="margin-bottom: 5px; width:700px">
+<img src="/static/img/blogpost_174/brave-together.png" style="width:90vw">
 
 Today we're celebrating the release of Brave 1.0, and I couldn't be happier to be a part of it.
 
@@ -25,7 +25,7 @@ If I wasn't offered a position with my first choice Khan Academy, then I'd find 
 
 Before I left Mozilla though, and on the final night of the summit, I wanted to get a picture with the creator of JavaScript and co-founder of Mozilla, Brendan Eich.
 
-<img src="/static/img/blogpost_174/brendan-brian.png" style="float:right; margin-left: 40px; margin-bottom: 5px; width:250px">
+<img src="/static/img/blogpost_174/brendan-brian.png" style="float:right; margin-left: 20px; width:25vw">
 
 I told myself that this would be the last time I would see, let alone be able to get a picture of myself with Brendan.
 
@@ -46,7 +46,7 @@ I couldn't DM him of course, because he wasn't following me on Twitter at the ti
 
 I did have his personal email though, and so I started what would be a life-changing email thread.
 
-<img src="/static/img/blogpost_174/2014-email.png" style="margin-bottom: 5px; width: 550px">
+<img src="/static/img/blogpost_174/2014-email.png" style="width: 90vw">
 
 # Defining what Brave would be and how it would work
 
@@ -72,7 +72,7 @@ I knew how installers would work, how updates would work, how signing worked, ho
 During this discussion, something changed.
 I went from being considered as a contractor with Windows talent, to being offered to be a co-founder in the company that was about to start.
 
-<img src="/static/img/blogpost_174/jan-2015-email.png" style="margin-bottom: 5px; width:550px">
+<img src="/static/img/blogpost_174/jan-2015-email.png" style="width:90vw">
 
 # May 2015 - Starting work
 
@@ -155,33 +155,33 @@ We had 3 attempts for our logo.
 
 The first one was from an independent contractor.  Here are the initial bar napkin sketches:
 
-<img src="/static/img/blogpost_174/bar-napkin-sketches.png" style="margin-left: 40px; margin-bottom: 5px; width:250px">
+<img src="/static/img/blogpost_174/bar-napkin-sketches.png" style="margin-left: 40px; width:250px">
 
 We decided right there, that obviously the right direction was... the lightning bolt icon.
 
 But after it was rendered and rasterized, we decided to go back and pick a different direction.
 
-<img src="/static/img/blogpost_174/logo-1.png" style="margin-left: 40px; margin-bottom: 5px; padding: 20px; width:64px">
+<img src="/static/img/blogpost_174/logo-1.png" style="margin-left: 40px; padding: 20px; width:64px">
 
 Our next step was to launch a crowdspring contest with a description asking for something that invoked a lion in imagery.
 
-<img src="/static/img/blogpost_174/logo-2.png" style="margin-left: 40px; margin-bottom: 5px; padding: 20px; width:128px">
+<img src="/static/img/blogpost_174/logo-2.png" style="margin-left: 40px; padding: 20px; width:128px">
 
 We kept making tweaks to it but we were never happy with it.
 
-<img src="/static/img/blogpost_174/logo-3.png" style="margin-left: 40px; margin-bottom: 5px; padding: 20px; width:64px">
+<img src="/static/img/blogpost_174/logo-3.png" style="margin-left: 40px; padding: 20px; width:64px">
 
 When Brad started working at Brave, we assigned the logo to him. He knocked it out of the park and we loved what he came up with.
 
-<img src="/static/img/blogpost_174/logo-4.png" style="margin-left: 40px; margin-bottom: 5px; padding: 20px; width:64px">
+<img src="/static/img/blogpost_174/logo-4.png" style="margin-left: 40px; padding: 20px; width:64px">
 
 Which was later revised to:
 
-<img src="/static/img/blogpost_174/logo-5.png" style="margin-left: 40px; margin-bottom: 5px; padding: 20px; width:64px">
+<img src="/static/img/blogpost_174/logo-5.png" style="margin-left: 40px; padding: 20px; width:64px">
 
 Bonus: I picked up one of the runner-up submission icons as my website logo.
 
-<img src="/static/img/blogpost_174/logo-brianbondy.png" style="margin-left: 40px; margin-bottom: 5px; padding: 20px; width:64px">
+<img src="/static/img/blogpost_174/logo-brianbondy.png" style="margin-left: 40px; padding: 20px; width:64px">
 
 
 # First attempt at a desktop browser
@@ -196,7 +196,7 @@ The Firefox.html project was announced Dec 6, 2014, and had a name change to bro
 We built the UI for Brave from scratch using React and Redux: the original thinking was that we wanted more speed iterating on UI innovations.
 The Brave prototype found ad slots dynamically, and since we had no ad inventory at the time, comically we used a service which provided pictures of bearded men.
 
-<img src="/static/img/blogpost_174/beard-browser.png" style="margin-left: 40px; margin-bottom: 5px; width:550px">
+<img src="/static/img/blogpost_174/beard-browser.png" style="width:90vw">
 
 As you can see, the design of the browser was pre-Brad. It was done by developers that sorely needed design help.
 
@@ -218,7 +218,7 @@ However, we used and liked a browser that was on the market, created by an indep
 After a lot of discussion and planning we flew Chris from Australia to San Francisco and agreed to acquire Link Bubble in August 2015.
 We [made it free](https://brianbondy.com/blog/tagged/link-bubble) 22 days later.
 
-<img src="/static/img/blogpost_174/link-bubble-free-tweet.png" style="margin-right: 40px; margin-bottom: 5px; width:350px">
+<img src="/static/img/blogpost_174/link-bubble-free-tweet.png" style="width:90vw">
 
 The basic idea of Link Bubble was pretty good.  If you're reading an email and there's a link you want to read, then tap the link, keep reading the email, let it load in the background in a bubble, then tap the bubble to bring up the page later.
 There's no need to context switch to a new app with a loading page.
@@ -280,7 +280,7 @@ Android is currently nearing completion of its revision 3 rewrite, a move to the
 
 # Basic Attention Token
 
-<img src="/static/img/blogpost_174/bat-logo.png" style="float:left; margin-right: 40px; margin-bottom: 5px; padding: 20px; width:128px">
+<img src="/static/img/blogpost_174/bat-logo.png" style="float:left; margin-right: 40px; padding: 20px; width:128px">
 
 We added tipping support first with Bitcoin and later with an ERC-20 token named Basic Attention Token (BAT).
 We created BAT largely with the help of a developer named Scott, as well as Marshall, on May 31, 2017.
