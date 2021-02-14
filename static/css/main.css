@@ -86,6 +86,7 @@ a {
 }
 .blogPost {
   margin-bottom: 60px;
+  overflow-wrap: break-word;
 }
 .blogPost img,
 .blogPost iframe {
