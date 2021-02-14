@@ -26,42 +26,44 @@
     
   </head>
   <body>
-    <div class="topBar">
-      <a href="/">
-        <img title="Brian R. Bondy" src="/static/img/logo.png">
-      </a>
-      <ul class="topBarLinks">
+    <div class="content">
+      <div class="topBar">
         <a href="/">
-          <li class="{{if eq .MarkdownSlug "blog"}}current{{end}}">Blog</li> 
+          <img title="Brian R. Bondy" src="/static/img/logo.png">
         </a>
-        <a href="/blog/filters">
-          <li class="{{if eq .MarkdownSlug "filters"}}current{{end}}">Filters</li>
-        </a>
-        <a href="/running">
-          <li class="{{if eq .MarkdownSlug "running.markdown"}}current{{end}}">Running</li>
-        </a>
-        <a href="/projects">
-          <li class="{{if eq .MarkdownSlug "projects.markdown"}}current{{end}}">Projects</li>
-        </a>
-        <a href="/other">
-          <li class="{{if eq .MarkdownSlug "other.markdown"}}current{{end}}">Other</li>
-        </a>
-        <a href="https://twitter.com/brianbondy" target="_blank" rel="noopener noreferrer">
-          <li class="social"><span title="Twitter" class="fab fa-twitter"></span></li>
-        </a>
-        <a href="https://www.strava.com/athletes/6932803" target="_blank" rel="noopener noreferrer">
-          <li class="social"><span title="Strava" class="fab fa-strava"></span></li>
-        </a>
-        <a href="https://github.com/bbondy" target="_blank" rel="noopener noreferrer">
-          <li class="social"><span title="GitHub" class="fab fa-github"></span>
-          </li>
-        </a>
-        <a href="https://www.linkedin.com/in/bbondy" target="_blank" rel="noopener noreferrer">
-          <li class="social"><span title="LinkedIn" class="fab fa-linkedin"></span></li>
-        </a>
-      </ul>
+        <ul class="topBarLinks">
+          <a href="/">
+            <li class="{{if eq .MarkdownSlug "blog"}}current{{end}}">Blog</li> 
+          </a>
+          <a href="/blog/filters">
+            <li class="{{if eq .MarkdownSlug "filters"}}current{{end}}">Filters</li>
+          </a>
+          <a href="/running">
+            <li class="{{if eq .MarkdownSlug "running.markdown"}}current{{end}}">Running</li>
+          </a>
+          <a href="/projects">
+            <li class="{{if eq .MarkdownSlug "projects.markdown"}}current{{end}}">Projects</li>
+          </a>
+          <a href="/other">
+            <li class="{{if eq .MarkdownSlug "other.markdown"}}current{{end}}">Other</li>
+          </a>
+          <a href="https://twitter.com/brianbondy" target="_blank" rel="noopener noreferrer">
+            <li class="social"><span title="Twitter" class="fab fa-twitter"></span></li>
+          </a>
+          <a href="https://www.strava.com/athletes/6932803" target="_blank" rel="noopener noreferrer">
+            <li class="social"><span title="Strava" class="fab fa-strava"></span></li>
+          </a>
+          <a href="https://github.com/bbondy" target="_blank" rel="noopener noreferrer">
+            <li class="social"><span title="GitHub" class="fab fa-github"></span>
+            </li>
+          </a>
+          <a href="https://www.linkedin.com/in/bbondy" target="_blank" rel="noopener noreferrer">
+            <li class="social"><span title="LinkedIn" class="fab fa-linkedin"></span></li>
+          </a>
+        </ul>
+      </div>
+      <div id="mountPoint">
     </div>
-    <div id="mountPoint">
       <div class="mainBody">
         <div>
         {{block "mountPoint" .}}
