@@ -50,7 +50,6 @@ a {
 }
 .topBar li:hover:not(.social) {
   background-color: #4d90fe;
-  border-bottom: 1px solid #4d90fe;
   color: white;
 }
 .topBar li.social {
