@@ -1,5 +1,10 @@
 # Memorable runs
 
+
+- April 13 2021 - [Malden Death Run (MDR) III](https://www.strava.com/activities/5121654475) - 120x Bertha repeats (Malden park hill). 11381 feet of elevation, 62km
+- December 29 2020 - 20 days of 20mi [1](https://www.strava.com/activities/4534632360), [2](https://www.strava.com/activities/4539535300), [3](https://www.strava.com/activities/4544954846), [4](https://www.strava.com/activities/4549708525), [5](https://www.strava.com/activities/4555073290), [6](https://www.strava.com/activities/4561300075), [7](https://www.strava.com/activities/4565457669), [8](https://www.strava.com/activities/4570688958), [9](https://www.strava.com/activities/4576315422), [10](https://www.strava.com/activities/4581555218), [11](https://www.strava.com/activities/4586444642), [12](https://www.strava.com/activities/4592893400), [13](https://www.strava.com/activities/4599256791), [14](https://www.strava.com/activities/4603287664), [15](https://www.strava.com/activities/4608385428), [16](https://www.strava.com/activities/4613801745), [17](https://www.strava.com/activities/4618911210), [18](https://www.strava.com/activities/4623939482), [19](https://www.strava.com/activities/4630339015), [20](https://www.strava.com/activities/4636800587)
+- December 18 2020 - [BDC](https://www.strava.com/activities/4488559243) - 55.57Km 9h 10380 feet of elevation (DNF, no finishers this year)
+- December 2020 - Merry Vertmas - 25 days of vertical accumulation
 - November 2020 - [Lone Cactus Last Person Standing](https://ultrasignup.com/results_event.aspx?did=80168) - [Hour 1 - 30](https://www.strava.com/activities/4339042086), [Hour 31](https://www.strava.com/activities/4377519022) - 1st Place!
 - November 2020 - [weUltra Park Daze](https://www.strava.com/activities/4339042086) - hills (45km)
 - November 2020 - [Aunt Esther's half marathon](https://www.strava.com/activities/4302759498) - 82x up/down a nasty hill
