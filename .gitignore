@@ -12,6 +12,8 @@
 *.out
 
 .DS_Store
+*.swo
+*.swp
 
 # Dependency directories (remove the comment below to include it)
 # vendor/
