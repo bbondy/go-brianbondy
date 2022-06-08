@@ -1,5 +1,8 @@
 # Memorable runs
 
+- June 2022 - [FAwR 103mi run](https://www.strava.com/activities/7257063416) - Loop around Windsor-Essex county
+- May 2022 - [Perfect PR Backyard Ultra](https://www.strava.com/activities/7187364571) - Winner, last man standing
+- April 2022 - [24h Backyard Ultra from home](https://www.strava.com/activities/6924154918) - Just me, for fun
 - October 1 2021 - [Little Dog's Backyard Ultra](https://www.strava.com/activities/6055166607) - Timed out after the 14th yard
 - July 2021 - [CVRR Backyard Ultra](https://www.strava.com/activities/5646348573) - 1st place, 22 yards
 - July 2021 - [Ode to Laz Backyard Ultra](https://www.strava.com/activities/5607806544) - Timed out after the 12th yard
@@ -27,7 +30,7 @@
 - April 2020 - [Quarantine Backyard Ultra 186km](https://www.strava.com/activities/3259169846)
 - Dec 2019 - [First sub-4h marathon](https://www.strava.com/activities/2959111816)
 - Oct 2019 - [Link's first 10k (MEC 10k trail race)](https://www.strava.com/activities/2800671596)
-- Oct 2019 - [FAwR 103mi bandit run)](https://www.strava.com/activities/2783554178)
+- Oct 2019 - [FAwR 103mi bandit run](https://www.strava.com/activities/2783554178)
 - Sept 2019 - [Woodstock Hallucination 100 mile](https://www.strava.com/activities/2689179512)
 - Sept 2018 - Ronnie's first half marathon - Oakville Half marathon
 - Nov 2017 - Hamilton Marathon Road2Hope
