@@ -1,5 +1,6 @@
 # Memorable runs
 
+- July 2022 - [Persistence Backyard Ultra](https://www.strava.com/activities/7558515644) - Persistence Backyard Ultra - Assist (2nd place)
 - June 2022 - [FAwR 103mi run](https://www.strava.com/activities/7257063416) - Loop around Windsor-Essex county
 - May 2022 - [Perfect PR Backyard Ultra](https://www.strava.com/activities/7187364571) - Winner, last man standing
 - April 2022 - [24h Backyard Ultra from home](https://www.strava.com/activities/6924154918) - Just me, for fun

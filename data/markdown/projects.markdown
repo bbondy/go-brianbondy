@@ -59,7 +59,7 @@ JavaScript code modules let multiple privileged JavaScript scopes share code. Fo
 ---
 
 <img src='/static/img/projects/ec2.jpg' style='float:right; height: 96px; margin-top: 20px; margin-left: 20px;'>
-j
+
 ### [Simple AWS EC2 wrapper library](https://www.npmjs.com/package/simple-ec2)
 Simple AWS SDK wrapper library for starting, stopping, listing, and executing commands on Amazon Elastic Compute Cloud (EC2)instances.
 EC2 is a central part of Amazon.com's cloud computing platform, Amazon Web Services (AWS).
