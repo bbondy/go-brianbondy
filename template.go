@@ -162,6 +162,18 @@ func blogPostPageHandler(w http.ResponseWriter, r *http.Request) {
 	t.Execute(w, p)
 }
 
+func generateRSSHandler(w http.ResponseWriter, r *http.Request) {
+	target := "https://" + r.Host
+	rssXML, err := data.ConvertToRSS(blogPosts, GetTitle("Blog posts"), target)
+	if err != nil {
+		http.Error(w, "Error generating RSS feed", http.StatusInternalServerError)
+		return
+	}
+
+	w.Header().Set("Content-Type", "application/xml")
+	w.Write(rssXML)
+}
+
 func filtersPageHandler(w http.ResponseWriter, r *http.Request) {
 	current_year := time.Now().Year()
 	year_range := make([]int, 10)
@@ -244,8 +256,12 @@ func initializeRoutes(router *mux.Router) {
 	handleFilterPage := negroni.New(
 		negroni.HandlerFunc(directToHttps),
 		negroni.Wrap(http.HandlerFunc(filtersPageHandler)))
+	handleRSS := negroni.New(
+		negroni.HandlerFunc(directToHttps),
+		negroni.Wrap(http.HandlerFunc(generateRSSHandler)))
 
 	router.Handle("/", handleBlogPost)
+	router.Handle("/rss", handleRSS)
 	router.Handle("/blog/{id:[0-9]+}", handleBlogPost)
 	router.Handle("/blog/{id:[0-9]+}/{slug}", handleBlogPost)
 	router.Handle("/page/{page:[0-9]+}", handleBlogPost)
