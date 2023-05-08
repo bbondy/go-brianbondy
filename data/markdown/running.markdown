@@ -1,5 +1,7 @@
 # Memorable runs
 
+- May 2023 - [Cocodona](https://www.strava.com/activities/9016891169) - Finished in 102 hours, 45th overall
+- April 2023 - [Grand Canyon R2R2R](https://www.strava.com/activities/8816263472)
 - October 2022 - [Big Dog's Backyard Ultra National Championships](https://www.strava.com/activities/7977085777) - Team Canada. 5th of 15 within Canada. 42 yards
 - July 2022 - [Persistence Backyard Ultra](https://www.strava.com/activities/7558515644) - Persistence Backyard Ultra - Assist (2nd place)
 - June 2022 - [FAwR 103mi run](https://www.strava.com/activities/7257063416) - Loop around Windsor-Essex county

@@ -7,7 +7,7 @@
 Family is my "raison d'être".  My wife Shannon and I have 3 sons: Link, Ronnie, and Asher.
 
 When I'm not working, I'm usually running while listening to audiobooks.
-My longest run was in 2022, just over 287km (178 miles).
+My longest run was in 2023 at Cocodona, just over 422 km (262 mi).
 
 I am a professional C++, Python, Rust, Go, C#, and JavaScript software developer.
 I like reading about new technologies and other nerdy things.
