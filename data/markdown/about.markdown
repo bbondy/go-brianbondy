@@ -4,51 +4,46 @@
 
 <img src="/static/img/family2.jpg" style="float:left; margin-right:20px; margin-bottom: 1em; border: 1px solid black" height="250" width="375">
 
-Family is my "raison d'être".  My wife Shannon and I have 3 sons: Link, Ronnie, and Asher.
+I consider family to be my "raison d'être". I'm blessed with a beautiful wife and three sons: Link, Ronnie, and Asher.
 
-When I'm not working, I'm usually running while listening to audiobooks.
-My longest run was in 2023 at Cocodona, just over 422 km (262 mi).
+In my spare time, I often run while enjoying audiobooks. My longest run took place in 2023 at Cocodona, covering a distance of just over 422 km (262 mi).
 
-I am a professional C++, Python, Rust, Go, C#, and JavaScript software developer.
-I like reading about new technologies and other nerdy things.
+As a professional software developer, I specialize in C++, Python, Rust, Go, C#, and JavaScript. I have a keen interest in reading about new technologies, business, self-improvement, and fiction.
 
-From 2015 onward, I co-founded [Brave Software](https://www.brave.com) with the guy that created Mozilla and JavaScript: Brendan Eich.
-I'm serving as CTO and as a member of the board at Brave Software.
+In 2015, I co-founded [Brave Software](https://www.brave.com) with Brendan Eich, the creator of Mozilla and JavaScript. Currently, I'm serving as the CTO and a member of the board at Brave Software.
 
-I used to work at some pretty cool places including Khan Academy, Mozilla, and Evernote.
+Before Brave, I was fortunate to work at some innovative places like Khan Academy, Mozilla, and Evernote.
 
-You can get in contact with me [here](/contact).
+For getting in touch with me, please visit my [contact page](/contact).
 
-
-<br class="clearfloat">
 
 ## Facts about me
 
 <img src="/static/img/brian-ronnie.jpg" width="219" height="476" style="float:right; margin-left:30px; border: 1px solid black">
 
-- I drink a lot of coffee and usually spill it on myself
-- I'm married to the beautiful Shannon L. Bondy (Formerly Gray)
-- I have twins and one singleton, all boys
-- I have a red tri-colored border collie named "Leia". (Star Wars)
-- I have an Australian Shepherd named Nymeria (Nym for short, direwolf from Game of Thrones)
-- I've run several ultramarathons, my highest distance is 106mi as of 2019.
-- I have a bachelors degree in Computer Science Honors in the Faculty of Mathematics at Waterloo University
-- I have a black belt (Shodan) in Meibukan Goju Ryu Karate
-- I used to work on Gecko (Engine that runs Firefox)
-- My favorite teacher is Salman Khan, and I plan to learn for life from his teachings on every subject
+- I'm an avid coffee drinker, but often spill it on myself
+- I strive to stay active, usually working out every morning
+- My better half is the beautiful Shannon L. Bondy (Formerly Gray)
+- I'm a proud father of twin boys and a singleton
+- Our Australian Shepherd, Nymeria (Nym for short, a direwolf from Game of Thrones) is a part of our family
+- Before Nym, we had a red tri-colored border collie named "Leia". (Star Wars)
+- I graduated with a bachelors degree in Computer Science Honors from the Faculty of Mathematics at University of Waterloo
+- I hold a black belt (Shodan) in Meibukan Goju Ryu Karate
+- I used to work on Gecko, the engine that runs Firefox
+- Salman Khan is my favorite teacher, and I strive to be a lifelong learner through his teachings
 - My favorite music artist is Ray Charles
-- My favorite movies are Braveheart, The Last Samurai, Ray
-- My favorite T.V. shows are Futurama, Family Guy, South Park, Simpsons, Tudors, Apprentice, and Survivor
-- My favorite place to go for a nice meal is the Red Sun - Chinese food
-- My favorite coffee shop is Tim Hortons
-- My favorite plays are Phantom of the Opera, and Les Miserables
-- I have two cats named "Sophie" and "Lil" (and we found out Lil was really a boy after a year of thinking he was a girl with the name Lillie)
-- I was born on March 01, 1981
-- I was born and raised on a farm. I'm convinced that I'm a hard worker because of that.
-- I'm a home body, but I do like to go out.  I'd love to do constructive things with my time.
-- I love to learn.  If I'm not learning, then I lose interest quick.  I need to be challenged.
-- I love to push and discover my limits, that's why I run.
-- I co-founded 2 companies before Brave: ROBOBAK and VisionWorks Solutions Inc.
-- I was awarded a Microsoft MVP award for Visual C++ July 2010 - July 2011
-- It is a dream of mine to one day be a winner of the Hutter Prize
-- I live in Belle River, Ontario, Canada.
+- My favorite movies include Braveheart, The Last Samurai, and Ray
+- I enjoy watching T.V. shows like Futurama, Game of Thrones, South Park, Simpsons, and Survivor
+- Red Sun is my go-to place for Chinese food
+- My preferred coffee shop is Starbucks
+- Monty Python's Spamalot, Phantom of the Opera, and Les Miserables are my favorite plays
+- I have a cat named Loki
+- Having been born and raised on a farm, I attribute my hard work ethic to those early years
+- I'm a homebody but also enjoy going out and spending my time constructively
+- I have a thirst for knowledge and enjoy being challenged
+- I love pushing and discovering my limits, hence my passion for running
+- I co-founded two companies before Brave: ROBOBAK and VisionWorks Solutions Inc.
+- I received the Microsoft MVP award for Visual C++ in July 2010 - July 2011
+- One of my aspirations is to be a winner of the Hutter Prize
+- My dreams include setting a new Canadian record, and perhaps a world record in backyard ultras
+- I reside in Belle River, Ontario, Canada.
