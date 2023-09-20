@@ -1,0 +1,119 @@
+In August 2023, Brave released [Leo—Brave’s native AI assistant](https://brave.com/leo-release/)—on its [Nightly channel](https://brave.com/download-nightly/). Since then we’ve incorporated a lot of user feedback, and made numerous improvements to the feature. There are more changes on the way, and soon we will launch Leo on our full release channel, making it available to our 60 million users.
+
+We thought now would be a great time to share more about how Brave is thinking about Leo, and the future AI integrations within the browser.
+
+# Background: Brave as a user agent
+
+Brave has always been a [user agent](https://developer.mozilla.org/en-US/docs/Glossary/User_agent). A user agent is a [client](https://en.wikipedia.org/wiki/Client_(computing)) application that gives users better control of the content they access on the Internet, without conflicts of interest between server operators – including [third parties](https://en.wikipedia.org/wiki/Web_tracking) – and the user. Leo takes this concept one step further, moving beyond the limited stance of browsing content in the way the author or creator intended. With Leo, you're not passively consuming web pages and videos, rather you’re actively exploring content: asking tangential questions, seeking clarifications, exploring diverse viewpoints, and overall tailoring the Web to your preferences.
+
+Leo “understands” the current page you’re visiting—it’s the next best thing to talking directly with the author. In fact, in many ways it’s better, as Leo can independently analyze and reason about pages, free of the author’s or creator’s biases.
+
+To be clear, Brave isn’t trying to create the world's leading Large Language Model (LLM) from scratch. Instead, our goal is to link users with top LLMs and harness them in innovative and where feasible, privacy preserving ways. Our goal is to open novel, convenient, and private use cases that are often possible only in the context of a particular user’s browsing session.
+
+As with all Brave products, Leo adheres to Brave’s core values and is built with privacy by design. User inputs are always submitted anonymously through a reverse-proxy to our inference infrastructure, giving users an AI experience with unparalleled privacy. Also, conversations are discarded immediately after the reply is generated and are not persisted on Brave's servers. As we expand Leo's development, we will continue to integrate privacy into its features and to innovate with new approaches to give our users the privacy they expect.
+
+<img style='width:90vw' src='/static/img/blogpost_184/image1.png'>
+
+# General release channel availability: cost and viability 
+
+The first step to opening [this amazing feature](https://brave.com/leo-release/) to our general release channel is to make sure the cost is viable for Brave to offer to its full user base. With more than 60 million users worldwide, the cost of running Leo as-is on our general release channel would be prohibitive without a paid option. For this reason, we’ll soon be offering a premium version of Leo. Alongside the free version of this feature, the premium version will cover the costs of hosting our premium models, and for paying the API access for other premium model choices.
+
+This next update to Leo will include:
+A seamless onboarding experience for the premium upgrade, including the ability to pay for premium access with BAT.
+The ability to select different models directly in the main Leo interface.
+The addition of integration points from other parts of the browser into Leo.
+Access to better models such as Llama 2 70B, and Claude Instant (by Anthropic).
+
+Here’s a table that summarizes the free / premium options:
+
+
+| Feature                    | Free Leo                       | Premium Leo |
+| -------------------------- | ------------------------------ | ----------- |
+| Models                     | Llama2 13B, Code Llama 13B     | Llama 2 13B, Llama 2 70B, Code Llama 13B, Code Llama 70B, Anthropic Claude Instant |
+| Rate limits                | Reasonable rate limits         | Higher rate limits |
+| Quality of conversations   | Limited by models              | Very high |
+| Privacy                    | Inputs are always submitted anonymously through a reverse-proxy and are not retained. | Inputs are always submitted anonymously through a reverse-proxy and are not retained. |
+
+We’re targeting mid to late Q4 for the Leo release.
+
+# Mobile parity
+
+Mobile parity will most likely follow shortly after the desktop release. 
+
+The focus of the mobile release will be to make sure everything from the desktop release works on Android and iOS.
+
+# Roadmap
+
+Major enhancements and features for Leo are described and grouped into categories below. Some of these features will be available with the first release, and others will roll out during each of our browser updates.
+
+## Local persistence of conversations, and full-page interactions
+
+- Ability to store and reference past conversations locally on your device, and continue these conversations at a later date.
+- Ability to sync these conversations across devices using Brave Sync.
+- Full-page interactive UI via a URL like brave://chat (or brave://leo).
+
+## Better answers
+
+- Provide Brave Search results to the model for up-to-date information.
+- Provide Brave Q&A and Brave Support to the model for user questions.
+- Provide Brave News results to the model for help answering user questions.
+- Provide cryptocurrency context to the model for help answering Web3-related questions.
+- Provide a generalized extension framework, or adopt an existing form of extensions such as ChatGPT plugins.
+
+## Richer output
+
+- Image generation as part of Leo’s possible outputs.
+- Ability to highlight text within a page that’s currently being viewed to support Leo’s claims.
+- Ability for Leo to take actions on a user’s behalf (for example, for Leo to start a Web search, change the current page to dark mode, or change a browser setting).
+- Entity highlighting of response text to link to Brave Search (for example, if an output talked about Brave, it may highlight Brave and make it a Brave Search query).
+
+## Model expansions
+
+- Continually add access to the latest-and-greatest models.
+- Expand commercial relationships to offer more model choices for premium users.
+- Larger context sizes.
+
+## Better language support
+
+Today, if Leo is prompted in another language, it can already answer in that language (such as French and Spanish). However, not all languages are covered, and a page’s context, when used, will likely determine the response language. We’d like to add better handling for languages, and overall to expand the number of languages, and the quality of the output of those languages, by adding better international models.
+
+## Chat interface and customization
+
+- At the time of writing, context for Leo interactions can derive either from the entire page, or it can work with no context at all. In the future, we’d like to make this better via context menus, allowing users to select a specific part of a page to supply the model its interaction context.
+- We’d like to offer access to Leo via omnibox (address bar) suggestions, a new tab card, and more.
+- A CodeLlama integration into developer tools and in the sidebar, with optional injection into the current page context.
+
+## Model personalization and personification
+
+- Customize Leo’s tone and summary styles for personalized interactions.
+- User-defined boundaries, mood, and context awareness.
+
+## Content consumption
+
+- PDF summarization: the ability to interface with not only web pages and videos, but also with PDF documents.
+- Using accessibility and other information available to help models understand web pages better.
+- Image understanding via drag and drop.
+
+## Writing tools
+
+- Tools for filling in editable fields on web pages (such as formatting and generating text).
+- Grammar, spelling, and other suggestions.
+- Content suggestions, and content auto-completion.
+
+## Local model support
+
+- We’d like to offer locally running models, and even allow users to configure their own models. Doing so would open more possibilities for assisting users with their local, private Brave data (for example, making a better suggestion bar or autocomplete suggestions).
+
+## Brave Ads & Brave Rewards integration
+
+- We may offer a privacy-preserving ad-supported option for those users who don’t want to buy a premium subscription, but still want premium features.
+- Thinking beyond display ads, we’d like the model to help users make purchasing decisions, via context such as detailed product information; this could entail an ad catalog and all knowledge about the products behind those ads, but not advertise or give you phony or biased information (for example, if you were trying to buy a TV, Leo could tell you it knows of a less expensive TV, or one that offers features not available in the TV you’re currently asking about).
+- We’d like to investigate how to tie this recommendation engine to Brave Rewards.
+- In these shopping scenarios, the model would always genuinely act first as the user’s agent. For instance, it might respond that a TV you were viewing had a better price elsewhere than in an online ad you may have seen.
+
+With Leo by their side, users can interact with the Web in groundbreaking new ways. The future of Leo outlined in this roadmap is exciting to us. Unlike other AI assistants, Leo is not a simple chat interface. Leo is a companion for helping you make sense of the Web as you browse, while preserving your privacy and helping you stay in charge of your experience.
+
+We genuinely value insights from our community. For any thoughts or feedback, connect with us on our [community question and answer site](https://community.brave.com/c/new-feature-feedback/brave-leo-feedback/158).
+
+
+
