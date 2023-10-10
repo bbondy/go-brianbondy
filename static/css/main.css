@@ -97,6 +97,7 @@ a {
 .blogPost table img {
   max-width: 350px;
 }
+
 h1,
 h2,
 h3,
@@ -230,4 +231,21 @@ textarea {
   .topBarLinks .filters {
     display: none;
   }
+}
+
+.image-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start; /* or 'space-between' or other values based on preference */
+}
+
+.image-item {
+  flex: 0 0 50%; /* This means the item won't grow or shrink and will take up 40% of the viewport width */
+  padding: 5px;
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+.image-item img {
+  width: 100%; /* Make the image fill its container */
+  height: auto; /* Maintain the image's aspect ratio */
 }

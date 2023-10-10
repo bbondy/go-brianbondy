@@ -32,19 +32,23 @@ Autumn leaves blanketed the path, but obscured the ground, turning every step in
 Stubbed toes and tripping hazards were common. 
 The course's elevation was notably high for this kind of format.
 
-<table>
-<tr><td style="vertical-align: top">
-<img style='width:40vw' src='/static/img/blogpost_185/terrain-1.jpg'>
-</td><td style="vertical-align: top">
-<img style='width:40vw' src='/static/img/blogpost_185/terrain-2.jpg'>
-</td></tr><tr><td style="vertical-align: top;">
-<img style='width:40vw' src='/static/img/blogpost_185/terrain-3.jpg'>
-</td><td style="vertical-align: top">
-<img style='width:40vw' src='/static/img/blogpost_185/terrain-4.jpg'>
-<tr><td style="vertical-align: top">
-<img style='width:40vw' src='/static/img/blogpost_185/terrain-5.jpg'>
-</td></tr>
-</table>
+<span class="image-grid">
+    <div class="image-item">
+        <img src='/static/img/blogpost_185/terrain-1.jpg' alt="Terrain 1">
+    </div>
+    <div class="image-item">
+        <img src='/static/img/blogpost_185/terrain-2.jpg' alt="Terrain 2">
+    </div>
+    <div class="image-item">
+        <img src='/static/img/blogpost_185/terrain-3.jpg' alt="Terrain 3">
+    </div>
+    <div class="image-item">
+        <img src='/static/img/blogpost_185/terrain-4.jpg' alt="Terrain 4">
+    </div>
+    <div class="image-item">
+        <img src='/static/img/blogpost_185/terrain-5.jpg' alt="Terrain 5">
+    </div>
+</span>
 
 
 While I was deep into the race, my wife called in a concerned tone around the 9th hour: “Are you OK?!”.
