@@ -1,0 +1,5 @@
+<svg class="play-button" viewBox="0 0 100 100">
+    <circle cx="50" cy="50" r="50" fill="rgba(0, 0, 0, 0.6)"/>
+    <polygon points="40,30 70,50 40,70" fill="white"/>
+</svg>
+

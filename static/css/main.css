@@ -249,3 +249,20 @@ textarea {
   width: 100%; /* Make the image fill its container */
   height: auto; /* Maintain the image's aspect ratio */
 }
+
+.video-thumbnail {
+    position: relative;
+    display: inline-block;
+}
+.video-thumbnail img {
+    display: block;
+}
+.video-thumbnail .play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    height: 80px;
+    z-index: 1; /* Ensure the play button is on top */
+}

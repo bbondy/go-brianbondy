@@ -1,0 +1,392 @@
+The Cocodona 250 is an ultra-endurance race that tests even the most experienced runners. It spans over 250 miles, and traverses rugged landscapes of Arizona, up over 12,000 meters of elevation gain through technical trails, mountains, water crossings, and deserts.  There are massive temperature changes over the span of a few days, and it pushes athletes to their absolute limits and beyond. This race has the power to break you down and rebuild you into a better person.
+
+
+# Training
+
+Unlike [last year](/blog/182/cocodona-250), I entered this race injury-free and shifted my training focus from accumulating as much volume as possible to quality training.
+As an example of that, instead of running a couple extra 20-mile days per week, I spent a couple days at the University of Windsor Athletic Center track doing intervals throughout the winter.
+
+I hit big personal bests (PBs) at basically all normal race distances during my training: 400m, 1/2 mile, 1k, 1 mile, 5km, 10km, half marathon, marathon, and 50km, and I think I was in the best shape of my life going into Cocodona.
+
+# Planning
+
+Planning for a race like this takes about a month for me. I have a spreadsheet with all the details I’ll need throughout the race and I reference it several times throughout the race to make sure I’m executing things with minimal mistakes. I still haven’t had a race with major problems though, and I do realize that ultra-running is mostly about problem solving over long periods of time. 
+
+Here's a small slice section of the spreadsheet that breaks down the aid stations and all the properties of the aid stations.
+
+[<img style='width:90vw' src='/static/img/blogpost_187/planning.png'>](/static/img/blogpost_187/planning.png)
+
+I estimated to finish in the 83-87 hour range but my estimations were based on some crude methods. As an example I would estimate faster than my base pace for any downhill, but many downhill sections were so technical that you couldn't run them at all.  
+
+I also had to pack 10 drop bags for food, supplies, and everything I'd need throughout the run.  My wife was surprisingly patient with me as I had my bags laid out in the spare bedroom for a month.  Since it's a point-to-point run, you basically need all supplies in all drop bags.  Luckily I fit everything in 2 suitcases for travel.
+
+
+# The start of the race
+
+It was 5:00 am and I was shivering in the cool air waiting towards the front of the start line with hundreds of other runners. I had already picked up my SPOT tracker which makes sure the race officials and public can track you throughout the race.  Looking down from the start line, I could still see a long line of people needing trackers. An announcement was made that the race would be delayed 15 minutes to get through the line and it would begin at 5:15am. 
+I met up with a friend I ran with for Team Canada's Backyard Ultra Championships in 2022 - Kevin Barata.  Kevin is a member of RCMP’s elite Emergency Response Team and he's an amazing athlete.
+
+<img style='width:90vw' src='/static/img/blogpost_187/brian-start-2.jpg'>
+
+
+I felt confident on the start line as I reassured myself that I had my salt pills for this first 32 mile segment. I had forgotten them last year at this same race.
+
+With around 2 minutes to start the RD started counting down. I quickly went to my watch and selected the Cocodona 250 GPS route that I had preloaded the week prior.  Due to the immense size of the route, it showed the Loading indicator.  The time continued to tick down for the race start as I watched the time go to under a minute. The watch continued to show Loading (with a spinning icon).
+
+And time continued to tick on: 10, 9, 8, … 
+
+Loading  (with a spinning icon)…, 
+
+And on: 3, 2, 1…
+
+In a panic, I quickly pressed the back button on my watch and my watch completely froze.  I kept trying combinations of buttons because I couldn’t remember which buttons I needed to long press to hard reboot my watch.  Finally, I got the Garmin startup screen, it was being restarted. But I was already running with the pack. A couple minutes later I restarted the tracking without the navigation.  I knew you were able to add the navigation on to an already started session, so it was important to simply start tracking the race and get the GPS navigation on afterwards. After a few minutes, everything was set up. I only missed tracking the first 5 or 6 minutes.
+
+# Appreciation of the course
+
+The course is hard to wrap your head around. You just can't get an appreciation of it by the distance alone. 
+This flyover helps, but it still doesn't come close to capturing what it's like due to the very technical terrain.
+
+<a href="https://www.youtube.com/watch?v=jD48s0ruFOw" target="_blank" class="video-thumbnail">
+    <img src="https://img.youtube.com/vi/jD48s0ruFOw/maxresdefault.jpg" alt="Video Thumbnail" style="width:90vw">
+    <img src="/static/img/play-button.png" alt="Play Button" class="play-button">
+</a>
+
+<span class="image-grid">
+<div class="image-item">
+  <img style='width:90vw' src='/static/img/blogpost_187/img8.jpg'>
+</div>
+<div class="image-item">
+  <img style='width:90vw' src='/static/img/blogpost_187/img9.jpg'>
+</div>
+<div class="image-item">
+  <img style='width:90vw' src='/static/img/blogpost_187/img15.jpg'>
+</div>
+</span>
+
+# The first 32 miles of the race
+
+
+The first 32 miles is the longest, hardest, and has the most elevation with 3335 meters (~11,000 feet) of vert. There’s a lot of warnings about it. You need to start the race with the capacity to carry at least 4L of water. And fill it at the first aid station at mile 7.  Within those 32 miles there are also two 1L fill stations.  They warn you that you will need at a bare minimum at least 6L to get through this whole 32 mile section.
+
+<img style='width:90vw' src='/static/img/blogpost_187/img21.jpg'>
+
+Pretty early on I got my new Leke poles out, which have gloves that attach in. I scratched my face lifting the poles only to trip on a rock and get a pole right to the upper lip. I learnt to hold my poles at an angle in the future if I scratched my face.
+
+I felt this meme in a very literal way:
+<img style='width:90vw' src='/static/img/blogpost_187/meme.png'>
+
+I made off to a quick start heading off with the front of the start line. I didn’t have the issue of being stuck behind a long line like I did last year. If anything, I was going a bit too fast. 
+
+Arriving to fill my bottles at the first aid station, I had 1.5L on my back, 500ml on my left and right breast, and 1L in each back side pocket. I had an extra 500ml handheld which would have made 5L but I thought it was taking too long to fill everything so I filled up to 4.5L only.  My hydration flask at the back took me a couple minutes to figure out how to open.  I trained with that 1.5L back-flask which was filled the entire season, but I used it only for weight. I never actually used it for drinking or filling.
+
+As I ran this section I passed the first water-fill station and continued to work through consuming my water.  When I reached the point of needing the flask at the back which has a long-tubing straw to the front, I realized that it wasn’t working. I must have not had the tubing connected correctly. I threw off my pack and reconnected it and kept going. When I tried to drink again, I had the same problem.  I took it off again and then realized that I had a mismatching-tube for the hydration pack.  I had to very carefully remove the hydration flask in the pack and pour it into my other bottles. This wasted quite a bit of time. I was very careful to not accidentally pour some on the ground. I successfully extracted about 90% of it into my other bottles, and the rest fell on the ground.
+
+<img style='width:90vw' src='/static/img/blogpost_187/img4.jpg'>
+
+By the time I finally reached the final 1L fill station of this section at mile 24.6 I considered asking them if I could fill a little bit more. I was starting to run low. But when I got there the volunteer told me that half of their water was stolen before he got there, so I could only fill 500ml. I asked “Are you serious?” He responded “Yes, but there’s a stream over there if you have a filter”.  I did have a filter in one of my bottles but the water was standing. I filled that bottle with the filter just in case of an emergency, but I didn’t want to get a parasite, bacteria, and other pathogens. So I had decided I wouldn’t drink it unless I absolutely had to. I would still be out here for 3-4 days and that was long enough to get sick and DNF if I drank something bad.
+
+<img style='width:90vw' src='/static/img/blogpost_187/img5.jpg'>
+
+I was nearly out of water after that aid station so I rationed the water a lot.  It was very hot so I decided I should go slow so as to not over exert myself. I poured the possibly contaminated water on my head to cool me down as I realized I wouldn’t need to use it.  When I arrived at the aid station, despite this slowing down in pace, I still arrived an hour earlier than last year. The first thing I did at the aid station was ask for my water bottles to be filled. As I reached in my back to remove an empty water bottle, I produced a full 500ml bottle.  Not the one with a filter. I overlooked that I had 500ml extra.  Huge failure.
+
+# Crown King Saloon - first crew access
+
+This section has a 4 mile downhill to a cool place named the Crown King Saloon.  This is the first place you see your crew and get your first drop bag. This is a big rejuvenating aid station for the runners and many take their time here to get their mind, supplies, change of clothes and foot maintenance under control before proceeding.
+
+<img style='width:90vw' src='/static/img/blogpost_187/crown-king.jpg'>
+<img style='width:90vw' src='/static/img/blogpost_187/crown-king-2.jpg'>
+
+For me it was the first time I’d seen my crew and later-in-the-race pacer Viktoria Brown since the race started.  
+
+<img style='width:90vw' src='/static/img/blogpost_187/viktoria-2.jpg'>
+<img style='width:90vw' src='/static/img/blogpost_187/viktoria-3.jpg'>
+
+Viktoria is a very accomplished ultramarathon runner holding many world records including:
+
+- 5 x GOMU ultramarathon World Champion (48h & 6-day)
+- 48h, 72h, 6-day Canadian ultramarathon record holder
+- Previously 72h ultramarathon World Record holder (2022)
+- First Canadian woman to run 100 miles under 15h (14:57)
+- [Amongst many other accomplishments](https://www.viktoriabrown.com/)
+
+
+She was like a seasoned pit crew telling me to simply eat food as she did everything including giving me a ton of food options, taking off my shoes, putting my socks on, taking my shirt off, throwing another on, filling my water bottles and more.  I liked the milkshake and asked for another one. “No, you are not used to having that much fructose”.  She wasted no time getting me out the door and she even stayed behind later to help many others including someone suffering from foot problems already.
+
+# Into the first night
+
+As I left Crown King I made my first call to my family who seemed excited to hear from me. This section is a pretty steep climb all the way to Camp Kipa. This involved some technical climbs and 1688 more meters of elevation.  
+
+I realized I left with too little hydration, only 1.5L for 5 hours and lost hydration here because there was electrolyte powder that got caught in the bottle. I sucked too hard and the top came off, spilling more than half of a 500ml bottle of water all over myself.
+I was not executing well on hydration at all. I should have also hydrated at the aid stations more.
+
+I finally arrived at Camp Kipa after 19 hours and 37 minutes into the race, almost 2 hours ahead of last year. I tried to sleep here last year and failed so I decided to keep going to the next aid station, Camp Wamatochick, 2.5 hours away. 
+
+My breathing was feeling off and I was developing a bad cough. I had asthma as a child, but this felt different and made it harder to breathe.
+
+Upon arriving at Camp Wamatochick I was getting pretty tired and I saw Jason Baum was a volunteer here. We got a picture together because we raced at the very end of last year’s race and had some good memories about sprinting after a 250 mile run.  He made sure to take good care of me and I even messaged my family in a post that I was looking good. Now 22 hours into the race, I decided I’d push to get to the next aid station before taking a nap. 
+
+<img style='width:90vw' src='/static/img/blogpost_187/jason-baum.jpg'>
+
+Viktoria had suggested I do not sleep the first day originally. I thought that was doable for something like a backyard ultra where you're on a fairly easy looped course, but not for something through deserts and mountains where you are exerting such a high effort.
+
+# Day 2
+
+When I finally reached Whiskey Row at 24 hours and 46 minutes into the race I saw the sun break through the night and I felt alive enough to simply skip sleep altogether.
+
+Viktoria was there to get me back out of Whiskey Row efficiently. I’d see her at several other aid stations that day.  I made a great pace for the rest of that day, working my way to 3 hours ahead of my last year time.
+
+I traversed through the Granite Dells which is one of my favorite places in Sedona. It's hard to navigate, but it's so beautiful.
+
+<a href="https://www.youtube.com/watch?v=W2aHvCX66Lg" target="_blank" class="video-thumbnail">
+    <img src="https://img.youtube.com/vi/W2aHvCX66Lg/hqdefault.jpg" alt="Video Thumbnail" style="width:90vw">
+    <img src="/static/img/play-button.png" alt="Play Button" class="play-button">
+</a>
+
+<span class="image-grid">
+<div class="image-item">
+  <img style='width:90vw' src='/static/img/blogpost_187/img12.jpg'>
+</div>
+<div class="image-item">
+  <img style='width:90vw' src='/static/img/blogpost_187/img16.jpg'>
+</div>
+<div class="image-item">
+  <img style='width:90vw' src='/static/img/blogpost_187/img24.jpg'>
+</div>
+<div class="image-item">
+  <img style='width:90vw' src='/static/img/blogpost_187/brian13.jpg'>
+</div>
+</span>
+
+A very long and boring section was next through a giant ranch field named Fain Ranch. Cows with horns are known to come up to runners, and known to eat flags.  I had a bottle cap and bottle mismatch problem here and lost critical water yet again. A technical climb up Mingus Mountain with 1440 meters of elevation gain brought me to 34 hours 45 minutes. I ate some great lasagna here and this is the first place that I slept. Viktoria allotted me an hour, but I woke up after 30 minutes and was ready to go. 
+
+It was still daylight for the climb down to the town of Jerome.  This climb down last year was in the dark and it was very difficult.  I remember taking a lot of trail naps to be able to get down last year.  The daylight made this section much easier.  By the time I did make it down, it was dark and I was at 42 hours 19 minutes. 
+
+I knew that the next aid station after Jerome Viktoria would switch from crewing to pacing. This meant that for day 3 I wouldn’t be running alone anymore.  My labored breathing was really bad in Jerome. I was coughing up chunks of gunk directly from my lungs. I thought I had pneumonia. A lot of other runners also had the same cough.  I had to stop for about 5 minutes after leaving the aid station and I just kept clearing my lungs of gunk. There was a huge pile on the ground.
+
+# Pole drama
+
+On the last segment towards Dead Horse there’s a particularly steep baseball-and-basketball-sized rock slide that you need to go down. It’s definitely the most technical of the course and you are sliding down trying to catch your balance.  In this section I tripped (no surprise) but caught myself with my poles, only to hear *snap* and one of my 2 Leki poles snapped in 2. I knew from last year that I needed poles or I would DNF this race. I texted Viktoria and Race Command to see who could help. Race Command replied and we had an exchange back and forth. They would try to find me new poles from a volunteer. I suggested that maybe Leki themselves who are a sponsor for the event might lend me a pair and that I could blog about how great their customer support was. Race Command was a bit snarky and told me it’s 1am and Leki is not up reading blog posts. I couldn’t help in my sleep deprived state to snap back a bit and say that I appreciate the help, but just an FYI that I wasn’t planning on writing the blog post while I was running! I followed up quickly with a thank you for helping me and let me know if a volunteer can lend me a set. 
+
+This segment was also the first water crossing. It went pretty smoothly but the current was strong at the far end.  My feet were pretty freezing but in a way it also felt good to get them so cold and wet. 
+
+My wife wrote a temporary message on the Cocodona Runner’s page to try to get me new poles, but Race Command texted shortly after that. They had found me poles and would give them to me at Sedona.
+
+# Dead Horse Ranch - The start of pacing
+
+My breathing was extremely labored and I would cough up gooey stuff from my lungs frequently. I later learned it was because of the prescribed burns and smoke from wildfires to the south-west.
+
+Starting to have Viktoria pace me at Dead Horse Ranch was a big relief for worried family members. My mom and sister and family had been calling me through the nights to make sure I was ok.  It was day break within 2 hours of her starting to pace me.
+
+You go through highs and lows on these runs and family is a source of rejuvenation. My wife, kids, mom, brothers, and sister all showed support. 
+
+Here's a sample of some support throughout the run:
+
+<span class="image-grid">
+<div class="image-item">
+  <img style='width:90vw' src='/static/img/blogpost_187/support.jpg' alt="Foot tape 1">
+</div>
+<div class="image-item">
+  <img style='width:90vw' src='/static/img/blogpost_187/support-2.jpg' alt="Foot tape 4">
+</div>
+</span>
+
+# Thoughts on having a crew and pacer vs not having a crew pacer
+
+Last year I had neither a crew nor pacers. I was definitely pushed more by having them this year.  Viktoria's favorite line was "Let's move with intent!", "Can we move with a little more purpose?".
+I heard this so many times that when she finally started to feel the distance while pacing 125-miles, I threw it back at her in a friendly jest.
+She definitely improved my time and taught me a lot of things.
+
+Most of the leaders of the race though have multiple different pacers and swap between them.  Doing 125-miles of Cocodona pacing is simply too much. And trying to crew and be a pacer at the same time doesn't really work. The pacer needs a crew as well.
+The crewing was very helpful and helped me get in and out faster. It also gave me something to look forward to. 
+
+# Hallucinations 
+
+Talking with Viktoria I realized I hadn’t been having my usual wild hallucinations.  In my last race I felt like I was tripping out the whole time imagining all kinds of crazy things. I also had them at all previous multi-day races and long runs I’ve done as well.  I think the reason for this is because of taking Ketones this time. Viktoria gave a good reason for this, she said it is probably because the muscles take up all the glucose and it leaves the ketones for the brain to feed on. 
+
+I won't say I had no hallucinations, but they were very minimal.  At one segment where I didn't have enough water I saw a guy come up to the trail with what I thought was an ice cream cone that I thought he was waiting to give me.  When I arrived, it was just him eating a subway sandwich and cheering on the runners.  I really wanted that ice cream to cool me down!
+
+
+# Sedona
+
+We had a few more aid stations that day after Dead Horse Ranch and we finally arrived at beautiful Sedona 5 hours 30 minutes before my last year's time.  I had poles waiting for me in my drop bag thanks to Race Command. This was an actual sleep station too, but it was daylight. I opted to try to sleep an hour again, and woke up again after 31 minutes.  We made it across the water crossing during daylight.
+
+<a href="https://www.youtube.com/watch?v=g0tlgWf2-_E" target="_blank" class="video-thumbnail">
+    <img src="https://img.youtube.com/vi/g0tlgWf2-_E/maxresdefault.jpg" alt="Video Thumbnail" style="width:90vw">
+    <img src="/static/img/play-button.png" alt="Play Button" class="play-button">
+</a>
+
+We continued on with a difficult climb up to the Coconino Plateau via the Casner Mountain Grade.  Sadly shortly after this climb, one of the new poles I had been given simply fell apart!  I felt bad for breaking someone’s spare poles, but I think one of them was probably already broken because I was simply nordic walking when they broke. 
+
+<span class="image-grid">
+<div class="image-item">
+  <img style='width:90vw' src='/static/img/blogpost_187/img11.jpg'>
+</div>
+<div class="image-item">
+  <img style='width:90vw' src='/static/img/blogpost_187/brian-6.jpg'>
+</div>
+<div class="image-item">
+  <img style='width:90vw' src='/static/img/blogpost_187/brian-4.jpg'>
+</div>
+</span>
+
+It was after this between hours 60-68 that I had the worst time of the race. I was so extremely sleep deprived but I knew I would not get a trail nap while having a pacer.  Viktoria ran a tight ship and she wouldn’t let me get away with anything (this is a good thing). She definitely wouldn’t wait around in the cold while I slept for 10 minutes. There was 1 aid station in between the sections where I was tired with a nice fire.  Viktoria knew that if I was comfortable I would stay longer at an aid station so we sat in the cold to get resupplied. 
+
+I had a lot of nosebleeds this time, last time it was more in my throat which was raw and sore and spitting blood.  I believe this was because I did more nose breathing this time and also because I sucked on candies a lot of the run to help keep my throat moist. 
+<img style='width:90vw' src='/static/img/blogpost_187/brian-14.jpg'>
+
+
+When we left  that aid station I tried everything to stay awake and was doing everything I could to try to stop myself from falling asleep. My vision blurred, my hearing went, and I was talking gibberish and not making sense. My brain was running on fumes alone and even those were running out. I kept slapping myself on the face, putting light in my eyes, pouring water on my face in the cold. But nothing worked. I took turns sprinting at a high pace to try to get my heart rate up.  And I’m certain I even fell asleep while running for micro periods of time to get through this section. It was horrible and never ending. I focused only on getting to the next 0.1 km at each step. I was 68 hours into the race and had hardly slept. This was the worst sleep deprivation of my life.
+
+<img style='width:90vw' src='/static/img/blogpost_187/brian-12.jpg'>
+
+I got to Munds Park, a sleep station thank god, and set my alarm for another hour. I entered that aid station in a bad state. I texted my wife Shannon before sleeping that I was coughing up stuff a lot, my left knee might be hurting, my mouth was burning from dehydration and too much salt, my stomach was having spasms that I couldn’t get them to stop. I tried to sleep for another hour but ended up waking up after 40 minutes and noticed all of my problems were still there when I woke.  After we left Munds Park which was particularly freezing (No sitting by the fire still!) I noticed that the problem I thought I had in my knee went away and my stomach started to feel better.
+
+
+# Getting towards the last segments
+
+You start to realize you’re close to finishing this thing once you get to Kelly Canyon.  But you’re still a day away. This is also where the terrain starts to get a little easier as you get closer to Flagstaff. But at this point your body is so wrecked, and you are so sleep deprived, that the last 50 miles are still hard.  And not to mention you do need to climb Mount Elden. All in all, that last “easy” 50-miles still has 1788 meters of elevation.
+
+Here you can start to see Mount Elden in the distance:
+<span class="image-grid">
+<div class="image-item">
+  <img style='width:90vw' src='/static/img/blogpost_187/elden.jpg' alt="Foot tape 1">
+</div>
+<div class="image-item">
+  <img style='width:90vw' src='/static/img/blogpost_187/elden-4.jpg' alt="Foot tape 4">
+</div>
+</span>
+
+As I climbed mount Elden this was probably the second worst time of the run.  Not because of being sleep deprived but because my breathing was getting so bad with the elevation that I had to take 5-10s breaks as I climbed nearly vertical with Viktoria up steep switchbacks.  At the top of Elden there was a fantastic view and quite a bit of snow. 
+You could hear my raspy breathing and the coughing was still producing a consistent supply of gunk.
+
+<span class="image-grid">
+<div class="image-item">
+    <img style='width:90vw' src='/static/img/blogpost_187/elden-1.jpg' alt="Foot tape 4">
+</div>
+<div class="image-item">
+    <img style='width:90vw' src='/static/img/blogpost_187/elden-2.jpg' alt="Foot tape 4">
+</div>
+</span>
+
+# Top of Mount Elden to Flagstaff
+
+We stopped at the aid station at the top of Mount Elden and Viktoria needed to do something with her pack. I had everything I needed so I said wake me up when you are done and I instantly fell asleep. What I think was 1 minute later she woke me up and I felt drastically less sleep deprived. I jumped out of my chair and we started running this last section.
+
+This last section is where I had a big detour off course last time by missing a turn. So I was very careful not to do the same this time.  But this time there was a big warning sign before the turn that made it impossible to miss. Those signs must be written in blood from the past mistakes of others. 
+
+We were very fast this last section and passed several people including elite runner Ashley Paulson.
+
+When we finished we ended the race in 91 hours 9 minutes. Almost 12 hours faster than last year. 
+
+
+# The finish
+
+Leading up to the finish I got some coverage on the live stream:
+
+<a href="https://www.youtube.com/watch?v=vlC_rDewyUI" target="_blank" class="video-thumbnail">
+    <img src="https://img.youtube.com/vi/vlC_rDewyUI/hqdefault.jpg" alt="Video Thumbnail" style="width:90vw">
+    <img src="/static/img/play-button.png" alt="Play Button" class="play-button">
+</a>
+
+And here was the actual finish. I've never experienced this before, but my side was giving out.  My breathing was extremely difficult and I believe I had a lack of potassium.
+
+<a href="https://www.youtube.com/watch?v=IrWhuiGQ7Po" target="_blank" class="video-thumbnail">
+    <img src="https://img.youtube.com/vi/IrWhuiGQ7Po/hqdefault.jpg" alt="Video Thumbnail" style="width:90vw">
+    <img src="/static/img/play-button.png" alt="Play Button" class="play-button">
+</a>
+
+
+
+After talking to my family that stayed up to watch the livestream, I quickly found a hotel because I was freezing. 
+
+<img style='width:90vw' src='/static/img/blogpost_187/family.png' alt="Foot tape after">
+
+# Final stats
+
+Some fun stats from this run:
+
+- Time: 91 hours, 9 minutes
+- Distance: 426.01 km (However, I suspect it's actually slightly lower than that because when you sleep the GPS can slowly go up due to inacuracy)
+- Average heart rate: 106 bpm
+- Max heart rate: 179 bpm
+- Total calories: 31,378
+- Estimated sweat loss: 33.4 liters
+- You can find the [Strava activity here](https://www.strava.com/activities/11378676321)
+
+# Final state
+
+The state of my body after the run was night and day different from 2023.
+I didn’t even think I had any blisters when I first took off my tape but after a couple days a few small ones showed up.  They were easy to take care of though. I can walk without pain medicine and I don’t think I'm even limping. 
+In 2023 I had to use crutches for a week once I got home because of the blisters and soft tissue damage.
+
+Here are some pictures of when I took my shoes off:
+
+<span class="image-grid">
+<div class="image-item">
+    <img style='width:90vw' src='/static/img/blogpost_187/feet-after-wrapped.jpg' alt="Foot tape after">
+</div>
+<div class="image-item">
+    <img style='width:90vw' src='/static/img/blogpost_187/feet-after-wrapped-2.jpg' alt="Foot tape after 2">
+</div>
+<div class="image-item">
+    <img style='width:90vw' src='/static/img/blogpost_187/feet-after-wrapped-3.jpg' alt="Foot tape after 3">
+</div>
+</span>
+
+And after the tape was removed:
+
+<span class="image-grid">
+<div class="image-item">
+    <img style='width:90vw' src='/static/img/blogpost_187/feet-after-dirty-unwrapped.jpg' alt="Foot tape after">
+</div>
+<div class="image-item">
+    <img style='width:90vw' src='/static/img/blogpost_187/feet-after-dirty-unwrapped-2.jpg' alt="Foot tape after 2">
+</div>
+</span>
+
+And after they were cleaned:
+
+<span class="image-grid">
+<div class="image-item">
+    <img style='width:90vw' src='/static/img/blogpost_187/feet-after-unwrapped-2.jpg' alt="Foot tape after 2">
+</div>
+<div class="image-item">
+    <img style='width:90vw' src='/static/img/blogpost_187/feet-after-unwrapped-3.jpg' alt="Foot tape after 2">
+</div>
+<div class="image-item">
+    <img style='width:90vw' src='/static/img/blogpost_187/feet-after-unwrapped-4.jpg' alt="Foot tape after 2">
+</div>
+<div class="image-item">
+    <img style='width:90vw' src='/static/img/blogpost_187/feet-after-unwrapped-8.jpg' alt="Foot tape after 2">
+</div>
+</span>
+
+
+Other than my feet, I did have night sweats after both last and this year's runs. Last year this lasted a couple weeks.  I’m not quite sure what that’s about, but it likely has to do with my body healing itself. Dehydration, hormonal changes, immune response, and muscle inflammation as the body recovers.
+
+New this time is the breathing problems that lasted after the run. Even a few days after the end, my breathing is still very labored. My lungs need some serious healing time from that air.  Stopping at the emergency clinic the day after the run, they confirmed I did not have pneumonia, but that I had bad asthma problems. They prescribed a rescue inhaler and 5 days of steroids for breathing.
+Many of the runners reported similar breathing problems, including the top elite field.
+
+If I were to give myself advice for the next time it would be that my biggest mistakes were not testing all my gear before the run. 
+
+- Ensure each bottle and bottle cap match.
+- Practice opening your hydration back-flask.
+- Verify you have the right tube for your back-flask.
+- Hydrate at every aid station before leaving.
+- Bring enough water after each aid station, plus more. You'll make up for the extra weight by not having to go slower.
+- Bring backup poles in case your primary ones break.
+- Start your watch early and add in navigation separately for long courses
+- Learn and remember how to hard reboot your watch
+
+
+After visiting the clinic my plan was to go to a hotel and eat as much as I could order in.
+
+<img style='width:90vw' src='/static/img/blogpost_187/food-after.jpg' alt="Food ordered in">
+
+
+# Final thoughts
+
+I believe I'll be back to Cocodona another year, but I'd like to experience some other 200 mile races next.  I think I can do better.
+
+I love the challenge of 200-mile races. They are incredibly rewarding and are a source of pride  that I can look back on later in life. While not as profound as family, or big life events like marriage, these races give my life meaning. I believe life should be about more than just getting by; it should be about creating meaningful experiences. Not despite them being hard, but because they are hard. I'm blessed to have a supportive wife that allows me to explore those difficult areas where I know my soul needs to blossom.
+
