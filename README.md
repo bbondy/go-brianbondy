@@ -21,7 +21,7 @@ Download an export from https://www.goodreads.com/review/import and save it to `
 
 ## Where to publish blog posts
 
-- Facebook page and related groups
+- Facebook page and related groups (Adjust visibility to Public)
 - Twitter
 - LinkedIn
 - Strava (if about running)
