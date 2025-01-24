@@ -218,12 +218,13 @@ func filtersPageHandler(w http.ResponseWriter, r *http.Request) {
 	t.Execute(w, p)
 }
 
-func getMarkdownTemplateHandler(titleSlug string, markdownSlug string) *negroni.Negroni {
+func getMarkdownTemplateHandler(titleSlug string, markdownSlug string, fbShareUrl string) *negroni.Negroni {
 	handler := func(w http.ResponseWriter, r *http.Request) {
 		p := &data.SimpleMarkdownPage{
 			Title:        GetTitle(titleSlug),
 			Content:      getMarkdownData(markdownSlug),
 			MarkdownSlug: markdownSlug,
+			FBShareUrl: fbShareUrl,
 		}
 		t := template.Must(template.New("base.html").Funcs(funcMap).ParseFiles("templates/base.html", "templates/simpleMarkdown.html"))
 		t.Execute(w, p)
@@ -300,27 +301,27 @@ func initializeRoutes(router *mux.Router) {
 	router.Handle("/blog/posted/{year:[0-9]+}", handleRedirect)
 	router.Handle("/blog/posted/{year:[0-9]+}/page/{page:[0-9]+}", handleRedirect)
 	router.Handle("/blog/filters", handleFilterPage)
-	router.Handle("/about", getMarkdownTemplateHandler("About", "about.markdown"))
-	router.Handle("/other", getMarkdownTemplateHandler("Other", "other.markdown"))
-	router.Handle("/contact", getMarkdownTemplateHandler("Contact", "contact.markdown"))
-	router.Handle("/projects", getMarkdownTemplateHandler("Projects", "projects.markdown"))
-	router.Handle("/advice", getMarkdownTemplateHandler("Advice", "advice.markdown"))
-	router.Handle("/books", getMarkdownTemplateHandler("Books", "books.markdown"))
-	router.Handle("/braille", getMarkdownTemplateHandler("Braille", "braille.markdown"))
-	router.Handle("/compression", getMarkdownTemplateHandler("Compression", "compression.markdown"))
-	router.Handle("/compression/huffman", getMarkdownTemplateHandler("Huffman Compression", "compression/huffman.markdown"))
-	router.Handle("/compression/BWT", getMarkdownTemplateHandler("Burrows-Wheeler", "compression/BWT.markdown"))
-	router.Handle("/compression/PPM", getMarkdownTemplateHandler("Burrows-Wheeler", "compression/PPM.markdown"))
-	router.Handle("/math", getMarkdownTemplateHandler("Mathematics", "math.markdown"))
-	router.Handle("/math/main", getMarkdownTemplateHandler("Main", "math/main.markdown"))
-	router.Handle("/math/pi", getMarkdownTemplateHandler("Pi", "math/pi.markdown"))
-	router.Handle("/math/primes", getMarkdownTemplateHandler("Primes", "math/primes.markdown"))
-	router.Handle("/math/numberTheory", getMarkdownTemplateHandler("Mathematics", "math/numberTheory.markdown"))
-	router.Handle("/math/graphTheory", getMarkdownTemplateHandler("Mathematics", "math/graphTheory.markdown"))
-	router.Handle("/math/mathTricks", getMarkdownTemplateHandler("Mathematics", "math/mathTricks.markdown"))
-	router.Handle("/morseCode", getMarkdownTemplateHandler("Morse Code", "morseCode.markdown"))
-	router.Handle("/resume", getMarkdownTemplateHandler("Resume", "resume.markdown"))
-	router.Handle("/running", getMarkdownTemplateHandler("Running", "running.markdown"))
+	router.Handle("/about", getMarkdownTemplateHandler("About", "about.markdown", "/about"))
+	router.Handle("/other", getMarkdownTemplateHandler("Other", "other.markdown", "/other"))
+	router.Handle("/contact", getMarkdownTemplateHandler("Contact", "contact.markdown", "/contact"))
+	router.Handle("/projects", getMarkdownTemplateHandler("Projects", "projects.markdown", "/projects"))
+	router.Handle("/advice", getMarkdownTemplateHandler("Advice", "advice.markdown", "/advice"))
+	router.Handle("/books", getMarkdownTemplateHandler("Books", "books.markdown", "/books"))
+	router.Handle("/braille", getMarkdownTemplateHandler("Braille", "braille.markdown", "/braille"))
+	router.Handle("/compression", getMarkdownTemplateHandler("Compression", "compression.markdown", "/compression"))
+	router.Handle("/compression/huffman", getMarkdownTemplateHandler("Huffman Compression", "compression/huffman.markdown", "/compression/huffman"))
+	router.Handle("/compression/BWT", getMarkdownTemplateHandler("Burrows-Wheeler", "compression/BWT.markdown", "/compression/BWT"))
+	router.Handle("/compression/PPM", getMarkdownTemplateHandler("Burrows-Wheeler", "compression/PPM.markdown", "/compression/PPM"))
+	router.Handle("/math", getMarkdownTemplateHandler("Mathematics", "math.markdown", "/math"))
+	router.Handle("/math/main", getMarkdownTemplateHandler("Main", "math/main.markdown", "/math/main"))
+	router.Handle("/math/pi", getMarkdownTemplateHandler("Pi", "math/pi.markdown", "/math/pi"))
+	router.Handle("/math/primes", getMarkdownTemplateHandler("Primes", "math/primes.markdown", "/math/primes"))
+	router.Handle("/math/numberTheory", getMarkdownTemplateHandler("Mathematics", "math/numberTheory.markdown", "/math/numberTheory"))
+	router.Handle("/math/graphTheory", getMarkdownTemplateHandler("Mathematics", "math/graphTheory.markdown", "/math/graphTheory"))
+	router.Handle("/math/mathTricks", getMarkdownTemplateHandler("Mathematics", "math/mathTricks.markdown", "/math/mathTricks"))
+	router.Handle("/morseCode", getMarkdownTemplateHandler("Morse Code", "morseCode.markdown", "/morseCode"))
+	router.Handle("/resume", getMarkdownTemplateHandler("Resume", "resume.markdown", "/resume"))
+	router.Handle("/running", getMarkdownTemplateHandler("Running", "running.markdown", "/running"))
 }
 
 func main() {
