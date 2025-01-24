@@ -3,7 +3,9 @@
     "id": 188,
     "title": "Can confirm, HURT 100 hurts",
     "created": "2025-01-20",
-    "tags": ["running", "hurt100", "life"]
+    "tags": ["running", "hurt100", "life"],
+    "fbImagePath": "static/img/blogpost_188/logo.webp",
+    "fbDescription": "Blogged about my experience at the HURT 100 race in Honolulu, Hawaii"
   },
   {
     "id": 187,

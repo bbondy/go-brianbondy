@@ -3,7 +3,7 @@ package data
 type SimpleMarkdownPage struct {
 	Title, Content                        string
 	MarkdownSlug                          string
-	FBShareUrl, FBDescription, FBImageUrl string
+	FBShareUrl, FBDescription, FBImagePath string
 }
 
 type BlogPostPage struct {
@@ -17,7 +17,7 @@ type BlogPostPage struct {
 	MaxPage                               int
 	Tag                                   string
 	Year                                  int
-	FBShareUrl, FBDescription, FBImageUrl string
+	FBShareUrl, FBDescription, FBImagePath string
 }
 
 type FiltersPage struct {
@@ -26,5 +26,5 @@ type FiltersPage struct {
 	TagCountMap                           map[string]int
 	SortedTags                            []string
 	Years                                 []int
-	FBShareUrl, FBDescription, FBImageUrl string
+	FBShareUrl, FBDescription, FBImagePath string
 }

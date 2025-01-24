@@ -5,5 +5,7 @@ type BlogPost struct {
 	Title   string   `json:"title"`
 	Created string   `json:"created"`
 	Tags    []string `json:"tags"`
+	FBImagePath *string `json:"fbImagePath,omitempty"`
+	FBDescription *string `json:"fbDescription,omitempty"`
 }
 type BlogPosts []BlogPost

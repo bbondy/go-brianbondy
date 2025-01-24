@@ -145,17 +145,32 @@ func blogPostPageHandler(w http.ResponseWriter, r *http.Request) {
 
 	parsedDate, _ := time.Parse(layoutISO, filteredBlogPosts[blogPostIndex].Created)
 
+	var fbImagePath string
+	if filteredBlogPosts[blogPostIndex].FBImagePath != nil {
+		fbImagePath = *filteredBlogPosts[blogPostIndex].FBImagePath
+	}
+
+	var fbDescription string
+	if filteredBlogPosts[blogPostIndex].FBDescription != nil {
+		fbDescription = *filteredBlogPosts[blogPostIndex].FBDescription
+	}
+
+	blogPostUri :=  "/blog/" + strconv.Itoa(filteredBlogPosts[blogPostIndex].Id) + "/" + SlugifyTitle(filteredBlogPosts[blogPostIndex].Title)
+
 	p := &data.BlogPostPage{
 		Title:        GetTitle("Blog posts"),
 		BlogPost:     filteredBlogPosts[blogPostIndex],
 		BlogPostBody: getMarkdownData("blog/" + strconv.Itoa(filteredBlogPosts[blogPostIndex].Id) + ".markdown"),
-		BlogPostUri:  "/blog/" + strconv.Itoa(filteredBlogPosts[blogPostIndex].Id) + "/" + SlugifyTitle(filteredBlogPosts[blogPostIndex].Title),
+		BlogPostUri:  blogPostUri,
 		BlogPostDate: parsedDate.Format(layoutUS),
 		NextPage:     blogPostIndex + 2,
 		PrevPage:     blogPostIndex,
 		MaxPage:      len(filteredBlogPosts),
 		Tag:          tag,
 		Year:         year,
+		FBImagePath:  fbImagePath,
+		FBDescription: fbDescription,
+		FBShareUrl: blogPostUri,
 		MarkdownSlug: "blog",
 	}
 	t := template.Must(template.New("base.html").Funcs(funcMap).ParseFiles("templates/base.html", "templates/blogPost.html"))

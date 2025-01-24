@@ -13,13 +13,13 @@
     <meta property="og:title" content="{{.Title}}">
     <meta property="og:site_name" content="Brian R. Bondy">
     {{if (avail "FBShareUrl" .)}}
-    <meta property="og:url" content={{.FBShareUrl}}>
+    <meta property="og:url" content="https://brianbondy.com{{.FBShareUrl}}">
     {{end}}
     {{if (avail "FBDescription" .)}}
     <meta property="og:description" content={{.FBDescription}}>
     {{end}}
-    {{if (avail "FBImageUrl" .)}}
-    <meta property="og:image" content={{.FBImageUrl}}>
+    {{if (avail "FBImagePath" .)}}
+    <meta property="og:image" content="https://brianbondy.com/{{.FBImagePath}}">
     {{else}}
     <meta property="og:image" content="https://brianbondy.com/static/img/avatar.png">
     {{end}}
