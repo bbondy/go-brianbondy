@@ -129,26 +129,24 @@ h2 {
 }
 .tag,
 .yearTag {
-  background-color: #eee;
-  border-bottom: 1px solid #ccc;
-  border-right: 1px solid #ccc;
-  border-top: 1px solid #e6e6e6;
-  border-left: 1px solid #e6e6e6;
-  background-color: #fff;
-  color: #808185;
-  line-height: 3;
-  margin: 5px;
-  padding: 8px;
+  display: inline-block;
+  background-color: #f7fafc;
+  color: #4a5568;
+  padding: 6px 12px;
+  margin: 4px;
   text-decoration: none;
-  white-space: nowrap;
-  font-size: 0.8em;
-  border-radius: 15px;
+  font-size: 0.9em;
+  border-radius: 6px;
+  border: 1px solid #e2e8f0;
+  transition: all 0.2s ease;
 }
 .tag:hover,
 .yearTag:hover {
   background-color: #4d90fe;
-  color: #fff;
-  border: 1px solid #4d90fe;
+  color: white;
+  border-color: #4d90fe;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(77, 144, 254, 0.2);
 }
 .datePosted {
   font-size: 0.75em;
@@ -156,10 +154,8 @@ h2 {
   padding-bottom: 10px;
 }
 .tagContainer {
-  -webkit-column-count: 3;
-  -moz-column-count: 3;
-  column-count: 3;
-  margin-top: 25px;
+  margin-top: 20px;
+  column-gap: 10px;
 }
 .navigationButton {
   border: 1px solid #ccc;
