@@ -50,9 +50,7 @@ def generate_books_markdown():
     # Generate markdown content
     markdown_content = """# Books
 
-## What the list contains
-
-The list below contains books that I've read and found valuable. Each book has been chosen for its unique insights and contributions to its field. While this list is not exhaustive, it represents a curated selection of works that I believe are worth exploring.
+The list below contains books that I've read and good enough to share.
 
 <div class="books-container">
 """
