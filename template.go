@@ -339,8 +339,11 @@ func initializeRoutes(router *mux.Router) {
 	handleYearRedirect := negroni.New(
 		negroni.HandlerFunc(directToHttps),
 		negroni.Wrap(http.HandlerFunc(yearRedirectHandler)))
+	handleHome := negroni.New(
+		negroni.HandlerFunc(directToHttps),
+		negroni.Wrap(http.HandlerFunc(homePageHandler)))
 
-	router.Handle("/", handleBlogPost)
+	router.Handle("/", handleHome)
 	router.Handle("/rss", handleRSS)
 	router.Handle("/blog/{id:[0-9]+}", handleBlogIdRedirect)
 	router.Handle("/blog/{id:[0-9]+}/{slug}", handleBlogPost)
@@ -558,4 +561,58 @@ func yearRedirectHandler(w http.ResponseWriter, r *http.Request) {
 
 	// If no posts found, show error
 	errorPage(w, "No blog posts found for that year", "blog")
+}
+
+func homePageHandler(w http.ResponseWriter, r *http.Request) {
+	const previewCount = 3 // Easy to change number of previews
+
+	// Get the most recent posts
+	previewPosts := make([]data.BlogPostPreview, 0, previewCount)
+	for i := 0; i < previewCount && i < len(blogPosts); i++ {
+		post := blogPosts[i]
+		parsedDate, _ := time.Parse(layoutISO, post.Created)
+
+		// Get the full post content
+		fullContent := getMarkdownData("blog/" + strconv.Itoa(post.Id) + ".markdown")
+
+		// Extract first paragraph
+		preview := extractFirstParagraph(fullContent)
+
+		previewPosts = append(previewPosts, data.BlogPostPreview{
+			BlogPost: post,
+			Preview:  template.HTML(preview),
+			PostDate: parsedDate.Format(layoutUS),
+			PostUrl:  fmt.Sprintf("/blog/%d/%s", post.Id, slugifyTitle(post.Title)),
+		})
+	}
+
+	p := &data.HomePage{
+		Title:        GetTitle("Brian R. Bondy"),
+		Posts:        previewPosts,
+		MarkdownSlug: "home",
+	}
+
+	t := template.Must(template.New("base.html").Funcs(funcMap).ParseFiles("templates/base.html", "templates/home.html"))
+	t.Execute(w, p)
+}
+
+func extractFirstParagraph(content string) string {
+	// Find content between first <p> tags
+	re := regexp.MustCompile(`<p>(.*?)</p>`)
+	matches := re.FindStringSubmatch(content)
+	if len(matches) > 1 {
+		// Get the first 300 characters of the paragraph and add ellipsis
+		preview := matches[1] // Note: using [1] to get just the content inside <p> tags
+		if len(preview) > 300 {
+			// Try to cut at a word boundary
+			lastSpace := strings.LastIndex(preview[:300], " ")
+			if lastSpace > 0 {
+				preview = preview[:lastSpace] + "..."
+			} else {
+				preview = preview[:300] + "..."
+			}
+		}
+		return "<p>" + preview + "</p>"
+	}
+	return content
 }

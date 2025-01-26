@@ -1,0 +1,18 @@
+{{define "mountPoint"}}
+  <div class="previewContainer">
+    {{range .Posts}}
+      <a href="{{.PostUrl}}" class="blogPostPreviewLink">
+        <article class="blogPostPreview">
+          <h1>{{.BlogPost.Title}}</h1>
+          <div class="datePosted">Posted on {{.PostDate}}</div>
+          <div class="preview">
+            {{.Preview}}
+          </div>
+          <div class="readMore">
+            <span>Read more...</span>
+          </div>
+        </article>
+      </a>
+    {{end}}
+  </div>
+{{end}} 

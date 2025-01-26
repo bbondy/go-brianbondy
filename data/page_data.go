@@ -1,5 +1,9 @@
 package data
 
+import (
+	"html/template"
+)
+
 type SimpleMarkdownPage struct {
 	Title, Content                         string
 	MarkdownSlug                           string
@@ -25,4 +29,17 @@ type FiltersPage struct {
 	SortedTags                             []string
 	Years                                  []int
 	FBShareUrl, FBDescription, FBImagePath string
+}
+
+type BlogPostPreview struct {
+	BlogPost BlogPost
+	Preview  template.HTML
+	PostDate string
+	PostUrl  string
+}
+
+type HomePage struct {
+	Title        string
+	Posts        []BlogPostPreview
+	MarkdownSlug string
 }

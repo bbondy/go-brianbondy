@@ -80,10 +80,12 @@ a {
   color: black;
 }
 .mainBody {
+  background-color: #f8f9fa;
   padding: 1px 20px;
-  border-left: 1px solid #f0f0f0;
-  border-right: 1px solid #f0f0f0;
-  height: 100%;
+  border-radius: 0 0 8px 8px;
+}
+.mainBody div:has(.blogPostPreview) {
+  padding-top: 30px;
 }
 .blogPost {
   margin-bottom: 60px;
@@ -265,4 +267,97 @@ textarea {
     width: 80px;
     height: 80px;
     z-index: 1; /* Ensure the play button is on top */
+}
+
+.blogPostPreviewLink {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.blogPostPreview {
+  margin-bottom: 50px;
+  padding: 10px 30px 30px 30px;
+  border: none;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 
+    rgba(17, 12, 46, 0.08) 0px 24px 60px 0px,
+    rgba(0, 0, 0, 0.03) 0px 2px 4px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+/* Remove the separate hover styles from links inside the preview */
+.blogPostPreview h1 a {
+  color: #2c3e50;
+  text-decoration: none;
+}
+
+/* Update the hover effect for the entire card */
+.blogPostPreviewLink:hover .blogPostPreview {
+  transform: translateY(-3px);
+  box-shadow: 
+    rgba(17, 12, 46, 0.12) 0px 30px 70px 0px,
+    rgba(0, 0, 0, 0.05) 0px 3px 6px;
+}
+
+.blogPostPreview h1 {
+  margin-top: 0;
+  font-size: 1.7em;
+  color: #4d90fe;
+  border-bottom: none;
+  margin-bottom: 10px;
+  transition: color 0.2s ease;
+}
+
+.blogPostPreviewLink:hover .blogPostPreview h1 {
+  color: #4d90fe;
+}
+
+.blogPostPreview .datePosted {
+  color: #666;
+  font-size: 0.9em;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.blogPostPreview .preview {
+  margin: 20px 0;
+  color: #4a5568;
+  line-height: 1.7;
+  font-size: 1.05em;
+}
+
+.previewContainer {
+  padding-top: 10px;
+}
+
+/* Update the styles for the read more button */
+.blogPostPreview .readMore {
+  margin-top: 25px;
+  text-align: right;
+  padding-top: 20px;
+  border-top: 1px solid #f0f0f0;
+}
+
+.blogPostPreview .readMore span {
+  display: inline-block;  /* Add this to ensure proper rendering */
+  font-size: 0.85em;
+  font-weight: 600;
+  color: #4d90fe;
+  padding: 10px 20px;
+  border: 1px solid #4d90fe;
+  border-radius: 25px;
+  transition: all 0.2s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  background-color: transparent;
+}
+
+.blogPostPreviewLink:hover .blogPostPreview .readMore span {
+  background-color: #4d90fe;
+  color: white;
+  box-shadow: 0 3px 8px rgba(77, 144, 254, 0.3);
 }
