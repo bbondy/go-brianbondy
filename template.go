@@ -342,6 +342,9 @@ func initializeRoutes(router *mux.Router) {
 	handleHome := negroni.New(
 		negroni.HandlerFunc(directToHttps),
 		negroni.Wrap(http.HandlerFunc(homePageHandler)))
+	handleAllPosts := negroni.New(
+		negroni.HandlerFunc(directToHttps),
+		negroni.Wrap(http.HandlerFunc(allPostsHandler)))
 
 	router.Handle("/", handleHome)
 	router.Handle("/rss", handleRSS)
@@ -378,6 +381,7 @@ func initializeRoutes(router *mux.Router) {
 	router.Handle("/morseCode", getMarkdownTemplateHandler("Morse Code", "morseCode.markdown", "/morseCode"))
 	router.Handle("/resume", getMarkdownTemplateHandler("Resume", "resume.markdown", "/resume"))
 	router.Handle("/running", getMarkdownTemplateHandler("Running", "running.markdown", "/running"))
+	router.Handle("/all", handleAllPosts)
 }
 
 func main() {
@@ -566,16 +570,13 @@ func yearRedirectHandler(w http.ResponseWriter, r *http.Request) {
 func homePageHandler(w http.ResponseWriter, r *http.Request) {
 	const previewCount = 3 // Easy to change number of previews
 
-	// Get the most recent posts
+	// Get the most recent posts for preview cards
 	previewPosts := make([]data.BlogPostPreview, 0, previewCount)
 	for i := 0; i < previewCount && i < len(blogPosts); i++ {
 		post := blogPosts[i]
 		parsedDate, _ := time.Parse(layoutISO, post.Created)
 
-		// Get the full post content
 		fullContent := getMarkdownData("blog/" + strconv.Itoa(post.Id) + ".markdown")
-
-		// Extract first paragraph
 		preview := extractFirstParagraph(fullContent)
 
 		previewPosts = append(previewPosts, data.BlogPostPreview{
@@ -586,9 +587,21 @@ func homePageHandler(w http.ResponseWriter, r *http.Request) {
 		})
 	}
 
+	// Get all posts for the list
+	allPosts := make([]data.BlogPostPreview, 0, len(blogPosts))
+	for _, post := range blogPosts {
+		parsedDate, _ := time.Parse(layoutISO, post.Created)
+		allPosts = append(allPosts, data.BlogPostPreview{
+			BlogPost: post,
+			PostDate: parsedDate.Format(layoutUS),
+			PostUrl:  fmt.Sprintf("/blog/%d/%s", post.Id, slugifyTitle(post.Title)),
+		})
+	}
+
 	p := &data.HomePage{
 		Title:        GetTitle("Brian R. Bondy"),
 		Posts:        previewPosts,
+		AllPosts:     allPosts,
 		MarkdownSlug: "home",
 	}
 
@@ -615,4 +628,25 @@ func extractFirstParagraph(content string) string {
 		return "<p>" + preview + "</p>"
 	}
 	return content
+}
+
+func allPostsHandler(w http.ResponseWriter, r *http.Request) {
+	allPosts := make([]data.BlogPostPreview, 0, len(blogPosts))
+	for _, post := range blogPosts {
+		parsedDate, _ := time.Parse(layoutISO, post.Created)
+		allPosts = append(allPosts, data.BlogPostPreview{
+			BlogPost: post,
+			PostDate: parsedDate.Format(layoutUS),
+			PostUrl:  fmt.Sprintf("/blog/%d/%s", post.Id, slugifyTitle(post.Title)),
+		})
+	}
+
+	p := &data.AllPostsPage{
+		Title:        GetTitle("All Blog Posts"),
+		Posts:        allPosts,
+		MarkdownSlug: "all",
+	}
+
+	t := template.Must(template.New("base.html").Funcs(funcMap).ParseFiles("templates/base.html", "templates/allPosts.html"))
+	t.Execute(w, p)
 }

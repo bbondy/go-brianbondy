@@ -1,0 +1,18 @@
+{{define "mountPoint"}}
+  <h1>All Blog Posts</h1>
+  <div class="postList">
+    {{range .Posts}}
+      <div class="postListItem">
+        <span class="postDate">{{.PostDate}}</span>
+        <div class="postInfo">
+          <a href="{{.PostUrl}}" class="postTitle">{{.BlogPost.Title}}</a>
+          {{if .BlogPost.Tags}}
+            <span class="postTags">
+              — {{range $index, $tag := .BlogPost.Tags}}{{if $index}}, {{end}}<a href="/tagged/{{.}}">{{.}}</a>{{end}}
+            </span>
+          {{end}}
+        </div>
+      </div>
+    {{end}}
+  </div>
+{{end}} 

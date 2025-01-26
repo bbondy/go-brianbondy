@@ -80,13 +80,15 @@ a {
   color: black;
 }
 .mainBody {
-  background-color: #f8f9fa;
-  padding: 1px 20px;
+  background-color: #fafbfc;
+  padding: 15px 20px 40px 20px;
   border-radius: 0 0 8px 8px;
 }
-.mainBody div:has(.blogPostPreview) {
-  padding-top: 30px;
+
+.mainBody > div {
+  padding-top: 0;
 }
+
 .blogPost {
   margin-bottom: 60px;
   overflow-wrap: break-word;
@@ -157,6 +159,7 @@ h2 {
   -webkit-column-count: 3;
   -moz-column-count: 3;
   column-count: 3;
+  margin-top: 25px;
 }
 .navigationButton {
   border: 1px solid #ccc;
@@ -242,14 +245,14 @@ textarea {
 }
 
 .image-item {
-  flex: 0 0 50%; /* This means the item won't grow or shrink and will take up 40% of the viewport width */
+  flex: 0 0 50%;
   padding: 5px;
-  box-sizing: border-box; /* Include padding and border in element's total width and height */
+  box-sizing: border-box;
 }
 
 .image-item img {
-  width: 100%; /* Make the image fill its container */
-  height: auto; /* Maintain the image's aspect ratio */
+  width: 100%;
+  height: auto;
 }
 
 .video-thumbnail {
@@ -266,7 +269,7 @@ textarea {
     transform: translate(-50%, -50%);
     width: 80px;
     height: 80px;
-    z-index: 1; /* Ensure the play button is on top */
+    z-index: 1;
 }
 
 .blogPostPreviewLink {
@@ -276,7 +279,7 @@ textarea {
 }
 
 .blogPostPreview {
-  margin-bottom: 50px;
+  margin-bottom: 35px;
   padding: 10px 30px 30px 30px;
   border: none;
   border-radius: 12px;
@@ -331,7 +334,7 @@ textarea {
 }
 
 .previewContainer {
-  padding-top: 10px;
+  background-color: #fafbfc;
 }
 
 /* Update the styles for the read more button */
@@ -343,7 +346,7 @@ textarea {
 }
 
 .blogPostPreview .readMore span {
-  display: inline-block;  /* Add this to ensure proper rendering */
+  display: inline-block; 
   font-size: 0.85em;
   font-weight: 600;
   color: #4d90fe;
@@ -360,4 +363,153 @@ textarea {
   background-color: #4d90fe;
   color: white;
   box-shadow: 0 3px 8px rgba(77, 144, 254, 0.3);
+}
+
+.allPostsSection {
+    margin-top: 60px;
+    padding-top: 40px;
+    border-top: 2px solid #edf2f7;
+}
+
+.allPostsSection h2 {
+    color: #2d3748;
+    font-size: 1.5em;
+    margin-bottom: 25px;
+}
+
+.postList {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding-top: 25px;
+    margin-top: 0;
+}
+
+.postListItem {
+    display: flex;
+    align-items: baseline;
+    padding: 10px 0;
+    transition: background-color 0.2s ease;
+}
+
+.postListItem:hover {
+    background-color: #f7fafc;
+}
+
+.postListItem .postDate {
+    flex-shrink: 0;
+    width: 140px;
+    color: #718096;
+    font-size: 0.9em;
+}
+
+.postListItem .postTitle {
+    color: #4d90fe;
+    font-size: 1.1em;
+    text-decoration: none;
+    line-height: 1.4;
+}
+
+.postListItem .postTitle:hover {
+    text-decoration: underline;
+}
+
+.viewAllPosts {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.viewAllLink {
+    display: inline-block;
+    font-size: 1.1em;
+    color: #4d90fe;
+    padding: 12px 24px;
+    border: 1px solid #4d90fe;
+    border-radius: 25px;
+    transition: all 0.2s ease;
+}
+
+.viewAllLink:hover {
+    background-color: #4d90fe;
+    color: white;
+    box-shadow: 0 2px 8px rgba(77, 144, 254, 0.3);
+}
+
+/* Styles for the all posts page */
+.postList {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.postListItem {
+    display: flex;
+    align-items: baseline;
+    padding: 12px 16px;
+    border-radius: 8px;
+    transition: background-color 0.2s ease;
+}
+
+.postListItem:hover {
+    background-color: #f7fafc;
+}
+
+.postListItem .postDate {
+    flex-shrink: 0;
+    width: 140px;
+    color: #718096;
+    font-size: 0.9em;
+}
+
+.postListItem .postTitle {
+    color: #4d90fe;
+    font-size: 1.1em;
+    text-decoration: none;
+    line-height: 1.4;
+}
+
+.postListItem .postTitle:hover {
+    text-decoration: underline;
+}
+
+.postInfo {
+    flex: 1;
+}
+
+.postTags {
+    font-size: 0.9em;
+    color: #718096;
+    margin-left: 5px;
+}
+
+.postTags a {
+    color: #718096;
+    text-decoration: none;
+}
+
+.postTags a:hover {
+    color: #4d90fe;
+    text-decoration: underline;
+}
+
+/* For markdown pages (like projects, about, etc.) */
+.mainBody > div > h1:first-child,
+.mainBody > div > h2:first-child {
+  margin-top: 0;
+  padding-top: 10px;
+}
+
+/* Add styles for the filters page */
+.tagContainer {
+  -webkit-column-count: 3;
+  -moz-column-count: 3;
+  column-count: 3;
+  margin-top: 25px;  /* Add spacing from the title */
+}
+
+/* Style the filters page container */
+.filtersContainer {
+  background-color: #fafbfc;
 }

@@ -41,5 +41,12 @@ type BlogPostPreview struct {
 type HomePage struct {
 	Title        string
 	Posts        []BlogPostPreview
+	AllPosts     []BlogPostPreview
+	MarkdownSlug string
+}
+
+type AllPostsPage struct {
+	Title        string
+	Posts        []BlogPostPreview
 	MarkdownSlug string
 }
