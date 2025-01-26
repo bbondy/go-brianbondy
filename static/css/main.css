@@ -521,3 +521,44 @@ textarea {
 .filtersContainer {
   background-color: #fafbfc;
 }
+
+.books-container {
+  margin-top: 20px;
+}
+
+.book-entry {
+  margin-bottom: 20px;
+  padding: 0 0 15px 0;
+  border-bottom: 1px solid #edf2f7;
+}
+
+.book-entry h3 {
+  color: #4d90fe;
+  margin: 0 0 5px 0;
+  font-size: 1.2em;
+  border: none;
+}
+
+.book-entry h3 a {
+  color: #4d90fe;
+  text-decoration: none;
+}
+
+.book-entry h3 a:hover {
+  text-decoration: underline;
+}
+
+.book-details {
+  line-height: 1.4;
+}
+
+.book-author {
+  color: #2d3748;
+  font-size: 1em;
+}
+
+.book-meta {
+  color: #718096;
+  font-size: 0.9em;
+  margin-top: 3px;
+}

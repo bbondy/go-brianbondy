@@ -18,6 +18,8 @@ gcloud app deploy
 
 Download an export from https://www.goodreads.com/review/import and save it to `data/goodreads_library_export.csv`.
 
+Run `python3 scripts/generate_books.py`
+
 
 ## Where to publish blog posts
 
