@@ -3,19 +3,21 @@ package main
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/bbondy/go-brianbondy/data"
-	"github.com/gomarkdown/markdown"
-	"github.com/gomarkdown/markdown/parser"
-	"github.com/codegangsta/negroni"
-	"github.com/gorilla/mux"
 	"html/template"
 	"io/ioutil"
 	"net/http"
 	"reflect"
+	"regexp"
 	"sort"
 	"strconv"
 	"strings"
 	"time"
+
+	"github.com/bbondy/go-brianbondy/data"
+	"github.com/codegangsta/negroni"
+	"github.com/gomarkdown/markdown"
+	"github.com/gomarkdown/markdown/parser"
+	"github.com/gorilla/mux"
 )
 
 const (
@@ -25,9 +27,9 @@ const (
 
 func directToHttps(w http.ResponseWriter, r *http.Request, next http.HandlerFunc) {
 	if r.Host == "localhost:8080" ||
-			r.URL.Scheme == "https" ||
-			strings.HasPrefix(r.Proto, "HTTPS") ||
-			r.Header.Get("X-Forwarded-Proto") == "https" {
+		r.URL.Scheme == "https" ||
+		strings.HasPrefix(r.Proto, "HTTPS") ||
+		r.Header.Get("X-Forwarded-Proto") == "https" {
 		next(w, r)
 	} else {
 		target := "https://" + r.Host + r.URL.Path
@@ -77,6 +79,18 @@ var funcMap = template.FuncMap{
 		}
 		return count
 	},
+	"slugifyTitle": slugifyTitle,
+	"truncateTitle": func(title string) string {
+		words := strings.Fields(title)
+		if len(words) <= 4 {
+			return title
+		}
+		// Take first 4 words
+		truncated := strings.Join(words[:4], " ")
+		// Remove any trailing punctuation
+		truncated = strings.TrimRight(truncated, ".,!?:;")
+		return truncated + "..."
+	},
 }
 
 func getMarkdownData(slug string) string {
@@ -118,73 +132,101 @@ func errorPage(w http.ResponseWriter, message string, slug string) {
 
 // Keeps it simple with 1 blog post per page
 func blogPostPageHandler(w http.ResponseWriter, r *http.Request) {
-	blogPostIndex := 0 //page
 	vars := mux.Vars(r)
 
-	if page, ok := vars["page"]; ok {
-		blogPostIndex, _ = strconv.Atoi(page)
-		blogPostIndex -= 1
-	}
-
-	filteredBlogPosts := blogPosts
+	// Get tag and year from either URL vars or query parameters
+	tag := vars["tag"]
 	year := 0
 
-	if yearStr, ok := vars["year"]; ok {
+	// If not in URL vars, check query parameters
+	if tag == "" {
+		tag = r.URL.Query().Get("tag")
+	}
+	if yearStr := r.URL.Query().Get("year"); yearStr != "" {
 		year, _ = strconv.Atoi(yearStr)
-		filteredBlogPosts = blogPostYearMap[year]
+	} else if yearStr, ok := vars["year"]; ok {
+		year, _ = strconv.Atoi(yearStr)
 	}
 
-	tag, tagOk := vars["tag"]
-	if tagOk {
-		filteredBlogPosts = blogPostTagMap[tag]
-	}
+	filteredBlogPosts := getFilteredPosts(tag, year)
 
+	// Handle individual blog post view
 	if idStr, ok := vars["id"]; ok {
 		id, _ := strconv.Atoi(idStr)
 		if foundPost, ok := blogPostIdMap[id]; ok {
-			filteredBlogPosts = []data.BlogPost{foundPost}
-		} else {
-			errorPage(w, "No blog posts for this query", "blog")
-		}
-	}
+			// Get the filtered posts based on tag/year
+			filteredPosts := getFilteredPosts(tag, year)
 
-	if blogPostIndex >= len(filteredBlogPosts) || blogPostIndex < 0 {
+			currentIndex := -1
+			for i, post := range filteredPosts {
+				if post.Id == id {
+					currentIndex = i
+					break
+				}
+			}
+
+			var nextPost, prevPost *data.BlogPost
+			if currentIndex > 0 {
+				prevPost = &filteredPosts[currentIndex-1]
+			}
+			if currentIndex < len(filteredPosts)-1 {
+				nextPost = &filteredPosts[currentIndex+1]
+			}
+
+			parsedDate, _ := time.Parse(layoutISO, foundPost.Created)
+			fbShareUrl := "/blog/" + strconv.Itoa(foundPost.Id) + "/" + slugifyTitle(foundPost.Title)
+
+			p := &data.BlogPostPage{
+				Title:         GetTitle("Blog posts"),
+				BlogPost:      foundPost,
+				BlogPostBody:  getMarkdownData("blog/" + strconv.Itoa(foundPost.Id) + ".markdown"),
+				BlogPostDate:  parsedDate.Format(layoutUS),
+				NextPost:      nextPost,
+				PrevPost:      prevPost,
+				Tag:           tag,
+				Year:          year,
+				FBImagePath:   derefString(foundPost.FBImagePath),
+				FBDescription: derefString(foundPost.FBDescription),
+				FBShareUrl:    fbShareUrl,
+				MarkdownSlug:  "blog",
+			}
+			t := template.Must(template.New("base.html").Funcs(funcMap).ParseFiles("templates/base.html", "templates/blogPost.html"))
+			t.Execute(w, p)
+			return
+		}
 		errorPage(w, "No blog posts for this query", "blog")
 		return
 	}
 
-	parsedDate, _ := time.Parse(layoutISO, filteredBlogPosts[blogPostIndex].Created)
+	// Handle root URL or other listing pages
+	if len(filteredBlogPosts) > 0 {
+		post := filteredBlogPosts[0]
+		parsedDate, _ := time.Parse(layoutISO, post.Created)
 
-	var fbImagePath string
-	if filteredBlogPosts[blogPostIndex].FBImagePath != nil {
-		fbImagePath = *filteredBlogPosts[blogPostIndex].FBImagePath
+		// Set up next post for the first post
+		var nextPost *data.BlogPost
+		if len(filteredBlogPosts) > 1 {
+			nextPost = &filteredBlogPosts[1]
+		}
+
+		p := &data.BlogPostPage{
+			Title:         GetTitle("Blog posts"),
+			BlogPost:      post,
+			BlogPostBody:  getMarkdownData("blog/" + strconv.Itoa(post.Id) + ".markdown"),
+			BlogPostDate:  parsedDate.Format(layoutUS),
+			NextPost:      nextPost,
+			Tag:           tag,
+			Year:          year,
+			FBImagePath:   derefString(post.FBImagePath),
+			FBDescription: derefString(post.FBDescription),
+			MarkdownSlug:  "blog",
+		}
+		t := template.Must(template.New("base.html").Funcs(funcMap).ParseFiles("templates/base.html", "templates/blogPost.html"))
+		t.Execute(w, p)
+		return
 	}
 
-	var fbDescription string
-	if filteredBlogPosts[blogPostIndex].FBDescription != nil {
-		fbDescription = *filteredBlogPosts[blogPostIndex].FBDescription
-	}
-
-	blogPostUri :=  "/blog/" + strconv.Itoa(filteredBlogPosts[blogPostIndex].Id) + "/" + SlugifyTitle(filteredBlogPosts[blogPostIndex].Title)
-
-	p := &data.BlogPostPage{
-		Title:        GetTitle("Blog posts"),
-		BlogPost:     filteredBlogPosts[blogPostIndex],
-		BlogPostBody: getMarkdownData("blog/" + strconv.Itoa(filteredBlogPosts[blogPostIndex].Id) + ".markdown"),
-		BlogPostUri:  blogPostUri,
-		BlogPostDate: parsedDate.Format(layoutUS),
-		NextPage:     blogPostIndex + 2,
-		PrevPage:     blogPostIndex,
-		MaxPage:      len(filteredBlogPosts),
-		Tag:          tag,
-		Year:         year,
-		FBImagePath:  fbImagePath,
-		FBDescription: fbDescription,
-		FBShareUrl: blogPostUri,
-		MarkdownSlug: "blog",
-	}
-	t := template.Must(template.New("base.html").Funcs(funcMap).ParseFiles("templates/base.html", "templates/blogPost.html"))
-	t.Execute(w, p)
+	errorPage(w, "No blog posts found", "blog")
 }
 
 func generateRSSHandler(w http.ResponseWriter, r *http.Request) {
@@ -224,7 +266,7 @@ func getMarkdownTemplateHandler(titleSlug string, markdownSlug string, fbShareUr
 			Title:        GetTitle(titleSlug),
 			Content:      getMarkdownData(markdownSlug),
 			MarkdownSlug: markdownSlug,
-			FBShareUrl: fbShareUrl,
+			FBShareUrl:   fbShareUrl,
 		}
 		t := template.Must(template.New("base.html").Funcs(funcMap).ParseFiles("templates/base.html", "templates/simpleMarkdown.html"))
 		t.Execute(w, p)
@@ -285,16 +327,27 @@ func initializeRoutes(router *mux.Router) {
 	handleRSS := negroni.New(
 		negroni.HandlerFunc(directToHttps),
 		negroni.Wrap(http.HandlerFunc(generateRSSHandler)))
+	handleTagRedirect := negroni.New(
+		negroni.HandlerFunc(directToHttps),
+		negroni.Wrap(http.HandlerFunc(tagRedirectHandler)))
+	handlePaginationRedirect := negroni.New(
+		negroni.HandlerFunc(directToHttps),
+		negroni.Wrap(http.HandlerFunc(paginationRedirectHandler)))
+	handleBlogIdRedirect := negroni.New(
+		negroni.HandlerFunc(directToHttps),
+		negroni.Wrap(http.HandlerFunc(blogIdRedirectHandler)))
+	handleYearRedirect := negroni.New(
+		negroni.HandlerFunc(directToHttps),
+		negroni.Wrap(http.HandlerFunc(yearRedirectHandler)))
 
 	router.Handle("/", handleBlogPost)
 	router.Handle("/rss", handleRSS)
-	router.Handle("/blog/{id:[0-9]+}", handleBlogPost)
+	router.Handle("/blog/{id:[0-9]+}", handleBlogIdRedirect)
 	router.Handle("/blog/{id:[0-9]+}/{slug}", handleBlogPost)
-	router.Handle("/page/{page:[0-9]+}", handleBlogPost)
-	router.Handle("/tagged/{tag}", handleBlogPost)
-	router.Handle("/tagged/{tag}/page/{page:[0-9]+}", handleBlogPost)
-	router.Handle("/posted/{year:[0-9]+}", handleBlogPost)
-	router.Handle("/posted/{year:[0-9]+}/page/{page:[0-9]+}", handleBlogPost)
+	router.Handle("/page/{page:[0-9]+}", handlePaginationRedirect)
+	router.Handle("/tagged/{tag}", handleTagRedirect)
+	router.Handle("/posted/{year:[0-9]+}", handleYearRedirect)
+	router.Handle("/posted/{year:[0-9]+}/page/{page:[0-9]+}", handlePaginationRedirect)
 	router.Handle("/blog/page/{page}", handleRedirect)
 	router.Handle("/blog/tagged/{tag}", handleRedirect)
 	router.Handle("/blog/tagged/{tag}/page/{page}", handleRedirect)
@@ -329,4 +382,180 @@ func main() {
 	router := mux.NewRouter()
 	initializeRoutes(router)
 	http.ListenAndServe(":8080", router)
+}
+
+func derefString(s *string) string {
+	if s == nil {
+		return ""
+	}
+	return *s
+}
+
+func slugifyTitle(title string) string {
+	// Convert to lowercase
+	slug := strings.ToLower(title)
+
+	// Replace any non-alphanumeric characters (except hyphens) with a hyphen
+	reg := regexp.MustCompile(`[^a-z0-9]+`)
+	slug = reg.ReplaceAllString(slug, "-")
+
+	// Remove leading and trailing hyphens
+	slug = strings.Trim(slug, "-")
+
+	return slug
+}
+
+func getFilteredPosts(tag string, year int) []data.BlogPost {
+	var filtered []data.BlogPost
+
+	if tag != "" && year != 0 {
+		// Filter by both tag and year
+		for _, post := range blogPosts {
+			parsedDate, _ := time.Parse(layoutISO, post.Created)
+			if parsedDate.Year() == year {
+				// Check if post has the specified tag
+				for _, postTag := range post.Tags {
+					if postTag == tag {
+						filtered = append(filtered, post)
+						break
+					}
+				}
+			}
+		}
+		return filtered
+	}
+
+	// Single filter cases
+	if tag != "" {
+		return blogPostTagMap[tag]
+	}
+	if year != 0 {
+		return blogPostYearMap[year]
+	}
+	return blogPosts
+}
+
+func tagRedirectHandler(w http.ResponseWriter, r *http.Request) {
+	vars := mux.Vars(r)
+	tag := vars["tag"]
+	year := 0
+	if yearStr := r.URL.Query().Get("year"); yearStr != "" {
+		year, _ = strconv.Atoi(yearStr)
+	}
+
+	// Get filtered posts
+	filteredPosts := getFilteredPosts(tag, year)
+
+	if len(filteredPosts) > 0 {
+		// Redirect to the first post with the tag/year filters as query params
+		firstPost := filteredPosts[0]
+		target := fmt.Sprintf("/blog/%d/%s?tag=%s",
+			firstPost.Id,
+			slugifyTitle(firstPost.Title),
+			tag)
+		if year != 0 {
+			target += fmt.Sprintf("&year=%d", year)
+		}
+		http.Redirect(w, r, target, http.StatusFound)
+		return
+	}
+
+	// If no posts found, show error
+	errorPage(w, "No blog posts found with that tag", "blog")
+}
+
+func paginationRedirectHandler(w http.ResponseWriter, r *http.Request) {
+	vars := mux.Vars(r)
+	page, _ := strconv.Atoi(vars["page"])
+
+	// Get tag and year from query parameters
+	tag := r.URL.Query().Get("tag")
+	year := 0
+	if yearStr := r.URL.Query().Get("year"); yearStr != "" {
+		year, _ = strconv.Atoi(yearStr)
+	}
+
+	// Get filtered posts
+	filteredPosts := getFilteredPosts(tag, year)
+
+	// Convert page number to post index (0-based)
+	postIndex := page - 1
+	if postIndex < 0 || postIndex >= len(filteredPosts) {
+		errorPage(w, "Invalid page number", "blog")
+		return
+	}
+
+	// Redirect to the post at that index
+	post := filteredPosts[postIndex]
+	target := fmt.Sprintf("/blog/%d/%s",
+		post.Id,
+		slugifyTitle(post.Title))
+
+	// Add query parameters if present
+	params := make([]string, 0)
+	if page > 0 {
+		params = append(params, fmt.Sprintf("page=%d", page))
+	}
+	if tag != "" {
+		params = append(params, fmt.Sprintf("tag=%s", tag))
+	}
+	if year != 0 {
+		params = append(params, fmt.Sprintf("year=%d", year))
+	}
+	if len(params) > 0 {
+		target += "?" + strings.Join(params, "&")
+	}
+
+	http.Redirect(w, r, target, http.StatusFound)
+}
+
+func blogIdRedirectHandler(w http.ResponseWriter, r *http.Request) {
+	vars := mux.Vars(r)
+	id, _ := strconv.Atoi(vars["id"])
+
+	if post, ok := blogPostIdMap[id]; ok {
+		// Build the canonical URL with the slug
+		target := fmt.Sprintf("/blog/%d/%s", id, slugifyTitle(post.Title))
+
+		// Preserve any query parameters
+		if r.URL.RawQuery != "" {
+			target += "?" + r.URL.RawQuery
+		}
+
+		http.Redirect(w, r, target, http.StatusMovedPermanently)
+		return
+	}
+
+	errorPage(w, "Blog post not found", "blog")
+}
+
+func yearRedirectHandler(w http.ResponseWriter, r *http.Request) {
+	vars := mux.Vars(r)
+	year, _ := strconv.Atoi(vars["year"])
+
+	// Get tag from query parameters
+	tag := r.URL.Query().Get("tag")
+
+	// Get filtered posts
+	filteredPosts := getFilteredPosts(tag, year)
+
+	if len(filteredPosts) > 0 {
+		// Redirect to the first post with the year filter as query param
+		firstPost := filteredPosts[0]
+		target := fmt.Sprintf("/blog/%d/%s?year=%d",
+			firstPost.Id,
+			slugifyTitle(firstPost.Title),
+			year)
+
+		// Add tag if present
+		if tag != "" {
+			target += fmt.Sprintf("&tag=%s", tag)
+		}
+
+		http.Redirect(w, r, target, http.StatusFound)
+		return
+	}
+
+	// If no posts found, show error
+	errorPage(w, "No blog posts found for that year", "blog")
 }

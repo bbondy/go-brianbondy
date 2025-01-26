@@ -1,30 +1,28 @@
 package data
 
 type SimpleMarkdownPage struct {
-	Title, Content                        string
-	MarkdownSlug                          string
+	Title, Content                         string
+	MarkdownSlug                           string
 	FBShareUrl, FBDescription, FBImagePath string
 }
 
 type BlogPostPage struct {
-	Title, Content, MarkdownSlug          string
-	BlogPost                              BlogPost
-	BlogPostBody                          string
-	BlogPostUri                           string
-	BlogPostDate                          string
-	NextPage                              int
-	PrevPage                              int
-	MaxPage                               int
-	Tag                                   string
-	Year                                  int
+	Title, Content, MarkdownSlug           string
+	BlogPost                               BlogPost
+	BlogPostBody                           string
+	BlogPostDate                           string
+	NextPost                               *BlogPost
+	PrevPost                               *BlogPost
+	Tag                                    string
+	Year                                   int
 	FBShareUrl, FBDescription, FBImagePath string
 }
 
 type FiltersPage struct {
-	Title, Content                        string
-	MarkdownSlug                          string
-	TagCountMap                           map[string]int
-	SortedTags                            []string
-	Years                                 []int
+	Title, Content                         string
+	MarkdownSlug                           string
+	TagCountMap                            map[string]int
+	SortedTags                             []string
+	Years                                  []int
 	FBShareUrl, FBDescription, FBImagePath string
 }

@@ -1,6 +1,6 @@
 {{define "mountPoint"}}
   <article class="blogPost">
-    <h1><a href="{{.BlogPostUri}}">{{.BlogPost.Title}}</a></h1>
+    <h1><a href="/blog/{{.BlogPost.Id}}/{{slugifyTitle .BlogPost.Title}}">{{.BlogPost.Title}}</a></h1>
     <div class="datePosted">Posted on {{.BlogPostDate}}</div>
     <div>
       {{htmlSafe .BlogPostBody}}
@@ -11,27 +11,17 @@
       {{end}}
     </div>
   </article>
-  {{if .Tag}}
-    {{if (ge .PrevPage 1)}}
-    <a href="/tagged/{{.Tag}}/page/{{.PrevPage}}"><span class="navigationButton">Previous page</span></a>
+
+  <p>
+    {{if .PrevPost}}
+    <a href="/blog/{{.PrevPost.Id}}/{{slugifyTitle .PrevPost.Title}}{{if .Tag}}?tag={{.Tag}}{{else if .Year}}?year={{.Year}}{{end}}">
+      <span class="navigationButton">Previous: {{truncateTitle .PrevPost.Title}}</span>
+    </a>
     {{end}}
-    {{if (le .NextPage .MaxPage)}}
-    <a href="/tagged/{{.Tag}}/page/{{.NextPage}}"><span class="navigationButton">Next page</span></a>
+    {{if .NextPost}}
+    <a href="/blog/{{.NextPost.Id}}/{{slugifyTitle .NextPost.Title}}{{if .Tag}}?tag={{.Tag}}{{else if .Year}}?year={{.Year}}{{end}}">
+      <span class="navigationButton">Next: {{truncateTitle .NextPost.Title}}</span>
+    </a>
     {{end}}
-  {{else if .Year}}
-    {{if (ge .PrevPage 1)}}
-    <a href="/posted/{{.Year}}/page/{{.PrevPage}}"><span class="navigationButton">Previous page</span></a>
-    {{end}}
-    {{if (le .NextPage .MaxPage)}}
-    <a href="/posted/{{.Year}}/page/{{.NextPage}}"><span class="navigationButton">Next page</span></a>
-    {{end}}
-  {{else}}
-    {{if (ge .PrevPage 1)}}
-    <a href="/page/{{.PrevPage}}"><span class="navigationButton">Previous page</span></a>
-    {{end}}
-    {{if (le .NextPage .MaxPage)}}
-    <a href="/page/{{.NextPage}}"><span class="navigationButton">Next page</span></a>
-    {{end}}
-  {{end}}
-  </article>
+  </p>
 {{end}}
