@@ -11,13 +11,15 @@
     "id": 187,
     "title": "Cocodona 2024",
     "created": "2024-05-14",
-    "tags": ["running", "cocodona", "life"]
+    "tags": ["running", "cocodona", "life"],
+    "fbImagePath": "static/img/blogpost_187/img21.jpg"
   },
   {
     "id": 186,
     "title": "Unwavering dedication",
     "created": "2024-02-23",
-    "tags": ["running", "byu", "life", "family"]
+    "tags": ["running", "byu", "life", "family"],
+    "fbImagePath": "static/img/blogpost_186/class.jpg"
   },
   {
     "id": 185,

@@ -174,21 +174,20 @@ func blogPostPageHandler(w http.ResponseWriter, r *http.Request) {
 			}
 
 			parsedDate, _ := time.Parse(layoutISO, foundPost.Created)
-			fbShareUrl := "/blog/" + strconv.Itoa(foundPost.Id) + "/" + slugifyTitle(foundPost.Title)
 
 			p := &data.BlogPostPage{
-				Title:         GetTitle("Blog posts"),
-				BlogPost:      foundPost,
-				BlogPostBody:  getMarkdownData("blog/" + strconv.Itoa(foundPost.Id) + ".markdown"),
-				BlogPostDate:  parsedDate.Format(layoutUS),
-				NextPost:      nextPost,
-				PrevPost:      prevPost,
-				Tag:           tag,
-				Year:          year,
-				FBImagePath:   derefString(foundPost.FBImagePath),
-				FBDescription: derefString(foundPost.FBDescription),
-				FBShareUrl:    fbShareUrl,
-				MarkdownSlug:  "blog",
+				Title:        GetTitle("Blog posts"),
+				BlogPost:     foundPost,
+				BlogPostBody: getMarkdownData("blog/" + strconv.Itoa(foundPost.Id) + ".markdown"),
+				BlogPostDate: parsedDate.Format(layoutUS),
+				NextPost:     nextPost,
+				PrevPost:     prevPost,
+				Tag:          tag,
+				Year:         year,
+				ImagePath:    derefString(foundPost.ImagePath),
+				Description:  derefString(foundPost.Description),
+				ShareUrl:     fmt.Sprintf("/blog/%d/%s", foundPost.Id, slugifyTitle(foundPost.Title)),
+				MarkdownSlug: "blog",
 			}
 			t := template.Must(template.New("base.html").Funcs(funcMap).ParseFiles("templates/base.html", "templates/blogPost.html"))
 			t.Execute(w, p)
@@ -210,16 +209,16 @@ func blogPostPageHandler(w http.ResponseWriter, r *http.Request) {
 		}
 
 		p := &data.BlogPostPage{
-			Title:         GetTitle("Blog posts"),
-			BlogPost:      post,
-			BlogPostBody:  getMarkdownData("blog/" + strconv.Itoa(post.Id) + ".markdown"),
-			BlogPostDate:  parsedDate.Format(layoutUS),
-			NextPost:      nextPost,
-			Tag:           tag,
-			Year:          year,
-			FBImagePath:   derefString(post.FBImagePath),
-			FBDescription: derefString(post.FBDescription),
-			MarkdownSlug:  "blog",
+			Title:        GetTitle("Blog posts"),
+			BlogPost:     post,
+			BlogPostBody: getMarkdownData("blog/" + strconv.Itoa(post.Id) + ".markdown"),
+			BlogPostDate: parsedDate.Format(layoutUS),
+			NextPost:     nextPost,
+			Tag:          tag,
+			Year:         year,
+			ImagePath:    derefString(post.ImagePath),
+			Description:  derefString(post.Description),
+			MarkdownSlug: "blog",
 		}
 		t := template.Must(template.New("base.html").Funcs(funcMap).ParseFiles("templates/base.html", "templates/blogPost.html"))
 		t.Execute(w, p)
@@ -266,7 +265,7 @@ func getMarkdownTemplateHandler(titleSlug string, markdownSlug string, fbShareUr
 			Title:        GetTitle(titleSlug),
 			Content:      getMarkdownData(markdownSlug),
 			MarkdownSlug: markdownSlug,
-			FBShareUrl:   fbShareUrl,
+			ShareUrl:     fbShareUrl,
 		}
 		t := template.Must(template.New("base.html").Funcs(funcMap).ParseFiles("templates/base.html", "templates/simpleMarkdown.html"))
 		t.Execute(w, p)
@@ -568,7 +567,7 @@ func yearRedirectHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 func homePageHandler(w http.ResponseWriter, r *http.Request) {
-	const previewCount = 3 // Easy to change number of previews
+	const previewCount = 4
 
 	// Get the most recent posts for preview cards
 	previewPosts := make([]data.BlogPostPreview, 0, previewCount)

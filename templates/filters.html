@@ -9,7 +9,7 @@
     <h1>Blog posts by tag</h1>
     <div class="tagContainer">
       {{range .SortedTags}}
-      <a href="/tagged/{{.}}" class="tag">{{.}} ({{getTagCount .}})</a>
+      <div><a href="/tagged/{{.}}" class="tag">{{.}}</a> x {{getTagCount .}}</div>
       {{end}}
     </div>
   </div>

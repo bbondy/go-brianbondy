@@ -6,6 +6,9 @@
           <h1>{{.BlogPost.Title}}</h1>
           <div class="datePosted">Posted on {{.PostDate}}</div>
           <div class="preview">
+            {{if .BlogPost.ImagePath}}
+              <img src="/{{.BlogPost.ImagePath}}" class="previewImage" alt="Preview image for {{.BlogPost.Title}}">
+            {{end}}
             {{.Preview}}
           </div>
           <div class="readMore">

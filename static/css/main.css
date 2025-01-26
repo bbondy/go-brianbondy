@@ -81,7 +81,7 @@ a {
 }
 .mainBody {
   background-color: #fafbfc;
-  padding: 15px 20px 40px 20px;
+  padding: 18px 20px 40px 20px;
   border-radius: 0 0 8px 8px;
 }
 
@@ -331,10 +331,19 @@ textarea {
   color: #4a5568;
   line-height: 1.7;
   font-size: 1.05em;
+  overflow: hidden;
+}
+
+.blogPostPreview .previewImage {
+  float: left;
+  max-width: 200px;
+  margin: 0 20px 10px 0;
+  border-radius: 8px;
 }
 
 .previewContainer {
   background-color: #fafbfc;
+  padding-top: 3px;
 }
 
 /* Update the styles for the read more button */
@@ -381,7 +390,6 @@ textarea {
     display: flex;
     flex-direction: column;
     gap: 15px;
-    padding-top: 25px;
     margin-top: 0;
 }
 
