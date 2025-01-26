@@ -1,7 +1,12 @@
 # Memorable runs
 
+
+- January 2025 - [HURT 100](https://www.strava.com/activities/13400697230) - DNF at mile 80
+- August 2024 - [FAwR 2024](https://www.strava.com/activities/12062622741) - Persistence Backyard Ultra 2024
+- June 2024 - [FAwR 2024](https://www.strava.com/activities/11555429820) - FAwR 2024 with Ronnie
+- May 2024 - [Cocodona 2024](https://www.strava.com/activities/11378676321) - Cocodona 2024
 - June 2023 - [FAwR 2023](https://www.strava.com/activities/9200098285) - Finished in 25 hours, 25 minutes
-- May 2023 - [Cocodona](https://www.strava.com/activities/9016891169) - Finished in 102 hours, 45th overall
+- May 2023 - [Cocodona 2023](https://www.strava.com/activities/9016891169) - Finished in 102 hours, 45th overall
 - April 2023 - [Grand Canyon R2R2R](https://www.strava.com/activities/8816263472)
 - October 2022 - [Big Dog's Backyard Ultra National Championships](https://www.strava.com/activities/7977085777) - Team Canada. 5th of 15 within Canada. 42 yards
 - July 2022 - [Persistence Backyard Ultra](https://www.strava.com/activities/7558515644) - Persistence Backyard Ultra - Assist (2nd place)
