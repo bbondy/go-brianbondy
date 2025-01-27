@@ -1,7 +1,7 @@
 {{define "mountPoint"}}
   <div class="filtersContainer">
     <h1>Blog posts by year</h1>
-    <div class="tagContainer">
+    <div class="tagContainer years">
       {{range .Years}}
       <a href="/posted/{{.}}" class="yearTag">{{.}}</a>
       {{end}}

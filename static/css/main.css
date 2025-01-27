@@ -55,6 +55,7 @@ a {
 .topBar li.social {
   float: right;
   font-size: 1em;
+  padding: 10px;
 }
 .topBar li .fa-twitter {
   color: #00ABF1;
@@ -154,20 +155,45 @@ h2 {
   padding-bottom: 10px;
 }
 .tagContainer {
-  margin-top: 20px;
-  column-gap: 10px;
+  -webkit-column-count: 3;
+  -moz-column-count: 3;
+  column-count: 3;
+  margin-top: 25px;
 }
+
+/* Specific style for the years section */
+.tagContainer.years {
+  -webkit-column-count: 1;
+  -moz-column-count: 1;
+  column-count: 1;
+}
+
+/* Add styles for navigation container */
+.navigationButtons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px 20px;
+  margin: 20px 0;
+}
+
 .navigationButton {
+  flex: 1 1 auto; /* Changed to allow shrinking but prioritize staying on one line */
+  min-width: 200px; /* Keeps button from becoming too small */
   border: 1px solid #ccc;
   background-color: #fff;
   color: #808185;
-  margin: 0 10px 10px 0;
-  padding: 8px;
+  padding: 8px 15px;
+  margin-bottom: 10px;
+  text-align: center;
+  white-space: pre-wrap;
+  line-height: 1.4;
 }
+
 .navigationButton:hover {
   background-color: #4d90fe;
   color: #fff;
 }
+
 .current {
   border-bottom: 1px solid #4d90fe;
 }
@@ -216,7 +242,7 @@ textarea {
   }
 }
 
-@media only screen and (max-width: 440px) {
+@media only screen and (max-width: 439px) {
   .topBarLinks .social .fa-strava {
     display: none;
   }
@@ -503,14 +529,6 @@ textarea {
 .mainBody > div > h2:first-child {
   margin-top: 0;
   padding-top: 10px;
-}
-
-/* Add styles for the filters page */
-.tagContainer {
-  -webkit-column-count: 3;
-  -moz-column-count: 3;
-  column-count: 3;
-  margin-top: 25px;  /* Add spacing from the title */
 }
 
 /* Style the filters page container */

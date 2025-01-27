@@ -12,7 +12,7 @@
     </div>
   </article>
 
-  <p>
+  <div class="navigationButtons">
     {{if .PrevPost}}
     <a href="/blog/{{.PrevPost.Id}}/{{slugifyTitle .PrevPost.Title}}{{if .Tag}}?tag={{.Tag}}{{else if .Year}}?year={{.Year}}{{end}}">
       <span class="navigationButton">Previous: {{truncateTitle .PrevPost.Title}}</span>
@@ -23,5 +23,5 @@
       <span class="navigationButton">Next: {{truncateTitle .NextPost.Title}}</span>
     </a>
     {{end}}
-  </p>
+  </div>
 {{end}}
