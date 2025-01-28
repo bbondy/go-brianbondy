@@ -21,14 +21,12 @@ a {
   color: #4d90fe;
 }
 .topBar {
-  background-color: #f0f0f0;
-  border-bottom: 1px solid rgba(146, 178, 207, 0.3);
-  border-right: 1px solid rgba(146, 178, 207, 0.3);
-  border-left: 1px solid rgba(146, 178, 207, 0.3);
-  border-radius: 5px;
-  box-sizing: border-box;
+  background-color: #ffffff;
+  border: none;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
+  margin: 15px 0;
   list-style-type: none;
-  margin: 0 0;
 }
 .topBar img {
   float: left;
@@ -43,19 +41,30 @@ a {
   margin: 0 auto;
 }
 .topBar li {
-  color: black;
+  color: #4a5568;
   display: inline-block;
   font-family: 'Droid Serif';
   padding: 10px 14px;
+  transition: all 0.2s ease;
 }
 .topBar li:hover:not(.social) {
-  background-color: #4d90fe;
-  color: white;
+  background-color: #f7fafc;
+  color: #4d90fe;
 }
 .topBar li.social {
   float: right;
   font-size: 1em;
   padding: 10px;
+}
+.topBar li.social span {
+  transition: transform 0.2s ease;
+}
+.topBar li.social:hover span {
+  transform: translateY(-2px);
+}
+.topBar li.current {
+  color: #4d90fe;
+  border-bottom: 2px solid #4d90fe;
 }
 .topBar li .fa-twitter {
   color: #00ABF1;
