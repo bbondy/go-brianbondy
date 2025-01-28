@@ -33,6 +33,10 @@ a {
   margin: 8px 0px 0px 9px;
   padding-right: 10px;
   width: 28px;
+  transition: transform 0.3s ease;
+}
+.topBar.scrolled img {
+  transform: rotate(180deg);
 }
 .topBar a {
   outline: none;
