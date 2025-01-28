@@ -3,8 +3,8 @@ hr {
   margin-bottom: 30px;
 }
 body {
-  background-color: white;
-  color: #656565;
+  background-color: #f8fafc;
+  color: #4a5568;
   font-family: proxima-nova, 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 1em;
   line-height: 1.5em;
@@ -90,9 +90,10 @@ a {
   color: black;
 }
 .mainBody {
-  background-color: #fafbfc;
+  background-color: #ffffff;
   padding: 18px 20px 40px 20px;
-  border-radius: 0 0 8px 8px;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
 }
 
 .mainBody > div {
@@ -102,6 +103,7 @@ a {
 .blogPost {
   margin-bottom: 60px;
   overflow-wrap: break-word;
+  color: #2d3748;
 }
 .blogPost img,
 .blogPost iframe {
@@ -117,7 +119,7 @@ h2,
 h3,
 h4 {
   font-family: 'Droid Serif';
-  color: #555555;
+  color: #2d3748;
 }
 li + li {
   padding: 5px 0;
