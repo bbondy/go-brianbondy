@@ -1,10 +1,9 @@
 # Memorable runs
 
-
 - January 2025 - [HURT 100](https://www.strava.com/activities/13400697230) - DNF at mile 80
-- August 2024 - [FAwR 2024](https://www.strava.com/activities/12062622741) - Persistence Backyard Ultra 2024
+- August 2024 - [Persistence Backyard Ultra 2024](https://www.strava.com/activities/12062622741) - 30h and 30 loops
 - June 2024 - [FAwR 2024](https://www.strava.com/activities/11555429820) - FAwR 2024 with Ronnie
-- May 2024 - [Cocodona 2024](https://www.strava.com/activities/11378676321) - Cocodona 2024
+- May 2024 - [Cocodona 2024](https://www.strava.com/activities/11378676321) - ~91 hours
 - June 2023 - [FAwR 2023](https://www.strava.com/activities/9200098285) - Finished in 25 hours, 25 minutes
 - May 2023 - [Cocodona 2023](https://www.strava.com/activities/9016891169) - Finished in 102 hours, 45th overall
 - April 2023 - [Grand Canyon R2R2R](https://www.strava.com/activities/8816263472)
