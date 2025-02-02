@@ -2,4 +2,117 @@ A quote from Bjarne Stroustrup, creator of the C++ programming language:
 
 > I think of math as a splendid way to learn to think straight. Exactly what math to learn and exactly where what kinds of math can be applied is secondary to me.
 
+Above any other topic, mathematics has always been my favorite. It was the only subject which had absolute truth. Everything with math is a fact, and can be proven. If it is not a fact, it is clearly indicated and labeled so, and is pending a proof discovery.
+
+Unlike all kinds of science, if something is true one day with math, it will be true forever. Unlike the study of languages, there are no special exceptions in math where the rules do not apply. Unlike religion there is no faith associated with the existence of any math rules. Math is pure, logical, beautiful and always makes sense.
+
+Learning the proof how something works is amazing. By studying proofs you can almost always learn more and learn new techniques for future proofs. Because you learn exactly why something works the way it does.
+
 I've always said that math teaches you above all how to think.  
+
+# Primes
+
+## What are prime numbers?
+
+A natural number is a number in the set {1, 2, 3, ...}. Prime numbers are a subset of natural numbers.
+
+In particular prime numbers are the subset of natural numbers more than 1 and who have no divisors other than themselves and 1.
+
+4 is not a prime because 4 can be factored into 2 * 2.
+5 is a prime because no numbers multiplied by each other give 5 other than 1 and 5 itself.
+
+## How many primes are there?
+
+There are infinitely many prime numbers.
+
+How can you be sure? Well assume you have a set of all the finite number of primes:
+P = {p1, p2, ... pN}.
+
+Then multiply all of those numbers together and add one. n = p1 * p2 * ... * pN + 1.
+
+We know that p does not divide n for each p in the set P because n mod p == 1.
+
+But the Fundamental Theorem of Algebra states that every natural number is itself a prime or can be factored into primes in a unique way.
+
+Since we determined that N can't be factored using any prime in our set P, then it must itself be a prime or can be factored into different primes not completely in our set.
+
+Therefore for any set of primes, we can always use that set to generate a bigger set of primes. We would generate this larger set, by multiplying the entire set together, and adding 1. Then we'd have a number which is prime or which contains prime factors not in our set.
+
+And since we can always keep generating larger sets of primes infinitely; therefore, there are infinitely many primes.
+
+## How to verify if a number is prime or not?
+
+The simplest way to verify if a number n is prime is to check if any number that is greater than 1 and smaller than the square root of n is a divisor of n. More specifically you only need to see if the primes smaller than the square root of n are divisors.
+
+But the simplest method of verifying primality becomes the hardest method when we have large numbers we want to verify because the number of factors we have to check grow fast.
+
+There are 2 types of primality tests:
+
+- Deterministic: Determines for sure if a number is prime or not
+- Probabilistic: Determines for sure if a number is prime, but may report a composite to be prime
+
+So why would you ever use a probabilistic test when a deterministic test is available?
+
+Because probabilistic tests can be much faster to run. So if you're searching for a prime, you can use the probabilistic test to find a number that is probably a prime, and then fall back to a deterministic test to be sure for the numbers the probabilistic test deems to be probably a primes.
+
+Some examples of other primality tests are: Fermat's primality test, Elliptic curve primality test, and AKS primality test. There are many others though.
+
+## How common are prime numbers in the set of natural numbers?
+We know that there are infinitely many primes, but how common are they in comparison to composite (non prime) numbers?
+
+The distribution of primes within the natural numbers is not known even to the greatest minds in mathematics throughout history. There are laws that govern the average distribution such as the prime number theorem. But it seems as though we may never understand the distribution of primes fully.
+
+The prime number theorem states that if you select any number N, and then take it's number of digits, then the chance of it being a prime is only 1/N. So as you select bigger numbers for N, you have less and less of a chance of them being primes.
+
+# Number theory
+
+Number theory is the branch of mathematics which studies the properties and theories relating to whole numbers.
+
+Some topics in number theory include factorization, modular arithmetic, diophantine equations, primes, and much more.
+
+# Graph theory
+
+Graph theory is of particular interest to both mathematics and computer science.
+
+Graph theory is the study of graphs. A graph is a collection of nodes or vertices and edges which connect those vertices together.
+
+# Math tricks
+
+- Instead of subtracting number, it's sometimes easier to think how much you need to add to the smaller number to get to the bigger number. For example 1134 -1123. You need to add 11 to 1123 to get to 1134.
+- You can multiply any large number by 9 easily in your head. Example 123 * 9. Instead of calculating the number using 9, you can instead do 123 * 10 = 1230 and then subtract 123. Which gives 1107. The same trick works with 11 but you add instead of subtracting the number.
+- Since doubling a number is pretty easy, you can multiply any number by any power of 2 by repeatedly doubling the number.
+- You can square any number that ends in 5 easily. The result of every square that ends in 5 will end in 25. To get the preceding digits of 25 you simply need to multiply the digits to the left of the 5 with 1 more than that value. Example 95*95. First write down 25. Then before that 25 write down 9*10 = 90. So the result is 9025. Example 2: 1365 * 1365 = 1863225
+
+# Pi
+
+## What is Pi?
+
+Pi is the ratio of a circle's circumference to its diameter. This magical number appears almost everywhere in every type of math. Pi cannot be written as the ratio of two numbers and is therefore an irrational number. Pi is also a transcendental number, which means that it is not the root of any polynomial equation with rational coefficients.
+
+Many people make a hobby of trying to memorize as much of Pi as they can. The current record is held by Akira Haraguchi, who has memorized Pi to over 83 thousand digits.
+
+## Pi Clubs
+
+There are even clubs out there for people who have memorized part of Pi. You can [join the Pi 100-club and the Pi 1000-club](http://www.acc.umu.se/~olletg/)
+
+Download the digits of Pi, Phi, and e
+Download the [first 10 thousand digits of Pi](https://brianbondy.com/static/downloads/piDigits.txt)
+Download the [first 1052 digits of Phi](https://brianbondy.com/static/downloads/phiDigits.txt)
+Download the [first 956 digits of e](https://brianbondy.com/static/downloads/eDigits.txt)
+
+## PiMemorize - A free application for Windows
+
+I made a Windows application that you can use to help memorize Pi. The newer version 1.1 will also allow you to memorize Phi and e. The application is also known as PhiMemorize and eMemorize.
+
+[Click here to download the Windows application](https://brianbondy.com/static/downloads/PiMemorize.exe)
+
+PiMemorize - A free application for Windows Phone 7
+I also made a similar Pi Memorize application for Windows Phone 7 (WP7). [You can read about that WP7 app here](https://brianbondy.com/blog/id/101/windows-phone-7-development-overview).
+
+## Screenshots
+
+<p><a href="/static/downloads/PiMemorize.exe"> <img border="0" src="/static/img/piMemorize.jpg"></a></p>
+<p><img border="0" src="https://brianbondy.com/static/img/blogpost_101/piMemorize1.png"></p>
+<p><img border="0" src="https://brianbondy.com/static/img/blogpost_101/piMemorize2.png"></p>
+<p><img border="0" src="https://brianbondy.com/static/img/blogpost_101/piMemorize3.png"></p>
+
