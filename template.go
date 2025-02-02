@@ -176,7 +176,7 @@ func blogPostPageHandler(w http.ResponseWriter, r *http.Request) {
 			parsedDate, _ := time.Parse(layoutISO, foundPost.Created)
 
 			p := &data.BlogPostPage{
-				Title:        GetTitle("Blog posts"),
+				Title:        GetTitle(foundPost.Title),
 				BlogPost:     foundPost,
 				BlogPostBody: getMarkdownData("blog/" + strconv.Itoa(foundPost.Id) + ".markdown"),
 				BlogPostDate: parsedDate.Format(layoutUS),
@@ -598,7 +598,7 @@ func homePageHandler(w http.ResponseWriter, r *http.Request) {
 	}
 
 	p := &data.HomePage{
-		Title:        GetTitle("Brian R. Bondy"),
+		Title:        "Brian R. Bondy",
 		Posts:        previewPosts,
 		AllPosts:     allPosts,
 		MarkdownSlug: "home",
