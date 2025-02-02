@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>{{.Title}}</title>
-    <link rel="stylesheet" href="/static/css/main.css?cachebust=59">
+    <link rel="stylesheet" href="/static/css/main.css?cachebust=78">
     <link rel="stylesheet" href="/static/font-awesome/css/all.min.css">
     <link rel="stylesheet" href="/static/css/highlight-default.css">
     <link rel="shortcut icon" href="/static/img/favicon.ico">
@@ -14,6 +14,7 @@
     <meta property="og:site_name" content="Brian R. Bondy">
     {{if (avail "ShareUrl" .)}}
     <meta property="og:url" content="https://brianbondy.com{{.ShareUrl}}">
+    <meta property="og:type" content="article">
     {{end}}
     {{if (avail "Description" .)}}
     <meta property="og:description" content={{.Description}}>
@@ -75,6 +76,20 @@
           topBar.classList.remove('scrolled');
         }
       });
+
+      function copyLink(button) {
+        const url = button.getAttribute('data-url');
+        navigator.clipboard.writeText(url).then(() => {
+          const originalText = button.innerHTML;
+          button.innerHTML = '<i class="fas fa-check"></i> Copied!';
+          button.classList.add('copied');
+          
+          setTimeout(() => {
+            button.innerHTML = originalText;
+            button.classList.remove('copied');
+          }, 2000);
+        });
+      }
     </script>
   </body>
 </html>

@@ -1,6 +1,7 @@
 hr {
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin: 20px 0;
+  border: none;
+  border-top: 1px solid #edf2f7;
 }
 body {
   background-color: #f8fafc;
@@ -590,4 +591,99 @@ textarea {
   color: #718096;
   font-size: 0.9em;
   margin-top: 3px;
+}
+
+.socialShare {
+  margin: 20px 0;
+}
+
+.shareLabel {
+  color: #4a5568;
+  margin-right: 10px;
+  font-weight: 500;
+}
+
+.shareButtons {
+  display: flex;
+  gap: 10px;
+}
+
+.shareButton {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+
+.shareButton i {
+  margin-right: 8px;
+}
+
+.shareButton.twitter {
+  background-color: #000000;
+  padding: 8px 16px;  /* Same padding on both sides since there's no icon */
+}
+
+.shareButton.twitter:hover {
+  background-color: #333333;
+}
+
+.shareButton.facebook {
+  background-color: #1877f2;
+}
+
+.shareButton.facebook:hover {
+  background-color: #0d65d9;
+}
+
+.shareButton.copylink {
+  background-color: #4a5568;
+}
+
+.shareButton.copylink:hover {
+  background-color: #2d3748;
+}
+
+.shareButton.copylink.copied {
+  background-color: #48bb78;
+}
+
+.shareButton.copylink.copied:hover {
+  background-color: #48bb78;
+}
+
+.shareButton.twitter i {
+  font-size: 0.9em;  /* Slightly smaller icon */
+  width: 14px;       /* Fixed width to match other icons */
+  text-align: center;
+}
+
+.shareButton.linkedin {
+  background-color: #0077b5;
+}
+
+.shareButton.linkedin:hover {
+  background-color: #006399;
+}
+
+@media only screen and (max-width: 600px) {
+  .shareButton span.button-text {
+    display: none;
+  }
+  
+  .shareButton {
+    padding: 10px !important;
+    min-width: 42px;
+    justify-content: center;
+  }
+  
+  .shareButtons {
+    justify-content: center;
+  }
 }

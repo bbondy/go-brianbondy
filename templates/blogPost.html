@@ -10,7 +10,37 @@
       <a href="/tagged/{{.}}" class="tag">{{.}}</a>
       {{end}}
     </div>
+    
+    <div class="socialShare">
+      <div class="shareButtons">
+        <a href="https://twitter.com/intent/tweet?text={{.BlogPost.Title}}&url=https://brianbondy.com/blog/{{.BlogPost.Id}}/{{slugifyTitle .BlogPost.Title}}" 
+           target="_blank" 
+           rel="noopener noreferrer" 
+           class="shareButton twitter">
+          X
+        </a>
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https://brianbondy.com/blog/{{.BlogPost.Id}}/{{slugifyTitle .BlogPost.Title}}" 
+           target="_blank" 
+           rel="noopener noreferrer" 
+           class="shareButton facebook">
+          <i class="fab fa-facebook"></i> Facebook
+        </a>
+        <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://brianbondy.com/blog/{{.BlogPost.Id}}/{{slugifyTitle .BlogPost.Title}}" 
+           target="_blank" 
+           rel="noopener noreferrer" 
+           class="shareButton linkedin">
+          <i class="fab fa-linkedin"></i> LinkedIn
+        </a>
+        <button onclick="copyLink(this)" 
+                class="shareButton copylink"
+                data-url="https://brianbondy.com/blog/{{.BlogPost.Id}}/{{slugifyTitle .BlogPost.Title}}">
+          <i class="fas fa-link"></i> Copy
+        </button>
+      </div>
+    </div>
   </article>
+
+  <hr>
 
   <div class="navigationButtons">
     {{if .PrevPost}}
