@@ -48,7 +48,6 @@ a {
 .topBar li {
   color: #4a5568;
   display: inline-block;
-  font-family: 'Droid Serif';
   padding: 10px 14px;
   transition: all 0.2s ease;
 }
