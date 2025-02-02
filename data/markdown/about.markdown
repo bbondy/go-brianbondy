@@ -2,7 +2,7 @@
 
 ## General Information
 
-<img src="/static/img/family2.jpg" style="float:left; margin-right:20px; margin-bottom: 1em; border: 1px solid black" height="250" width="375">
+<img src="/static/img/family2.jpg" class="family-photo" height="250" width="375">
 
 I consider family to be my "raison d'être". I'm blessed with a beautiful wife and three sons: Link, Ronnie, and Asher.
 

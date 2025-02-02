@@ -691,3 +691,20 @@ textarea {
     justify-content: center;
   }
 }
+
+.family-photo {
+  float: left;
+  margin-right: 20px;
+  margin-bottom: 1em;
+  border: 1px solid black;
+}
+
+@media (max-width: 600px) {
+  .family-photo {
+    float: none;
+    display: block;
+    margin: 0 auto 20px auto;
+    max-width: 100%;
+    height: auto;
+  }
+}
