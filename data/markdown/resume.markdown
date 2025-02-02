@@ -10,17 +10,16 @@ To learn from others and help others reach their goals
 - [Stackoverflow](http://stackoverflow.com/users/3153/brian-r-bondy) (Top 0.01%) - http://stackoverflow.com/users/3153/brian-r-bondy
 - [Twitter](https://twitter.com/brianbondy) - https://twitter.com/brianbondy
 - [LinkedIn](https://www.linkedin.com/in/bbondy) - https://www.linkedin.com/in/bbondy
-- [Khan Academy](https://www.khanacademy.org/profile/bbondy/) - https://www.khanacademy.org/profile/bbondy/
 
 ## Experience
-- **Favorite Languages and APIs**: C, expert level C++ (Templates, STL, boost, COM, MFC, Win32 API, OpenGL, Qt...), JavaScript (Node, client side, app development), Python (Django, pyWin32, list comprehensions, modules, packages, ...), C# (Winforms, WPF, Silverlight, WCF, LINQ, Entity Framework, Remote Objects, Generics, Nullable types, Extension methods, ...), F#, SQL, Matlab, Haskell, Scheme
-- **Server Side Development**: Node, IIS (5,6,7, extensions), Apache, CGI, Google App Engine (Python GAE runtime, Flask, webapp, datastore, transactions, GQL, memcache, administration console, bulkdata loaders/exporters, remote API), Django, ASP, ASP .NET, ASP .NET MVC3 (ASPX, Razor), PHP, SOAP, REST ROA, template engines (Jade, jinja2)
-- **Front end Development**: DOM, CSS, Stlyus, JavaScript, jQuery, jQueryUI, Backbone, React, debugging, AJAX, JSON HTML5 (canvas, video, local storage, web workers, offline web applications, geolocation, forms, microdata), XML (XPath, XPointer, XSLT, SAX, DTDs), SVG, MathML
+- **Favorite Languages and APIs**: C, expert level C++ (Templates, STL, boost, COM, MFC, Win32 API, OpenGL, Qt...), JavaScript (Node, client side, app development), Python (TensorFlow, Keras, PyTorch, scikit-learn, Pandas, NumPy, Django, ...), C# (Winforms, WPF, Silverlight, WCF, LINQ, Entity Framework, Remote Objects, Generics, Nullable types, Extension methods, ...), F#, SQL, Matlab, Haskell, Scheme
+- **Server Side Development**: Node, IIS (5,6,7, extensions), Apache, CGI, Google App Engine (Python FastAPI, GAE runtime, Flask, webapp, datastore, transactions, GQL, memcache, administration console, bulkdata loaders/exporters, remote API), Django, ASP, ASP .NET, ASP .NET MVC3 (ASPX, Razor), PHP, SOAP, REST ROA, template engines (Jade, jinja2)
+- **Front end Development**: DOM, CSS, Stlyus, JavaScript, jQuery, jQueryUI, Backbone, React/Redux, debugging, AJAX, JSON HTML5 (canvas, video, local storage, web workers, offline web applications, geolocation, forms, microdata), XML (XPath, XPointer, XSLT, SAX, DTDs), SVG, MathML
 - **Operating Systems**: macOS, Windows (all client / server, PE), Android, UNIX, Solaris, Linux, BSD, macOS, Windows Phone
 - **Source Control**: Git, Mercurial (hg), Subversion (SVN), CVS, MS Source Safe, database IDEs
-- **IDEs, and Debuggers**: Vi, Xcode, MS Visual Studio v5, v6, v7, v8 (2005), v9 (2008), v10 (2010), v11, Borland C++ v4.2, GDB
+- **IDEs, and Debuggers**: Vim, Cursor, Xcode, MS Visual Studio v5, v6, v7, v8 (2005), v9 (2008), v10 (2010), v11, Borland C++ v4.2, GDB
 - **Networking**: Low level socket programming, UDP, TCP, deep protocol knowledge (HTTP, HTTPS, FTP, FTPS, POP), extensive use of Ethereal. (Please see the 'Internet Library' project in the 'projects' section below for a full list of implemented protocols)
-- **Database**: MS SQL Server (2000, 2005, 2008, partitions, index design, ...), SQLite, DB2, mySQL, PostgreSQL, Oracle, Corel Paradox, MS Access
+- **Database**: S3, MS SQL Server (2000, 2005, 2008, partitions, index design, ...), SQLite, DB2, mySQL, PostgreSQL, Oracle, Corel Paradox, MS Access
 - **Other Software Development Experience**: ZLIB, libxml2, Image analysis, cryptography, steganography, LZW and Huffman compression, tape drives, CD burning libraries, Windows LAN programming, and creating installers with NSIS. Static/Shared libraries DLLs/.so, semaphores, Windows Multi threading, pthreads, shared mem, free type lib, Video4Linux
 
 ## Qualities
@@ -28,7 +27,7 @@ To learn from others and help others reach their goals
 - Adaptable, hard working, reliable, self motivated, and a quick learner
 - Ability to make projects 'happen' quickly, mentoring, management
 - Bilingual (English and French)
-- Have been actively programming for over 20 years
+- Have been **actively** programming for over 30 years
 
 ## Education
 - **University of Waterloo**: Honours Bachelor of Mathematics in Computer Science  
@@ -36,22 +35,30 @@ To learn from others and help others reach their goals
   Computer Graphics, Networking, Artificial Intelligence, Operating Systems, Algorithms, Concurrent Programming and Control Structures, Theory of Computation, Data Structures and Data Management, Number Theory, Mathematics of Investment, Statistics and Probability Theory, Combinatorics and Optimization, Logic Math, Calculus, Classical and Linear Algebra
 
 - **Khan Academy**  
-  Windsor, Ontario, Canada - 2010 through Forever
+  Windsor, Ontario, Canada - 2010 through Present (Ongoing Professional Development)
 
 ## Employment
+- **Brave Software: Co-Founder and CTO**  
+  Remote - 2015 through Present
+  - Founded Brave Browser and played a pivotal role in developing core products including the Brave browser, Brave Wallet, and the Leo AI agent.
+  - Led the architecture and development of major products and features, alongside minor enhancements and fixes.
+  - Managed up to one-third of the company's employees and contractors.
+  - Assembled and mentored a team of engineers, guiding the transition from a startup to a mature company renowned for privacy-focused web browsing.
+  - Instrumental in all phases of the company's growth, from initial product development through to market launch and continuous enhancement.
+
 - **Khan Academy: Developer Lead**  
-  Offsite employee - April 2014 through Present
+  Remote - April 2014 through Present
   - Developed SQL environment for learning SQL on Khan Academy using emscripten + sqljs + sqlite
   - Developed peer based project evaluations for computer science students on KA
-  - Leaded development on LearnStorm, a bay area 3 month math competition
+  - Led development on LearnStorm, a bay area 3 month math competition
   - Hundreds of fixes, enhancements and patches throughout the tree
 
 - **Mozilla: Senior Firefox Platform Engineer**  
-  Offsite employee - July 2011 through April 2014
+  Remote - July 2011 through April 2014
   - Working on Firefox and core code across the tree
   - Windows 8 Metro Firefox browser
   - Installer, silent update, Windows service
-  - Hundreds of fixes, enhancements and patches throughout the tree
+  - Hundreds of contributions
   - Languages: C++, JavaScript, Python
 
 - **VisionWorks Solutions Inc: Co-founder, Software Developer**
@@ -80,7 +87,7 @@ To learn from others and help others reach their goals
   Ottawa, Ontario, Canada - Aug 2001 through Aug 2002
   - Rewrote printing functionality in Paradox 10 as well as worked on SP1 & SP2 for Paradox 10
   - Worked on .NET related projects including performing XSLT transformation on SOAP documents
-  - Created a generic web site update notification system, which is used company wide
+  - Created a generic web site update notification system, which is used company-wide
   - Evaluated new technologies to see if they would fit in at Corel, came up with new company ideas
 
 - Other software developer positions not included to save space.
@@ -105,7 +112,8 @@ To learn from others and help others reach their goals
 ## Interests, Hobbies, and Other
 
 - Coding: Working on programming projects, learning new technologies
+- Running: Completed several runs up to 250mi in distance
 - Reading: Reviewing O'Reilly and Manning books
 - Music: Piano & guitar
-- Exercise: Marathon runner, Black belt (Shodan) Karate Meibukan Goju Ryu
+- Exercise: Running, Weight Lifting, Black belt (Shodan) Karate Meibukan Goju Ryu
 - Microsoft MVP (For Visual C++ July 2010 - July 2011):
