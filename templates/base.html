@@ -6,7 +6,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/static/css/main.css?cachebust=88">
+    <link rel="stylesheet" href="/static/css/main.css?cachebust=90">
     <link rel="stylesheet" href="/static/font-awesome/css/all.min.css">
     <link rel="stylesheet" href="/static/css/highlight-default.css">
     <link rel="shortcut icon" href="/static/img/favicon.ico">
@@ -36,31 +36,37 @@
           <img title="Brian R. Bondy" src="/static/img/logo.png">
         </a>
         <ul class="topBarLinks">
-          <a class="filters" href="/blog/filters">
+          <a href="/blog/filters" class="filters">
             <li class="{{if eq .MarkdownSlug "filters"}}current{{end}}">Filters</li>
           </a>
-          <a href="/running">
+          <a href="/running" class="running">
             <li class="{{if eq .MarkdownSlug "running.markdown"}}current{{end}}">Running</li>
           </a>
-          <a href="/projects">
+          <a href="/projects" class="projects">
             <li class="{{if eq .MarkdownSlug "projects.markdown"}}current{{end}}">Projects</li>
           </a>
           <a href="/other">
             <li class="{{if eq .MarkdownSlug "other.markdown"}}current{{end}}">Other</li>
           </a>
-          <a href="https://twitter.com/brianbondy" target="_blank" rel="noopener noreferrer">
-            <li class="social"><span title="Twitter" class="fab fa-twitter"></span></li>
-          </a>
-          <a href="https://www.strava.com/athletes/6932803" target="_blank" rel="noopener noreferrer">
-            <li class="social"><span title="Strava" class="fab fa-strava"></span></li>
-          </a>
-          <a href="https://github.com/bbondy" target="_blank" rel="noopener noreferrer">
-            <li class="social"><span title="GitHub" class="fab fa-github"></span>
-            </li>
-          </a>
-          <a href="https://www.linkedin.com/in/bbondy" target="_blank" rel="noopener noreferrer">
-            <li class="social"><span title="LinkedIn" class="fab fa-linkedin"></span></li>
-          </a>
+          <div class="social-menu">
+            <span class="social-trigger">
+              <i class="fab fa-canadian-maple-leaf"></i>
+            </span>
+            <ul class="social-links">
+              <li><a href="https://twitter.com/brianbondy" target="_blank" rel="noopener noreferrer">
+                <span title="Twitter" class="fab fa-twitter"></span>
+              </a></li>
+              <li><a href="https://www.strava.com/athletes/6932803" target="_blank" rel="noopener noreferrer">
+                <span title="Strava" class="fab fa-strava"></span>
+              </a></li>
+              <li><a href="https://github.com/bbondy" target="_blank" rel="noopener noreferrer">
+                <span title="GitHub" class="fab fa-github"></span>
+              </a></li>
+              <li><a href="https://www.linkedin.com/in/bbondy" target="_blank" rel="noopener noreferrer">
+                <span title="LinkedIn" class="fab fa-linkedin"></span>
+              </a></li>
+            </ul>
+          </div>
         </ul>
       </div>
       <div class="mainBody">

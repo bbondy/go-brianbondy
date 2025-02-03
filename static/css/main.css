@@ -181,14 +181,12 @@ h2 {
   margin-top: 25px;
 }
 
-/* Specific style for the years section */
 .tagContainer.years {
   -webkit-column-count: 1;
   -moz-column-count: 1;
   column-count: 1;
 }
 
-/* Add styles for navigation container */
 .navigationButtons {
   display: flex;
   flex-wrap: wrap;
@@ -250,32 +248,20 @@ textarea {
   height: 100px;
 }
 
-@media only screen and (max-width: 520px) {
-  .topBarLinks .social .fa-linkedin {
-    display: none;
-  }
-}
-
-@media only screen and (max-width: 480px) {
-  .topBarLinks .social .fa-github {
-    display: none;
-  }
-}
-
-@media only screen and (max-width: 439px) {
-  .topBarLinks .social .fa-strava {
-    display: none;
-  }
-}
-
-@media only screen and (max-width: 411px) {
-  .topBarLinks .social .fa-twitter {
-    display: none;
-  }
-}
-
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 443px) {
   .topBarLinks .filters {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 363px) {
+  .topBarLinks .projects{
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 269px) {
+  .topBarLinks .running {
     display: none;
   }
 }
@@ -283,7 +269,7 @@ textarea {
 .image-grid {
   display: flex;
   flex-wrap: wrap;
-  justify-content: start; /* or 'space-between' or other values based on preference */
+  justify-content: start;
 }
 
 .image-item {
@@ -339,7 +325,6 @@ textarea {
   text-decoration: none;
 }
 
-/* Update the hover effect for the entire card */
 .blogPostPreviewLink:hover .blogPostPreview {
   transform: translateY(-3px);
   box-shadow: 
@@ -388,7 +373,6 @@ textarea {
   padding-top: 3px;
 }
 
-/* Update the styles for the read more button */
 .blogPostPreview .readMore {
   margin-top: 25px;
   text-align: right;
@@ -706,5 +690,87 @@ textarea {
     margin: 0 auto 20px auto;
     max-width: 100%;
     height: auto;
+  }
+}
+
+.social-menu {
+  float: right;
+  position: relative;
+  height: 39px;
+  display: flex;
+  align-items: center;
+  margin-right: 0px;
+}
+
+.social-trigger {
+  cursor: pointer;
+  padding: 10px 14px;
+  display: flex;
+  align-items: center;
+}
+
+.social-trigger .fa-canadian-maple-leaf {
+  color: #FF4B4B;
+  font-size: 1em;
+  margin-right: 13px;
+}
+
+.social-links {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  list-style: none;
+  margin: 0;
+  padding: 15px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  background: white;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+
+.social-menu:hover .social-links,
+.social-menu:focus-within .social-links {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.social-links li a span {
+  transition: transform 0.2s ease;
+}
+
+.social-links li a:hover span {
+  transform: translateY(-2px);
+}
+
+.social-links .fa-twitter {
+  color: #00ABF1;
+}
+
+.social-links .fa-strava {
+  color: #ee5d2a;
+}
+
+.social-links .fa-github {
+  color: black;
+}
+
+.social-links .fa-linkedin {
+  color: #2667bc;
+}
+
+@media (max-width: 768px) {
+  .social-links {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    transform: none;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   }
 }
