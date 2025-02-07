@@ -709,10 +709,13 @@ textarea {
   align-items: center;
 }
 
-.social-trigger .fa-canadian-maple-leaf {
-  color: #FF4B4B;
+.social-trigger .fa-user {
+  color: #4d90fe;
   font-size: 1em;
   margin-right: 13px;
+  display: inline-flex;
+  align-items: center;
+  height: 16px;
 }
 
 .social-links {
