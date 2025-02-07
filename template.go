@@ -6,6 +6,7 @@ import (
 	"html/template"
 	"io/ioutil"
 	"net/http"
+	"path/filepath"
 	"reflect"
 	"regexp"
 	"sort"
@@ -17,6 +18,7 @@ import (
 	"github.com/codegangsta/negroni"
 	"github.com/gomarkdown/markdown"
 	"github.com/gomarkdown/markdown/parser"
+	"github.com/gorilla/feeds"
 	"github.com/gorilla/mux"
 )
 
@@ -228,16 +230,87 @@ func blogPostPageHandler(w http.ResponseWriter, r *http.Request) {
 	errorPage(w, "No blog posts found", "blog")
 }
 
+func getImageMimeType(imagePath string) string {
+	ext := strings.ToLower(filepath.Ext(imagePath))
+	switch ext {
+	case ".png":
+		return "image/png"
+	case ".webp":
+		return "image/webp"
+	case ".jpg", ".jpeg":
+		return "image/jpeg"
+	case ".gif":
+		return "image/gif"
+	default:
+		return ""
+	}
+}
+
 func generateRSSHandler(w http.ResponseWriter, r *http.Request) {
-	target := "https://" + r.Host
-	rssXML, err := data.ConvertToRSS(blogPosts, GetTitle("Blog posts"), target)
+	feed := &feeds.Feed{
+		Title:       "Brian R. Bondy's Blog",
+		Link:        &feeds.Link{Href: "https://" + r.Host},
+		Description: "Brian R. Bondy's Blog - Coding, Running, and Life",
+		Author:      &feeds.Author{Name: "Brian R. Bondy"},
+		Created:     time.Now(),
+	}
+
+	var items []*feeds.Item
+	for _, post := range blogPosts {
+		parsedDate, _ := time.Parse(layoutISO, post.Created)
+		fullContent := getMarkdownData("blog/" + strconv.Itoa(post.Id) + ".markdown")
+
+		// Try to get description from content first
+		description := extractFirstParagraph(fullContent)
+
+		// If description is empty, use post.Description as fallback
+		if description == "" && post.Description != nil {
+			description = *post.Description
+		}
+
+		// If still empty, use a default description
+		if description == "" {
+			description = "Read more about " + post.Title
+		}
+
+		// Create the full URL for both link and guid
+		postURL := fmt.Sprintf("https://%s/blog/%d/%s", r.Host, post.Id, slugifyTitle(post.Title))
+		guidURL := fmt.Sprintf("https://%s/blog/%d", r.Host, post.Id)
+
+		item := &feeds.Item{
+			Title:       post.Title,
+			Link:        &feeds.Link{Href: postURL},
+			Description: description,
+			Author:      &feeds.Author{Name: "Brian R. Bondy"},
+			Created:     parsedDate,
+			Id:          guidURL, // This sets the GUID
+		}
+
+		// Add image enclosure if available
+		if post.ImagePath != nil && *post.ImagePath != "" {
+			imageURL := fmt.Sprintf("https://%s%s", r.Host, *post.ImagePath)
+			mimeType := getImageMimeType(*post.ImagePath)
+			if mimeType != "" {
+				item.Enclosure = &feeds.Enclosure{
+					Url:    imageURL,
+					Type:   mimeType,
+					Length: "0", // Setting length to 0 as we don't have the file size
+				}
+			}
+		}
+
+		items = append(items, item)
+	}
+	feed.Items = items
+
+	rss, err := feed.ToRss()
 	if err != nil {
 		http.Error(w, "Error generating RSS feed", http.StatusInternalServerError)
 		return
 	}
 
 	w.Header().Set("Content-Type", "application/xml")
-	w.Write(rssXML)
+	w.Write([]byte(rss))
 }
 
 func filtersPageHandler(w http.ResponseWriter, r *http.Request) {
@@ -596,24 +669,50 @@ func homePageHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 func extractFirstParagraph(content string) string {
-	// Find content between first <p> tags
+	// First try to find content between first <p> tags
 	re := regexp.MustCompile(`<p>(.*?)</p>`)
 	matches := re.FindStringSubmatch(content)
 	if len(matches) > 1 {
-		// Get the first 300 characters of the paragraph and add ellipsis
-		preview := matches[1] // Note: using [1] to get just the content inside <p> tags
-		if len(preview) > 300 {
-			// Try to cut at a word boundary
-			lastSpace := strings.LastIndex(preview[:300], " ")
-			if lastSpace > 0 {
-				preview = preview[:lastSpace] + "..."
-			} else {
-				preview = preview[:300] + "..."
+		// Get the content inside the first <p> tags
+		preview := matches[1]
+
+		// Remove any remaining HTML tags
+		tagRegex := regexp.MustCompile(`<[^>]*>`)
+		preview = tagRegex.ReplaceAllString(preview, "")
+
+		if preview != "" {
+			// If preview is too long, truncate it
+			if len(preview) > 300 {
+				// Try to cut at a word boundary
+				lastSpace := strings.LastIndex(preview[:300], " ")
+				if lastSpace > 0 {
+					preview = preview[:lastSpace] + "..."
+				} else {
+					preview = preview[:300] + "..."
+				}
 			}
+			return preview
 		}
-		return "<p>" + preview + "</p>"
 	}
-	return content
+
+	// If no paragraph found or it was empty, remove all HTML tags from content
+	tagRegex := regexp.MustCompile(`<[^>]*>`)
+	cleanContent := tagRegex.ReplaceAllString(content, " ")
+
+	// Remove extra whitespace
+	cleanContent = strings.Join(strings.Fields(cleanContent), " ")
+
+	// Take first 300 characters or less
+	if len(cleanContent) > 300 {
+		lastSpace := strings.LastIndex(cleanContent[:300], " ")
+		if lastSpace > 0 {
+			cleanContent = cleanContent[:lastSpace] + "..."
+		} else {
+			cleanContent = cleanContent[:300] + "..."
+		}
+	}
+
+	return cleanContent
 }
 
 func allPostsHandler(w http.ResponseWriter, r *http.Request) {
