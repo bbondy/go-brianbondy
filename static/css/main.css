@@ -777,3 +777,48 @@ textarea {
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   }
 }
+
+.other-container {
+    display: grid;
+    gap: 20px;
+    margin: 30px 0;
+    max-width: 700px;
+}
+
+.other-entry {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 24px 32px;
+    background: #ffffff;
+    border-radius: 12px;
+    border: 1px solid #edf2f7;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.other-entry:hover {
+    border-color: #4d90fe;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(77, 144, 254, 0.1);
+}
+
+.other-entry h3 {
+    font-size: 1.3em;
+    margin: 0 0 8px 0;
+    color: #2d3748;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.other-entry:hover h3 {
+    color: #4d90fe;
+}
+
+.other-details {
+    color: #718096;
+    font-size: 0.95em;
+    line-height: 1.5;
+}
