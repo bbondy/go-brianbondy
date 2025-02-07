@@ -253,6 +253,13 @@ func generateRSSHandler(w http.ResponseWriter, r *http.Request) {
 		Description: "Brian R. Bondy's Blog - Coding, Running, and Life",
 		Author:      &feeds.Author{Name: "Brian R. Bondy"},
 		Created:     time.Now(),
+		Image: &feeds.Image{
+			Url:    fmt.Sprintf("https://%s/static/img/avatar.png", r.Host),
+			Title:  "Brian R. Bondy's Blog",
+			Link:   fmt.Sprintf("https://%s", r.Host),
+			Width:  200,
+			Height: 200,
+		},
 	}
 
 	var items []*feeds.Item
