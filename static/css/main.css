@@ -563,7 +563,7 @@ textarea {
 }
 
 .book-entry h3 a:hover {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .book-details {
@@ -821,4 +821,69 @@ textarea {
     color: #718096;
     font-size: 0.95em;
     line-height: 1.5;
+}
+
+/* Shared styles for cards across pages */
+.card-container {
+    margin-top: 20px;
+}
+
+.card-entry {
+    margin-bottom: 20px;
+    padding: 24px 32px;
+    background: #ffffff;
+    border-radius: 12px;
+    border: 1px solid #edf2f7;
+    transition: all 0.2s ease;
+}
+
+.card-entry:hover {
+    border-color: #4d90fe;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(77, 144, 254, 0.1);
+}
+
+.card-entry h3 {
+    font-size: 1.3em;
+    margin: 0 0 8px 0;
+    color: #2d3748;
+}
+
+.card-entry h3 a {
+    color: #4d90fe;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.card-entry h3 a:hover {
+    color: #4d90fe;
+}
+
+/* Add styling for non-linked titles */
+.card-entry h3.no-link {
+    color: #2d3748;
+}
+
+.card-details {
+    color: #718096;
+    font-size: 0.95em;
+    line-height: 1.5;
+}
+
+/* Project specific styles */
+.project-entry {
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+}
+
+.project-image {
+    flex-shrink: 0;
+    width: 96px;
+    height: 96px;
+    object-fit: contain;
+}
+
+.project-content {
+    flex: 1;
 }
