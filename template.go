@@ -6,6 +6,7 @@ import (
 	"html/template"
 	"io/ioutil"
 	"net/http"
+	"net/url"
 	"path/filepath"
 	"reflect"
 	"regexp"
@@ -94,7 +95,7 @@ var funcMap = template.FuncMap{
 		return truncated + "..."
 	},
 	"tagUrl": func(tag string) string {
-		return fmt.Sprintf("/all?tag=%s", tag)
+		return fmt.Sprintf("/all?tag=%s", url.QueryEscape(tag))
 	},
 	"yearUrl": func(year int) string {
 		return fmt.Sprintf("/all?year=%d", year)
