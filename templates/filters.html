@@ -3,13 +3,13 @@
     <h1>Blog posts by year</h1>
     <div class="tagContainer years">
       {{range .Years}}
-      <a href="/posted/{{.}}" class="yearTag">{{.}}</a>
+      <a href="{{yearUrl .}}" class="yearTag">{{.}}</a>
       {{end}}
     </div>
     <h1>Blog posts by tag</h1>
     <div class="tagContainer">
       {{range .SortedTags}}
-      <div><a href="/tagged/{{.}}" class="tag">{{.}}</a> x {{getTagCount .}}</div>
+      <div><a href="{{tagUrl .}}" class="tag">{{.}}</a> x {{getTagCount .}}</div>
       {{end}}
     </div>
   </div>

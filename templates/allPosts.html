@@ -1,5 +1,15 @@
 {{define "mountPoint"}}
-  <h1>All Blog Posts</h1>
+  <h1>
+    {{if and .Tag .Year}}
+      Blog Posts from {{.Year}} Tagged with "{{.Tag}}"
+    {{else if .Tag}}
+      Blog Posts Tagged with "{{.Tag}}"
+    {{else if .Year}}
+      Blog Posts from {{.Year}}
+    {{else}}
+      All Blog Posts
+    {{end}}
+  </h1>
   <div class="postList">
     {{range .Posts}}
       <div class="postListItem">
@@ -8,7 +18,7 @@
           <a href="{{.PostUrl}}" class="postTitle">{{.BlogPost.Title}}</a>
           {{if .BlogPost.Tags}}
             <span class="postTags">
-              — {{range $index, $tag := .BlogPost.Tags}}{{if $index}}, {{end}}<a href="/tagged/{{.}}">{{.}}</a>{{end}}
+              — {{range $index, $tag := .BlogPost.Tags}}{{if $index}}, {{end}}<a href="{{tagUrl .}}">{{.}}</a>{{end}}
             </span>
           {{end}}
         </div>

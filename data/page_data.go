@@ -49,4 +49,6 @@ type AllPostsPage struct {
 	Title        string
 	Posts        []BlogPostPreview
 	MarkdownSlug string
+	Tag          string
+	Year         int
 }

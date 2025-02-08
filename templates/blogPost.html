@@ -7,7 +7,7 @@
     </div>
     <div class="tags">
       {{range .BlogPost.Tags}}
-      <a href="/tagged/{{.}}" class="tag">{{.}}</a>
+      <a href="{{tagUrl .}}" class="tag">{{.}}</a>
       {{end}}
     </div>
     

@@ -93,6 +93,12 @@ var funcMap = template.FuncMap{
 		truncated = strings.TrimRight(truncated, ".,!?:;")
 		return truncated + "..."
 	},
+	"tagUrl": func(tag string) string {
+		return fmt.Sprintf("/all?tag=%s", tag)
+	},
+	"yearUrl": func(year int) string {
+		return fmt.Sprintf("/all?year=%d", year)
+	},
 }
 
 func getMarkdownData(slug string) string {
@@ -723,8 +729,18 @@ func extractFirstParagraph(content string) string {
 }
 
 func allPostsHandler(w http.ResponseWriter, r *http.Request) {
-	allPosts := make([]data.BlogPostPreview, 0, len(blogPosts))
-	for _, post := range blogPosts {
+	// Get tag and year from query parameters
+	tag := r.URL.Query().Get("tag")
+	year := 0
+	if yearStr := r.URL.Query().Get("year"); yearStr != "" {
+		year, _ = strconv.Atoi(yearStr)
+	}
+
+	// Get filtered posts based on tag and/or year
+	filteredPosts := getFilteredPosts(tag, year)
+
+	allPosts := make([]data.BlogPostPreview, 0, len(filteredPosts))
+	for _, post := range filteredPosts {
 		parsedDate, _ := time.Parse(layoutISO, post.Created)
 		allPosts = append(allPosts, data.BlogPostPreview{
 			BlogPost: post,
@@ -733,10 +749,24 @@ func allPostsHandler(w http.ResponseWriter, r *http.Request) {
 		})
 	}
 
+	title := "All Blog Posts"
+	if tag != "" {
+		title = fmt.Sprintf("Blog Posts Tagged with \"%s\"", tag)
+	}
+	if year != 0 {
+		if tag != "" {
+			title = fmt.Sprintf("Blog Posts from %d Tagged with \"%s\"", year, tag)
+		} else {
+			title = fmt.Sprintf("Blog Posts from %d", year)
+		}
+	}
+
 	p := &data.AllPostsPage{
-		Title:        GetTitle("All Blog Posts"),
+		Title:        GetTitle(title),
 		Posts:        allPosts,
 		MarkdownSlug: "all",
+		Tag:          tag,
+		Year:         year,
 	}
 
 	t := template.Must(template.New("base.html").Funcs(funcMap).ParseFiles("templates/base.html", "templates/allPosts.html"))
