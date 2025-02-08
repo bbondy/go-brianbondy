@@ -710,12 +710,17 @@ textarea {
 }
 
 .social-trigger .fa-user {
-  color: #4d90fe;
+  color: #2d3748;
   font-size: 1em;
   margin-right: 13px;
   display: inline-flex;
   align-items: center;
   height: 16px;
+  transition: color 0.2s ease;
+}
+
+.social-trigger:hover .fa-user {
+  color: #4d90fe;
 }
 
 .social-links {
