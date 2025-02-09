@@ -7,8 +7,28 @@ Listed below are some of the projects I've worked on throughout my career.  Some
     <div class="project-entry">
       <img class="project-image" src='/static/img/projects/brave.png' alt="Brave Browser">
       <div class="project-content">
-        <h3><a href="https://github.com/brave/browser-laptop">Brave macOS, Windows, and Linux browser</a></h3>
-        <div class="card-details">Brave browser blocks all the greed and ugliness on the Web that slows you down and invades your privacy. Then we put clean ads back, to fund website owners and Brave users alike.</div>
+        <h3><a href="https://brave.com">Brave macOS, Windows, and Linux browser</a></h3>
+        <div class="card-details">Block ads. Save data. And get way faster webpages.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card-entry">
+    <div class="project-entry">
+      <img class="project-image" src='/static/img/projects/wallet.svg' widt='218' alt="Brave Wallet">
+      <div class="project-content">
+        <h3><a href="https://brave.com/wallet/">Brave macOS, Windows, and Linux browser</a></h3>
+        <div class="card-details">Secure, native, built-in crypto wallet that supercharges Brave browser for Web3.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card-entry">
+    <div class="project-entry">
+      <img class="project-image" src='/static/img/projects/leo.png' alt="Leo AI">
+      <div class="project-content">
+        <h3><a href="https://brave.com/leo/">Brave macOS, Windows, and Linux browser</a></h3>
+        <div class="card-details">Smart AI assistant built right into the Brave browser. Ask questions, summarize pages, create new content, and more. Privately.</div>
       </div>
     </div>
   </div>
@@ -27,8 +47,8 @@ Listed below are some of the projects I've worked on throughout my career.  Some
     <div class="project-entry">
       <img class="project-image" src='/static/img/logo/logo.png' alt="brianbondy.com">
       <div class="project-content">
-        <h3><a href="https://github.com/bbondy/brianbondy.node">brianbondy.com</a></h3>
-        <div class="card-details">The current website you're visiting.  This website is written in Node, Hapi, Redis React, and ES6 transpiled with Babel. This website has been redone several times before.  Previous versions were written in [Google App Engine](https://github.com/bbondy/brianbondy.gae), Django, ASP .NET (C#), Flash / ActionScript, and the original one was generated from C++ code. Only the last couple sites were open source.</div>
+        <h3><a href="https://github.com/bbondy/go-brianbondy">brianbondy.com</a></h3>
+        <div class="card-details">The current website for brianbondy.com. This website is written in Go.  The [version before that](https://github.com/bbondy/brianbondy.node) was written in Node, Hapi, Redis React, and ES6 transpiled with Babel. Before that the previous versions were written in [Google App Engine](https://github.com/bbondy/brianbondy.gae), Django, ASP .NET (C#), Flash / ActionScript, and the original one was generated from C++ code.</div>
       </div>
     </div>
   </div>
@@ -115,7 +135,7 @@ Listed below are some of the projects I've worked on throughout my career.  Some
 
   <div class="card-entry">
     <div class="project-entry">
-      <img src='/static/img/projects/robobak.png' style='float:right; height: 40px; margin-top: 40px; margin-left: 20px;'>
+      <img src='/static/img/projects/robobak.png' style='float:right; width: 96px; margin-top: 40px; margin-left: 20px;'>
       <div class="project-content">
         <h3 class="no-link">ROBOBAK</h3>
         <div class="card-details">Enterprise level Windows backup software made in C++ which offers remote office branch office (ROBO) backup with features such as deduplication, agentless backup, replication, and more. Offers a WCF HTTP REST based SDK. Was acquired in 2011.</div>
