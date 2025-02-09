@@ -791,17 +791,14 @@ textarea {
 }
 
 .other-entry {
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
+    position: relative;
+    display: block;
+    margin-bottom: 15px;
     padding: 24px 32px;
     background: #ffffff;
     border-radius: 12px;
     border: 1px solid #edf2f7;
     transition: all 0.2s ease;
-    text-decoration: none;
-    position: relative;
-    overflow: hidden;
 }
 
 .other-entry:hover {
@@ -813,13 +810,20 @@ textarea {
 .other-entry h3 {
     font-size: 1.3em;
     margin: 0 0 8px 0;
-    color: #2d3748;
-    font-weight: 600;
-    transition: color 0.2s ease;
 }
 
-.other-entry:hover h3 {
+.other-entry h3 a {
     color: #4d90fe;
+    text-decoration: none;
+}
+
+.other-entry a::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }
 
 .other-details {
@@ -851,7 +855,7 @@ textarea {
 .card-entry h3 {
     font-size: 1.3em;
     margin: 0 0 8px 0;
-    color: #2d3748;
+    color: #4d90fe;
 }
 
 .card-entry h3 a {
