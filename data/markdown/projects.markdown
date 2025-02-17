@@ -8,7 +8,7 @@ Listed below are some of the projects I've worked on throughout my career.  Some
       <img class="project-image" src='/static/img/projects/brave.png' alt="Brave Browser">
       <div class="project-content">
         <h3><a href="https://brave.com">Brave macOS, Windows, and Linux browser</a></h3>
-        <div class="card-details">Block ads. Save data. And get way faster webpages.</div>
+        <div class="card-details">Block ads and trackers, saves data, and speeds up web browsing.</div>
       </div>
     </div>
   </div>
@@ -17,7 +17,7 @@ Listed below are some of the projects I've worked on throughout my career.  Some
     <div class="project-entry">
       <img class="project-image" src='/static/img/projects/wallet.svg' widt='218' alt="Brave Wallet">
       <div class="project-content">
-        <h3><a href="https://brave.com/wallet/">Brave macOS, Windows, and Linux browser</a></h3>
+        <h3><a href="https://brave.com/wallet/">Brave Wallet</a></h3>
         <div class="card-details">Secure, native, built-in crypto wallet that supercharges Brave browser for Web3.</div>
       </div>
     </div>
@@ -27,8 +27,8 @@ Listed below are some of the projects I've worked on throughout my career.  Some
     <div class="project-entry">
       <img class="project-image" src='/static/img/projects/leo.png' alt="Leo AI">
       <div class="project-content">
-        <h3><a href="https://brave.com/leo/">Brave macOS, Windows, and Linux browser</a></h3>
-        <div class="card-details">Smart AI assistant built right into the Brave browser. Ask questions, summarize pages, create new content, and more. Privately.</div>
+        <h3><a href="https://brave.com/leo/">Brave Leo</a></h3>
+        <div class="card-details">AI-powered assistant built into the Brave browser, offering features like question answering, content summarization, and more—all while maintaining privacy.</div>
       </div>
     </div>
   </div>
