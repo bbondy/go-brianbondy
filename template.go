@@ -336,7 +336,8 @@ func generateRSSHandler(w http.ResponseWriter, r *http.Request) {
 
 func filtersPageHandler(w http.ResponseWriter, r *http.Request) {
 	current_year := time.Now().Year()
-	year_range := make([]int, 10)
+	start_year := 2005
+	year_range := make([]int, current_year-start_year+1)
 	for i := range year_range {
 		year_range[i] = current_year - i
 	}
