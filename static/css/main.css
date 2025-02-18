@@ -182,9 +182,9 @@ h2 {
 }
 
 .tagContainer.years {
-  -webkit-column-count: 1;
-  -moz-column-count: 1;
-  column-count: 1;
+  -webkit-column-count: 3;
+  -moz-column-count: 3;
+  column-count: 3;
 }
 
 .navigationButtons {
@@ -899,7 +899,7 @@ textarea {
 
 /* Add media query for mobile devices */
 @media only screen and (max-width: 600px) {
-    .tagContainer {
+    .tagContainer, .tagContainer.years {
         -webkit-column-count: 1;
         -moz-column-count: 1;
         column-count: 1;

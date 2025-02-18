@@ -100,6 +100,13 @@ var funcMap = template.FuncMap{
 	"yearUrl": func(year int) string {
 		return fmt.Sprintf("/all?year=%d", year)
 	},
+	"getYearCount": func(year int) int {
+		posts, ok := blogPostYearMap[year]
+		if !ok {
+			return 0
+		}
+		return len(posts)
+	},
 }
 
 func getMarkdownData(slug string) string {
