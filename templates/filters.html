@@ -3,7 +3,9 @@
     <h1>Blog posts by year</h1>
     <div class="tagContainer years">
       {{range .Years}}
-      <div><a href="{{yearUrl .}}" class="yearTag">{{.}}</a> x {{getYearCount .}}</div>
+        {{if gt (getYearCount .) 0}}
+        <div><a href="{{yearUrl .}}" class="yearTag">{{.}}</a> x {{getYearCount .}}</div>
+        {{end}}
       {{end}}
     </div>
     <h1>Blog posts by tag</h1>
