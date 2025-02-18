@@ -896,3 +896,18 @@ textarea {
 .project-content {
     flex: 1;
 }
+
+/* Add media query for mobile devices */
+@media only screen and (max-width: 600px) {
+    .tagContainer {
+        -webkit-column-count: 1;
+        -moz-column-count: 1;
+        column-count: 1;
+    }
+
+    .tag, .yearTag {
+        display: inline-flex;
+        align-items: center;
+        margin: 4px 0;
+    }
+}
