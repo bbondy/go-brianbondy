@@ -7,4 +7,5 @@ require (
 	github.com/gomarkdown/markdown v0.0.0-20210408062403-ad838ccf8cdd
 	github.com/gorilla/feeds v1.2.0 // indirect
 	github.com/gorilla/mux v1.8.0
+	github.com/stretchr/testify v1.10.0 // indirect
 )

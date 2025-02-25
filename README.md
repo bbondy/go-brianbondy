@@ -12,6 +12,12 @@ go run .
 golangci-lint run --fix
 ```
 
+## Runnint tests
+
+```
+go test -v
+```
+
 ## Deployment
 
 ```

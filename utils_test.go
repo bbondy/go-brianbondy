@@ -1,0 +1,137 @@
+package main
+
+import (
+	"net/http"
+	"net/http/httptest"
+	"strings"
+	"testing"
+)
+
+func TestSlugifyTitle(t *testing.T) {
+	tests := []struct {
+		title string
+		want  string
+	}{
+		{"Hello World", "hello-world"},
+		{"This is a test!", "this-is-a-test"},
+		{"Another_Test 123", "another-test-123"},
+	}
+
+	for _, tt := range tests {
+		got := slugifyTitle(tt.title)
+		if got != tt.want {
+			t.Errorf("slugifyTitle(%q) = %v, want %v", tt.title, got, tt.want)
+		}
+	}
+}
+
+func TestGetTitle(t *testing.T) {
+	titleSlug := "test-slug"
+	want := "test-slug - Brian R. Bondy"
+	got := GetTitle(titleSlug)
+	if got != want {
+		t.Errorf("GetTitle(%q) = %v, want %v", titleSlug, got, want)
+	}
+}
+
+func TestDirectToHttps(t *testing.T) {
+	tests := []struct {
+		name           string
+		url            string
+		proto          string
+		host           string
+		forwardedProto string
+		wantRedirect   bool
+	}{
+		{"http to https", "http://example.com", "HTTP/1.1", "example.com", "", true},
+		{"already https", "https://example.com", "HTTP/2.0", "example.com", "", false},
+		{"localhost no redirect", "http://localhost:8080", "HTTP/1.1", "localhost:8080", "", false},
+		{"forwarded https", "http://example.com", "HTTP/1.1", "example.com", "https", false},
+	}
+
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			req := httptest.NewRequest("GET", tt.url, nil)
+			req.Proto = tt.proto
+			req.Host = tt.host
+			req.Header.Set("X-Forwarded-Proto", tt.forwardedProto)
+
+			w := httptest.NewRecorder()
+			directToHttps(w, req, func(w http.ResponseWriter, r *http.Request) {})
+
+			if tt.wantRedirect {
+				if w.Code != http.StatusTemporaryRedirect {
+					t.Errorf("expected status %v, got %v", http.StatusTemporaryRedirect, w.Code)
+				}
+			} else {
+				if w.Code != http.StatusOK {
+					t.Errorf("expected status %v, got %v", http.StatusOK, w.Code)
+				}
+			}
+		})
+	}
+}
+
+func TestExtractFirstParagraph(t *testing.T) {
+	tests := []struct {
+		name    string
+		content string
+		want    string
+	}{
+		{
+			"p tags",
+			"<p>This is a test paragraph.</p><p>Another paragraph.</p>",
+			"This is a test paragraph.",
+		},
+		{
+			"no p tags",
+			"This is a test paragraph. Another paragraph.",
+			"This is a test paragraph. Another paragraph.",
+		},
+		{
+			"long p tag",
+			"<p>" + strings.Repeat("A", 400) + "</p>",
+			strings.Repeat("A", 300) + "...",
+		},
+		{
+			"long content no p tags", 
+			strings.Repeat("A", 400),
+			strings.Repeat("A", 300) + "...",
+		},
+		{
+			"empty p tag",
+			"<p></p>Some content",
+			"Some content",
+		},
+	}
+
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			got := extractFirstParagraph(tt.content)
+			if got != tt.want {
+				t.Errorf("extractFirstParagraph() = %v, want %v", got, tt.want)
+			}
+		})
+	}
+}
+
+func TestGetImageMimeType(t *testing.T) {
+	tests := []struct {
+		imagePath string
+		want      string
+	}{
+		{"image.png", "image/png"},
+		{"image.webp", "image/webp"}, 
+		{"image.jpg", "image/jpeg"},
+		{"image.jpeg", "image/jpeg"},
+		{"image.gif", "image/gif"},
+		{"image.bmp", ""},
+	}
+
+	for _, tt := range tests {
+		got := getImageMimeType(tt.imagePath)
+		if got != tt.want {
+			t.Errorf("getImageMimeType(%q) = %v, want %v", tt.imagePath, got, tt.want)
+		}
+	}
+}
