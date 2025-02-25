@@ -6,6 +6,11 @@
 go run .
 ```
 
+## Lint
+
+```
+golangci-lint run --fix
+```
 
 ## Deployment
 

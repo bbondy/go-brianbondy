@@ -2,8 +2,8 @@ package main
 
 import (
 	"encoding/json"
-	"io/ioutil"
 	"fmt"
+	"io/ioutil"
 	"sort"
 	"time"
 
@@ -30,11 +30,7 @@ func initializeBlogPosts() {
 	for _, blogPost := range blogPosts {
 		for _, tag := range blogPost.Tags {
 			blogPostTagMap[tag] = append(blogPostTagMap[tag], blogPost)
-			if _, ok := tagCountMap[tag]; ok {
-				tagCountMap[tag] += 1
-			} else {
-				tagCountMap[tag] = 1
-			}
+			tagCountMap[tag] += 1
 		}
 		parsedDate, _ := time.Parse(layoutISO, blogPost.Created)
 		year := parsedDate.Year()

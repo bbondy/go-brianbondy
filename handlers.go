@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"html/template"
+	"log"
 	"net/http"
 	"strconv"
 	"strings"
@@ -27,7 +28,11 @@ func errorPage(w http.ResponseWriter, message string, slug string) {
 		MarkdownSlug: slug,
 	}
 	t := template.Must(template.New("base.html").Funcs(funcMap).ParseFiles("templates/base.html", "templates/simpleMarkdown.html"))
-	t.Execute(w, p)
+	err := t.Execute(w, p)
+	if err != nil {
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
 }
 
 func getMarkdownTemplateHandler(titleSlug string, markdownSlug string, fbShareUrl string) *negroni.Negroni {
@@ -39,7 +44,11 @@ func getMarkdownTemplateHandler(titleSlug string, markdownSlug string, fbShareUr
 			ShareUrl:     fbShareUrl,
 		}
 		t := template.Must(template.New("base.html").Funcs(funcMap).ParseFiles("templates/base.html", "templates/simpleMarkdown.html"))
-		t.Execute(w, p)
+		err := t.Execute(w, p)
+		if err != nil {
+			http.Error(w, err.Error(), http.StatusInternalServerError)
+			return
+		}
 	}
 	return negroni.New(
 		negroni.HandlerFunc(directToHttps),
@@ -117,7 +126,10 @@ func generateRSSHandler(w http.ResponseWriter, r *http.Request) {
 	}
 
 	w.Header().Set("Content-Type", "application/xml")
-	w.Write([]byte(rss))
+	_, err = w.Write([]byte(rss))
+	if err != nil {
+		log.Printf("Error writing response: %v", err)
+	}
 }
 
 func filtersPageHandler(w http.ResponseWriter, r *http.Request) {
@@ -137,7 +149,10 @@ func filtersPageHandler(w http.ResponseWriter, r *http.Request) {
 		Years:        year_range,
 	}
 	t := template.Must(template.New("base.html").Funcs(funcMap).ParseFiles("templates/base.html", "templates/filters.html"))
-	t.Execute(w, p)
+	err := t.Execute(w, p)
+	if err != nil {
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+	}
 }
 
 func tagRedirectHandler(w http.ResponseWriter, r *http.Request) {
@@ -317,7 +332,10 @@ func homePageHandler(w http.ResponseWriter, r *http.Request) {
 	}
 
 	t := template.Must(template.New("base.html").Funcs(funcMap).ParseFiles("templates/base.html", "templates/home.html"))
-	t.Execute(w, p)
+	err := t.Execute(w, p)
+	if err != nil {
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+	}
 }
 
 func allPostsHandler(w http.ResponseWriter, r *http.Request) {
@@ -362,7 +380,10 @@ func allPostsHandler(w http.ResponseWriter, r *http.Request) {
 	}
 
 	t := template.Must(template.New("base.html").Funcs(funcMap).ParseFiles("templates/base.html", "templates/allPosts.html"))
-	t.Execute(w, p)
+	err := t.Execute(w, p)
+	if err != nil {
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+	}
 }
 
 // Keeps it simple with 1 blog post per page
@@ -425,11 +446,13 @@ func blogPostPageHandler(w http.ResponseWriter, r *http.Request) {
 				MarkdownSlug: "blog",
 			}
 			t := template.Must(template.New("base.html").Funcs(funcMap).ParseFiles("templates/base.html", "templates/blogPost.html"))
-			t.Execute(w, p)
+			err := t.Execute(w, p)
+			if err != nil {
+				http.Error(w, err.Error(), http.StatusInternalServerError)
+			}
 			return
 		}
 		errorPage(w, "No blog posts for this query", "blog")
-		return
 	}
 
 	// Handle root URL or other listing pages
@@ -456,8 +479,11 @@ func blogPostPageHandler(w http.ResponseWriter, r *http.Request) {
 			MarkdownSlug: "blog",
 		}
 		t := template.Must(template.New("base.html").Funcs(funcMap).ParseFiles("templates/base.html", "templates/blogPost.html"))
-		t.Execute(w, p)
-		return
+		err := t.Execute(w, p)
+		if err != nil {
+			http.Error(w, err.Error(), http.StatusInternalServerError)
+			return
+		}
 	}
 
 	errorPage(w, "No blog posts found", "blog")
