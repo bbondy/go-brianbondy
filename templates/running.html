@@ -1,28 +1,56 @@
 {{define "mountPoint"}}
-  <h1>Memorable Runs</h1>
-  <ul>
-    {{range .Runs}}
-      <li>
-        {{.Date | formatDate}} - 
-        {{if .StravaURLs}}
-          <a href="{{index .StravaURLs 0}}" target="_blank">{{.Title}}</a>
-        {{else}}
-          {{.Title}}
-        {{end}}
-        {{if .Description}}
-          - {{.Description}}
-        {{end}}
-        {{if gt (len .StravaURLs) 1}}
-          (
-          {{range $i, $url := .StravaURLs}}
-            {{if $i}}
-              ,
-            {{end}}
-            <a href="{{$url}}" target="_blank">Part {{$i | add 1}}</a>
+  <div class="running-container">
+    <h1>Memorable Runs</h1>
+    <div class="runs-grid">
+      {{range .Runs}}
+        <div class="run-card">
+          <div class="run-header">
+            <h3 class="run-title">
+              {{if .StravaURLs}}
+                <a href="{{index .StravaURLs 0}}" target="_blank" rel="noopener noreferrer">{{.Title}}</a>
+              {{else}}
+                {{.Title}}
+              {{end}}
+            </h3>
+            <div class="run-date">{{.Date | formatDate}}</div>
+          </div>
+          
+          {{if .Description}}
+            <div class="run-description">{{.Description}}</div>
           {{end}}
-          )
-        {{end}}
-      </li>
-    {{end}}
-  </ul>
+          
+          {{if .StravaURLs}}
+            <div class="run-links">
+              {{if gt (len .StravaURLs) 1}}
+                <span class="run-parts">Parts:</span>
+                {{range $i, $url := .StravaURLs}}
+                  <a href="{{$url}}" target="_blank" rel="noopener noreferrer" class="strava-link">
+                    <i class="fab fa-strava"></i> {{$i | add 1}}
+                  </a>
+                {{end}}
+              {{else}}
+                <a href="{{index .StravaURLs 0}}" target="_blank" rel="noopener noreferrer" class="strava-link" title="View on Strava">
+                  <i class="fab fa-strava"></i>
+                </a>
+              {{end}}
+            </div>
+          {{end}}
+          
+          {{if .ImagePath}}
+            <div class="run-image">
+              <img src="{{.ImagePath}}" alt="{{.Title}}" loading="lazy">
+            </div>
+          {{else if .ImagePaths}}
+            <div class="run-images">
+              {{range .ImagePaths}}
+                <div class="run-image">
+                  <img src="{{.}}" alt="{{$.Title}}" loading="lazy">
+                </div>
+              {{end}}
+            </div>
+          {{end}}
+        </div>
+      {{end}}
+    </div>
+  </div>
 {{end}} 

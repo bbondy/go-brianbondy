@@ -7,6 +7,8 @@ type Run struct {
 	Title       string   `json:"title"`
 	Description string   `json:"description,omitempty"`
 	StravaURLs  []string `json:"strava_urls,omitempty"`
+	ImagePath   string   `json:"image_path,omitempty"`
+	ImagePaths  []string `json:"image_paths,omitempty"`
 }
 
 type Runs []Run
