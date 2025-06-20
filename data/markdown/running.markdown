@@ -1,5 +1,8 @@
 # Memorable runs
 
+- June 2025 - [Tahoe 200](https://www.strava.com/activities/14822739693) - 80h 37m
+- May 2025 - Sedona Canyons 125mi - [Part 1](https://www.strava.com/activities/14424559685), [Part 2](https://www.strava.com/activities/14427193105)
+- April 2025 - [Malden Death Run (MDR) 120x Big Bertha](https://www.strava.com/activities/14216489694)
 - January 2025 - [HURT 100](https://www.strava.com/activities/13400697230) - DNF at mile 80
 - August 2024 - [Persistence Backyard Ultra 2024](https://www.strava.com/activities/12062622741) - 30h and 30 loops
 - June 2024 - [FAwR 2024](https://www.strava.com/activities/11555429820) - FAwR 2024 with Ronnie
