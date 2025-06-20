@@ -55,6 +55,25 @@ func getMarkdownTemplateHandler(titleSlug string, markdownSlug string, fbShareUr
 		negroni.Wrap(http.HandlerFunc(handler)))
 }
 
+func runningHandler(w http.ResponseWriter, r *http.Request) {
+	runs, err := data.GetRuns()
+	if err != nil {
+		errorPage(w, "Unable to load run data", "running")
+		return
+	}
+	p := &data.RunningPage{
+		Title:        GetTitle("Running"),
+		MarkdownSlug: "running",
+		Runs:         runs,
+	}
+	t := template.Must(template.New("base.html").Funcs(funcMap).ParseFiles("templates/base.html", "templates/running.html"))
+	err = t.Execute(w, p)
+	if err != nil {
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+}
+
 func generateRSSHandler(w http.ResponseWriter, r *http.Request) {
 	feed := &feeds.Feed{
 		Title:       "Brian R. Bondy's Blog",

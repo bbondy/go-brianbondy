@@ -10,6 +10,12 @@ type SimpleMarkdownPage struct {
 	ShareUrl, Description, ImagePath string
 }
 
+type RunningPage struct {
+	Title        string
+	MarkdownSlug string
+	Runs         Runs
+}
+
 type BlogPostPage struct {
 	Title, Content, MarkdownSlug     string
 	BlogPost                         BlogPost

@@ -1,0 +1,28 @@
+{{define "mountPoint"}}
+  <h1>Memorable Runs</h1>
+  <ul>
+    {{range .Runs}}
+      <li>
+        {{.Date | formatDate}} - 
+        {{if .StravaURLs}}
+          <a href="{{index .StravaURLs 0}}" target="_blank">{{.Title}}</a>
+        {{else}}
+          {{.Title}}
+        {{end}}
+        {{if .Description}}
+          - {{.Description}}
+        {{end}}
+        {{if gt (len .StravaURLs) 1}}
+          (
+          {{range $i, $url := .StravaURLs}}
+            {{if $i}}
+              ,
+            {{end}}
+            <a href="{{$url}}" target="_blank">Part {{$i | add 1}}</a>
+          {{end}}
+          )
+        {{end}}
+      </li>
+    {{end}}
+  </ul>
+{{end}} 

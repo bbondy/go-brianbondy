@@ -2,14 +2,25 @@ package main
 
 import (
 	"fmt"
-	"strings"
 	"html/template"
 	"net/url"
 	"reflect"
+	"strings"
+	"time"
 )
 
 var funcMap = template.FuncMap{
 	"avail": avail,
+	"add": func(a, b int) int {
+		return a + b
+	},
+	"formatDate": func(dateStr string) string {
+		t, err := time.Parse("2006-01-02", dateStr)
+		if err != nil {
+			return dateStr
+		}
+		return t.Format("January 2, 2006")
+	},
 	"htmlSafe": func(html string) template.HTML {
 		return template.HTML(html)
 	},
