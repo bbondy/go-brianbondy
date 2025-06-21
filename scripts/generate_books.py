@@ -38,8 +38,8 @@ def generate_books_markdown():
             book_url = get_book_url(row['Book Id'])
             
             # Create book entry with link
-            book_entry = f"""<div class="book-entry">
-  <h3><a href="{book_url}">{title}</a></h3>
+            book_entry = f"""<div class="book-card">
+  <h3><a href="{book_url}" target="_blank">{title}</a></h3>
   <div class="book-details">
     <div class="book-author">by {author_text}</div>
     <div class="book-meta">{year_published}{f", {publisher}" if publisher else ""}{f", {pages} pages" if pages else ""}</div>
@@ -52,7 +52,7 @@ def generate_books_markdown():
 
 The list below contains books that I've read and good enough to share.
 
-<div class="books-container">
+<div class="books-grid-container">
 """
     
     # Add books in original order

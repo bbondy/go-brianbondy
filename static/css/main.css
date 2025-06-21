@@ -562,13 +562,68 @@ textarea {
 }
 
 .book-meta {
-  color: #718096;
   font-size: 0.9em;
-  margin-top: 3px;
+  color: #718096;
+  margin-top: 5px;
+}
+
+.books-grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 20px;
+}
+
+.book-card {
+  background-color: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 20px;
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+}
+
+.book-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.book-card h3 {
+  margin-top: 0;
+  font-size: 1.1em;
+}
+
+.book-card h3 a {
+  color: #2d3748;
+}
+
+.book-card h3 a:hover {
+  color: #4d90fe;
+}
+
+.advice-container {
+  margin-top: 20px;
+}
+
+.advice-entry {
+  margin-bottom: 30px;
+}
+
+.advice-entry .question {
+  font-weight: 600;
+  color: #2d3748;
+  font-size: 1.1em;
+  margin-bottom: 10px;
+}
+
+.advice-entry .answer {
+  color: #4a5568;
+  padding-left: 20px;
+  border-left: 2px solid #4d90fe;
 }
 
 .socialShare {
-  margin: 20px 0;
+  margin-top: 30px;
+  padding-top: 20px;
 }
 
 .shareLabel {
@@ -1077,4 +1132,21 @@ textarea {
 
 .action-link i {
   font-size: 1.1em;
+}
+
+.advice-cards-container {
+  margin-top: 20px;
+}
+
+.advice-card {
+  background-color: #f7fafc;
+  border-left: 3px solid #4d90fe;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 0 8px 8px 0;
+}
+
+.advice-card p {
+  margin: 0;
+  line-height: 1.6;
 }

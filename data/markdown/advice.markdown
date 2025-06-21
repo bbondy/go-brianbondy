@@ -1,23 +1,69 @@
 # Advice
 
-- When doing homework, or trying to grasp a new concept, sometimes you just won't understand. The easiest way to understand is to simply start over from the start. If you get stuck again, start again from the start. You will be starting with knowledge about the subject at hand. This will allow you to grasp more details that might help you to understand the topic. Not all author's write in a linear fashion. Try looking somewhere else. Sometimes an author's explanation is not sufficient. EVERYTHING is possible to understand. You just need the proper background and a proper explanation (which is no longer hard to come by with AI)
-- Related to finishing things... Things sometimes do not get completed. The simple solution is to make sure every day you keep doing something related to the thing. Whatever you do NOW, you won't need to do LATER. The problem that you fix NOW will allow you to do something else next time.  Take small steps, be relentless.
-- Reading is extremely good for you. The brain is like a muscle, if you don't exercise it, it will become lazy and sluggish. By reading you are giving your brain exercise. It doesn't matter what you read.  Use audiobooks to multitask with exercise.
-- When learning a new topic, it's better to do a little bit every day of the week than to do all of it in one day. This helps you digest the information better, and retain it longer.
-- We can understand things right off the bat, but to remember them, we need to look at them several times.
-- If you build a house on mud your house will fall down. If you build a solid foundation first, then build your house, your house will stay up. When building software, build things to make your job easier. Then build the real project using those built tools.
-- Be careful of telling someone what you're going to do, instead tell them what you have done once it's done. People often feel a portion of accomplishment when they tell you what they are going to do. This can and will de-motivate you to actually do the task.
-- Without the bitter, the sweet is not so sweet. Don't complain when you have to experience something negative, instead be happy that when the opposite happens it will feel that much better. Keep a positive attitude, you'll get through it.
-- Don't feel down because things are hard. Instead be happy that things are hard, because it filters out others from doing it. If you want something bad enough, push through these barriers.
-- Quitting is not always a bad thing, if you are sinking your time into something you don't want it badly enough, this has a large opportunity cost. Keep your focus for what you really want. If you want something bad enough and don't have better potential alternatives, never give up. Don't settle for the status quo.
-- There are no born experts, masters get there by effort. Praise your kids for effort and not intelligence. It's the best way to make them grow up successful.
-- When trying to solve a difficult problem, find a faster way to fail, recover, repeat. Make sure you're solving the right problem. Simplify the problem you want to solve. Don't be afraid of failing, fail faster.
-- Every time you mess up, it's another chance to prove that you can handle the situation well. No one is flawless, everyone makes mistakes. It's showing that you are capable of handling those mistakes that is important. It shows you can handle not only your mistakes, but other people's mistakes as well.
-- If you want something, don't be afraid to ask for it. You'll get what you want far more often that way.
-- Actively define and seek out your goals, don't wait for them to happen or assume because you're doing something, that those goals will happen.
-- Never stop pushing yourself beyond your limits, otherwise you'll live your life without discovering them.
-- Don't be afraid of defining goals that you think are unachievable. The universe will help you change into who you need to be to accomplish them.
-- Failing at something is still forward progress. The path to success often has many failed steps in between, those steps are needed to progress.
-- Slow Down: In a fast-paced world, slowing down helps us to appreciate life more fully, reduce stress, and understand ourselves better. This is especially important when you are angry.
-- Acceptance of your current state or what's bothering you is the only way to get through it. Nothing lasts forever. Silently observe things in the present.
-- Being right is not important, being kind and compassionate is important.  Being right feeds your ego, and your ego knows no satisfaction.
+Here are some personal principles and lessons I've learned over the years. I hope you find them helpful.
+
+<div class="advice-cards-container">
+  <div class="advice-card">
+    <p>When I'm struggling to grasp a new concept, I've found it helpful to start over from the beginning. Each time I restart, I bring a little more context with me, which often illuminates details I missed before. Sometimes, the issue is the explanation itself, and seeking an alternative source, like a different author or an AI explanation, can make all the difference. I believe anything is understandable with the right background and a clear explanation.</p>
+  </div>
+  <div class="advice-card">
+    <p>To see a project through to completion, I find that making small, consistent progress each day is key. Even a small step forward means there's less to do later. It's about taking one step at a time, relentlessly.</p>
+  </div>
+  <div class="advice-card">
+    <p>I find reading to be a great exercise for the mind. Much like a muscle, the brain benefits from regular use to stay sharp. The genre or topic doesn't matter as much as the act of reading itself. I also enjoy using audiobooks to combine reading with other activities like exercise.</p>
+  </div>
+  <div class="advice-card">
+    <p>I've learned that spreading out study sessions over a week is more effective for me than cramming everything into a single day. This approach seems to help with better digestion and long-term retention of information.</p>
+  </div>
+  <div class="advice-card">
+    <p>For me, understanding something initially is one thing, but committing it to memory requires repeated exposure. Reviewing material several times is a simple but powerful technique.</p>
+  </div>
+  <div class="advice-card">
+    <p>I like to apply the principle of building on a solid foundation to software development. Taking the time to create tools and frameworks that simplify my work first makes the main project much more robust and manageable in the long run.</p>
+  </div>
+  <div class="advice-card">
+    <p>I've noticed that sharing my intentions can sometimes diminish my motivation to see them through. It seems the satisfaction of announcing a goal can sometimes get in the way of achieving it. I find it more effective to share what I've done after it's complete.</p>
+  </div>
+  <div class="advice-card">
+    <p>I try to remember that difficult experiences often make the good times feel even better. Rather than dwelling on negativity, I find that maintaining a positive outlook helps me get through challenges, knowing that better moments are ahead.</p>
+  </div>
+  <div class="advice-card">
+    <p>When things get hard, I remind myself that difficulty can be a filter. The challenge of a task is what makes the achievement valuable. Pushing through those barriers is often what separates success from inaction.</p>
+  </div>
+  <div class="advice-card">
+    <p>I've come to believe that quitting isn't inherently negative. Sometimes, it's a strategic decision to stop investing time in something that isn't a top priority, freeing up energy for what truly matters. It's about focusing on the right goals and not being afraid to pivot away from things that aren't working.</p>
+  </div>
+  <div class="advice-card">
+    <p>My experience has shown me that expertise is built through consistent effort, not innate talent. I think it's more beneficial to praise effort rather than intelligence, as this encourages a growth mindset.</p>
+  </div>
+  <div class="advice-card">
+    <p>My approach to complex problems is to find ways to iterate quickly. Failing fast, learning from the mistake, and trying again is often the most efficient path to a solution. It's also crucial to ensure I'm solving the right problem to begin with, and simplifying it as much as possible.</p>
+  </div>
+  <div class="advice-card">
+    <p>I see mistakes as opportunities to demonstrate resilience and problem-solving skills. Everyone makes them; what matters is how we handle them. Effectively managing our own errors can show that we're capable of handling responsibility.</p>
+  </div>
+  <div class="advice-card">
+    <p>I've found that one of the simplest ways to get something is to ask for it. It's surprising how often a direct request can lead to a positive outcome.</p>
+  </div>
+  <div class="advice-card">
+    <p>I believe in proactively defining and pursuing my goals. Simply waiting for them to materialize or assuming they'll happen as a byproduct of other activities is rarely an effective strategy.</p>
+  </div>
+  <div class="advice-card">
+    <p>I think it's important to continuously test my limits. It's in that space of discomfort that I often discover what I'm truly capable of.</p>
+  </div>
+  <div class="advice-card">
+    <p>I've learned not to be afraid of setting goals that seem out of reach. The process of striving for something ambitious often helps me grow into the person I need to be to achieve it.</p>
+  </div>
+  <div class="advice-card">
+    <p>I view failure not as a step back, but as a necessary part of moving forward. The path to success is rarely linear and often includes missteps that provide valuable lessons.</p>
+  </div>
+  <div class="advice-card">
+    <p>In a world that prizes speed, I find value in slowing down. It allows for a deeper appreciation of life, reduces stress, and fosters self-awareness. This is particularly helpful when I'm feeling angry or overwhelmed.</p>
+  </div>
+  <div class="advice-card">
+    <p>I've found that accepting my current situation, especially when it's challenging, is the first step toward moving through it. Everything is temporary, and observing the present moment without judgment can bring a sense of peace.</p>
+  </div>
+  <div class="advice-card">
+    <p>I've come to prioritize kindness and compassion over the need to be right. Winning an argument often just feeds the ego, which is rarely satisfied, whereas kindness builds connection.</p>
+  </div>
+</div>
