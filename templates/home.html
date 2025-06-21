@@ -1,21 +1,21 @@
 {{define "mountPoint"}}
   <div class="previewContainer">
     {{range .Posts}}
-      <a href="{{.PostUrl}}" class="blogPostPreviewLink">
-        <article class="blogPostPreview">
-          <h1>{{.BlogPost.Title}}</h1>
-          <div class="datePosted">Posted on {{.PostDate}}</div>
-          <div class="preview">
-            {{if .BlogPost.ImagePath}}
+      <article class="blogPostPreview">
+        <h1><a href="{{.PostUrl}}" class="blogPostPreviewLink">{{.BlogPost.Title}}</a></h1>
+        <div class="datePosted">Posted on {{.PostDate}}</div>
+        <div class="preview">
+          {{if .BlogPost.ImagePath}}
+            <a href="{{.PostUrl}}">
               <img src="/{{.BlogPost.ImagePath}}" class="previewImage" alt="Preview image for {{.BlogPost.Title}}">
-            {{end}}
-            {{.Preview}}
-          </div>
-          <div class="readMore">
-            <span>Read more...</span>
-          </div>
-        </article>
-      </a>
+            </a>
+          {{end}}
+          {{.Preview}}
+        </div>
+        <div class="readMore">
+          <a href="{{.PostUrl}}"><span>Read more...</span></a>
+        </div>
+      </article>
     {{end}}
   </div>
 

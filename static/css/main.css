@@ -301,56 +301,50 @@ textarea {
 }
 
 .blogPostPreviewLink {
-  display: block;
   text-decoration: none;
-  color: inherit;
 }
 
 .blogPostPreview {
-  margin-bottom: 35px;
-  padding: 10px 30px 30px 30px;
-  border: none;
+  padding: 20px;
+  background-color: white;
   border-radius: 12px;
-  background: #ffffff;
-  box-shadow: 
-    rgba(17, 12, 46, 0.08) 0px 24px 60px 0px,
-    rgba(0, 0, 0, 0.03) 0px 2px 4px;
-  transition: all 0.3s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  transition: all 0.2s ease-in-out;
   position: relative;
+  margin-bottom: 24px;
 }
 
-/* Remove the separate hover styles from links inside the preview */
 .blogPostPreview h1 a {
-  color: #2c3e50;
+  color: #4d90fe;
   text-decoration: none;
+  transition: color 0.2s ease-in-out;
 }
 
-.blogPostPreviewLink:hover .blogPostPreview {
-  transform: translateY(-3px);
-  box-shadow: 
-    rgba(17, 12, 46, 0.12) 0px 30px 70px 0px,
-    rgba(0, 0, 0, 0.05) 0px 3px 6px;
+.blogPostPreview:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-color: #a0aec0;
+}
+
+.blogPostPreview:hover h1 a {
+  text-decoration: underline;
 }
 
 .blogPostPreview h1 {
+  font-size: 1.5em;
   margin-top: 0;
-  font-size: 1.7em;
-  color: #4d90fe;
-  border-bottom: none;
   margin-bottom: 10px;
   transition: color 0.2s ease;
-}
-
-.blogPostPreviewLink:hover .blogPostPreview h1 {
-  color: #4d90fe;
+  border-bottom: none;
+  padding-bottom: 0;
 }
 
 .blogPostPreview .datePosted {
-  color: #666;
-  font-size: 0.9em;
+  font-size: 0.75em;
+  margin-top: -10px;
+  padding-bottom: 10px;
   margin-bottom: 20px;
-  padding-bottom: 15px;
-  border-bottom: 1px solid #f0f0f0;
+  border-bottom: 1px dotted #e2e8f0;
 }
 
 .blogPostPreview .preview {
@@ -373,31 +367,25 @@ textarea {
   padding-top: 3px;
 }
 
-.blogPostPreview .readMore {
-  margin-top: 25px;
-  text-align: right;
-  padding-top: 20px;
-  border-top: 1px solid #f0f0f0;
+.blogPostPreview .readMore a {
+  text-decoration: none;
 }
 
 .blogPostPreview .readMore span {
-  display: inline-block; 
-  font-size: 0.85em;
-  font-weight: 600;
   color: #4d90fe;
-  padding: 10px 20px;
-  border: 1px solid #4d90fe;
-  border-radius: 25px;
-  transition: all 0.2s ease;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  background-color: transparent;
+  font-weight: 500;
+  transition: all 0.2s ease-in-out;
+  position: relative;
+  padding-right: 18px;
 }
 
-.blogPostPreviewLink:hover .blogPostPreview .readMore span {
-  background-color: #4d90fe;
-  color: white;
-  box-shadow: 0 3px 8px rgba(77, 144, 254, 0.3);
+.blogPostPreview:hover .readMore span {
+  color: #2b6cb0;
+  text-decoration: underline;
+}
+
+.blogPostPreview .readMore span::after {
+  content: '→';
 }
 
 .allPostsSection {
@@ -465,9 +453,7 @@ textarea {
 }
 
 .viewAllLink:hover {
-    background-color: #4d90fe;
-    color: white;
-    box-shadow: 0 2px 8px rgba(77, 144, 254, 0.3);
+    background-color: #e2e8f0;
 }
 
 /* Styles for the all posts page */
@@ -1038,4 +1024,37 @@ textarea {
   .run-title {
     font-size: 1.1em;
   }
+}
+
+.filters-link-container {
+  margin: -10px 0 25px 0;
+  text-align: right;
+}
+
+.advanced-filters-link {
+  font-size: 0.9em;
+  color: #4a5568;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: all 0.2s ease-in-out;
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+}
+
+.advanced-filters-link:hover {
+  color: #4d90fe;
+  background-color: #eff6ff;
+  border-color: #93c5fd;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.advanced-filters-link i {
+  margin-right: 6px;
+}
+
+.postList {
+  list-style: none;
+  padding: 0;
 }
