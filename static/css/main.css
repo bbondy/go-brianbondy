@@ -1057,8 +1057,12 @@ textarea {
 .action-link {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
+  width: 55px;
+  height: 32px;
+  box-sizing: border-box;
   gap: 5px;
-  padding: 5px 10px;
+  padding: 5px;
   border-radius: 5px;
   font-size: 0.9em;
   color: white;
