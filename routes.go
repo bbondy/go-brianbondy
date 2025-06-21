@@ -61,7 +61,6 @@ func initializeRoutes(router *mux.Router) {
 	router.Handle("/blog/posted/{year:[0-9]+}/page/{page:[0-9]+}", handleRedirect)
 	router.Handle("/blog/filters", handleFilterPage)
 	router.Handle("/about", getMarkdownTemplateHandler("About", "about.markdown", "/about"))
-	router.Handle("/other", getMarkdownTemplateHandler("Other", "other.markdown", "/other"))
 	router.Handle("/contact", getMarkdownTemplateHandler("Contact", "contact.markdown", "/contact"))
 	router.Handle("/projects", getMarkdownTemplateHandler("Projects", "projects.markdown", "/projects"))
 	router.Handle("/advice", getMarkdownTemplateHandler("Advice", "advice.markdown", "/advice"))
