@@ -1,5 +1,14 @@
 [
   {
+    "date": "2023-09-30",
+    "title": "Little Dog Backyard Ultra 2023",
+    "description": "3rd place aka DNF unless first",
+    "strava_urls": [
+      "https://www.strava.com/activities/9958195356"
+    ],
+    "blog_post_id": 185
+  },
+  {
     "date": "2025-06-13",
     "title": "Tahoe 200",
     "description": "80h 37m",
@@ -28,7 +37,8 @@
     "description": "DNF at mile 80",
     "strava_urls": [
       "https://www.strava.com/activities/13400697230"
-    ]
+    ],
+    "blog_post_id": 188
   },
   {
     "date": "2024-08-01",
@@ -52,7 +62,8 @@
     "description": "~91 hours",
     "strava_urls": [
       "https://www.strava.com/activities/11378676321"
-    ]
+    ],
+    "blog_post_id": 187
   },
   {
     "date": "2023-06-01",
@@ -60,7 +71,8 @@
     "description": "Finished in 25 hours, 25 minutes",
     "strava_urls": [
       "https://www.strava.com/activities/9200098285"
-    ]
+    ],
+    "blog_post_id": 183
   },
   {
     "date": "2023-05-01",
@@ -68,7 +80,8 @@
     "description": "Finished in 102 hours, 45th overall",
     "strava_urls": [
       "https://www.strava.com/activities/9016891169"
-    ]
+    ],
+    "blog_post_id": 182
   },
   {
     "date": "2023-04-01",
@@ -83,7 +96,8 @@
     "description": "Team Canada. 5th of 15 within Canada. 42 yards",
     "strava_urls": [
       "https://www.strava.com/activities/7977085777"
-    ]
+    ],
+    "blog_post_id": 181
   },
   {
     "date": "2022-07-01",
@@ -99,7 +113,8 @@
     "description": "Loop around Windsor-Essex county",
     "strava_urls": [
       "https://www.strava.com/activities/7257063416"
-    ]
+    ],
+    "blog_post_id": 180
   },
   {
     "date": "2022-05-01",
@@ -107,7 +122,8 @@
     "description": "Winner, last man standing",
     "strava_urls": [
       "https://www.strava.com/activities/7187364571"
-    ]
+    ],
+    "blog_post_id": 179
   },
   {
     "date": "2022-04-01",
@@ -123,7 +139,8 @@
     "description": "Timed out after the 14th yard",
     "strava_urls": [
       "https://www.strava.com/activities/6055166607"
-    ]
+    ],
+    "blog_post_id": 185
   },
   {
     "date": "2021-07-15",
@@ -356,11 +373,13 @@
     ]
   },
   {
-    "date": "2019-09-01",
-    "title": "Woodstock Hallucination 100 mile",
+    "date": "2019-10-12",
+    "title": "Woodstock Hallucination 100 Mile",
+    "description": "1st 100 mile race",
     "strava_urls": [
-      "https://www.strava.com/activities/2689179512"
-    ]
+      "https://www.strava.com/activities/2791845347"
+    ],
+    "blog_post_id": 175
   },
   {
     "date": "2018-09-01",

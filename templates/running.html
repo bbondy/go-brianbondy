@@ -19,32 +19,38 @@
             <div class="run-description">{{.Description}}</div>
           {{end}}
           
-          {{if .StravaURLs}}
-            <div class="run-links">
+          <div class="run-links">
+            {{if .BlogPostID}}
+              <a href="/blog/{{.BlogPostID}}" class="blog-link action-link" title="Read blog post">
+                <i class="fas fa-blog"></i>
+              </a>
+            {{end}}
+
+            {{if .StravaURLs}}
               {{if gt (len .StravaURLs) 1}}
                 <span class="run-parts">Parts:</span>
                 {{range $i, $url := .StravaURLs}}
-                  <a href="{{$url}}" target="_blank" rel="noopener noreferrer" class="strava-link">
+                  <a href="{{$url}}" target="_blank" rel="noopener noreferrer" class="strava-link action-link">
                     <i class="fab fa-strava"></i> {{$i | add 1}}
                   </a>
                 {{end}}
               {{else}}
-                <a href="{{index .StravaURLs 0}}" target="_blank" rel="noopener noreferrer" class="strava-link" title="View on Strava">
+                <a href="{{index .StravaURLs 0}}" target="_blank" rel="noopener noreferrer" class="strava-link action-link" title="View on Strava">
                   <i class="fab fa-strava"></i>
                 </a>
               {{end}}
-            </div>
-          {{end}}
+            {{end}}
+          </div>
           
           {{if .ImagePath}}
             <div class="run-image">
-              <img src="{{.ImagePath}}" alt="{{.Title}}" loading="lazy">
+              <img src="/static/{{.ImagePath}}" alt="{{.Title}}" loading="lazy">
             </div>
           {{else if .ImagePaths}}
             <div class="run-images">
               {{range .ImagePaths}}
                 <div class="run-image">
-                  <img src="{{.}}" alt="{{$.Title}}" loading="lazy">
+                  <img src="/static/{{.}}" alt="{{$.Title}}" loading="lazy">
                 </div>
               {{end}}
             </div>

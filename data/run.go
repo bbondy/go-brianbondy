@@ -9,6 +9,7 @@ type Run struct {
 	StravaURLs  []string `json:"strava_urls,omitempty"`
 	ImagePath   string   `json:"image_path,omitempty"`
 	ImagePaths  []string `json:"image_paths,omitempty"`
+	BlogPostID  int      `json:"blog_post_id,omitempty"`
 }
 
 type Runs []Run
