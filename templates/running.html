@@ -28,7 +28,6 @@
 
             {{if .StravaURLs}}
               {{if gt (len .StravaURLs) 1}}
-                <span class="run-parts">Parts:</span>
                 {{range $i, $url := .StravaURLs}}
                   <a href="{{$url}}" target="_blank" rel="noopener noreferrer" class="strava-link action-link">
                     <i class="fab fa-strava"></i> {{$i | add 1}}
