@@ -58,3 +58,9 @@ type AllPostsPage struct {
 	Tag          string
 	Year         int
 }
+
+type ProjectsPage struct {
+	Title        string
+	MarkdownSlug string
+	Projects     Projects
+}

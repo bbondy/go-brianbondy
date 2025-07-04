@@ -1,0 +1,29 @@
+{{define "mountPoint"}}
+<h1>Projects</h1>
+<p>Listed below are some of the projects I've worked on throughout my career. Some are full-fledged products, and some are just libraries. Some I'm the primary developer (e.g. most things below) and some I've just contributed to (e.g. Link Bubble).</p>
+<div class="card-container">
+  {{range .Projects}}
+    <div class="card-entry">
+      <div class="project-entry">
+        {{if .Image}}
+          <img class="project-image" src="/{{.Image}}" alt="{{.Title}}">
+        {{end}}
+        <div class="project-content">
+          <h3>
+            {{if .URL}}<a href="{{.URL}}" target="_blank">{{.Title}}</a>{{else}}{{.Title}}{{end}}
+          </h3>
+          <div class="card-details">{{.Description}}</div>
+          <span class="project-links" style="display: inline-block; margin-top: 10px;">
+            {{if .Website}}
+              <a href="{{.Website}}" target="_blank" title="Website" class="project-icon-link" style="margin-right: 10px;"><i class="fas fa-globe"></i></a>
+            {{end}}
+            {{if .Github}}
+              <a href="{{.Github}}" target="_blank" title="GitHub" class="project-icon-link"><i class="fab fa-github"></i></a>
+            {{end}}
+          </span>
+        </div>
+      </div>
+    </div>
+  {{end}}
+</div>
+{{end}} 

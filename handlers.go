@@ -74,6 +74,25 @@ func runningHandler(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
+func projectsHandler(w http.ResponseWriter, r *http.Request) {
+	projects, err := data.GetProjects()
+	if err != nil {
+		errorPage(w, "Unable to load project data", "projects")
+		return
+	}
+	p := &data.ProjectsPage{
+		Title:        GetTitle("Projects"),
+		MarkdownSlug: "projects",
+		Projects:     projects,
+	}
+	t := template.Must(template.New("base.html").Funcs(funcMap).ParseFiles("templates/base.html", "templates/projects.html"))
+	err = t.Execute(w, p)
+	if err != nil {
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+}
+
 func generateRSSHandler(w http.ResponseWriter, r *http.Request) {
 	feed := &feeds.Feed{
 		Title:       "Brian R. Bondy's Blog",
