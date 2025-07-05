@@ -1,0 +1,30 @@
+{{define "mountPoint"}}
+<h1>Interviews</h1>
+<p>Below are various interviews and appearances I've done over the years, covering topics from Brave Software and privacy to running and endurance sports.</p>
+<div class="card-container">
+  {{range .Interviews}}
+    <div class="card-entry">
+      <div class="interview-entry">
+        <div class="interview-content">
+          <h3>
+            {{if .URL}}<a href="{{.URL}}" target="_blank">{{.Title}}</a>{{else}}{{.Title}}{{end}}
+          </h3>
+          <div class="interview-meta">
+            <span class="interview-date">{{.Date}}</span>
+            <span class="interview-platform">{{.Platform}}</span>
+            <span class="interview-channel">{{.Channel}}</span>
+          </div>
+          <div class="card-details">{{.Description}}</div>
+          <div class="interview-links">
+            {{if .URL}}
+              <a href="{{.URL}}" target="_blank" title="Watch/Listen" class="action-link interview-link">
+                <i class="fas fa-external-link-alt"></i>
+              </a>
+            {{end}}
+          </div>
+        </div>
+      </div>
+    </div>
+  {{end}}
+</div>
+{{end}} 

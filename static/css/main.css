@@ -999,6 +999,61 @@ textarea {
     background-color: #1f2937;
 }
 
+/* Interview specific styles */
+.interview-entry {
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+}
+
+.interview-content {
+    flex: 1;
+}
+
+.interview-meta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 8px 0 12px 0;
+    font-size: 0.9em;
+    color: #6b7280;
+}
+
+.interview-date {
+    font-weight: 500;
+    color: #4a5568;
+}
+
+.interview-platform {
+    background-color: #f3f4f6;
+    color: #374151;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 0.8em;
+    font-weight: 500;
+}
+
+.interview-channel {
+    color: #6b7280;
+    font-style: italic;
+}
+
+.interview-links {
+    margin-top: 18px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.interview-link {
+    background-color: #3b82f6;
+}
+
+.interview-link:hover {
+    background-color: #2563eb;
+}
+
 /* Add media query for mobile devices */
 @media only screen and (max-width: 600px) {
     .tagContainer, .tagContainer.years {

@@ -113,6 +113,30 @@ func projectsHandler(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
+func interviewsHandler(w http.ResponseWriter, r *http.Request) {
+	interviews, err := data.GetInterviews()
+	if err != nil {
+		errorPage(w, "Unable to load interview data", "interviews")
+		return
+	}
+
+	p := struct {
+		Title        string
+		MarkdownSlug string
+		Interviews   data.Interviews
+	}{
+		Title:        GetTitle("Interviews"),
+		MarkdownSlug: "interviews",
+		Interviews:   interviews,
+	}
+	t := template.Must(template.New("base.html").Funcs(funcMap).ParseFiles("templates/base.html", "templates/interviews.html"))
+	err = t.Execute(w, p)
+	if err != nil {
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+}
+
 func generateRSSHandler(w http.ResponseWriter, r *http.Request) {
 	feed := &feeds.Feed{
 		Title:       "Brian R. Bondy's Blog",

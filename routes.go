@@ -66,6 +66,10 @@ func initializeRoutes(router *mux.Router) {
 		negroni.HandlerFunc(directToHttps),
 		negroni.Wrap(http.HandlerFunc(projectsHandler)),
 	))
+	router.Handle("/interviews", negroni.New(
+		negroni.HandlerFunc(directToHttps),
+		negroni.Wrap(http.HandlerFunc(interviewsHandler)),
+	))
 	router.Handle("/advice", getMarkdownTemplateHandler("Advice", "advice.markdown", "/advice"))
 	router.Handle("/books", getMarkdownTemplateHandler("Books", "books.markdown", "/books"))
 	router.Handle("/resume", getMarkdownTemplateHandler("Resume", "resume.markdown", "/resume"))
