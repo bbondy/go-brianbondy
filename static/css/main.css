@@ -817,6 +817,10 @@ textarea {
   color: #f48024;
 }
 
+.social-links .fa-instagram {
+  color: #e4405f;
+}
+
 @media (max-width: 768px) {
   .social-links {
     position: absolute;
