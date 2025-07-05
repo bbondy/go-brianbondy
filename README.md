@@ -31,7 +31,13 @@ The site will be available at [http://localhost:8080](http://localhost:8080).
 
 ## Format & Lint
 
-To automatically format and lint your code, run:
+To check for linting issues without fixing them:
+
+```
+make lint
+```
+
+To automatically format and fix linting issues:
 
 ```
 make format
