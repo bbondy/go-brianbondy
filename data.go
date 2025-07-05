@@ -24,7 +24,7 @@ func initializeBlogPosts() {
 	blogPostManifest, _ := ioutil.ReadFile("data/blogPostManifest.json")
 	err := json.Unmarshal([]byte(blogPostManifest), &blogPosts)
 	if err != nil {
-		panic(fmt.Errorf("Error parsing JSON"))
+		panic(fmt.Errorf("error parsing JSON"))
 	}
 
 	for _, blogPost := range blogPosts {

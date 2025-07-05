@@ -74,13 +74,6 @@ func runningHandler(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
-func getBlogPostByID(id int) *data.BlogPost {
-	if post, exists := blogPostIdMap[id]; exists {
-		return &post
-	}
-	return nil
-}
-
 func projectsHandler(w http.ResponseWriter, r *http.Request) {
 	projects, err := data.GetProjects()
 	if err != nil {
@@ -276,7 +269,7 @@ func redirectHandler(w http.ResponseWriter, r *http.Request) {
 	for from, to := range replacements {
 		path = strings.ReplaceAll(path, from, to)
 	}
-	http.Redirect(w, r, path, 302)
+	http.Redirect(w, r, path, http.StatusFound)
 }
 
 func paginationRedirectHandler(w http.ResponseWriter, r *http.Request) {
