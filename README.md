@@ -29,23 +29,34 @@ go run .
 ```
 The site will be available at [http://localhost:8080](http://localhost:8080).
 
-## Lint
+## Format & Lint
+
+To automatically format and lint your code, run:
 
 ```
-golangci-lint run --fix
+make format
 ```
 
-## Runnint tests
+## Testing
+
+To run all tests:
 
 ```
-go test -v
+make test
 ```
 
 ## Deployment
 
+Authenticate with Google Cloud (if you haven't already):
+
 ```
-gcloud auth login
-gcloud app deploy
+make auth
+```
+
+Then deploy:
+
+```
+make deploy
 ```
 
 ## Updating book list
