@@ -1099,7 +1099,18 @@ textarea {
 }
 
 .footer-section a:hover {
-    color: #4d90fe;
+  color: #4d90fe;
+}
+
+.footer-section a i.fa-external-link-alt {
+  font-size: 0.8em;
+  margin-left: 4px;
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+}
+
+.footer-section a:hover i.fa-external-link-alt {
+  opacity: 1;
 }
 
 .footer-bottom {
