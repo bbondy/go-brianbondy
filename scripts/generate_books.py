@@ -1,5 +1,6 @@
 import csv
 import re
+import urllib.parse
 
 def clean_title(title):
     # Remove series information in parentheses
@@ -9,6 +10,14 @@ def get_book_url(book_id):
     if book_id:
         return f"https://www.goodreads.com/book/show/{book_id}"
     return None
+
+def get_audible_url(title, author):
+    """Generate an Audible search URL for the book"""
+    # Clean the title and author for search
+    search_query = f"{title} {author}".strip()
+    # URL encode the search query
+    encoded_query = urllib.parse.quote(search_query)
+    return f"https://www.audible.com/search?keywords={encoded_query}"
 
 def generate_books_markdown():
     books = []  # List to store all books
@@ -34,10 +43,11 @@ def generate_books_markdown():
             publisher = row['Publisher']
             pages = row['Number of Pages']
             
-            # Get book URL
+            # Get book URLs
             book_url = get_book_url(row['Book Id'])
+            audible_url = get_audible_url(title, author_text)
             
-            # Create book entry with link using project-style structure
+            # Create book entry with links using project-style structure
             book_entry = f"""<div class="card-entry">
   <div class="project-entry">
     <div class="project-content">
@@ -50,6 +60,7 @@ def generate_books_markdown():
       </div>
       <div class="project-links">
         <a href="{book_url}" target="_blank" title="View on Goodreads" class="action-link website-link"><i class="fas fa-book"></i></a>
+        <a href="{audible_url}" target="_blank" title="Search on Audible" class="action-link audible-link"><i class="fab fa-audible"></i></a>
       </div>
     </div>
   </div>

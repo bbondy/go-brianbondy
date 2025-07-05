@@ -999,6 +999,15 @@ textarea {
     background-color: #1f2937;
 }
 
+/* Audible icon styling */
+.audible-link {
+    background-color: #f7931e;
+}
+
+.audible-link:hover {
+    background-color: #e67e22;
+}
+
 /* Interview specific styles */
 .interview-entry {
     display: flex;
