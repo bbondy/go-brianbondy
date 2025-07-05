@@ -938,6 +938,59 @@ textarea {
     flex: 1;
 }
 
+.project-links {
+    margin-top: 18px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.project-icon-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 55px;
+    height: 32px;
+    box-sizing: border-box;
+    gap: 5px;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 0.9em;
+    color: white;
+    transition: background-color 0.2s ease;
+    text-decoration: none;
+    background-color: #6b7280;
+}
+
+.project-icon-link:hover {
+    color: white;
+    text-decoration: none;
+    background-color: #4b5563;
+}
+
+.project-icon-link i {
+    font-size: 1.1em;
+}
+
+/* Website icon styling */
+.project-icon-link[title="Website"] {
+    background-color: #10b981;
+}
+
+.project-icon-link[title="Website"]:hover {
+    background-color: #059669;
+}
+
+/* GitHub icon styling */
+.project-icon-link[title="GitHub"] {
+    background-color: #374151;
+}
+
+.project-icon-link[title="GitHub"]:hover {
+    background-color: #1f2937;
+}
+
 /* Add media query for mobile devices */
 @media only screen and (max-width: 600px) {
     .tagContainer, .tagContainer.years {
@@ -1149,4 +1202,18 @@ textarea {
 .advice-card p {
   margin: 0;
   line-height: 1.6;
+}
+
+.website-link {
+  background-color: #10b981;
+}
+.website-link:hover {
+  background-color: #059669;
+}
+
+.github-link {
+  background-color: #374151;
+}
+.github-link:hover {
+  background-color: #1f2937;
 }

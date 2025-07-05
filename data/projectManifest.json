@@ -5,6 +5,7 @@
     "url": "https://brave.com",
     "website": "https://brave.com",
     "github": "https://github.com/brave/brave-core",
+    "blogPostID": 174,
     "description": "Block ads and trackers, saves data, and speeds up web browsing."
   },
   {
@@ -21,6 +22,7 @@
     "url": "https://brave.com/leo/",
     "website": "https://brave.com/leo/",
     "github": "https://github.com/brave/brave-core",
+    "blogPostID": 184,
     "description": "AI-powered assistant built into the Brave browser, offering features like question answering, content summarization, and more—all while maintaining privacy."
   },
   {
@@ -29,7 +31,8 @@
     "url": "https://play.google.com/store/apps/details?id=com.linkbubble.playstore&hl=en",
     "website": "https://play.google.com/store/apps/details?id=com.linkbubble.playstore&hl=en",
     "github": "https://github.com/brave/link-bubble",
-    "description": "Link Bubble makes the Android mobile web more efficient. When you click on a link in any app, Link Bubble loads that webpage in the background and presents it in a floating bubble, leaving you free to continue using your current app. Unique amongst Android web browsers, it saves precious time normally spent watching pages load."
+    "description": "Link Bubble makes the Android mobile web more efficient. When you click on a link in any app, Link Bubble loads that webpage in the background and presents it in a floating bubble, leaving you free to continue using your current app. Unique amongst Android web browsers, it saves precious time normally spent watching pages load.",
+    "blogPostID": 171
   },
   {
     "title": "brianbondy.com",
@@ -65,14 +68,16 @@
     "image": "static/img/projects/ka-fxos.png",
     "url": "https://github.com/bbondy/khan-academy-fxos",
     "github": "https://github.com/bbondy/khan-academy-fxos",
-    "description": "Lead and primary developer for the Khan Academy app for Firefox OS. Khan Academy allows you to learn almost anything for free. The Firefox OS app is the best way to view Khan Academy's complete library of over 6,000 videos and articles on a Firefox OS device."
+    "description": "Lead and primary developer for the Khan Academy app for Firefox OS. Khan Academy allows you to learn almost anything for free. The Firefox OS app is the best way to view Khan Academy's complete library of over 6,000 videos and articles on a Firefox OS device.",
+    "blogPostId": 169
   },
   {
     "title": "Code Firefox",
     "image": "static/img/projects/firefox.png",
     "url": "https://github.com/bbondy/codefirefox",
     "github": "https://github.com/bbondy/codefirefox",
-    "description": "Becoming a Mozilla contributor can be intimidating. There's a lot of information to consume, and that information can be dispersed in a variety of different places. This site aim to outline the process of becoming a Mozilla contributor, from start to finish, with gentle, short, consumable 2-10 minute videos."
+    "description": "Becoming a Mozilla contributor can be intimidating. There's a lot of information to consume, and that information can be dispersed in a variety of different places. This site aim to outline the process of becoming a Mozilla contributor, from start to finish, with gentle, short, consumable 2-10 minute videos.",
+    "blogPostID": 158
   },
   {
     "title": "JS abstract syntax tree grader",
@@ -94,22 +99,26 @@
     "url": "https://github.com/mozilla/gecko-dev",
     "github": "https://github.com/mozilla/gecko-dev",
     "website": "https://www.firefox.com/",
-    "description": "I started contributing to Firefox around when I started full time in 2011. I worked mostly on Windows related code in C++, but also XUL, XBL, Javascript, CSS, Python, and more. Some features I worked on were the Windows 8 Metro Firefox browser, the installer, silent updates, hundreds of fixes, and enhancements."
+    "description": "I started contributing to Firefox around when I started full time in 2011. I worked mostly on Windows related code in C++, but also XUL, XBL, Javascript, CSS, Python, and more. Some features I worked on were the Windows 8 Metro Firefox browser, the installer, silent updates, hundreds of fixes, and enhancements.",
+    "blogPostID": 118
   },
   {
     "title": "ROBOBAK",
     "image": "static/img/projects/robobak.png",
-    "description": "Enterprise level Windows backup software made in C++ which offers remote office branch office (ROBO) backup with features such as deduplication, agentless backup, replication, and more. Offers a WCF HTTP REST based SDK. Was acquired in 2011."
+    "description": "Enterprise level Windows backup software made in C++ which offers remote office branch office (ROBO) backup with features such as deduplication, agentless backup, replication, and more. Offers a WCF HTTP REST based SDK. Was acquired in 2011.",
+    "blogPostID": 113
   },
   {
     "title": "Vision Backup",
     "image": "static/img/projects/vb.jpg",
-    "description": "Micro business backup of any hard drive, network computer, or FTP/FTPS/SFTP site to another hard drive, FTP/FTPS/SFTP location, CD/DVD/BluRay, or tape drive. SQL Server, Exchange Server, and many other plug-in based applications supported.  Was acquired in 2011."
+    "description": "Micro business backup of any hard drive, network computer, or FTP/FTPS/SFTP site to another hard drive, FTP/FTPS/SFTP location, CD/DVD/BluRay, or tape drive. SQL Server, Exchange Server, and many other plug-in based applications supported.  Was acquired in 2011.",
+    "blogPostID": 113
   },
   {
     "title": "Cryptex",
     "image": "static/img/projects/cryptex.jpg",
-    "description": "Cryptex was designed to keep your data safe by creating an encrypted vault on your hard drive.  The encrypted drive showed up as a new hard drive which allowed you to drag and dropping files in and out of it. It only used as much space as the files took up.  When it was locked, the drive would disappear from view. Was acquired in 2011."
+    "description": "Cryptex was designed to keep your data safe by creating an encrypted vault on your hard drive.  The encrypted drive showed up as a new hard drive which allowed you to drag and dropping files in and out of it. It only used as much space as the files took up.  When it was locked, the drive would disappear from view. Was acquired in 2011.",
+    "blogPostID": 113
   },
   {
     "title": "Null FTP",

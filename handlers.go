@@ -74,16 +74,36 @@ func runningHandler(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
+func getBlogPostByID(id int) *data.BlogPost {
+	if post, exists := blogPostIdMap[id]; exists {
+		return &post
+	}
+	return nil
+}
+
 func projectsHandler(w http.ResponseWriter, r *http.Request) {
 	projects, err := data.GetProjects()
 	if err != nil {
 		errorPage(w, "Unable to load project data", "projects")
 		return
 	}
-	p := &data.ProjectsPage{
+
+	// Build a map of blog post IDs to blog post data for use in the template
+	blogPostMap := make(map[int]data.BlogPost)
+	for _, post := range blogPosts {
+		blogPostMap[post.Id] = post
+	}
+
+	p := struct {
+		Title        string
+		MarkdownSlug string
+		Projects     data.Projects
+		BlogPostMap  map[int]data.BlogPost
+	}{
 		Title:        GetTitle("Projects"),
 		MarkdownSlug: "projects",
 		Projects:     projects,
+		BlogPostMap:  blogPostMap,
 	}
 	t := template.Must(template.New("base.html").Funcs(funcMap).ParseFiles("templates/base.html", "templates/projects.html"))
 	err = t.Execute(w, p)

@@ -13,14 +13,21 @@
             {{if .URL}}<a href="{{.URL}}" target="_blank">{{.Title}}</a>{{else}}{{.Title}}{{end}}
           </h3>
           <div class="card-details">{{.Description}}</div>
-          <span class="project-links" style="display: inline-block; margin-top: 10px;">
+          <div class="project-links">
             {{if .Website}}
-              <a href="{{.Website}}" target="_blank" title="Website" class="project-icon-link" style="margin-right: 10px;"><i class="fas fa-globe"></i></a>
+              <a href="{{.Website}}" target="_blank" title="Website" class="action-link website-link"><i class="fas fa-globe"></i></a>
             {{end}}
             {{if .Github}}
-              <a href="{{.Github}}" target="_blank" title="GitHub" class="project-icon-link"><i class="fab fa-github"></i></a>
+              <a href="{{.Github}}" target="_blank" title="GitHub" class="action-link github-link"><i class="fab fa-github"></i></a>
             {{end}}
-          </span>
+            {{if .BlogPostID}}
+              {{with index $.BlogPostMap .BlogPostID}}
+                <a href="/blog/{{.Id}}/{{slugifyTitle .Title}}" title="Read blog post" class="action-link blog-link">
+                  <i class="fas fa-blog"></i>
+                </a>
+              {{end}}
+            {{end}}
+          </div>
         </div>
       </div>
     </div>

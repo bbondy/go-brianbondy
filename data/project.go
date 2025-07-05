@@ -7,6 +7,7 @@ type Project struct {
 	URL         string `json:"url"`
 	Github      string `json:"github,omitempty"`
 	Website     string `json:"website,omitempty"`
+	BlogPostID  int    `json:"blogPostID,omitempty"`
 	Description string `json:"description"`
 }
 
