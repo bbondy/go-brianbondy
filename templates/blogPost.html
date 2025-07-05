@@ -31,6 +31,22 @@
            class="shareButton linkedin">
           <i class="fab fa-linkedin"></i> LinkedIn
         </a>
+        <a href="https://news.ycombinator.com/submitlink?u=https://brianbondy.com/blog/{{.BlogPost.Id}}/{{slugifyTitle .BlogPost.Title}}&t={{.BlogPost.Title}}" 
+           target="_blank" 
+           rel="noopener noreferrer" 
+           class="shareButton hackernews">
+          <i class="fab fa-hacker-news"></i> HN
+        </a>
+        <a href="https://reddit.com/submit?url=https://brianbondy.com/blog/{{.BlogPost.Id}}/{{slugifyTitle .BlogPost.Title}}&title={{.BlogPost.Title}}" 
+           target="_blank" 
+           rel="noopener noreferrer" 
+           class="shareButton reddit">
+          <i class="fab fa-reddit"></i> Reddit
+        </a>
+        <a href="mailto:?subject={{.BlogPost.Title}}&body=Check out this blog post: https://brianbondy.com/blog/{{.BlogPost.Id}}/{{slugifyTitle .BlogPost.Title}}" 
+           class="shareButton email">
+          <i class="fas fa-envelope"></i> Email
+        </a>
         <button onclick="copyLink(this)" 
                 class="shareButton copylink"
                 data-url="https://brianbondy.com/blog/{{.BlogPost.Id}}/{{slugifyTitle .BlogPost.Title}}">

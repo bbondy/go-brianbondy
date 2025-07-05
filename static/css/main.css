@@ -635,6 +635,7 @@ textarea {
 .shareButtons {
   display: flex;
   gap: 10px;
+  flex-wrap: wrap;
 }
 
 .shareButton {
@@ -701,19 +702,44 @@ textarea {
   background-color: #006399;
 }
 
+.shareButton.hackernews {
+  background-color: #ff6600;
+}
+
+.shareButton.hackernews:hover {
+  background-color: #e55a00;
+}
+
+.shareButton.reddit {
+  background-color: #ff4500;
+}
+
+.shareButton.reddit:hover {
+  background-color: #e63e00;
+}
+
+.shareButton.email {
+  background-color: #ea4335;
+}
+
+.shareButton.email:hover {
+  background-color: #d33a2c;
+}
+
 @media only screen and (max-width: 600px) {
   .shareButton span.button-text {
     display: none;
   }
-  
   .shareButton {
     padding: 10px !important;
     min-width: 42px;
     justify-content: center;
   }
-  
   .shareButtons {
     justify-content: center;
+    gap: 8px;
+    row-gap: 8px;
+    flex-wrap: wrap;
   }
 }
 
