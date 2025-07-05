@@ -26,6 +26,15 @@
     "description": "AI-powered assistant built into the Brave browser, offering features like question answering, content summarization, and more—all while maintaining privacy."
   },
   {
+    "title": "IPFS in Brave",
+    "image": "static/img/projects/ipfs.png",
+    "url": "/blog/177/ipfs-support-in-brave",
+    "website": "https://brave.com",
+    "github": "https://github.com/brave/brave-core",
+    "blogPostID": 177,
+    "description": "Deep integration of InterPlanetary File System (IPFS) support in Brave browser, allowing users to access content via content hashes (CIDs) instead of URLs. This enables content distribution without high bandwidth costs, data deduplication, and access to content even if it has been censored. Users can choose between using a local IPFS node or public gateways."
+  },
+  {
     "title": "Link Bubble Browser",
     "image": "static/img/projects/link-bubble.png",
     "url": "https://play.google.com/store/apps/details?id=com.linkbubble.playstore&hl=en",

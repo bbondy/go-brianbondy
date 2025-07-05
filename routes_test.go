@@ -61,21 +61,21 @@ func setupRoutesTestData() {
 
 	// Setup sorted tags
 	sortedTags = []string{"test", "golang"}
-	
+
 	// Setup markdown map with some test content
 	markdownMap = make(map[string]string)
 	markdownMap["about.markdown"] = "<h1>About</h1>"
 	markdownMap["other.markdown"] = "<h1>Other</h1>"
 	markdownMap["contact.markdown"] = "<h1>Contact</h1>"
-	markdownMap["projects.markdown"] = "<h1>Projects</h1>"
+
 	markdownMap["advice.markdown"] = "<h1>Advice</h1>"
 	markdownMap["books.markdown"] = "<h1>Books</h1>"
 	markdownMap["resume.markdown"] = "<h1>Resume</h1>"
 	markdownMap["running.markdown"] = "<h1>Running</h1>"
-	
+
 	// Add blog post markdown content
 	for _, post := range blogPosts {
-		markdownMap["blog/"+string(rune(post.Id))+".markdown"] = 
+		markdownMap["blog/"+string(rune(post.Id))+".markdown"] =
 			"<p>This is content for blog post " + post.Title + "</p>"
 	}
 }
@@ -90,7 +90,7 @@ func TestRouteRegistration(t *testing.T) {
 	origTagCountMap := tagCountMap
 	origSortedTags := sortedTags
 	origMarkdownMap := markdownMap
-	
+
 	// Restore after test
 	defer func() {
 		blogPosts = origBlogPosts
@@ -101,14 +101,14 @@ func TestRouteRegistration(t *testing.T) {
 		sortedTags = origSortedTags
 		markdownMap = origMarkdownMap
 	}()
-	
+
 	// Create router and initialize routes
 	router := mux.NewRouter()
 	initializeRoutes(router)
-	
+
 	// Setup mock for blog data
 	setupRoutesTestData()
-	
+
 	// Define routes to test
 	testCases := []struct {
 		name          string
@@ -133,14 +133,14 @@ func TestRouteRegistration(t *testing.T) {
 		{"All posts page", "GET", "/all", true},
 		{"Non-existent route", "GET", "/this-does-not-exist", false},
 	}
-	
+
 	// Test each route
 	for _, tc := range testCases {
 		t.Run(tc.name, func(t *testing.T) {
 			// Create request
 			req, err := http.NewRequest(tc.method, tc.path, nil)
 			assert.NoError(t, err)
-			
+
 			// Match route
 			var match mux.RouteMatch
 			matched := router.Match(req, &match)
@@ -154,7 +154,7 @@ func TestURLParameterExtraction(t *testing.T) {
 	// Create router and initialize routes
 	router := mux.NewRouter()
 	initializeRoutes(router)
-	
+
 	testCases := []struct {
 		name       string
 		path       string
@@ -167,13 +167,13 @@ func TestURLParameterExtraction(t *testing.T) {
 		{"Tag name", "/tagged/golang", "tag", "golang"},
 		{"Year", "/posted/2022", "year", "2022"},
 	}
-	
+
 	for _, tc := range testCases {
 		t.Run(tc.name, func(t *testing.T) {
 			req, _ := http.NewRequest("GET", tc.path, nil)
 			var match mux.RouteMatch
 			matched := router.Match(req, &match)
-			
+
 			assert.True(t, matched, "Route should match")
 			assert.Contains(t, match.Vars, tc.paramName, "URL param should be extracted")
 			assert.Equal(t, tc.paramValue, match.Vars[tc.paramName], "URL param value should match")
@@ -186,14 +186,14 @@ func TestStaticFileServer(t *testing.T) {
 	// Create router and initialize routes
 	router := mux.NewRouter()
 	initializeRoutes(router)
-	
+
 	// Create request for static file
 	req, _ := http.NewRequest("GET", "/static/test.css", nil)
-	
+
 	// Check if route matches
 	var match mux.RouteMatch
 	matched := router.Match(req, &match)
-	
+
 	assert.True(t, matched, "Static file route should match")
 }
 
@@ -201,17 +201,17 @@ func TestStaticFileServer(t *testing.T) {
 func TestMiddlewareChain(t *testing.T) {
 	router := mux.NewRouter()
 	initializeRoutes(router)
-	
+
 	// Setup test environment
 	setupRoutesTestData()
-	
+
 	// Test https redirect middleware
 	req, _ := http.NewRequest("GET", "/", nil)
 	w := httptest.NewRecorder()
-	
+
 	// Send request without HTTPS header
 	router.ServeHTTP(w, req)
-	
+
 	// Should redirect to HTTPS
 	assert.Equal(t, http.StatusTemporaryRedirect, w.Code)
 	location, err := w.Result().Location()
