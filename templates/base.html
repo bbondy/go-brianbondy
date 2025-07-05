@@ -3,14 +3,97 @@
   <head>
     <meta charset="utf-8">
     <title>{{.Title}}</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/static/css/main.css?cachebust=118">
-    <link rel="stylesheet" href="/static/font-awesome/css/all.min.css">
-    <link rel="stylesheet" href="/static/css/highlight-default.css">
-    <link rel="shortcut icon" href="/static/img/favicon.ico">
-    <link rel="icon" href="/static/img/favicon.ico">
+    
+    <!-- DNS prefetch for external domains -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    
+    <!-- Preload critical fonts -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet"></noscript>
+    
+    <!-- Critical CSS inlined for above-the-fold content -->
+    <style>
+      /* Critical CSS for above-the-fold content */
+      body {
+        background-color: #f8fafc;
+        color: #4a5568;
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        font-size: 1em;
+        line-height: 1.5;
+        margin: 0 auto 0 auto;
+        max-width: 100vw;
+        min-width: 100vw;
+      }
+      .content {
+        max-width: 800px;
+        margin: 0 auto 3em auto;
+      }
+      .topBar {
+        background-color: #ffffff;
+        border: none;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+        border-radius: 12px;
+        margin: 15px 0;
+        list-style-type: none;
+      }
+      .topBar img {
+        float: left;
+        margin: 8px 0px 0px 9px;
+        padding-right: 10px;
+        width: 28px;
+        transition: transform 0.3s ease;
+      }
+      .topBar .topBarLinks {
+        margin: 0 auto;
+      }
+      .topBar li {
+        color: #4a5568;
+        display: inline-block;
+        padding: 10px 14px;
+        transition: all 0.2s ease;
+      }
+      .mainBody {
+        background-color: #ffffff;
+        padding: 18px 20px 40px 20px;
+        border-radius: 12px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+      }
+      h1, h2, h3, h4, h5, h6 {
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        font-weight: 600;
+        line-height: 1.2;
+        color: #2d3748;
+      }
+      h1 {
+        font-size: 1.5em;
+        line-height: 1.2em;
+        margin-top: 1em;
+        margin-bottom: 15px;
+        padding-bottom: 4px;
+        border-bottom: 1px dotted #c8c8c8;
+      }
+      a {
+        text-decoration: none;
+        color: #4d90fe;
+      }
+    </style>
+    
+    <!-- Non-critical CSS loaded asynchronously -->
+    <link rel="stylesheet" href="/static/css/main.css?cachebust=120" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="/static/css/main.css?cachebust=120"></noscript>
+    
+    <!-- Font Awesome loaded asynchronously -->
+    <link rel="stylesheet" href="/static/font-awesome/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="/static/font-awesome/css/all.min.css"></noscript>
+    
+    <!-- Syntax highlighting loaded asynchronously -->
+    <link rel="stylesheet" href="/static/css/highlight-default.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="/static/css/highlight-default.css"></noscript>
+    
+    <!-- Optimized favicon -->
+    <link rel="icon" type="image/x-icon" href="/static/img/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="/static/img/favicon.ico">
     <link rel="alternate" type="application/rss+xml" title="Brian Bondy RSS Feed" href="http://www.brianbondy.com/rss">
     <meta name="viewport" content="width=device-width, min-width=285, max-viewport=800, initial-scale=1">
     <meta name="theme-color" content="#9AC0FF">
@@ -124,29 +207,33 @@
         </div>
       </footer>
     </div>
+    <!-- Non-blocking JavaScript -->
     <script>
-      document.addEventListener('scroll', function() {
-        const topBar = document.querySelector('.topBar');
-        if (window.scrollY > 20) {
-          topBar.classList.add('scrolled');
-        } else {
-          topBar.classList.remove('scrolled');
-        }
-      });
-
-      function copyLink(button) {
-        const url = button.getAttribute('data-url');
-        navigator.clipboard.writeText(url).then(() => {
-          const originalText = button.innerHTML;
-          button.innerHTML = '<i class="fas fa-check"></i> Copied!';
-          button.classList.add('copied');
-          
-          setTimeout(() => {
-            button.innerHTML = originalText;
-            button.classList.remove('copied');
-          }, 2000);
+      // Load JavaScript after page load for better performance
+      window.addEventListener('load', function() {
+        document.addEventListener('scroll', function() {
+          const topBar = document.querySelector('.topBar');
+          if (window.scrollY > 20) {
+            topBar.classList.add('scrolled');
+          } else {
+            topBar.classList.remove('scrolled');
+          }
         });
-      }
+
+        window.copyLink = function(button) {
+          const url = button.getAttribute('data-url');
+          navigator.clipboard.writeText(url).then(() => {
+            const originalText = button.innerHTML;
+            button.innerHTML = '<i class="fas fa-check"></i> Copied!';
+            button.classList.add('copied');
+            
+            setTimeout(() => {
+              button.innerHTML = originalText;
+              button.classList.remove('copied');
+            }, 2000);
+          });
+        };
+      });
     </script>
   </body>
 </html>
