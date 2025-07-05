@@ -14,6 +14,9 @@ var funcMap = template.FuncMap{
 	"add": func(a, b int) int {
 		return a + b
 	},
+	"currentYear": func() int {
+		return time.Now().Year()
+	},
 	"formatDate": func(dateStr string) string {
 		t, err := time.Parse("2006-01-02", dateStr)
 		if err != nil {

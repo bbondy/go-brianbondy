@@ -14,7 +14,7 @@ In 2015, I co-founded [Brave Software](https://www.brave.com) with Brendan Eich,
 
 Before Brave, I was fortunate to work at some innovative places like Khan Academy, Mozilla, and Evernote.
 
-You can also find my [collected advice](/advice), a list of [books I've read](/books), [interviews and appearances](/interviews), and my professional [resume](/resume).
+You can also find my [collected advice](/advice), a list of [books I've read](/books), and my professional [resume](/resume).
 
 For getting in touch with me, please visit my [contact page](/contact).
 
