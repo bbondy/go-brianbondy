@@ -37,12 +37,21 @@ def generate_books_markdown():
             # Get book URL
             book_url = get_book_url(row['Book Id'])
             
-            # Create book entry with link
-            book_entry = f"""<div class="book-card">
-  <h3><a href="{book_url}" target="_blank">{title}</a></h3>
-  <div class="book-details">
-    <div class="book-author">by {author_text}</div>
-    <div class="book-meta">{year_published}{f", {publisher}" if publisher else ""}{f", {pages} pages" if pages else ""}</div>
+            # Create book entry with link using project-style structure
+            book_entry = f"""<div class="card-entry">
+  <div class="project-entry">
+    <div class="project-content">
+      <h3>
+        <a href="{book_url}" target="_blank">{title}</a>
+      </h3>
+      <div class="card-details">
+        <div class="book-author">by {author_text}</div>
+        <div class="book-meta">{year_published}{f", {publisher}" if publisher else ""}{f", {pages} pages" if pages else ""}</div>
+      </div>
+      <div class="project-links">
+        <a href="{book_url}" target="_blank" title="View on Goodreads" class="action-link website-link"><i class="fas fa-book"></i></a>
+      </div>
+    </div>
   </div>
 </div>"""
             books.append(book_entry)
@@ -52,14 +61,11 @@ def generate_books_markdown():
 
 The list below contains books that I've read and good enough to share.
 
-<div class="books-grid-container">
 """
     
     # Add books in original order
     for book in books:
         markdown_content += book + "\n"
-    
-    markdown_content += "</div>"
     
     # Write to file
     with open('data/markdown/books.markdown', 'w', encoding='utf-8') as file:

@@ -1362,3 +1362,16 @@ textarea {
 .github-link:hover {
   background-color: #1f2937;
 }
+
+/* Book-specific styles within project structure */
+.book-author {
+  color: #6b7280;
+  font-size: 0.9em;
+  margin-bottom: 4px;
+}
+
+.book-meta {
+  color: #9ca3af;
+  font-size: 0.85em;
+  font-style: italic;
+}
