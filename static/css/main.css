@@ -813,6 +813,10 @@ textarea {
   color: #2667bc;
 }
 
+.social-links .fa-stack-overflow {
+  color: #f48024;
+}
+
 @media (max-width: 768px) {
   .social-links {
     position: absolute;
