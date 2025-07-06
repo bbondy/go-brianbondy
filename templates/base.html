@@ -4,6 +4,12 @@
     <meta charset="utf-8">
     <title>{{.Title}}</title>
     
+    {{if (avail "Description" .)}}
+      <meta name="description" content="{{.Description}}">
+    {{else}}
+      <meta name="description" content="Brian Bondy - Father, runner, software engineer, entrepreneur, and writer.">
+    {{end}}
+    
     <!-- DNS prefetch for external domains -->
     <link rel="dns-prefetch" href="//fonts.googleapis.com">
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
