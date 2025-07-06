@@ -1,1 +1,17 @@
 runtime: go122
+
+handlers:
+- url: /static/img
+  static_dir: static/img
+  http_headers:
+    Cache-Control: "public, max-age=31536000, immutable"
+
+- url: /static/css
+  static_dir: static/css
+  http_headers:
+    Cache-Control: "public, max-age=31536000, immutable"
+
+- url: /static/font-awesome
+  static_dir: static/font-awesome
+  http_headers:
+    Cache-Control: "public, max-age=31536000, immutable"
