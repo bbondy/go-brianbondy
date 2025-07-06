@@ -43,13 +43,13 @@
           
           {{if .ImagePath}}
             <div class="run-image">
-              <img src="/static/{{.ImagePath}}" alt="{{.Title}}" loading="lazy">
+              <img src="/static/{{.ImagePath}}" alt="Photo from run: {{.Title}}" loading="lazy">
             </div>
           {{else if .ImagePaths}}
             <div class="run-images">
               {{range .ImagePaths}}
                 <div class="run-image">
-                  <img src="/static/{{.}}" alt="{{$.Title}}" loading="lazy">
+                  <img src="/static/{{.}}" alt="Photo from run: {{$.Title}}" loading="lazy">
                 </div>
               {{end}}
             </div>
