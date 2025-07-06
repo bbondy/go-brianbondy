@@ -7,7 +7,11 @@
         <div class="preview">
           {{if .BlogPost.ImagePath}}
             <a href="{{.PostUrl}}">
-              <img src="/{{.BlogPost.ImagePath}}" class="previewImage" alt="Preview image for {{.BlogPost.Title}}">
+              <img src="/{{.BlogPost.ImagePath}}" 
+                   class="previewImage" 
+                   alt="Preview image for {{.BlogPost.Title}}"
+                   loading="lazy"
+                   decoding="async">
             </a>
           {{end}}
           {{.Preview}}

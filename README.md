@@ -1,6 +1,116 @@
-# go-brianbondy
+# Brian Bondy's Website
 
-A personal blog and portfolio site for Brian R. Bondy, built with Go. Features include blog posts (in markdown), running logs, project showcases, and more.
+This is the source code for [brianbondy.com](https://brianbondy.com), a personal website built with Go.
+
+## Development
+
+### Prerequisites
+
+- Go 1.19+
+- Python 3.7+ (for image processing scripts)
+- `cwebp` tool (for WebP image conversion)
+
+### Installation
+
+1. Clone the repository
+2. Install the `cwebp` tool:
+   ```bash
+   # macOS
+   brew install webp
+   
+   # Ubuntu/Debian
+   sudo apt-get install webp
+   
+   # CentOS/RHEL
+   sudo yum install libwebp-tools
+   ```
+
+### Running Locally
+
+```bash
+go run .
+```
+
+The site will be available at `http://localhost:8080`
+
+### Testing
+
+```bash
+make test
+```
+
+### Formatting
+
+```bash
+make format
+```
+
+### Deployment
+
+```bash
+make deploy
+```
+
+## Blog Post Workflow
+
+### Adding a New Blog Post
+
+1. Create a new markdown file in `data/markdown/blog/` with the next available ID
+2. Add the blog post metadata to `data/blogPostManifest.json`
+3. Add images to `static/img/blogpost_[ID]/` directory
+4. Process the images for WebP optimization:
+   ```bash
+   make blog-images [ID]
+   ```
+   Or process all blog post images:
+   ```bash
+   make blog-images
+   ```
+5. Test locally: `go run .`
+6. Run tests: `make test`
+7. Deploy: `make deploy`
+
+### Image Processing
+
+The website automatically optimizes images for better performance by:
+- Converting images to WebP format
+- Adding lazy loading
+- Adding async decoding
+- Providing responsive image support
+
+#### Manual Image Processing
+
+Convert all images to WebP:
+```bash
+make webp
+```
+
+Force convert all images (even if WebP already exists):
+```bash
+make webp-force
+```
+
+Process images for a specific blog post:
+```bash
+python3 scripts/process_new_blog_images.py [blog_post_id]
+```
+
+#### Image Processing Scripts
+
+- `scripts/convert_images_to_webp.py` - Main WebP conversion script
+- `scripts/process_new_blog_images.py` - Blog post specific image processing
+- `scripts/download_strava_images.py` - Download images from Strava activities
+- `scripts/generate_books.py` - Generate book data from Goodreads export
+
+## Project Structure
+
+- `data/` - Blog posts, projects, and other content
+- `static/` - CSS, images, and other static assets
+- `templates/` - HTML templates
+- `scripts/` - Utility scripts for content management
+- `handlers.go` - HTTP request handlers
+- `routes.go` - URL routing
+- `utils.go` - Utility functions including image optimization
 
 ## Prerequisites
 
@@ -21,13 +131,6 @@ A personal blog and portfolio site for Brian R. Bondy, built with Go. Features i
 1. Create a new markdown file in `data/markdown/blog/`.
 2. Add an entry to `data/blogPostManifest.json` with the new post's metadata.
 3. (Optional) Add images to `static/img/blogpost_<id>/`.
-
-## Development
-
-```
-go run .
-```
-The site will be available at [http://localhost:8080](http://localhost:8080).
 
 ## Format & Lint
 

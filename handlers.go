@@ -30,7 +30,7 @@ func errorPage(w http.ResponseWriter, message string, slug string) {
 	t := template.Must(template.New("base.html").Funcs(funcMap).ParseFiles("templates/base.html", "templates/simpleMarkdown.html"))
 	err := t.Execute(w, p)
 	if err != nil {
-		http.Error(w, err.Error(), http.StatusInternalServerError)
+		log.Printf("Error executing error page template: %v", err)
 		return
 	}
 }

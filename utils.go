@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"net/http"
 	"path/filepath"
 	"regexp"
@@ -33,8 +34,11 @@ func directToHttps(w http.ResponseWriter, r *http.Request, next http.HandlerFunc
 		next(w, r)
 	} else {
 		target := "https://" + r.Host + r.URL.Path
-		http.Redirect(w, r, target,
-			http.StatusTemporaryRedirect)
+		if r.URL.RawQuery != "" {
+			target += "?" + r.URL.RawQuery
+		}
+		http.Redirect(w, r, target, http.StatusTemporaryRedirect)
+		// Don't call next() after redirect to prevent double header writes
 	}
 }
 
@@ -99,4 +103,66 @@ func getImageMimeType(imagePath string) string {
 	default:
 		return ""
 	}
+}
+
+// Image optimization functions for PageSpeed improvements
+func optimizeImageTag(imgTag string) string {
+	// Extract src attribute
+	srcRegex := regexp.MustCompile(`src=["']([^"']+)["']`)
+	srcMatch := srcRegex.FindStringSubmatch(imgTag)
+	if len(srcMatch) < 2 {
+		return imgTag
+	}
+
+	src := srcMatch[1]
+
+	// Skip data URLs and external URLs
+	if strings.HasPrefix(src, "data:") || strings.HasPrefix(src, "http") {
+		return imgTag
+	}
+
+	// Only process static images
+	if !strings.HasPrefix(src, "/static/") {
+		return imgTag
+	}
+
+	// Extract file extension
+	ext := strings.ToLower(filepath.Ext(src))
+	if ext != ".jpg" && ext != ".jpeg" && ext != ".png" && ext != ".gif" {
+		return imgTag
+	}
+
+	// Generate WebP version path
+	webpPath := strings.TrimSuffix(src, ext) + ".webp"
+
+	// Create responsive image with srcset
+	responsiveImg := strings.Replace(imgTag, src, webpPath, 1)
+
+	// Add srcset for responsive images
+	srcset := fmt.Sprintf(`srcset="%s 1x, %s 2x"`, webpPath, webpPath)
+
+	// Add loading="lazy" if not already present
+	if !strings.Contains(responsiveImg, `loading="`) {
+		responsiveImg = strings.Replace(responsiveImg, ">", ` loading="lazy">`, 1)
+	}
+
+	// Add srcset attribute
+	if !strings.Contains(responsiveImg, "srcset=") {
+		responsiveImg = strings.Replace(responsiveImg, ">", ` `+srcset+`>`, 1)
+	}
+
+	// Add decoding="async" for better performance
+	if !strings.Contains(responsiveImg, `decoding="`) {
+		responsiveImg = strings.Replace(responsiveImg, ">", ` decoding="async">`, 1)
+	}
+
+	return responsiveImg
+}
+
+func optimizeImagesInContent(content string) string {
+	// Find all img tags
+	imgRegex := regexp.MustCompile(`<img[^>]+>`)
+	return imgRegex.ReplaceAllStringFunc(content, func(match string) string {
+		return optimizeImageTag(match)
+	})
 }

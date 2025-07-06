@@ -94,7 +94,7 @@ func TestExtractFirstParagraph(t *testing.T) {
 			strings.Repeat("A", 300) + "...",
 		},
 		{
-			"long content no p tags", 
+			"long content no p tags",
 			strings.Repeat("A", 400),
 			strings.Repeat("A", 300) + "...",
 		},
@@ -121,7 +121,7 @@ func TestGetImageMimeType(t *testing.T) {
 		want      string
 	}{
 		{"image.png", "image/png"},
-		{"image.webp", "image/webp"}, 
+		{"image.webp", "image/webp"},
 		{"image.jpg", "image/jpeg"},
 		{"image.jpeg", "image/jpeg"},
 		{"image.gif", "image/gif"},
@@ -133,5 +133,58 @@ func TestGetImageMimeType(t *testing.T) {
 		if got != tt.want {
 			t.Errorf("getImageMimeType(%q) = %v, want %v", tt.imagePath, got, tt.want)
 		}
+	}
+}
+
+func TestOptimizeImageTag(t *testing.T) {
+	tests := []struct {
+		name     string
+		input    string
+		expected string
+	}{
+		{
+			"basic image optimization",
+			`<img src="/static/img/test.jpg" alt="test">`,
+			`<img src="/static/img/test.webp" alt="test" loading="lazy" srcset="/static/img/test.webp 1x, /static/img/test.webp 2x" decoding="async">`,
+		},
+		{
+			"image with existing loading attribute",
+			`<img src="/static/img/test.png" alt="test" loading="lazy">`,
+			`<img src="/static/img/test.webp" alt="test" loading="lazy" srcset="/static/img/test.webp 1x, /static/img/test.webp 2x" decoding="async">`,
+		},
+		{
+			"external image - no optimization",
+			`<img src="https://example.com/image.jpg" alt="test">`,
+			`<img src="https://example.com/image.jpg" alt="test">`,
+		},
+		{
+			"data URL - no optimization",
+			`<img src="data:image/png;base64,test" alt="test">`,
+			`<img src="data:image/png;base64,test" alt="test">`,
+		},
+		{
+			"non-static image - no optimization",
+			`<img src="/other/image.jpg" alt="test">`,
+			`<img src="/other/image.jpg" alt="test">`,
+		},
+	}
+
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			got := optimizeImageTag(tt.input)
+			if got != tt.expected {
+				t.Errorf("optimizeImageTag() = %v, want %v", got, tt.expected)
+			}
+		})
+	}
+}
+
+func TestOptimizeImagesInContent(t *testing.T) {
+	input := `<p>Some text</p><img src="/static/img/test.jpg" alt="test"><p>More text</p><img src="/static/img/test2.png" alt="test2">`
+	expected := `<p>Some text</p><img src="/static/img/test.webp" alt="test" loading="lazy" srcset="/static/img/test.webp 1x, /static/img/test.webp 2x" decoding="async"><p>More text</p><img src="/static/img/test2.webp" alt="test2" loading="lazy" srcset="/static/img/test2.webp 1x, /static/img/test2.webp 2x" decoding="async">`
+
+	got := optimizeImagesInContent(input)
+	if got != expected {
+		t.Errorf("optimizeImagesInContent() = %v, want %v", got, expected)
 	}
 }

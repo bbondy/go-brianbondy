@@ -27,6 +27,9 @@ var funcMap = template.FuncMap{
 	"htmlSafe": func(html string) template.HTML {
 		return template.HTML(html)
 	},
+	"optimizeImages": func(html string) template.HTML {
+		return template.HTML(optimizeImagesInContent(html))
+	},
 	"getTagCount": func(tag string) int {
 		count, ok := tagCountMap[tag]
 		if !ok {

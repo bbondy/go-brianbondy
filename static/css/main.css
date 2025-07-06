@@ -1421,3 +1421,54 @@ textarea {
   font-size: 0.85em;
   font-style: italic;
 }
+
+/* Image optimization styles */
+img {
+  max-width: 100%;
+  height: auto;
+  content-visibility: auto;
+  contain-intrinsic-size: 0 500px;
+}
+
+.previewImage {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.2s ease;
+  will-change: transform;
+}
+
+.previewImage:hover {
+  transform: scale(1.02);
+}
+
+.blogPost img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+  will-change: transform;
+}
+
+.blogPost img:hover {
+  transform: scale(1.01);
+}
+
+/* Optimize image loading */
+img[loading="lazy"] {
+  content-visibility: auto;
+  contain-intrinsic-size: 0 500px;
+}
+
+/* Responsive images */
+@media (max-width: 768px) {
+  .blogPost img {
+    max-width: 100%;
+    margin: 10px 0;
+  }
+  
+  .previewImage {
+    max-width: 100%;
+  }
+}
