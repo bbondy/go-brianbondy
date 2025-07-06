@@ -15,16 +15,16 @@ The first thing I did was install Firefox.
 After installing Firefox, Windows will ask you which web browser you would like to use by default.
 It shows you a picture of Firefox and IE and lets you pick.  Nice interface. It shows you this dialog even before our process starts.  If you change focus to another tab or application though, the dialog goes away forever unless you uninstall and reinstall Firefox.
 
-<img src='/static/img/blogpost_123/firefoxwin_8_3.png'>
+<img src='/static/img/blogpost_123/firefoxwin_8_3.webp'>
 
 After installing we show automatically into the tablet interface as a new tile.
 
-<img src='/static/img/blogpost_123/firefoxwin_8_2.png'>
+<img src='/static/img/blogpost_123/firefoxwin_8_2.webp'>
 
 But when you click on the Firefox icon in the tablet interface, it takes you directly to the old Desktop environment and loads the Firefox process as normal.
 I think it'll be possible for integration like IE does into the tablet interface direclty.  Although the solution may have to be 'creative'.
 
-<img src='/static/img/blogpost_123/firefoxwin_8.png'>
+<img src='/static/img/blogpost_123/firefoxwin_8.webp'>
 
 
 Full screen mode in Firefox works the same as previous versions currently.  If you start in full screen it will switch you first to the Desktop mode, and then launch full screen.  Exiting full screen leaves you at the Desktop interface.  
@@ -39,7 +39,7 @@ The problem with this is that even though I set Firefox as my default browser, t
 
 Here is a tile created on the far left from a pinned page in IE of the mozilla.org page:
 
-<img src='/static/img/blogpost_123/firefoxwin_8_4.png'>
+<img src='/static/img/blogpost_123/firefoxwin_8_4.webp'>
 
 
 ---

@@ -128,7 +128,7 @@ The problem is made worse in that all StackExchange sites behave in the same way
 
 On this post entitled [Attribution Required][10] Jeff Atwood explains how the content that their community creates, if used, must be linked without `nofollow`:
 
-> By “directly”, I mean each hyperlink must point directly to our domain, and not use a tinyurl or any other form of obfuscation or redirection. Furthermore, the links must not be nofollowed.
+> By "directly", I mean each hyperlink must point directly to our domain, and not use a tinyurl or any other form of obfuscation or redirection. Furthermore, the links must not be nofollowed.
 
 This stance is good, it protects the content of the well deserved writers of Stackoverflow such as myself.  I am within the top 50 users and hence have spent a lot of my time writing great answers.  But these answers are not 100% of my own creation, they often build upon other people and other answers from other sites.  It's simply wrong that these other sites are not attributed page rank when I link to them.
 
@@ -174,5 +174,5 @@ I would hope that search engines will be powerful enough to not only ignore `nof
 [15]: http://experts-exchange.com
 [acp]: http://stackoverflow.com/questions/2660355/net-4-0-has-a-new-gac-why/2660366#2660366
 
-[img_abuse1]: https://brianbondy.com/static/img/nofollow_abuse/NoFollowAbuse1.png
-[img_abuse2]: https://brianbondy.com/static/img/nofollow_abuse/NoAbuse2.png
+[img_abuse1]: https://brianbondy.com/static/img/nofollow_abuse/NoFollowAbuse1.webp
+[img_abuse2]: https://brianbondy.com/static/img/nofollow_abuse/NoAbuse2.webp

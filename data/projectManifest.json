@@ -1,7 +1,7 @@
 [
   {
     "title": "Brave macOS, Windows, and Linux browser",
-    "image": "static/img/projects/brave.png",
+    "image": "static/img/projects/brave.webp",
     "url": "https://brave.com",
     "website": "https://brave.com",
     "github": "https://github.com/brave/brave-core",
@@ -18,7 +18,7 @@
   },
   {
     "title": "Brave Leo",
-    "image": "static/img/projects/leo.png",
+    "image": "static/img/projects/leo.webp",
     "url": "https://brave.com/leo/",
     "website": "https://brave.com/leo/",
     "github": "https://github.com/brave/brave-core",
@@ -27,7 +27,7 @@
   },
   {
     "title": "IPFS in Brave",
-    "image": "static/img/projects/ipfs.png",
+    "image": "static/img/projects/ipfs.webp",
     "url": "/blog/177/ipfs-support-in-brave",
     "website": "https://brave.com",
     "github": "https://github.com/brave/brave-core",
@@ -36,7 +36,7 @@
   },
   {
     "title": "Link Bubble Browser",
-    "image": "static/img/projects/link-bubble.png",
+    "image": "static/img/projects/link-bubble.webp",
     "url": "https://play.google.com/store/apps/details?id=com.linkbubble.playstore&hl=en",
     "website": "https://play.google.com/store/apps/details?id=com.linkbubble.playstore&hl=en",
     "github": "https://github.com/brave/link-bubble",
@@ -45,7 +45,7 @@
   },
   {
     "title": "brianbondy.com",
-    "image": "static/img/logo/logo.png",
+    "image": "static/img/logo/logo.webp",
     "url": "https://github.com/bbondy/go-brianbondy",
     "github": "https://github.com/bbondy/go-brianbondy",
     "website": "https://www.brianbondy.com",
@@ -53,28 +53,28 @@
   },
   {
     "title": "Brave Ad Block Engine (C++)",
-    "image": "static/img/projects/abp.png",
+    "image": "static/img/projects/abp.webp",
     "url": "https://www.npmjs.com/package/abp-filter-parser",
     "github": "https://github.com/brave/adblock-rust",
     "description": "Adblock Plus filter parsing and matching for lists like EasyList. This library allows users to prevent page elements, such as advertisements, from being downloaded and displayed. It is an implementation of AdBlockPlus' filter rules. This library is in no way affiliated with Adblock Plus. It just parses the same rules as Adblock Plus does.  It does it significantly faster than other adblock implementations."
   },
   {
     "title": "Babel JSM module formatter",
-    "image": "static/img/projects/babel.jpg",
+    "image": "static/img/projects/babel.webp",
     "url": "https://www.npmjs.com/package/babel-jsm-plugin",
     "github": "https://github.com/bbondy/babel-jsm-plugin",
     "description": "Babel plugin for converting ES6 modules into JavaScript code modules (JSM). JavaScript code modules let multiple privileged JavaScript scopes share code. For example, a module could be used by Firefox itself as well as by extensions, in order to avoid code duplication."
   },
   {
     "title": "Simple AWS EC2 wrapper library",
-    "image": "static/img/projects/ec2.jpg",
+    "image": "static/img/projects/ec2.webp",
     "url": "https://www.npmjs.com/package/simple-ec2",
     "github": "https://github.com/bbondy/simple-ec2",
     "description": "Simple AWS SDK wrapper library for starting, stopping, listing, and executing commands on Amazon Elastic Compute Cloud (EC2)instances. EC2 is a central part of Amazon.com's cloud computing platform, Amazon Web Services (AWS). EC2 allows users to rent virtual computers on which to run their own computer applications."
   },
   {
     "title": "Khan Academy app for FirefoxOS",
-    "image": "static/img/projects/ka-fxos.png",
+    "image": "static/img/projects/ka-fxos.webp",
     "url": "https://github.com/bbondy/khan-academy-fxos",
     "github": "https://github.com/bbondy/khan-academy-fxos",
     "description": "Lead and primary developer for the Khan Academy app for Firefox OS. Khan Academy allows you to learn almost anything for free. The Firefox OS app is the best way to view Khan Academy's complete library of over 6,000 videos and articles on a Firefox OS device.",
@@ -82,7 +82,7 @@
   },
   {
     "title": "Code Firefox",
-    "image": "static/img/projects/firefox.png",
+    "image": "static/img/projects/firefox.webp",
     "url": "https://github.com/bbondy/codefirefox",
     "github": "https://github.com/bbondy/codefirefox",
     "description": "Becoming a Mozilla contributor can be intimidating. There's a lot of information to consume, and that information can be dispersed in a variety of different places. This site aim to outline the process of becoming a Mozilla contributor, from start to finish, with gentle, short, consumable 2-10 minute videos.",
@@ -90,21 +90,21 @@
   },
   {
     "title": "JS abstract syntax tree grader",
-    "image": "static/img/projects/js.png",
+    "image": "static/img/projects/js.webp",
     "url": "https://github.com/bbondy/codecheckjs",
     "github": "https://github.com/bbondy/codecheckjs",
     "description": "Check JavaScript code structure against a set of goals in JavaScript. codecheckjs is based on Acorn - a small, fast, JavaScript-based JavaScript parser. Amongst other things, codecheckjs matches a desired template javascript code in an abstract syntax tree against a user created program."
   },
   {
     "title": "Khan Academy app for Windows 8",
-    "image": "static/img/projects/ka-fxos.png",
+    "image": "static/img/projects/ka-fxos.webp",
     "url": "https://github.com/Khan/khan-windows",
     "github": "https://github.com/Khan/khan-windows",
     "description": "Contributed a significant amount of contributions to the Khan Academy Modern UI Windows Store app. Khan Academy allows you to learn almost anything for free.  Our Windows app is the best way to view Khan Academy's complete library of over 6000 videos on your Windows device."
   },
   {
     "title": "Gecko / Firefox",
-    "image": "static/img/projects/firefox.png",
+    "image": "static/img/projects/firefox.webp",
     "url": "https://github.com/mozilla/gecko-dev",
     "github": "https://github.com/mozilla/gecko-dev",
     "website": "https://www.firefox.com/",
@@ -113,25 +113,25 @@
   },
   {
     "title": "ROBOBAK",
-    "image": "static/img/projects/robobak.png",
+    "image": "static/img/projects/robobak.webp",
     "description": "Enterprise level Windows backup software made in C++ which offers remote office branch office (ROBO) backup with features such as deduplication, agentless backup, replication, and more. Offers a WCF HTTP REST based SDK. Was acquired in 2011.",
     "blogPostID": 113
   },
   {
     "title": "Vision Backup",
-    "image": "static/img/projects/vb.jpg",
+    "image": "static/img/projects/vb.webp",
     "description": "Micro business backup of any hard drive, network computer, or FTP/FTPS/SFTP site to another hard drive, FTP/FTPS/SFTP location, CD/DVD/BluRay, or tape drive. SQL Server, Exchange Server, and many other plug-in based applications supported.  Was acquired in 2011.",
     "blogPostID": 113
   },
   {
     "title": "Cryptex",
-    "image": "static/img/projects/cryptex.jpg",
+    "image": "static/img/projects/cryptex.webp",
     "description": "Cryptex was designed to keep your data safe by creating an encrypted vault on your hard drive.  The encrypted drive showed up as a new hard drive which allowed you to drag and dropping files in and out of it. It only used as much space as the files took up.  When it was locked, the drive would disappear from view. Was acquired in 2011.",
     "blogPostID": 113
   },
   {
     "title": "Null FTP",
-    "image": "static/img/projects/nullftp.jpg",
+    "image": "static/img/projects/nullftp.webp",
     "description": "FTP, FTPS (FTP over SSL), SFTP (FTP over SSH), HTTP, WebDAV server and client software. The client and server were 2 distinct products.  I still use it today as my primary FTP client and whenever I need an FTP server. The client and server was acquired along with the other vwsolutions products in 2011."
   },
   {

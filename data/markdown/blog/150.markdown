@@ -1,7 +1,7 @@
 Work on the Metro style enabled desktop browser has progressed steadily and things are looking really good.   
 
 
-<img src="//brianbondy.com/static/img/blogpost_135/windows-8-logo-small.jpg" style="float:left; padding-right:15px; padding-bottom:2px;">
+<img src="//brianbondy.com/static/img/blogpost_135/windows-8-logo-small.webp" style="float:left; padding-right:15px; padding-bottom:2px;">
 
 
 We have a [Q3 goal of delivering a Metro  preview][1].  This preview will include primary browser UI for navigation and tabs, and will be delivered as a combined classic + metro browser.  I believe there is a Q4 goal for a beta release as well.

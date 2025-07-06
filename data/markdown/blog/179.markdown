@@ -33,7 +33,7 @@ Later I learned that the 1st loop would not count either. The previous 1.5 (~11k
 </table>
 
 
-Upon return, I noticed Gary and Sandra Cantrell ([Lazarus Lake](https://en.wikipedia.org/wiki/Lazarus_Lake) of [Barkley Marathons](https://en.wikipedia.org/wiki/Barkley_Marathons) fame) came to watch the race, this was a nice surprise.  I had met them both before at Little Dog Backyard Ultra at their home in Tennessee on the Big’s Backyard Ultra course.  They are celebrities in the ultra running community and so fun to be around.
+Upon return, I noticed Gary and Sandra Cantrell ([Lazarus Lake](https://en.wikipedia.org/wiki/Lazarus_Lake) of [Barkley Marathons](https://en.wikipedia.org/wiki/Barkley_Marathons) fame) came to watch the race, this was a nice surprise.  I had met them both before at Little Dog Backyard Ultra at their home in Tennessee on the Big's Backyard Ultra course.  They are celebrities in the ultra running community and so fun to be around.
 
 <img style='width:90vw' src='/static/img/blogpost_179/laz.jpeg'>
 
@@ -70,8 +70,8 @@ The results can be found here:
 https://my.raceresult.com/202134/#0_B3DC1F
 
 <img style='width:90vw' src='/static/img/blogpost_179/done1.jpeg'>
-<img style='width:90vw' src='/static/img/blogpost_179/done2.jpg'>
-<img style='width:90vw' src='/static/img/blogpost_179/done3.jpg'>
+<img style='width:90vw' src='/static/img/blogpost_179/done2.webp'>
+<img style='width:90vw' src='/static/img/blogpost_179/done3.webp'>
 <img style='width:90vw' src='/static/img/blogpost_179/done4.jpeg'>
 
 On the final lap I couldn't see Chris behind me. I figured I was on the last loop.  I ran into a guy walking a dog that confirmed it a couple kilometers later.
@@ -93,7 +93,7 @@ Special thanks to my crew Sergey Zhukovsky who out of the kindness of his heart 
 
 Special thanks to my trainer Matt Masserant who came for a visit on Saturday and Sunday. It's always a pleasure seeing you in person.
 
-<img style='width:90vw' src='/static/img/blogpost_179/matt.jpg'>
+<img style='width:90vw' src='/static/img/blogpost_179/matt.webp'>
 
 Special thanks to my wife Shannon Bondy for letting me run and train for this several days a week in the morning before work. I did well on this race due to hard training, probably the most training mileage out of anyone there. I don't think I have much of a natural ability for it.  I didn't let up training since my previous failed races, even throughout the winter. 3-4h runs 5-6 days a week.
 

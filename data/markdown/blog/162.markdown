@@ -1,4 +1,4 @@
-<img src='https://brianbondy.com/static/img/blogpost_129/Windows8Logo-2.jpg' height=64>
+<img src='https://brianbondy.com/static/img/blogpost_129/Windows8Logo-2.webp' height=64>
 
 On Friday, Mozilla announced it would not ship its [Modern UI Firefox browser][1] due to low adoption.
 

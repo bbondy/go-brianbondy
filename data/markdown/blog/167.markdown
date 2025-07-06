@@ -1,4 +1,4 @@
-<img src="https://brianbondy.com/static/img/blogpost_164/KA.png" style="float:right; width:130px">Developers at Khan Academy are responsible for shipping new stuff they create to [khanacademy.org](http://khanacademy.org/) as it's ready.
+<img src="https://brianbondy.com/static/img/blogpost_164/KA.webp" style="float:right; width:130px">Developers at Khan Academy are responsible for shipping new stuff they create to [khanacademy.org](http://khanacademy.org/) as it's ready.
 As a whole, the site is deployed several times per day.  Testing deploys of khanacademy.org can take up a lot of time.
 
 We have tons of JavaScript and Python unit tests, but they do not catch various errors that can only happen on the live site, such as Content Security Policy (CSP) errors.
@@ -18,8 +18,8 @@ They do not replace unit tests, and unit tests should be favoured when it's poss
 ## Which frameworks are we using?
 
 <div style="float:right">
-<img src="https://brianbondy.com/static/img/blogpost_167/slimerjs.png" style="width: 100px; padding-bottom: 15px;"><br>
-<img src="https://brianbondy.com/static/img/blogpost_167/casperjs.png" style="width: 100px">
+<img src="https://brianbondy.com/static/img/blogpost_167/slimerjs.webp" style="width: 100px; padding-bottom: 15px;"><br>
+<img src="https://brianbondy.com/static/img/blogpost_167/casperjs.webp" style="width: 100px">
 </div>
 
 We chose to implement the end to end testing with [CasperJS](http://casperjs.org/) powered by the [SlimerJS](http://slimerjs.org/) engine.  Actually we even have one more abstraction on top of that so that tests are very simple and clean to write.
@@ -67,4 +67,4 @@ Tests are run both on the staged website version before it is set as the default
 
 The output of tests looks like this:
 
-<img src="https://brianbondy.com/static/img/blogpost_167/test-output.png" style="width: 90vw">
+<img src="https://brianbondy.com/static/img/blogpost_167/test-output.webp" style="width: 90vw">

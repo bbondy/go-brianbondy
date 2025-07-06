@@ -2,7 +2,7 @@ I just wanted to post a quick follow up to my [Firefox on Windows 8 post][1] on 
 
 As with Firefox and other applications, as soon as you install Thunderbird it shows up as a Tile in the metro interface.
 
-<img src='/static/img/blogpost_124/thunderbird_1.png'>
+<img src='/static/img/blogpost_124/thunderbird_1.webp'>
 
 Clicking on it exits the tablet metro interface and goes into the old interface and launches Thunderbird.
 
@@ -13,7 +13,7 @@ One important thing is that if you click on a `mailto:` link in Internet Explore
 
 Here's a screenshot of that error message:
 
-<img src='/static/img/blogpost_124/thunderbird_2.png'>
+<img src='/static/img/blogpost_124/thunderbird_2.webp'>
 
 I assume once this registration problem is fixed it'll launch the Desktop mode and then launch the email client.
 It would be nice to have a metro interface for Thunderbird as well.

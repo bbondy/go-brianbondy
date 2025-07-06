@@ -6,7 +6,7 @@ You can navigate the web, create tabs, bookmark pages, build history, retain cac
 I don't consider that 2012 Q2 goal met yet, we still have some open design questions, and a ton of platform integration work to do.
 
 <figure style='text-align:left; padding:10px; margin-left:0px'>
-<img src='/static/img/blogpost_135/metro-start.jpg' style='display:block'>
+<img src='/static/img/blogpost_135/metro-start.webp' style='display:block'>
 <figcaption style='display:block;'>
 Early tile design from [Bug 735008][735008] - design still in progress
 </figcaption>
@@ -19,9 +19,9 @@ We haven't seen the same types of startup performance problems we've had on Andr
 
 
 <figure style='text-align:center; padding:10px'>
-<a href='/static/img/blogpost_135/metro-sidebar.jpg'>
-<img src='/static/img/blogpost_135/metro-sidebar-small.jpg'  style='padding-right:10px;'></a>
-<a href='/static/img/blogpost_135/metro-no-sidebar.jpg'><img src='/static/img/blogpost_135/metro-no-sidebar-small.jpg' style='padding-left:10px;'></a>
+<a href='/static/img/blogpost_135/metro-sidebar.webp'>
+<img src='/static/img/blogpost_135/metro-sidebar-small.webp'  style='padding-right:10px;'></a>
+<a href='/static/img/blogpost_135/metro-no-sidebar.webp'><img src='/static/img/blogpost_135/metro-no-sidebar-small.webp' style='padding-left:10px;'></a>
 <figcaption style='display:block;'>
 Firefox Metro screenshots - UI will be changing, Metro specific UI guidelines and Mozilla UX work feedback has not begun yet.
 </figcaption>
@@ -39,7 +39,7 @@ Jim put together an installer this week as well so that UX can get hands on with
 
 ## Platform integration
 
-<img src='/static/img/blogpost_135/metro-charms.png' style='float:right; padding-left:20px; padding-bottom:2px;'>
+<img src='/static/img/blogpost_135/metro-charms.webp' style='float:right; padding-left:20px; padding-bottom:2px;'>
 
 As of this week, we have a lot of Metro platform integration working.  
 
@@ -55,15 +55,15 @@ Once you select the Share Charm it will list the applications you can share to, 
 
 
 <figure style='text-align:center; padding:10px'>
-<a href='/static/img/blogpost_135/screenshot-search-charm.jpg'><img src='/static/img/blogpost_135/screenshot-search-charm-small.jpg' style='padding-right:10px;'></a>
-<a href='/static/img/blogpost_135/screenshot-share.jpg'><img src='/static/img/blogpost_135/screenshot-share-small.jpg' style='padding-left:10px;'></a>
+<a href='/static/img/blogpost_135/screenshot-search-charm.webp'><img src='/static/img/blogpost_135/screenshot-search-charm-small.webp' style='padding-right:10px;'></a>
+<a href='/static/img/blogpost_135/screenshot-share.webp'><img src='/static/img/blogpost_135/screenshot-share-small.webp' style='padding-left:10px;'></a>
 <figcaption style='display:block;'>
 Searching for the text "Firefox Windows 8" and Sharing while playing BrowserQuest</figcaption>
 </figure>
 
 <figure style='text-align:center; padding:10px'>
-<a href='/static/img/blogpost_135/screenshot-filepicker.jpg'>
-<img src='/static/img/blogpost_135/screenshot-filepicker-small.jpg'></a>
+<a href='/static/img/blogpost_135/screenshot-filepicker.webp'>
+<img src='/static/img/blogpost_135/screenshot-filepicker-small.webp'></a>
 <figcaption style='display:block;'>
 Metro file picker after clicking on an input file form control</figcaption>
 </figure>
@@ -73,7 +73,7 @@ Metro file picker after clicking on an input file form control</figcaption>
 
 ## Why Windows 8 Metro support is really important
 
-<img src='/static/img/blogpost_135/windows-8-logo-small.jpg' style='float:left; padding-right:15px; padding-bottom:2px;'>
+<img src='/static/img/blogpost_135/windows-8-logo-small.webp' style='float:left; padding-right:15px; padding-bottom:2px;'>
 
 If a browser is awesome on Metro, the only way to use this awesome browser in Metro is for it to become the default.
 If a browser is default on Metro, it will also be default on the Desktop.

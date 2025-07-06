@@ -11,7 +11,7 @@ This year we have a very aggressive goal, for all of us to look inside our teams
 
 ---
 
-<img src='/static/img/blogpost_118/firefox-logo.png' width=128 style="float:right; margin-left: 15px">
+<img src='/static/img/blogpost_118/firefox-logo.webp' width=128 style="float:right; margin-left: 15px">
 
 ## What is Code Firefox?
 
@@ -28,7 +28,7 @@ People learn differently. Providing different ways to consume information is cru
 One prime example of Code Firefox's usefulness is of a new contributor who joined last month, and actively uses Code Firefox.
 He has already [submitted 18 patches][1].
 
-<img src='/static/img/blogpost_158/anuj.jpg' width=64 height=64 style="float:left; margin-right: 15px">
+<img src='/static/img/blogpost_158/anuj.webp' width=64 height=64 style="float:left; margin-right: 15px">
 
 In a personal email <cite>Anuj Agarwal (Student at Vellore Institute of Technology)</cite> writes:
 <br>
@@ -41,7 +41,7 @@ Just for fun, [here is the patch I got reviewed today!][anujpatch]  And it was m
 ## Code Firefox statistics
 
 
-<a title='Visits per region' href='/static/img/blogpost_158/stats.png'><img src='/static/img/blogpost_158/stats.png' width=300 style="float:right; margin-left: 15px"></a>
+<a title='Visits per region' href='/static/img/blogpost_158/stats.webp'><img src='/static/img/blogpost_158/stats.webp' width=300 style="float:right; margin-left: 15px"></a>
 
 The site has not been promoted yet, but it already has:
 
@@ -124,7 +124,7 @@ To me, Code Firefox's value lies in the clear, forthright instruction provided, 
 - <cite>Lukas Blakk (Senior Release Manager)</cite>:
 <br>
 <q lang="en-us">
-Getting into Open Source contribution is not always a clear path.  In my experience, it took me 4 different attempts (MDN, Sumo, QA, AMO) before I found my path for a deeper dive and got 'hooked' on contributing to Mozilla.  These videos and the technical mentorship they provide is already proving to be a valuable resource for engaging new coders and that is an area that can be hardest for a newcomer to break into alone since we are now such a legacy project.  Fortunately Code Firefox is also a budding online community and that ensures no one is ever truly alone as they move up in their learning. Having someone (or several people) getting to focus more time on this particular pathway will ensure more robust community surrounds our software products and makes what we give back a product that is a reflection of that wider community. Win-win.</q>
+Getting into Open Source contribution is not always a clear path.  In my experience, it took me 4 different attempts (MDN, Sumo, QA, AMO) before I found my path for a deeper dive and got 'hooked' on contributing to Mozilla.  These videos and the technical mentorship they provide is already proving to be a valuable resource for engaging new coders and that is an area that can be hardest for a newcomer to break into alone since we are now such a legacy project.  Fortunately Code Firefox is also a budding online community and that ensures no one is ever truly alone as they move up in their learning.Having someone (or several people) getting to focus more time on this particular pathway will ensure more robust community surrounds our software products and makes what we give back a product that is a reflection of that wider community. Win-win.</q>
 
 - <cite>Jared Wein (Firefox Engineer)</cite>:
 <br>
@@ -196,7 +196,7 @@ Superb framework to create code tests by @brianbondy https://github.com/bbondy</
 - <cite>[Mozilla Pakistan](https://twitter.com/MozPk/status/411905711031857153)</cite>:
 <br>
 <q lang="en-us">
-@codefirefox.com now supports accounts via @MozillaPersona You can track which videos you’ve watched too - pic.twitter.com/I4EizTAzbk</q>
+@codefirefox.com now supports accounts via @MozillaPersona You can track which videos you've watched too - pic.twitter.com/I4EizTAzbk</q>
 
 - <cite>[Mozilla India](https://twitter.com/MozillaIN/status/404913422271537152)</cite>:
 <br>

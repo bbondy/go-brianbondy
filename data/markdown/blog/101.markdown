@@ -58,11 +58,11 @@ I loaded that resource at runtime with the following code into a string variable
 
 Here are some screenshots of the WP7 app that I made:
 
-<img src='https://brianbondy.com/static/img/blogpost_101/piMemorize1.png' width='478' height='870'>
+<img src='https://brianbondy.com/static/img/blogpost_101/piMemorize1.webp' width='478' height='870'>
 
-<img src='https://brianbondy.com/static/img/blogpost_101/piMemorize2.png' width='478' height='870'>
+<img src='https://brianbondy.com/static/img/blogpost_101/piMemorize2.webp' width='478' height='870'>
 
-<img src='https://brianbondy.com/static/img/blogpost_101/piMemorize3.png' width='478' height='870'>
+<img src='https://brianbondy.com/static/img/blogpost_101/piMemorize3.webp' width='478' height='870'>
 
 [1]: https://brianbondy.com/math/pi
 [2]: http://create.msdn.com/en-us/home/getting_started

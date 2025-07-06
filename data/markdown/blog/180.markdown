@@ -47,10 +47,10 @@ A couple of runners behind me got a photo of the bird. Thank you Brandi and Jura
 <tr><td style="vertical-align: top">
 <img src="/static/img/blogpost_180/bird1.jpeg" style="width:30vw">
 </td><td style="vertical-align: top">
-<img src="/static/img/blogpost_180/bird2.png" style="width:30vw">
+<img src="/static/img/blogpost_180/bird2.webp" style="width:30vw">
 </td></tr>
 <tr><td style="vertical-align: top">
-<img src="/static/img/blogpost_180/bird3.jpg" style="width:30vw">
+<img src="/static/img/blogpost_180/bird3.webp" style="width:30vw">
 </td></tr>
 </table>
 

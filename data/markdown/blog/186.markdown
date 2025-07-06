@@ -4,7 +4,7 @@ He asked the room full of my classmates: *"Why does the man go to church?"*
 
 A flurry of hands went up and one after the other, the students answered.
 
-<img style='width:90vw' src='/static/img/blogpost_186/class.jpg'>
+<img style='width:90vw' src='/static/img/blogpost_186/class.webp'>
 
 **Student:** *"To be closer to god!"*
 

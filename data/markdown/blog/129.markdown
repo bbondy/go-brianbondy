@@ -1,4 +1,4 @@
-<img src='/static/img/blogpost_129/Windows8Logo-2.jpg'>
+<img src='/static/img/blogpost_129/Windows8Logo-2.webp'>
 
 As of Monday of this week, development work began on Firefox for Metro.
 
@@ -14,7 +14,7 @@ It turns out that on Windows 8 there are 3 types of applications:
 3. Metro style enabled desktop browsers
 
 <div style='float:left'>
-<img src='/static/img/blogpost_118/firefox-logo.png' style='float:left; padding:10px;'>
+<img src='/static/img/blogpost_118/firefox-logo.webp' style='float:left; padding:10px;'>
 
 Firefox will fall into the third category, meaning you can run Firefox as a desktop application, and you can run it as a Metro application.
 Supporting the Metro side of things will require a lot of new code, so this is a very large project.

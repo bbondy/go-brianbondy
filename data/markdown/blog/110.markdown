@@ -142,9 +142,9 @@ Although both the built-in Chrome tool and IE Developer Toolbar are great tools,
 [3]: http://www.microsoft.com/downloads/en/details.aspx?FamilyID=95e06cbe-4940-4218-b75d-b8856fced535
 [4]: http://www.google.com/chrome/intl/en/landing_chrome.html?hl=en
 
-[img_1]: https://brianbondy.com/static/img/blogpost_110/profiler.png
-[img_2]: https://brianbondy.com/static/img/blogpost_110/debug.png
-[img_3]: https://brianbondy.com/static/img/blogpost_110/javascript.png
-[img_4]: https://brianbondy.com/static/img/blogpost_110/edithtml.png
-[img_5]: https://brianbondy.com/static/img/blogpost_110/xml.png
-[img_6]: https://brianbondy.com/static/img/blogpost_110/trackchanges.png
+[img_1]: https://brianbondy.com/static/img/blogpost_110/profiler.webp
+[img_2]: https://brianbondy.com/static/img/blogpost_110/debug.webp
+[img_3]: https://brianbondy.com/static/img/blogpost_110/javascript.webp
+[img_4]: https://brianbondy.com/static/img/blogpost_110/edithtml.webp
+[img_5]: https://brianbondy.com/static/img/blogpost_110/xml.webp
+[img_6]: https://brianbondy.com/static/img/blogpost_110/trackchanges.webp

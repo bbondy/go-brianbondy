@@ -65,7 +65,7 @@ I am doing well on this loop until the 6km spot. Having tripped many times aroun
 I trip on a rock which makes my leg spasm and I stumble hard into the bushes. My abs bulge and pulsate in spasms. I wonder if this is it. 
 I've injured myself. I can't get the stomach spasms under control. I take a minute and try to get my stomach to stop spasming. It finally does. I'm tired but I run. I finish this yard in 56 minutes. 
 
-<img style='width:90vw' src='/static/img/blogpost_178/start-finish.png'>
+<img style='width:90vw' src='/static/img/blogpost_178/start-finish.webp'>
 
 ## Strength
 
@@ -76,7 +76,7 @@ As time progresses I notice I'm staying consistent and others are getting slower
 Kamil traveled with me to Tennessee from Ontario Canada to crew me and is doing a great job. I don't need ibuprofen, gravol or anything else other than salt pills.
 I know I can win this, by the 9th loop, I think I can at least, my confidence is still high.
 
-<img style='width:90vw' src='/static/img/blogpost_178/kamil-setup.png'>
+<img style='width:90vw' src='/static/img/blogpost_178/kamil-setup.webp'>
 
 ## Naive optimism
 
@@ -92,7 +92,7 @@ We arrive on site the day before the race and set up.  We walk the trail so that
 I notice the famous V-tree that you run through and take a picture. I feel better knowing what the course will be like.
 
 
-<img style='width:90vw' src='/static/img/blogpost_178/v-tree.png'>
+<img style='width:90vw' src='/static/img/blogpost_178/v-tree.webp'>
 
 I have to say thank you to Kamil for flying out to crew me. It was a huge ask and he stepped up. 
 I'm also forever grateful to my wife for letting me travel during these uncertain times to TN, and holding down the fort. 
@@ -100,7 +100,7 @@ It was a dream of mine to run the Big's backyard course and to meet Lazarus Lake
 Thank you to my family for showing their support and for the words of encouragement. I had a particularly nice message from my mom the morning of the run that kept me strong - "Dad will be running beside you, just as you do for Ronnie".
 I have to say thank you to Casey from weUltra for helping me get into this race and to the weUltra group for all the support and encouragement. My trainer Matt for the training plan and encouragement.
 
-<img style='width:90vw' src='/static/img/blogpost_178/big-little.png'>
+<img style='width:90vw' src='/static/img/blogpost_178/big-little.webp'>
 
 ## Final thoughts
 
@@ -114,4 +114,4 @@ I feel like I figured out my nutrition well this time, the puking on the last lo
 I decide to keep trying. I need to step up my fitness even more. I realize I'm getting older, but I trust my best days at this are still ahead.
 This isn't easy, a good result or a win is not likely. Failure is just about inevitable, but that's why I love it.
 
-<img style='width:90vw' src='/static/img/blogpost_178/laz-brian.png'>
+<img style='width:90vw' src='/static/img/blogpost_178/laz-brian.webp'>

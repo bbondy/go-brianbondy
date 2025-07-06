@@ -2,7 +2,7 @@
 
 ## General Information
 
-<img src="/static/img/family2.jpg" class="family-photo" height="250" width="375">
+<img src="/static/img/family2.webp" class="family-photo" height="250" width="375">
 
 I consider family to be my "raison d'être". I'm blessed with a beautiful wife and three sons: Link, Ronnie, and Asher.
 
@@ -21,7 +21,7 @@ For getting in touch with me, please visit my [contact page](/contact).
 
 ## Facts about me
 
-<img src="/static/img/brian-ronnie.jpg" width="219" height="476" style="float:right; margin-left:30px; border: 1px solid black">
+<img src="/static/img/brian-ronnie.webp" width="219" height="476" style="float:right; margin-left:30px; border: 1px solid black">
 
 - I'm an avid coffee drinker, but often spill it on myself
 - I strive to stay active, usually working out every morning

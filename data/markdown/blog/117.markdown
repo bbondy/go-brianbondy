@@ -1,4 +1,4 @@
-<img src='https://brianbondy.com/static/img/blogpost_117/stackexchange.png' width='196' height='52'>
+<img src='https://brianbondy.com/static/img/blogpost_117/stackexchange.webp' width='196' height='52'>
 
 
 I thought it would be interesting to calculate the average age of users on each StackExchange site, and even more interesting to see each tag within those sites.

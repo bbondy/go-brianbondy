@@ -14,7 +14,7 @@ On October 15th at 5am I took part in a very special race.  Here's a quick summa
 - Participants for each country are qualified by winning other races called silver ticket races (5 of 15 spots) and the remaining are the highest number of yards in the country for the qualifying year (10 of 15 spots).
 - If you're not there to start the next hour in time, even by a second, you're out.
 
-<img style='width:90vw' src='/static/img/blogpost_181/1.png'>
+<img style='width:90vw' src='/static/img/blogpost_181/1.webp'>
 
 # Qualifying for the team
 
@@ -312,7 +312,7 @@ With a backyard ultra you don't have that opportunity. You have a few minutes to
 
 Thanks to my wife, family, and friends for being so supportive during training and for letting me get away for several days. I try to keep my running segmented into its own bucket but I know it leaks outside of that and she's always supportive.
 
-<img src="/static/img/blogpost_181/30.png" style="width:90vw">
+<img src="/static/img/blogpost_181/30.webp" style="width:90vw">
 
 Thanks to my crew Matt Masserant, he was a true professional out there. Being there for me EVERY hour. I highly [recommend](https://www.facebook.com/matt.masserant.50) him to anyone looking for a coach.
 

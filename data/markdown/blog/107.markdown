@@ -96,4 +96,4 @@ Likewise across all sites users are 2x more likely to have their LinkedIn info v
 [f12]: https://brianbondy.com/stackexchange-facebook/cooking
 [f13]: https://brianbondy.com/stackexchange-facebook/gaming
 
-[img_1]: https://brianbondy.com/static/img/blogpost_107/socialIcons.png
+[img_1]: https://brianbondy.com/static/img/blogpost_107/socialIcons.webp

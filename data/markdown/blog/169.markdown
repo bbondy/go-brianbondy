@@ -1,9 +1,9 @@
 I'm happy to announce that the [Khan Academy Firefox OS app](https://marketplace.firefox.com/app/khan-academy) is now available in the Firefox Marketplace!
 
-<img src="https://brianbondy.com/static/img/blogpost_169/fox.png#2" style="width:90vw">
+<img src="https://brianbondy.com/static/img/blogpost_169/fox.webp#2" style="width:90vw">
 
-Khan Academy’s mission is to provide a free world-class education for anyone anywhere.
-The goal of the Firefox OS app is to help with the “anyone anywhere” part of the KA mission.
+Khan Academy's mission is to provide a free world-class education for anyone anywhere.
+The goal of the Firefox OS app is to help with the "anyone anywhere" part of the KA mission.
 
 
 ## Why?
@@ -17,12 +17,12 @@ What's that.... you say you want another use case? Well OK, here goes: A parent 
 
 ## Screenshots!
 
-<img src="https://brianbondy.com/static/img/blogpost_169/1.png" style="border: 1px solid #999; margin-right: 10px; margin-bottom: 10px; width: 175px">
-<img src="https://brianbondy.com/static/img/blogpost_169/2.png" style="border: 1px solid #999; margin-right: 10px;margin-bottom: 10px; width: 175px">
-<img src="https://brianbondy.com/static/img/blogpost_169/4.png" style="border: 1px solid #999; margin-right: 10px;margin-bottom: 10px; width: 175px">
-<img src="https://brianbondy.com/static/img/blogpost_169/5.png" style="border: 1px solid #999; margin-right: 10px;margin-bottom: 10px; width: 175px">
-<img src="https://brianbondy.com/static/img/blogpost_169/6.png" style="border: 1px solid #999; margin-right: 10px;margin-bottom: 10px; width: 175px">
-<img src="https://brianbondy.com/static/img/blogpost_169/3.png" style="border: 1px solid #999; margin-right: 10px;margin-bottom: 10px; height: 175px">
+<img src="https://brianbondy.com/static/img/blogpost_169/1.webp" style="border: 1px solid #999; margin-right: 10px; margin-bottom: 10px; width: 175px">
+<img src="https://brianbondy.com/static/img/blogpost_169/2.webp" style="border: 1px solid #999; margin-right: 10px;margin-bottom: 10px; width: 175px">
+<img src="https://brianbondy.com/static/img/blogpost_169/4.webp" style="border: 1px solid #999; margin-right: 10px;margin-bottom: 10px; width: 175px">
+<img src="https://brianbondy.com/static/img/blogpost_169/5.webp" style="border: 1px solid #999; margin-right: 10px;margin-bottom: 10px; width: 175px">
+<img src="https://brianbondy.com/static/img/blogpost_169/6.webp" style="border: 1px solid #999; margin-right: 10px;margin-bottom: 10px; width: 175px">
+<img src="https://brianbondy.com/static/img/blogpost_169/3.webp" style="border: 1px solid #999; margin-right: 10px;margin-bottom: 10px; height: 175px">
 
 ## App features
 

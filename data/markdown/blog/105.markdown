@@ -52,4 +52,4 @@ You can view the lists here:
 [12]: https://brianbondy.com/stackexchange-twitter/cooking
 [13]: https://brianbondy.com/stackexchange-twitter/gaming
 
-[img1]: https://brianbondy.com/static/img/blogpost_105/twitterSEScreenshot.png
+[img1]: https://brianbondy.com/static/img/blogpost_105/twitterSEScreenshot.webp

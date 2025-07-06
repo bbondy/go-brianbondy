@@ -2,11 +2,11 @@ Believe it or not the Windows 1.0 taskbar looked very similar to the Windows 7 t
 
 ## indows 1.0:
 
-<img src='https://brianbondy.com/static/img/blogpost_111/Windows1Taskbar.png' width='480' height='263'>
+<img src='https://brianbondy.com/static/img/blogpost_111/Windows1Taskbar.webp' width='480' height='263'>
 
 ## Windows 7:
 
-<img src='https://brianbondy.com/static/img/blogpost_111/Windows7Taskbar.png' width='480' height='300'>
+<img src='https://brianbondy.com/static/img/blogpost_111/Windows7Taskbar.webp' width='480' height='300'>
 
 The [Windows 7 taskbar is pretty awesome][15].  And it has some great functionality available to developers who wish to take advantage of it.
 
@@ -16,24 +16,24 @@ The [Windows 7 taskbar is pretty awesome][15].  And it has some great functional
 
 **1) Application progress in the taskbar:** Progress for anything with visual displays of errors and warnings.
 
-<img src='https://brianbondy.com/static/img/blogpost_111/TaskbarProgressAndError.png' width='180' height='67'>
+<img src='https://brianbondy.com/static/img/blogpost_111/TaskbarProgressAndError.webp' width='180' height='67'>
 
 
 **2) Overlay icons:** Small icons within your icon for any type of user notification (below shows the online status as an overlay)
 
-<img src='https://brianbondy.com/static/img/blogpost_111/Windows7TaskbarOverlayImages.png' width='97' height='50'>
+<img src='https://brianbondy.com/static/img/blogpost_111/Windows7TaskbarOverlayImages.webp' width='97' height='50'>
 
 **3) Custom thumbnail preview groupings:** Thumbnail previews across processes or within a single process with tabs
 
-<img src='https://brianbondy.com/static/img/blogpost_111/TaskbarGroupings.png' width='480' height='147'>
+<img src='https://brianbondy.com/static/img/blogpost_111/TaskbarGroupings.webp' width='480' height='147'>
 
 **4) Taskbar action buttons (Thumbnail toolbars):** Buttons inside the taskbar icon's thumbnail preview
 
-<img src='https://brianbondy.com/static/img/blogpost_111/Windows7ThumbnailPreviews.png' width='298' height='249'>
+<img src='https://brianbondy.com/static/img/blogpost_111/Windows7ThumbnailPreviews.webp' width='298' height='249'>
 
 **5) Jump lists:** Easily create shortcuts to different startup types and other custom actions.
 
-<img src='https://brianbondy.com/static/img/blogpost_111/Windows7JumpLists.png' width='370' height='509'>
+<img src='https://brianbondy.com/static/img/blogpost_111/Windows7JumpLists.webp' width='370' height='509'>
 
 ---
 

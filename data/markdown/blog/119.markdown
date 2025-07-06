@@ -1,4 +1,4 @@
-<img src='/static/img/blogpost_119/browser_icons.png'>
+<img src='/static/img/blogpost_119/browser_icons.webp'>
 
 This article will cover the following topics:
 
@@ -37,7 +37,7 @@ A typical HTTP response looks something like this:
     ...content...
 
 
-<img src='/static/img/blogpost_119/nopersistent.png' style='float:right;padding-left:10px;padding-bottom:10px;padding-top:10px;'>
+<img src='/static/img/blogpost_119/nopersistent.webp' style='float:right;padding-left:10px;padding-bottom:10px;padding-top:10px;'>
 
 On a single socket, a single request is sent out, and then a single response is retrieved.
 
@@ -52,7 +52,7 @@ Mine was initially defaulted to 15.
 
 ---
 
-<img src='/static/img/blogpost_119/nopipelining.png' style='float:right;padding-left:10px;padding-bottom:10px;padding-top:10px;'>
+<img src='/static/img/blogpost_119/nopipelining.webp' style='float:right;padding-left:10px;padding-bottom:10px;padding-top:10px;'>
 
 Several requests to a single server are very typical.  For example an HTML file can have several referenced images.
 
@@ -69,7 +69,7 @@ The default is to use a persistent connection, but the server is not forced to d
 
 ## What is HTTP pipelining?
 
-<img src='/static/img/blogpost_119/pipelining6requests.png' style='float:right;padding-left:10px;padding-bottom:10px;'>
+<img src='/static/img/blogpost_119/pipelining6requests.webp' style='float:right;padding-left:10px;padding-bottom:10px;'>
 
 
 HTTP pipelining is a feature of HTTP 1.1 persistent connections.

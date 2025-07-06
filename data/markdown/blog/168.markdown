@@ -5,7 +5,7 @@ The first environment we added was HTML/CSS which was [announced here](http://cs
 
 ## SQL on Khan Academy
 
-<img src="https://brianbondy.com/static/img/blogpost_168/sql.png" style="float:right; width:130px">
+<img src="https://brianbondy.com/static/img/blogpost_168/sql.webp" style="float:right; width:130px">
 We recently also experimented with the ability to teach SQL on Khan Academy.  This wasn't a near term priority for us, so we used our [hack week](http://hackweek.khanacademy.org/) as an opportunity to bring an SQL environment to Khan Academy.  
 
 You can [try out the SQL environment here](https://www.khanacademy.org/computer-programming/hack-week-projects-database/6421938156339200).
@@ -22,7 +22,7 @@ All of these technologies I just mentioned, other than SQLite which is sponsored
 
 The environment looks like this, the entire code for creating, inserting, updating, and querying a database occur in a single editor. Behind the scenes, we re-create the entire state of the database and result sets on each code edit.  Things run smoothly in the browser and you don't notice that.
 
-<img src="https://brianbondy.com/static/img/blogpost_168/sql-env.png" style="width:700px">
+<img src="https://brianbondy.com/static/img/blogpost_168/sql-env.webp" style="width:700px">
 
 
 Unlike many online SQL tutorials, this environment is entirely client side.  It has no limitations on what you can do, and if we wanted, we could even let you export the SQL databases you create.
@@ -31,5 +31,5 @@ One of the other main highlights is that you can modify the `inserts` in the edi
 
 ## Hour of Code
 
-Unlike the HTML/CSS work, we don’t have a huge number of tutorials created, but we do have some videos, coding talk throughs, challenges and a project setup in a single tutorial which we’ll be using for one of our [hour of code](https://www.khanacademy.org/hourofcode)
+Unlike the HTML/CSS work, we don't have a huge number of tutorials created, but we do have some videos, coding talk throughs, challenges and a project setup in a single tutorial which we'll be using for one of our [hour of code](https://www.khanacademy.org/hourofcode)
  offerings: [Hour of Databases](https://www.khanacademy.org/computing/hour-of-code/hour-of-sql/v/welcome-to-sql).

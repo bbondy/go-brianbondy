@@ -1,4 +1,4 @@
-<img src='/static/img/blogpost_118/firefox-logo.png' width=110 style="float:right; margin-left: 15px">
+<img src='/static/img/blogpost_118/firefox-logo.webp' width=110 style="float:right; margin-left: 15px">
 I made one of the hardest decisions of my life, I'll be leaving [Mozilla](http://www.mozilla.org), a company that I thought I'd be at forever.  Mozilla has amazing people and culture, and is easily the best job I've ever had.
 
 I plan to remain a contributor, both on the [Code Firefox](http://www.codefirefox.com) site, and on Firefox Desktop itself.
@@ -7,7 +7,7 @@ I plan to remain a contributor, both on the [Code Firefox](http://www.codefirefo
 
 ---
 
-<img src='/static/img/blogpost_160/ka.png' width=110 style="float:left; margin-right: 15px; margin-bottom: 10px;">
+<img src='/static/img/blogpost_160/ka.webp' width=110 style="float:left; margin-right: 15px; margin-bottom: 10px;">
 
 
 I'll be joining [Khan Academy](http://khanacademy.org), a like minded, mission oriented, open and non-profit company.

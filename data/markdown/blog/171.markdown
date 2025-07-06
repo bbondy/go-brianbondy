@@ -1,4 +1,4 @@
-<img src="//brianbondy.com/static/img/blogpost_171/linkbubble.png" style="float:right; margin-left: 40px; margin-bottom: 5px; width:250px">
+<img src="//brianbondy.com/static/img/blogpost_171/linkbubble.webp" style="float:right; margin-left: 40px; margin-bottom: 5px; width:250px">
 My company and I are excited to announce that the Android based Link Bubble web browser has gone fully free.
 
 Link Bubble makes the Android mobile web more efficient. When you click on a link in any app, Link Bubble loads that webpage in the background and presents it in a floating bubble, leaving you free to continue using your current app.

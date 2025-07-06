@@ -1,6 +1,6 @@
-<img src='/static/img/blogpost_118/mozilla-logo.png' style='float:right;padding-right:10px;'>
+<img src='/static/img/blogpost_118/mozilla-logo.webp' style='float:right;padding-right:10px;'>
 
-On July 6th, I will be going through a major change in my life: I’ll be leaving the company I co-founded and worked at for nearly a decade, and will be starting at Mozilla as a contractor.
+On July 6th, I will be going through a major change in my life: I'll be leaving the company I co-founded and worked at for nearly a decade, and will be starting at Mozilla as a contractor.
 
 I'm confident that the company I co-founded will continue to prosper under its new parent company, and I will be excited to hear about the company's success over time.
 
@@ -10,11 +10,11 @@ A few months ago, I was approached by a Mozilla technical recruiter and after ca
 
 Several months later, reading [John Resig][3]'s (creator of jQuery) advice, I reconsidered and took the job.
 
-> It’s been an incredible experience working with everyone at Mozilla.
+> It's been an incredible experience working with everyone at Mozilla.
 > The company is easily one of the most developer-friendly organizations I can imagine, with some of the smartest coders in the world.
-> Mozilla is hiring across the board – I strongly encourage you to apply if you’re looking for one of the best jobs you’ve ever had.
+> Mozilla is hiring across the board – I strongly encourage you to apply if you're looking for one of the best jobs you've ever had.
 
-<img src='/static/img/blogpost_118/firefox-logo.png' style='float:left;padding-right:20px;'>
+<img src='/static/img/blogpost_118/firefox-logo.webp' style='float:left;padding-right:20px;'>
 
 I'll be working as a contractor at Mozilla with the title of Platform Engineer.  I'll be working on Firefox and Core components which includes working with XPCOM, XUL, XBL, JavaScript, CSS, Python, and C++.  I feel very privileged to be working on such an exciting project.
 

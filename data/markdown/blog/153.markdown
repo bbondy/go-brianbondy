@@ -1,7 +1,7 @@
 As per this [Future of Firefox announcement][1], we have a work-in-progress, Metro Firefox preview!
 
 <figure style="text-align:left; padding:0px; margin-left:0px">
-<img src="//brianbondy.com/static/img/blogpost_153/metropreview-start.jpg" style="display:block; width: 90vw">
+<img src="//brianbondy.com/static/img/blogpost_153/metropreview-start.webp" style="display:block; width: 90vw">
 <figcaption style="display:block;">
 </figcaption>
 </figure>
@@ -9,7 +9,7 @@ As per this [Future of Firefox announcement][1], we have a work-in-progress, Met
 This preview will give you a glimpse of what Firefox on Metro will be like, but it is not meant to be complete.  Several incomplete features will exist, which is normal at this point in development.
 
 <figure style="text-align:left; padding:0px; margin-left:0px">
-<a href="//brianbondy.com/static/img/blogpost_153/metro-screenshot.jpg"><img src="//brianbondy.com/static/img/blogpost_153/metro-screenshot-small.jpg" style="display:block; width: 90vw"></a>
+<a href="//brianbondy.com/static/img/blogpost_153/metro-screenshot.webp"><img src="//brianbondy.com/static/img/blogpost_153/metro-screenshot-small.webp" style="display:block; width: 90vw"></a>
 <figcaption style="display:block;">
 </figcaption>
 </figure>
@@ -21,7 +21,7 @@ The preview is meant to be installed on Windows 8 RTM and later.  It is built wi
 Builds are available in the [Firefox Windows 8 wiki][3].  Please feel free to file [feature requests and post bug reports][2].  
 
 <figure style="text-align:left; padding:0px; margin-left:0px">
-<a href="//brianbondy.com/static/img/blogpost_153/metro-screenshot2.jpg"><img src="//brianbondy.com/static/img/blogpost_153/metro-screenshot2-small.jpg" style="display:block; width: 90vw"></a>
+<a href="//brianbondy.com/static/img/blogpost_153/metro-screenshot2.webp"><img src="//brianbondy.com/static/img/blogpost_153/metro-screenshot2-small.webp" style="display:block; width: 90vw"></a>
 <figcaption style="display:block;">
 </figcaption>
 </figure>
@@ -30,12 +30,12 @@ Builds are available in the [Firefox Windows 8 wiki][3].  Please feel free to fi
 
 ## The Metro Firefox Preview has nightly updates enabled
 
-<img src="//brianbondy.com/static/img/blogpost_135/windows-8-logo-small.jpg" style="float:left; padding-right:15px; padding-bottom:2px;">
+<img src="//brianbondy.com/static/img/blogpost_135/windows-8-logo-small.webp" style="float:left; padding-right:15px; padding-bottom:2px;">
 
 
 The Firefox Metro preview will have updates enabled on its own channel. That means that from here on out, you can keep up to date on what we're up to with the Metro browser by actually trying it.  
 
-<img src="//brianbondy.com/static/img/blogpost_153/softwareUpdates.png" style="float:right; padding-left:10px; padding-bottom:2px;">
+<img src="//brianbondy.com/static/img/blogpost_153/softwareUpdates.webp" style="float:right; padding-left:10px; padding-bottom:2px;">
 
 Desktop Firefox is responsible for applying the updates for both the Desktop and Metro front ends currently.  You may encounter an update error where updates will fail to apply if both of your Desktop and Metro browsers are open at the same time.    This will be resolved at some point in a future update.
 
@@ -82,7 +82,7 @@ This preview will also include the following highlights:
 
 Metro browsers can only be used in Windows 8 if the browser is set as your default.  So if you want to keep this preview installed and get updates, you'll need to keep it as the default.
 
-<img src="//brianbondy.com/static/img/blogpost_153/Default.jpg" style="float:left; padding-right:15px; padding-bottom:10px;">
+<img src="//brianbondy.com/static/img/blogpost_153/Default.webp" style="float:left; padding-right:15px; padding-bottom:10px;">
 
 To set the default browser, simply open Desktop Firefox options, go to the advanced -> General tab, and click on the "Make Firefox the default browser" button.  This will launch Control Panel, you will need to select the browser from the list and set all defaults.
 

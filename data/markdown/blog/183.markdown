@@ -1,6 +1,6 @@
 On Saturday, June 3, 2023, 14 year old Ronnie set out to conquer his first 50-mile segment of the FAwR run.  [FAwR](https://www.facebook.com/groups/654060825099521) is a 100+ mile journey across Windsor-Essex Ontario, which can be completed in multiple chunks across an 8-day span.
 
-<img style='width:90vw' src='/static/img/blogpost_183/map.png'>
+<img style='width:90vw' src='/static/img/blogpost_183/map.webp'>
 
 Ronnie had this 50mi goal last year, but an injury kept him from attempting this daunting distance in a single chunk.
 
@@ -18,29 +18,29 @@ The night before the run, Ronnie, who often struggles with sleep before runs (li
 
 We arrived 15 minutes early for the race for a start time of just after 5:00 AM.
 
-<img style='width:90vw' src='/static/img/blogpost_183/0.jpg'>
-<img style='width:90vw' src='/static/img/blogpost_183/1.jpg'>
+<img style='width:90vw' src='/static/img/blogpost_183/0.webp'>
+<img style='width:90vw' src='/static/img/blogpost_183/1.webp'>
 
 Only 30 minutes into the run, with only the dim light from my headlamp, Ronnie tripped on some uneven pavement and crashed to the ground. He scraped his knee and wrist but popped back up before I could ask him if he was OK. He had a couple of minor scrapes, but nothing that would stop him from his goal.
 
-<img style='width:90vw' src='/static/img/blogpost_183/2.jpg'>
+<img style='width:90vw' src='/static/img/blogpost_183/2.webp'>
 
 About ninety minutes into the run, we stopped at a golf course building along the route for Ronnie's second restroom break of the day.
 
 I started a tradition during my first year running the FAwR: giving the middle finger to a difficult segment of the route named Soul Crusher. I'm a particularly quiet reserved person so I think for that reason it caught on within the weUltra group. We've continued to give a "salute" to Soul Crusher every year since then.
 
-<img style='width:90vw' src='/static/img/blogpost_183/3.jpg'>
+<img style='width:90vw' src='/static/img/blogpost_183/3.webp'>
 
 We continued down the Soul Crusher (also known as Meat Mincer) portion of the trail. 
 His mom, Nana (with Cookie) and Meme (with Pepe) did stops to drop off water and supplies to him along the route to get him past the halfway mark.
 
 <table>
 <tr><td style="vertical-align: top">
-<img style='width:40vw' src='/static/img/blogpost_183/4.jpg'>
+<img style='width:40vw' src='/static/img/blogpost_183/4.webp'>
 </td><td style="vertical-align: top">
-<img style='width:40vw' src='/static/img/blogpost_183/mom-stop.jpg'>
+<img style='width:40vw' src='/static/img/blogpost_183/mom-stop.webp'>
 </td></tr><tr><td style="vertical-align: top;">
-<img style='width:40vw' src='/static/img/blogpost_183/nana-stop.jpg'>
+<img style='width:40vw' src='/static/img/blogpost_183/nana-stop.webp'>
 </td></tr>
 </table>
 
@@ -61,26 +61,26 @@ Me:
 
 Ronnie (With a huge grin on his face ):
 
-> "No wait, it's cool!  Mrs Wong will probably say too much information.  I can't tell my other class because the teacher will get mad, but I'll tell my friends."
+> "No wait, it's cool!  Mrs Wong will probably say too much information. I can't tell my other class because the teacher will get mad, but I'll tell my friends."
 
 Throughout the remainder of the day, we stopped at nearly every bathroom. He was doing the run of his life with the "runs". 
 
 A friend of the family, Serg, met him for the last half marathon to help distract Ronnie until the end. 
 
-<img style='width:90vw' src='/static/img/blogpost_183/5.jpg'>
+<img style='width:90vw' src='/static/img/blogpost_183/5.webp'>
 
 Ronnie had pre-planned to push slightly past the halfway mark, aiming for 80.1km, to finish just past  Colchester Bar and Grill. His aim was to "Beat all the dummies that stopped halfway". Slightly more than half the field did stop before or at that exact location.
 
 As we approached the halfway mark (of the entire 100+mi course), we realized it would be a couple km more than 80km. Ronnie complained but kept going. We finally arrived at Colchester Bar and Grill, and he had beaten his estimated time by so much that no one was there to greet him!  He decided to keep going.
 
-<img style='width:90vw' src='/static/img/blogpost_183/6.jpg'>
+<img style='width:90vw' src='/static/img/blogpost_183/6.webp'>
 
 A couple more kilometers later he asked why this run keeps getting longer? He spotted his mom in the distance and sprinted towards her for the finish. His Aunt Christie, Meme, Pepe, and brothers were there to greet him too.
 
 Ronnie wrapped up the day with an impressive time, just shy of 14 hours, covering an astounding distance of over 84km. He indeed achieved his two full consecutive marathons! With just over two hours spent in various washrooms, and of course, one memorable stop in nature, it was a day of monumental achievement. I'm not sure if he's more proud of the new personal best distance or the trail poo. Congratulations on being officiated! "Achievement unlocked!"
 
-<img style='width:90vw' src='/static/img/blogpost_183/family-finish.jpg'>
-<img style='width:90vw' src='/static/img/blogpost_183/finish-2.jpg'>
+<img style='width:90vw' src='/static/img/blogpost_183/family-finish.webp'>
+<img style='width:90vw' src='/static/img/blogpost_183/finish-2.webp'>
 <video controls>
   <source src="/static/img/blogpost_183/video.mp4" type="video/mp4">
 Your browser does not support the video tag.

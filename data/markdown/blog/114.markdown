@@ -2,7 +2,7 @@
 
 I purchased the [Programming Google App Engine][2] book by Dan Sanderson because I wanted to learn more about [Google App Engine (GAE)][3] on Python.
 
-<img src='https://brianbondy.com/static/img/blogpost_114/book.png' width='180' height='236'>
+<img src='https://brianbondy.com/static/img/blogpost_114/book.webp' width='180' height='236'>
 
 GAE is a platform and set of services for building web applications.  
 GAE scales your web application automatically as long as you work within their set of restrictions such as using a non relational datastore.

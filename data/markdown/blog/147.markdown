@@ -3,7 +3,7 @@
 [Creating website shortcuts with favicons][2] was a Platform Integration task that has been pending development for almost a decade.  Thanks to a new contributor named Parth Mudgal, they're now live on Nightly builds.
 
 <figure style='text-align:center'>
-<img src='/static/img/blogpost_147/favicon_shortcuts.png'>
+<img src='/static/img/blogpost_147/favicon_shortcuts.webp'>
 <figcaption style='display:block; margin-left: auto; margin-right:auto'>
 Favicons of any image format as shortcut icons in Windows</figcaption>
 </figure>

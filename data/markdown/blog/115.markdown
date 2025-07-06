@@ -1,7 +1,7 @@
 Since [my company was acquired][4], I needed to get my website off of the new company's servers.
 My site was built with [Django][6], and I didn't want to have to pay for hosting.  
 
-<img style='float:left;padding-right:10px;padding-bottom:10px' width="64" height="64" src='https://brianbondy.com/static/img/blogpost_115/gae-icon.png'>
+<img style='float:left;padding-right:10px;padding-bottom:10px' width="64" height="64" src='https://brianbondy.com/static/img/blogpost_115/gae-icon.webp'>
 
 I was at the same time reading a book on Google App Engine (GAE), and realized this would be a great fit.  GAE offers generous initial quotas for free and I think I can fit within the free quota limits of GAE for a while.  The free quotas equate to 1 GB of persistent storage and enough CPU and bandwidth for about 5 million page views a month.
 

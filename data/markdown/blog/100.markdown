@@ -389,5 +389,5 @@ I'm not claiming Vista was perfect, it was far from it; however, Vista took more
 [18]: https://brianbondy.com/blog/id/87/
 [19]: http://msdn.microsoft.com/en-us/library/ms682615(VS.85).aspx
 
-[img_prevista]: https://brianbondy.com/static/img/PreVistaSessions.png
-[img_postvista]: https://brianbondy.com/static/img/PostVistaSessions.png
+[img_prevista]: https://brianbondy.com/static/img/PreVistaSessions.webp
+[img_postvista]: https://brianbondy.com/static/img/PostVistaSessions.webp

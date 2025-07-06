@@ -1,4 +1,4 @@
-<img src='https://brianbondy.com/static/img/blogpost_107/socialIcons.png' width='480' height='170'>
+<img src='https://brianbondy.com/static/img/blogpost_107/socialIcons.webp' width='480' height='170'>
 
 I refreshed [my lists][1] of social networking accounts (Twitter, LinkedIn, and Facebook) for StackExchange users.  The lists are sorted by reputation and updated for the April 2011 data dump.
 

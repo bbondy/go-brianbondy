@@ -1,6 +1,6 @@
 <p>★★★★★ (<span itemprop="rating">5</span> stars out of 5)</p>
 
-<img src='/static/img/blogpost_132/nodejs.gif' style='float:left; padding-right:15px; padding-bottom:5px;'>
+<img src='/static/img/blogpost_132/nodejs.webp' style='float:left; padding-right:15px; padding-bottom:5px;'>
 
 The book [Node for Front-End Developers][1] by [Garann Means][2] presents a great introduction to Node and its surrounding modules.
 
