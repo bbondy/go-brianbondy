@@ -197,10 +197,7 @@ To prepare for the two remaining water crossings, I packed water shoes in the dr
 
 The first crossing was relatively straightforward, but the second proved more challenging. The water reached above my knees, and the crossing took place at night, making it cold and unstable. A rope stretched across the crossing provided some support. My primary concern was accidentally dropping and losing a shoe in the water, which would have spelled the end of my race. I noticed that most participants either kept their shoes and socks on or removed only their socks for the crossing. However, I didn't want to take any chances, and I believe that the extra five minutes spent changing shoes had no significant impact on my finishing time.
 
-<video controls width=320>
-  <source src="/static/img/blogpost_182/v2.mp4" type="video/mp4">
-Your browser does not support the video tag.
-</video>
+<iframe src="https://www.youtube.com/embed/Tt33hJ8suLI" width="340" frameborder="0" allowfullscreen></iframe>
 
 # Takeaway goals going into the race
 
