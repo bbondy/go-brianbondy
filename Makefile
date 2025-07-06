@@ -1,3 +1,7 @@
+# Default target - runs all essential tasks
+all: lint format test update-cache webp
+
+# Code quality
 format:
 	golangci-lint run --fix
 
@@ -7,13 +11,23 @@ lint:
 test:
 	go test -v 
 
-deploy:
+# Update cache busting version in templates
+update-cache:
+	@echo "Updating cache busting version..."
+	@current_version=$$(grep -m1 -o 'cachebust=[0-9]*' templates/base.html | head -n1 | cut -d= -f2); \
+	new_version=$$(expr $$current_version + 1); \
+	sed -i '' "0,/cachebust=$$current_version/s//cachebust=$$new_version/" templates/base.html; \
+	sed -i '' "0,/cachebust=$$current_version/s//cachebust=$$new_version/" templates/base.html; \
+	echo "Cache busting updated to version $$new_version"
+
+# Deployment
+deploy: all
 	gcloud app deploy 
 
 auth:
 	gcloud auth login 
 
-# Convert images to WebP format for better performance
+# Image optimization
 webp:
 	python3 scripts/convert_images_to_webp.py
 
@@ -23,4 +37,30 @@ webp-force:
 
 # Process new blog post images (run after adding a new blog post)
 blog-images:
-	python3 scripts/process_new_blog_images.py 
+	python3 scripts/process_new_blog_images.py
+
+# Build for production (everything except deploy)
+build: all
+
+# Quick development setup (just code quality)
+dev: lint format test
+
+# Show current cache busting version
+cache-version:
+	@grep -o 'cachebust=[0-9]*' templates/base.html
+
+# Show help
+help:
+	@echo "Available targets:"
+	@echo "  all          - Run all essential tasks (lint, format, test, cache, webp)"
+	@echo "  build        - Same as 'all' (production build)"
+	@echo "  dev          - Quick development setup (lint, format, test)"
+	@echo "  format       - Format code with golangci-lint"
+	@echo "  lint         - Lint code with golangci-lint"
+	@echo "  test         - Run tests"
+	@echo "  update-cache - Update cache busting version"
+	@echo "  webp         - Convert images to WebP"
+	@echo "  webp-force   - Force convert all images to WebP"
+	@echo "  blog-images  - Process new blog post images"
+	@echo "  deploy       - Deploy to Google App Engine"
+	@echo "  cache-version- Show current cache busting version" 
