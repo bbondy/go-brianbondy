@@ -9,11 +9,7 @@ import (
 
 func initializeRoutes(router *mux.Router) {
 	fs := http.FileServer(http.Dir("static/"))
-	staticHandler := http.StripPrefix("/static/", http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
-		w.Header().Set("Cache-Control", "public, max-age=31536000, immutable")
-		fs.ServeHTTP(w, r)
-	}))
-	router.PathPrefix("/static/").Handler(staticHandler)
+	router.PathPrefix("/static/").Handler(http.StripPrefix("/static/", fs))
 
 	handleBlogPost := negroni.New(
 		negroni.HandlerFunc(directToHttps),

@@ -1,17 +1,25 @@
 runtime: go122
 
 handlers:
+# Serve images with long-term cache
 - url: /static/img
   static_dir: static/img
   http_headers:
     Cache-Control: "public, max-age=31536000, immutable"
 
+# Serve CSS with long-term cache
 - url: /static/css
   static_dir: static/css
   http_headers:
     Cache-Control: "public, max-age=31536000, immutable"
 
+# Serve font-awesome files with long-term cache
 - url: /static/font-awesome
   static_dir: static/font-awesome
   http_headers:
     Cache-Control: "public, max-age=31536000, immutable"
+
+# Serve everything else dynamically (e.g. your Go app)
+- url: /.*
+  script: auto
+
