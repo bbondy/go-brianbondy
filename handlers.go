@@ -20,19 +20,105 @@ const (
 	layoutUS  = "January 2, 2006"
 )
 
+// getErrorMessageForCode returns a user-friendly message for a given HTTP error code.
+func getErrorMessageForCode(code int) string {
+	switch code {
+	case http.StatusNotFound:
+		return "Move along. Move along."
+	case http.StatusInternalServerError:
+		return "An unexpected server error occurred. Please try again later."
+	case http.StatusBadRequest:
+		return "The request could not be understood by the server."
+	case http.StatusForbidden:
+		return "You do not have permission to access this page."
+	case http.StatusUnauthorized:
+		return "You are not authorized to view this page."
+	case http.StatusMethodNotAllowed:
+		return "The method is not allowed for the requested URL."
+	case http.StatusRequestTimeout:
+		return "The request timed out. Please try again."
+	case http.StatusTooManyRequests:
+		return "You have made too many requests. Please slow down."
+	case http.StatusServiceUnavailable:
+		return "The service is temporarily unavailable. Please try again later."
+	case http.StatusGatewayTimeout:
+		return "The server did not receive a timely response."
+	default:
+		return "An error occurred."
+	}
+}
+
 func errorPage(w http.ResponseWriter, message string, slug string) {
-	w.WriteHeader(http.StatusNotFound)
+	errorPageWithStatus(w, message, slug, http.StatusNotFound)
+}
+
+func errorPageWithStatus(w http.ResponseWriter, message string, slug string, statusCode int) {
+	w.Header().Set("Content-Type", "text/html; charset=utf-8")
+	w.WriteHeader(statusCode)
+
+	var title string
+	switch statusCode {
+	case http.StatusNotFound:
+		title = "These aren't the pages you're looking for."
+	case http.StatusInternalServerError:
+		title = "Server Error"
+	case http.StatusBadRequest:
+		title = "Bad Request"
+	case http.StatusForbidden:
+		title = "Access Forbidden"
+	case http.StatusUnauthorized:
+		title = "Unauthorized"
+	case http.StatusMethodNotAllowed:
+		title = "Method Not Allowed"
+	case http.StatusRequestTimeout:
+		title = "Request Timeout"
+	case http.StatusTooManyRequests:
+		title = "Too Many Requests"
+	case http.StatusServiceUnavailable:
+		title = "Service Unavailable"
+	case http.StatusGatewayTimeout:
+		title = "Gateway Timeout"
+	default:
+		title = "Error"
+	}
+
+	if message == "" {
+		message = getErrorMessageForCode(statusCode)
+	}
+
 	p := &data.SimpleMarkdownPage{
-		Title:        "Error",
+		Title:        title,
 		Content:      message,
 		MarkdownSlug: slug,
+		ErrorCode:    statusCode,
 	}
-	t := template.Must(template.New("base.html").Funcs(funcMap).ParseFiles("templates/base.html", "templates/simpleMarkdown.html"))
+
+	t := template.Must(template.New("base.html").Funcs(funcMap).ParseFiles("templates/base.html", "templates/error.html"))
 	err := t.Execute(w, p)
 	if err != nil {
 		log.Printf("Error executing error page template: %v", err)
 		return
 	}
+}
+
+func testErrorHandler(w http.ResponseWriter, r *http.Request) {
+	vars := mux.Vars(r)
+	errorCodeStr := vars["errorcode"]
+
+	errorCode, err := strconv.Atoi(errorCodeStr)
+	if err != nil {
+		http.Error(w, "Invalid error code", http.StatusBadRequest)
+		return
+	}
+
+	// Validate that it's a 4xx or 5xx error code
+	if errorCode < 400 || errorCode >= 600 {
+		http.Error(w, "Error code must be between 400-599", http.StatusBadRequest)
+		return
+	}
+
+	message := getErrorMessageForCode(errorCode)
+	errorPageWithStatus(w, message, "", errorCode)
 }
 
 func getMarkdownTemplateHandler(titleSlug string, markdownSlug string, fbShareUrl string) *negroni.Negroni {

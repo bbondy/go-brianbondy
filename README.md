@@ -119,13 +119,6 @@ python3 scripts/process_new_blog_images.py [blog_post_id]
 - golangci-lint (`brew install golangci-lint`)
 - Google Cloud SDK (for deployment)
 
-## Directory Structure
-
-- `data/` - Blog post data, manifests, and markdown content
-- `static/` - Static assets (CSS, images, fonts)
-- `templates/` - HTML templates
-- `scripts/` - Helper scripts (e.g., for books, Strava images)
-
 ## Adding a Blog Post
 
 1. Create a new markdown file in `data/markdown/blog/`.

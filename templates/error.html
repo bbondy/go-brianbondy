@@ -1,0 +1,28 @@
+{{define "mountPoint"}}
+<div class="error-page">
+  <div class="error-content">
+    {{if eq .ErrorCode 404}}
+      <div class="error-icon" style="font-size:3em;">
+        🤖
+      </div>
+    {{else}}
+      <div class="error-icon">
+        <i class="fas fa-exclamation-triangle"></i>
+      </div>
+    {{end}}
+    <h1>{{.Title}}</h1>
+    <div style="font-size:1.5em; color:#888; margin-bottom:10px;">Error {{.ErrorCode}}</div>
+    <p class="error-message">{{.Content}}</p>
+    <div class="error-actions">
+      <a href="/" class="btn btn-primary">
+        <i class="fas fa-home"></i>
+        Go Home
+      </a>
+      <a href="/all" class="btn btn-secondary">
+        <i class="fas fa-blog"></i>
+        Browse Blog
+      </a>
+    </div>
+  </div>
+</div>
+{{end}} 

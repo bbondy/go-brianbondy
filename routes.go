@@ -47,6 +47,11 @@ func initializeRoutes(router *mux.Router) {
 
 	router.Handle("/", handleHome)
 	router.Handle("/rss", handleRSS)
+
+	// Test error endpoint (remove in production) - place early to avoid conflicts
+	router.Handle("/test/{errorcode:[4-5][0-9][0-9]}", negroni.New(
+		negroni.HandlerFunc(directToHttps),
+		negroni.Wrap(http.HandlerFunc(testErrorHandler)))).Methods("GET")
 	router.Handle("/blog/{id:[0-9]+}", handleBlogIdRedirect)
 	router.Handle("/blog/{id:[0-9]+}/{slug}", handleBlogPost)
 	router.Handle("/page/{page:[0-9]+}", handlePaginationRedirect)
@@ -74,4 +79,11 @@ func initializeRoutes(router *mux.Router) {
 	router.Handle("/resume", getMarkdownTemplateHandler("Resume", "resume.markdown", "/resume"))
 	router.Handle("/running", handleRunning)
 	router.Handle("/all", handleAllPosts)
+
+	// 404 handler for unmatched routes
+	router.NotFoundHandler = negroni.New(
+		negroni.HandlerFunc(directToHttps),
+		negroni.Wrap(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+			errorPage(w, "", "404")
+		})))
 }

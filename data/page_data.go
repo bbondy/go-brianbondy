@@ -5,9 +5,11 @@ import (
 )
 
 type SimpleMarkdownPage struct {
-	Title, Content                   string
-	MarkdownSlug                     string
-	ShareUrl, Description, ImagePath string
+	Title        string
+	Content      string
+	MarkdownSlug string
+	ShareUrl     string
+	ErrorCode    int // Added for error pages
 }
 
 type RunningPage struct {
