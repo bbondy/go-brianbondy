@@ -238,32 +238,8 @@
     
     <!-- Non-blocking JavaScript -->
     <script>
-      // Load JavaScript after page load for better performance
-      window.addEventListener('load', function() {
-        document.addEventListener('scroll', function() {
-          const topBar = document.querySelector('.topBar');
-          if (window.scrollY > 20) {
-            topBar.classList.add('scrolled');
-          } else {
-            topBar.classList.remove('scrolled');
-          }
-        });
-
-        window.copyLink = function(button) {
-          const url = button.getAttribute('data-url');
-          navigator.clipboard.writeText(url).then(() => {
-            const originalText = button.innerHTML;
-            button.innerHTML = '<i class="fas fa-check"></i> Copied!';
-            button.classList.add('copied');
-            
-            setTimeout(() => {
-              button.innerHTML = originalText;
-              button.classList.remove('copied');
-            }, 2000);
-          });
-        };
-
-        // Lightbox functionality
+      // Lightbox functionality - initialize immediately when DOM is ready
+      (function() {
         const lightbox = document.getElementById('lightbox');
         const lightboxImage = document.getElementById('lightbox-image');
         const lightboxClose = document.querySelector('.lightbox-close');
@@ -358,8 +334,34 @@
           }
         });
 
-        // Initialize lightbox
+        // Initialize lightbox immediately
         initLightbox();
+      })();
+
+      // Load remaining JavaScript after page load for better performance
+      window.addEventListener('load', function() {
+        document.addEventListener('scroll', function() {
+          const topBar = document.querySelector('.topBar');
+          if (window.scrollY > 20) {
+            topBar.classList.add('scrolled');
+          } else {
+            topBar.classList.remove('scrolled');
+          }
+        });
+
+        window.copyLink = function(button) {
+          const url = button.getAttribute('data-url');
+          navigator.clipboard.writeText(url).then(() => {
+            const originalText = button.innerHTML;
+            button.innerHTML = '<i class="fas fa-check"></i> Copied!';
+            button.classList.add('copied');
+            
+            setTimeout(() => {
+              button.innerHTML = originalText;
+              button.classList.remove('copied');
+            }, 2000);
+          });
+        };
       });
     </script>
   </body>
