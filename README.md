@@ -202,3 +202,28 @@ python3 scripts/fetch_strava_times.py
 
 After running, your `data/runManifest.json` will be updated with time fields for each activity. Activities without a Strava activity URL or with non-standard pages will be flagged for manual review.
 
+
+### Auto-Fetching GitHub Project Stats
+
+The script `scripts/fetch_github_stats.py` automates fetching commit and pull request counts for your projects from GitHub and updates `data/projectManifest.json`.
+
+**Features:**
+- Scrapes GitHub search pages for commit and PR counts by author (bbondy)
+- Supports keyword-based filtering for subprojects (see `searchKeywords` in the manifest)
+- Handles abbreviated numbers (e.g., "2.3k" → 2300)
+- Retries on rate limiting with exponential backoff
+- Waits 2 seconds between all requests to avoid rate limits
+- Only includes real fetched data (removes stats if not available)
+
+**Requirements:**
+- Python 3
+- `requests` library (install with `pip install requests`)
+
+**Usage:**
+
+```bash
+python3 scripts/fetch_github_stats.py
+```
+
+After running, your `data/projectManifest.json` will be updated with the latest commit and PR counts for each project. If a project's data can't be fetched (e.g., due to rate limiting), it will be omitted from the stats until a successful fetch.
+

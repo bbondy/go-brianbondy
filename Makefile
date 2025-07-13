@@ -1,3 +1,10 @@
+.DEFAULT_GOAL := update
+
+update: format lint test update-cache webp github-stats strava-stats
+
+strava-stats:
+	python3 scripts/fetch_strava_times.py
+
 # Default target - runs all essential tasks
 all: lint format test update-cache webp
 
@@ -39,6 +46,10 @@ webp-force:
 blog-images:
 	python3 scripts/process_new_blog_images.py
 
+# Fetch GitHub statistics for projects
+github-stats:
+	python3 scripts/fetch_github_stats.py
+
 # Build for production (everything except deploy)
 build: all
 
@@ -52,6 +63,7 @@ cache-version:
 # Show help
 help:
 	@echo "Available targets:"
+	@echo "  update       - Run all update scripts (format, lint, test, cache, webp, github-stats, strava-stats)"
 	@echo "  all          - Run all essential tasks (lint, format, test, cache, webp)"
 	@echo "  build        - Same as 'all' (production build)"
 	@echo "  dev          - Quick development setup (lint, format, test)"
@@ -62,5 +74,7 @@ help:
 	@echo "  webp         - Convert images to WebP"
 	@echo "  webp-force   - Force convert all images to WebP"
 	@echo "  blog-images  - Process new blog post images"
+	@echo "  github-stats - Fetch GitHub statistics for projects"
+	@echo "  strava-stats - Fetch Strava run statistics"
 	@echo "  deploy       - Deploy to Google App Engine"
 	@echo "  cache-version- Show current cache busting version" 

@@ -1814,3 +1814,56 @@ img[loading="lazy"] {
     justify-content: center;
   }
 }
+
+/* GitHub stats styling */
+.github-stats {
+  margin-top: 10px;
+  font-size: 0.9em;
+}
+
+.github-stats .commit-count {
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.github-stats .commit-count i {
+  margin-right: 4px;
+}
+
+.language-breakdown {
+  margin-top: 8px;
+}
+
+.language-bar {
+  display: flex;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.language-name {
+  min-width: 80px;
+  font-size: 0.8em;
+  color: #666;
+}
+
+.language-progress {
+  flex: 1;
+  height: 8px;
+  background-color: #e1e5e9;
+  border-radius: 4px;
+  overflow: hidden;
+  margin: 0 8px;
+}
+
+.language-progress-fill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+.language-percent {
+  min-width: 35px;
+  font-size: 0.8em;
+  color: #666;
+  text-align: right;
+}

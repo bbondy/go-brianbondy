@@ -13,6 +13,62 @@
             {{if .URL}}<a href="{{.URL}}" target="_blank">{{.Title}}</a>{{else}}{{.Title}}{{end}}
           </h3>
           <div class="card-details">{{.Description}}</div>
+          
+          {{if .GitHubStats}}
+            <div class="github-stats">
+              {{if gt .GitHubStats.CommitCount 0}}
+                <div class="commit-count">
+                  <i class="fas fa-code-branch"></i>
+                  <a href="{{/* Build the GitHub search URL for commits */}}
+                    {{ $owner := (index (split (replace (replace .Github "https://github.com/" "") ".git" "") "/") 0) }}
+                    {{ $repo := (index (split (replace (replace .Github "https://github.com/" "") ".git" "") "/") 1) }}
+                    {{ $base := printf "https://github.com/search?q=repo:%s/%s+author:bbondy" $owner $repo }}
+                    {{if .SearchKeywords}}
+                      {{ $keywords := join .SearchKeywords " OR " }}
+                      {{ printf "%s+(%s)&type=commits" $base $keywords }}
+                    {{else}}
+                      {{ printf "%s&type=commits" $base }}
+                    {{end}}
+                  " target="_blank">
+                    {{.GitHubStats.CommitCount}}+ commits by bbondy
+                  </a>
+                </div>
+              {{end}}
+              {{if gt .GitHubStats.PrCount 0}}
+                <div class="pr-count">
+                  <i class="fas fa-exchange-alt"></i> <!-- Use fa-code-pull-request if using Font Awesome 6+ -->
+                  <a href="{{/* Build the GitHub search URL for PRs */}}
+                    {{ $owner := (index (split (replace (replace .Github "https://github.com/" "") ".git" "") "/") 0) }}
+                    {{ $repo := (index (split (replace (replace .Github "https://github.com/" "") ".git" "") "/") 1) }}
+                    {{ $base := printf "https://github.com/search?q=repo:%s/%s+author:bbondy" $owner $repo }}
+                    {{if .SearchKeywords}}
+                      {{ $keywords := join .SearchKeywords " OR " }}
+                      {{ printf "%s+(%s)&type=pullrequests" $base $keywords }}
+                    {{else}}
+                      {{ printf "%s&type=pullrequests" $base }}
+                    {{end}}
+                  " target="_blank">
+                    {{.GitHubStats.PrCount}}+ pull requests by bbondy
+                  </a>
+                </div>
+              {{end}}
+              
+              {{if .GitHubStats.Languages}}
+                <div class="language-breakdown">
+                  {{range .GitHubStats.Languages}}
+                    <div class="language-bar">
+                      <span class="language-name">{{.Name}}</span>
+                      <div class="language-progress">
+                        <div class="language-progress-fill" style="width: {{.Percent}}%; background-color: {{.Color}};"></div>
+                      </div>
+                      <span class="language-percent">{{printf "%.1f" .Percent}}%</span>
+                    </div>
+                  {{end}}
+                </div>
+              {{end}}
+            </div>
+          {{end}}
+          
           <div class="project-links">
             {{if .Website}}
               <a href="{{.Website}}" target="_blank" title="Website" class="action-link website-link"><i class="fas fa-globe"></i></a>

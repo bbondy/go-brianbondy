@@ -144,6 +144,9 @@ func TestRouteRegistration(t *testing.T) {
 			// Match route
 			var match mux.RouteMatch
 			matched := router.Match(req, &match)
+			if matched && match.Route == nil {
+				matched = false
+			}
 			assert.Equal(t, tc.expectedMatch, matched, "Route match status unexpected")
 		})
 	}

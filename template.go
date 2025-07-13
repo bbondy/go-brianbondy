@@ -100,7 +100,7 @@ var funcMap = template.FuncMap{
 		return a % b
 	},
 	"replace": func(s, old, new string) string {
-		return strings.Replace(s, old, new, -1)
+		return strings.ReplaceAll(s, old, new)
 	},
 	"printf": func(format string, args ...interface{}) string {
 		return fmt.Sprintf(format, args...)
@@ -144,6 +144,9 @@ var funcMap = template.FuncMap{
 			out += "," + in[i:i+3]
 		}
 		return out
+	},
+	"join": func(elems []string, sep string) string {
+		return strings.Join(elems, sep)
 	},
 }
 

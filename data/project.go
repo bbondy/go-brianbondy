@@ -2,13 +2,15 @@ package data
 
 // Project represents a single project entry
 type Project struct {
-	Title       string `json:"title"`
-	Image       string `json:"image"`
-	URL         string `json:"url"`
-	Github      string `json:"github,omitempty"`
-	Website     string `json:"website,omitempty"`
-	BlogPostID  int    `json:"blogPostID,omitempty"`
-	Description string `json:"description"`
+	Title          string       `json:"title"`
+	Image          string       `json:"image"`
+	URL            string       `json:"url"`
+	Github         string       `json:"github,omitempty"`
+	Website        string       `json:"website,omitempty"`
+	BlogPostID     int          `json:"blogPostID,omitempty"`
+	Description    string       `json:"description"`
+	GitHubStats    *GitHubStats `json:"githubStats,omitempty"`    // GitHub statistics from Python script
+	SearchKeywords []string     `json:"searchKeywords,omitempty"` // Keywords for GitHub search to avoid double counting
 }
 
 type Projects []Project
