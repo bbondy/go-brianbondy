@@ -97,8 +97,8 @@
     </style>
     
     <!-- Non-critical CSS loaded asynchronously -->
-    <link rel="stylesheet" href="/static/css/main.css?cachebust=121" media="print" onload="this.media='all'">
-    <noscript><link rel="stylesheet" href="/static/css/main.css?cachebust=121"></noscript>
+    <link rel="stylesheet" href="/static/css/main.css?cachebust=122" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="/static/css/main.css?cachebust=122"></noscript>
     
     <!-- Font Awesome loaded asynchronously -->
     <link rel="stylesheet" href="/static/font-awesome/css/all.min.css" media="print" onload="this.media='all'">
@@ -224,6 +224,18 @@
         </div>
       </footer>
     </div>
+    
+    <!-- Lightbox HTML -->
+    <div id="lightbox" class="lightbox">
+      <span class="lightbox-close">&times;</span>
+      <div class="lightbox-content">
+        <img class="lightbox-image" id="lightbox-image" src="" alt="">
+      </div>
+      <div class="lightbox-nav lightbox-prev" id="lightbox-prev">&#10094;</div>
+      <div class="lightbox-nav lightbox-next" id="lightbox-next">&#10095;</div>
+      <div class="lightbox-counter" id="lightbox-counter"></div>
+    </div>
+    
     <!-- Non-blocking JavaScript -->
     <script>
       // Load JavaScript after page load for better performance
@@ -250,6 +262,104 @@
             }, 2000);
           });
         };
+
+        // Lightbox functionality
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImage = document.getElementById('lightbox-image');
+        const lightboxClose = document.querySelector('.lightbox-close');
+        const lightboxPrev = document.getElementById('lightbox-prev');
+        const lightboxNext = document.getElementById('lightbox-next');
+        const lightboxCounter = document.getElementById('lightbox-counter');
+        
+        let currentImageIndex = 0;
+        let images = [];
+
+        // Initialize lightbox for blog post images
+        function initLightbox() {
+          const blogImages = document.querySelectorAll('.blogPost img');
+          if (blogImages.length === 0) return;
+          
+          images = Array.from(blogImages);
+          
+          images.forEach((img, index) => {
+            img.addEventListener('click', function(e) {
+              e.preventDefault();
+              openLightbox(index);
+            });
+          });
+        }
+
+        function openLightbox(index) {
+          currentImageIndex = index;
+          const img = images[index];
+          lightboxImage.src = img.src;
+          lightboxImage.alt = img.alt || 'Blog post image';
+          
+          updateCounter();
+          lightbox.classList.add('show');
+          document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+          lightbox.classList.remove('show');
+          document.body.style.overflow = '';
+        }
+
+        function showPrev() {
+          currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+          const img = images[currentImageIndex];
+          lightboxImage.src = img.src;
+          lightboxImage.alt = img.alt || 'Blog post image';
+          updateCounter();
+        }
+
+        function showNext() {
+          currentImageIndex = (currentImageIndex + 1) % images.length;
+          const img = images[currentImageIndex];
+          lightboxImage.src = img.src;
+          lightboxImage.alt = img.alt || 'Blog post image';
+          updateCounter();
+        }
+
+        function updateCounter() {
+          if (images.length > 1) {
+            lightboxCounter.textContent = `${currentImageIndex + 1} / ${images.length}`;
+            lightboxCounter.style.display = 'block';
+          } else {
+            lightboxCounter.style.display = 'none';
+          }
+        }
+
+        // Event listeners
+        lightboxClose.addEventListener('click', closeLightbox);
+        lightboxPrev.addEventListener('click', showPrev);
+        lightboxNext.addEventListener('click', showNext);
+        
+        lightbox.addEventListener('click', function(e) {
+          if (e.target === lightbox) {
+            closeLightbox();
+          }
+        });
+
+        // Keyboard navigation
+        document.addEventListener('keydown', function(e) {
+          if (!lightbox.classList.contains('show')) return;
+          
+          switch(e.key) {
+            case 'Escape':
+              closeLightbox();
+              break;
+            case 'ArrowLeft':
+              showPrev();
+              break;
+            case 'ArrowRight':
+              showNext();
+              break;
+          }
+        });
+
+        // Initialize lightbox
+        initLightbox();
       });
     </script>
   </body>
