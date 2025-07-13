@@ -66,4 +66,7 @@ Here are some personal principles and lessons I've learned over the years. I hop
   <div class="card-entry">
     <p>I've come to prioritize kindness and compassion over the need to be right. Winning an argument often just feeds the ego, which is rarely satisfied, whereas kindness builds connection.</p>
   </div>
+  <div class="card-entry">
+    <p>To break free from your old habits, stop focusing on what you want to do. Start deciding who you want to be. (Author: Arnold's Pump Club)</p>
+  </div>
 </div>
