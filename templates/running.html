@@ -1,6 +1,104 @@
 {{define "mountPoint"}}
   <div class="running-container">
     <h1>Memorable Runs</h1>
+    
+    {{/* Calculate totals */}}
+    {{$totalMinutes := 0}}
+    {{$totalKm := 0.0}}
+    {{$totalMeters := 0}}
+    {{$totalRuns := 0}}
+    
+    {{range .Runs}}
+      {{if .Time}}
+        {{/* Parse time to minutes */}}
+        {{$timeStr := .Time}}
+        {{if (contains $timeStr "h")}}
+          {{$parts := split $timeStr "h"}}
+          {{if gt (len $parts) 0}}
+            {{$beforeH := index $parts 0}}
+            {{$spaceParts := split $beforeH " "}}
+            {{if gt (len $spaceParts) 0}}
+              {{$hours := atoi (index $spaceParts 0)}}
+              {{$totalMinutes = add $totalMinutes (mul $hours 60)}}
+            {{end}}
+          {{end}}
+        {{end}}
+        {{if (contains $timeStr "m")}}
+          {{$parts := split $timeStr "m"}}
+          {{if gt (len $parts) 0}}
+            {{$beforeM := index $parts 0}}
+            {{$spaceParts := split $beforeM " "}}
+            {{$minutes := 0}}
+            {{if gt (len $spaceParts) 1}}
+              {{$minutes = atoi (index $spaceParts 1)}}
+            {{else if gt (len $spaceParts) 0}}
+              {{$minutes = atoi (index $spaceParts 0)}}
+            {{end}}
+            {{$totalMinutes = add $totalMinutes $minutes}}
+          {{end}}
+        {{end}}
+      {{end}}
+      
+      {{if .Distance}}
+        {{/* Parse distance to kilometers */}}
+        {{$distanceStr := .Distance}}
+        {{if (contains $distanceStr "mi")}}
+          {{$parts := split $distanceStr "mi"}}
+          {{if gt (len $parts) 0}}
+            {{$miles := atof (index $parts 0)}}
+            {{$km := mulFloat $miles 1.60934}}
+            {{$totalKm = addFloat $totalKm $km}}
+          {{end}}
+        {{end}}
+      {{end}}
+      
+      {{if .Elevation}}
+        {{/* Parse elevation to meters */}}
+        {{$elevationStr := .Elevation}}
+        {{if (contains $elevationStr "ft")}}
+          {{$parts := split $elevationStr "ft"}}
+          {{if gt (len $parts) 0}}
+            {{$feet := replace (index $parts 0) "," ""}}
+            {{$meters := mulFloat (atof $feet) 0.3048}}
+            {{$totalMeters = add $totalMeters (atoi (printf "%.0f" $meters))}}
+          {{end}}
+        {{end}}
+      {{end}}
+      
+      {{$totalRuns = add $totalRuns 1}}
+    {{end}}
+    
+    {{/* Display totals */}}
+    <div class="totals-section">
+      <p class="totals-note">These totals represent only the memorable runs listed below, not including training runs, daily activities, or other workouts.</p>
+      <div class="totals-grid">
+        <div class="total-item">
+          <span class="total-label">Total Runs:</span>
+          <span class="total-value">{{$totalRuns}}</span>
+        </div>
+        <div class="total-item">
+          <span class="total-label">Total Time:</span>
+          <span class="total-value">
+            {{$totalHours := div $totalMinutes 60}}
+            {{$remainingMinutes := mod $totalMinutes 60}}
+            {{if gt $totalHours 0}}
+              {{$totalHours}}h {{$remainingMinutes}}m
+            {{else}}
+              {{$remainingMinutes}}m
+            {{end}}
+          </span>
+        </div>
+        <div class="total-item">
+          <span class="total-label">Total Distance:</span>
+          <span class="total-value">{{commaf $totalKm 1}}km</span>
+        </div>
+        <div class="total-item">
+          <span class="total-label">Total Elevation:</span>
+          <span class="total-value">{{commai $totalMeters}}m</span>
+        </div>
+      </div>
+    </div>
+    
     <div class="runs-grid">
       {{range .Runs}}
         <div class="run-card">
@@ -14,6 +112,42 @@
             </h3>
             <div class="run-date">{{.Date | formatDate}}</div>
           </div>
+          
+          {{if .Time}}
+            <div class="run-time"><strong>Time:</strong> {{.Time}}</div>
+          {{end}}
+          
+          {{if .Distance}}
+            {{$distanceStr := .Distance}}
+            {{if (contains $distanceStr "mi")}}
+              {{$parts := split $distanceStr "mi"}}
+              {{if gt (len $parts) 0}}
+                            {{$miles := atof (index $parts 0)}}
+            {{$km := mulFloat $miles 1.60934}}
+                <div class="run-distance"><strong>Distance:</strong> {{printf "%.1f" $km}}km ({{.Distance}})</div>
+              {{else}}
+                <div class="run-distance"><strong>Distance:</strong> {{.Distance}}</div>
+              {{end}}
+            {{else}}
+              <div class="run-distance"><strong>Distance:</strong> {{.Distance}}</div>
+            {{end}}
+          {{end}}
+          
+          {{if .Elevation}}
+            {{$elevationStr := .Elevation}}
+            {{if (contains $elevationStr "ft")}}
+              {{$parts := split $elevationStr "ft"}}
+              {{if gt (len $parts) 0}}
+                {{$feet := replace (index $parts 0) "," ""}}
+                {{$meters := mulFloat (atof $feet) 0.3048}}
+                <div class="run-elevation"><strong>Elevation:</strong> {{printf "%.0f" $meters}}m ({{.Elevation}})</div>
+              {{else}}
+                <div class="run-elevation"><strong>Elevation:</strong> {{.Elevation}}</div>
+              {{end}}
+            {{else}}
+              <div class="run-elevation"><strong>Elevation:</strong> {{.Elevation}}</div>
+            {{end}}
+          {{end}}
           
           {{if .Description}}
             <div class="run-description">{{.Description}}</div>

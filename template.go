@@ -5,6 +5,7 @@ import (
 	"html/template"
 	"net/url"
 	"reflect"
+	"strconv"
 	"strings"
 	"time"
 )
@@ -12,6 +13,9 @@ import (
 var funcMap = template.FuncMap{
 	"avail": avail,
 	"add": func(a, b int) int {
+		return a + b
+	},
+	"addFloat": func(a, b float64) float64 {
 		return a + b
 	},
 	"currentYear": func() int {
@@ -61,6 +65,85 @@ var funcMap = template.FuncMap{
 			return 0
 		}
 		return len(posts)
+	},
+	// Math functions for totals calculations
+	"contains": func(s, substr string) bool {
+		return strings.Contains(s, substr)
+	},
+	"split": func(s, sep string) []string {
+		return strings.Split(s, sep)
+	},
+	"atoi": func(s string) int {
+		i, _ := strconv.Atoi(strings.TrimSpace(s))
+		return i
+	},
+	"atof": func(s string) float64 {
+		f, _ := strconv.ParseFloat(strings.TrimSpace(s), 64)
+		return f
+	},
+	"mul": func(a, b int) int {
+		return a * b
+	},
+	"mulFloat": func(a, b float64) float64 {
+		return a * b
+	},
+	"div": func(a, b int) int {
+		if b == 0 {
+			return 0
+		}
+		return a / b
+	},
+	"mod": func(a, b int) int {
+		if b == 0 {
+			return 0
+		}
+		return a % b
+	},
+	"replace": func(s, old, new string) string {
+		return strings.Replace(s, old, new, -1)
+	},
+	"printf": func(format string, args ...interface{}) string {
+		return fmt.Sprintf(format, args...)
+	},
+	"len": func(slice interface{}) int {
+		v := reflect.ValueOf(slice)
+		if v.Kind() == reflect.Slice {
+			return v.Len()
+		}
+		return 0
+	},
+	"commaf": func(val float64, decimals int) string {
+		format := "%0." + strconv.Itoa(decimals) + "f"
+		num := fmt.Sprintf(format, val)
+		parts := strings.Split(num, ".")
+		intPart := parts[0]
+		var out []byte
+		for i, c := range intPart {
+			if i != 0 && (len(intPart)-i)%3 == 0 {
+				out = append(out, ',')
+			}
+			out = append(out, byte(c))
+		}
+		if len(parts) > 1 {
+			return string(out) + "." + parts[1]
+		}
+		return string(out)
+	},
+	"commai": func(val int) string {
+		in := strconv.Itoa(val)
+		n := len(in)
+		if n <= 3 {
+			return in
+		}
+		rem := n % 3
+		if rem == 0 {
+			rem = 3
+		}
+		out := in[:rem]
+		for i := rem; i < n; i += 3 {
+			out += "," + in[i:i+3]
+		}
+		return out
 	},
 }
 

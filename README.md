@@ -178,3 +178,27 @@ Run `python3 scripts/generate_books.py`
 
 See [LICENSE](LICENSE).
 
+## Running Data Automation
+
+### Auto-Fetching Run Times from Strava
+
+The script `scripts/fetch_strava_times.py` helps automate the process of adding elapsed time (hours and minutes) to each running activity in `data/runManifest.json`.
+
+**Features:**
+- Extracts time from the description if present (and cleans up duplicates)
+- If time is missing, fetches the elapsed time from the public Strava activity web page (no API credentials required)
+- Updates the manifest with a `"time"` field for each activity
+- Cleans up the description to avoid duplicate time display
+
+**Requirements:**
+- Python 3
+- `requests` and `beautifulsoup4` libraries (install with `pip install requests beautifulsoup4`)
+
+**Usage:**
+
+```bash
+python3 scripts/fetch_strava_times.py
+```
+
+After running, your `data/runManifest.json` will be updated with time fields for each activity. Activities without a Strava activity URL or with non-standard pages will be flagged for manual review.
+

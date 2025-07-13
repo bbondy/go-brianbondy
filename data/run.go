@@ -10,6 +10,9 @@ type Run struct {
 	ImagePath   string   `json:"image_path,omitempty"`
 	ImagePaths  []string `json:"image_paths,omitempty"`
 	BlogPostID  int      `json:"blog_post_id,omitempty"`
+	Time        string   `json:"time,omitempty"`
+	Distance    string   `json:"distance,omitempty"`
+	Elevation   string   `json:"elevation,omitempty"`
 }
 
 type Runs []Run
