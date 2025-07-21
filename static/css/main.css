@@ -33,8 +33,13 @@ a {
   float: left;
   margin: 8px 0px 0px 9px;
   padding-right: 10px;
-  width: 28px;
   transition: transform 0.3s ease;
+}
+.logo-img {
+  height: 28px;
+  width: auto;
+  display: block;
+  aspect-ratio: 204 / 212;
 }
 .topBar.scrolled img {
   transform: rotate(180deg);
@@ -1473,6 +1478,8 @@ img {
   border-radius: 8px;
   transition: transform 0.2s ease;
   will-change: transform;
+  aspect-ratio: 4 / 3;
+  min-height: 120px;
 }
 
 .previewImage:hover {
