@@ -4,12 +4,26 @@ Original style from softwaremaniacs.org (c) Ivan Sagalaev <Maniac@SoftwareManiac
 
 */
 
-code, .hljs {
+/* Inline code: single backtick */
+code {
+  display: inline;
+  padding: 0.15em 0.4em;
+  background: #f0f0f0;
+  border-radius: 4px;
+  font-size: 0.97em;
+  font-family: 'Fira Mono', 'Consolas', 'Menlo', 'Monaco', 'Liberation Mono', 'Courier New', monospace;
+}
+
+/* Code blocks: triple backtick or fenced */
+pre code, .hljs {
   display: block;
   overflow-x: auto;
   padding: 0.5em;
   background: #f0f0f0;
   -webkit-text-size-adjust: none;
+  border-radius: 6px;
+  font-size: 0.97em;
+  font-family: 'Fira Mono', 'Consolas', 'Menlo', 'Monaco', 'Liberation Mono', 'Courier New', monospace;
 }
 
 code, .hljs,
