@@ -334,6 +334,35 @@
           }
         });
 
+        // Swipe gesture support for touch devices
+        let touchStartX = 0;
+        let touchEndX = 0;
+        const swipeThreshold = 50; // Minimum px distance for swipe
+
+        lightbox.addEventListener('touchstart', function(e) {
+          if (e.touches.length === 1) {
+            touchStartX = e.touches[0].clientX;
+          }
+        });
+        lightbox.addEventListener('touchmove', function(e) {
+          if (e.touches.length === 1) {
+            touchEndX = e.touches[0].clientX;
+          }
+        });
+        lightbox.addEventListener('touchend', function(e) {
+          const deltaX = touchEndX - touchStartX;
+          if (Math.abs(deltaX) > swipeThreshold) {
+            if (deltaX < 0) {
+              showNext(); // Swipe left
+            } else {
+              showPrev(); // Swipe right
+            }
+          }
+          // Reset
+          touchStartX = 0;
+          touchEndX = 0;
+        });
+
         // Initialize lightbox immediately
         initLightbox();
       })();
