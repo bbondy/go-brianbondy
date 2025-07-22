@@ -1,4 +1,9 @@
 {{define "mountPoint"}}
+  <!-- Reading Progress Bar -->
+  <div class="reading-progress-container">
+    <div class="reading-progress-bar" id="reading-progress-bar"></div>
+  </div>
+  
   <article class="blogPost">
     <h1><a href="/blog/{{.BlogPost.Id}}/{{slugifyTitle .BlogPost.Title}}">{{.BlogPost.Title}}</a></h1>
     <div class="datePosted">Posted on {{.BlogPostDate}}</div>
