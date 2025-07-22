@@ -74,7 +74,10 @@ type Picture struct {
 }
 
 type PicturesPage struct {
-	Title        string
-	MarkdownSlug string
-	Pictures     []Picture
+	Title         string
+	MarkdownSlug  string
+	Pictures      []Picture
+	FilterTag     string
+	FilterBlogID  int
+	BlogPostTitle string
 }

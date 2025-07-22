@@ -148,6 +148,12 @@ var funcMap = template.FuncMap{
 	"join": func(elems []string, sep string) string {
 		return strings.Join(elems, sep)
 	},
+	"title": func(s string) string {
+		if len(s) == 0 {
+			return s
+		}
+		return strings.ToUpper(s[:1]) + strings.ToLower(s[1:])
+	},
 }
 
 func avail(name string, data interface{}) bool {

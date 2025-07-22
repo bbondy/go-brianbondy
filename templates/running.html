@@ -156,6 +156,9 @@
               <a href="/blog/{{.BlogPostID}}" class="blog-link action-link" title="Read blog post">
                 <i class="fas fa-blog"></i>
               </a>
+              <a href="/pictures?blog_id={{.BlogPostID}}" class="action-link pictures-link" title="View pictures from this run" aria-label="View pictures from this run">
+                <i class="fas fa-images"></i>
+              </a>
             {{end}}
 
             {{if .StravaURLs}}

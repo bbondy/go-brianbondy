@@ -659,13 +659,31 @@ func picturesHandler(w http.ResponseWriter, r *http.Request) {
 		errorPage(w, "Could not open pictures manifest", "pictures")
 		return
 	}
-	defer f.Close()
+	defer func() {
+		if closeErr := f.Close(); closeErr != nil {
+			log.Printf("Error closing file: %v", closeErr)
+		}
+	}()
 	if err := json.NewDecoder(f).Decode(&pictures); err != nil {
 		errorPage(w, "Could not parse pictures manifest", "pictures")
 		return
 	}
 
 	tag := r.URL.Query().Get("tag")
+	blogID := r.URL.Query().Get("blog_id")
+
+	var filterBlogID int
+	var blogPostTitle string
+	if blogID != "" {
+		blogIDInt, err := strconv.Atoi(blogID)
+		if err == nil {
+			filterBlogID = blogIDInt
+			if blogPost, exists := blogPostIdMap[blogIDInt]; exists {
+				blogPostTitle = blogPost.Title
+			}
+		}
+	}
+
 	if tag != "" {
 		filtered := make([]data.Picture, 0, len(pictures))
 		tagLower := strings.ToLower(tag)
@@ -680,10 +698,26 @@ func picturesHandler(w http.ResponseWriter, r *http.Request) {
 		pictures = filtered
 	}
 
+	if blogID != "" {
+		blogIDInt, err := strconv.Atoi(blogID)
+		if err == nil {
+			filtered := make([]data.Picture, 0, len(pictures))
+			for _, pic := range pictures {
+				if pic.Id == blogIDInt {
+					filtered = append(filtered, pic)
+				}
+			}
+			pictures = filtered
+		}
+	}
+
 	p := &data.PicturesPage{
-		Title:        "Running Pictures Gallery",
-		MarkdownSlug: "pictures",
-		Pictures:     pictures,
+		Title:         "Pictures Gallery",
+		MarkdownSlug:  "pictures",
+		Pictures:      pictures,
+		FilterTag:     tag,
+		FilterBlogID:  filterBlogID,
+		BlogPostTitle: blogPostTitle,
 	}
 	t := template.Must(template.New("base.html").Funcs(funcMap).ParseFiles("templates/base.html", "templates/pictures.html"))
 	err = t.Execute(w, p)
