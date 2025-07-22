@@ -515,8 +515,12 @@ textarea {
 }
 
 .postTags a:hover {
-    color: #4d90fe;
-    text-decoration: underline;
+    background-color: #4d90fe;
+    color: white;
+    border-color: #4d90fe;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(77, 144, 254, 0.2);
+    text-decoration: none;
 }
 
 .post-meta {
@@ -551,10 +555,28 @@ textarea {
     box-shadow: 0 2px 4px rgba(77, 144, 254, 0.2);
 }
 
+.post-meta .blog-link {
+    background-color: #4d90fe;
+    border-color: #4d90fe;
+    color: white;
+}
+
 .post-meta .blog-link:hover {
-    background-color: #28a745;
-    border-color: #28a745;
-    box-shadow: 0 2px 4px rgba(40, 167, 69, 0.2);
+    background-color: #357ae8;
+    border-color: #357ae8;
+    box-shadow: 0 2px 4px rgba(77, 144, 254, 0.2);
+}
+
+.post-meta .pictures-link {
+    background-color: #4d90fe;
+    border-color: #4d90fe;
+    color: white;
+}
+
+.post-meta .pictures-link:hover {
+    background-color: #357ae8;
+    border-color: #357ae8;
+    box-shadow: 0 2px 4px rgba(77, 144, 254, 0.2);
 }
 
 /* For markdown pages (like projects, about, etc.) */
@@ -1223,6 +1245,17 @@ textarea {
 /* Running page styles */
 .running-container {
   max-width: 100%;
+}
+
+.running-container h1:first-child {
+  margin-top: 0;
+  padding-top: 10px;
+}
+
+/* Fix spacing for markdown pages (about, etc.) */
+.mainBody h1:first-child {
+  margin-top: 0;
+  padding-top: 10px;
 }
 
 .totals-section {

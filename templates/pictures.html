@@ -2,9 +2,9 @@
   <div class="pictures-gallery">
     <h1>
       {{if .FilterTag}}
-        {{.FilterTag | title}} Pictures Gallery
+        <a href="/all?tag={{.FilterTag}}">{{.FilterTag | title}}</a> Pictures Gallery
       {{else if gt .FilterBlogID 0}}
-        Pictures from Blog Post: {{.BlogPostTitle}}
+        Pictures from Blog Post: <a href="/blog/{{.FilterBlogID}}">{{.BlogPostTitle}}</a>
       {{else}}
         Pictures Gallery
       {{end}}
@@ -16,13 +16,7 @@
         </div>
       {{end}}
     </div>
-    {{if .FilterTag}}
-      <p style="margin-top:2em;">All images are from blog posts tagged <b><a href="/all?tag={{.FilterTag}}">{{.FilterTag}}</a></b>. Click any image to view in lightbox.</p>
-    {{else if gt .FilterBlogID 0}}
-      <p style="margin-top:2em;">All images are from blog post <a href="/blog/{{.FilterBlogID}}">{{.BlogPostTitle}}</a>. Click any image to view in lightbox.</p>
-    {{else}}
-      <p style="margin-top:2em;">All images are from blog posts. Click any image to view in lightbox.</p>
-    {{end}}
+
   </div>
   <script>
     // Lightbox for gallery images
