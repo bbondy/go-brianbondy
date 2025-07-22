@@ -144,7 +144,7 @@ article h1:nth-child(1) {
 h1 {
   font-size: 1.5em;
   line-height: 1.2em;
-  margin-top: 1em;
+  margin-top: 0;
   margin-bottom: 15px;
   padding-bottom: 4px;
   border-bottom: 1px dotted #c8c8c8;
@@ -568,15 +568,15 @@ textarea {
 }
 
 .post-meta .pictures-link {
-    background-color: #4d90fe;
-    border-color: #4d90fe;
+    background-color: #06b6d4;
+    border-color: #06b6d4;
     color: white;
 }
 
 .post-meta .pictures-link:hover {
-    background-color: #357ae8;
-    border-color: #357ae8;
-    box-shadow: 0 2px 4px rgba(77, 144, 254, 0.2);
+    background-color: #0891b2;
+    border-color: #0891b2;
+    box-shadow: 0 2px 4px rgba(6, 182, 212, 0.2);
 }
 
 /* For markdown pages (like projects, about, etc.) */
@@ -1255,7 +1255,7 @@ textarea {
 /* Fix spacing for markdown pages (about, etc.) */
 .mainBody h1:first-child {
   margin-top: 0;
-  padding-top: 10px;
+  padding-top: 0;
 }
 
 .totals-section {
@@ -1987,8 +1987,8 @@ img[loading="lazy"] {
 }
 
 .pictures-link {
-  background-color: #4d90fe;
+  background-color: #06b6d4;
 }
 .pictures-link:hover {
-  background-color: #357ae8;
+  background-color: #0891b2;
 }
