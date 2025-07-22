@@ -1,0 +1,41 @@
+import json
+import glob
+import os
+
+MANIFEST_PATH = 'data/blogPostManifest.json'
+OUTPUT_PATH = 'data/picturesManifest.json'
+IMG_GLOB = 'static/img/blogpost_{}/'  # id
+IMG_EXT = '*.webp'
+TAGS = ['running', 'brave']  # Add more tags as needed
+
+def main():
+    # Load blog post manifest
+    with open(MANIFEST_PATH, 'r') as f:
+        posts = json.load(f)
+
+    # Find all blog post ids with any of the tags in TAGS
+    selected_ids = set()
+    for post in posts:
+        if 'tags' in post and any(tag in TAGS for tag in post['tags']):
+            selected_ids.add(post['id'])
+
+    # For each id, list all .webp images and include tags
+    id_to_tags = {post['id']: post['tags'] for post in posts if 'id' in post and 'tags' in post}
+    pictures = []
+    for id in selected_ids:
+        img_dir = IMG_GLOB.format(id)
+        img_paths = glob.glob(os.path.join(img_dir, IMG_EXT))
+        tags = id_to_tags.get(id, [])
+        allowed_tags = [tag for tag in tags if tag in TAGS]
+        for img_path in img_paths:
+            pictures.append({'id': id, 'image': img_path, 'tags': allowed_tags})
+
+    # Sort by id descending
+    pictures.sort(key=lambda x: x['id'], reverse=True)
+
+    # Write manifest
+    with open(OUTPUT_PATH, 'w') as f:
+        json.dump(pictures, f, indent=2)
+
+if __name__ == '__main__':
+    main() 

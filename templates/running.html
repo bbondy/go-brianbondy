@@ -1,16 +1,12 @@
 {{define "mountPoint"}}
   <div class="running-container">
     <h1>Memorable Runs</h1>
-    
-    {{/* Calculate totals */}}
     {{$totalMinutes := 0}}
     {{$totalKm := 0.0}}
     {{$totalMeters := 0}}
     {{$totalRuns := 0}}
-    
     {{range .Runs}}
       {{if .Time}}
-        {{/* Parse time to minutes */}}
         {{$timeStr := .Time}}
         {{if (contains $timeStr "h")}}
           {{$parts := split $timeStr "h"}}
@@ -38,9 +34,7 @@
           {{end}}
         {{end}}
       {{end}}
-      
       {{if .Distance}}
-        {{/* Parse distance to kilometers */}}
         {{$distanceStr := .Distance}}
         {{if (contains $distanceStr "mi")}}
           {{$parts := split $distanceStr "mi"}}
@@ -51,9 +45,7 @@
           {{end}}
         {{end}}
       {{end}}
-      
       {{if .Elevation}}
-        {{/* Parse elevation to meters */}}
         {{$elevationStr := .Elevation}}
         {{if (contains $elevationStr "ft")}}
           {{$parts := split $elevationStr "ft"}}
@@ -64,13 +56,19 @@
           {{end}}
         {{end}}
       {{end}}
-      
       {{$totalRuns = add $totalRuns 1}}
     {{end}}
     
     {{/* Display totals */}}
     <div class="totals-section">
-      <p class="totals-note">These totals represent only the memorable runs listed below, not including training runs, daily activities, or other workouts.</p>
+      <div style="display: flex; align-items: center; gap: 10px;">
+        <p class="totals-note" style="margin-bottom: 0;">
+          These totals represent only the memorable runs listed below, not including training runs, daily activities, or other workouts.
+        </p>
+        <a href="/pictures?tag=running" class="action-link pictures-link" aria-label="View Running Pictures Gallery" title="View Running Pictures Gallery">
+          <i class="fas fa-images"></i>
+        </a>
+      </div>
       <div class="totals-grid">
         <div class="total-item">
           <span class="total-label">Total Runs:</span>

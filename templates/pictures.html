@@ -1,0 +1,29 @@
+{{define "mountPoint"}}
+  <div class="pictures-gallery">
+    <h1>Pictures Gallery</h1>
+    <div class="pictures-grid">
+      {{range $i, $pic := .Pictures}}
+        <div class="picture-entry" data-id="{{$pic.Id}}">
+          <img src="/{{$pic.Image}}" alt="Running photo from blog post {{$pic.Id}}" class="gallery-image" data-index="{{$i}}" loading="lazy">
+        </div>
+      {{end}}
+    </div>
+  </div>
+  <script>
+    // Lightbox for gallery images
+    (function() {
+      function initGalleryLightbox() {
+        const galleryImages = document.querySelectorAll('.gallery-image');
+        if (galleryImages.length === 0) return;
+        window.images = Array.from(galleryImages); // for lightbox.js in base.html
+        images.forEach((img, index) => {
+          img.addEventListener('click', function(e) {
+            e.preventDefault();
+            if (window.openLightbox) window.openLightbox(index);
+          });
+        });
+      }
+      document.addEventListener('DOMContentLoaded', initGalleryLightbox);
+    })();
+  </script>
+{{end}} 

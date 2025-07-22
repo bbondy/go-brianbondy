@@ -97,8 +97,8 @@
     </style>
     
     <!-- Non-critical CSS loaded asynchronously -->
-    <link rel="stylesheet" href="/static/css/main.css?cachebust=127" media="print" onload="this.media='all'">
-    <noscript><link rel="stylesheet" href="/static/css/main.css?cachebust=127"></noscript>
+    <link rel="stylesheet" href="/static/css/main.css?cachebust=128" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="/static/css/main.css?cachebust=128"></noscript>
     
     <!-- Font Awesome loaded asynchronously -->
     <link rel="stylesheet" href="/static/font-awesome/css/all.min.css" media="print" onload="this.media='all'">
@@ -203,6 +203,7 @@
               <li><a href="/interviews">Interviews</a></li>
               <li><a href="/projects">Projects</a></li>
               <li><a href="/running">Running</a></li>
+              <li><a href="/pictures">Pictures Gallery</a></li>
             </ul>
           </div>
           
@@ -249,14 +250,14 @@
         
         let currentImageIndex = 0;
         let images = [];
+        window.images = images;
 
-        // Initialize lightbox for blog post images
-        function initLightbox() {
-          const blogImages = document.querySelectorAll('.blogPost img');
-          if (blogImages.length === 0) return;
-          
-          images = Array.from(blogImages);
-          
+        // Initialize lightbox for blog post images or gallery
+        function initLightbox(selector) {
+          const imgs = document.querySelectorAll(selector || '.blogPost img');
+          if (imgs.length === 0) return;
+          images = Array.from(imgs);
+          window.images = images;
           images.forEach((img, index) => {
             img.addEventListener('click', function(e) {
               e.preventDefault();
@@ -270,11 +271,11 @@
           const img = images[index];
           lightboxImage.src = img.src;
           lightboxImage.alt = img.alt || 'Blog post image';
-          
           updateCounter();
           lightbox.classList.add('show');
           document.body.style.overflow = 'hidden';
         }
+        window.openLightbox = openLightbox;
 
         function closeLightbox() {
           lightbox.classList.remove('show');
@@ -363,8 +364,12 @@
           touchEndX = 0;
         });
 
-        // Initialize lightbox immediately
-        initLightbox();
+        // Try to auto-detect gallery or blog context
+        if (document.querySelectorAll('.gallery-image').length > 0) {
+          initLightbox('.gallery-image');
+        } else {
+          initLightbox('.blogPost img');
+        }
       })();
 
       // Load remaining JavaScript after page load for better performance

@@ -6,7 +6,7 @@ strava-stats:
 	python3 scripts/fetch_strava_times.py
 
 # Default target - runs all essential tasks
-all: lint format test update-cache webp
+all: lint format test update-cache webp pictures-manifest
 
 # Code quality
 format:
@@ -49,6 +49,10 @@ blog-images:
 # Fetch GitHub statistics for projects
 github-stats:
 	python3 scripts/fetch_github_stats.py
+
+# Generate pictures manifest for running-tagged blog posts
+pictures-manifest:
+	python3 scripts/generate_pictures_manifest.py
 
 # Build for production (everything except deploy)
 build: all

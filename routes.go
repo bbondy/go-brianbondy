@@ -44,6 +44,10 @@ func initializeRoutes(router *mux.Router) {
 	handleRunning := negroni.New(
 		negroni.HandlerFunc(directToHttps),
 		negroni.Wrap(http.HandlerFunc(runningHandler)))
+	handlePictures := negroni.New(
+		negroni.HandlerFunc(directToHttps),
+		negroni.Wrap(http.HandlerFunc(picturesHandler)),
+	)
 
 	router.Handle("/", handleHome)
 	router.Handle("/rss", handleRSS)
@@ -79,6 +83,7 @@ func initializeRoutes(router *mux.Router) {
 	router.Handle("/resume", getMarkdownTemplateHandler("Resume", "resume.markdown", "/resume"))
 	router.Handle("/running", handleRunning)
 	router.Handle("/all", handleAllPosts)
+	router.Handle("/pictures", handlePictures)
 
 	// 404 handler for unmatched routes
 	router.NotFoundHandler = negroni.New(

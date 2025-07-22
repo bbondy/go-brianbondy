@@ -1,10 +1,12 @@
 package main
 
 import (
+	"encoding/json"
 	"fmt"
 	"html/template"
 	"log"
 	"net/http"
+	"os"
 	"strconv"
 	"strings"
 	"time"
@@ -648,4 +650,44 @@ func blogPostPageHandler(w http.ResponseWriter, r *http.Request) {
 	}
 
 	errorPage(w, "No blog posts found", "blog")
+}
+
+func picturesHandler(w http.ResponseWriter, r *http.Request) {
+	var pictures []data.Picture
+	f, err := os.Open("data/picturesManifest.json")
+	if err != nil {
+		errorPage(w, "Could not open pictures manifest", "pictures")
+		return
+	}
+	defer f.Close()
+	if err := json.NewDecoder(f).Decode(&pictures); err != nil {
+		errorPage(w, "Could not parse pictures manifest", "pictures")
+		return
+	}
+
+	tag := r.URL.Query().Get("tag")
+	if tag != "" {
+		filtered := make([]data.Picture, 0, len(pictures))
+		tagLower := strings.ToLower(tag)
+		for _, pic := range pictures {
+			for _, t := range pic.Tags {
+				if strings.ToLower(t) == tagLower {
+					filtered = append(filtered, pic)
+					break
+				}
+			}
+		}
+		pictures = filtered
+	}
+
+	p := &data.PicturesPage{
+		Title:        "Running Pictures Gallery",
+		MarkdownSlug: "pictures",
+		Pictures:     pictures,
+	}
+	t := template.Must(template.New("base.html").Funcs(funcMap).ParseFiles("templates/base.html", "templates/pictures.html"))
+	err = t.Execute(w, p)
+	if err != nil {
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+	}
 }

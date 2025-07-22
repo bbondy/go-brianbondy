@@ -66,3 +66,15 @@ type ProjectsPage struct {
 	MarkdownSlug string
 	Projects     Projects
 }
+
+type Picture struct {
+	Id    int      `json:"id"`
+	Image string   `json:"image"`
+	Tags  []string `json:"tags"`
+}
+
+type PicturesPage struct {
+	Title        string
+	MarkdownSlug string
+	Pictures     []Picture
+}

@@ -1874,3 +1874,48 @@ img[loading="lazy"] {
   color: #666;
   text-align: right;
 }
+
+/* Pictures gallery styles */
+.pictures-gallery {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2em 0;
+}
+.pictures-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+}
+.picture-entry {
+  flex: 0 1 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f8fafc;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+  padding: 8px;
+  transition: box-shadow 0.2s;
+}
+.picture-entry:hover {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.13);
+}
+.gallery-image {
+  max-width: 160px;
+  max-height: 120px;
+  border-radius: 4px;
+  cursor: pointer;
+  object-fit: cover;
+  transition: transform 0.15s;
+}
+.gallery-image:hover {
+  transform: scale(1.04);
+}
+
+.pictures-link {
+  background-color: #4d90fe;
+}
+.pictures-link:hover {
+  background-color: #357ae8;
+}
