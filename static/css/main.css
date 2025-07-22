@@ -1,17 +1,475 @@
+/* CSS Variables for theming */
+:root {
+  --bg-color: #f8fafc;
+  --text-color: #4a5568;
+  --heading-color: #2d3748;
+  --link-color: #4d90fe;
+  --topbar-bg: #ffffff;
+  --mainbody-bg: #ffffff;
+  --border-color: #c8c8c8;
+  --shadow-color: rgba(0, 0, 0, 0.05);
+  --shadow-color-light: rgba(0, 0, 0, 0.03);
+  --topbar-shadow: 0 1px 3px var(--shadow-color);
+  --mainbody-shadow: 0 1px 3px var(--shadow-color-light);
+  --transition: all 0.3s ease;
+}
+
+[data-theme="dark"] {
+  --bg-color: #1a202c;
+  --text-color: #e2e8f0;
+  --heading-color: #f7fafc;
+  --link-color: #63b3ed;
+  --topbar-bg: #2d3748;
+  --mainbody-bg: #2d3748;
+  --border-color: #4a5568;
+  --shadow-color: rgba(0, 0, 0, 0.3);
+  --shadow-color-light: rgba(0, 0, 0, 0.2);
+  --topbar-shadow: 0 1px 3px var(--shadow-color);
+  --mainbody-shadow: 0 1px 3px var(--shadow-color-light);
+}
+
+/* Dark mode specific overrides */
+[data-theme="dark"] .tag {
+  background-color: #4a5568;
+  color: #e2e8f0;
+  border: 1px solid #718096;
+}
+
+[data-theme="dark"] .tag:hover {
+  background-color: #63b3ed;
+  color: #1a202c;
+  border-color: #63b3ed;
+}
+
+[data-theme="dark"] .blogPostPreview {
+  background-color: #2d3748;
+  border: 1px solid #4a5568;
+}
+
+[data-theme="dark"] .blogPostPreview:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  border-color: #63b3ed;
+}
+
+/* Dark mode styles for blog post preview content */
+[data-theme="dark"] .blogPostPreview .preview {
+  color: #e2e8f0;
+}
+
+[data-theme="dark"] .blogPostPreview .datePosted {
+  border-bottom-color: #4a5568;
+  color: #a0aec0;
+}
+
+[data-theme="dark"] .previewContainer {
+  background-color: #2d3748;
+}
+
+[data-theme="dark"] .allPostsSection {
+  border-top-color: #4a5568;
+}
+
+[data-theme="dark"] .allPostsSection h2 {
+  color: #f7fafc;
+}
+
+/* Dark mode styles for social user icon */
+[data-theme="dark"] .social-trigger .fa-user {
+  color: #e2e8f0;
+}
+
+[data-theme="dark"] .social-trigger:hover .fa-user {
+  color: #63b3ed;
+}
+
+[data-theme="dark"] .site-footer {
+  background-color: #2d3748;
+  border-top: 1px solid #4a5568;
+}
+
+[data-theme="dark"] .footer-section h4 {
+  color: #f7fafc;
+}
+
+[data-theme="dark"] .footer-section a {
+  color: #e2e8f0;
+}
+
+[data-theme="dark"] .footer-section a:hover {
+  color: #63b3ed;
+}
+
+[data-theme="dark"] input,
+[data-theme="dark"] textarea {
+  background-color: #4a5568;
+  color: #e2e8f0;
+  border: 1px solid #718096;
+}
+
+[data-theme="dark"] input:focus,
+[data-theme="dark"] textarea:focus {
+  border-color: #63b3ed;
+  box-shadow: 0 0 0 3px rgba(99, 179, 237, 0.1);
+}
+
+/* Dark mode styles for running page and other card components */
+[data-theme="dark"] .totals-section {
+  background-color: #2d3748;
+  border: 1px solid #4a5568;
+  color: #e2e8f0;
+}
+
+[data-theme="dark"] .totals-note {
+  color: #e2e8f0 !important;
+}
+
+[data-theme="dark"] .total-label {
+  color: #e2e8f0 !important;
+}
+
+[data-theme="dark"] .total-value {
+  color: #f7fafc !important;
+}
+
+[data-theme="dark"] .run-card {
+  background-color: #2d3748;
+  border: 1px solid #4a5568;
+  color: #e2e8f0;
+}
+
+[data-theme="dark"] .run-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  border-color: #63b3ed;
+}
+
+[data-theme="dark"] .run-title a {
+  color: #63b3ed;
+}
+
+[data-theme="dark"] .run-title a:hover {
+  color: #90cdf4;
+}
+
+[data-theme="dark"] .run-date {
+  color: #a0aec0;
+}
+
+[data-theme="dark"] .run-time,
+[data-theme="dark"] .run-distance,
+[data-theme="dark"] .run-elevation,
+[data-theme="dark"] .run-description {
+  color: #e2e8f0;
+}
+
+[data-theme="dark"] .run-time strong,
+[data-theme="dark"] .run-distance strong,
+[data-theme="dark"] .run-elevation strong {
+  color: #f7fafc;
+}
+
+/* Dark mode styles for other card components */
+[data-theme="dark"] .card-entry,
+[data-theme="dark"] .interview-entry,
+[data-theme="dark"] .book-card,
+[data-theme="dark"] .advice-card {
+  background-color: #2d3748;
+  border: 1px solid #4a5568;
+  color: #e2e8f0;
+}
+
+/* Project entry doesn't need its own border since it's inside card-entry */
+[data-theme="dark"] .project-entry {
+  background-color: transparent;
+  color: #e2e8f0;
+}
+
+[data-theme="dark"] .card-entry:hover,
+[data-theme="dark"] .interview-entry:hover,
+[data-theme="dark"] .book-card:hover,
+[data-theme="dark"] .advice-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  border-color: #63b3ed;
+}
+
+/* Project entry hover doesn't need border changes since it's inside card-entry */
+[data-theme="dark"] .project-entry:hover {
+  background-color: transparent;
+}
+
+[data-theme="dark"] .card-entry h3 a,
+[data-theme="dark"] .project-entry h3 a,
+[data-theme="dark"] .interview-entry h3 a,
+[data-theme="dark"] .book-card h3 a,
+[data-theme="dark"] .advice-card h3 a {
+  color: #63b3ed;
+}
+
+[data-theme="dark"] .card-entry h3 a:hover,
+[data-theme="dark"] .project-entry h3 a:hover,
+[data-theme="dark"] .interview-entry h3 a:hover,
+[data-theme="dark"] .book-card h3 a:hover,
+[data-theme="dark"] .advice-card h3 a:hover {
+  color: #90cdf4;
+}
+
+[data-theme="dark"] .card-details,
+[data-theme="dark"] .project-content,
+[data-theme="dark"] .interview-content,
+[data-theme="dark"] .book-details,
+[data-theme="dark"] .advice-entry .answer {
+  color: #e2e8f0;
+}
+
+[data-theme="dark"] .book-author,
+[data-theme="dark"] .book-meta,
+[data-theme="dark"] .interview-meta,
+[data-theme="dark"] .interview-date,
+[data-theme="dark"] .interview-platform {
+  color: #a0aec0;
+}
+
+/* Dark mode styles for other components */
+[data-theme="dark"] .other-entry {
+  background-color: #2d3748;
+  border: 1px solid #4a5568;
+  color: #e2e8f0;
+}
+
+[data-theme="dark"] .other-entry:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  border-color: #63b3ed;
+}
+
+[data-theme="dark"] .other-entry h3 a {
+  color: #63b3ed;
+}
+
+[data-theme="dark"] .other-entry h3 a:hover {
+  color: #90cdf4;
+}
+
+[data-theme="dark"] .other-details {
+  color: #a0aec0;
+}
+
+[data-theme="dark"] .postListItem {
+  background-color: #2d3748;
+  border: 1px solid #4a5568;
+  color: #e2e8f0;
+}
+
+[data-theme="dark"] .postListItem:hover {
+  background-color: rgba(99, 179, 237, 0.15) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  border-color: #63b3ed;
+}
+
+[data-theme="dark"] .postListItem .postTitle a {
+  color: #63b3ed;
+}
+
+[data-theme="dark"] .postListItem .postTitle a:hover {
+  color: #90cdf4;
+}
+
+[data-theme="dark"] .postListItem .postDate {
+  color: #a0aec0;
+}
+
+[data-theme="dark"] .postTags a {
+  background-color: #4a5568;
+  color: #e2e8f0;
+  border: 1px solid #718096;
+}
+
+[data-theme="dark"] .postTags a:hover {
+  background-color: #63b3ed;
+  color: #1a202c;
+  border-color: #63b3ed;
+}
+
+/* Dark mode styles for filters and navigation */
+[data-theme="dark"] .filtersContainer {
+  background-color: #2d3748;
+  border: 1px solid #4a5568;
+}
+
+[data-theme="dark"] .tagContainer {
+  background-color: #2d3748;
+}
+
+[data-theme="dark"] .yearTag {
+  background-color: #4a5568;
+  color: #e2e8f0;
+  border: 1px solid #718096;
+}
+
+[data-theme="dark"] .yearTag:hover {
+  background-color: #63b3ed;
+  color: #1a202c;
+  border-color: #63b3ed;
+}
+
+/* Dark mode styles for action links */
+[data-theme="dark"] .action-link {
+  background-color: #4a5568;
+  color: #e2e8f0;
+  border: 1px solid #718096;
+}
+
+[data-theme="dark"] .action-link:hover {
+  background-color: #63b3ed;
+  color: #ffffff;
+  border-color: #63b3ed;
+}
+
+[data-theme="dark"] .strava-link {
+  background-color: #ee5d2a;
+  color: #ffffff;
+}
+
+[data-theme="dark"] .strava-link:hover {
+  background-color: #d44a1f;
+}
+
+[data-theme="dark"] .blog-link {
+  background-color: #4d90fe;
+  color: #ffffff;
+}
+
+[data-theme="dark"] .blog-link:hover {
+  background-color: #357ae8;
+}
+
+[data-theme="dark"] .pictures-link {
+  background-color: #06b6d4;
+  color: #ffffff;
+}
+
+[data-theme="dark"] .pictures-link:hover {
+  background-color: #0891b2;
+}
+
+/* Dark mode styles for website and github links */
+[data-theme="dark"] .website-link {
+  background-color: #10b981 !important;
+}
+
+[data-theme="dark"] .website-link:hover {
+  background-color: #059669 !important;
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .github-link {
+  background-color: #374151 !important;
+}
+
+[data-theme="dark"] .github-link:hover {
+  background-color: #1f2937 !important;
+  color: #ffffff !important;
+}
+
+/* Dark mode styles for project icon links */
+[data-theme="dark"] .project-icon-link[title="Website"] {
+  background-color: #10b981 !important;
+}
+
+[data-theme="dark"] .project-icon-link[title="Website"]:hover {
+  background-color: #059669 !important;
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .project-icon-link[title="GitHub"] {
+  background-color: #374151 !important;
+}
+
+[data-theme="dark"] .project-icon-link[title="GitHub"]:hover {
+  background-color: #1f2937 !important;
+  color: #ffffff !important;
+}
+
+/* Dark mode styles for blog posts */
+[data-theme="dark"] .blogPost {
+  color: #e2e8f0;
+}
+
+[data-theme="dark"] .blogPost p {
+  color: #e2e8f0;
+}
+
+[data-theme="dark"] .blogPost li {
+  color: #e2e8f0;
+}
+
+[data-theme="dark"] .blogPost blockquote {
+  color: #e2e8f0;
+  border-left: 4px solid #63b3ed;
+  background-color: rgba(99, 179, 237, 0.1);
+  padding: 10px 15px;
+  margin: 15px 0;
+}
+
+[data-theme="dark"] .blogPost code {
+  background-color: #4a5568;
+  color: #e2e8f0;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+}
+
+[data-theme="dark"] .blogPost pre {
+  background-color: #2d3748;
+  color: #e2e8f0;
+  padding: 15px;
+  border-radius: 8px;
+  overflow-x: auto;
+  border: 1px solid #4a5568;
+}
+
+[data-theme="dark"] .blogPost pre code {
+  background-color: transparent;
+  padding: 0;
+  color: #e2e8f0;
+}
+
+[data-theme="dark"] .blogPost table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 15px 0;
+}
+
+[data-theme="dark"] .blogPost table th,
+[data-theme="dark"] .blogPost table td {
+  border: 1px solid #4a5568;
+  padding: 8px 12px;
+  color: #e2e8f0;
+}
+
+[data-theme="dark"] .blogPost table th {
+  background-color: #4a5568;
+  color: #f7fafc;
+  font-weight: 600;
+}
+
+[data-theme="dark"] .blogPost table tr:nth-child(even) {
+  background-color: rgba(74, 85, 104, 0.3);
+}
+
 hr {
   margin: 20px 0;
   border: none;
-  border-top: 1px solid #edf2f7;
+  border-top: 1px solid var(--border-color);
 }
 body {
-  background-color: #f8fafc;
-  color: #4a5568;
+  background-color: var(--bg-color);
+  color: var(--text-color);
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
   font-size: 1em;
   line-height: 1.5;
   margin: 0 auto 0 auto;
   max-width: 100vw;
   min-width: 100vw;
+  transition: var(--transition);
 }
 .content {
   max-width: 800px;
@@ -19,15 +477,17 @@ body {
 }
 a {
   text-decoration: none;
-  color: #4d90fe;
+  color: var(--link-color);
+  transition: var(--transition);
 }
 .topBar {
-  background-color: #ffffff;
+  background-color: var(--topbar-bg);
   border: none;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  box-shadow: var(--topbar-shadow);
   border-radius: 12px;
   margin: 15px 0;
   list-style-type: none;
+  transition: var(--transition);
 }
 .topBar img {
   float: left;
@@ -51,14 +511,14 @@ a {
   margin: 0 auto;
 }
 .topBar li {
-  color: #4a5568;
+  color: var(--text-color);
   display: inline-block;
   padding: 10px 14px;
-  transition: all 0.2s ease;
+  transition: var(--transition);
 }
 .topBar li:hover:not(.social) {
-  background-color: #f7fafc;
-  color: #4d90fe;
+  background-color: rgba(99, 179, 237, 0.1);
+  color: var(--link-color);
 }
 .topBar li.social {
   float: right;
@@ -73,8 +533,8 @@ a {
   transform: translateY(-2px);
 }
 .topBar li.current {
-  color: #4d90fe;
-  border-bottom: 2px solid #4d90fe;
+  color: var(--link-color);
+  border-bottom: 2px solid var(--link-color);
 }
 .topBar li .fa-twitter {
   color: #00ABF1;
@@ -100,10 +560,11 @@ a {
   color: black;
 }
 .mainBody {
-  background-color: #ffffff;
+  background-color: var(--mainbody-bg);
   padding: 18px 20px 40px 20px;
   border-radius: 12px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+  box-shadow: var(--mainbody-shadow);
+  transition: var(--transition);
 }
 
 .mainBody > div {
@@ -113,7 +574,8 @@ a {
 .blogPost {
   margin-bottom: 60px;
   overflow-wrap: break-word;
-  color: #2d3748;
+  color: var(--text-color);
+  transition: var(--transition);
 }
 .blogPost img,
 .blogPost iframe {
@@ -133,7 +595,8 @@ h6 {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   font-weight: 600;
   line-height: 1.2;
-  color: #2d3748;
+  color: var(--heading-color);
+  transition: var(--transition);
 }
 li + li {
   padding: 5px 0;
@@ -147,7 +610,7 @@ h1 {
   margin-top: 0;
   margin-bottom: 15px;
   padding-bottom: 4px;
-  border-bottom: 1px dotted #c8c8c8;
+  border-bottom: 1px dotted var(--border-color);
 }
 h2 {
   font-size: 1.2em;
@@ -420,7 +883,7 @@ textarea {
 }
 
 .postListItem:hover {
-    background-color: #f7fafc;
+    background-color: rgba(99, 179, 237, 0.1);
 }
 
 .postListItem .postDate {
@@ -478,7 +941,7 @@ textarea {
 }
 
 .postListItem:hover {
-    background-color: #f7fafc;
+    background-color: rgba(99, 179, 237, 0.1);
 }
 
 .postListItem .postDate {
@@ -1259,19 +1722,21 @@ textarea {
 }
 
 .totals-section {
-  background: #fff;
-  border: 2px solid #e2e8f0;
+  background: var(--mainbody-bg);
+  border: 2px solid var(--border-color);
   border-radius: 18px;
   padding: 16px 12px 12px 12px;
   margin: 0 0 24px 0;
   box-shadow: 0 2px 8px rgba(77, 144, 254, 0.04);
   max-width: 100%;
+  transition: var(--transition);
 }
 .totals-note {
   font-size: 1em;
-  color: #4a5568;
+  color: var(--text-color);
   margin-bottom: 10px;
   margin-top: 0;
+  transition: var(--transition);
 }
 .totals-grid {
   display: grid;
@@ -1281,7 +1746,7 @@ textarea {
   align-items: center;
 }
 .total-item {
-  background: #fff;
+  background: var(--mainbody-bg);
   border-radius: 10px;
   padding: 8px 14px;
   min-width: 120px;
@@ -1291,16 +1756,19 @@ textarea {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  transition: var(--transition);
 }
 .totals-label {
   font-size: 0.95em;
-  color: #4a5568;
+  color: var(--text-color);
   margin-bottom: 2px;
+  transition: var(--transition);
 }
 .total-value {
   font-size: 1.25em;
   font-weight: 600;
-  color: #2d3748;
+  color: var(--heading-color);
+  transition: var(--transition);
 }
 @media (max-width: 700px) {
   .totals-grid {
@@ -1321,18 +1789,18 @@ textarea {
 }
 
 .run-card {
-  background: #ffffff;
-  border: 1px solid #e2e8f0;
+  background: var(--mainbody-bg);
+  border: 1px solid var(--border-color);
   border-radius: 12px;
   padding: 20px;
-  transition: all 0.2s ease;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  transition: var(--transition);
+  box-shadow: var(--mainbody-shadow);
 }
 
 .run-card:hover {
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  border-color: #4d90fe;
+  border-color: var(--link-color);
 }
 
 .run-header {
