@@ -21,11 +21,19 @@
         <span class="postDate">{{.PostDate}}</span>
         <div class="postInfo">
           <a href="{{.PostUrl}}" class="postTitle">{{.BlogPost.Title}}</a>
-          {{if .BlogPost.Tags}}
-            <span class="postTags">
-              — {{range $index, $tag := .BlogPost.Tags}}{{if $index}}, {{end}}<a href="{{tagUrl .}}">{{.}}</a>{{end}}
-            </span>
-          {{end}}
+          <div class="post-meta">
+            <a href="{{.PostUrl}}" class="action-link blog-link" title="Read blog post" aria-label="Read blog post">
+              <i class="fas fa-blog"></i>
+            </a>
+            <a href="/pictures?blog_id={{.BlogPost.Id}}" class="action-link pictures-link" title="View pictures from this blog post" aria-label="View pictures from this blog post">
+              <i class="fas fa-images"></i>
+            </a>
+            {{if .BlogPost.Tags}}
+              <span class="postTags">
+                {{range $index, $tag := .BlogPost.Tags}}<a href="{{tagUrl .}}" class="tag">{{.}}</a>{{end}}
+              </span>
+            {{end}}
+          </div>
         </div>
       </div>
     {{end}}

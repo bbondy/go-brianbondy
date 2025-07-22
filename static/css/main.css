@@ -519,6 +519,44 @@ textarea {
     text-decoration: underline;
 }
 
+.post-meta {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.post-meta .action-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f7fafc;
+    color: #4a5568;
+    padding: 6px 12px;
+    text-decoration: none;
+    font-size: 0.9em;
+    border-radius: 6px;
+    border: 1px solid #e2e8f0;
+    transition: all 0.2s ease;
+    height: 32px;
+    width: 32px;
+}
+
+.post-meta .action-link:hover {
+    background-color: #4d90fe;
+    color: white;
+    border-color: #4d90fe;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(77, 144, 254, 0.2);
+}
+
+.post-meta .blog-link:hover {
+    background-color: #28a745;
+    border-color: #28a745;
+    box-shadow: 0 2px 4px rgba(40, 167, 69, 0.2);
+}
+
 /* For markdown pages (like projects, about, etc.) */
 .mainBody > div > h1:first-child,
 .mainBody > div > h2:first-child {
