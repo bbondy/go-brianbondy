@@ -148,14 +148,7 @@
   color: #6b7280;
 }
 
-/* Dark mode styles for social user icon */
-[data-theme="dark"] .social-trigger .fa-user {
-  color: #e2e8f0;
-}
 
-[data-theme="dark"] .social-trigger:hover .fa-user {
-  color: #63b3ed;
-}
 
 [data-theme="dark"] .site-footer {
   background-color: #2d3748;
@@ -172,6 +165,61 @@
 
 [data-theme="dark"] .footer-section a:hover {
   color: #63b3ed;
+}
+
+/* Footer social icons */
+.footer-section .fab {
+  margin-right: 8px;
+  font-size: 1.1em;
+}
+
+.footer-section .fab.fa-twitter {
+  color: #00ABF1;
+}
+
+.footer-section .fab.fa-strava {
+  color: #ee5d2a;
+}
+
+.footer-section .fab.fa-github {
+  color: #333;
+}
+
+.footer-section .fab.fa-linkedin {
+  color: #2667bc;
+}
+
+.footer-section .fab.fa-stack-overflow {
+  color: #f48024;
+}
+
+.footer-section .fab.fa-instagram {
+  color: #e4405f;
+}
+
+/* Dark mode styles for footer social icons */
+[data-theme="dark"] .footer-section .fab.fa-twitter {
+  color: #1da1f2;
+}
+
+[data-theme="dark"] .footer-section .fab.fa-strava {
+  color: #fc4c02;
+}
+
+[data-theme="dark"] .footer-section .fab.fa-github {
+  color: #f6f8fa;
+}
+
+[data-theme="dark"] .footer-section .fab.fa-linkedin {
+  color: #0a66c2;
+}
+
+[data-theme="dark"] .footer-section .fab.fa-stack-overflow {
+  color: #f48024;
+}
+
+[data-theme="dark"] .footer-section .fab.fa-instagram {
+  color: #e4405f;
 }
 
 [data-theme="dark"] input,
@@ -1373,85 +1421,7 @@ textarea {
   }
 }
 
-.social-menu {
-  float: right;
-  position: relative;
-  height: 39px;
-  display: flex;
-  align-items: center;
-  margin-right: 0px;
-}
 
-.social-trigger {
-  cursor: pointer;
-  padding: 10px 14px;
-  display: flex;
-  align-items: center;
-}
-
-.social-trigger .fa-user {
-  color: #2d3748;
-  font-size: 1em;
-  margin-right: 13px;
-  display: inline-flex;
-  align-items: center;
-  height: 16px;
-  transition: color 0.2s ease;
-}
-
-.social-trigger:hover .fa-user {
-  color: #4d90fe;
-}
-
-.social-links {
-  gap: 15px;
-  list-style: none;
-  margin: 0;
-  padding: 8px 0;
-  background: white;
-  border: 1px solid #e2e8f0;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.social-links li a span {
-  transition: transform 0.2s ease;
-}
-
-.social-links li a:hover span {
-  transform: translateY(-2px);
-}
-
-.social-links .fa-twitter {
-  color: #00ABF1;
-}
-
-.social-links .fa-strava {
-  color: #ee5d2a;
-}
-
-.social-links .fa-github {
-  color: black;
-}
-
-.social-links .fa-linkedin {
-  color: #2667bc;
-}
-
-.social-links .fa-stack-overflow {
-  color: #f48024;
-}
-
-.social-links .fa-instagram {
-  color: #e4405f;
-}
-
-@media (max-width: 768px) {
-  .social-links {
-    padding: 10px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  }
-}
 
 .other-container {
     display: grid;
