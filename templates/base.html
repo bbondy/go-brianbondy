@@ -170,8 +170,8 @@
     </style>
     
     <!-- Non-critical CSS loaded asynchronously -->
-    <link rel="stylesheet" href="/static/css/main.css?cachebust=158" media="print" onload="this.media='all'">
-    <noscript><link rel="stylesheet" href="/static/css/main.css?cachebust=158"></noscript>
+    <link rel="stylesheet" href="/static/css/main.css?cachebust=160" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="/static/css/main.css?cachebust=160"></noscript>
     
     <!-- Font Awesome loaded asynchronously -->
     <link rel="stylesheet" href="/static/font-awesome/css/all.min.css" media="print" onload="this.media='all'">
@@ -280,6 +280,11 @@
     <!-- Lightbox HTML -->
     <div id="lightbox" class="lightbox">
       <span class="lightbox-close">&times;</span>
+      <div class="lightbox-controls">
+        <button class="lightbox-zoom-in" id="lightbox-zoom-in" title="Zoom In">+</button>
+        <button class="lightbox-zoom-out" id="lightbox-zoom-out" title="Zoom Out">−</button>
+        <button class="lightbox-reset" id="lightbox-reset" title="Reset Zoom">⟲</button>
+      </div>
       <div class="lightbox-content">
         <img class="lightbox-image" id="lightbox-image" src="" alt="">
       </div>
@@ -298,9 +303,18 @@
         const lightboxPrev = document.getElementById('lightbox-prev');
         const lightboxNext = document.getElementById('lightbox-next');
         const lightboxCounter = document.getElementById('lightbox-counter');
+        const lightboxZoomIn = document.getElementById('lightbox-zoom-in');
+        const lightboxZoomOut = document.getElementById('lightbox-zoom-out');
+        const lightboxReset = document.getElementById('lightbox-reset');
         
         let currentImageIndex = 0;
         let images = [];
+        let currentZoom = 1;
+        let isDragging = false;
+        let dragStartX = 0;
+        let dragStartY = 0;
+        let translateX = 0;
+        let translateY = 0;
         window.images = images;
 
         // Initialize lightbox for blog post images or gallery
@@ -317,11 +331,23 @@
           });
         }
 
+        function resetZoom() {
+          currentZoom = 1;
+          translateX = 0;
+          translateY = 0;
+          updateImageTransform();
+        }
+
+        function updateImageTransform() {
+          lightboxImage.style.transform = `scale(${currentZoom}) translate(${translateX}px, ${translateY}px)`;
+        }
+
         function openLightbox(index) {
           currentImageIndex = index;
           const img = images[index];
           lightboxImage.src = img.src;
           lightboxImage.alt = img.alt || 'Blog post image';
+          resetZoom();
           updateCounter();
           lightbox.classList.add('show');
           document.body.style.overflow = 'hidden';
@@ -358,6 +384,86 @@
           }
         }
 
+        // Zoom control event listeners
+        lightboxZoomIn.addEventListener('click', function() {
+          if (currentZoom < 3) {
+            currentZoom += 0.5;
+            updateImageTransform();
+          }
+        });
+
+        lightboxZoomOut.addEventListener('click', function() {
+          if (currentZoom > 0.5) {
+            currentZoom -= 0.5;
+            updateImageTransform();
+          }
+        });
+
+        lightboxReset.addEventListener('click', resetZoom);
+
+        // Mouse wheel zoom
+        lightboxImage.addEventListener('wheel', function(e) {
+          e.preventDefault();
+          if (e.deltaY < 0) {
+            // Zoom in
+            if (currentZoom < 3) {
+              currentZoom += 0.2;
+              updateImageTransform();
+            }
+          } else {
+            // Zoom out
+            if (currentZoom > 0.5) {
+              currentZoom -= 0.2;
+              updateImageTransform();
+            }
+          }
+        });
+
+        // Mouse drag functionality
+        lightboxImage.addEventListener('mousedown', function(e) {
+          if (currentZoom > 1) {
+            isDragging = true;
+            dragStartX = e.clientX - translateX;
+            dragStartY = e.clientY - translateY;
+            lightboxImage.style.cursor = 'grabbing';
+          }
+        });
+
+        document.addEventListener('mousemove', function(e) {
+          if (isDragging && currentZoom > 1) {
+            translateX = e.clientX - dragStartX;
+            translateY = e.clientY - dragStartY;
+            updateImageTransform();
+          }
+        });
+
+        document.addEventListener('mouseup', function() {
+          isDragging = false;
+          lightboxImage.style.cursor = 'grab';
+        });
+
+        // Touch support for mobile
+        lightboxImage.addEventListener('touchstart', function(e) {
+          if (currentZoom > 1 && e.touches.length === 1) {
+            isDragging = true;
+            dragStartX = e.touches[0].clientX - translateX;
+            dragStartY = e.touches[0].clientY - translateY;
+          }
+        });
+
+        document.addEventListener('touchmove', function(e) {
+          if (isDragging && currentZoom > 1 && e.touches.length === 1) {
+            e.preventDefault();
+            translateX = e.touches[0].clientX - dragStartX;
+            translateY = e.touches[0].clientY - dragStartY;
+            updateImageTransform();
+          }
+        });
+
+        document.addEventListener('touchend', function() {
+          isDragging = false;
+        });
+
         // Event listeners
         lightboxClose.addEventListener('click', closeLightbox);
         lightboxPrev.addEventListener('click', showPrev);
@@ -376,6 +482,22 @@
           switch(e.key) {
             case 'Escape':
               closeLightbox();
+              break;
+            case '+':
+            case '=':
+              if (currentZoom < 3) {
+                currentZoom += 0.5;
+                updateImageTransform();
+              }
+              break;
+            case '-':
+              if (currentZoom > 0.5) {
+                currentZoom -= 0.5;
+                updateImageTransform();
+              }
+              break;
+            case '0':
+              resetZoom();
               break;
             case 'ArrowLeft':
               showPrev();
