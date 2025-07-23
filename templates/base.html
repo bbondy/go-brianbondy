@@ -866,6 +866,60 @@
             }, 2000);
           });
         };
+
+        // Swipe Navigation for Blog Posts
+        (function() {
+          // Only run on blog post pages
+          if (!document.querySelector('.blogPost')) return;
+          
+          let startX = 0;
+          let startY = 0;
+          let endX = 0;
+          let endY = 0;
+          const minSwipeDistance = 50;
+          const maxVerticalSwipe = 100;
+          
+          const prevPostLink = document.getElementById('prevPostLink');
+          const nextPostLink = document.getElementById('nextPostLink');
+          
+          if (!prevPostLink && !nextPostLink) return;
+          
+          function handleSwipe() {
+            const deltaX = endX - startX;
+            const deltaY = Math.abs(endY - startY);
+            
+            if (Math.abs(deltaX) > minSwipeDistance && deltaY < maxVerticalSwipe) {
+              if (deltaX > 0 && prevPostLink) {
+                // Swipe right - go to previous post
+                window.location.href = prevPostLink.href;
+              } else if (deltaX < 0 && nextPostLink) {
+                // Swipe left - go to next post
+                window.location.href = nextPostLink.href;
+              }
+            }
+          }
+          
+          // Touch events for mobile
+          document.addEventListener('touchstart', function(e) {
+            // Don't interfere with lightbox or other interactive elements
+            if (e.target.closest('.lightbox') || e.target.closest('a, button, input, textarea, select')) {
+              return;
+            }
+            startX = e.touches[0].clientX;
+            startY = e.touches[0].clientY;
+          });
+          
+          document.addEventListener('touchend', function(e) {
+            if (e.target.closest('.lightbox') || e.target.closest('a, button, input, textarea, select')) {
+              return;
+            }
+            endX = e.changedTouches[0].clientX;
+            endY = e.changedTouches[0].clientY;
+            handleSwipe();
+          });
+          
+
+        })();
       });
     </script>
   </body>

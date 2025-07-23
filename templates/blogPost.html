@@ -68,14 +68,16 @@
 
   <div class="navigationButtons">
     {{if .PrevPost}}
-    <a href="/blog/{{.PrevPost.Id}}/{{slugifyTitle .PrevPost.Title}}{{if .Tag}}?tag={{.Tag}}{{else if .Year}}?year={{.Year}}{{end}}">
+    <a href="/blog/{{.PrevPost.Id}}/{{slugifyTitle .PrevPost.Title}}{{if .Tag}}?tag={{.Tag}}{{else if .Year}}?year={{.Year}}{{end}}" id="prevPostLink">
       <span class="navigationButton">Previous: {{truncateTitle .PrevPost.Title}}</span>
     </a>
     {{end}}
     {{if .NextPost}}
-    <a href="/blog/{{.NextPost.Id}}/{{slugifyTitle .NextPost.Title}}{{if .Tag}}?tag={{.Tag}}{{else if .Year}}?year={{.Year}}{{end}}">
+    <a href="/blog/{{.NextPost.Id}}/{{slugifyTitle .NextPost.Title}}{{if .Tag}}?tag={{.Tag}}{{else if .Year}}?year={{.Year}}{{end}}" id="nextPostLink">
       <span class="navigationButton">Next: {{truncateTitle .NextPost.Title}}</span>
     </a>
     {{end}}
   </div>
+
+
 {{end}}
