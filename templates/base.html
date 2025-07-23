@@ -1,6 +1,30 @@
 <!DOCTYPE HTML>
 <html lang="en">
   <head>
+    <script>
+      // Prevent flash of unstyled content (FOUC) for dark mode
+      (function() {
+        try {
+          // Check localStorage first
+          var theme = localStorage.getItem('theme');
+          
+          // If no theme in localStorage, check system preference
+          if (!theme) {
+            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+              theme = 'dark';
+            } else {
+              theme = 'light';
+            }
+          }
+          
+          // Apply theme immediately to prevent flash
+          document.documentElement.setAttribute('data-theme', theme);
+        } catch (e) {
+          // Fallback to light theme if there's an error
+          document.documentElement.setAttribute('data-theme', 'light');
+        }
+      })();
+    </script>
     <meta charset="utf-8">
     <title>{{.Title}}</title>
     
@@ -156,8 +180,8 @@
     </style>
     
     <!-- Non-critical CSS loaded asynchronously -->
-    <link rel="stylesheet" href="/static/css/main.css?cachebust=154" media="print" onload="this.media='all'">
-    <noscript><link rel="stylesheet" href="/static/css/main.css?cachebust=154"></noscript>
+    <link rel="stylesheet" href="/static/css/main.css?cachebust=155" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="/static/css/main.css?cachebust=155"></noscript>
     
     <!-- Font Awesome loaded asynchronously -->
     <link rel="stylesheet" href="/static/font-awesome/css/all.min.css" media="print" onload="this.media='all'">
