@@ -154,6 +154,50 @@ var funcMap = template.FuncMap{
 		}
 		return strings.ToUpper(s[:1]) + strings.ToLower(s[1:])
 	},
+	"detectCodeLanguage": func(code string) string {
+		// Simple language detection based on code patterns
+		lines := strings.Split(code, "\n")
+		if len(lines) == 0 {
+			return "text"
+		}
+
+		firstLine := strings.TrimSpace(lines[0])
+
+		// Check for shebang
+		if strings.HasPrefix(firstLine, "#!/") {
+			if strings.Contains(firstLine, "python") {
+				return "python"
+			}
+			if strings.Contains(firstLine, "bash") || strings.Contains(firstLine, "sh") {
+				return "bash"
+			}
+			if strings.Contains(firstLine, "node") {
+				return "javascript"
+			}
+		}
+
+		// Check for common patterns
+		if strings.Contains(firstLine, "package main") {
+			return "go"
+		}
+		if strings.Contains(firstLine, "import ") && strings.Contains(firstLine, "(") {
+			return "go"
+		}
+		if strings.Contains(firstLine, "function ") || strings.Contains(firstLine, "const ") || strings.Contains(firstLine, "let ") {
+			return "javascript"
+		}
+		if strings.Contains(firstLine, "def ") || strings.Contains(firstLine, "import ") {
+			return "python"
+		}
+		if strings.Contains(firstLine, "<!DOCTYPE") || strings.Contains(firstLine, "<html") {
+			return "html"
+		}
+		if strings.Contains(firstLine, "{") && strings.Contains(firstLine, "}") {
+			return "json"
+		}
+
+		return "text"
+	},
 }
 
 func avail(name string, data interface{}) bool {

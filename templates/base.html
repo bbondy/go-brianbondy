@@ -170,8 +170,8 @@
     </style>
     
     <!-- Non-critical CSS loaded asynchronously -->
-    <link rel="stylesheet" href="/static/css/main.css?cachebust=160" media="print" onload="this.media='all'">
-    <noscript><link rel="stylesheet" href="/static/css/main.css?cachebust=160"></noscript>
+    <link rel="stylesheet" href="/static/css/main.css?cachebust=187" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="/static/css/main.css?cachebust=187"></noscript>
     
     <!-- Font Awesome loaded asynchronously -->
     <link rel="stylesheet" href="/static/font-awesome/css/all.min.css" media="print" onload="this.media='all'">
@@ -542,6 +542,228 @@
           initLightbox('.gallery-image');
         } else {
           initLightbox('.blogPost img');
+        }
+      })();
+
+      // Enhanced Code Block Functionality
+      (function() {
+        // Language detection patterns
+        const languagePatterns = {
+          'javascript': /\.(js|jsx|ts|tsx)$/i,
+          'python': /\.(py|pyw)$/i,
+          'go': /\.go$/i,
+          'html': /\.(html|htm)$/i,
+          'css': /\.css$/i,
+          'json': /\.json$/i,
+          'xml': /\.(xml|svg)$/i,
+          'bash': /\.(sh|bash|zsh)$/i,
+          'sql': /\.sql$/i,
+          'yaml': /\.(yml|yaml)$/i,
+          'markdown': /\.(md|markdown)$/i,
+          'dockerfile': /Dockerfile/i,
+          'makefile': /Makefile/i
+        };
+
+                    // Function to detect language from code content
+            function detectLanguage(code, className) {
+                // Check if language is already specified in class
+                if (className) {
+                    const langMatch = className.match(/language-(\w+)/);
+                    if (langMatch) return langMatch[1];
+                }
+                
+                // Get first few lines for analysis
+                const lines = code.split('\n');
+                const firstLine = lines[0].trim();
+                const secondLine = lines[1] ? lines[1].trim() : '';
+                const thirdLine = lines[2] ? lines[2].trim() : '';
+                
+                // Check for shebang
+                if (firstLine.startsWith('#!/')) {
+                    if (firstLine.includes('python')) return 'python';
+                    if (firstLine.includes('bash') || firstLine.includes('sh')) return 'bash';
+                    if (firstLine.includes('node')) return 'javascript';
+                }
+                
+                // Check for C/C++ patterns
+                if (firstLine.includes('size_t') || firstLine.includes('int ') || firstLine.includes('char ') || 
+                    firstLine.includes('void ') || firstLine.includes('float ') || firstLine.includes('double ')) {
+                    if (firstLine.includes('::') || firstLine.includes('class ') || firstLine.includes('namespace ')) {
+                        return 'cpp';
+                    }
+                    return 'c';
+                }
+                
+                // Check for Go patterns
+                if (firstLine.includes('package main') || firstLine.includes('package ')) return 'go';
+                if (firstLine.includes('import ') && firstLine.includes('(')) return 'go';
+                if (firstLine.includes('func ') || firstLine.includes('type ') || firstLine.includes('var ')) return 'go';
+                
+                // Check for JavaScript/TypeScript patterns
+                if (firstLine.includes('function ') || firstLine.includes('const ') || firstLine.includes('let ') || 
+                    firstLine.includes('var ') || firstLine.includes('export ') || firstLine.includes('import ')) {
+                    if (firstLine.includes(':') && (firstLine.includes('string') || firstLine.includes('number') || firstLine.includes('boolean'))) {
+                        return 'typescript';
+                    }
+                    return 'javascript';
+                }
+                
+                // Check for Python patterns
+                if (firstLine.includes('def ') || firstLine.includes('import ') || firstLine.includes('from ') || 
+                    firstLine.includes('class ') || firstLine.includes('if __name__')) return 'python';
+                
+                // Check for HTML patterns
+                if (firstLine.includes('<!DOCTYPE') || firstLine.includes('<html') || firstLine.includes('<head') || 
+                    firstLine.includes('<body') || firstLine.includes('<div') || firstLine.includes('<p')) return 'html';
+                
+                // Check for CSS patterns
+                if (firstLine.includes('{') && (firstLine.includes(':') || firstLine.includes('color') || 
+                    firstLine.includes('background') || firstLine.includes('font'))) return 'css';
+                
+                // Check for JSON patterns
+                if (firstLine.includes('{') && firstLine.includes('}') && 
+                    (firstLine.includes('"') || firstLine.includes(':'))) return 'json';
+                
+                // Check for SQL patterns
+                if (firstLine.toUpperCase().includes('SELECT ') || firstLine.toUpperCase().includes('INSERT ') || 
+                    firstLine.toUpperCase().includes('UPDATE ') || firstLine.toUpperCase().includes('DELETE ') ||
+                    firstLine.toUpperCase().includes('CREATE ') || firstLine.toUpperCase().includes('DROP ')) return 'sql';
+                
+                // Check for YAML patterns
+                if (firstLine.includes(':') && !firstLine.includes('{') && !firstLine.includes('}')) return 'yaml';
+                
+                // Check for Markdown patterns
+                if (firstLine.startsWith('#') || firstLine.startsWith('##') || firstLine.startsWith('###') ||
+                    firstLine.includes('**') || firstLine.includes('*') || firstLine.includes('`')) return 'markdown';
+                
+                // Check for Rust patterns
+                if (firstLine.includes('fn ') || firstLine.includes('let ') || firstLine.includes('mut ') ||
+                    firstLine.includes('pub ') || firstLine.includes('use ')) return 'rust';
+                
+                // Check for Java patterns
+                if (firstLine.includes('public ') || firstLine.includes('private ') || firstLine.includes('class ') ||
+                    firstLine.includes('static ') || firstLine.includes('void ')) return 'java';
+                
+                // Check for PHP patterns
+                if (firstLine.includes('<?php') || firstLine.includes('function ') && firstLine.includes('$')) return 'php';
+                
+                // Check for Ruby patterns
+                if (firstLine.includes('def ') && !firstLine.includes('import')) return 'ruby';
+                
+                // Check for Shell/Bash patterns
+                if (firstLine.includes('echo ') || firstLine.includes('cd ') || firstLine.includes('ls ') ||
+                    firstLine.includes('grep ') || firstLine.includes('awk ') || firstLine.includes('sed ')) return 'bash';
+                
+                // If no specific pattern is found, try to analyze the overall code structure
+                const allCode = code.toLowerCase();
+                if (allCode.includes('printf') || allCode.includes('scanf') || allCode.includes('malloc')) return 'c';
+                if (allCode.includes('cout') || allCode.includes('cin') || allCode.includes('std::')) return 'cpp';
+                if (allCode.includes('console.log') || allCode.includes('document.') || allCode.includes('window.')) return 'javascript';
+                if (allCode.includes('print(') || allCode.includes('import ') || allCode.includes('def ')) return 'python';
+                
+                // Default to text if no language can be detected
+                return 'text';
+            }
+
+        // Function to add line numbers
+        function addLineNumbers(preElement) {
+          const code = preElement.querySelector('code');
+          if (!code) return;
+          
+          const lines = code.textContent.split('\n');
+          
+          const lineNumbers = document.createElement('div');
+          lineNumbers.className = 'line-numbers';
+          
+          for (let i = 1; i <= lines.length; i++) {
+            const span = document.createElement('span');
+            span.textContent = i;
+            lineNumbers.appendChild(span);
+          }
+          
+          const codeContent = document.createElement('div');
+          codeContent.className = 'code-content';
+          codeContent.appendChild(preElement.cloneNode(true));
+          
+          const wrapper = document.createElement('div');
+          wrapper.className = 'code-block-with-lines';
+          wrapper.appendChild(lineNumbers);
+          wrapper.appendChild(codeContent);
+          
+          preElement.parentNode.replaceChild(wrapper, preElement);
+        }
+
+                    // Function to add copy button to code block
+            function enhanceCodeBlock(preElement) {
+                const code = preElement.querySelector('code');
+                if (!code) return;
+                
+                // Create copy button
+                const copyBtn = document.createElement('button');
+                copyBtn.className = 'copy-code-btn';
+                copyBtn.innerHTML = '<i class="fas fa-copy"></i> Copy';
+                copyBtn.title = 'Copy code to clipboard';
+                
+
+                
+                // Use the same copy function as the link copy button
+                copyBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    
+                    const originalText = copyBtn.innerHTML;
+                    
+                    // Immediately update the button to show feedback
+                    copyBtn.innerHTML = '<i class="fas fa-check"></i> Copied!';
+                    copyBtn.classList.add('copied');
+                    
+                    navigator.clipboard.writeText(code.textContent).then(() => {
+                        // Success - button is already updated
+                    }).catch(() => {
+                        // Fallback for older browsers
+                        const textArea = document.createElement('textarea');
+                        textArea.value = code.textContent;
+                        document.body.appendChild(textArea);
+                        textArea.select();
+                        document.execCommand('copy');
+                        document.body.removeChild(textArea);
+                    });
+                    
+                    // Reset after 2 seconds
+                    setTimeout(() => {
+                        copyBtn.innerHTML = originalText;
+                        copyBtn.classList.remove('copied');
+                    }, 2000);
+                });
+                
+                // Create a wrapper div to hold the pre and button
+                const wrapper = document.createElement('div');
+                wrapper.style.position = 'relative';
+                wrapper.style.display = 'inline-block';
+                wrapper.style.width = '100%';
+                
+                // Move the pre element into the wrapper
+                preElement.parentNode.insertBefore(wrapper, preElement);
+                wrapper.appendChild(preElement);
+                
+                // Add copy button to the wrapper instead of pre
+                wrapper.appendChild(copyBtn);
+                
+                // Add line numbers if code is long enough
+                addLineNumbers(preElement);
+            }
+
+                    // Enhance all code blocks on page load
+            function enhanceAllCodeBlocks() {
+                const codeBlocks = document.querySelectorAll('.blogPost pre');
+                codeBlocks.forEach(enhanceCodeBlock);
+            }
+
+        // Run enhancement when DOM is ready
+        if (document.readyState === 'loading') {
+          document.addEventListener('DOMContentLoaded', enhanceAllCodeBlocks);
+        } else {
+          enhanceAllCodeBlocks();
         }
       })();
 

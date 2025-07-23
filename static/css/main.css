@@ -524,12 +524,31 @@
   color: #e2e8f0;
 }
 
+/* Blockquote styling for output/results */
+.blogPost blockquote {
+  color: #374151;
+  border-left: 4px solid #6b7280;
+  background-color: #f9fafb;
+  padding: 1px 16px;
+  margin: 0;
+  border-radius: 0 6px 6px 0;
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  font-size: 0.9em;
+  line-height: 1.5;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
 [data-theme="dark"] .blogPost blockquote {
   color: #e2e8f0;
   border-left: 4px solid #63b3ed;
   background-color: rgba(99, 179, 237, 0.1);
-  padding: 10px 15px;
-  margin: 15px 0;
+  padding: 1px 16px;
+  margin: 0;
+  border-radius: 0 6px 6px 0;
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  font-size: 0.9em;
+  line-height: 1.5;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 }
 
 [data-theme="dark"] .blogPost code {
@@ -553,6 +572,219 @@
   background-color: transparent;
   padding: 0;
   color: #e2e8f0;
+}
+
+/* Enhanced Code Block Styling */
+.blogPost pre {
+  position: relative;
+  background: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  padding: 0;
+  margin: 20px 0;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Remove border from pre when it's inside a wrapper (for line numbers) */
+.code-block-with-lines pre {
+  border: none;
+  border-radius: 0;
+  margin: 0;
+  box-shadow: none;
+}
+
+.blogPost pre code {
+  display: block;
+  padding: 16px;
+  background: transparent;
+  border-radius: 0;
+  font-size: 0.9em;
+  line-height: 1.5;
+  overflow-x: auto;
+  white-space: pre;
+  word-wrap: normal;
+}
+
+/* Copy button positioned within code block */
+.copy-code-btn {
+  position: absolute;
+  top: 32px;
+  right: 8px;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid #dadce0;
+  border-radius: 4px;
+  padding: 4px 8px;
+  font-size: 0.8em;
+  color: #5f6368;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  z-index: 10;
+  opacity: 0; /* Hidden by default */
+}
+
+.blogPost div:hover > .copy-code-btn,
+.blogPost .copy-code-btn:hover {
+  opacity: 1;
+}
+
+.copy-code-btn:hover {
+  background: rgba(255, 255, 255, 1);
+  border-color: #5f6368;
+  color: #202124;
+}
+
+.copy-code-btn.copied {
+  background: #48bb78;
+  border-color: #48bb78;
+  color: white;
+}
+
+.copy-code-btn i {
+  font-size: 0.9em;
+}
+
+.copy-code-btn.copied {
+  background: #48bb78;
+  border-color: #48bb78;
+  color: white;
+}
+
+.copy-code-btn.copied:hover {
+  background: #48bb78;
+  border-color: #48bb78;
+  color: white;
+}
+
+/* Line numbers for code blocks */
+.code-block-with-lines {
+  display: flex;
+  background: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 20px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.line-numbers {
+  background: #f1f3f4;
+  border-right: 1px solid #e9ecef;
+  padding: 16px 8px;
+  font-size: 0.85em;
+  color: #9aa0a6;
+  text-align: right;
+  user-select: none;
+  min-width: 40px;
+  font-family: 'Fira Mono', 'Consolas', 'Menlo', 'Monaco', monospace;
+}
+
+.line-numbers span {
+  display: block;
+  line-height: 1.5;
+}
+
+.code-content {
+  flex: 1;
+  overflow-x: auto;
+}
+
+.code-content pre {
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  background: transparent;
+}
+
+.code-content pre code {
+  padding: 16px;
+  background: transparent;
+}
+
+/* Dark mode styles for enhanced code blocks */
+[data-theme="dark"] .blogPost pre {
+  background: #2d3748;
+  border-color: #4a5568;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Remove border from pre when it's inside a wrapper (for line numbers) in dark mode */
+[data-theme="dark"] .code-block-with-lines pre {
+  border: none;
+  border-radius: 0;
+  margin: 0;
+  box-shadow: none;
+}
+
+[data-theme="dark"] .copy-code-btn {
+  background: rgba(45, 55, 72, 0.9);
+  border-color: #718096;
+  color: #e2e8f0;
+}
+
+[data-theme="dark"] .copy-code-btn:hover {
+  background: rgba(45, 55, 72, 1);
+  border-color: #a0aec0;
+  color: #f7fafc;
+}
+
+[data-theme="dark"] .copy-code-btn.copied {
+  background: #48bb78;
+  border-color: #48bb78;
+  color: white;
+}
+
+[data-theme="dark"] .copy-code-btn.copied {
+  background: #48bb78;
+  border-color: #48bb78;
+  color: white;
+}
+
+[data-theme="dark"] .copy-code-btn.copied:hover {
+  background: #48bb78;
+  border-color: #48bb78;
+  color: white;
+}
+
+[data-theme="dark"] .code-block-with-lines {
+  background: #2d3748;
+  border-color: #4a5568;
+}
+
+[data-theme="dark"] .line-numbers {
+  background: #4a5568;
+  border-right-color: #718096;
+  color: #a0aec0;
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+  .code-block-header {
+    padding: 6px 12px;
+    font-size: 0.8em;
+  }
+  
+  .copy-code-btn {
+    padding: 3px 6px;
+    font-size: 0.75em;
+  }
+  
+  .line-numbers {
+    min-width: 35px;
+    padding: 12px 6px;
+    font-size: 0.8em;
+  }
+  
+  .blogPost pre code,
+  .code-content pre code {
+    padding: 12px;
+    font-size: 0.85em;
+  }
 }
 
 [data-theme="dark"] .blogPost table {
@@ -1170,9 +1402,50 @@ textarea {
 }
 
 .post-meta .pictures-link:hover {
-    background-color: #0891b2;
-    border-color: #0891b2;
-    box-shadow: 0 2px 4px rgba(6, 182, 212, 0.2);
+  background-color: #0891b2;
+  border-color: #0891b2;
+  box-shadow: 0 2px 4px rgba(6, 182, 212, 0.2);
+}
+
+/* Mobile responsive styles for all posts page */
+@media (max-width: 768px) {
+  .postListItem {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  
+  .postListItem .postDate {
+    width: auto;
+    display: inline-block;
+    margin-right: 16px;
+  }
+  
+  .postListItem .reading-time {
+    display: inline-block;
+  }
+  
+  .postListItem .postInfo {
+    width: 100%;
+  }
+  
+  .postListItem .post-meta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 8px;
+  }
+  
+  .postListItem .postTags {
+    margin-left: 0;
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  
+  .postListItem .postTags a {
+    margin: 0;
+  }
 }
 
 /* For markdown pages (like projects, about, etc.) */
@@ -1185,6 +1458,10 @@ textarea {
 /* Style the filters page container */
 .filtersContainer {
   background-color: #fafbfc;
+}
+
+.filtersContainer h1:nth-of-type(2) {
+  margin-top: 40px;
 }
 
 .books-container {
