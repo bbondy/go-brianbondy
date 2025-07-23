@@ -7,5 +7,6 @@ type BlogPost struct {
 	Tags        []string `json:"tags"`
 	ImagePath   *string  `json:"fbImagePath,omitempty"`
 	Description *string  `json:"fbDescription,omitempty"`
+	ReadingTime int      `json:"readingTime,omitempty"`
 }
 type BlogPosts []BlogPost

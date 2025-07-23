@@ -469,10 +469,11 @@ func homePageHandler(w http.ResponseWriter, r *http.Request) {
 		preview := extractFirstParagraph(fullContent)
 
 		previewPosts = append(previewPosts, data.BlogPostPreview{
-			BlogPost: post,
-			Preview:  template.HTML(preview),
-			PostDate: parsedDate.Format(layoutUS),
-			PostUrl:  fmt.Sprintf("/blog/%d/%s", post.Id, slugifyTitle(post.Title)),
+			BlogPost:    post,
+			Preview:     template.HTML(preview),
+			PostDate:    parsedDate.Format(layoutUS),
+			PostUrl:     fmt.Sprintf("/blog/%d/%s", post.Id, slugifyTitle(post.Title)),
+			ReadingTime: post.ReadingTime,
 		})
 	}
 
@@ -481,9 +482,10 @@ func homePageHandler(w http.ResponseWriter, r *http.Request) {
 	for _, post := range blogPosts {
 		parsedDate, _ := time.Parse(layoutISO, post.Created)
 		allPosts = append(allPosts, data.BlogPostPreview{
-			BlogPost: post,
-			PostDate: parsedDate.Format(layoutUS),
-			PostUrl:  fmt.Sprintf("/blog/%d/%s", post.Id, slugifyTitle(post.Title)),
+			BlogPost:    post,
+			PostDate:    parsedDate.Format(layoutUS),
+			PostUrl:     fmt.Sprintf("/blog/%d/%s", post.Id, slugifyTitle(post.Title)),
+			ReadingTime: post.ReadingTime,
 		})
 	}
 
@@ -516,9 +518,10 @@ func allPostsHandler(w http.ResponseWriter, r *http.Request) {
 	for _, post := range filteredPosts {
 		parsedDate, _ := time.Parse(layoutISO, post.Created)
 		allPosts = append(allPosts, data.BlogPostPreview{
-			BlogPost: post,
-			PostDate: parsedDate.Format(layoutUS),
-			PostUrl:  fmt.Sprintf("/blog/%d/%s", post.Id, slugifyTitle(post.Title)),
+			BlogPost:    post,
+			PostDate:    parsedDate.Format(layoutUS),
+			PostUrl:     fmt.Sprintf("/blog/%d/%s", post.Id, slugifyTitle(post.Title)),
+			ReadingTime: post.ReadingTime,
 		})
 	}
 
@@ -599,6 +602,7 @@ func blogPostPageHandler(w http.ResponseWriter, r *http.Request) {
 				BlogPost:     foundPost,
 				BlogPostBody: getMarkdownData("blog/" + strconv.Itoa(foundPost.Id) + ".markdown"),
 				BlogPostDate: parsedDate.Format(layoutUS),
+				ReadingTime:  foundPost.ReadingTime,
 				NextPost:     nextPost,
 				PrevPost:     prevPost,
 				Tag:          tag,
@@ -634,6 +638,7 @@ func blogPostPageHandler(w http.ResponseWriter, r *http.Request) {
 			BlogPost:     post,
 			BlogPostBody: getMarkdownData("blog/" + strconv.Itoa(post.Id) + ".markdown"),
 			BlogPostDate: parsedDate.Format(layoutUS),
+			ReadingTime:  post.ReadingTime,
 			NextPost:     nextPost,
 			Tag:          tag,
 			Year:         year,

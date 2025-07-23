@@ -3,7 +3,10 @@
     {{range .Posts}}
       <article class="blogPostPreview">
         <h1><a href="{{.PostUrl}}" class="blogPostPreviewLink">{{.BlogPost.Title}}</a></h1>
-        <div class="datePosted">Posted on {{.PostDate}}</div>
+        <div class="post-meta">
+          <span class="datePosted">Posted on {{.PostDate}}</span>
+          <span class="reading-time">{{.ReadingTime}} min read</span>
+        </div>
         <div class="preview">
           {{if .BlogPost.ImagePath}}
             <a href="{{.PostUrl}}">

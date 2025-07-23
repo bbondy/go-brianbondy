@@ -6,7 +6,10 @@
   
   <article class="blogPost">
     <h1><a href="/blog/{{.BlogPost.Id}}/{{slugifyTitle .BlogPost.Title}}">{{.BlogPost.Title}}</a></h1>
-    <div class="datePosted">Posted on {{.BlogPostDate}}</div>
+    <div class="post-meta">
+      <div class="datePosted">Posted on {{.BlogPostDate}}</div>
+      <div class="reading-time">{{.ReadingTime}} min read</div>
+    </div>
     <div>
       {{optimizeImages .BlogPostBody}}
     </div>

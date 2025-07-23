@@ -23,6 +23,7 @@ type BlogPostPage struct {
 	BlogPost                         BlogPost
 	BlogPostBody                     string
 	BlogPostDate                     string
+	ReadingTime                      int
 	NextPost                         *BlogPost
 	PrevPost                         *BlogPost
 	Tag                              string
@@ -40,10 +41,11 @@ type FiltersPage struct {
 }
 
 type BlogPostPreview struct {
-	BlogPost BlogPost
-	Preview  template.HTML
-	PostDate string
-	PostUrl  string
+	BlogPost    BlogPost
+	Preview     template.HTML
+	PostDate    string
+	PostUrl     string
+	ReadingTime int
 }
 
 type HomePage struct {

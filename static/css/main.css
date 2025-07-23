@@ -102,6 +102,52 @@
   background: linear-gradient(90deg, #63b3ed 0%, #34d399 100%);
 }
 
+/* Reading Time Styles */
+.reading-time {
+  color: #6b7280;
+  font-size: 0.75em;
+  font-weight: 500;
+  display: inline;
+  line-height: 1.4;
+}
+
+.reading-time::before {
+  content: "⏱ ";
+  font-size: 0.9em;
+  line-height: 1;
+}
+
+/* Post meta container for blog posts */
+.blogPost .post-meta {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+/* Post meta container for blog post previews */
+.blogPostPreview .post-meta {
+  display: block;
+  margin-bottom: 20px;
+}
+
+/* Reading time in post list items */
+.postListItem .reading-time {
+  font-size: 0.8em;
+  color: #9ca3af;
+  margin-top: 4px;
+}
+
+/* Dark mode styles for reading time */
+[data-theme="dark"] .reading-time {
+  color: #9ca3af;
+}
+
+[data-theme="dark"] .postListItem .reading-time {
+  color: #6b7280;
+}
+
 /* Dark mode styles for social user icon */
 [data-theme="dark"] .social-trigger .fa-user {
   color: #e2e8f0;
@@ -670,6 +716,16 @@ h2 {
   font-size: 0.75em;
   margin-top: -10px;
   padding-bottom: 10px;
+}
+
+/* Override margin when datePosted is inside post-meta */
+.post-meta .datePosted {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+  display: inline;
+  margin-right: 16px;
 }
 .tagContainer {
   -webkit-column-count: 3;
