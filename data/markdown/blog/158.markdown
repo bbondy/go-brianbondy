@@ -211,7 +211,7 @@ Other open source projects could also benefit from the same sort of idea - are y
 - <cite>[Alessio Placitelli](https://twitter.com/dexterp37/status/427099144096739329)</cite>:
 <br>
 <q lang="en-us">
-Thank you @brianbondy for both http://codefirefox.com  and http://goo.gl/bybZKK ! Very helpful for new #Firefox contributors!</q>
+Thank you @brianbondy for both http://codefirefox.com  and https://www.brianbondy.com/mozilla/cheatsheet/ ! Very helpful for new #Firefox contributors!</q>
 
 - <cite>[Jennie Rose Halperin](https://twitter.com/little_wow/status/423191221306011648)</cite>:
 <br>

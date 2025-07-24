@@ -54,6 +54,14 @@ github-stats:
 pictures-manifest:
 	python3 scripts/generate_pictures_manifest.py
 
+# Generate run manifest with km and pace
+run-km-manifest:
+	python3 scripts/generate_run_km_manifest.py
+
+# Generate Strava run manifest using Strava API
+strava-run-manifest:
+	python3 scripts/generate_strava_run_manifest.py
+
 # Build for production (everything except deploy)
 build: all
 
@@ -82,3 +90,5 @@ help:
 	@echo "  strava-stats - Fetch Strava run statistics"
 	@echo "  deploy       - Deploy to Google App Engine"
 	@echo "  cache-version- Show current cache busting version" 
+	@echo "  run-km-manifest - Generate run manifest with km and pace" 
+	@echo "  strava-run-manifest - Generate run manifest using Strava API (requires STRAVA_ACCESS_TOKEN)" 

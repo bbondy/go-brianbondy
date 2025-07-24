@@ -149,17 +149,97 @@ func runningHandler(w http.ResponseWriter, r *http.Request) {
 		errorPage(w, "Unable to load run data", "running")
 		return
 	}
-	p := &data.RunningPage{
-		Title:        GetTitle("Running"),
-		MarkdownSlug: "running",
-		Runs:         runs,
+
+	// Get Strava run totals
+	totalRuns, totalDistanceKm, totalTimeMinutes, err := data.GetStravaRunTotals()
+	if err != nil {
+		totalRuns = 0
+		totalDistanceKm = 0
+		totalTimeMinutes = 0
 	}
+	timeDays, timeHours, timeMinutes := data.SplitMinutesToDaysHoursMinutes(totalTimeMinutes)
+
+	// Get year filter from query parameter, default to "365" (Last 365 Days)
+	yearFilter := r.URL.Query().Get("year")
+	if yearFilter == "" {
+		yearFilter = "365"
+	}
+
+	// Generate 2D contribution graph with month and day labels
+	contributionGraph2D, err := data.GenerateContributionGraph2D(yearFilter)
+	if err != nil {
+		contributionGraph2D = nil
+	}
+	// Remove debug print
+	// if contributionGraph2D != nil {
+	// 	log.Printf("DEBUG: runs=%d, weeks=%d, days=%d", len(runs), contributionGraph2D.Weeks, contributionGraph2D.Days)
+	// } else {
+	// 	log.Printf("DEBUG: contributionGraph2D is nil")
+	// }
+
+	stravaTotals := data.StravaRunTotals{
+		TotalRuns:        totalRuns,
+		TotalDistanceKm:  totalDistanceKm,
+		TotalTimeDays:    timeDays,
+		TotalTimeHours:   timeHours,
+		TotalTimeMinutes: timeMinutes,
+	}
+
+	p := &data.RunningPage{
+		Title:             GetTitle("Running"),
+		MarkdownSlug:      "running",
+		Runs:              runs,
+		ContributionGraph: nil, // not used in new template
+		StravaRunTotals:   stravaTotals,
+	}
+
+	// Get last updated date
+	lastUpdated, err := data.GetLastUpdatedDate()
+	if err != nil {
+		lastUpdated = "Unknown"
+	}
+
+	// Pass the 2D graph as a separate variable
 	t := template.Must(template.New("base.html").Funcs(funcMap).ParseFiles("templates/base.html", "templates/running.html"))
-	err = t.Execute(w, p)
+	err = t.Execute(w, map[string]interface{}{
+		"Page":                p,
+		"ContributionGraph2D": contributionGraph2D,
+		"Years": func() []int {
+			if contributionGraph2D != nil {
+				return contributionGraph2D.Years
+			}
+			return nil
+		}(),
+		"SelectedYear":    yearFilter,
+		"LastUpdatedDate": lastUpdated,
+	})
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
 	}
+}
+
+// runsForDateHandler handles AJAX requests for runs on a specific date
+func runsForDateHandler(w http.ResponseWriter, r *http.Request) {
+	if r.Method != http.MethodGet {
+		http.Error(w, "Method not allowed", http.StatusMethodNotAllowed)
+		return
+	}
+
+	date := r.URL.Query().Get("date")
+	if date == "" {
+		http.Error(w, "Date parameter required", http.StatusBadRequest)
+		return
+	}
+
+	runs, err := data.GetRunsForDate(date)
+	if err != nil {
+		http.Error(w, "Unable to load runs for date", http.StatusInternalServerError)
+		return
+	}
+
+	w.Header().Set("Content-Type", "application/json")
+	json.NewEncoder(w).Encode(runs)
 }
 
 func projectsHandler(w http.ResponseWriter, r *http.Request) {

@@ -11,13 +11,43 @@
 # Output of the go coverage tool, specifically when used with LiteIDE
 *.out
 
+# Built binary
+go-brianbondy
+main
+
+# Editor and system files
 .DS_Store
 *.swo
 *.swp
+.swp
+*.tmp
 
-# Dependency directories (remove the comment below to include it)
-# vendor/
-go-brianbondy
+# Python virtual environment
+venv/
+__pycache__/
+*.pyc
+*.pyo
 
-# Environment variables
+# Environment variables and secrets
 .env
+.env.local
+.env.production
+.env.staging
+
+# API keys and credentials (just in case)
+*credentials*
+*secret*
+*token*
+*.key
+*.pem
+
+# Dependency directories
+# vendor/
+
+# IDE files
+.vscode/
+.idea/
+*.iml
+
+# Logs
+*.log

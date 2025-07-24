@@ -170,8 +170,8 @@
     </style>
     
     <!-- Non-critical CSS loaded asynchronously -->
-    <link rel="stylesheet" href="/static/css/main.css?v=103" media="print" onload="this.media='all'">
-    <noscript><link rel="stylesheet" href="/static/css/main.css?v=103"></noscript>
+    <link rel="stylesheet" href="/static/css/main.css?v=116" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="/static/css/main.css?v=116"></noscript>
     
     <!-- Font Awesome loaded asynchronously -->
     <link rel="stylesheet" href="/static/font-awesome/css/all.min.css" media="print" onload="this.media='all'">
@@ -922,5 +922,6 @@
         })();
       });
     </script>
+    {{block "scripts" .}}{{end}}
   </body>
 </html>

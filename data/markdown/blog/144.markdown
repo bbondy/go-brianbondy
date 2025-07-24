@@ -69,7 +69,7 @@ In my past job I managed a team of developers and I expressed interest in doing 
 Lastly I want to continue doing what I'm already doing, I love making a difference and getting things done.
 
 [1]: https://wiki.mozilla.org/Modules/All
-[2]: http://goo.gl/XsQbB
+[2]: https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED;emailtype1%3Dexact;emailassigned_to1%3D1;query_format%3Dadvanced;bug_status%3DRESOLVED;bug_status%3DVERIFIED;bug_status%3DCLOSED;email1%3Dnetzen@gmail.com;list_id%3D3608798
 [3]: https://wiki.mozilla.org/Modules
 [4]: https://wiki.mozilla.org/Modules/All
 [5]: http://www.joshmatthews.net/deck.js/mentor/
@@ -84,4 +84,4 @@ Lastly I want to continue doing what I'm already doing, I love making a differen
 [125]: https://brianbondy.com/blog/id/125/
 [137]: https://brianbondy.com/blog/id/137/
 [win8work]: https://brianbondy.com/blog/tagged/status-report/
-[200bugs]: http://goo.gl/K3X9o
+[200bugs]: https://bugzilla.mozilla.org/buglist.cgi?emailreporter1=1;list_id%3D3609920;resolution%3D---;resolution%3DFIXED;emailtype1%3Dexact;query_format%3Dadvanced;bug_status%3DUNCONFIRMED;bug_status%3DNEW;bug_status%3DASSIGNED;bug_status%3DRESOLVED;bug_status%3DVERIFIED;bug_status%3DCLOSED;email1%3Dnetzen@gmail.com

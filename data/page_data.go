@@ -13,9 +13,19 @@ type SimpleMarkdownPage struct {
 }
 
 type RunningPage struct {
-	Title        string
-	MarkdownSlug string
-	Runs         Runs
+	Title             string
+	MarkdownSlug      string
+	Runs              Runs
+	ContributionGraph *ContributionGraph
+	StravaRunTotals   StravaRunTotals
+}
+
+type StravaRunTotals struct {
+	TotalRuns        int
+	TotalDistanceKm  float64
+	TotalTimeDays    int
+	TotalTimeHours   int
+	TotalTimeMinutes int
 }
 
 type BlogPostPage struct {

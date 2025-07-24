@@ -1,105 +1,339 @@
 {{define "mountPoint"}}
   <div class="running-container">
-    <h1>Memorable Runs</h1>
-    {{$totalMinutes := 0}}
-    {{$totalKm := 0.0}}
-    {{$totalMeters := 0}}
-    {{$totalRuns := 0}}
-    {{range .Runs}}
-      {{if .Time}}
-        {{$timeStr := .Time}}
-        {{if (contains $timeStr "h")}}
-          {{$parts := split $timeStr "h"}}
-          {{if gt (len $parts) 0}}
-            {{$beforeH := index $parts 0}}
-            {{$spaceParts := split $beforeH " "}}
-            {{if gt (len $spaceParts) 0}}
-              {{$hours := atoi (index $spaceParts 0)}}
-              {{$totalMinutes = add $totalMinutes (mul $hours 60)}}
+    <h1>Runs</h1>
+    
+    {{with .ContributionGraph2D}}
+    <div class="contribution-graph-section">
+      <div class="contribution-header">
+        <h3>Running Activity ({{if eq $.SelectedYear "365"}}Last 365 Days{{else}}{{$.SelectedYear}}{{end}})</h3>
+        {{if .MonthLabels}}
+        <div class="year-selector">
+          <label for="year-select">View:</label>
+          <select id="year-select">
+            <option value="365" {{if eq $.SelectedYear "365"}}selected{{end}}>Last 365 Days</option>
+            {{range $year := $.Years}}
+              <option value="{{$year}}" {{if eq $.SelectedYear (printf "%d" $year)}}selected{{end}}>{{$year}}</option>
             {{end}}
-          {{end}}
+          </select>
+        </div>
         {{end}}
-        {{if (contains $timeStr "m")}}
-          {{$parts := split $timeStr "m"}}
-          {{if gt (len $parts) 0}}
-            {{$beforeM := index $parts 0}}
-            {{$spaceParts := split $beforeM " "}}
-            {{$minutes := 0}}
-            {{if gt (len $spaceParts) 1}}
-              {{$minutes = atoi (index $spaceParts 1)}}
-            {{else if gt (len $spaceParts) 0}}
-              {{$minutes = atoi (index $spaceParts 0)}}
+      </div>
+      <div class="contribution-graph-outer">
+        <div class="contribution-month-labels-row">
+          {{range .UniqueMonths}}
+            <span class="contribution-month-label">{{.}}</span>
+          {{end}}
+        </div>
+        <div class="contribution-graph-main">
+          <div class="contribution-day-labels-vertical">
+            {{range $i, $label := .DayLabels}}
+              {{if or (eq $label "Mon") (eq $label "Wed") (eq $label "Fri")}}
+                <span class="contribution-day-label-vertical">{{$label}}</span>
+              {{else}}
+                <span class="contribution-day-label-blank-vertical"></span>
+              {{end}}
             {{end}}
-            {{$totalMinutes = add $totalMinutes $minutes}}
-          {{end}}
-        {{end}}
-      {{end}}
-      {{if .Distance}}
-        {{$distanceStr := .Distance}}
-        {{if (contains $distanceStr "mi")}}
-          {{$parts := split $distanceStr "mi"}}
-          {{if gt (len $parts) 0}}
-            {{$miles := atof (index $parts 0)}}
-            {{$km := mulFloat $miles 1.60934}}
-            {{$totalKm = addFloat $totalKm $km}}
-          {{end}}
-        {{end}}
-      {{end}}
-      {{if .Elevation}}
-        {{$elevationStr := .Elevation}}
-        {{if (contains $elevationStr "ft")}}
-          {{$parts := split $elevationStr "ft"}}
-          {{if gt (len $parts) 0}}
-            {{$feet := replace (index $parts 0) "," ""}}
-            {{$meters := mulFloat (atof $feet) 0.3048}}
-            {{$totalMeters = add $totalMeters (atoi (printf "%.0f" $meters))}}
-          {{end}}
-        {{end}}
-      {{end}}
-      {{$totalRuns = add $totalRuns 1}}
+          </div>
+          <div class="contribution-graph-cells">
+            {{/* Render grid as 7 rows x 53 columns: outer loop over rows (days), inner loop over columns (weeks) */}}
+            {{range $rowIdx, $row := .Grid}}
+              {{range $colIdx, $cell := $row}}
+                <div class="contribution-day level-{{$cell.Level}}" title="{{$cell.Count}} {{if eq $cell.Count 1}}activity{{else}}activities{{end}} on {{$cell.Date | formatFullDate}}" data-date="{{$cell.Date}}" data-count="{{$cell.Count}}" style="{{if eq $cell.Count 0}}background-color: #374151;{{else}}background-color: hsl(137, 60%, {{$cell.Lightness}}%);{{end}}">&nbsp;</div>
+              {{end}}
+            {{end}}
+          </div>
+        </div>
+      </div>
+      <div class="quote-section" style="text-align:center;margin-top:1.5rem;">
+        <blockquote style="font-style:italic;font-size:1.1em;color:var(--text-secondary);margin:0;">
+          We are what we repeatedly do. Excellence, then, is not an act, but a habit.
+        </blockquote>
+        <div style="text-align:right;font-size:0.95em;color:var(--text-secondary);margin-top:0.5em;">
+          &mdash; Will Durant
+        </div>
+      </div>
+      <div class="contribution-legend">
+        <div style="display: flex; align-items: center; justify-content: space-between; width: 100%;">
+          <div style="display: flex; align-items: center; gap: 4px;">
+            <span>Less</span>
+            <div class="legend-item level-0"></div>
+            <div class="legend-item level-1"></div>
+            <div class="legend-item level-2"></div>
+            <div class="legend-item level-3"></div>
+            <div class="legend-item level-4"></div>
+            <div class="legend-item level-5" title="Outlier (90th+ percentile)"></div>
+            <div class="legend-item level-6" title="Ultra-distance (50+ miles)"></div>
+            <span>More</span>
+          </div>
+          <div style="font-size: 0.85em; color: var(--text-color); opacity: 0.7;">
+            Last updated: <span id="last-updated-date">{{$.LastUpdatedDate}}</span>
+          </div>
+        </div>
+      </div>
+    </div>
     {{end}}
     
-    {{/* Display totals */}}
-    <div class="totals-section">
-      <div style="display: flex; align-items: center; gap: 10px;">
-        <p class="totals-note" style="margin-bottom: 0;">
-          These totals represent only the memorable runs listed below, not including training runs, daily activities, or other workouts.
-        </p>
-        <a href="/pictures?tag=running" class="action-link pictures-link" aria-label="View Running Pictures Gallery" title="View Running Pictures Gallery">
-          <i class="fas fa-images"></i>
-        </a>
+    {{/* Modal for displaying runs for a specific date */}}
+    <style>
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.6);
+        backdrop-filter: blur(3px);
+        animation: fadeIn 0.3s ease-out;
+      }
+      
+      .modal-content {
+        background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+        margin: 5% auto;
+        padding: 0;
+        border: none;
+        border-radius: 16px;
+        width: 90%;
+        max-width: 600px;
+        box-shadow: 0 25px 50px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(255, 255, 255, 0.1);
+        position: relative;
+        animation: slideIn 0.3s ease-out;
+        overflow: hidden;
+      }
+      
+      .modal-header {
+        background: linear-gradient(135deg, #2a2a2a 0%, #3a3a3a 100%);
+        padding: 24px 28px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      
+      .header-right {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+      
+      .nav-btn {
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        color: #ffffff;
+        border-radius: 8px;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        font-size: 18px;
+        font-weight: bold;
+      }
+      
+      .nav-btn:hover {
+        background: rgba(255, 255, 255, 0.2);
+        border-color: rgba(255, 255, 255, 0.3);
+        transform: scale(1.05);
+      }
+      
+      .nav-btn:disabled {
+        opacity: 0.4;
+        cursor: not-allowed;
+        transform: none;
+      }
+      
+      .nav-btn:disabled:hover {
+        background: rgba(255, 255, 255, 0.1);
+        border-color: rgba(255, 255, 255, 0.2);
+        transform: none;
+      }
+      
+      .modal-header h3 {
+        margin: 0;
+        color: #ffffff;
+        font-size: 1.5rem;
+        font-weight: 600;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+      }
+      
+      .modal-header .close {
+        color: #aaa;
+        font-size: 32px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(255, 255, 255, 0.1);
+      }
+      
+      .modal-header .close:hover {
+        color: #fff;
+        background: rgba(255, 255, 255, 0.2);
+        transform: scale(1.1);
+      }
+      
+      .modal-body {
+        padding: 28px;
+        max-height: 60vh;
+        overflow-y: auto;
+      }
+      
+      .modal-run-entry {
+        background: linear-gradient(135deg, #2a2a2a 0%, #333333 100%);
+        margin-bottom: 20px;
+        padding: 20px;
+        border-radius: 12px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        transition: all 0.2s ease;
+        position: relative;
+      }
+      
+      .modal-run-entry:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+        border-color: rgba(255, 255, 255, 0.2);
+      }
+      
+      .modal-run-entry:last-child {
+        margin-bottom: 0;
+      }
+      
+      .modal-run-entry div {
+        margin-bottom: 8px;
+        color: #e0e0e0;
+        font-size: 0.95rem;
+        line-height: 1.4;
+      }
+      
+      .modal-run-entry div:last-child {
+        margin-bottom: 0;
+      }
+      
+      .modal-run-entry strong {
+        color: #4a9eff;
+        font-weight: 600;
+        margin-right: 8px;
+        min-width: 80px;
+        display: inline-block;
+      }
+      
+      .modal-run-entry a {
+        color: #ff6b35;
+        text-decoration: none;
+        font-weight: 500;
+        transition: all 0.2s ease;
+        padding: 8px 16px;
+        background: rgba(255, 107, 53, 0.1);
+        border-radius: 6px;
+        display: inline-block;
+        margin-top: 8px;
+      }
+      
+      .modal-run-entry a:hover {
+        color: #ff8a65;
+        background: rgba(255, 107, 53, 0.2);
+        transform: translateX(4px);
+      }
+      
+      @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+      }
+      
+      @keyframes slideIn {
+        from { 
+          opacity: 0;
+          transform: translateY(-50px) scale(0.9);
+        }
+        to { 
+          opacity: 1;
+          transform: translateY(0) scale(1);
+        }
+      }
+      
+      /* Dark theme scrollbar */
+      .modal-body::-webkit-scrollbar {
+        width: 8px;
+      }
+      
+      .modal-body::-webkit-scrollbar-track {
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 4px;
+      }
+      
+      .modal-body::-webkit-scrollbar-thumb {
+        background: rgba(255, 255, 255, 0.3);
+        border-radius: 4px;
+      }
+      
+      .modal-body::-webkit-scrollbar-thumb:hover {
+        background: rgba(255, 255, 255, 0.5);
+      }
+    </style>
+    
+    <div id="runs-modal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button class="nav-btn prev-day" id="prev-day-btn" title="Previous day (Left arrow)">
+            <span>←</span>
+          </button>
+          <h3 id="modal-date"></h3>
+          <div class="header-right">
+            <button class="nav-btn next-day" id="next-day-btn" title="Next day (Right arrow)">
+              <span>→</span>
+            </button>
+            <span class="close" onclick="closeModal()">&times;</span>
+          </div>
+        </div>
+        <div class="modal-body">
+          <div id="modal-runs"></div>
+        </div>
       </div>
+    </div>
+    
+    {{/* Display totals using Strava data */}}
+    <div class="totals-section">
       <div class="totals-grid">
         <div class="total-item">
           <span class="total-label">Total Runs:</span>
-          <span class="total-value">{{$totalRuns}}</span>
+          <span class="total-value">{{commai .Page.StravaRunTotals.TotalRuns}}</span>
         </div>
         <div class="total-item">
           <span class="total-label">Total Time:</span>
           <span class="total-value">
-            {{$totalHours := div $totalMinutes 60}}
-            {{$remainingMinutes := mod $totalMinutes 60}}
-            {{if gt $totalHours 0}}
-              {{$totalHours}}h {{$remainingMinutes}}m
+            {{if gt .Page.StravaRunTotals.TotalTimeDays 0}}
+              {{.Page.StravaRunTotals.TotalTimeDays}}d {{.Page.StravaRunTotals.TotalTimeHours}}h {{.Page.StravaRunTotals.TotalTimeMinutes}}m
+            {{else if gt .Page.StravaRunTotals.TotalTimeHours 0}}
+              {{.Page.StravaRunTotals.TotalTimeHours}}h {{.Page.StravaRunTotals.TotalTimeMinutes}}m
             {{else}}
-              {{$remainingMinutes}}m
+              {{.Page.StravaRunTotals.TotalTimeMinutes}}m
             {{end}}
           </span>
         </div>
         <div class="total-item">
           <span class="total-label">Total Distance:</span>
-          <span class="total-value">{{commaf $totalKm 1}}km</span>
+          <span class="total-value">{{commaf .Page.StravaRunTotals.TotalDistanceKm 1}}km</span>
         </div>
         <div class="total-item">
-          <span class="total-label">Total Elevation:</span>
-          <span class="total-value">{{commai $totalMeters}}m</span>
+          <a href="/pictures?tag=running" class="action-link pictures-link" aria-label="View Running Pictures Gallery" title="View Running Pictures Gallery">
+            <i class="fas fa-images"></i>
+          </a>
         </div>
       </div>
     </div>
     
-    <input type="text" id="search-runs" placeholder="Search runs..." style="width:100%;max-width:400px;padding:10px 14px;font-size:1em;border-radius:8px;border:1px solid #e2e8f0;outline:none;margin:24px 0 12px 0;">
+    <h2>Memorable Runs</h2>
+    <input type="text" id="search-runs" placeholder="Search memorable runs..." style="width:100%;max-width:400px;padding:10px 14px;font-size:1em;border-radius:8px;border:1px solid #e2e8f0;outline:none;margin:24px 0 12px 0;">
     <div class="runs-grid" id="runs-grid">
-      {{range .Runs}}
+      {{range .Page.Runs}}
         <div class="run-card">
           <div class="run-header">
             <h3 class="run-title">
@@ -193,28 +427,216 @@
         </div>
       {{end}}
     </div>
-    <script>
-      // Client-side search for runs
-      document.addEventListener('DOMContentLoaded', function() {
-        const searchInput = document.getElementById('search-runs');
-        const runsGrid = document.getElementById('runs-grid');
-        if (!searchInput || !runsGrid) return;
-        searchInput.addEventListener('input', function() {
-          const query = searchInput.value.trim().toLowerCase();
-          const items = runsGrid.querySelectorAll('.run-card');
-          items.forEach(function(item) {
-            const title = item.querySelector('.run-title').textContent.toLowerCase();
-            const date = item.querySelector('.run-date').textContent.toLowerCase();
-            const descElem = item.querySelector('.run-description');
-            const desc = descElem ? descElem.textContent.toLowerCase() : '';
-            if (title.includes(query) || date.includes(query) || desc.includes(query)) {
-              item.style.display = '';
-            } else {
-              item.style.display = 'none';
-            }
-          });
-        });
-      });
-    </script>
   </div>
-{{end}} 
+{{end}}
+
+{{define "scripts"}}
+<script>
+
+// Build a JS object mapping date to activities for the current graph
+window.stravaActivitiesByDate = {};
+{{if .ContributionGraph2D}}
+{{range $rowIdx, $row := .ContributionGraph2D.Grid}}
+  {{range $colIdx, $cell := $row}}
+    window.stravaActivitiesByDate["{{$cell.Date}}"] = [
+      {{range $i, $run := $cell.Runs}}
+        {
+          type: {{printf "%s" $run.Type}},
+          title: {{printf "%s" $run.Title}},
+          distance_km: {{printf "%v" $run.DistanceKm}},
+          time: {{printf "%s" $run.Time}},
+          pace: {{printf "%s" $run.Pace}},
+          activity_id: {{printf "%s" $run.ActivityID}}
+        }{{if lt (add $i 1) (len $cell.Runs)}},{{end}}
+      {{end}}
+    ];
+  {{end}}
+{{end}}
+{{else}}
+// No contribution graph data available
+{{end}}
+
+// Helper function to format activity types
+function formatActivityType(type) {
+  if (!type) return '';
+  // Convert camelCase or PascalCase to spaced words
+  return type.replace(/([a-z])([A-Z])/g, '$1 $2');
+}
+
+// Helper function to format dates in a friendly format
+function formatFriendlyDate(dateStr) {
+  if (!dateStr) return '';
+  const date = new Date(dateStr + 'T00:00:00');
+  return date.toLocaleDateString('en-US', { 
+    year: 'numeric', 
+    month: 'long', 
+    day: 'numeric' 
+  });
+}
+
+// Modal logic for contribution graph
+function closeModal() {
+  document.getElementById('runs-modal').style.display = 'none';
+}
+
+var currentModalDate = '';
+
+function openModal(date, runs) {
+  currentModalDate = date;
+  document.getElementById('modal-date').textContent = formatFriendlyDate(date);
+  const modalRuns = document.getElementById('modal-runs');
+  if (!runs || runs.length === 0) {
+    modalRuns.innerHTML = '<div style="padding:1em;">No activities for this day.</div>';
+  } else {
+    modalRuns.innerHTML = runs.map(run => `
+      <div class="modal-run-entry" style="margin-bottom:1em;padding-bottom:0.5em;border-bottom:1px solid #333;">
+        <div><strong>Type:</strong> ${formatActivityType(run.type || '')}</div>
+        <div><strong>Title:</strong> ${run.title || ''}</div>
+        <div><strong>Distance:</strong> ${run.distance_km ? run.distance_km + ' km' : ''}</div>
+        <div><strong>Time:</strong> ${run.time || ''}</div>
+        ${run.pace ? `<div><strong>Pace:</strong> ${run.pace}</div>` : ''}
+        ${run.activity_id ? `<div><a href="https://www.strava.com/activities/${run.activity_id}" target="_blank">View on Strava</a></div>` : ''}
+      </div>
+    `).join('');
+  }
+  
+  // Update navigation buttons
+  updateNavButtons(date);
+  
+  document.getElementById('runs-modal').style.display = 'block';
+}
+
+function updateNavButtons(date) {
+  const prevBtn = document.getElementById('prev-day-btn');
+  const nextBtn = document.getElementById('next-day-btn');
+  
+  // Find the previous and next dates that actually have data
+  const prevDateWithData = findAdjacentDateWithData(date, -1);
+  const nextDateWithData = findAdjacentDateWithData(date, 1);
+  
+  prevBtn.disabled = !prevDateWithData;
+  nextBtn.disabled = !nextDateWithData;
+  
+  // Add click handlers
+  prevBtn.onclick = function() {
+    if (!this.disabled && prevDateWithData) {
+      navigateToDate(prevDateWithData);
+    }
+  };
+  nextBtn.onclick = function() {
+    if (!this.disabled && nextDateWithData) {
+      navigateToDate(nextDateWithData);
+    }
+  };
+}
+
+function findAdjacentDateWithData(currentDate, direction) {
+  if (!window.stravaActivitiesByDate) return null;
+  
+  // Get all dates that have data, sorted
+  const allDatesWithData = Object.keys(window.stravaActivitiesByDate)
+    .filter(date => window.stravaActivitiesByDate[date] && window.stravaActivitiesByDate[date].length > 0)
+    .sort();
+  
+  const currentIndex = allDatesWithData.indexOf(currentDate);
+  if (currentIndex === -1) return null;
+  
+  const targetIndex = currentIndex + direction;
+  if (targetIndex < 0 || targetIndex >= allDatesWithData.length) return null;
+  
+  return allDatesWithData[targetIndex];
+}
+
+function navigateToDate(dateStr) {
+  const runs = window.stravaActivitiesByDate[dateStr] || [];
+  openModal(dateStr, runs);
+}
+
+// Year select change handler
+var yearSelect = document.getElementById('year-select');
+if (yearSelect) {
+  // Set the correct selected value based on current URL
+  var urlParams = new URLSearchParams(window.location.search);
+  var currentYear = urlParams.get('year') || '365';
+  yearSelect.value = currentYear;
+  
+  yearSelect.addEventListener('change', function() {
+    var year = yearSelect.value;
+    if (year === '365') {
+      window.location = window.location.pathname;
+    } else {
+      window.location = window.location.pathname + '?year=' + encodeURIComponent(year);
+    }
+  });
+}
+
+// Use event delegation for contribution-day clicks
+var graphCells = document.querySelector('.contribution-graph-cells');
+console.log('graphCells:', graphCells);
+if (graphCells) {
+  graphCells.addEventListener('click', function(e) {
+    var cell = e.target.closest('.contribution-day');
+    if (!cell) return;
+    const date = cell.getAttribute('data-date');
+    if (!date) {
+      console.log('No date attribute found on clicked cell:', cell);
+      return;
+    }
+    const runs = window.stravaActivitiesByDate[date] || [];
+    console.log('Clicked day:', date, 'Runs found:', runs);
+    openModal(date, runs);
+    console.log('openModal called for date:', date);
+  });
+}
+// Modal close on background click
+var runsModal = document.getElementById('runs-modal');
+if (runsModal) {
+  runsModal.addEventListener('click', function(e) {
+    if (e.target === this) closeModal();
+  });
+}
+
+// Modal keyboard navigation
+document.addEventListener('keydown', function(e) {
+  var modal = document.getElementById('runs-modal');
+  if (modal && modal.style.display === 'block') {
+    if (e.key === 'Escape' || e.keyCode === 27) {
+      closeModal();
+    } else if (e.key === 'ArrowLeft' || e.keyCode === 37) {
+      e.preventDefault();
+      var prevBtn = document.getElementById('prev-day-btn');
+      if (prevBtn && !prevBtn.disabled) {
+        prevBtn.click();
+      }
+    } else if (e.key === 'ArrowRight' || e.keyCode === 39) {
+      e.preventDefault();
+      var nextBtn = document.getElementById('next-day-btn');
+      if (nextBtn && !nextBtn.disabled) {
+        nextBtn.click();
+      }
+    }
+  }
+});
+
+// Search handler for memorable runs
+var searchInput = document.getElementById('search-runs');
+var runsGrid = document.getElementById('runs-grid');
+if (searchInput && runsGrid) {
+  searchInput.addEventListener('input', function() {
+    var query = searchInput.value.trim().toLowerCase();
+    var items = runsGrid.querySelectorAll('.run-card');
+    items.forEach(function(item) {
+      var title = item.querySelector('.run-title').textContent.toLowerCase();
+      var date = item.querySelector('.run-date').textContent.toLowerCase();
+      var descElem = item.querySelector('.run-description');
+      var desc = descElem ? descElem.textContent.toLowerCase() : '';
+      if (title.includes(query) || date.includes(query) || desc.includes(query)) {
+        item.style.display = '';
+      } else {
+        item.style.display = 'none';
+      }
+    });
+  });
+}
+</script>
+{{end}}

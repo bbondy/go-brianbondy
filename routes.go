@@ -85,6 +85,10 @@ func initializeRoutes(router *mux.Router) {
 	))
 	router.Handle("/resume", getMarkdownTemplateHandler("Resume", "resume.markdown", "/resume"))
 	router.Handle("/running", handleRunning)
+	router.Handle("/api/runs-for-date", negroni.New(
+		negroni.HandlerFunc(directToHttps),
+		negroni.Wrap(http.HandlerFunc(runsForDateHandler)),
+	))
 	router.Handle("/all", handleAllPosts)
 	router.Handle("/pictures", handlePictures)
 
