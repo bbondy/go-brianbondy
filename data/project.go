@@ -15,12 +15,26 @@ type Project struct {
 
 type Projects []Project
 
-// GetProjects loads the projects from the JSON manifest in the order they appear
+var cachedProjects Projects
+var projectsLoaded bool
+
+// GetProjects loads the projects from the JSON manifest in the order they appear, but only once (cached in memory)
 func GetProjects() (Projects, error) {
+	if projectsLoaded {
+		return cachedProjects, nil
+	}
 	projects := make(Projects, 0)
 	err := ReadJsonFile("data/projectManifest.json", &projects)
 	if err != nil {
 		return projects, err
 	}
-	return projects, nil
+	cachedProjects = projects
+	projectsLoaded = true
+	return cachedProjects, nil
+}
+
+// ClearProjectsCache clears the cached projects (for testing or reload)
+func ClearProjectsCache() {
+	projectsLoaded = false
+	cachedProjects = nil
 }

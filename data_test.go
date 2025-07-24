@@ -26,14 +26,14 @@ func TestGetFilteredPosts(t *testing.T) {
 	origBlogPosts := blogPosts
 	origBlogPostTagMap := blogPostTagMap
 	origBlogPostYearMap := blogPostYearMap
-	
+
 	// Restore after test
 	defer func() {
 		blogPosts = origBlogPosts
 		blogPostTagMap = origBlogPostTagMap
 		blogPostYearMap = origBlogPostYearMap
 	}()
-	
+
 	// Setup test data
 	setupTestData()
 
@@ -44,15 +44,15 @@ func TestGetFilteredPosts(t *testing.T) {
 	// Test case 2: Filter by tag only
 	posts = getFilteredPosts("golang", 0)
 	assert.Len(t, posts, 2, "Should return posts with 'golang' tag")
-	
+
 	// Test case 3: Filter by year only
 	posts = getFilteredPosts("", 2022)
 	assert.Len(t, posts, 1, "Should return posts from 2022")
-	
+
 	// Test case 4: Filter by both tag and year
 	posts = getFilteredPosts("golang", 2022)
 	assert.Len(t, posts, 1, "Should return posts with 'golang' tag from 2022")
-	
+
 	// Test case 5: Filter with no matching posts
 	posts = getFilteredPosts("nonexistent", 0)
 	assert.Len(t, posts, 0, "Should return empty slice for non-existent tag")
@@ -62,18 +62,18 @@ func TestGetFilteredPosts(t *testing.T) {
 func TestGetMarkdownData(t *testing.T) {
 	// Save original markdownMap
 	origMarkdownMap := markdownMap
-	
+
 	// Restore after test
 	defer func() {
 		markdownMap = origMarkdownMap
 	}()
-	
+
 	// Reset the markdown map
 	markdownMap = make(map[string]string)
 
 	// Pre-populate the cache with rendered content
 	markdownMap["test.md"] = "<h1>Test Heading</h1>\n<p>This is a test paragraph.</p>"
-	
+
 	// Test first call (should read from cache)
 	html := getMarkdownData("test.md")
 	assert.Contains(t, html, "<h1", "Markdown should be converted to HTML")
@@ -86,11 +86,35 @@ func TestGetMarkdownData(t *testing.T) {
 
 	// Add another entry to the cache
 	markdownMap["test2.md"] = "<h2>Another Test</h2>"
-	
+
 	// Test with the new entry
 	html3 := getMarkdownData("test2.md")
 	assert.Contains(t, html3, "<h2", "Should read new content")
 	assert.Contains(t, html3, "Another Test", "HTML should contain the content from the new file")
+}
+
+// TestGetProjectsCaching tests the caching mechanism for GetProjects
+func TestGetProjectsCaching(t *testing.T) {
+	// Clear cache before test
+	data.ClearProjectsCache()
+
+	// First call should load from file
+	projects1, err1 := data.GetProjects()
+	assert.NoError(t, err1)
+	assert.NotEmpty(t, projects1)
+
+	// Second call should return cached data (same pointer to first element)
+	projects2, err2 := data.GetProjects()
+	assert.NoError(t, err2)
+	assert.NotEmpty(t, projects2)
+	assert.True(t, &projects1[0] == &projects2[0], "Should return the same cached data instance (element pointer)")
+
+	// Clear cache and reload
+	data.ClearProjectsCache()
+	projects3, err3 := data.GetProjects()
+	assert.NoError(t, err3)
+	assert.NotEmpty(t, projects3)
+	assert.False(t, &projects2[0] == &projects3[0], "After clearing cache, should reload from file (different element pointer)")
 }
 
 // Helper function to set up test data
@@ -155,7 +179,7 @@ func TestMockInitializeBlogPosts(t *testing.T) {
 	origBlogPostYearMap := blogPostYearMap
 	origTagCountMap := tagCountMap
 	origSortedTags := sortedTags
-	
+
 	// Restore after test
 	defer func() {
 		blogPosts = origBlogPosts
@@ -165,7 +189,7 @@ func TestMockInitializeBlogPosts(t *testing.T) {
 		tagCountMap = origTagCountMap
 		sortedTags = origSortedTags
 	}()
-	
+
 	// Reset global variables
 	blogPosts = nil
 	blogPostIdMap = make(map[int]data.BlogPost)
@@ -207,7 +231,7 @@ func TestMockInitializeBlogPosts(t *testing.T) {
 		blogPostYearMap[year] = append(blogPostYearMap[year], blogPost)
 		blogPostIdMap[blogPost.Id] = blogPost
 	}
-	
+
 	sortedTags = make([]string, len(tagCountMap))
 	i := 0
 	for k := range tagCountMap {
@@ -220,11 +244,11 @@ func TestMockInitializeBlogPosts(t *testing.T) {
 	assert.Len(t, blogPostIdMap, 3, "Should create ID map with 3 entries")
 	assert.Len(t, blogPostTagMap, 2, "Should create tag map with 2 entries (test, golang)")
 	assert.Len(t, blogPostYearMap, 2, "Should create year map with 2 entries (2022, 2023)")
-	
+
 	// Check tag counts
 	assert.Equal(t, 2, tagCountMap["test"], "Tag 'test' should appear 2 times")
 	assert.Equal(t, 2, tagCountMap["golang"], "Tag 'golang' should appear 2 times")
-	
+
 	// Check sorted tags
 	assert.Len(t, sortedTags, 2, "Should have 2 sorted tags")
 	assert.Contains(t, sortedTags, "test")

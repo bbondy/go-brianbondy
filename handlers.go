@@ -657,20 +657,40 @@ func blogPostPageHandler(w http.ResponseWriter, r *http.Request) {
 	errorPage(w, "No blog posts found", "blog")
 }
 
-func picturesHandler(w http.ResponseWriter, r *http.Request) {
-	var pictures []data.Picture
+var cachedPictures []data.Picture
+var picturesLoaded bool
+
+func getCachedPictures() ([]data.Picture, error) {
+	if picturesLoaded {
+		return cachedPictures, nil
+	}
 	f, err := os.Open("data/picturesManifest.json")
 	if err != nil {
-		errorPage(w, "Could not open pictures manifest", "pictures")
-		return
+		return nil, err
 	}
 	defer func() {
-		if closeErr := f.Close(); closeErr != nil {
-			log.Printf("Error closing file: %v", closeErr)
+		if err := f.Close(); err != nil {
+			log.Printf("Error closing file: %v", err)
 		}
 	}()
+	var pictures []data.Picture
 	if err := json.NewDecoder(f).Decode(&pictures); err != nil {
-		errorPage(w, "Could not parse pictures manifest", "pictures")
+		return nil, err
+	}
+	cachedPictures = pictures
+	picturesLoaded = true
+	return cachedPictures, nil
+}
+
+func ClearPicturesCache() {
+	picturesLoaded = false
+	cachedPictures = nil
+}
+
+func picturesHandler(w http.ResponseWriter, r *http.Request) {
+	pictures, err := getCachedPictures()
+	if err != nil {
+		errorPage(w, "Could not open pictures manifest", "pictures")
 		return
 	}
 

@@ -23,12 +23,27 @@ func (r Runs) Less(i, j int) bool {
 	return r[i].Date > r[j].Date
 }
 
+var cachedRuns Runs
+var runsLoaded bool
+
+// GetRuns loads the runs from the JSON manifest in the order they appear, but only once (cached in memory)
 func GetRuns() (Runs, error) {
+	if runsLoaded {
+		return cachedRuns, nil
+	}
 	runs := make(Runs, 0)
 	err := ReadJsonFile("data/runManifest.json", &runs)
 	if err != nil {
 		return runs, err
 	}
 	sort.Sort(runs)
-	return runs, nil
+	cachedRuns = runs
+	runsLoaded = true
+	return cachedRuns, nil
+}
+
+// ClearRunsCache clears the cached runs (for testing or reload)
+func ClearRunsCache() {
+	runsLoaded = false
+	cachedRuns = nil
 }
