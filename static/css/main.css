@@ -414,11 +414,13 @@
 /* Dark mode styles for filters and navigation */
 [data-theme="dark"] .filtersContainer {
   background-color: #2d3748;
-  border: 1px solid #4a5568;
+  border: none !important;
 }
 
-[data-theme="dark"] .tagContainer {
+[data-theme="dark"] .tagContainer,
+[data-theme="dark"] .tagContainer.years {
   background-color: #2d3748;
+  border: none !important;
 }
 
 [data-theme="dark"] .yearTag {
@@ -437,40 +439,46 @@
 [data-theme="dark"] .action-link {
   background-color: #4a5568;
   color: #e2e8f0;
-  border: 1px solid #718096;
+  border: none !important;
 }
 
 [data-theme="dark"] .action-link:hover {
   background-color: #63b3ed;
   color: #ffffff;
-  border-color: #63b3ed;
+  border: 2px solid #63b3ed !important;
 }
 
 [data-theme="dark"] .strava-link {
   background-color: #ee5d2a;
   color: #ffffff;
+  border: none !important;
 }
 
 [data-theme="dark"] .strava-link:hover {
   background-color: #d44a1f;
+  border: 2px solid #63b3ed !important;
 }
 
 [data-theme="dark"] .blog-link {
   background-color: #4d90fe;
   color: #ffffff;
+  border: none !important;
 }
 
 [data-theme="dark"] .blog-link:hover {
   background-color: #357ae8;
+  border: 2px solid #63b3ed !important;
 }
 
 [data-theme="dark"] .pictures-link {
   background-color: #06b6d4;
   color: #ffffff;
+  border: none !important;
 }
 
 [data-theme="dark"] .pictures-link:hover {
   background-color: #0891b2;
+  border: 2px solid #63b3ed !important;
 }
 
 /* Dark mode styles for website and github links */
@@ -991,6 +999,7 @@ h1 {
 h2 {
   font-size: 1.2em;
   padding-top: 10px;
+  transition: none !important;
 }
 .tag,
 .yearTag {
@@ -1234,7 +1243,7 @@ textarea {
 }
 
 .blogPostPreview:hover .readMore span {
-  color: #2b6cb0;
+  color: #63b3ed;
   text-decoration: underline;
 }
 
@@ -1825,6 +1834,11 @@ textarea {
 }
 
 .project-image {
+    background: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid #e2e8f0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
     flex-shrink: 0;
     width: 96px;
     height: 96px;
@@ -2161,6 +2175,7 @@ textarea {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 10px;
+  gap: 16px;
 }
 
 .run-title {
@@ -2178,6 +2193,7 @@ textarea {
   font-size: 0.85em;
   color: #718096;
   font-weight: 500;
+  margin-left: 12px;
 }
 
 .run-description {
@@ -2895,4 +2911,23 @@ img[loading="lazy"] {
 }
 .pictures-link:hover {
   background-color: #0891b2;
+}
+
+[data-theme="dark"] input:not([type="submit"]):not([type="button"]),
+[data-theme="dark"] textarea:not([type="submit"]):not([type="button"]) {
+  color: #e2e8f0 !important;
+}
+
+[data-theme="dark"] input::placeholder,
+[data-theme="dark"] textarea::placeholder {
+  color: #bfc8d4 !important;
+  opacity: 1;
+}
+
+[data-theme="dark"] .project-image {
+  background: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px solid #e2e8f0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
 }
