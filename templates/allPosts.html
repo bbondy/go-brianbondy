@@ -15,7 +15,10 @@
       <i class="fas fa-tags"></i> Navigate by tags
     </a>
   </div>
-  <div class="postList">
+  <div style="margin: 24px 0 12px 0;">
+    <input type="text" id="search-posts" placeholder="Search blog posts..." style="width:100%;max-width:400px;padding:10px 14px;font-size:1em;border-radius:8px;border:1px solid #e2e8f0;outline:none;">
+  </div>
+  <div class="postList" id="post-list">
     {{range .Posts}}
       <div class="postListItem">
         <span class="postDate">{{.PostDate}}</span>
@@ -39,4 +42,26 @@
       </div>
     {{end}}
   </div>
+  <script>
+    // Client-side search for blog posts
+    document.addEventListener('DOMContentLoaded', function() {
+      const searchInput = document.getElementById('search-posts');
+      const postList = document.getElementById('post-list');
+      if (!searchInput || !postList) return;
+      searchInput.addEventListener('input', function() {
+        const query = searchInput.value.trim().toLowerCase();
+        const items = postList.querySelectorAll('.postListItem');
+        items.forEach(function(item) {
+          const title = item.querySelector('.postTitle').textContent.toLowerCase();
+          const date = item.querySelector('.postDate').textContent.toLowerCase();
+          const tags = Array.from(item.querySelectorAll('.postTags .tag')).map(t => t.textContent.toLowerCase()).join(' ');
+          if (title.includes(query) || date.includes(query) || tags.includes(query)) {
+            item.style.display = '';
+          } else {
+            item.style.display = 'none';
+          }
+        });
+      });
+    });
+  </script>
 {{end}} 
