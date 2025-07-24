@@ -785,6 +785,21 @@
     padding: 12px;
     font-size: 0.85em;
   }
+  
+  /* Mobile layout for project entries */
+  .project-entry {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .project-image {
+    margin-bottom: 15px;
+    align-self: center;
+  }
+  
+  .project-content {
+    width: 100%;
+  }
 }
 
 [data-theme="dark"] .blogPost table {
@@ -847,7 +862,7 @@ a {
 .topBar img {
   float: left;
   margin: 8px 0px 0px 9px;
-  padding-right: 10px;
+  padding-right: 5px;
   transition: transform 0.3s ease;
 }
 .logo-img {
@@ -863,12 +878,18 @@ a {
   outline: none;
 }
 .topBar .topBarLinks {
-  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 0;
+  margin-left: 0;
+  padding-left: 0;
 }
 .topBar li {
   color: var(--text-color);
-  display: inline-block;
+  display: flex;
+  align-items: center;
   padding: 10px 14px;
+  margin: 0;
   transition: var(--transition);
 }
 .topBar li:hover:not(.social) {
@@ -879,7 +900,7 @@ a {
   float: right;
   font-size: 1em;
   padding: 10px 5px 10px 5px;
-  margin-right: 3px;
+  margin-right: 0;
 }
 .topBar li.social span {
   transition: transform 0.2s ease;
