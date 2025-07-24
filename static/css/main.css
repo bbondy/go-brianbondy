@@ -1936,13 +1936,9 @@ textarea {
     color: #4a5568;
 }
 
-.interview-platform {
-    background-color: #f3f4f6;
-    color: #374151;
-    padding: 2px 8px;
-    border-radius: 4px;
-    font-size: 0.8em;
-    font-weight: 500;
+[data-theme="dark"] .interview-platform {
+  background-color: #32405a;
+  color: #e2e8f0;
 }
 
 .interview-channel {
@@ -2930,4 +2926,21 @@ img[loading="lazy"] {
   border-radius: 10px;
   border: 2px solid #e2e8f0;
   box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+}
+
+[data-theme="dark"] .card-entry .interview-entry {
+  border: none !important;
+  box-shadow: none !important;
+}
+[data-theme="dark"] .interview-platform {
+  background-color: #2d3748;
+  color: #e2e8f0;
+}
+[data-theme="dark"] .interview-channel {
+  color: #bfc8d4;
+}
+
+[data-theme="dark"] .reading-time,
+[data-theme="dark"] .footer-bottom p {
+  color: #a0aec0 !important;
 }
