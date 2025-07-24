@@ -750,3 +750,29 @@ func picturesHandler(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 	}
 }
+
+// Books handler and route
+func booksHandler(w http.ResponseWriter, r *http.Request) {
+	books, err := data.GetBooks()
+	if err != nil {
+		errorPage(w, "Could not load books", "books")
+		return
+	}
+	p := struct {
+		Title        string
+		MarkdownSlug string
+		Books        data.Books
+		BookCount    int
+	}{
+		Title:        GetTitle("Books"),
+		MarkdownSlug: "books",
+		Books:        books,
+		BookCount:    len(books),
+	}
+	t := template.Must(template.New("base.html").Funcs(funcMap).ParseFiles("templates/base.html", "templates/books.html"))
+	err = t.Execute(w, p)
+	if err != nil {
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+}

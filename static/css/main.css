@@ -2944,3 +2944,12 @@ img[loading="lazy"] {
 [data-theme="dark"] .footer-bottom p {
   color: #a0aec0 !important;
 }
+
+@media (max-width: 600px) {
+  input[type="text"], .search-bar {
+    width: 100% !important;
+    max-width: 100% !important;
+    font-size: 1em;
+    box-sizing: border-box;
+  }
+}

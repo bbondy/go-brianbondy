@@ -1,7 +1,8 @@
 {{define "mountPoint"}}
 <h1>Projects</h1>
 <p>Listed below are some of the projects I've worked on throughout my career. Some are full-fledged products, and some are just libraries. Some I'm the primary developer (e.g. most things below) and some I've just contributed to (e.g. Link Bubble).</p>
-<div class="card-container">
+<input type="text" id="search-projects" placeholder="Search projects..." style="width:100%;max-width:400px;padding:10px 14px;font-size:1em;border-radius:8px;border:1px solid #e2e8f0;outline:none;margin:24px 0 12px 0;">
+<div class="card-container" id="projects-grid">
   {{range .Projects}}
     <div class="card-entry">
       <div class="project-entry">
@@ -94,4 +95,28 @@
     </div>
   {{end}}
 </div>
+<script>
+  // Client-side search for projects
+  document.addEventListener('DOMContentLoaded', function() {
+    const searchInput = document.getElementById('search-projects');
+    const projectsGrid = document.getElementById('projects-grid');
+    if (!searchInput || !projectsGrid) return;
+    searchInput.addEventListener('input', function() {
+      const query = searchInput.value.trim().toLowerCase();
+      const items = projectsGrid.querySelectorAll('.card-entry');
+      items.forEach(function(item) {
+        const title = item.querySelector('h3').textContent.toLowerCase();
+        const details = item.querySelector('.card-details').textContent.toLowerCase();
+        const langElems = item.querySelectorAll('.language-name');
+        let langs = '';
+        langElems.forEach(function(le) { langs += le.textContent.toLowerCase() + ' '; });
+        if (title.includes(query) || details.includes(query) || langs.includes(query)) {
+          item.style.display = '';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    });
+  });
+</script>
 {{end}} 

@@ -97,7 +97,8 @@
       </div>
     </div>
     
-    <div class="runs-grid">
+    <input type="text" id="search-runs" placeholder="Search runs..." style="width:100%;max-width:400px;padding:10px 14px;font-size:1em;border-radius:8px;border:1px solid #e2e8f0;outline:none;margin:24px 0 12px 0;">
+    <div class="runs-grid" id="runs-grid">
       {{range .Runs}}
         <div class="run-card">
           <div class="run-header">
@@ -192,5 +193,28 @@
         </div>
       {{end}}
     </div>
+    <script>
+      // Client-side search for runs
+      document.addEventListener('DOMContentLoaded', function() {
+        const searchInput = document.getElementById('search-runs');
+        const runsGrid = document.getElementById('runs-grid');
+        if (!searchInput || !runsGrid) return;
+        searchInput.addEventListener('input', function() {
+          const query = searchInput.value.trim().toLowerCase();
+          const items = runsGrid.querySelectorAll('.run-card');
+          items.forEach(function(item) {
+            const title = item.querySelector('.run-title').textContent.toLowerCase();
+            const date = item.querySelector('.run-date').textContent.toLowerCase();
+            const descElem = item.querySelector('.run-description');
+            const desc = descElem ? descElem.textContent.toLowerCase() : '';
+            if (title.includes(query) || date.includes(query) || desc.includes(query)) {
+              item.style.display = '';
+            } else {
+              item.style.display = 'none';
+            }
+          });
+        });
+      });
+    </script>
   </div>
 {{end}} 
