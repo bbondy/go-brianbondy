@@ -562,7 +562,7 @@ function openModal(date, runs) {
       <div class="modal-run-entry" style="margin-bottom:1em;padding-bottom:0.5em;border-bottom:1px solid #333;">
         <div><strong>Type:</strong> ${formatActivityType(run.type || '')}</div>
         <div><strong>Title:</strong> ${run.title || ''}</div>
-        <div><strong>Distance:</strong> ${run.distance_km ? run.distance_km + ' km' : ''}</div>
+        ${run.distance_km && run.distance_km > 0 ? `<div><strong>Distance:</strong> ${run.distance_km} km</div>` : ''}
         <div><strong>Time:</strong> ${run.time || ''}</div>
         ${run.pace ? `<div><strong>Pace:</strong> ${run.pace}</div>` : ''}
         ${run.elevation ? `<div><strong>Elevation:</strong> ${run.elevation}</div>` : ''}
