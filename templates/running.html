@@ -277,6 +277,71 @@
       .modal-body::-webkit-scrollbar-thumb:hover {
         background: rgba(255, 255, 255, 0.5);
       }
+
+      /* Light theme overrides */
+      [data-theme="light"] .modal-content {
+        background: linear-gradient(135deg, #ffffff 0%, #f7fafc 100%);
+        color: var(--text-color);
+      }
+
+      [data-theme="light"] .modal-header {
+        background: linear-gradient(135deg, #f9fafb 0%, #edf2f7 100%);
+        border-bottom: 1px solid #e2e8f0;
+      }
+
+      [data-theme="light"] .modal-header h3 {
+        color: var(--heading-color);
+      }
+
+      [data-theme="light"] .nav-btn {
+        background: rgba(0, 0, 0, 0.05);
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        color: var(--text-color);
+      }
+      [data-theme="light"] .nav-btn:hover {
+        background: rgba(0, 0, 0, 0.1);
+        border-color: rgba(0, 0, 0, 0.15);
+      }
+
+      [data-theme="light"] .modal-header .close {
+        background: rgba(0, 0, 0, 0.05);
+        color: var(--text-color);
+      }
+      [data-theme="light"] .modal-header .close:hover {
+        background: rgba(0, 0, 0, 0.1);
+        color: var(--heading-color);
+      }
+
+      [data-theme="light"] .modal-run-entry {
+        background: linear-gradient(135deg, #ffffff 0%, #f7fafc 100%);
+        border: 1px solid #e2e8f0;
+      }
+      [data-theme="light"] .modal-run-entry div {
+        color: var(--text-color);
+      }
+      [data-theme="light"] .modal-run-entry strong {
+        color: #2563eb; /* blue-600 */
+      }
+
+      [data-theme="light"] .modal-run-entry a {
+        color: #d97706; /* orange-600 */
+        background: rgba(255, 107, 53, 0.1);
+      }
+      [data-theme="light"] .modal-run-entry a:hover {
+        color: #ea580c; /* orange-500 */
+        background: rgba(255, 107, 53, 0.2);
+      }
+
+      /* Light theme scrollbar */
+      [data-theme="light"] .modal-body::-webkit-scrollbar-track {
+        background: rgba(0, 0, 0, 0.05);
+      }
+      [data-theme="light"] .modal-body::-webkit-scrollbar-thumb {
+        background: rgba(0, 0, 0, 0.2);
+      }
+      [data-theme="light"] .modal-body::-webkit-scrollbar-thumb:hover {
+        background: rgba(0, 0, 0, 0.3);
+      }
     </style>
     
     <div id="runs-modal" class="modal">
