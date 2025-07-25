@@ -265,6 +265,104 @@
         transition: box-shadow 0.3s ease !important;
       }
 
+      /* Mobile controls */
+      .mobile-controls {
+        position: fixed;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 10000;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        pointer-events: none;
+      }
+
+      .mobile-controls.active {
+        display: flex;
+      }
+
+      .mobile-dpad {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        gap: 5px;
+        width: 120px;
+        height: 120px;
+      }
+
+      .mobile-btn {
+        background: rgba(0, 0, 0, 0.7);
+        border: 2px solid rgba(255, 255, 255, 0.3);
+        border-radius: 8px;
+        color: white;
+        font-size: 16px;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        pointer-events: auto;
+        user-select: none;
+        transition: all 0.1s ease;
+        touch-action: manipulation;
+      }
+
+      .mobile-btn:active {
+        background: rgba(255, 255, 255, 0.2);
+        transform: scale(0.95);
+      }
+
+      .mobile-btn.up { grid-column: 2; grid-row: 1; }
+      .mobile-btn.left { grid-column: 1; grid-row: 2; }
+      .mobile-btn.right { grid-column: 3; grid-row: 2; }
+      .mobile-btn.down { grid-column: 2; grid-row: 3; }
+
+      .mobile-actions {
+        display: flex;
+        gap: 10px;
+      }
+
+      .mobile-action-btn {
+        background: rgba(255, 87, 51, 0.8);
+        border: 2px solid rgba(255, 255, 255, 0.3);
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        color: white;
+        font-size: 14px;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        pointer-events: auto;
+        user-select: none;
+        transition: all 0.1s ease;
+        touch-action: manipulation;
+      }
+
+      .mobile-action-btn:active {
+        background: rgba(255, 87, 51, 1);
+        transform: scale(0.9);
+      }
+
+      .mobile-action-btn.jump {
+        background: rgba(51, 153, 255, 0.8);
+      }
+
+      .mobile-action-btn.jump:active {
+        background: rgba(51, 153, 255, 1);
+      }
+
+      [data-theme="dark"] .mobile-btn {
+        background: rgba(255, 255, 255, 0.1);
+        border-color: rgba(255, 255, 255, 0.3);
+      }
+
+      [data-theme="dark"] .mobile-btn:active {
+        background: rgba(255, 255, 255, 0.2);
+      }
+
       @keyframes jump {
         0% { transform: translateY(0px) scaleY(1); }
         50% { transform: translateY(-15px) scaleY(1.1); }
@@ -321,13 +419,26 @@
       /* Bullet effects */
       .bullet {
         position: fixed;
-        width: 6px;
-        height: 2px;
-        background: linear-gradient(90deg, #ffff00, #ff6600);
-        border-radius: 2px;
+        width: 8px;
+        height: 4px;
+        background: linear-gradient(90deg, #ffff00, #ff4444);
+        border: 1px solid #ffffff;
+        border-radius: 3px;
         pointer-events: none;
         z-index: 9997;
-        box-shadow: 0 0 4px #ffff00;
+        box-shadow: 0 0 8px #ffff00, 0 0 4px #ff4444;
+        animation: bullet-glow 0.3s ease-in-out infinite alternate;
+      }
+      
+      @keyframes bullet-glow {
+        from { 
+          box-shadow: 0 0 8px #ffff00, 0 0 4px #ff4444;
+          transform: scale(1);
+        }
+        to { 
+          box-shadow: 0 0 12px #ffff00, 0 0 8px #ff4444;
+          transform: scale(1.1);
+        }
       }
 
       /* Explosion effects */
@@ -392,8 +503,8 @@
     </style>
     
     <!-- Non-critical CSS loaded asynchronously -->
-    <link rel="stylesheet" href="/static/css/main.css?v=116" media="print" onload="this.media='all'">
-<noscript><link rel="stylesheet" href="/static/css/main.css?v=116"></noscript>
+        <link rel="stylesheet" href="/static/css/main.css?v=119" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="/static/css/main.css?v=119"></noscript>
     
     <!-- Font Awesome loaded asynchronously -->
     <link rel="stylesheet" href="/static/font-awesome/css/all.min.css" media="print" onload="this.media='all'">
@@ -1043,6 +1154,19 @@
         let activeKeys = new Set();
         let lastDirectionX = 1; // default right
         let lastDirectionY = 0;
+        // Enhanced mobile detection
+        let isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || 
+                      (navigator.maxTouchPoints && navigator.maxTouchPoints > 2) ||
+                      ('ontouchstart' in window);
+        
+        // Debug logging for mobile detection
+        console.log('Mobile detection:', {
+          userAgent: navigator.userAgent,
+          maxTouchPoints: navigator.maxTouchPoints,
+          ontouchstart: 'ontouchstart' in window,
+          isMobile: isMobile
+        });
+        let mobileControls = null;
 
         const themeToggleBtn = document.getElementById('theme-toggle');
         const logo = document.getElementById('site-logo'); // Keep both for backwards compatibility
@@ -1082,6 +1206,136 @@
           trail.style.top = (y + 20) + 'px';
           document.body.appendChild(trail);
           setTimeout(() => trail.remove(), 1000);
+        }
+
+        // Create mobile controls
+        function createMobileControls() {
+          if (!isMobile || mobileControls) return;
+          
+          console.log('Creating mobile controls...');
+          
+          const controls = document.createElement('div');
+          controls.className = 'mobile-controls';
+          controls.innerHTML = `
+            <div class="mobile-dpad">
+              <div class="mobile-btn up" data-key="k">↑</div>
+              <div class="mobile-btn left" data-key="h">←</div>
+              <div class="mobile-btn right" data-key="l">→</div>
+              <div class="mobile-btn down" data-key="j">↓</div>
+            </div>
+            <div class="mobile-actions">
+              <div class="mobile-action-btn jump" data-key=" ">↗</div>
+              <div class="mobile-action-btn shoot" data-key="f">🎯</div>
+            </div>
+          `;
+          
+          // Prevent scrolling and zooming on the controls
+          controls.style.touchAction = 'none';
+          controls.style.userSelect = 'none';
+          controls.style.webkitUserSelect = 'none';
+          
+          // Add touch event listeners
+          controls.querySelectorAll('.mobile-btn, .mobile-action-btn').forEach(btn => {
+            const key = btn.dataset.key;
+            let moveInterval = null;
+            
+            // Prevent default behaviors
+            btn.style.touchAction = 'none';
+            btn.style.userSelect = 'none';
+            btn.style.webkitUserSelect = 'none';
+            
+            btn.addEventListener('touchstart', (e) => {
+              e.preventDefault();
+              e.stopPropagation();
+              console.log('Touch start on button:', key);
+              if (!stickFigure) return;
+              
+              // For movement keys, start continuous movement
+              if (['h', 'j', 'k', 'l'].includes(key)) {
+                activeKeys.add(key);
+                updateAnimation();
+                
+                // Start continuous movement
+                const moveStep = () => {
+                  if (!stickFigure || !activeKeys.has(key)) return;
+                  
+                  const speed = 8;
+                  let deltaX = 0, deltaY = 0;
+                  
+                  if (key === 'h') deltaX = -speed; // left
+                  if (key === 'l') deltaX = speed;  // right
+                  if (key === 'k') deltaY = -speed; // up
+                  if (key === 'j') deltaY = speed;  // down
+                  
+                  // Update last direction when moving
+                  if (deltaX !== 0) {
+                    lastDirectionX = deltaX > 0 ? 1 : -1;
+                    lastDirectionY = 0;
+                  } else if (deltaY !== 0) {
+                    lastDirectionY = deltaY > 0 ? 1 : -1;
+                    lastDirectionX = 0;
+                  }
+                  
+                  moveStickFigure(deltaX, deltaY);
+                };
+                
+                // Initial move
+                moveStep();
+                // Continue moving every 50ms while held
+                moveInterval = setInterval(moveStep, 50);
+              } else {
+                // For action keys (shoot/jump), trigger immediately
+                const keyEvent = new KeyboardEvent('keydown', {
+                  key: key === ' ' ? ' ' : key.toLowerCase(),
+                  code: key === ' ' ? 'Space' : `Key${key.toUpperCase()}`,
+                  bubbles: true
+                });
+                document.dispatchEvent(keyEvent);
+              }
+            });
+            
+            btn.addEventListener('touchend', (e) => {
+              e.preventDefault();
+              e.stopPropagation();
+              console.log('Touch end on button:', key);
+              if (!stickFigure) return;
+              
+              // Stop continuous movement
+              if (['h', 'j', 'k', 'l'].includes(key)) {
+                activeKeys.delete(key);
+                updateAnimation();
+                if (moveInterval) {
+                  clearInterval(moveInterval);
+                  moveInterval = null;
+                }
+              }
+            });
+            
+            // Also stop on touch cancel (when finger leaves button area)
+            btn.addEventListener('touchcancel', (e) => {
+              console.log('Touch cancel on button:', key);
+              if (['h', 'j', 'k', 'l'].includes(key)) {
+                activeKeys.delete(key);
+                updateAnimation();
+                if (moveInterval) {
+                  clearInterval(moveInterval);
+                  moveInterval = null;
+                }
+              }
+            });
+          });
+          
+          document.body.appendChild(controls);
+          mobileControls = controls;
+          
+          console.log('Mobile controls added to DOM:', controls);
+          console.log('Mobile controls visible:', getComputedStyle(controls).display !== 'none');
+        }
+
+        // Show/hide mobile controls
+        function toggleMobileControls(show) {
+          if (!mobileControls) return;
+          mobileControls.classList.toggle('active', show);
         }
 
         // Create collision effect
@@ -1358,13 +1612,21 @@
             clearTimeout(window.logoClickTimeout);
             
             // Activate easter egg
-            // Spawn stick figure
+            // Spawn stick figure near the theme toggle button
             stickFigure = createStickFigure();
-            stickX = Math.random() * (window.innerWidth - 30);
-            stickY = Math.random() * (window.innerHeight - 40);
+            
+            // Position stick figure to the right of the theme toggle button
+            const themeRect = themeToggleBtn.getBoundingClientRect();
+            stickX = Math.min(window.innerWidth - 50, themeRect.right + 10); // 10px to the right
+            stickY = Math.max(50, themeRect.top - 10); // Slightly above, with minimum top margin
+            
             stickFigure.style.left = stickX + 'px';
             stickFigure.style.top = stickY + 'px';
             document.body.appendChild(stickFigure);
+            
+            // Create and show mobile controls if on mobile
+            createMobileControls();
+            toggleMobileControls(true);
             
             // Celebration animation
             stickFigure.classList.add('celebrating');
@@ -1389,11 +1651,11 @@
             `;
                                       hint.innerHTML = `
                <h3>🎉 Easter Egg Activated! 🎉</h3>
-               <p><strong>Movement:</strong> H (left), J (down), K (up), L (right)</p>
-               <p><strong>Special:</strong> Spacebar (jump), <strong>F</strong> (shoot)</p>
+               <p><strong>Desktop:</strong> H/J/K/L (move), F (shoot), Space (jump)</p>
+               <p><strong>Mobile:</strong> Use the virtual controls below!</p>
                <p><strong>Combat:</strong> Shoot elements to destroy them!</p>
                <p><strong>Features:</strong> Collides with page elements!</p>
-               <p><strong>Remove:</strong> Double-click logo</p>
+               <p><strong>Remove:</strong> Double-click theme button</p>
                <small>Watch the legs move, run into things, and shoot to destroy! Click to dismiss.</small>
              `;
              document.body.appendChild(hint);
@@ -1482,6 +1744,8 @@
               stickFigure.remove();
               stickFigure = null;
               logoClickCount = 0;
+              // Hide mobile controls
+              toggleMobileControls(false);
             }, 500);
           }
         });
