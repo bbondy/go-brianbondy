@@ -519,6 +519,31 @@
   color: #ffffff !important;
 }
 
+/* Dark mode styles for github stats */
+[data-theme="dark"] .github-stats .commit-count {
+  color: #e2e8f0 !important;
+}
+
+[data-theme="dark"] .github-stats .commit-count i {
+  color: #e2e8f0 !important;
+}
+
+[data-theme="dark"] .github-stats .pr-count {
+  color: #e2e8f0 !important;
+}
+
+[data-theme="dark"] .github-stats .pr-count i {
+  color: #e2e8f0 !important;
+}
+
+[data-theme="dark"] .language-name {
+  color: #e2e8f0 !important;
+}
+
+[data-theme="dark"] .language-percent {
+  color: #e2e8f0 !important;
+}
+
 /* Dark mode styles for blog posts */
 [data-theme="dark"] .blogPost {
   color: #e2e8f0;
