@@ -114,7 +114,10 @@ def fetch_all_activities(access_token):
     while True:
         params = {'per_page': PER_PAGE, 'page': page}
         resp = requests.get(STRAVA_API_URL, headers=headers, params=params)
-        if resp.status_code != 200:
+        if resp.status_code == 401:
+            # Token is invalid or expired
+            raise AuthorizationError(f"Strava API authorization error: {resp.status_code} {resp.text}")
+        elif resp.status_code != 200:
             raise Exception(f"Strava API error: {resp.status_code} {resp.text}")
         acts = resp.json()
         if not acts:
@@ -146,16 +149,33 @@ def fetch_all_activities(access_token):
         page += 1
     return activities
 
+# Custom exception for authorization errors
+class AuthorizationError(Exception):
+    pass
+
 def main():
-    access_token = os.environ.get('STRAVA_ACCESS_TOKEN') or load_saved_token()
-    if not access_token:
-        client_id = os.environ.get('STRAVA_CLIENT_ID') or input('Enter your Strava client_id: ')
-        client_secret = os.environ.get('STRAVA_CLIENT_SECRET') or input('Enter your Strava client_secret: ')
-        access_token = get_access_token(client_id, client_secret)
-    runs = fetch_all_activities(access_token)
-    with open(OUTPUT_PATH, 'w') as f:
-        json.dump(runs, f, indent=2)
-    print(f"Wrote {len(runs)} runs to {OUTPUT_PATH}")
+    try:
+        access_token = os.environ.get('STRAVA_ACCESS_TOKEN') or load_saved_token()
+        if not access_token:
+            client_id = os.environ.get('STRAVA_CLIENT_ID') or input('Enter your Strava client_id: ')
+            client_secret = os.environ.get('STRAVA_CLIENT_SECRET') or input('Enter your Strava client_secret: ')
+            access_token = get_access_token(client_id, client_secret)
+        runs = fetch_all_activities(access_token)
+        with open(OUTPUT_PATH, 'w') as f:
+            json.dump(runs, f, indent=2)
+        print(f"Wrote {len(runs)} runs to {OUTPUT_PATH}")
+    except AuthorizationError as e:
+        print(f"Authorization failed: {e}")
+        if os.path.exists(TOKEN_PATH):
+            print(f"Deleting expired token file: {TOKEN_PATH}")
+            os.remove(TOKEN_PATH)
+            print("Restarting authentication process...")
+            print()
+            # Restart the main function to trigger OAuth flow
+            main()
+        else:
+            print("No token file found. Please run the script again.")
+            exit(1)
 
 if __name__ == '__main__':
     main() 
