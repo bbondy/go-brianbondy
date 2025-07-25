@@ -151,10 +151,11 @@ func runningHandler(w http.ResponseWriter, r *http.Request) {
 	}
 
 	// Get Strava run totals
-	totalRuns, totalDistanceKm, totalTimeMinutes, err := data.GetStravaRunTotals()
+	totalRuns, totalDistanceKm, totalElevationM, totalTimeMinutes, err := data.GetStravaRunTotals()
 	if err != nil {
 		totalRuns = 0
 		totalDistanceKm = 0
+		totalElevationM = 0
 		totalTimeMinutes = 0
 	}
 	timeDays, timeHours, timeMinutes := data.SplitMinutesToDaysHoursMinutes(totalTimeMinutes)
@@ -180,6 +181,7 @@ func runningHandler(w http.ResponseWriter, r *http.Request) {
 	stravaTotals := data.StravaRunTotals{
 		TotalRuns:        totalRuns,
 		TotalDistanceKm:  totalDistanceKm,
+		TotalElevationM:  totalElevationM,
 		TotalTimeDays:    timeDays,
 		TotalTimeHours:   timeHours,
 		TotalTimeMinutes: timeMinutes,

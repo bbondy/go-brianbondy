@@ -62,6 +62,7 @@ type StravaRun struct {
 	Time       string  `json:"time"`
 	Pace       string  `json:"pace"`
 	ActivityID string  `json:"activity_id,omitempty"`
+	Elevation  string  `json:"elevation,omitempty"`
 }
 
 type StravaRuns []StravaRun
@@ -225,19 +226,21 @@ func GetRunsForDate(date string) ([]StravaRun, error) {
 }
 
 // GetStravaRunTotals calculates totals from Strava runs
-func GetStravaRunTotals() (int, float64, int, error) {
+func GetStravaRunTotals() (int, float64, int, int, error) {
 	runs, err := GetStravaRuns()
 	if err != nil {
-		return 0, 0, 0, err
+		return 0, 0, 0, 0, err
 	}
 	totalRuns := len(runs)
 	totalDistanceKm := 0.0
 	totalTimeMinutes := 0
+	totalElevationM := 0
 	for _, run := range runs {
 		totalDistanceKm += run.DistanceKm
 		totalTimeMinutes += parseTimeStringToMinutes(run.Time)
+		totalElevationM += parseElevationStringToMeters(run.Elevation)
 	}
-	return totalRuns, totalDistanceKm, totalTimeMinutes, nil
+	return totalRuns, totalDistanceKm, totalElevationM, totalTimeMinutes, nil
 }
 
 // GetLastUpdatedDate returns the most recent date from Strava runs
@@ -313,6 +316,46 @@ func parseTimeStringToMinutes(timeStr string) int {
 func parseTimeStringToHours(timeStr string) float64 {
 	totalMinutes := parseTimeStringToMinutes(timeStr)
 	return float64(totalMinutes) / 60.0
+}
+
+// parseElevationStringToMeters converts "Xm" or "X.Xm" to meters
+func parseElevationStringToMeters(elevationStr string) int {
+	if len(elevationStr) == 0 {
+		return 0
+	}
+
+	elevationM := 0
+
+	// Use regex or string parsing to handle multi-digit numbers
+	i := 0
+	for i < len(elevationStr) {
+		// Parse number
+		numStr := ""
+		for i < len(elevationStr) && elevationStr[i] >= '0' && elevationStr[i] <= '9' {
+			numStr += string(elevationStr[i])
+			i++
+		}
+
+		if numStr == "" {
+			i++
+			continue
+		}
+
+		num := 0
+		for _, digit := range numStr {
+			num = num*10 + int(digit-'0')
+		}
+
+		// Check what unit follows
+		if i < len(elevationStr) {
+			if elevationStr[i] == 'm' {
+				elevationM = num
+			}
+			i++
+		}
+	}
+
+	return elevationM
 }
 
 // ContributionGraph2D represents the grid for the contribution graph

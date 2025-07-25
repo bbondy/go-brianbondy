@@ -388,6 +388,10 @@
           <span class="total-value">{{commaf .Page.StravaRunTotals.TotalDistanceKm 1}}km</span>
         </div>
         <div class="total-item">
+          <span class="total-label">Total Elevation:</span>
+          <span class="total-value">{{commai .Page.StravaRunTotals.TotalElevationM}}m</span>
+        </div>
+        <div class="total-item">
           <a href="/pictures?tag=running" class="action-link pictures-link" aria-label="View Running Pictures Gallery" title="View Running Pictures Gallery">
             <i class="fas fa-images"></i>
           </a>
@@ -511,7 +515,8 @@ window.stravaActivitiesByDate = {};
           distance_km: {{printf "%v" $run.DistanceKm}},
           time: {{printf "%s" $run.Time}},
           pace: {{printf "%s" $run.Pace}},
-          activity_id: {{printf "%s" $run.ActivityID}}
+          activity_id: {{printf "%s" $run.ActivityID}},
+          elevation: {{printf "%s" $run.Elevation}}
         }{{if lt (add $i 1) (len $cell.Runs)}},{{end}}
       {{end}}
     ];
@@ -560,6 +565,7 @@ function openModal(date, runs) {
         <div><strong>Distance:</strong> ${run.distance_km ? run.distance_km + ' km' : ''}</div>
         <div><strong>Time:</strong> ${run.time || ''}</div>
         ${run.pace ? `<div><strong>Pace:</strong> ${run.pace}</div>` : ''}
+        ${run.elevation ? `<div><strong>Elevation:</strong> ${run.elevation}</div>` : ''}
         ${run.activity_id ? `<div><a href="https://www.strava.com/activities/${run.activity_id}" target="_blank">View on Strava</a></div>` : ''}
       </div>
     `).join('');

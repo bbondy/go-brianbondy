@@ -34,6 +34,13 @@ def calc_pace_min_per_km(moving_time_sec, distance_km):
     secs = int(round((pace - mins) * 60))
     return f"{mins}:{secs:02d} min/km"
 
+# Helper to format elevation
+def format_elevation(total_elevation_gain):
+    if total_elevation_gain is None or total_elevation_gain == 0:
+        return ""
+    # Strava returns elevation in meters
+    return f"{int(total_elevation_gain)}m"
+
 # HTTP handler for OAuth redirect
 class OAuthHandler(BaseHTTPRequestHandler):
     code = None
@@ -133,7 +140,8 @@ def fetch_all_activities(access_token):
                 'time': time_str,
                 'pace': pace,
                 'activity_id': str(act.get('id', '')),
-                'type': act_type
+                'type': act_type,
+                'elevation': format_elevation(act.get('total_elevation_gain'))
             })
         page += 1
     return activities

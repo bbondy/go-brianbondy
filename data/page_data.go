@@ -23,6 +23,7 @@ type RunningPage struct {
 type StravaRunTotals struct {
 	TotalRuns        int
 	TotalDistanceKm  float64
+	TotalElevationM  int
 	TotalTimeDays    int
 	TotalTimeHours   int
 	TotalTimeMinutes int
