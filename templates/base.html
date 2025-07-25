@@ -1255,6 +1255,12 @@
                 activeKeys.add(key);
                 updateAnimation();
                 
+                // Dismiss instructions on first mobile movement
+                if (window.currentHint) {
+                  window.currentHint.remove();
+                  window.currentHint = null;
+                }
+                
                 // Start continuous movement
                 const moveStep = () => {
                   if (!stickFigure || !activeKeys.has(key)) return;
