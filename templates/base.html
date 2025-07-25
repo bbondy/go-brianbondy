@@ -167,6 +167,228 @@
       .theme-toggle .icon {
         font-size: 1.1em;
       }
+
+      /* Easter Egg Stick Figure */
+      .stick-figure {
+        position: fixed;
+        width: 30px;
+        height: 40px;
+        z-index: 9999;
+        pointer-events: none;
+        transition: all 0.2s ease-out;
+        transform-origin: center bottom;
+      }
+
+      .stick-figure.walking {
+        animation: walk 0.6s infinite;
+      }
+
+      .stick-figure.jumping {
+        animation: jump 0.5s ease-out;
+      }
+
+      .stick-figure.celebrating {
+        animation: celebrate 1s ease-in-out;
+      }
+
+      @keyframes walk {
+        0% { transform: rotate(-2deg) scaleX(1); }
+        25% { transform: rotate(1deg) scaleX(1.05); }
+        50% { transform: rotate(-1deg) scaleX(1); }
+        75% { transform: rotate(2deg) scaleX(0.95); }
+        100% { transform: rotate(-2deg) scaleX(1); }
+      }
+
+      /* Leg animations */
+      .stick-figure.walking .leg-left {
+        animation: leg-walk-left 0.6s infinite;
+      }
+
+      .stick-figure.walking .leg-right {
+        animation: leg-walk-right 0.6s infinite;
+      }
+
+      .stick-figure.walking .arm-left {
+        animation: arm-swing-left 0.6s infinite;
+      }
+
+      .stick-figure.walking .arm-right {
+        animation: arm-swing-right 0.6s infinite;
+      }
+
+      @keyframes leg-walk-left {
+        0% { transform-origin: 15px 25px; transform: rotate(0deg); }
+        25% { transform-origin: 15px 25px; transform: rotate(-10deg); }
+        50% { transform-origin: 15px 25px; transform: rotate(5deg); }
+        75% { transform-origin: 15px 25px; transform: rotate(15deg); }
+        100% { transform-origin: 15px 25px; transform: rotate(0deg); }
+      }
+
+      @keyframes leg-walk-right {
+        0% { transform-origin: 15px 25px; transform: rotate(0deg); }
+        25% { transform-origin: 15px 25px; transform: rotate(15deg); }
+        50% { transform-origin: 15px 25px; transform: rotate(-5deg); }
+        75% { transform-origin: 15px 25px; transform: rotate(-10deg); }
+        100% { transform-origin: 15px 25px; transform: rotate(0deg); }
+      }
+
+      @keyframes arm-swing-left {
+        0% { transform-origin: 15px 16px; transform: rotate(0deg); }
+        25% { transform-origin: 15px 16px; transform: rotate(10deg); }
+        50% { transform-origin: 15px 16px; transform: rotate(-5deg); }
+        75% { transform-origin: 15px 16px; transform: rotate(-15deg); }
+        100% { transform-origin: 15px 16px; transform: rotate(0deg); }
+      }
+
+      @keyframes arm-swing-right {
+        0% { transform-origin: 15px 16px; transform: rotate(0deg); }
+        25% { transform-origin: 15px 16px; transform: rotate(-15deg); }
+        50% { transform-origin: 15px 16px; transform: rotate(5deg); }
+        75% { transform-origin: 15px 16px; transform: rotate(10deg); }
+        100% { transform-origin: 15px 16px; transform: rotate(0deg); }
+      }
+
+      /* Collision effect */
+      .stick-figure.colliding {
+        animation: collision-bounce 0.3s ease-out;
+      }
+
+      @keyframes collision-bounce {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.2) rotate(5deg); }
+        100% { transform: scale(1) rotate(0deg); }
+      }
+
+      /* Interaction effects */
+      .element-highlight {
+        box-shadow: 0 0 10px var(--link-color) !important;
+        transition: box-shadow 0.3s ease !important;
+      }
+
+      @keyframes jump {
+        0% { transform: translateY(0px) scaleY(1); }
+        50% { transform: translateY(-15px) scaleY(1.1); }
+        100% { transform: translateY(0px) scaleY(1); }
+      }
+
+      @keyframes celebrate {
+        0% { transform: rotate(0deg) scale(1); }
+        25% { transform: rotate(-10deg) scale(1.2); }
+        50% { transform: rotate(10deg) scale(1.1); }
+        75% { transform: rotate(-5deg) scale(1.15); }
+        100% { transform: rotate(0deg) scale(1); }
+      }
+
+      .stick-figure svg {
+        width: 100%;
+        height: 100%;
+        filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.3));
+      }
+
+      /* Trail effect */
+      .trail-dot {
+        position: fixed;
+        width: 3px;
+        height: 3px;
+        background: var(--link-color);
+        border-radius: 50%;
+        pointer-events: none;
+        z-index: 9998;
+        opacity: 0.7;
+        animation: trail-fade 1s ease-out forwards;
+      }
+
+      @keyframes trail-fade {
+        0% { opacity: 0.7; transform: scale(1); }
+        100% { opacity: 0; transform: scale(0.3); }
+      }
+
+      @keyframes sparkle {
+        0% { 
+          opacity: 1; 
+          transform: scale(0) translateY(0px); 
+        }
+        50% { 
+          opacity: 1; 
+          transform: scale(1.5) translateY(-10px); 
+        }
+        100% { 
+          opacity: 0; 
+          transform: scale(0.5) translateY(-20px); 
+        }
+      }
+
+      /* Bullet effects */
+      .bullet {
+        position: fixed;
+        width: 6px;
+        height: 2px;
+        background: linear-gradient(90deg, #ffff00, #ff6600);
+        border-radius: 2px;
+        pointer-events: none;
+        z-index: 9997;
+        box-shadow: 0 0 4px #ffff00;
+      }
+
+      /* Explosion effects */
+      .explosion {
+        position: fixed;
+        pointer-events: none;
+        z-index: 9999;
+      }
+
+      .explosion-particle {
+        position: absolute;
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        pointer-events: none;
+      }
+
+      @keyframes explode {
+        0% { 
+          opacity: 1; 
+          transform: scale(1) translate(0, 0); 
+        }
+        100% { 
+          opacity: 0; 
+          transform: scale(0.3) translate(var(--dx), var(--dy)); 
+        }
+      }
+
+      @keyframes element-destroy {
+        0% { 
+          opacity: 1; 
+          transform: scale(1) rotate(0deg); 
+        }
+        25% { 
+          opacity: 0.8; 
+          transform: scale(1.1) rotate(5deg); 
+        }
+        50% { 
+          opacity: 0.6; 
+          transform: scale(0.9) rotate(-5deg); 
+        }
+        75% { 
+          opacity: 0.3; 
+          transform: scale(1.05) rotate(3deg); 
+        }
+        100% { 
+          opacity: 0; 
+          transform: scale(0) rotate(10deg); 
+        }
+      }
+
+      /* Shooting animation for stick figure */
+      .stick-figure.shooting {
+        animation: shoot-recoil 0.2s ease-out;
+      }
+
+      @keyframes shoot-recoil {
+        0% { transform: scale(1); }
+        50% { transform: scale(0.95) translateX(-2px); }
+        100% { transform: scale(1); }
+      }
     </style>
     
     <!-- Non-critical CSS loaded asynchronously -->
@@ -207,7 +429,7 @@
     <div class="content">
       <div class="topBar">
         <a href="/">
-          <img title="Brian R. Bondy" src="/static/img/logo.png" alt="Brian R. Bondy logo" class="logo-img">
+          <img title="Brian R. Bondy" src="/static/img/logo.png" alt="Brian R. Bondy logo" class="logo-img" id="site-logo">
         </a>
         <ul class="topBarLinks">
           <a href="/all" class="blog">
@@ -809,6 +1031,464 @@
             setTheme(e.matches ? 'dark' : 'light');
           }
         });
+      })();
+
+      // Easter Egg: Stick Figure
+      (function() {
+        let logoClickCount = 0;
+        let stickFigure = null;
+        let stickX = 100;
+        let stickY = 100;
+        let isWalking = false;
+        let activeKeys = new Set();
+        let lastDirectionX = 1; // default right
+        let lastDirectionY = 0;
+
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const logo = document.getElementById('site-logo'); // Keep both for backwards compatibility
+        if (!themeToggleBtn && !logo) return;
+
+        // Create stick figure SVG with animated legs
+        function createStickFigure() {
+          const div = document.createElement('div');
+          div.className = 'stick-figure';
+          div.innerHTML = `
+            <svg viewBox="0 0 30 40" xmlns="http://www.w3.org/2000/svg">
+              <!-- Head -->
+              <circle cx="15" cy="6" r="4" fill="none" stroke="var(--text-color)" stroke-width="2"/>
+              <!-- Body -->
+              <line x1="15" y1="10" x2="15" y2="25" stroke="var(--text-color)" stroke-width="2"/>
+              <!-- Arms -->
+              <line x1="15" y1="16" x2="8" y2="12" stroke="var(--text-color)" stroke-width="2" class="arm-left"/>
+              <line x1="15" y1="16" x2="22" y2="12" stroke="var(--text-color)" stroke-width="2" class="arm-right"/>
+              <!-- Animated Legs -->
+              <line x1="15" y1="25" x2="8" y2="36" stroke="var(--text-color)" stroke-width="2" class="leg-left"/>
+              <line x1="15" y1="25" x2="22" y2="36" stroke="var(--text-color)" stroke-width="2" class="leg-right"/>
+              <!-- Eyes -->
+              <circle cx="13" cy="5" r="0.5" fill="var(--text-color)"/>
+              <circle cx="17" cy="5" r="0.5" fill="var(--text-color)"/>
+              <!-- Smile -->
+              <path d="M 12 7 Q 15 9 18 7" fill="none" stroke="var(--text-color)" stroke-width="1"/>
+            </svg>
+          `;
+          return div;
+        }
+
+        // Create trail effect
+        function createTrail(x, y) {
+          const trail = document.createElement('div');
+          trail.className = 'trail-dot';
+          trail.style.left = (x + 15) + 'px';
+          trail.style.top = (y + 20) + 'px';
+          document.body.appendChild(trail);
+          setTimeout(() => trail.remove(), 1000);
+        }
+
+        // Create collision effect
+        function createCollisionEffect(x, y) {
+          // Create multiple sparkle effects
+          for (let i = 0; i < 5; i++) {
+            setTimeout(() => {
+              const sparkle = document.createElement('div');
+              sparkle.style.cssText = `
+                position: fixed;
+                left: ${x + 15 + (Math.random() - 0.5) * 20}px;
+                top: ${y + 20 + (Math.random() - 0.5) * 20}px;
+                width: 4px;
+                height: 4px;
+                background: ${Math.random() > 0.5 ? 'gold' : 'var(--link-color)'};
+                border-radius: 50%;
+                pointer-events: none;
+                z-index: 9998;
+                animation: sparkle 0.8s ease-out forwards;
+              `;
+              document.body.appendChild(sparkle);
+              setTimeout(() => sparkle.remove(), 800);
+            }, i * 50);
+          }
+        }
+
+        // Create explosion effect
+        function createExplosion(x, y) {
+          const explosion = document.createElement('div');
+          explosion.className = 'explosion';
+          explosion.style.left = x + 'px';
+          explosion.style.top = y + 'px';
+          
+          // Create explosion particles
+          const colors = ['#ff4444', '#ff8800', '#ffff00', '#ff0000', '#ff6600'];
+          for (let i = 0; i < 12; i++) {
+            const particle = document.createElement('div');
+            particle.className = 'explosion-particle';
+            particle.style.background = colors[Math.floor(Math.random() * colors.length)];
+            
+            const angle = (i / 12) * Math.PI * 2;
+            const distance = 30 + Math.random() * 40;
+            const dx = Math.cos(angle) * distance;
+            const dy = Math.sin(angle) * distance;
+            
+            particle.style.setProperty('--dx', dx + 'px');
+            particle.style.setProperty('--dy', dy + 'px');
+            particle.style.animation = 'explode 0.6s ease-out forwards';
+            
+            explosion.appendChild(particle);
+          }
+          
+          document.body.appendChild(explosion);
+          setTimeout(() => explosion.remove(), 600);
+        }
+
+        // Shoot bullet
+        function shootBullet() {
+          if (!stickFigure) return;
+          
+          // Add shooting animation to stick figure
+          stickFigure.classList.add('shooting');
+          setTimeout(() => stickFigure.classList.remove('shooting'), 200);
+          
+          const bullet = document.createElement('div');
+          bullet.className = 'bullet';
+          
+          // Start bullet from stick figure position
+          let bulletX = stickX + 15;
+          let bulletY = stickY + 15;
+          
+          bullet.style.left = bulletX + 'px';
+          bullet.style.top = bulletY + 'px';
+          document.body.appendChild(bullet);
+          
+          // Determine bullet direction - use current movement if moving, otherwise use last direction
+          let directionX = lastDirectionX;
+          let directionY = lastDirectionY;
+          
+          // Override with current movement if actively moving
+          if (activeKeys.has('h')) {
+            directionX = -1;
+            directionY = 0;
+          } else if (activeKeys.has('l')) {
+            directionX = 1;
+            directionY = 0;
+          } else if (activeKeys.has('k')) {
+            directionX = 0;
+            directionY = -1;
+          } else if (activeKeys.has('j')) {
+            directionX = 0;
+            directionY = 1;
+          }
+          
+          const bulletSpeed = 8;
+          
+          const moveBullet = () => {
+            bulletX += directionX * bulletSpeed;
+            bulletY += directionY * bulletSpeed;
+            
+            bullet.style.left = bulletX + 'px';
+            bullet.style.top = bulletY + 'px';
+            
+            // Check if bullet is off screen
+            if (bulletX < -10 || bulletX > window.innerWidth + 10 || 
+                bulletY < -10 || bulletY > window.innerHeight + 10) {
+              bullet.remove();
+              return;
+            }
+            
+            // Check for collisions with destroyable elements
+            const hitElement = checkBulletCollision(bulletX, bulletY);
+            if (hitElement) {
+              // Create explosion at hit point
+              createExplosion(bulletX, bulletY);
+              
+              // Destroy the element with animation
+              hitElement.style.animation = 'element-destroy 0.5s ease-out forwards';
+              setTimeout(() => {
+                if (hitElement.parentNode) {
+                  hitElement.remove();
+                }
+              }, 500);
+              
+              bullet.remove();
+              return;
+            }
+            
+            requestAnimationFrame(moveBullet);
+          };
+          
+          requestAnimationFrame(moveBullet);
+        }
+
+        // Check bullet collision with elements
+        function checkBulletCollision(bulletX, bulletY) {
+          const bulletRect = {
+            left: bulletX - 3,
+            top: bulletY - 1,
+            right: bulletX + 3,
+            bottom: bulletY + 1
+          };
+          
+          // Get all destructible elements (same as collision targets)
+          const elements = document.querySelectorAll('h1, h2, h3, .run-card, .project-entry, .advice-card, .total-item, button:not(#theme-toggle), a:not([href="/"]), img:not(.logo-img), span.icon:not(#theme-icon), .family-photo');
+          
+          for (let element of elements) {
+            const rect = element.getBoundingClientRect();
+            const elementRect = {
+              left: rect.left + window.scrollX,
+              top: rect.top + window.scrollY,
+              right: rect.right + window.scrollX,
+              bottom: rect.bottom + window.scrollY
+            };
+            
+            // Check overlap
+            if (bulletRect.left < elementRect.right && 
+                bulletRect.right > elementRect.left && 
+                bulletRect.top < elementRect.bottom && 
+                bulletRect.bottom > elementRect.top) {
+              
+              return element;
+            }
+          }
+          return null;
+        }
+
+        // Check collision with page elements
+        function checkCollisions(newX, newY) {
+          const stickRect = {
+            left: newX,
+            top: newY,
+            right: newX + 30,
+            bottom: newY + 40
+          };
+          
+          // Get all interactive elements
+          const elements = document.querySelectorAll('h1, h2, h3, .run-card, .project-entry, .advice-card, .total-item, button, a, img:not(.logo-img), span.icon, .family-photo');
+          
+          for (let element of elements) {
+            const rect = element.getBoundingClientRect();
+            const elementRect = {
+              left: rect.left + window.scrollX,
+              top: rect.top + window.scrollY,
+              right: rect.right + window.scrollX,
+              bottom: rect.bottom + window.scrollY
+            };
+            
+            // Check overlap
+            if (stickRect.left < elementRect.right && 
+                stickRect.right > elementRect.left && 
+                stickRect.top < elementRect.bottom && 
+                stickRect.bottom > elementRect.top) {
+              
+              // Collision detected!
+              return element;
+            }
+          }
+          return null;
+        }
+
+        // Move stick figure with collision detection
+        function moveStickFigure(deltaX, deltaY) {
+          if (!stickFigure) return;
+          
+          const maxX = window.innerWidth - 30;
+          const maxY = window.innerHeight - 40;
+          
+          const newX = Math.max(0, Math.min(maxX, stickX + deltaX));
+          const newY = Math.max(0, Math.min(maxY, stickY + deltaY));
+          
+          // Check for collisions
+          const collidedElement = checkCollisions(newX, newY);
+          
+          if (collidedElement) {
+            // Collision effect
+            stickFigure.classList.add('colliding');
+            setTimeout(() => stickFigure.classList.remove('colliding'), 300);
+            
+            // Highlight the collided element
+            collidedElement.classList.add('element-highlight');
+            setTimeout(() => collidedElement.classList.remove('element-highlight'), 500);
+            
+            // Create special collision trail
+            createCollisionEffect(stickX, stickY);
+            
+            // Bounce back slightly
+            stickX = Math.max(0, Math.min(maxX, stickX - deltaX * 0.5));
+            stickY = Math.max(0, Math.min(maxY, stickY - deltaY * 0.5));
+          } else {
+            // Normal movement
+            stickX = newX;
+            stickY = newY;
+          }
+          
+          stickFigure.style.left = stickX + 'px';
+          stickFigure.style.top = stickY + 'px';
+          
+          // Create trail when moving
+          if (deltaX !== 0 || deltaY !== 0) {
+            createTrail(stickX, stickY);
+          }
+        }
+
+        // Handle animations
+        function updateAnimation() {
+          if (!stickFigure) return;
+          
+          const isMoving = activeKeys.size > 0;
+          
+          if (isMoving && !isWalking) {
+            stickFigure.classList.add('walking');
+            isWalking = true;
+          } else if (!isMoving && isWalking) {
+            stickFigure.classList.remove('walking');
+            isWalking = false;
+          }
+        }
+
+                // Theme toggle click handler
+        themeToggleBtn.addEventListener('click', function(e) {
+          logoClickCount++;
+          
+          // Add a little bounce effect to the theme button
+          themeToggleBtn.style.transform = 'scale(0.9)';
+          setTimeout(() => themeToggleBtn.style.transform = 'scale(1)', 100);
+          
+          if (logoClickCount === 4) {
+            // Cancel theme toggle and activate easter egg
+            e.preventDefault();
+            e.stopPropagation();
+            
+            // Reset click count timeout
+            clearTimeout(window.logoClickTimeout);
+            
+            // Activate easter egg
+            // Spawn stick figure
+            stickFigure = createStickFigure();
+            stickX = Math.random() * (window.innerWidth - 30);
+            stickY = Math.random() * (window.innerHeight - 40);
+            stickFigure.style.left = stickX + 'px';
+            stickFigure.style.top = stickY + 'px';
+            document.body.appendChild(stickFigure);
+            
+            // Celebration animation
+            stickFigure.classList.add('celebrating');
+            setTimeout(() => stickFigure.classList.remove('celebrating'), 1000);
+            
+            // Show hint
+            const hint = document.createElement('div');
+            hint.style.cssText = `
+              position: fixed;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              background: var(--mainbody-bg);
+              color: var(--text-color);
+              padding: 20px;
+              border-radius: 10px;
+              box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+              z-index: 10000;
+              text-align: center;
+              font-family: monospace;
+              border: 2px solid var(--link-color);
+            `;
+                                      hint.innerHTML = `
+               <h3>🎉 Easter Egg Activated! 🎉</h3>
+               <p><strong>Movement:</strong> H (left), J (down), K (up), L (right)</p>
+               <p><strong>Special:</strong> Spacebar (jump), <strong>F</strong> (shoot)</p>
+               <p><strong>Combat:</strong> Shoot elements to destroy them!</p>
+               <p><strong>Features:</strong> Collides with page elements!</p>
+               <p><strong>Remove:</strong> Double-click logo</p>
+               <small>Watch the legs move, run into things, and shoot to destroy! Click to dismiss.</small>
+             `;
+             document.body.appendChild(hint);
+             
+                          hint.addEventListener('click', () => hint.remove());
+             setTimeout(() => hint.remove(), 15000); // Extended to 15 seconds
+             
+             // Store reference for ESC key handling
+             window.currentHint = hint;
+             
+             logoClickCount = 0; // Reset counter
+          } else {
+            // Set timeout to reset click count if not clicked again soon
+            clearTimeout(window.logoClickTimeout);
+            window.logoClickTimeout = setTimeout(() => {
+              logoClickCount = 0;
+            }, 1000); // Reset after 1 second of no clicks
+          }
+        });
+
+        // Keyboard controls
+        document.addEventListener('keydown', function(e) {
+          const key = e.key.toLowerCase();
+          
+          // ESC key to dismiss instructions
+          if (e.key === 'Escape' && window.currentHint) {
+            window.currentHint.remove();
+            window.currentHint = null;
+            return;
+          }
+          
+          if (!stickFigure) return;
+          if (['h', 'j', 'k', 'l'].includes(key)) {
+            e.preventDefault();
+            activeKeys.add(key);
+            
+            const speed = 8;
+            let deltaX = 0, deltaY = 0;
+            
+            if (activeKeys.has('h')) deltaX -= speed; // left
+            if (activeKeys.has('l')) deltaX += speed; // right
+            if (activeKeys.has('k')) deltaY -= speed; // up
+            if (activeKeys.has('j')) deltaY += speed; // down
+            
+            // Update last direction when actually moving
+            if (deltaX !== 0 || deltaY !== 0) {
+              if (deltaX !== 0) lastDirectionX = deltaX > 0 ? 1 : -1;
+              if (deltaY !== 0) lastDirectionY = deltaY > 0 ? 1 : -1;
+              // If moving diagonally, prioritize horizontal direction for shooting
+              if (deltaX !== 0) lastDirectionY = 0;
+              else if (deltaY !== 0) lastDirectionX = 0;
+            }
+            
+            moveStickFigure(deltaX, deltaY);
+            updateAnimation();
+          }
+          
+          // Special moves
+          if (key === ' ' && stickFigure) { // spacebar for jump
+            e.preventDefault();
+            stickFigure.classList.add('jumping');
+            setTimeout(() => stickFigure.classList.remove('jumping'), 500);
+          }
+          
+          if (key === 'f' && stickFigure) { // F for shoot
+            e.preventDefault();
+            shootBullet();
+          }
+        });
+
+        document.addEventListener('keyup', function(e) {
+          if (!stickFigure) return;
+          
+          const key = e.key.toLowerCase();
+          if (['h', 'j', 'k', 'l'].includes(key)) {
+            activeKeys.delete(key);
+            updateAnimation();
+          }
+        });
+
+        // Double-click logo to remove stick figure
+        logo.addEventListener('dblclick', function() {
+          if (stickFigure) {
+            stickFigure.style.animation = 'celebrate 0.5s ease-out';
+            setTimeout(() => {
+              stickFigure.remove();
+              stickFigure = null;
+              logoClickCount = 0;
+            }, 500);
+          }
+        });
+
+
+
+
       })();
 
       // Reading Progress Bar functionality - initialize immediately when DOM is ready
