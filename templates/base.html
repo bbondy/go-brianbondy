@@ -503,8 +503,8 @@
     </style>
     
     <!-- Non-critical CSS loaded asynchronously -->
-        <link rel="stylesheet" href="/static/css/main.css?v=121" media="print" onload="this.media='all'">
-    <noscript><link rel="stylesheet" href="/static/css/main.css?v=121"></noscript>
+        <link rel="stylesheet" href="/static/css/main.css?v=130" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="/static/css/main.css?v=130"></noscript>
     
     <!-- Font Awesome loaded asynchronously -->
     <link rel="stylesheet" href="/static/font-awesome/css/all.min.css" media="print" onload="this.media='all'">
@@ -1159,14 +1159,9 @@
                       (navigator.maxTouchPoints && navigator.maxTouchPoints > 2) ||
                       ('ontouchstart' in window);
         
-        // Debug logging for mobile detection
-        console.log('Mobile detection:', {
-          userAgent: navigator.userAgent,
-          maxTouchPoints: navigator.maxTouchPoints,
-          ontouchstart: 'ontouchstart' in window,
-          isMobile: isMobile
-        });
+        // (debug logs removed)
         let mobileControls = null;
+        let easterEggActivated = false; // Flag to prevent multiple activations
 
         const themeToggleBtn = document.getElementById('theme-toggle');
         const logo = document.getElementById('site-logo'); // Keep both for backwards compatibility
@@ -1212,7 +1207,6 @@
         function createMobileControls() {
           if (!isMobile || mobileControls) return;
           
-          console.log('Creating mobile controls...');
           
           const controls = document.createElement('div');
           controls.className = 'mobile-controls';
@@ -1221,11 +1215,8 @@
               <div class="mobile-btn up" data-key="k">↑</div>
               <div class="mobile-btn left" data-key="h">←</div>
               <div class="mobile-btn right" data-key="l">→</div>
-              <div class="mobile-btn down" data-key="j">↓</div>
-            </div>
-            <div class="mobile-actions">
-              <div class="mobile-action-btn jump" data-key=" ">↗</div>
               <div class="mobile-action-btn shoot" data-key="f">🎯</div>
+              <div class="mobile-btn down" data-key="j">↓</div>
             </div>
           `;
           
@@ -1247,7 +1238,6 @@
             btn.addEventListener('touchstart', (e) => {
               e.preventDefault();
               e.stopPropagation();
-              console.log('Touch start on button:', key);
               if (!stickFigure) return;
               
               // For movement keys, start continuous movement
@@ -1303,7 +1293,6 @@
             btn.addEventListener('touchend', (e) => {
               e.preventDefault();
               e.stopPropagation();
-              console.log('Touch end on button:', key);
               if (!stickFigure) return;
               
               // Stop continuous movement
@@ -1319,7 +1308,7 @@
             
             // Also stop on touch cancel (when finger leaves button area)
             btn.addEventListener('touchcancel', (e) => {
-              console.log('Touch cancel on button:', key);
+              
               if (['h', 'j', 'k', 'l'].includes(key)) {
                 activeKeys.delete(key);
                 updateAnimation();
@@ -1334,8 +1323,7 @@
           document.body.appendChild(controls);
           mobileControls = controls;
           
-          console.log('Mobile controls added to DOM:', controls);
-          console.log('Mobile controls visible:', getComputedStyle(controls).display !== 'none');
+          
         }
 
         // Show/hide mobile controls
@@ -1486,7 +1474,7 @@
           };
           
           // Get all destructible elements (same as collision targets)
-          const elements = document.querySelectorAll('h1, h2, h3, .run-card, .project-entry, .advice-card, .total-item, button:not(#theme-toggle), a:not([href="/"]), img:not(.logo-img), span.icon:not(#theme-icon), .family-photo');
+          const elements = document.querySelectorAll('h1, h2, h3, .run-card, .project-entry, .advice-card, .total-item, button, a:not([href="/"]), img, span.icon, .family-photo, select, input, textarea, .contribution-day');
           
           for (let element of elements) {
             const rect = element.getBoundingClientRect();
@@ -1519,7 +1507,7 @@
           };
           
           // Get all interactive elements
-          const elements = document.querySelectorAll('h1, h2, h3, .run-card, .project-entry, .advice-card, .total-item, button, a, img:not(.logo-img), span.icon, .family-photo');
+          const elements = document.querySelectorAll('h1, h2, h3, .run-card, .project-entry, .advice-card, .total-item, button, a, img, span.icon, .family-photo, select, input, textarea, .contribution-day, .logo-img');
           
           for (let element of elements) {
             const rect = element.getBoundingClientRect();
@@ -1617,15 +1605,23 @@
             // Reset click count timeout
             clearTimeout(window.logoClickTimeout);
             
+            // Check if easter egg is already activated
+            if (easterEggActivated) {
+              logoClickCount = 0; // Reset counter
+              return; // Don't activate again
+            }
+            
             // Activate easter egg
+            easterEggActivated = true;
             // Spawn stick figure near the theme toggle button
             stickFigure = createStickFigure();
             
             // Position stick figure to the right of the theme toggle button
             const themeRect = themeToggleBtn.getBoundingClientRect();
-            stickX = Math.min(window.innerWidth - 50, themeRect.right + 10); // 10px to the right
-            stickY = Math.max(50, themeRect.top - 10); // Slightly above, with minimum top margin
-            
+            stickX = Math.min(window.innerWidth - 50, themeRect.right + 10); // 10px to the right of theme toggle
+            // Vertically center with theme toggle
+            stickY = themeRect.top + window.scrollY + (themeRect.height / 2) - 20; // center considering stick height
+ 
             stickFigure.style.left = stickX + 'px';
             stickFigure.style.top = stickY + 'px';
             document.body.appendChild(stickFigure);
@@ -1658,7 +1654,7 @@
                                       hint.innerHTML = `
                <h3>🎉 Easter Egg Activated! 🎉</h3>
                <p><strong>Desktop:</strong> H/J/K/L (move), F (shoot), Space (jump)</p>
-               <p><strong>Mobile:</strong> Use the virtual controls below!</p>
+               <p><strong>Mobile:</strong> Use the virtual D-pad and center shoot button!</p>
                <p><strong>Combat:</strong> Shoot elements to destroy them!</p>
                <p><strong>Features:</strong> Collides with page elements!</p>
                <p><strong>Remove:</strong> Double-click theme button</p>
@@ -1696,6 +1692,11 @@
           if (!stickFigure) return;
           if (['h', 'j', 'k', 'l'].includes(key)) {
             e.preventDefault();
+            // Dismiss instructions if visible
+            if (window.currentHint) {
+              window.currentHint.remove();
+              window.currentHint = null;
+            }
             activeKeys.add(key);
             
             const speed = 8;
@@ -1742,7 +1743,22 @@
           }
         });
 
-        // Double-click logo to remove stick figure
+        // Double-click theme button to remove stick figure
+        themeToggleBtn.addEventListener('dblclick', function() {
+          if (stickFigure) {
+            stickFigure.style.animation = 'celebrate 0.5s ease-out';
+            setTimeout(() => {
+              stickFigure.remove();
+              stickFigure = null;
+              logoClickCount = 0;
+              easterEggActivated = false; // Reset activation flag
+              // Hide mobile controls
+              toggleMobileControls(false);
+            }, 500);
+          }
+        });
+
+        // Double-click logo to remove stick figure (backup method)
         logo.addEventListener('dblclick', function() {
           if (stickFigure) {
             stickFigure.style.animation = 'celebrate 0.5s ease-out';
@@ -1750,6 +1766,7 @@
               stickFigure.remove();
               stickFigure = null;
               logoClickCount = 0;
+              easterEggActivated = false; // Reset activation flag
               // Hide mobile controls
               toggleMobileControls(false);
             }, 500);

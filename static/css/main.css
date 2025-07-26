@@ -3204,100 +3204,55 @@ img[loading="lazy"] {
 /* Mobile Controls for Stick Figure Easter Egg */
 .mobile-controls {
   position: fixed;
-  bottom: 20px;
-  left: 20px;
-  right: 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  z-index: 10001;
+  bottom: 100px;
+  left: calc(50% - 20px);
+  transform: translateX(-50%);
+  width: 200px; /* 3 cells * 60px + 2 gaps * 10px */
   pointer-events: none;
   touch-action: none;
   -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
 }
 
 .mobile-dpad {
-  position: relative;
-  width: 120px;
-  height: 120px;
-  pointer-events: auto;
-}
-
-.mobile-btn {
-  position: absolute;
-  width: 40px;
-  height: 40px;
-  background: rgba(0, 0, 0, 0.8);
-  color: white;
-  border: 2px solid rgba(255, 255, 255, 0.3);
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 16px;
-  font-weight: bold;
-  cursor: pointer;
-  touch-action: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-tap-highlight-color: transparent;
-}
-
-.mobile-btn:active {
-  background: rgba(255, 255, 255, 0.2);
-  transform: scale(0.95);
-}
-
-.mobile-btn.up { top: 0; left: 40px; }
-.mobile-btn.left { top: 40px; left: 0; }
-.mobile-btn.right { top: 40px; left: 80px; }
-.mobile-btn.down { bottom: 0; left: 40px; }
-
-.mobile-actions {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(3, 60px);
+  grid-template-rows: repeat(3, 60px);
   gap: 10px;
   pointer-events: auto;
+  margin: 0 auto; /* center inside container */
 }
 
-.mobile-action-btn {
-  width: 50px;
-  height: 50px;
-  background: rgba(0, 0, 0, 0.8);
-  color: white;
-  border: 2px solid rgba(255, 255, 255, 0.3);
-  border-radius: 50%;
+/* Direction buttons */
+.mobile-btn {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 18px;
+  width: 60px;
+  height: 60px;
+  background: rgba(0,0,0,0.85);
+  color: #fff;
+  border: 2px solid rgba(255,255,255,0.3);
+  border-radius: 10px;
+  font-size: 22px;
   cursor: pointer;
-  touch-action: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-tap-highlight-color: transparent;
+  pointer-events: auto;
 }
+.mobile-btn:active {transform:scale(.95);}
 
-.mobile-action-btn:active {
-  background: rgba(255, 255, 255, 0.2);
-  transform: scale(0.95);
-}
+.mobile-btn.up   { grid-column: 2; grid-row: 1; }
+.mobile-btn.left { grid-column: 1; grid-row: 2; }
+.mobile-btn.right{ grid-column: 3; grid-row: 2; }
+.mobile-btn.down { grid-column: 2; grid-row: 3; }
 
-/* Dark mode overrides for mobile controls */
-[data-theme="dark"] .mobile-btn,
-[data-theme="dark"] .mobile-action-btn {
-  background: rgba(255, 255, 255, 0.1);
-  border-color: rgba(255, 255, 255, 0.3);
+/* Shoot button */
+.mobile-action-btn.shoot {
+  grid-column: 2; grid-row: 2;
+  width: 60px; height: 60px;
+  border-radius: 50%;
+  background: rgba(220,53,69,0.9);
+  font-size: 26px;
+  justify-self: center;
+  align-self: center;
 }
-
-[data-theme="dark"] .mobile-btn:active,
-[data-theme="dark"] .mobile-action-btn:active {
-  background: rgba(255, 255, 255, 0.3);
-}
+.mobile-action-btn.shoot:active {transform:scale(.9);}
