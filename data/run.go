@@ -599,3 +599,77 @@ func GenerateContributionGraph2D(yearFilter string) (*ContributionGraph2D, error
 		Years:          years,
 	}, nil
 }
+
+// GetActivityTypeBreakdown calculates activity type percentages from Strava data
+func GetActivityTypeBreakdown(yearFilter string) ([]ActivityTypeBreakdown, error) {
+	runs, err := GetStravaRuns()
+	if err != nil {
+		return nil, err
+	}
+
+	// Filter runs by year if specified (same logic as GenerateContributionGraph2D)
+	var filteredRuns StravaRuns
+	if yearFilter != "" && yearFilter != "365" {
+		year, err := strconv.Atoi(yearFilter)
+		if err == nil {
+			for _, run := range runs {
+				if len(run.Date) >= 4 {
+					if runYear, err := strconv.Atoi(run.Date[:4]); err == nil && runYear == year {
+						filteredRuns = append(filteredRuns, run)
+					}
+				}
+			}
+		}
+	} else {
+		// Filter to last 365 days
+		now := time.Now()
+		endDate := time.Date(now.Year(), now.Month(), now.Day(), 0, 0, 0, 0, now.Location())
+		startDate := endDate.AddDate(0, 0, -364) // 365 days total
+
+		for _, run := range runs {
+			if runDate, err := time.Parse("2006-01-02", run.Date); err == nil {
+				if (runDate.Equal(startDate) || runDate.After(startDate)) &&
+					(runDate.Equal(endDate) || runDate.Before(endDate)) {
+					filteredRuns = append(filteredRuns, run)
+				}
+			}
+		}
+	}
+
+	if len(filteredRuns) == 0 {
+		return []ActivityTypeBreakdown{}, nil
+	}
+
+	// Count activities by type
+	typeCounts := make(map[string]int)
+	for _, run := range filteredRuns {
+		activityType := run.Type
+		if activityType == "" {
+			activityType = "Unknown"
+		}
+		typeCounts[activityType]++
+	}
+
+	// Convert to breakdown with percentages
+	totalActivities := len(filteredRuns)
+	breakdown := make([]ActivityTypeBreakdown, 0, len(typeCounts))
+
+	for activityType, count := range typeCounts {
+		percentage := (float64(count) / float64(totalActivities)) * 100
+		// Only include activity types with 0.4% or more
+		if percentage >= 0.4 {
+			breakdown = append(breakdown, ActivityTypeBreakdown{
+				Type:       activityType,
+				Count:      count,
+				Percentage: percentage,
+			})
+		}
+	}
+
+	// Sort by count descending (highest first)
+	sort.Slice(breakdown, func(i, j int) bool {
+		return breakdown[i].Count > breakdown[j].Count
+	})
+
+	return breakdown, nil
+}

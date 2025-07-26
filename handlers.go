@@ -187,12 +187,19 @@ func runningHandler(w http.ResponseWriter, r *http.Request) {
 		TotalTimeMinutes: timeMinutes,
 	}
 
+	// Get activity type breakdown for the selected year filter
+	activityBreakdown, err := data.GetActivityTypeBreakdown(yearFilter)
+	if err != nil {
+		activityBreakdown = []data.ActivityTypeBreakdown{}
+	}
+
 	p := &data.RunningPage{
-		Title:             GetTitle("Running"),
-		MarkdownSlug:      "running",
-		Runs:              runs,
-		ContributionGraph: nil, // not used in new template
-		StravaRunTotals:   stravaTotals,
+		Title:                 GetTitle("Running"),
+		MarkdownSlug:          "running",
+		Runs:                  runs,
+		ContributionGraph:     nil, // not used in new template
+		StravaRunTotals:       stravaTotals,
+		ActivityTypeBreakdown: activityBreakdown,
 	}
 
 	// Get last updated date

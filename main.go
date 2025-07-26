@@ -11,6 +11,8 @@ import (
 	"strings"
 	"time"
 
+	"regexp"
+
 	"github.com/gorilla/mux"
 )
 
@@ -42,6 +44,14 @@ var funcMap = template.FuncMap{
 		return t.Format("January 2, 2006")
 	},
 	"formatFullDate": formatFullDate,
+	"formatActivityType": func(activityType string) string {
+		if activityType == "" {
+			return ""
+		}
+		// Convert camelCase or PascalCase to spaced words
+		re := regexp.MustCompile(`([a-z])([A-Z])`)
+		return re.ReplaceAllString(activityType, "$1 $2")
+	},
 	"htmlSafe":       func(html string) template.HTML { return template.HTML(html) },
 	"optimizeImages": func(html string) template.HTML { return template.HTML(optimizeImagesInContent(html)) },
 	"getTagCount": func(tag string) int {

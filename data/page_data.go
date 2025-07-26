@@ -12,12 +12,19 @@ type SimpleMarkdownPage struct {
 	ErrorCode    int // Added for error pages
 }
 
+type ActivityTypeBreakdown struct {
+	Type       string  `json:"type"`
+	Count      int     `json:"count"`
+	Percentage float64 `json:"percentage"`
+}
+
 type RunningPage struct {
-	Title             string
-	MarkdownSlug      string
-	Runs              Runs
-	ContributionGraph *ContributionGraph
-	StravaRunTotals   StravaRunTotals
+	Title                 string
+	MarkdownSlug          string
+	Runs                  Runs
+	ContributionGraph     *ContributionGraph
+	StravaRunTotals       StravaRunTotals
+	ActivityTypeBreakdown []ActivityTypeBreakdown
 }
 
 type StravaRunTotals struct {

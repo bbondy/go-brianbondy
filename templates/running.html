@@ -69,6 +69,37 @@ K{{define "mountPoint"}}
             Last updated: <span id="last-updated-date">{{$.LastUpdatedDate}}</span>
           </div>
         </div>
+            </div>
+    </div>
+    {{end}}
+    
+    {{/* Activity Type Breakdown Chart */}}
+    {{if .Page.ActivityTypeBreakdown}}
+    <div class="contribution-graph-section">
+      <div class="activity-breakdown-chart-container">
+        <div class="activity-breakdown-header">
+          <h3>Activity Types ({{if eq .SelectedYear "365"}}Last 365 Days{{else}}{{.SelectedYear}}{{end}})</h3>
+        </div>
+        <div class="activity-breakdown-chart">
+          <div class="activity-bar">
+            {{range $i, $breakdown := .Page.ActivityTypeBreakdown}}
+              <div class="activity-segment activity-type-{{$i}}" 
+                   style="width: {{printf "%.1f" $breakdown.Percentage}}%;" 
+                   title="{{formatActivityType $breakdown.Type}}: {{$breakdown.Count}} activities ({{printf "%.1f" $breakdown.Percentage}}%)">
+              </div>
+            {{end}}
+          </div>
+          <div class="activity-legend">
+            {{range $i, $breakdown := .Page.ActivityTypeBreakdown}}
+              <div class="activity-legend-item">
+                <span class="activity-color activity-type-{{$i}}" 
+                      title="{{$breakdown.Count}} {{formatActivityType $breakdown.Type}} {{if eq $breakdown.Count 1}}activity{{else}}activities{{end}}"></span>
+                <span class="activity-name">{{formatActivityType $breakdown.Type}}</span>
+                <span class="activity-percentage">{{printf "%.1f" $breakdown.Percentage}}%</span>
+              </div>
+            {{end}}
+          </div>
+        </div>
       </div>
     </div>
     {{end}}
@@ -342,6 +373,97 @@ K{{define "mountPoint"}}
       [data-theme="light"] .modal-body::-webkit-scrollbar-thumb:hover {
         background: rgba(0, 0, 0, 0.3);
       }
+
+      /* Activity Type Breakdown Chart */
+      .activity-breakdown-chart-container {
+        margin: 1.5rem 0 0 0;
+        padding: 1.5rem 0;
+      }
+
+      .activity-breakdown-header h3 {
+        margin: 0 0 1rem 0;
+        color: var(--heading-color);
+        font-size: 1.25rem;
+        font-weight: 600;
+      }
+
+      .activity-breakdown-chart {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .activity-bar {
+        display: flex;
+        height: 12px;
+        border-radius: 6px;
+        overflow: hidden;
+        background: var(--bg-secondary);
+      }
+
+      .activity-segment {
+        height: 100%;
+        transition: opacity 0.2s ease;
+      }
+
+      .activity-segment:hover {
+        opacity: 0.8;
+      }
+
+      /* Activity type colors - matching the image's color scheme */
+      .activity-type-0 { background-color: #ff6b35; } /* Orange for most common (Running) */
+      .activity-type-1 { background-color: #4a9eff; } /* Blue for second most common (Walking) */
+      .activity-type-2 { background-color: #8b5cf6; } /* Purple for third */
+      .activity-type-3 { background-color: #06b6d4; } /* Cyan for fourth */
+      .activity-type-4 { background-color: #10b981; } /* Green for fifth */
+      .activity-type-5 { background-color: #f59e0b; } /* Amber for sixth */
+      .activity-type-6 { background-color: #ef4444; } /* Red for seventh */
+      .activity-type-7 { background-color: #8b5cf6; } /* Purple variant */
+      .activity-type-8 { background-color: #6b7280; } /* Gray for others */
+
+      .activity-legend {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        align-items: center;
+      }
+
+      .activity-legend-item {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 0.875rem;
+      }
+
+      .activity-color {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        display: inline-block;
+      }
+
+      .activity-name {
+        color: var(--text-color);
+        font-weight: 500;
+      }
+
+      .activity-percentage {
+        color: var(--text-secondary);
+        font-weight: 400;
+      }
+
+              /* Responsive design */
+        @media (max-width: 768px) {
+          .activity-legend {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 0.5rem;
+          }
+          
+          .activity-breakdown-chart-container {
+            padding: 1rem 0;
+          }
+        }
     </style>
     
     <div id="runs-modal" class="modal">
