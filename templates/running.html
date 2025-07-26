@@ -1,4 +1,4 @@
-{{define "mountPoint"}}
+K{{define "mountPoint"}}
   <div class="running-container">
     <h1>Runs</h1>
     
@@ -53,8 +53,8 @@
         </div>
       </div>
       <div class="contribution-legend">
-        <div style="display: flex; align-items: center; justify-content: space-between; width: 100%;">
-          <div style="display: flex; align-items: center; gap: 4px;">
+        <div class="legend-container">
+          <div class="legend-items">
             <span>Less</span>
             <div class="legend-item level-0"></div>
             <div class="legend-item level-1"></div>
@@ -65,7 +65,7 @@
             <div class="legend-item level-6" title="Ultra-distance (50+ miles)"></div>
             <span>More</span>
           </div>
-          <div style="font-size: 0.85em; color: var(--text-color); opacity: 0.7;">
+          <div class="last-updated">
             Last updated: <span id="last-updated-date">{{$.LastUpdatedDate}}</span>
           </div>
         </div>

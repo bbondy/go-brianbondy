@@ -2934,6 +2934,16 @@ img[loading="lazy"] {
   background-color: #0891b2;
 }
 
+/* Dark mode styles for pictures gallery */
+[data-theme="dark"] .picture-entry {
+  background: #2d3748;
+  border: 1px solid #4a5568;
+}
+
+[data-theme="dark"] .picture-entry:hover {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+}
+
 [data-theme="dark"] input:not([type="submit"]):not([type="button"]),
 [data-theme="dark"] textarea:not([type="submit"]):not([type="button"]) {
   color: #e2e8f0 !important;
@@ -3070,6 +3080,47 @@ img[loading="lazy"] {
   font-size: 0.95em;
   color: var(--text-color);
   opacity: 0.8;
+}
+
+.legend-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.legend-items {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+.last-updated {
+  font-size: 0.85em;
+  color: var(--text-color);
+  opacity: 0.7;
+  white-space: nowrap;
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 640px) {
+  .legend-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+  
+  .contribution-legend {
+    margin-left: 20px;
+    font-size: 0.9em;
+  }
+  
+  .last-updated {
+    font-size: 0.8em;
+  }
 }
 .legend-item {
   width: 13px;
