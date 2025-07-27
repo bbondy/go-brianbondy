@@ -84,6 +84,7 @@ K{{define "mountPoint"}}
           <div class="activity-bar">
             {{range $i, $breakdown := .Page.ActivityTypeBreakdown}}
               <div class="activity-segment activity-type-{{$i}}" 
+                   data-activity-type="{{$breakdown.Type}}" 
                    style="width: {{printf "%.1f" $breakdown.Percentage}}%;" 
                    title="{{formatActivityType $breakdown.Type}}: {{$breakdown.Count}} activities ({{printf "%.1f" $breakdown.Percentage}}%)">
               </div>
@@ -93,6 +94,7 @@ K{{define "mountPoint"}}
             {{range $i, $breakdown := .Page.ActivityTypeBreakdown}}
               <div class="activity-legend-item">
                 <span class="activity-color activity-type-{{$i}}" 
+                      data-activity-type="{{$breakdown.Type}}" 
                       title="{{$breakdown.Count}} {{formatActivityType $breakdown.Type}} {{if eq $breakdown.Count 1}}activity{{else}}activities{{end}}"></span>
                 <span class="activity-name">{{formatActivityType $breakdown.Type}}</span>
                 <span class="activity-percentage">{{printf "%.1f" $breakdown.Percentage}}%</span>
@@ -868,5 +870,67 @@ if (searchInput && runsGrid) {
     });
   });
 }
+
+// -------------------------------------------------------------
+// Activity type highlighting in contribution graph
+// -------------------------------------------------------------
+
+// Cache colors for each activity type based on legend/bar colors
+var activityTypeColors = {};
+document.querySelectorAll('.activity-color, .activity-segment').forEach(function(el) {
+  var type = el.getAttribute('data-activity-type');
+  if (type && !activityTypeColors[type]) {
+    activityTypeColors[type] = getComputedStyle(el).backgroundColor;
+  }
+});
+
+var selectedActivityType = null;
+
+function clearActivityHighlights() {
+  document.querySelectorAll('.contribution-day').forEach(function(cell) {
+    cell.style.boxShadow = '';
+  });
+  selectedActivityType = null;
+}
+
+function highlightActivityType(activityType) {
+  if (!activityType) return;
+  var color = activityTypeColors[activityType] || '#ffffff';
+  clearActivityHighlights();
+  selectedActivityType = activityType;
+  document.querySelectorAll('.contribution-day').forEach(function(cell) {
+    var date = cell.getAttribute('data-date');
+    if (!date) return;
+    var runs = (window.stravaActivitiesByDate && window.stravaActivitiesByDate[date]) || [];
+    var matches = runs.some(function(run) {
+      return run && run.type === activityType;
+    });
+    if (matches) {
+      cell.style.boxShadow = '0 0 0 2px ' + color;
+      cell.style.borderRadius = '4px';
+    }
+  });
+}
+
+// Click handlers for bar segments and legend dots
+document.querySelectorAll('.activity-segment, .activity-color').forEach(function(el) {
+  el.addEventListener('click', function(ev) {
+    ev.stopPropagation();
+    var type = el.getAttribute('data-activity-type');
+    if (!type) return;
+    if (selectedActivityType === type) {
+      clearActivityHighlights();
+    } else {
+      highlightActivityType(type);
+    }
+  });
+});
+
+// Clicking anywhere else clears the highlights
+document.addEventListener('click', function() {
+  if (selectedActivityType !== null) {
+    clearActivityHighlights();
+  }
+});
 </script>
 {{end}}
