@@ -1,9 +1,9 @@
 .DEFAULT_GOAL := update
 
-update: format lint test update-cache webp github-stats strava-stats
+update: format lint test update-cache webp github-stats memorable-runs
 
-strava-stats:
-	python3 scripts/fetch_strava_times.py
+memorable-runs:
+	python3 scripts/fetch_memorable_runs.py
 
 # Default target - runs all essential tasks
 all: lint format test update-cache webp pictures-manifest
@@ -72,10 +72,14 @@ dev: lint format test
 cache-version:
 	@grep -o 'cachebust=[0-9]*' templates/base.html
 
+# Clear saved Strava OAuth token
+strava-clear-token:
+	rm -f ~/.strava_token.json
+
 # Show help
 help:
 	@echo "Available targets:"
-	@echo "  update       - Run all update scripts (format, lint, test, cache, webp, github-stats, strava-stats)"
+	@echo "  update       - Run all update scripts (format, lint, test, cache, webp, github-stats, memorable-runs)"
 	@echo "  all          - Run all essential tasks (lint, format, test, cache, webp)"
 	@echo "  build        - Same as 'all' (production build)"
 	@echo "  dev          - Quick development setup (lint, format, test)"
@@ -87,7 +91,8 @@ help:
 	@echo "  webp-force   - Force convert all images to WebP"
 	@echo "  blog-images  - Process new blog post images"
 	@echo "  github-stats - Fetch GitHub statistics for projects"
-	@echo "  strava-stats - Fetch Strava run statistics"
+	@echo "  memorable-runs - Fetch memorable run statistics"
+	@echo "  strava-clear-token - Delete cached Strava OAuth token (~/.strava_token.json)"
 	@echo "  deploy       - Deploy to Google App Engine"
 	@echo "  cache-version- Show current cache busting version" 
 	@echo "  run-km-manifest - Generate run manifest with km and pace" 

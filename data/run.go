@@ -37,7 +37,7 @@ func GetRuns() (Runs, error) {
 		return cachedRuns, nil
 	}
 	runs := make(Runs, 0)
-	err := ReadJsonFile("data/runManifest.json", &runs)
+	err := ReadJsonFile("data/memorableRuns.json", &runs)
 	if err != nil {
 		return runs, err
 	}
@@ -300,9 +300,10 @@ func parseTimeStringToMinutes(timeStr string) int {
 
 		// Check what unit follows
 		if i < len(timeStr) {
-			if timeStr[i] == 'h' {
+			switch timeStr[i] {
+			case 'h':
 				totalMinutes += num * 60
-			} else if timeStr[i] == 'm' {
+			case 'm':
 				totalMinutes += num
 			}
 			i++

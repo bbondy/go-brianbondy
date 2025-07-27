@@ -182,7 +182,7 @@ See [LICENSE](LICENSE).
 
 ### Auto-Fetching Run Times from Strava
 
-The script `scripts/fetch_strava_times.py` helps automate the process of adding elapsed time (hours and minutes) to each running activity in `data/runManifest.json`.
+The script `scripts/fetch_memorable_runs.py` helps automate the process of adding elapsed time (hours and minutes) to each running activity in `data/memorableRuns.json`.
 
 **Features:**
 - Extracts time from the description if present (and cleans up duplicates)
@@ -197,10 +197,10 @@ The script `scripts/fetch_strava_times.py` helps automate the process of adding 
 **Usage:**
 
 ```bash
-python3 scripts/fetch_strava_times.py
+python3 scripts/fetch_memorable_runs.py
 ```
 
-After running, your `data/runManifest.json` will be updated with time fields for each activity. Activities without a Strava activity URL or with non-standard pages will be flagged for manual review.
+After running, your `data/memorableRuns.json` will be updated with time fields for each activity. Activities without a Strava activity URL or with non-standard pages will be flagged for manual review.
 
 
 ### Auto-Fetching GitHub Project Stats

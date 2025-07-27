@@ -168,8 +168,8 @@ def extract_activity_id_from_url(url):
     return match.group(1) if match else None
 
 def process_runs_manifest():
-    """Process the runManifest.json and download images for each run"""
-    manifest_path = "data/runManifest.json"
+    """Process the memorableRuns.json and download images for each run"""
+    manifest_path = "data/memorableRuns.json"
     
     if not os.path.exists(manifest_path):
         print(f"Manifest file not found: {manifest_path}")

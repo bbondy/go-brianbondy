@@ -29,9 +29,7 @@ func GetBooks() (Books, error) {
 		return nil, err
 	}
 	defer func() {
-		if err := f.Close(); err != nil {
-			// log error if needed
-		}
+		_ = f.Close()
 	}()
 	var books Books
 	if err := json.NewDecoder(f).Decode(&books); err != nil {
