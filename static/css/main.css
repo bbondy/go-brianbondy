@@ -3256,3 +3256,18 @@ img[loading="lazy"] {
   align-self: center;
 }
 .mobile-action-btn.shoot:active {transform:scale(.9);}
+
+/* Ensure bullets are visible for unordered lists in main content (e.g., simple markdown pages) */
+.mainBody ul {
+  list-style-type: disc;     /* Use default disc bullets */
+  margin-left: 1.5em;        /* Reasonable indentation */
+  padding-left: 0;           /* Reset padding to avoid double indentation */
+  list-style-position: inside; /* Ensure bullets remain visible even with narrow screens */
+}
+
+/* Explicit bullet style to ensure visibility across platforms */
+.mainBody ul li::marker {
+  content: "•  ";           /* Solid bullet with trailing space */
+  color: var(--text-color);  /* Match text color (adapts to theme) */
+  font-size: 1em;
+}
