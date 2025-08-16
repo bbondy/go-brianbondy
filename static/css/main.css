@@ -3299,3 +3299,27 @@ img[loading="lazy"] {
   border-color: #4a5568;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
 }
+
+/* Light mode color scale: white -> light green -> dark green */
+html[data-theme="light"] .contribution-day.level-0 {
+  background-color: #ffffff !important;
+  border: 1px solid #e5e7eb; /* subtle border */
+}
+html[data-theme="light"] .contribution-day.level-1 { background-color: hsl(137, 90%, 85%) !important; }
+html[data-theme="light"] .contribution-day.level-2 { background-color: hsl(137, 80%, 75%) !important; }
+html[data-theme="light"] .contribution-day.level-3 { background-color: hsl(137, 70%, 60%) !important; }
+html[data-theme="light"] .contribution-day.level-4 { background-color: hsl(137, 60%, 45%) !important; }
+html[data-theme="light"] .contribution-day.level-5 { background-color: hsl(137, 55%, 35%) !important; }
+html[data-theme="light"] .contribution-day.level-6 { background-color: hsl(137, 50%, 25%) !important; }
+
+/* Light mode legend matching */
+html[data-theme="light"] .legend-item.level-0 {
+  background-color: #ffffff !important;
+  border: 1px solid #cbd5e0;
+}
+html[data-theme="light"] .legend-item.level-1 { background-color: hsl(137, 90%, 85%) !important; }
+html[data-theme="light"] .legend-item.level-2 { background-color: hsl(137, 80%, 75%) !important; }
+html[data-theme="light"] .legend-item.level-3 { background-color: hsl(137, 70%, 60%) !important; }
+html[data-theme="light"] .legend-item.level-4 { background-color: hsl(137, 60%, 45%) !important; }
+html[data-theme="light"] .legend-item.level-5 { background-color: hsl(137, 55%, 35%) !important; }
+html[data-theme="light"] .legend-item.level-6 { background-color: hsl(137, 50%, 25%) !important; }
