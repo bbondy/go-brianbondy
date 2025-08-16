@@ -3200,6 +3200,22 @@ img[loading="lazy"] {
   color: #fff;
 }
 
+/* Light theme modal overrides */
+[data-theme="light"] .modal-content {
+  background: #ffffff;
+  color: #1a202c;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.15);
+}
+
+[data-theme="light"] .close {
+  color: #666;
+}
+
+[data-theme="light"] .close:hover {
+  color: #333;
+}
+
 /* Mobile Controls for Stick Figure Easter Egg */
 .mobile-controls {
   position: fixed;

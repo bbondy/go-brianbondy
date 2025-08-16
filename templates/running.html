@@ -769,7 +769,7 @@ function openModal(date, runs) {
     modalRuns.innerHTML = '<div style="padding:1em;">No activities for this day.</div>';
   } else {
     modalRuns.innerHTML = runs.map(run => `
-      <div class="modal-run-entry" style="margin-bottom:1em;padding-bottom:0.5em;border-bottom:1px solid #333;">
+      <div class="modal-run-entry" style="margin-bottom:1em;padding-bottom:0.5em;">
         <div><strong>Type:</strong> ${formatActivityType(run.type || '')}</div>
         <div><strong>Title:</strong> ${run.title || ''}</div>
         ${run.distance_km && run.distance_km > 0 ? `<div><strong>Distance:</strong> ${run.distance_km} km</div>` : ''}
