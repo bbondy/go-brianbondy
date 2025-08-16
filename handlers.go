@@ -150,8 +150,14 @@ func runningHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	// Get Strava run totals
-	totalRuns, totalDistanceKm, totalElevationM, totalTimeMinutes, err := data.GetStravaRunTotals()
+	// Get year filter from query parameter, default to "all"
+	yearFilter := r.URL.Query().Get("year")
+	if yearFilter == "" {
+		yearFilter = "all"
+	}
+
+	// Get Strava totals for selected view
+	totalRuns, totalDistanceKm, totalElevationM, totalTimeMinutes, err := data.GetStravaRunTotalsFor(yearFilter)
 	if err != nil {
 		totalRuns = 0
 		totalDistanceKm = 0
@@ -159,12 +165,6 @@ func runningHandler(w http.ResponseWriter, r *http.Request) {
 		totalTimeMinutes = 0
 	}
 	timeDays, timeHours, timeMinutes := data.SplitMinutesToDaysHoursMinutes(totalTimeMinutes)
-
-	// Get year filter from query parameter, default to "365" (Last 365 Days)
-	yearFilter := r.URL.Query().Get("year")
-	if yearFilter == "" {
-		yearFilter = "365"
-	}
 
 	// Generate 2D contribution graph with month and day labels
 	contributionGraph2D, err := data.GenerateContributionGraph2D(yearFilter)

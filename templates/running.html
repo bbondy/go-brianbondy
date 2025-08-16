@@ -4,12 +4,16 @@ K{{define "mountPoint"}}
     
     {{with .ContributionGraph2D}}
     <div class="contribution-graph-section">
-      <div class="contribution-header">
-        <h3>Running Activity ({{if eq $.SelectedYear "365"}}Last 365 Days{{else}}{{$.SelectedYear}}{{end}})</h3>
+      <div class="running-quote">
+        <div class="quote-text">We are what we repeatedly do. Excellence, then, is not an act, but a habit.</div>
+        <div class="quote-author">— Will Durant</div>
+      </div>
+      <div class="contribution-header" style="margin:6px 0 6px 0;">
         {{if .MonthLabels}}
-        <div class="year-selector">
-          <label for="year-select">View:</label>
-          <select id="year-select">
+        <div class="year-selector" style="display:flex;align-items:center;gap:8px;margin:32px 0 32px 0;">
+          <label for="year-select" style="margin:0;">View:</label>
+          <select id="year-select" style="height:28px;">
+            <option value="all" {{if or (eq $.SelectedYear "") (eq $.SelectedYear "all")}}selected{{end}}>All time</option>
             <option value="365" {{if eq $.SelectedYear "365"}}selected{{end}}>Last 365 Days</option>
             {{range $year := $.Years}}
               <option value="{{$year}}" {{if eq $.SelectedYear (printf "%d" $year)}}selected{{end}}>{{$year}}</option>
@@ -17,9 +21,10 @@ K{{define "mountPoint"}}
           </select>
         </div>
         {{end}}
+        <h3 style="margin:0;">Running Activity ({{if or (eq $.SelectedYear "") (eq $.SelectedYear "all")}}All time{{else if eq $.SelectedYear "365"}}Last 365 Days{{else}}{{$.SelectedYear}}{{end}})</h3>
       </div>
       <div class="contribution-graph-outer">
-        <div class="contribution-month-labels-row">
+        <div class="contribution-month-labels-row" style="width: calc({{.Weeks}} * 13px + ({{.Weeks}} - 1) * 3px);">
           {{range .UniqueMonths}}
             <span class="contribution-month-label">{{.}}</span>
           {{end}}
@@ -34,7 +39,7 @@ K{{define "mountPoint"}}
               {{end}}
             {{end}}
           </div>
-          <div class="contribution-graph-cells">
+          <div class="contribution-graph-cells" style="grid-template-columns: repeat({{.Weeks}}, 13px);">
             {{/* Render grid as 7 rows x 53 columns: outer loop over rows (days), inner loop over columns (weeks) */}}
             {{range $rowIdx, $row := .Grid}}
               {{range $colIdx, $cell := $row}}
@@ -42,14 +47,6 @@ K{{define "mountPoint"}}
               {{end}}
             {{end}}
           </div>
-        </div>
-      </div>
-      <div class="quote-section" style="text-align:center;margin-top:1.5rem;">
-        <blockquote style="font-style:italic;font-size:1.1em;color:var(--text-secondary);margin:0;">
-          We are what we repeatedly do. Excellence, then, is not an act, but a habit.
-        </blockquote>
-        <div style="text-align:right;font-size:0.95em;color:var(--text-secondary);margin-top:0.5em;">
-          &mdash; Will Durant
         </div>
       </div>
       <div class="contribution-legend">
@@ -66,7 +63,7 @@ K{{define "mountPoint"}}
             <span>More</span>
           </div>
           <div class="last-updated">
-            Last updated: <span id="last-updated-date">{{$.LastUpdatedDate}}</span>
+            Activity data last updated: <span id="last-updated-date">{{$.LastUpdatedDate}}</span>
           </div>
         </div>
             </div>
@@ -75,10 +72,10 @@ K{{define "mountPoint"}}
     
     {{/* Activity Type Breakdown Chart */}}
     {{if .Page.ActivityTypeBreakdown}}
-    <div class="contribution-graph-section">
+    <div class="contribution-graph-section" style="margin-top:16px;">
       <div class="activity-breakdown-chart-container">
         <div class="activity-breakdown-header">
-          <h3>Activity Types ({{if eq .SelectedYear "365"}}Last 365 Days{{else}}{{.SelectedYear}}{{end}})</h3>
+          <h3>Activity Types ({{if or (eq .SelectedYear "") (eq .SelectedYear "all")}}All time{{else if eq .SelectedYear "365"}}Last 365 Days{{else}}{{.SelectedYear}}{{end}})</h3>
           <div class="activity-tip" aria-hidden="true">
             <span class="activity-tip-icon" title="Tip">💡</span>
             <span class="activity-tip-text">Click a color dot or bar segment to highlight days of that activity on the calendar</span>
@@ -97,7 +94,7 @@ K{{define "mountPoint"}}
           </div>
           <div class="activity-legend">
             {{range $i, $breakdown := .Page.ActivityTypeBreakdown}}
-              <div class="activity-legend-item" data-activity-type="{{$breakdown.Type}}" role="button" tabindex="0" aria-label="Highlight {{formatActivityType $breakdown.Type}} days on the calendar">
+              <div class="activity-legend-item" data-activity-type="{{$breakdown.Type}}" role="button" tabindex="0" aria-pressed="false" aria-label="Toggle {{formatActivityType $breakdown.Type}} filter for the calendar and totals">
                 <span class="activity-color activity-type-{{$i}}" 
                       data-activity-type="{{$breakdown.Type}}" 
                       title="{{$breakdown.Count}} {{formatActivityType $breakdown.Type}} {{if eq $breakdown.Count 1}}activity{{else}}activities{{end}} (click to highlight)"></span>
@@ -463,8 +460,9 @@ K{{define "mountPoint"}}
         cursor: pointer;
       }
 
-      .activity-legend-item:hover .activity-name {
+      .activity-legend-item.is-active .activity-name {
         text-decoration: underline;
+        font-weight: 600;
       }
 
       .activity-color {
@@ -558,14 +556,17 @@ K{{define "mountPoint"}}
     
     {{/* Display totals using Strava data */}}
     <div class="totals-section">
+      <h3 class="totals-heading" style="margin:0 0 10px 0;">
+        Totals ({{if or (eq .SelectedYear "") (eq .SelectedYear "all")}}All time{{else if eq .SelectedYear "365"}}Last 365 Days{{else}}{{.SelectedYear}}{{end}})
+      </h3>
       <div class="totals-grid">
         <div class="total-item">
-          <span class="total-label">Total Activities:</span>
-          <span class="total-value">{{commai .Page.StravaRunTotals.TotalRuns}}</span>
+          <span class="total-label">Activities:</span>
+          <span class="total-value" id="total-activities-value">{{commai .Page.StravaRunTotals.TotalRuns}}</span>
         </div>
         <div class="total-item">
-          <span class="total-label">Total Time:</span>
-          <span class="total-value">
+          <span class="total-label">Time:</span>
+          <span class="total-value" id="total-time-value">
             {{if gt .Page.StravaRunTotals.TotalTimeDays 0}}
               {{.Page.StravaRunTotals.TotalTimeDays}}d {{.Page.StravaRunTotals.TotalTimeHours}}h {{.Page.StravaRunTotals.TotalTimeMinutes}}m
             {{else if gt .Page.StravaRunTotals.TotalTimeHours 0}}
@@ -576,18 +577,21 @@ K{{define "mountPoint"}}
           </span>
         </div>
         <div class="total-item">
-          <span class="total-label">Total Distance:</span>
-          <span class="total-value">{{commaf .Page.StravaRunTotals.TotalDistanceKm 1}}km</span>
+          <span class="total-label">Distance:</span>
+          <span class="total-value" id="total-distance-value">{{commaf .Page.StravaRunTotals.TotalDistanceKm 1}}km</span>
         </div>
         <div class="total-item">
-          <span class="total-label">Total Elevation:</span>
-          <span class="total-value">{{commai .Page.StravaRunTotals.TotalElevationM}}m</span>
+          <span class="total-label">Elevation:</span>
+          <span class="total-value" id="total-elevation-value">{{commai .Page.StravaRunTotals.TotalElevationM}}m</span>
         </div>
         <div class="total-item">
           <a href="/pictures?tag=running" class="action-link pictures-link" aria-label="View Running Pictures Gallery" title="View Running Pictures Gallery">
             <i class="fas fa-images"></i>
           </a>
         </div>
+      </div>
+      <div class="totals-filter-note" id="totals-filter-note" style="display:none;">
+        Showing totals filtered by selected activity types
       </div>
     </div>
     
@@ -736,6 +740,20 @@ function formatFriendlyDate(dateStr) {
   });
 }
 
+// Capture initial (server-rendered) totals so we can restore them when no filters are active
+var initialTotalsCaptured = false;
+function captureInitialTotals() {
+  if (initialTotalsCaptured) return;
+  window.initialTotals = {
+    activities: (document.getElementById('total-activities-value') || {}).textContent || '',
+    time: (document.getElementById('total-time-value') || {}).textContent || '',
+    distance: (document.getElementById('total-distance-value') || {}).textContent || '',
+    elevation: (document.getElementById('total-elevation-value') || {}).textContent || ''
+  };
+  initialTotalsCaptured = true;
+}
+captureInitialTotals();
+
 // Modal logic for contribution graph
 function closeModal() {
   document.getElementById('runs-modal').style.display = 'none';
@@ -820,13 +838,15 @@ var yearSelect = document.getElementById('year-select');
 if (yearSelect) {
   // Set the correct selected value based on current URL
   var urlParams = new URLSearchParams(window.location.search);
-  var currentYear = urlParams.get('year') || '365';
+  var currentYear = urlParams.get('year') || 'all';
   yearSelect.value = currentYear;
   
   yearSelect.addEventListener('change', function() {
     var year = yearSelect.value;
-    if (year === '365') {
-      window.location = window.location.pathname;
+    if (year === 'all') {
+      window.location = window.location.pathname + '?year=all';
+    } else if (year === '365') {
+      window.location = window.location.pathname + '?year=365';
     } else {
       window.location = window.location.pathname + '?year=' + encodeURIComponent(year);
     }
@@ -903,7 +923,7 @@ if (searchInput && runsGrid) {
 }
 
 // -------------------------------------------------------------
-// Activity type highlighting in contribution graph
+// Activity type highlighting and filter-driven totals
 // -------------------------------------------------------------
 
 // Cache colors for each activity type based on legend/bar colors
@@ -915,72 +935,161 @@ document.querySelectorAll('.activity-color, .activity-segment').forEach(function
   }
 });
 
-var selectedActivityType = null;
+// Active filters (multi-select)
+var activeActivityTypes = new Set();
 
-function clearActivityHighlights() {
-  document.querySelectorAll('.contribution-day').forEach(function(cell) {
-    cell.style.boxShadow = '';
-  });
-  selectedActivityType = null;
+function parseTimeToMinutes(timeStr) {
+  if (!timeStr) return 0;
+  var total = 0;
+  var dMatch = timeStr.match(/(\d+)\s*d/);
+  var hMatch = timeStr.match(/(\d+)\s*h/);
+  var mMatch = timeStr.match(/(\d+)\s*m/);
+  if (dMatch) total += parseInt(dMatch[1], 10) * 24 * 60;
+  if (hMatch) total += parseInt(hMatch[1], 10) * 60;
+  if (mMatch) total += parseInt(mMatch[1], 10);
+  return total;
 }
 
-function highlightActivityType(activityType) {
-  if (!activityType) return;
-  var color = activityTypeColors[activityType] || '#ffffff';
-  clearActivityHighlights();
-  selectedActivityType = activityType;
+function parseElevationToMeters(elevStr) {
+  if (!elevStr) return 0;
+  var num = parseFloat(elevStr.replace(/[^0-9.]/g, '')) || 0;
+  if (/ft\b/i.test(elevStr)) {
+    return Math.round(num * 0.3048);
+  }
+  return Math.round(num);
+}
+
+function formatTimeFromMinutes(totalMinutes) {
+  var days = Math.floor(totalMinutes / (24*60));
+  var remainder = totalMinutes % (24*60);
+  var hours = Math.floor(remainder / 60);
+  var minutes = remainder % 60;
+  if (days > 0) return days + 'd ' + hours + 'h ' + minutes + 'm';
+  if (hours > 0) return hours + 'h ' + minutes + 'm';
+  return minutes + 'm';
+}
+
+function updateCellHighlights() {
+  // Clear first
+  document.querySelectorAll('.contribution-day').forEach(function(cell) {
+    cell.style.boxShadow = '';
+    cell.style.borderRadius = '';
+  });
+  if (activeActivityTypes.size === 0) return;
   document.querySelectorAll('.contribution-day').forEach(function(cell) {
     var date = cell.getAttribute('data-date');
     if (!date) return;
     var runs = (window.stravaActivitiesByDate && window.stravaActivitiesByDate[date]) || [];
-    var matches = runs.some(function(run) {
-      return run && run.type === activityType;
-    });
+    var matches = runs.some(function(run) { return run && activeActivityTypes.has(run.type); });
     if (matches) {
+      // Use first matching type's color
+      var match = runs.find(function(run) { return run && activeActivityTypes.has(run.type); });
+      var color = (match && activityTypeColors[match.type]) || '#4d90fe';
       cell.style.boxShadow = '0 0 0 2px ' + color;
       cell.style.borderRadius = '4px';
     }
   });
 }
 
-// Click handlers for bar segments and legend dots
+function updateTotalsDisplay() {
+  var badge = document.getElementById('totals-filter-note');
+  if (!badge) return;
+  if (activeActivityTypes.size === 0) {
+    // Restore original server totals for the current view
+    captureInitialTotals();
+    var actEl = document.getElementById('total-activities-value');
+    var timeEl = document.getElementById('total-time-value');
+    var distEl = document.getElementById('total-distance-value');
+    var elevEl = document.getElementById('total-elevation-value');
+    if (window.initialTotals) {
+      if (actEl) actEl.textContent = window.initialTotals.activities;
+      if (timeEl) timeEl.textContent = window.initialTotals.time;
+      if (distEl) distEl.textContent = window.initialTotals.distance;
+      if (elevEl) elevEl.textContent = window.initialTotals.elevation;
+    }
+    badge.style.display = 'none';
+    return;
+  }
+  // Compute filtered totals from currently displayed graph data only
+  var totalActivities = 0;
+  var totalDistanceKm = 0;
+  var totalTimeMinutes = 0;
+  var totalElevationM = 0;
+  // Determine bounds based on visible cells
+  var minDate = null, maxDate = null;
+  document.querySelectorAll('.contribution-day').forEach(function(cell){
+    var d = cell.getAttribute('data-date');
+    if (!d) return;
+    if (!minDate || d < minDate) minDate = d;
+    if (!maxDate || d > maxDate) maxDate = d;
+  });
+  Object.keys(window.stravaActivitiesByDate || {}).forEach(function(date) {
+    if ((minDate && date < minDate) || (maxDate && date > maxDate)) return;
+    var runs = window.stravaActivitiesByDate[date] || [];
+    runs.forEach(function(run) {
+      if (activeActivityTypes.has(run.type)) {
+        totalActivities += 1;
+        totalDistanceKm += (parseFloat(run.distance_km) || 0);
+        totalTimeMinutes += parseTimeToMinutes(run.time);
+        totalElevationM += parseElevationToMeters(run.elevation);
+      }
+    });
+  });
+  // Update DOM
+  var actEl = document.getElementById('total-activities-value');
+  var timeEl = document.getElementById('total-time-value');
+  var distEl = document.getElementById('total-distance-value');
+  var elevEl = document.getElementById('total-elevation-value');
+  if (actEl) actEl.textContent = totalActivities.toLocaleString();
+  if (timeEl) timeEl.textContent = formatTimeFromMinutes(totalTimeMinutes);
+  if (distEl) distEl.textContent = (Math.round(totalDistanceKm * 10) / 10).toLocaleString() + 'km';
+  if (elevEl) elevEl.textContent = Math.round(totalElevationM).toLocaleString() + 'm';
+  badge.style.display = '';
+}
+
+function setAriaPressed(el, pressed) {
+  try { el.setAttribute('aria-pressed', pressed ? 'true' : 'false'); } catch(e) {}
+}
+
+function toggleActivityType(type) {
+  if (!type) return;
+  if (activeActivityTypes.has(type)) {
+    activeActivityTypes.delete(type);
+    // Unmark all matching items as active
+    document.querySelectorAll('[data-activity-type="' + CSS.escape(type) + '"]').forEach(function(el){ el.closest('.activity-legend-item') && el.closest('.activity-legend-item').classList.remove('is-active'); setAriaPressed(el.closest('.activity-legend-item') || el, false); });
+  } else {
+    activeActivityTypes.add(type);
+    document.querySelectorAll('[data-activity-type="' + CSS.escape(type) + '"]').forEach(function(el){ el.closest('.activity-legend-item') && el.closest('.activity-legend-item').classList.add('is-active'); setAriaPressed(el.closest('.activity-legend-item') || el, true); });
+  }
+  updateCellHighlights();
+  updateTotalsDisplay();
+}
+
+// Click/keyboard handlers
 document.querySelectorAll('.activity-segment, .activity-color, .activity-legend-item').forEach(function(el) {
   el.addEventListener('click', function(ev) {
     ev.stopPropagation();
-    var type = el.getAttribute('data-activity-type');
-    if (!type && el.classList.contains('activity-legend-item')) {
-      type = el.getAttribute('data-activity-type');
-    }
-    if (!type) return;
-    if (selectedActivityType === type) {
-      clearActivityHighlights();
-    } else {
-      highlightActivityType(type);
-    }
+    var type = el.getAttribute('data-activity-type') || (el.classList.contains('activity-legend-item') ? el.getAttribute('data-activity-type') : null);
+    toggleActivityType(type);
   });
-
-  // Keyboard support (Enter/Space)
   el.addEventListener('keydown', function(ev) {
     var isActivationKey = (ev.key === 'Enter' || ev.key === ' ' || ev.keyCode === 13 || ev.keyCode === 32);
     if (!isActivationKey) return;
     ev.preventDefault();
-    var type = el.getAttribute('data-activity-type');
-    if (!type && el.classList.contains('activity-legend-item')) {
-      type = el.getAttribute('data-activity-type');
-    }
-    if (!type) return;
-    if (selectedActivityType === type) {
-      clearActivityHighlights();
-    } else {
-      highlightActivityType(type);
-    }
+    var type = el.getAttribute('data-activity-type') || (el.classList.contains('activity-legend-item') ? el.getAttribute('data-activity-type') : null);
+    toggleActivityType(type);
   });
 });
 
-// Clicking anywhere else clears the highlights
-document.addEventListener('click', function() {
-  if (selectedActivityType !== null) {
-    clearActivityHighlights();
+// Clicking outside clears filters and restores server totals
+document.addEventListener('click', function(ev) {
+  var withinControls = ev.target.closest('.activity-legend, .activity-bar');
+  if (withinControls) return;
+  if (activeActivityTypes.size > 0) {
+    activeActivityTypes.clear();
+    document.querySelectorAll('.activity-legend-item.is-active').forEach(function(el){ el.classList.remove('is-active'); setAriaPressed(el, false); });
+    updateCellHighlights();
+    updateTotalsDisplay(); // will restore server-rendered totals
   }
 });
 </script>

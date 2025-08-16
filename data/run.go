@@ -114,6 +114,17 @@ func ClearStravaRunsCache() {
 	cachedStravaRuns = nil
 }
 
+// isActiveRun returns true if the entry represents a real activity (non-zero distance or time)
+func isActiveRun(r StravaRun) bool {
+	if r.DistanceKm > 0 {
+		return true
+	}
+	if parseTimeStringToMinutes(r.Time) > 0 {
+		return true
+	}
+	return false
+}
+
 // GenerateContributionGraph creates a GitHub-style contribution graph from Strava runs
 func GenerateContributionGraph(yearFilter string) (*ContributionGraph, error) {
 	runs, err := GetStravaRuns()
@@ -236,6 +247,50 @@ func GetStravaRunTotals() (int, float64, int, int, error) {
 	totalTimeMinutes := 0
 	totalElevationM := 0
 	for _, run := range runs {
+		totalDistanceKm += run.DistanceKm
+		totalTimeMinutes += parseTimeStringToMinutes(run.Time)
+		totalElevationM += parseElevationStringToMeters(run.Elevation)
+	}
+	return totalRuns, totalDistanceKm, totalElevationM, totalTimeMinutes, nil
+}
+
+// GetStravaRunTotalsFor calculates totals for a given view ("all", "365", or specific year)
+func GetStravaRunTotalsFor(yearFilter string) (int, float64, int, int, error) {
+	runs, err := GetStravaRuns()
+	if err != nil {
+		return 0, 0, 0, 0, err
+	}
+	var filtered StravaRuns
+	if yearFilter == "all" || yearFilter == "" {
+		filtered = runs
+	} else if yearFilter == "365" {
+		now := time.Now()
+		endDate := time.Date(now.Year(), now.Month(), now.Day(), 0, 0, 0, 0, now.Location())
+		startDate := endDate.AddDate(0, 0, -364)
+		for _, run := range runs {
+			if t, err := time.Parse("2006-01-02", run.Date); err == nil {
+				if (t.Equal(startDate) || t.After(startDate)) && (t.Equal(endDate) || t.Before(endDate)) {
+					filtered = append(filtered, run)
+				}
+			}
+		}
+	} else {
+		if year, err := strconv.Atoi(yearFilter); err == nil {
+			for _, run := range runs {
+				if len(run.Date) >= 4 {
+					if runYear, err := strconv.Atoi(run.Date[:4]); err == nil && runYear == year {
+						filtered = append(filtered, run)
+					}
+				}
+			}
+		}
+	}
+
+	totalRuns := len(filtered)
+	totalDistanceKm := 0.0
+	totalTimeMinutes := 0
+	totalElevationM := 0
+	for _, run := range filtered {
 		totalDistanceKm += run.DistanceKm
 		totalTimeMinutes += parseTimeStringToMinutes(run.Time)
 		totalElevationM += parseElevationStringToMeters(run.Elevation)
@@ -380,11 +435,39 @@ func GenerateContributionGraph2D(yearFilter string) (*ContributionGraph2D, error
 	}
 	var filteredRuns StravaRuns
 	var startDate, endDate time.Time
-	if yearFilter != "" && yearFilter != "365" {
+	if yearFilter == "all" {
+		// All time: include every activity; compute bounds from data
+		filteredRuns = runs
+		var minDate, maxDate *time.Time
+		for _, run := range runs {
+			if t, err := time.Parse("2006-01-02", run.Date); err == nil {
+				if minDate == nil || t.Before(*minDate) {
+					tt := t
+					minDate = &tt
+				}
+				if maxDate == nil || t.After(*maxDate) {
+					tt := t
+					maxDate = &tt
+				}
+			}
+		}
+		if minDate == nil || maxDate == nil {
+			endDate = time.Now()
+			startDate = endDate.AddDate(0, 0, -364)
+		} else {
+			startDate = time.Date(minDate.Year(), minDate.Month(), minDate.Day(), 0, 0, 0, 0, time.UTC)
+			endDate = time.Date(maxDate.Year(), maxDate.Month(), maxDate.Day(), 0, 0, 0, 0, time.UTC)
+		}
+	} else if yearFilter != "" && yearFilter != "365" {
 		year, err := strconv.Atoi(yearFilter)
 		if err == nil {
 			startDate = time.Date(year, 1, 1, 0, 0, 0, 0, time.UTC)
 			endDate = time.Date(year, 12, 31, 0, 0, 0, 0, time.UTC)
+			// Backtrack to previous Monday if Jan 1 is not Monday
+			deltaToMonday := (int(startDate.Weekday()) - int(time.Monday) + 7) % 7
+			if deltaToMonday != 0 {
+				startDate = startDate.AddDate(0, 0, -deltaToMonday)
+			}
 			for _, run := range runs {
 				if len(run.Date) >= 4 {
 					if runYear, err := strconv.Atoi(run.Date[:4]); err == nil && runYear == year {
@@ -396,17 +479,69 @@ func GenerateContributionGraph2D(yearFilter string) (*ContributionGraph2D, error
 	} else {
 		filteredRuns = runs
 		endDate = time.Now()
-		startDate = endDate.AddDate(0, 0, -364)
+		// Start with exact last 365 days
+		desiredStart := endDate.AddDate(0, 0, -364)
+		// Backtrack to previous Monday to align weeks
+		deltaToMonday := (int(desiredStart.Weekday()) - int(time.Monday) + 7) % 7
+		startDate = desiredStart.AddDate(0, 0, -deltaToMonday)
 	}
 
-	// Map date to runs
+	// For non-"all" views, align start date to Monday of that week
+	if yearFilter != "all" {
+		deltaToMonday := (int(startDate.Weekday()) - int(time.Monday) + 7) % 7
+		if deltaToMonday != 0 {
+			startDate = startDate.AddDate(0, 0, -deltaToMonday)
+		}
+	}
+
+	// Map date to runs (ignore zero-distance AND zero-time entries)
 	dateRuns := make(map[string][]StravaRun)
 	for _, run := range filteredRuns {
+		if !isActiveRun(run) {
+			continue
+		}
 		dateRuns[run.Date] = append(dateRuns[run.Date], run)
 	}
 
+	// For all-time view, optionally start at the first Monday that has activity
+	if yearFilter == "all" {
+		// Find earliest activity date from filteredRuns and align to Monday before that activity
+		var minActive time.Time
+		minSet := false
+		for _, run := range filteredRuns {
+			if !isActiveRun(run) {
+				continue
+			}
+			if t, err := time.Parse("2006-01-02", run.Date); err == nil {
+				if !minSet || t.Before(minActive) {
+					minActive = t
+					minSet = true
+				}
+			}
+		}
+		if minSet {
+			weekdayA := int(minActive.Weekday())
+			// If already Monday, keep; else backtrack to previous Monday
+			if weekdayA == int(time.Monday) {
+				startDate = time.Date(minActive.Year(), minActive.Month(), minActive.Day(), 0, 0, 0, 0, time.UTC)
+			} else {
+				// Compute days to subtract to reach Monday
+				delta := (7 + weekdayA - int(time.Monday)) % 7
+				if delta == 0 {
+					delta = 7
+				}
+				startDate = time.Date(minActive.Year(), minActive.Month(), minActive.Day(), 0, 0, 0, 0, time.UTC).AddDate(0, 0, -delta)
+			}
+		}
+	}
+
 	rows := 7
-	cols := 53
+	// Determine columns based on actual date span for all views
+	daysSpan := int(endDate.Sub(startDate).Hours()/24) + 1
+	cols := 1
+	if daysSpan > 7 {
+		cols = int(math.Ceil(float64(daysSpan) / 7.0))
+	}
 	grid := make([][]ContributionDay, rows)
 	for r := 0; r < rows; r++ {
 		grid[r] = make([]ContributionDay, cols)
@@ -414,9 +549,11 @@ func GenerateContributionGraph2D(yearFilter string) (*ContributionGraph2D, error
 	monthLabels := make([]string, cols)
 	monthLabelShow := make([]bool, cols)
 	var prevLabel string
+	var prevYear int
 	maxDistance := 0.0
 	for c := 0; c < cols; c++ {
 		for r := 0; r < rows; r++ {
+			// Monday-first row order; startDate is aligned to Monday
 			curDate := startDate.AddDate(0, 0, c*rows+r)
 			if curDate.After(endDate) {
 				grid[r][c] = ContributionDay{
@@ -447,7 +584,14 @@ func GenerateContributionGraph2D(yearFilter string) (*ContributionGraph2D, error
 		}
 		// Set month label for the first row of each column
 		colDate := startDate.AddDate(0, 0, c*rows)
-		label := colDate.Format("Jan")
+		// Show Jan'YY at the first week of each year, else just the month
+		curYear := colDate.Year()
+		label := ""
+		if c == 0 || curYear != prevYear {
+			label = colDate.Format("Jan'06")
+		} else {
+			label = colDate.Format("Jan")
+		}
 		monthLabels[c] = label
 		if c == 0 || label != prevLabel {
 			monthLabelShow[c] = true
@@ -455,7 +599,37 @@ func GenerateContributionGraph2D(yearFilter string) (*ContributionGraph2D, error
 			monthLabelShow[c] = false
 		}
 		prevLabel = label
+		prevYear = curYear
 	}
+
+	// Trim leading all-empty columns (weeks) so the graph doesn't start with blank weeks
+	firstNonEmptyCol := 0
+	for c := 0; c < cols; c++ {
+		empty := true
+		for r := 0; r < rows; r++ {
+			if grid[r][c].Count > 0 {
+				empty = false
+				break
+			}
+		}
+		if !empty {
+			break
+		}
+		firstNonEmptyCol++
+	}
+	if firstNonEmptyCol > 0 && firstNonEmptyCol < cols {
+		newCols := cols - firstNonEmptyCol
+		newGrid := make([][]ContributionDay, rows)
+		for r := 0; r < rows; r++ {
+			newGrid[r] = make([]ContributionDay, newCols)
+			copy(newGrid[r], grid[r][firstNonEmptyCol:])
+		}
+		grid = newGrid
+		monthLabels = monthLabels[firstNonEmptyCol:]
+		monthLabelShow = monthLabelShow[firstNonEmptyCol:]
+		cols = newCols
+	}
+
 	// Calculate total hours and find percentiles for better scaling
 	var totalHours []float64
 	for c := 0; c < cols; c++ {
@@ -558,9 +732,9 @@ func GenerateContributionGraph2D(yearFilter string) (*ContributionGraph2D, error
 			grid[r][c].Lightness = lightness
 		}
 	}
-	// Generate unique months list - handle special case for "Last 365 Days"
+	// Generate unique months list - handle special case for "Last 365 Days" and "All time"
 	uniqueMonths := []string{}
-	if yearFilter == "" || yearFilter == "365" {
+	if yearFilter == "" || yearFilter == "365" || yearFilter == "all" {
 		// For "Last 365 Days", we might need to show the same month twice
 		// if the range spans from one year to the next (e.g., Jul 2024 -> Jul 2025)
 		seenMonthsWithYear := make(map[string]bool)
@@ -587,7 +761,7 @@ func GenerateContributionGraph2D(yearFilter string) (*ContributionGraph2D, error
 		}
 	}
 
-	dayLabels := []string{"Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"}
+	dayLabels := []string{"Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"}
 	years := getAvailableYears(runs)
 	return &ContributionGraph2D{
 		Grid:           grid,
@@ -610,7 +784,9 @@ func GetActivityTypeBreakdown(yearFilter string) ([]ActivityTypeBreakdown, error
 
 	// Filter runs by year if specified (same logic as GenerateContributionGraph2D)
 	var filteredRuns StravaRuns
-	if yearFilter != "" && yearFilter != "365" {
+	if yearFilter == "all" {
+		filteredRuns = runs
+	} else if yearFilter != "" && yearFilter != "365" {
 		year, err := strconv.Atoi(yearFilter)
 		if err == nil {
 			for _, run := range runs {

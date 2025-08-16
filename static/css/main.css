@@ -3015,8 +3015,7 @@ img[loading="lazy"] {
   margin-left: 38px;
   margin-right: 4px;
   height: 16px;
-  width: calc(53 * 13px + 52 * 3px);
-  min-width: 720px;
+  /* width is set dynamically inline to match number of weeks */
 }
 
 .contribution-month-label {
@@ -3323,3 +3322,25 @@ html[data-theme="light"] .legend-item.level-3 { background-color: hsl(137, 70%, 
 html[data-theme="light"] .legend-item.level-4 { background-color: hsl(137, 60%, 45%) !important; }
 html[data-theme="light"] .legend-item.level-5 { background-color: hsl(137, 55%, 35%) !important; }
 html[data-theme="light"] .legend-item.level-6 { background-color: hsl(137, 50%, 25%) !important; }
+
+/* Running page quote styling */
+.running-quote {
+  margin: 8px 0 20px 0;
+  padding: 12px 14px;
+  border-left: 3px solid var(--border-color);
+  background: rgba(0,0,0,0.03);
+  border-radius: 8px;
+  color: var(--text-secondary);
+}
+.running-quote .quote-text {
+  font-style: italic;
+  font-size: 1.02rem;
+}
+.running-quote .quote-author {
+  margin-top: 4px;
+  font-size: 0.95rem;
+  color: #6b7280;
+}
+
+/* Slightly improve month label readability on wide views */
+.contribution-month-label { letter-spacing: 0.2px; }
