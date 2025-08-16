@@ -3271,3 +3271,31 @@ img[loading="lazy"] {
   color: var(--text-color);  /* Match text color (adapts to theme) */
   font-size: 1em;
 }
+
+/* Dark mode overrides for Error Page */
+[data-theme="dark"] .error-content {
+  background: linear-gradient(135deg, #2d3748 0%, #1a202c 100%);
+  border: 1px solid #4a5568;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+[data-theme="dark"] .error-page h1 {
+  color: #f7fafc;
+}
+
+[data-theme="dark"] .error-message {
+  color: #e2e8f0;
+}
+
+/* Dark mode overrides for buttons */
+[data-theme="dark"] .btn-secondary {
+  background-color: #4a5568; /* medium gray */
+  color: #e2e8f0;           /* almost white text */
+  border: 1px solid #718096; /* darker border */
+}
+
+[data-theme="dark"] .btn-secondary:hover {
+  background-color: #2d3748; /* darker on hover */
+  border-color: #4a5568;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
