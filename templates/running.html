@@ -79,6 +79,10 @@ K{{define "mountPoint"}}
       <div class="activity-breakdown-chart-container">
         <div class="activity-breakdown-header">
           <h3>Activity Types ({{if eq .SelectedYear "365"}}Last 365 Days{{else}}{{.SelectedYear}}{{end}})</h3>
+          <div class="activity-tip" aria-hidden="true">
+            <span class="activity-tip-icon" title="Tip">💡</span>
+            <span class="activity-tip-text">Click a color dot or bar segment to highlight days of that activity on the calendar</span>
+          </div>
         </div>
         <div class="activity-breakdown-chart">
           <div class="activity-bar">
@@ -86,16 +90,17 @@ K{{define "mountPoint"}}
               <div class="activity-segment activity-type-{{$i}}" 
                    data-activity-type="{{$breakdown.Type}}" 
                    style="width: {{printf "%.1f" $breakdown.Percentage}}%;" 
-                   title="{{formatActivityType $breakdown.Type}}: {{$breakdown.Count}} activities ({{printf "%.1f" $breakdown.Percentage}}%)">
+                   title="{{formatActivityType $breakdown.Type}}: {{$breakdown.Count}} activities ({{printf "%.1f" $breakdown.Percentage}}%)"
+                   role="button" tabindex="0" aria-label="Highlight {{formatActivityType $breakdown.Type}} days on the calendar">
               </div>
             {{end}}
           </div>
           <div class="activity-legend">
             {{range $i, $breakdown := .Page.ActivityTypeBreakdown}}
-              <div class="activity-legend-item">
+              <div class="activity-legend-item" data-activity-type="{{$breakdown.Type}}" role="button" tabindex="0" aria-label="Highlight {{formatActivityType $breakdown.Type}} days on the calendar">
                 <span class="activity-color activity-type-{{$i}}" 
                       data-activity-type="{{$breakdown.Type}}" 
-                      title="{{$breakdown.Count}} {{formatActivityType $breakdown.Type}} {{if eq $breakdown.Count 1}}activity{{else}}activities{{end}}"></span>
+                      title="{{$breakdown.Count}} {{formatActivityType $breakdown.Type}} {{if eq $breakdown.Count 1}}activity{{else}}activities{{end}} (click to highlight)"></span>
                 <span class="activity-name">{{formatActivityType $breakdown.Type}}</span>
                 <span class="activity-percentage">{{printf "%.1f" $breakdown.Percentage}}%</span>
               </div>
@@ -389,6 +394,17 @@ K{{define "mountPoint"}}
         font-weight: 600;
       }
 
+      .activity-tip {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        color: var(--text-secondary);
+        font-size: 0.9rem;
+        margin-top: 6px;
+      }
+      .activity-tip-icon { display: inline-block; }
+      .activity-tip-text { opacity: 0.9; }
+
       .activity-breakdown-chart {
         display: flex;
         flex-direction: column;
@@ -406,10 +422,19 @@ K{{define "mountPoint"}}
       .activity-segment {
         height: 100%;
         transition: opacity 0.2s ease;
+        cursor: pointer;
       }
 
       .activity-segment:hover {
         opacity: 0.8;
+      }
+
+      .activity-segment:focus-visible,
+      .activity-legend-item:focus-visible,
+      .activity-color:focus-visible {
+        outline: 2px solid #4d90fe;
+        outline-offset: 2px;
+        border-radius: 6px;
       }
 
       /* Activity type colors - matching the image's color scheme */
@@ -435,6 +460,11 @@ K{{define "mountPoint"}}
         align-items: center;
         gap: 0.5rem;
         font-size: 0.875rem;
+        cursor: pointer;
+      }
+
+      .activity-legend-item:hover .activity-name {
+        text-decoration: underline;
       }
 
       .activity-color {
@@ -442,6 +472,7 @@ K{{define "mountPoint"}}
         height: 12px;
         border-radius: 50%;
         display: inline-block;
+        cursor: pointer;
       }
 
       .activity-name {
@@ -913,10 +944,30 @@ function highlightActivityType(activityType) {
 }
 
 // Click handlers for bar segments and legend dots
-document.querySelectorAll('.activity-segment, .activity-color').forEach(function(el) {
+document.querySelectorAll('.activity-segment, .activity-color, .activity-legend-item').forEach(function(el) {
   el.addEventListener('click', function(ev) {
     ev.stopPropagation();
     var type = el.getAttribute('data-activity-type');
+    if (!type && el.classList.contains('activity-legend-item')) {
+      type = el.getAttribute('data-activity-type');
+    }
+    if (!type) return;
+    if (selectedActivityType === type) {
+      clearActivityHighlights();
+    } else {
+      highlightActivityType(type);
+    }
+  });
+
+  // Keyboard support (Enter/Space)
+  el.addEventListener('keydown', function(ev) {
+    var isActivationKey = (ev.key === 'Enter' || ev.key === ' ' || ev.keyCode === 13 || ev.keyCode === 32);
+    if (!isActivationKey) return;
+    ev.preventDefault();
+    var type = el.getAttribute('data-activity-type');
+    if (!type && el.classList.contains('activity-legend-item')) {
+      type = el.getAttribute('data-activity-type');
+    }
     if (!type) return;
     if (selectedActivityType === type) {
       clearActivityHighlights();
