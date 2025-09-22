@@ -1,5 +1,585 @@
 [
   {
+    "date": "2025-09-21",
+    "title": "Strength training",
+    "distance_km": 0.0,
+    "time": "1h 0m",
+    "pace": "",
+    "activity_id": "15893813539",
+    "type": "WeightTraining",
+    "elevation": ""
+  },
+  {
+    "date": "2025-09-21",
+    "title": "Morning Run",
+    "distance_km": 14.78,
+    "time": "1h 30m",
+    "pace": "6:07 min/km",
+    "activity_id": "15889088254",
+    "type": "Run",
+    "elevation": "16m"
+  },
+  {
+    "date": "2025-09-20",
+    "title": "Hill repeats. For X in [1, 2, 3, 4, 3] X steep side, X easy side",
+    "distance_km": 27.02,
+    "time": "2h 30m",
+    "pace": "5:34 min/km",
+    "activity_id": "15880304855",
+    "type": "Run",
+    "elevation": "607m"
+  },
+  {
+    "date": "2025-09-19",
+    "title": "Evening Walk",
+    "distance_km": 2.72,
+    "time": "2h 18m",
+    "pace": "",
+    "activity_id": "15878860386",
+    "type": "Walk",
+    "elevation": ""
+  },
+  {
+    "date": "2025-09-19",
+    "title": "Afternoon Walk",
+    "distance_km": 3.45,
+    "time": "3h 44m",
+    "pace": "",
+    "activity_id": "15878860578",
+    "type": "Walk",
+    "elevation": ""
+  },
+  {
+    "date": "2025-09-18",
+    "title": "Evening Walk",
+    "distance_km": 6.78,
+    "time": "5h 48m",
+    "pace": "",
+    "activity_id": "15878860587",
+    "type": "Walk",
+    "elevation": ""
+  },
+  {
+    "date": "2025-09-18",
+    "title": "Morning Walk",
+    "distance_km": 1.31,
+    "time": "17m",
+    "pace": "",
+    "activity_id": "15854487223",
+    "type": "Walk",
+    "elevation": ""
+  },
+  {
+    "date": "2025-09-18",
+    "title": "Morning Run",
+    "distance_km": 11.93,
+    "time": "57m",
+    "pace": "4:49 min/km",
+    "activity_id": "15854311478",
+    "type": "Run",
+    "elevation": "11m"
+  },
+  {
+    "date": "2025-09-18",
+    "title": "Morning Run",
+    "distance_km": 2.02,
+    "time": "12m",
+    "pace": "6:11 min/km",
+    "activity_id": "15853557410",
+    "type": "Run",
+    "elevation": "2m"
+  },
+  {
+    "date": "2025-09-17",
+    "title": "Morning Run",
+    "distance_km": 21.14,
+    "time": "1h 59m",
+    "pace": "5:40 min/km",
+    "activity_id": "15842894118",
+    "type": "Run",
+    "elevation": "13m"
+  },
+  {
+    "date": "2025-09-16",
+    "title": "Strength training",
+    "distance_km": 0.0,
+    "time": "1h 0m",
+    "pace": "",
+    "activity_id": "15893822844",
+    "type": "WeightTraining",
+    "elevation": ""
+  },
+  {
+    "date": "2025-09-16",
+    "title": "2x(2x(1:00 fast, 1min recover), 2x(2min fast, 1:30 recover)), 2x(1min fast, 1min recover)",
+    "distance_km": 11.37,
+    "time": "1h 3m",
+    "pace": "5:33 min/km",
+    "activity_id": "15831196180",
+    "type": "Run",
+    "elevation": "20m"
+  },
+  {
+    "date": "2025-09-16",
+    "title": "Warmup",
+    "distance_km": 2.54,
+    "time": "16m",
+    "pace": "6:20 min/km",
+    "activity_id": "15830330851",
+    "type": "Run",
+    "elevation": "4m"
+  },
+  {
+    "date": "2025-09-15",
+    "title": "Weight training",
+    "distance_km": 0.0,
+    "time": "1h 0m",
+    "pace": "",
+    "activity_id": "15825340857",
+    "type": "WeightTraining",
+    "elevation": ""
+  },
+  {
+    "date": "2025-09-15",
+    "title": "Morning Run",
+    "distance_km": 19.41,
+    "time": "2h 0m",
+    "pace": "6:11 min/km",
+    "activity_id": "15819771684",
+    "type": "Run",
+    "elevation": "12m"
+  },
+  {
+    "date": "2025-09-14",
+    "title": "Windsor Waterfront Half marathon with Ronnie",
+    "distance_km": 20.68,
+    "time": "1h 37m",
+    "pace": "4:43 min/km",
+    "activity_id": "15809579858",
+    "type": "Run",
+    "elevation": "31m"
+  },
+  {
+    "date": "2025-09-13",
+    "title": "Easy hills",
+    "distance_km": 21.15,
+    "time": "2h 30m",
+    "pace": "7:08 min/km",
+    "activity_id": "15798367434",
+    "type": "Run",
+    "elevation": "529m"
+  },
+  {
+    "date": "2025-09-11",
+    "title": "30min@5:01, 30min@4:46, 30min@4:30",
+    "distance_km": 18.94,
+    "time": "1h 30m",
+    "pace": "4:45 min/km",
+    "activity_id": "15775794625",
+    "type": "Run",
+    "elevation": "16m"
+  },
+  {
+    "date": "2025-09-11",
+    "title": "Warmup",
+    "distance_km": 2.02,
+    "time": "12m",
+    "pace": "6:17 min/km",
+    "activity_id": "15774749783",
+    "type": "Run",
+    "elevation": "2m"
+  },
+  {
+    "date": "2025-09-10",
+    "title": "Morning Run",
+    "distance_km": 19.37,
+    "time": "1h 59m",
+    "pace": "6:12 min/km",
+    "activity_id": "15764318256",
+    "type": "Run",
+    "elevation": "35m"
+  },
+  {
+    "date": "2025-09-09",
+    "title": "Morning Run",
+    "distance_km": 19.19,
+    "time": "2h 0m",
+    "pace": "6:16 min/km",
+    "activity_id": "15752282886",
+    "type": "Run",
+    "elevation": "28m"
+  },
+  {
+    "date": "2025-09-08",
+    "title": "2x(2x(1:00 fast, 1min recover), 2x(2min fast, 1:30 recover)), 2x(1min fast, 1min recover)",
+    "distance_km": 11.13,
+    "time": "1h 0m",
+    "pace": "5:24 min/km",
+    "activity_id": "15740362540",
+    "type": "Run",
+    "elevation": "21m"
+  },
+  {
+    "date": "2025-09-08",
+    "title": "Morning Run",
+    "distance_km": 2.03,
+    "time": "13m",
+    "pace": "6:40 min/km",
+    "activity_id": "15739576043",
+    "type": "Run",
+    "elevation": "4m"
+  },
+  {
+    "date": "2025-09-07",
+    "title": "Afternoon Run",
+    "distance_km": 15.54,
+    "time": "1h 29m",
+    "pace": "5:47 min/km",
+    "activity_id": "15733098626",
+    "type": "Run",
+    "elevation": "22m"
+  },
+  {
+    "date": "2025-09-06",
+    "title": "Hill repeats. For X in [1, 2, 3, 4, 3] X steep side, X easy side",
+    "distance_km": 27.12,
+    "time": "2h 29m",
+    "pace": "5:31 min/km",
+    "activity_id": "15718398116",
+    "type": "Run",
+    "elevation": "604m"
+  },
+  {
+    "date": "2025-09-04",
+    "title": "Strength + weight training",
+    "distance_km": 0.0,
+    "time": "1h 30m",
+    "pace": "",
+    "activity_id": "15701227292",
+    "type": "Workout",
+    "elevation": ""
+  },
+  {
+    "date": "2025-09-04",
+    "title": "30min@5:08, 30min@4:53, 30min@4:36",
+    "distance_km": 18.52,
+    "time": "1h 30m",
+    "pace": "4:52 min/km",
+    "activity_id": "15695124315",
+    "type": "Run",
+    "elevation": "23m"
+  },
+  {
+    "date": "2025-09-04",
+    "title": "Morning Run",
+    "distance_km": 2.01,
+    "time": "13m",
+    "pace": "6:28 min/km",
+    "activity_id": "15694118545",
+    "type": "Run",
+    "elevation": "6m"
+  },
+  {
+    "date": "2025-09-03",
+    "title": "Morning Run",
+    "distance_km": 18.51,
+    "time": "2h 0m",
+    "pace": "6:29 min/km",
+    "activity_id": "15683329404",
+    "type": "Run",
+    "elevation": "35m"
+  },
+  {
+    "date": "2025-09-02",
+    "title": "Strength training",
+    "distance_km": 0.0,
+    "time": "1h 0m",
+    "pace": "",
+    "activity_id": "15677506947",
+    "type": "Workout",
+    "elevation": ""
+  },
+  {
+    "date": "2025-09-02",
+    "title": "2x(2x(1:00 fast, 1min recover), 2x(2min fast, 1:30 recover)), 2x(1min fast, 1min recover)",
+    "distance_km": 10.62,
+    "time": "1h 0m",
+    "pace": "5:40 min/km",
+    "activity_id": "15671058050",
+    "type": "Run",
+    "elevation": "14m"
+  },
+  {
+    "date": "2025-09-02",
+    "title": "Warmup",
+    "distance_km": 2.02,
+    "time": "14m",
+    "pace": "7:06 min/km",
+    "activity_id": "15670236940",
+    "type": "Run",
+    "elevation": "2m"
+  },
+  {
+    "date": "2025-09-01",
+    "title": "Morning Run",
+    "distance_km": 18.02,
+    "time": "2h 1m",
+    "pace": "6:46 min/km",
+    "activity_id": "15659677703",
+    "type": "Run",
+    "elevation": "13m"
+  },
+  {
+    "date": "2025-08-31",
+    "title": "weUltra Killer Kilometer",
+    "distance_km": 21.95,
+    "time": "2h 46m",
+    "pace": "7:34 min/km",
+    "activity_id": "15650752800",
+    "type": "Run",
+    "elevation": "968m"
+  },
+  {
+    "date": "2025-08-30",
+    "title": "Hill repeats. For X in [1, 2, 3, 4, 3] X steep side, X easy side",
+    "distance_km": 26.43,
+    "time": "2h 30m",
+    "pace": "5:41 min/km",
+    "activity_id": "15637748774",
+    "type": "Run",
+    "elevation": "581m"
+  },
+  {
+    "date": "2025-08-28",
+    "title": "Strength training",
+    "distance_km": 0.0,
+    "time": "1h 0m",
+    "pace": "",
+    "activity_id": "15635926366",
+    "type": "Workout",
+    "elevation": ""
+  },
+  {
+    "date": "2025-08-28",
+    "title": "30min@5:13, 30min@5:00, 30min@4:43",
+    "distance_km": 18.15,
+    "time": "1h 30m",
+    "pace": "4:58 min/km",
+    "activity_id": "15615208026",
+    "type": "Run",
+    "elevation": "21m"
+  },
+  {
+    "date": "2025-08-27",
+    "title": "Morning Run",
+    "distance_km": 17.04,
+    "time": "2h 1m",
+    "pace": "7:07 min/km",
+    "activity_id": "15603530809",
+    "type": "Run",
+    "elevation": "25m"
+  },
+  {
+    "date": "2025-08-26",
+    "title": "Morning Run",
+    "distance_km": 18.81,
+    "time": "2h 0m",
+    "pace": "6:23 min/km",
+    "activity_id": "15591532206",
+    "type": "Run",
+    "elevation": "15m"
+  },
+  {
+    "date": "2025-08-25",
+    "title": "Strength training",
+    "distance_km": 0.0,
+    "time": "1h 0m",
+    "pace": "",
+    "activity_id": "15581158786",
+    "type": "Workout",
+    "elevation": ""
+  },
+  {
+    "date": "2025-08-25",
+    "title": "2x(2x(1:00 fast, 1min recover), 2x(2min fast, 1:30 recover)), 2x(1min fast, 1min recover)",
+    "distance_km": 10.54,
+    "time": "1h 0m",
+    "pace": "5:42 min/km",
+    "activity_id": "15580495569",
+    "type": "Run",
+    "elevation": "17m"
+  },
+  {
+    "date": "2025-08-25",
+    "title": "Warmup",
+    "distance_km": 3.09,
+    "time": "20m",
+    "pace": "6:29 min/km",
+    "activity_id": "15579571353",
+    "type": "Run",
+    "elevation": "4m"
+  },
+  {
+    "date": "2025-08-24",
+    "title": "Nolan's smile 5km",
+    "distance_km": 4.96,
+    "time": "20m",
+    "pace": "4:12 min/km",
+    "activity_id": "15570918721",
+    "type": "Run",
+    "elevation": "50m"
+  },
+  {
+    "date": "2025-08-23",
+    "title": "Hill repeats. For X in [1, 2, 3, 2,1] X steep side, X easy side",
+    "distance_km": 21.88,
+    "time": "2h 0m",
+    "pace": "5:29 min/km",
+    "activity_id": "15557780206",
+    "type": "Run",
+    "elevation": "402m"
+  },
+  {
+    "date": "2025-08-22",
+    "title": "Weight training",
+    "distance_km": 0.0,
+    "time": "1h 0m",
+    "pace": "",
+    "activity_id": "15560792980",
+    "type": "Workout",
+    "elevation": ""
+  },
+  {
+    "date": "2025-08-21",
+    "title": "Weight training",
+    "distance_km": 0.0,
+    "time": "1h 0m",
+    "pace": "",
+    "activity_id": "15560784385",
+    "type": "Workout",
+    "elevation": ""
+  },
+  {
+    "date": "2025-08-21",
+    "title": "Strength training",
+    "distance_km": 0.0,
+    "time": "1h 0m",
+    "pace": "",
+    "activity_id": "15560777711",
+    "type": "Workout",
+    "elevation": ""
+  },
+  {
+    "date": "2025-08-21",
+    "title": "Morning Walk",
+    "distance_km": 0.89,
+    "time": "19m",
+    "pace": "",
+    "activity_id": "15535779971",
+    "type": "Walk",
+    "elevation": ""
+  },
+  {
+    "date": "2025-08-21",
+    "title": "30min@5:14min/km, 15min@4:39min/km, 15min@4:21min/km",
+    "distance_km": 12.42,
+    "time": "1h 0m",
+    "pace": "4:50 min/km",
+    "activity_id": "15535570324",
+    "type": "Run",
+    "elevation": "22m"
+  },
+  {
+    "date": "2025-08-21",
+    "title": "Warmup",
+    "distance_km": 3.02,
+    "time": "19m",
+    "pace": "6:30 min/km",
+    "activity_id": "15534674357",
+    "type": "Run",
+    "elevation": "4m"
+  },
+  {
+    "date": "2025-08-20",
+    "title": "Morning Run",
+    "distance_km": 9.14,
+    "time": "1h 0m",
+    "pace": "6:34 min/km",
+    "activity_id": "15524036682",
+    "type": "Run",
+    "elevation": "12m"
+  },
+  {
+    "date": "2025-08-19",
+    "title": "Evening Walk",
+    "distance_km": 0.9,
+    "time": "17m",
+    "pace": "",
+    "activity_id": "15519247198",
+    "type": "Walk",
+    "elevation": ""
+  },
+  {
+    "date": "2025-08-19",
+    "title": "Evening Run",
+    "distance_km": 3.13,
+    "time": "33m",
+    "pace": "10:50 min/km",
+    "activity_id": "15518707767",
+    "type": "Run",
+    "elevation": "6m"
+  },
+  {
+    "date": "2025-08-19",
+    "title": "Strength training",
+    "distance_km": 0.0,
+    "time": "1h 0m",
+    "pace": "",
+    "activity_id": "15524539508",
+    "type": "Workout",
+    "elevation": ""
+  },
+  {
+    "date": "2025-08-19",
+    "title": "Morning Walk",
+    "distance_km": 1.21,
+    "time": "12m",
+    "pace": "",
+    "activity_id": "15512038292",
+    "type": "Walk",
+    "elevation": ""
+  },
+  {
+    "date": "2025-08-19",
+    "title": "60min, 8x1:00@3:22min/km mixed in of 85% intensity",
+    "distance_km": 11.02,
+    "time": "1h 0m",
+    "pace": "5:27 min/km",
+    "activity_id": "15512038377",
+    "type": "Run",
+    "elevation": "5m"
+  },
+  {
+    "date": "2025-08-19",
+    "title": "Warmup",
+    "distance_km": 3.02,
+    "time": "19m",
+    "pace": "6:34 min/km",
+    "activity_id": "15512032598",
+    "type": "Run",
+    "elevation": "3m"
+  },
+  {
+    "date": "2025-08-17",
+    "title": "FAwR chunk #8",
+    "distance_km": 37.92,
+    "time": "4h 50m",
+    "pace": "7:39 min/km",
+    "activity_id": "15492165943",
+    "type": "Run",
+    "elevation": "83m"
+  },
+  {
     "date": "2025-08-16",
     "title": "Hill repeats. For X in [1, 2, 3, 2,1] X steep side, X easy side",
     "distance_km": 21.38,

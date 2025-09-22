@@ -8,8 +8,8 @@
     "blogPostID": 174,
     "description": "Block ads and trackers, saves data, and speeds up web browsing.",
     "githubStats": {
-      "commitCount": 2400,
-      "prCount": 627
+      "commitCount": 2500,
+      "prCount": 683
     }
   },
   {
@@ -20,8 +20,8 @@
     "github": "https://github.com/brave/brave-core",
     "description": "Secure, native, built-in crypto wallet that supercharges Brave browser for Web3.",
     "githubStats": {
-      "commitCount": 226,
-      "prCount": 121
+      "commitCount": 228,
+      "prCount": 125
     },
     "searchKeywords": [
       "wallet",
@@ -37,8 +37,8 @@
     "blogPostID": 184,
     "description": "AI-powered assistant built into the Brave browser, offering features like question answering, content summarization, and more\u2014all while maintaining privacy.",
     "githubStats": {
-      "commitCount": 13,
-      "prCount": 19
+      "commitCount": 16,
+      "prCount": 28
     },
     "searchKeywords": [
       "Leo",
@@ -55,7 +55,7 @@
     "description": "Deep integration of InterPlanetary File System (IPFS) support in Brave browser, allowing users to access content via content hashes (CIDs) instead of URLs. This enables content distribution without high bandwidth costs, data deduplication, and access to content even if it has been censored. Users can choose between using a local IPFS node or public gateways.",
     "githubStats": {
       "commitCount": 93,
-      "prCount": 29
+      "prCount": 30
     },
     "searchKeywords": [
       "IPFS",
@@ -83,7 +83,7 @@
     "website": "https://www.brianbondy.com",
     "description": "The current website for brianbondy.com. This website is written in Go. The version before that was written in Node, Hapi, Redis React, and ES6 transpiled with Babel. Before that the previous versions were written in Google App Engine, Django, ASP .NET (C#), Flash / ActionScript, and the original one was generated from C++ code.",
     "githubStats": {
-      "commitCount": 158,
+      "commitCount": 209,
       "prCount": 0
     }
   },
@@ -128,7 +128,7 @@
     "description": "Lead and primary developer for the Khan Academy app for Firefox OS. Khan Academy allows you to learn almost anything for free. The Firefox OS app is the best way to view Khan Academy's complete library of over 6,000 videos and articles on a Firefox OS device.",
     "blogPostId": 169,
     "githubStats": {
-      "commitCount": 0,
+      "commitCount": 731,
       "prCount": 0
     }
   },
@@ -163,7 +163,7 @@
     "description": "Contributed a significant amount of contributions to the Khan Academy Modern UI Windows Store app. Khan Academy allows you to learn almost anything for free.  Our Windows app is the best way to view Khan Academy's complete library of over 6000 videos on your Windows device.",
     "githubStats": {
       "commitCount": 54,
-      "prCount": 0
+      "prCount": 22
     }
   },
   {
