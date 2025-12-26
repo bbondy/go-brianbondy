@@ -103,6 +103,18 @@ func errorPageWithStatus(w http.ResponseWriter, message string, slug string, sta
 	}
 }
 
+func parseIntParam(w http.ResponseWriter, value string, name string, slug string) (int, bool) {
+	if value == "" {
+		return 0, true
+	}
+	parsed, err := strconv.Atoi(value)
+	if err != nil {
+		errorPageWithStatus(w, fmt.Sprintf("Invalid %s value", name), slug, http.StatusBadRequest)
+		return 0, false
+	}
+	return parsed, true
+}
+
 func testErrorHandler(w http.ResponseWriter, r *http.Request) {
 	vars := mux.Vars(r)
 	errorCodeStr := vars["errorcode"]
@@ -454,13 +466,20 @@ func redirectHandler(w http.ResponseWriter, r *http.Request) {
 
 func paginationRedirectHandler(w http.ResponseWriter, r *http.Request) {
 	vars := mux.Vars(r)
-	page, _ := strconv.Atoi(vars["page"])
+	page, ok := parseIntParam(w, vars["page"], "page", "blog")
+	if !ok {
+		return
+	}
 
 	// Get tag and year from query parameters
 	tag := r.URL.Query().Get("tag")
 	year := 0
 	if yearStr := r.URL.Query().Get("year"); yearStr != "" {
-		year, _ = strconv.Atoi(yearStr)
+		parsedYear, parseOk := parseIntParam(w, yearStr, "year", "blog")
+		if !parseOk {
+			return
+		}
+		year = parsedYear
 	}
 
 	// Get filtered posts
@@ -499,7 +518,10 @@ func paginationRedirectHandler(w http.ResponseWriter, r *http.Request) {
 
 func blogIdRedirectHandler(w http.ResponseWriter, r *http.Request) {
 	vars := mux.Vars(r)
-	id, _ := strconv.Atoi(vars["id"])
+	id, ok := parseIntParam(w, vars["id"], "id", "blog")
+	if !ok {
+		return
+	}
 
 	if post, ok := blogPostIdMap[id]; ok {
 		// Build the canonical URL with the slug
@@ -519,7 +541,10 @@ func blogIdRedirectHandler(w http.ResponseWriter, r *http.Request) {
 
 func yearRedirectHandler(w http.ResponseWriter, r *http.Request) {
 	vars := mux.Vars(r)
-	year, _ := strconv.Atoi(vars["year"])
+	year, ok := parseIntParam(w, vars["year"], "year", "blog")
+	if !ok {
+		return
+	}
 
 	// Get tag from query parameters
 	tag := r.URL.Query().Get("tag")
@@ -600,7 +625,11 @@ func allPostsHandler(w http.ResponseWriter, r *http.Request) {
 	tag := r.URL.Query().Get("tag")
 	year := 0
 	if yearStr := r.URL.Query().Get("year"); yearStr != "" {
-		year, _ = strconv.Atoi(yearStr)
+		parsedYear, parseOk := parseIntParam(w, yearStr, "year", "blog")
+		if !parseOk {
+			return
+		}
+		year = parsedYear
 	}
 
 	// Get filtered posts based on tag and/or year
@@ -657,16 +686,27 @@ func blogPostPageHandler(w http.ResponseWriter, r *http.Request) {
 		tag = r.URL.Query().Get("tag")
 	}
 	if yearStr := r.URL.Query().Get("year"); yearStr != "" {
-		year, _ = strconv.Atoi(yearStr)
+		parsedYear, parseOk := parseIntParam(w, yearStr, "year", "blog")
+		if !parseOk {
+			return
+		}
+		year = parsedYear
 	} else if yearStr, ok := vars["year"]; ok {
-		year, _ = strconv.Atoi(yearStr)
+		parsedYear, parseOk := parseIntParam(w, yearStr, "year", "blog")
+		if !parseOk {
+			return
+		}
+		year = parsedYear
 	}
 
 	filteredBlogPosts := getFilteredPosts(tag, year)
 
 	// Handle individual blog post view
 	if idStr, ok := vars["id"]; ok {
-		id, _ := strconv.Atoi(idStr)
+		id, parseOk := parseIntParam(w, idStr, "id", "blog")
+		if !parseOk {
+			return
+		}
 		if foundPost, ok := blogPostIdMap[id]; ok {
 			// Get the filtered posts based on tag/year
 			filteredPosts := getFilteredPosts(tag, year)

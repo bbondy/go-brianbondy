@@ -241,6 +241,17 @@ func TestPaginationRedirectHandler(t *testing.T) {
 	assert.Equal(t, http.StatusNotFound, w.Code)
 }
 
+func TestPaginationRedirectHandlerInvalidPage(t *testing.T) {
+	setupTestEnvironment(t)
+
+	w := httptest.NewRecorder()
+	r := newRequestWithVars("GET", "/page/abc", map[string]string{"page": "abc"})
+
+	paginationRedirectHandler(w, r)
+
+	assert.Equal(t, http.StatusBadRequest, w.Code)
+}
+
 // Test for paginationRedirectHandler with tag filter
 func TestPaginationRedirectHandlerWithFilters(t *testing.T) {
 	setupTestEnvironment(t)
@@ -303,6 +314,17 @@ func TestBlogIdRedirectHandler(t *testing.T) {
 	assert.Equal(t, http.StatusNotFound, w.Code)
 }
 
+func TestBlogIdRedirectHandlerInvalidID(t *testing.T) {
+	setupTestEnvironment(t)
+
+	w := httptest.NewRecorder()
+	r := newRequestWithVars("GET", "/blog/abc", map[string]string{"id": "abc"})
+
+	blogIdRedirectHandler(w, r)
+
+	assert.Equal(t, http.StatusBadRequest, w.Code)
+}
+
 // Test for yearRedirectHandler
 func TestYearRedirectHandler(t *testing.T) {
 	setupTestEnvironment(t)
@@ -333,6 +355,17 @@ func TestYearRedirectHandler(t *testing.T) {
 	assert.Equal(t, http.StatusNotFound, w.Code)
 }
 
+func TestYearRedirectHandlerInvalidYear(t *testing.T) {
+	setupTestEnvironment(t)
+
+	w := httptest.NewRecorder()
+	r := newRequestWithVars("GET", "/posted/abcd", map[string]string{"year": "abcd"})
+
+	yearRedirectHandler(w, r)
+
+	assert.Equal(t, http.StatusBadRequest, w.Code)
+}
+
 // Test for homePageHandler
 func TestHomePageHandler(t *testing.T) {
 	setupTestEnvironment(t)
@@ -361,6 +394,7 @@ func TestAllPostsHandler(t *testing.T) {
 		{"Year filtered", "/blog/all", "year=2022", http.StatusOK},
 		{"Tag and year filtered", "/blog/all", "tag=golang&year=2022", http.StatusOK},
 		{"No matching posts", "/blog/all", "tag=nonexistent", http.StatusOK},
+		{"Invalid year filter", "/blog/all", "year=abc", http.StatusBadRequest},
 	}
 	
 	for _, tc := range testCases {
@@ -445,6 +479,20 @@ func TestBlogPostPageHandler(t *testing.T) {
 			map[string]string{}, 
 			"tag=nonexistent", 
 			http.StatusNotFound,
+		},
+		{
+			"Invalid year filter",
+			"/blog",
+			map[string]string{},
+			"year=abc",
+			http.StatusBadRequest,
+		},
+		{
+			"Invalid post ID format",
+			"/blog/abc/not-a-number",
+			map[string]string{"id": "abc"},
+			"",
+			http.StatusBadRequest,
 		},
 	}
 	
