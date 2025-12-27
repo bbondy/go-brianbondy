@@ -68,6 +68,8 @@ func initializeRoutes(router *mux.Router) {
 	router.Handle("/blog/posted/{year:[0-9]+}", handleRedirect)
 	router.Handle("/blog/posted/{year:[0-9]+}/page/{page:[0-9]+}", handleRedirect)
 	router.Handle("/blog/filters", handleFilterPage)
+	router.Handle("/blog/{id:[^/]*[^0-9/][^/]*}", handleBlogIdRedirect)
+	router.Handle("/blog/{id:[^/]*[^0-9/][^/]*}/{slug}", handleBlogPost)
 	router.Handle("/about", getMarkdownTemplateHandler("About", "about.markdown", "/about"))
 	router.Handle("/contact", getMarkdownTemplateHandler("Contact", "contact.markdown", "/contact"))
 	router.Handle("/projects", negroni.New(
