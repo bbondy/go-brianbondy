@@ -202,6 +202,31 @@ python3 scripts/fetch_memorable_runs.py
 
 After running, your `data/memorableRuns.json` will be updated with time fields for each activity. Activities without a Strava activity URL or with non-standard pages will be flagged for manual review.
 
+### Update Strava Run Manifest (Contribution Graph)
+
+The contribution graph on the running page is generated from `data/stravaRunManifest.json`.
+
+**Requirements:**
+- Strava API access (either `STRAVA_ACCESS_TOKEN` or client credentials)
+
+**Usage:**
+
+```bash
+make strava-run-manifest
+```
+
+If the token is missing or expired, set one of the following before running:
+
+```bash
+STRAVA_ACCESS_TOKEN=... make strava-run-manifest
+```
+
+Or use OAuth client credentials (this opens a browser for login):
+
+```bash
+STRAVA_CLIENT_ID=... STRAVA_CLIENT_SECRET=... make strava-run-manifest
+```
+
 
 ### Auto-Fetching GitHub Project Stats
 
@@ -226,4 +251,3 @@ python3 scripts/fetch_github_stats.py
 ```
 
 After running, your `data/projectManifest.json` will be updated with the latest commit and PR counts for each project. If a project's data can't be fetched (e.g., due to rate limiting), it will be omitted from the stats until a successful fetch.
-
