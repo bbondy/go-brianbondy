@@ -9,7 +9,7 @@
     "description": "Block ads and trackers, saves data, and speeds up web browsing.",
     "githubStats": {
       "commitCount": 2500,
-      "prCount": 683
+      "prCount": 728
     }
   },
   {
@@ -20,8 +20,8 @@
     "github": "https://github.com/brave/brave-core",
     "description": "Secure, native, built-in crypto wallet that supercharges Brave browser for Web3.",
     "githubStats": {
-      "commitCount": 228,
-      "prCount": 125
+      "commitCount": 231,
+      "prCount": 136
     },
     "searchKeywords": [
       "wallet",
@@ -37,8 +37,8 @@
     "blogPostID": 184,
     "description": "AI-powered assistant built into the Brave browser, offering features like question answering, content summarization, and more\u2014all while maintaining privacy.",
     "githubStats": {
-      "commitCount": 16,
-      "prCount": 28
+      "commitCount": 17,
+      "prCount": 31
     },
     "searchKeywords": [
       "Leo",
@@ -54,8 +54,8 @@
     "blogPostID": 177,
     "description": "Deep integration of InterPlanetary File System (IPFS) support in Brave browser, allowing users to access content via content hashes (CIDs) instead of URLs. This enables content distribution without high bandwidth costs, data deduplication, and access to content even if it has been censored. Users can choose between using a local IPFS node or public gateways.",
     "githubStats": {
-      "commitCount": 93,
-      "prCount": 30
+      "commitCount": 95,
+      "prCount": 34
     },
     "searchKeywords": [
       "IPFS",
@@ -83,7 +83,7 @@
     "website": "https://www.brianbondy.com",
     "description": "The current website for brianbondy.com. This website is written in Go. The version before that was written in Node, Hapi, Redis React, and ES6 transpiled with Babel. Before that the previous versions were written in Google App Engine, Django, ASP .NET (C#), Flash / ActionScript, and the original one was generated from C++ code.",
     "githubStats": {
-      "commitCount": 209,
+      "commitCount": 213,
       "prCount": 0
     }
   },

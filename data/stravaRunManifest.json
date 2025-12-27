@@ -1,5 +1,1715 @@
 [
   {
+    "date": "2025-12-26",
+    "title": "Evening Row",
+    "distance_km": 0.0,
+    "time": "13m",
+    "pace": "",
+    "activity_id": "16849164070",
+    "type": "WaterSport",
+    "elevation": ""
+  },
+  {
+    "date": "2025-12-26",
+    "title": "Lunch Stair-Stepper",
+    "distance_km": 0.0,
+    "time": "30m",
+    "pace": "",
+    "activity_id": "16846770225",
+    "type": "StairStepper",
+    "elevation": ""
+  },
+  {
+    "date": "2025-12-26",
+    "title": "Weight training",
+    "distance_km": 0.0,
+    "time": "1h 0m",
+    "pace": "",
+    "activity_id": "16847579164",
+    "type": "WeightTraining",
+    "elevation": ""
+  },
+  {
+    "date": "2025-12-24",
+    "title": "Afternoon Walk",
+    "distance_km": 2.57,
+    "time": "30m",
+    "pace": "",
+    "activity_id": "16832349467",
+    "type": "Walk",
+    "elevation": ""
+  },
+  {
+    "date": "2025-12-22",
+    "title": "Evening Stair-Stepper",
+    "distance_km": 0.0,
+    "time": "15m",
+    "pace": "",
+    "activity_id": "16815941235",
+    "type": "StairStepper",
+    "elevation": ""
+  },
+  {
+    "date": "2025-12-22",
+    "title": "Weight training",
+    "distance_km": 0.0,
+    "time": "1h 0m",
+    "pace": "",
+    "activity_id": "16816079970",
+    "type": "WeightTraining",
+    "elevation": ""
+  },
+  {
+    "date": "2025-12-22",
+    "title": "Morning Run",
+    "distance_km": 13.07,
+    "time": "1h 25m",
+    "pace": "6:32 min/km",
+    "activity_id": "16811668651",
+    "type": "Run",
+    "elevation": "275m"
+  },
+  {
+    "date": "2025-12-20",
+    "title": "Solstice Black Goliath",
+    "distance_km": 9.45,
+    "time": "1h 26m",
+    "pace": "9:12 min/km",
+    "activity_id": "16798793269",
+    "type": "Run",
+    "elevation": "520m"
+  },
+  {
+    "date": "2025-12-19",
+    "title": "Morning Stair-Stepper",
+    "distance_km": 0.0,
+    "time": "1h 35m",
+    "pace": "",
+    "activity_id": "16785546882",
+    "type": "StairStepper",
+    "elevation": ""
+  },
+  {
+    "date": "2025-12-18",
+    "title": "Evening Run",
+    "distance_km": 3.0,
+    "time": "22m",
+    "pace": "7:38 min/km",
+    "activity_id": "16780889490",
+    "type": "Run",
+    "elevation": ""
+  },
+  {
+    "date": "2025-12-18",
+    "title": "Morning Elliptical",
+    "distance_km": 0.0,
+    "time": "1h 0m",
+    "pace": "",
+    "activity_id": "16777269717",
+    "type": "Elliptical",
+    "elevation": ""
+  },
+  {
+    "date": "2025-12-18",
+    "title": "Morning Stair-Stepper",
+    "distance_km": 0.0,
+    "time": "1h 2m",
+    "pace": "",
+    "activity_id": "16776828932",
+    "type": "StairStepper",
+    "elevation": ""
+  },
+  {
+    "date": "2025-12-17",
+    "title": "Weight training",
+    "distance_km": 0.0,
+    "time": "1h 0m",
+    "pace": "",
+    "activity_id": "16776620468",
+    "type": "WeightTraining",
+    "elevation": ""
+  },
+  {
+    "date": "2025-12-17",
+    "title": "Indoor ride",
+    "distance_km": 26.23,
+    "time": "1h 0m",
+    "pace": "",
+    "activity_id": "16768379148",
+    "type": "Ride",
+    "elevation": ""
+  },
+  {
+    "date": "2025-12-17",
+    "title": "Morning Stair-Stepper",
+    "distance_km": 0.0,
+    "time": "1h 2m",
+    "pace": "",
+    "activity_id": "16767906063",
+    "type": "StairStepper",
+    "elevation": ""
+  },
+  {
+    "date": "2025-12-16",
+    "title": "Evening Run",
+    "distance_km": 3.1,
+    "time": "23m",
+    "pace": "7:36 min/km",
+    "activity_id": "16763244693",
+    "type": "Run",
+    "elevation": ""
+  },
+  {
+    "date": "2025-12-15",
+    "title": "Weight training",
+    "distance_km": 0.0,
+    "time": "1h 0m",
+    "pace": "",
+    "activity_id": "16754253200",
+    "type": "WeightTraining",
+    "elevation": ""
+  },
+  {
+    "date": "2025-12-15",
+    "title": "Morning Run",
+    "distance_km": 2.02,
+    "time": "16m",
+    "pace": "7:56 min/km",
+    "activity_id": "16748787689",
+    "type": "Run",
+    "elevation": "41m"
+  },
+  {
+    "date": "2025-12-13",
+    "title": "Ride indoor",
+    "distance_km": 5.0,
+    "time": "30m",
+    "pace": "",
+    "activity_id": "16736652745",
+    "type": "Ride",
+    "elevation": ""
+  },
+  {
+    "date": "2025-12-13",
+    "title": "Morning Run",
+    "distance_km": 8.26,
+    "time": "1h 0m",
+    "pace": "7:16 min/km",
+    "activity_id": "16732404273",
+    "type": "Run",
+    "elevation": ""
+  },
+  {
+    "date": "2025-12-13",
+    "title": "Stair Stepper",
+    "distance_km": 0.0,
+    "time": "1h 0m",
+    "pace": "",
+    "activity_id": "16731311583",
+    "type": "StairStepper",
+    "elevation": ""
+  },
+  {
+    "date": "2025-12-12",
+    "title": "Morning Run",
+    "distance_km": 8.3,
+    "time": "1h 2m",
+    "pace": "7:30 min/km",
+    "activity_id": "16723012375",
+    "type": "Run",
+    "elevation": ""
+  },
+  {
+    "date": "2025-12-12",
+    "title": "Morning Stair-Stepper",
+    "distance_km": 0.0,
+    "time": "1h 2m",
+    "pace": "",
+    "activity_id": "16722477230",
+    "type": "StairStepper",
+    "elevation": ""
+  },
+  {
+    "date": "2025-12-11",
+    "title": "Evening Run",
+    "distance_km": 3.05,
+    "time": "22m",
+    "pace": "7:26 min/km",
+    "activity_id": "16718002458",
+    "type": "Run",
+    "elevation": ""
+  },
+  {
+    "date": "2025-12-11",
+    "title": "Morning Run",
+    "distance_km": 9.11,
+    "time": "1h 5m",
+    "pace": "7:13 min/km",
+    "activity_id": "16713623677",
+    "type": "Run",
+    "elevation": "52m"
+  },
+  {
+    "date": "2025-12-10",
+    "title": "Weight training",
+    "distance_km": 0.0,
+    "time": "1h 0m",
+    "pace": "",
+    "activity_id": "16709720361",
+    "type": "WeightTraining",
+    "elevation": ""
+  },
+  {
+    "date": "2025-12-10",
+    "title": "Morning Run",
+    "distance_km": 13.02,
+    "time": "1h 34m",
+    "pace": "7:14 min/km",
+    "activity_id": "16704644597",
+    "type": "Run",
+    "elevation": ""
+  },
+  {
+    "date": "2025-12-10",
+    "title": "Morning Stair-Stepper",
+    "distance_km": 0.0,
+    "time": "30m",
+    "pace": "",
+    "activity_id": "16703887171",
+    "type": "StairStepper",
+    "elevation": ""
+  },
+  {
+    "date": "2025-12-09",
+    "title": "Morning Run",
+    "distance_km": 16.42,
+    "time": "2h 1m",
+    "pace": "7:25 min/km",
+    "activity_id": "16694687382",
+    "type": "Run",
+    "elevation": ""
+  },
+  {
+    "date": "2025-12-08",
+    "title": "Morning Run",
+    "distance_km": 12.01,
+    "time": "1h 32m",
+    "pace": "7:43 min/km",
+    "activity_id": "16684671998",
+    "type": "Run",
+    "elevation": "197m"
+  },
+  {
+    "date": "2025-12-07",
+    "title": "Goliath #1",
+    "distance_km": 9.58,
+    "time": "1h 44m",
+    "pace": "10:55 min/km",
+    "activity_id": "16677408986",
+    "type": "Run",
+    "elevation": "480m"
+  },
+  {
+    "date": "2025-12-05",
+    "title": "Morning Run",
+    "distance_km": 10.53,
+    "time": "1h 15m",
+    "pace": "7:08 min/km",
+    "activity_id": "16658145166",
+    "type": "Run",
+    "elevation": ""
+  },
+  {
+    "date": "2025-12-05",
+    "title": "Morning Stair-Stepper",
+    "distance_km": 0.0,
+    "time": "1h 15m",
+    "pace": "",
+    "activity_id": "16657559875",
+    "type": "StairStepper",
+    "elevation": ""
+  },
+  {
+    "date": "2025-12-04",
+    "title": "Morning Run",
+    "distance_km": 8.37,
+    "time": "1h 0m",
+    "pace": "7:11 min/km",
+    "activity_id": "16649014486",
+    "type": "Run",
+    "elevation": ""
+  },
+  {
+    "date": "2025-12-04",
+    "title": "Morning Stair-Stepper",
+    "distance_km": 0.0,
+    "time": "1h 21m",
+    "pace": "",
+    "activity_id": "16648579973",
+    "type": "StairStepper",
+    "elevation": ""
+  },
+  {
+    "date": "2025-12-03",
+    "title": "Morning Run",
+    "distance_km": 10.04,
+    "time": "1h 15m",
+    "pace": "7:30 min/km",
+    "activity_id": "16639546941",
+    "type": "Run",
+    "elevation": ""
+  },
+  {
+    "date": "2025-12-03",
+    "title": "Morning Stair-Stepper",
+    "distance_km": 0.0,
+    "time": "1h 17m",
+    "pace": "",
+    "activity_id": "16638926471",
+    "type": "StairStepper",
+    "elevation": ""
+  },
+  {
+    "date": "2025-12-02",
+    "title": "Morning Run",
+    "distance_km": 7.49,
+    "time": "1h 0m",
+    "pace": "8:02 min/km",
+    "activity_id": "16629592375",
+    "type": "Run",
+    "elevation": ""
+  },
+  {
+    "date": "2025-12-02",
+    "title": "Morning Stair-Stepper",
+    "distance_km": 0.0,
+    "time": "1h 17m",
+    "pace": "",
+    "activity_id": "16629050263",
+    "type": "StairStepper",
+    "elevation": ""
+  },
+  {
+    "date": "2025-12-01",
+    "title": "Weight training",
+    "distance_km": 0.0,
+    "time": "1h 0m",
+    "pace": "",
+    "activity_id": "16629562227",
+    "type": "WeightTraining",
+    "elevation": ""
+  },
+  {
+    "date": "2025-12-01",
+    "title": "Morning Run",
+    "distance_km": 16.3,
+    "time": "2h 0m",
+    "pace": "7:22 min/km",
+    "activity_id": "16619712886",
+    "type": "Run",
+    "elevation": ""
+  },
+  {
+    "date": "2025-11-30",
+    "title": "Hills",
+    "distance_km": 8.5,
+    "time": "1h 45m",
+    "pace": "12:21 min/km",
+    "activity_id": "16611646874",
+    "type": "Run",
+    "elevation": ""
+  },
+  {
+    "date": "2025-11-29",
+    "title": "Morning Stair-Stepper",
+    "distance_km": 0.0,
+    "time": "2h 5m",
+    "pace": "",
+    "activity_id": "16601940869",
+    "type": "StairStepper",
+    "elevation": ""
+  },
+  {
+    "date": "2025-11-28",
+    "title": "Morning Stair-Stepper",
+    "distance_km": 0.0,
+    "time": "2h 7m",
+    "pace": "",
+    "activity_id": "16592464379",
+    "type": "StairStepper",
+    "elevation": ""
+  },
+  {
+    "date": "2025-11-27",
+    "title": "Morning Stair-Stepper",
+    "distance_km": 0.0,
+    "time": "1h 50m",
+    "pace": "",
+    "activity_id": "16582961427",
+    "type": "StairStepper",
+    "elevation": ""
+  },
+  {
+    "date": "2025-11-26",
+    "title": "Morning Stair-Stepper",
+    "distance_km": 0.0,
+    "time": "1h 45m",
+    "pace": "",
+    "activity_id": "16573095411",
+    "type": "StairStepper",
+    "elevation": ""
+  },
+  {
+    "date": "2025-11-26",
+    "title": "Morning Stair-Stepper",
+    "distance_km": 0.0,
+    "time": "30m",
+    "pace": "",
+    "activity_id": "16572169710",
+    "type": "StairStepper",
+    "elevation": ""
+  },
+  {
+    "date": "2025-11-25",
+    "title": "Morning Run",
+    "distance_km": 11.66,
+    "time": "1h 30m",
+    "pace": "7:46 min/km",
+    "activity_id": "16562837574",
+    "type": "Run",
+    "elevation": ""
+  },
+  {
+    "date": "2025-11-25",
+    "title": "Morning Stair-Stepper",
+    "distance_km": 0.0,
+    "time": "20m",
+    "pace": "",
+    "activity_id": "16561965700",
+    "type": "StairStepper",
+    "elevation": ""
+  },
+  {
+    "date": "2025-11-24",
+    "title": "Evening Stair-Stepper",
+    "distance_km": 0.0,
+    "time": "15m",
+    "pace": "",
+    "activity_id": "16557913179",
+    "type": "StairStepper",
+    "elevation": ""
+  },
+  {
+    "date": "2025-11-24",
+    "title": "Weight training",
+    "distance_km": 0.0,
+    "time": "1h 0m",
+    "pace": "",
+    "activity_id": "16558052509",
+    "type": "WeightTraining",
+    "elevation": ""
+  },
+  {
+    "date": "2025-11-24",
+    "title": "8x3min treadmill intervals",
+    "distance_km": 13.03,
+    "time": "1h 34m",
+    "pace": "7:16 min/km",
+    "activity_id": "16552894162",
+    "type": "Run",
+    "elevation": ""
+  },
+  {
+    "date": "2025-11-23",
+    "title": "Morning Run",
+    "distance_km": 8.17,
+    "time": "1h 30m",
+    "pace": "11:05 min/km",
+    "activity_id": "16544904510",
+    "type": "Run",
+    "elevation": "436m"
+  },
+  {
+    "date": "2025-11-23",
+    "title": "Morning run",
+    "distance_km": 2.0,
+    "time": "15m",
+    "pace": "7:30 min/km",
+    "activity_id": "16544933973",
+    "type": "Run",
+    "elevation": ""
+  },
+  {
+    "date": "2025-11-22",
+    "title": "Evening Weight Training",
+    "distance_km": 0.0,
+    "time": "1h 0m",
+    "pace": "",
+    "activity_id": "16548881340",
+    "type": "WeightTraining",
+    "elevation": ""
+  },
+  {
+    "date": "2025-11-22",
+    "title": "Morning Run",
+    "distance_km": 19.36,
+    "time": "2h 15m",
+    "pace": "6:59 min/km",
+    "activity_id": "16535131160",
+    "type": "Run",
+    "elevation": ""
+  },
+  {
+    "date": "2025-11-21",
+    "title": "Weight training",
+    "distance_km": 0.0,
+    "time": "1h 0m",
+    "pace": "",
+    "activity_id": "16529053345",
+    "type": "WeightTraining",
+    "elevation": ""
+  },
+  {
+    "date": "2025-11-21",
+    "title": "Morning Run",
+    "distance_km": 10.45,
+    "time": "1h 15m",
+    "pace": "7:11 min/km",
+    "activity_id": "16525415656",
+    "type": "Run",
+    "elevation": ""
+  },
+  {
+    "date": "2025-11-21",
+    "title": "Morning Stair-Stepper",
+    "distance_km": 0.0,
+    "time": "1h 18m",
+    "pace": "",
+    "activity_id": "16524771882",
+    "type": "Workout",
+    "elevation": ""
+  },
+  {
+    "date": "2025-11-20",
+    "title": "Evening Run",
+    "distance_km": 2.79,
+    "time": "21m",
+    "pace": "7:36 min/km",
+    "activity_id": "16519970990",
+    "type": "Run",
+    "elevation": ""
+  },
+  {
+    "date": "2025-11-19",
+    "title": "Evening Row",
+    "distance_km": 0.0,
+    "time": "15m",
+    "pace": "",
+    "activity_id": "16510721636",
+    "type": "WaterSport",
+    "elevation": ""
+  },
+  {
+    "date": "2025-11-19",
+    "title": "Evening Run",
+    "distance_km": 1.64,
+    "time": "13m",
+    "pace": "8:04 min/km",
+    "activity_id": "16510640021",
+    "type": "Run",
+    "elevation": ""
+  },
+  {
+    "date": "2025-11-19",
+    "title": "Morning Run",
+    "distance_km": 9.35,
+    "time": "1h 16m",
+    "pace": "8:12 min/km",
+    "activity_id": "16506011611",
+    "type": "Run",
+    "elevation": ""
+  },
+  {
+    "date": "2025-11-19",
+    "title": "Morning Stair-Stepper",
+    "distance_km": 0.0,
+    "time": "1h 18m",
+    "pace": "",
+    "activity_id": "16505386998",
+    "type": "StairStepper",
+    "elevation": ""
+  },
+  {
+    "date": "2025-11-18",
+    "title": "Weight training",
+    "distance_km": 0.0,
+    "time": "1h 0m",
+    "pace": "",
+    "activity_id": "16500438278",
+    "type": "WeightTraining",
+    "elevation": ""
+  },
+  {
+    "date": "2025-11-18",
+    "title": "Morning Run",
+    "distance_km": 9.02,
+    "time": "1h 17m",
+    "pace": "8:33 min/km",
+    "activity_id": "16495717836",
+    "type": "Run",
+    "elevation": ""
+  },
+  {
+    "date": "2025-11-18",
+    "title": "Morning Stair-Stepper",
+    "distance_km": 0.0,
+    "time": "1h 16m",
+    "pace": "",
+    "activity_id": "16495058507",
+    "type": "Workout",
+    "elevation": ""
+  },
+  {
+    "date": "2025-11-17",
+    "title": "Weight training",
+    "distance_km": 0.0,
+    "time": "1h 0m",
+    "pace": "",
+    "activity_id": "16490690017",
+    "type": "WeightTraining",
+    "elevation": ""
+  },
+  {
+    "date": "2025-11-17",
+    "title": "Morning Run",
+    "distance_km": 11.51,
+    "time": "1h 30m",
+    "pace": "7:50 min/km",
+    "activity_id": "16485583530",
+    "type": "Run",
+    "elevation": ""
+  },
+  {
+    "date": "2025-11-17",
+    "title": "Morning Stair-Stepper",
+    "distance_km": 0.0,
+    "time": "1h 3m",
+    "pace": "",
+    "activity_id": "16484890593",
+    "type": "StairStepper",
+    "elevation": ""
+  },
+  {
+    "date": "2025-11-16",
+    "title": "Evening Walk",
+    "distance_km": 1.03,
+    "time": "32m",
+    "pace": "",
+    "activity_id": "16480889856",
+    "type": "Walk",
+    "elevation": ""
+  },
+  {
+    "date": "2025-11-16",
+    "title": "Weight training",
+    "distance_km": 0.0,
+    "time": "1h 0m",
+    "pace": "",
+    "activity_id": "16480889025",
+    "type": "WeightTraining",
+    "elevation": ""
+  },
+  {
+    "date": "2025-11-15",
+    "title": "Super Santa 5km",
+    "distance_km": 4.87,
+    "time": "19m",
+    "pace": "3:58 min/km",
+    "activity_id": "16469491283",
+    "type": "Run",
+    "elevation": "24m"
+  },
+  {
+    "date": "2025-11-15",
+    "title": "Morning Run",
+    "distance_km": 13.04,
+    "time": "1h 30m",
+    "pace": "6:57 min/km",
+    "activity_id": "16466296833",
+    "type": "Run",
+    "elevation": ""
+  },
+  {
+    "date": "2025-11-14",
+    "title": "Morning Run",
+    "distance_km": 17.52,
+    "time": "2h 0m",
+    "pace": "6:53 min/km",
+    "activity_id": "16456297119",
+    "type": "Run",
+    "elevation": ""
+  },
+  {
+    "date": "2025-11-13",
+    "title": "6x3min hard uphill, recovery downhill",
+    "distance_km": 14.03,
+    "time": "1h 33m",
+    "pace": "6:41 min/km",
+    "activity_id": "16446600512",
+    "type": "Run",
+    "elevation": "293m"
+  },
+  {
+    "date": "2025-11-12",
+    "title": "Evening Run",
+    "distance_km": 5.2,
+    "time": "36m",
+    "pace": "6:58 min/km",
+    "activity_id": "16441869228",
+    "type": "Run",
+    "elevation": "25m"
+  },
+  {
+    "date": "2025-11-12",
+    "title": "Morning Run",
+    "distance_km": 12.32,
+    "time": "1h 20m",
+    "pace": "6:30 min/km",
+    "activity_id": "16436265482",
+    "type": "Run",
+    "elevation": ""
+  },
+  {
+    "date": "2025-11-12",
+    "title": "Morning Stair-Stepper",
+    "distance_km": 0.0,
+    "time": "1h 0m",
+    "pace": "",
+    "activity_id": "16435587374",
+    "type": "StairStepper",
+    "elevation": ""
+  },
+  {
+    "date": "2025-11-11",
+    "title": "3x1k, 600m",
+    "distance_km": 7.12,
+    "time": "48m",
+    "pace": "6:49 min/km",
+    "activity_id": "16430620108",
+    "type": "Run",
+    "elevation": ""
+  },
+  {
+    "date": "2025-11-11",
+    "title": "Pyramids (100, 200, 400, 600, 800, 1k and back down)",
+    "distance_km": 14.2,
+    "time": "1h 24m",
+    "pace": "5:56 min/km",
+    "activity_id": "16425711089",
+    "type": "Run",
+    "elevation": "21m"
+  },
+  {
+    "date": "2025-11-11",
+    "title": "Warmup",
+    "distance_km": 3.52,
+    "time": "22m",
+    "pace": "6:25 min/km",
+    "activity_id": "16424742636",
+    "type": "Run",
+    "elevation": "9m"
+  },
+  {
+    "date": "2025-11-10",
+    "title": "Afternoon Run",
+    "distance_km": 11.02,
+    "time": "1h 17m",
+    "pace": "7:01 min/km",
+    "activity_id": "16418011583",
+    "type": "Run",
+    "elevation": ""
+  },
+  {
+    "date": "2025-11-10",
+    "title": "Morning Run",
+    "distance_km": 11.03,
+    "time": "1h 15m",
+    "pace": "6:50 min/km",
+    "activity_id": "16414777447",
+    "type": "Run",
+    "elevation": ""
+  },
+  {
+    "date": "2025-11-09",
+    "title": "Afternoon Run",
+    "distance_km": 21.23,
+    "time": "2h 6m",
+    "pace": "5:59 min/km",
+    "activity_id": "16409108136",
+    "type": "Run",
+    "elevation": "93m"
+  },
+  {
+    "date": "2025-11-08",
+    "title": "Fib(x) hill repeats for x in 1..6",
+    "distance_km": 29.09,
+    "time": "3h 0m",
+    "pace": "6:11 min/km",
+    "activity_id": "16395952212",
+    "type": "Run",
+    "elevation": "689m"
+  },
+  {
+    "date": "2025-11-07",
+    "title": "Weight training",
+    "distance_km": 0.0,
+    "time": "1h 0m",
+    "pace": "",
+    "activity_id": "16423086218",
+    "type": "WeightTraining",
+    "elevation": ""
+  },
+  {
+    "date": "2025-11-07",
+    "title": "Evening Run",
+    "distance_km": 1.82,
+    "time": "12m",
+    "pace": "6:38 min/km",
+    "activity_id": "16388627002",
+    "type": "Run",
+    "elevation": ""
+  },
+  {
+    "date": "2025-11-07",
+    "title": "Morning Run",
+    "distance_km": 11.52,
+    "time": "1h 20m",
+    "pace": "6:59 min/km",
+    "activity_id": "16385002038",
+    "type": "Run",
+    "elevation": ""
+  },
+  {
+    "date": "2025-11-06",
+    "title": "10x3min intervals",
+    "distance_km": 14.23,
+    "time": "1h 30m",
+    "pace": "6:20 min/km",
+    "activity_id": "16374623932",
+    "type": "Run",
+    "elevation": ""
+  },
+  {
+    "date": "2025-11-05",
+    "title": "Morning Run",
+    "distance_km": 22.23,
+    "time": "2h 30m",
+    "pace": "6:46 min/km",
+    "activity_id": "16364387876",
+    "type": "Run",
+    "elevation": ""
+  },
+  {
+    "date": "2025-11-05",
+    "title": "Walk",
+    "distance_km": 3.54,
+    "time": "45m",
+    "pace": "",
+    "activity_id": "16360150335",
+    "type": "Walk",
+    "elevation": ""
+  },
+  {
+    "date": "2025-11-04",
+    "title": "Morning Run",
+    "distance_km": 10.25,
+    "time": "56m",
+    "pace": "5:32 min/km",
+    "activity_id": "16352810307",
+    "type": "Run",
+    "elevation": "96m"
+  },
+  {
+    "date": "2025-11-04",
+    "title": "Morning Run",
+    "distance_km": 6.45,
+    "time": "45m",
+    "pace": "6:59 min/km",
+    "activity_id": "16352076522",
+    "type": "Run",
+    "elevation": ""
+  },
+  {
+    "date": "2025-11-03",
+    "title": "Treadmill Pyramids (100, 200, 400, 600, 800, 1k and back down)",
+    "distance_km": 14.03,
+    "time": "1h 26m",
+    "pace": "6:11 min/km",
+    "activity_id": "16347752866",
+    "type": "Run",
+    "elevation": ""
+  },
+  {
+    "date": "2025-11-02",
+    "title": "6x3.5min intervals",
+    "distance_km": 6.4,
+    "time": "36m",
+    "pace": "5:46 min/km",
+    "activity_id": "16334791643",
+    "type": "Run",
+    "elevation": "128m"
+  },
+  {
+    "date": "2025-11-02",
+    "title": "Morning Run",
+    "distance_km": 20.18,
+    "time": "2h 9m",
+    "pace": "6:26 min/km",
+    "activity_id": "16333393870",
+    "type": "Run",
+    "elevation": "20m"
+  },
+  {
+    "date": "2025-11-01",
+    "title": "Morning Run",
+    "distance_km": 26.89,
+    "time": "3h 0m",
+    "pace": "6:42 min/km",
+    "activity_id": "16322604564",
+    "type": "Run",
+    "elevation": "626m"
+  },
+  {
+    "date": "2025-10-31",
+    "title": "Morning Run",
+    "distance_km": 13.29,
+    "time": "1h 31m",
+    "pace": "6:52 min/km",
+    "activity_id": "16312328758",
+    "type": "Run",
+    "elevation": "44m"
+  },
+  {
+    "date": "2025-10-30",
+    "title": "Afternoon Run",
+    "distance_km": 3.53,
+    "time": "31m",
+    "pace": "8:57 min/km",
+    "activity_id": "16305285459",
+    "type": "Run",
+    "elevation": ""
+  },
+  {
+    "date": "2025-10-30",
+    "title": "6x3min intervals on treadmill with long warmup and cool down",
+    "distance_km": 16.02,
+    "time": "1h 48m",
+    "pace": "6:45 min/km",
+    "activity_id": "16302708617",
+    "type": "Run",
+    "elevation": ""
+  },
+  {
+    "date": "2025-10-29",
+    "title": "Evening Walk",
+    "distance_km": 4.85,
+    "time": "59m",
+    "pace": "",
+    "activity_id": "16297653900",
+    "type": "Walk",
+    "elevation": ""
+  },
+  {
+    "date": "2025-10-29",
+    "title": "Afternoon Run",
+    "distance_km": 6.02,
+    "time": "45m",
+    "pace": "7:37 min/km",
+    "activity_id": "16294895736",
+    "type": "Run",
+    "elevation": ""
+  },
+  {
+    "date": "2025-10-29",
+    "title": "Morning Run",
+    "distance_km": 4.32,
+    "time": "30m",
+    "pace": "6:59 min/km",
+    "activity_id": "16292621959",
+    "type": "Run",
+    "elevation": ""
+  },
+  {
+    "date": "2025-10-29",
+    "title": "Morning Stair-Stepper",
+    "distance_km": 0.0,
+    "time": "1h 15m",
+    "pace": "",
+    "activity_id": "16292365827",
+    "type": "Workout",
+    "elevation": ""
+  },
+  {
+    "date": "2025-10-28",
+    "title": "10min Tempo + 4x100m",
+    "distance_km": 8.6,
+    "time": "46m",
+    "pace": "5:25 min/km",
+    "activity_id": "16287084584",
+    "type": "Run",
+    "elevation": ""
+  },
+  {
+    "date": "2025-10-28",
+    "title": "Morning Run",
+    "distance_km": 15.54,
+    "time": "2h 0m",
+    "pace": "7:43 min/km",
+    "activity_id": "16281888026",
+    "type": "Run",
+    "elevation": "265m"
+  },
+  {
+    "date": "2025-10-27",
+    "title": "Weight training",
+    "distance_km": 0.0,
+    "time": "1h 0m",
+    "pace": "",
+    "activity_id": "16282318413",
+    "type": "WeightTraining",
+    "elevation": ""
+  },
+  {
+    "date": "2025-10-27",
+    "title": "Pyramids (100, 200, 400, 600, 800, 1k and back down)",
+    "distance_km": 13.01,
+    "time": "1h 15m",
+    "pace": "5:46 min/km",
+    "activity_id": "16271727375",
+    "type": "Run",
+    "elevation": "59m"
+  },
+  {
+    "date": "2025-10-27",
+    "title": "Morning Run",
+    "distance_km": 3.09,
+    "time": "20m",
+    "pace": "6:29 min/km",
+    "activity_id": "16271003560",
+    "type": "Run",
+    "elevation": "10m"
+  },
+  {
+    "date": "2025-10-26",
+    "title": "Black Oak",
+    "distance_km": 13.03,
+    "time": "1h 28m",
+    "pace": "6:48 min/km",
+    "activity_id": "16263380592",
+    "type": "Run",
+    "elevation": "18m"
+  },
+  {
+    "date": "2025-10-25",
+    "title": "Morning Run",
+    "distance_km": 10.0,
+    "time": "1h 15m",
+    "pace": "7:30 min/km",
+    "activity_id": "16253444717",
+    "type": "Run",
+    "elevation": "244m"
+  },
+  {
+    "date": "2025-10-24",
+    "title": "Morning Run",
+    "distance_km": 14.0,
+    "time": "1h 30m",
+    "pace": "6:26 min/km",
+    "activity_id": "16242473129",
+    "type": "Run",
+    "elevation": "29m"
+  },
+  {
+    "date": "2025-10-23",
+    "title": "Morning Run",
+    "distance_km": 10.01,
+    "time": "1h 4m",
+    "pace": "6:29 min/km",
+    "activity_id": "16232287077",
+    "type": "Run",
+    "elevation": "27m"
+  },
+  {
+    "date": "2025-10-22",
+    "title": "Morning Run",
+    "distance_km": 5.03,
+    "time": "35m",
+    "pace": "7:07 min/km",
+    "activity_id": "16222130953",
+    "type": "Run",
+    "elevation": ""
+  },
+  {
+    "date": "2025-10-22",
+    "title": "Weight training",
+    "distance_km": 0.0,
+    "time": "30m",
+    "pace": "",
+    "activity_id": "16221508020",
+    "type": "WeightTraining",
+    "elevation": ""
+  },
+  {
+    "date": "2025-10-21",
+    "title": "Morning Run",
+    "distance_km": 13.21,
+    "time": "1h 19m",
+    "pace": "6:03 min/km",
+    "activity_id": "16211677909",
+    "type": "Run",
+    "elevation": "23m"
+  },
+  {
+    "date": "2025-10-20",
+    "title": "Morning Stair  Stepper",
+    "distance_km": 0.0,
+    "time": "1h 15m",
+    "pace": "",
+    "activity_id": "16201328592",
+    "type": "StairStepper",
+    "elevation": ""
+  },
+  {
+    "date": "2025-10-19",
+    "title": "Detroit Free Press Marathon w/ Ronnie",
+    "distance_km": 42.71,
+    "time": "3h 40m",
+    "pace": "5:10 min/km",
+    "activity_id": "16193505266",
+    "type": "Run",
+    "elevation": "252m"
+  },
+  {
+    "date": "2025-10-17",
+    "title": "Morning Run",
+    "distance_km": 12.73,
+    "time": "1h 30m",
+    "pace": "7:08 min/km",
+    "activity_id": "16170280701",
+    "type": "Run",
+    "elevation": ""
+  },
+  {
+    "date": "2025-10-16",
+    "title": "Morning Run",
+    "distance_km": 18.26,
+    "time": "1h 30m",
+    "pace": "4:56 min/km",
+    "activity_id": "16160416792",
+    "type": "Run",
+    "elevation": "16m"
+  },
+  {
+    "date": "2025-10-16",
+    "title": "Morning Run",
+    "distance_km": 2.02,
+    "time": "13m",
+    "pace": "6:51 min/km",
+    "activity_id": "16159399833",
+    "type": "Run",
+    "elevation": "5m"
+  },
+  {
+    "date": "2025-10-15",
+    "title": "Evening Walk",
+    "distance_km": 5.1,
+    "time": "55m",
+    "pace": "",
+    "activity_id": "16154730516",
+    "type": "Walk",
+    "elevation": ""
+  },
+  {
+    "date": "2025-10-15",
+    "title": "Morning Run",
+    "distance_km": 19.45,
+    "time": "2h 19m",
+    "pace": "7:10 min/km",
+    "activity_id": "16149245446",
+    "type": "Run",
+    "elevation": "340m"
+  },
+  {
+    "date": "2025-10-14",
+    "title": "3x(1min@3:40min/km, 2min@3:52min/km, 3min@4:04min/km)+1min@3:40",
+    "distance_km": 10.3,
+    "time": "1h 0m",
+    "pace": "5:50 min/km",
+    "activity_id": "16138240388",
+    "type": "Run",
+    "elevation": "13m"
+  },
+  {
+    "date": "2025-10-14",
+    "title": "Warmup",
+    "distance_km": 4.03,
+    "time": "26m",
+    "pace": "6:33 min/km",
+    "activity_id": "16137500357",
+    "type": "Run",
+    "elevation": "3m"
+  },
+  {
+    "date": "2025-10-13",
+    "title": "Afternoon Run",
+    "distance_km": 2.97,
+    "time": "25m",
+    "pace": "8:30 min/km",
+    "activity_id": "16130434885",
+    "type": "Run",
+    "elevation": "55m"
+  },
+  {
+    "date": "2025-10-13",
+    "title": "Lunch Walk",
+    "distance_km": 2.11,
+    "time": "1h 25m",
+    "pace": "",
+    "activity_id": "16129177802",
+    "type": "Walk",
+    "elevation": ""
+  },
+  {
+    "date": "2025-10-13",
+    "title": "Morning Run",
+    "distance_km": 18.02,
+    "time": "2h 5m",
+    "pace": "6:59 min/km",
+    "activity_id": "16126754657",
+    "type": "Run",
+    "elevation": "13m"
+  },
+  {
+    "date": "2025-10-12",
+    "title": "Afternoon Walk",
+    "distance_km": 1.12,
+    "time": "16m",
+    "pace": "",
+    "activity_id": "16120450722",
+    "type": "Walk",
+    "elevation": ""
+  },
+  {
+    "date": "2025-10-12",
+    "title": "Morning Run",
+    "distance_km": 16.52,
+    "time": "2h 0m",
+    "pace": "7:16 min/km",
+    "activity_id": "16118460590",
+    "type": "Run",
+    "elevation": "208m"
+  },
+  {
+    "date": "2025-10-11",
+    "title": "Afternoon Walk",
+    "distance_km": 2.08,
+    "time": "43m",
+    "pace": "",
+    "activity_id": "16110059713",
+    "type": "Walk",
+    "elevation": ""
+  },
+  {
+    "date": "2025-10-11",
+    "title": "Morning Run",
+    "distance_km": 25.23,
+    "time": "2h 30m",
+    "pace": "5:57 min/km",
+    "activity_id": "16107137886",
+    "type": "Run",
+    "elevation": "566m"
+  },
+  {
+    "date": "2025-10-10",
+    "title": "Morning Run",
+    "distance_km": 14.02,
+    "time": "1h 32m",
+    "pace": "6:34 min/km",
+    "activity_id": "16095925254",
+    "type": "Run",
+    "elevation": "17m"
+  },
+  {
+    "date": "2025-10-09",
+    "title": "Tempo run",
+    "distance_km": 19.86,
+    "time": "1h 30m",
+    "pace": "4:32 min/km",
+    "activity_id": "16086208022",
+    "type": "Run",
+    "elevation": "20m"
+  },
+  {
+    "date": "2025-10-09",
+    "title": "Warmup",
+    "distance_km": 3.54,
+    "time": "23m",
+    "pace": "6:36 min/km",
+    "activity_id": "16085244619",
+    "type": "Run",
+    "elevation": "5m"
+  },
+  {
+    "date": "2025-10-08",
+    "title": "Morning Run",
+    "distance_km": 9.02,
+    "time": "1h 1m",
+    "pace": "6:49 min/km",
+    "activity_id": "16075052538",
+    "type": "Run",
+    "elevation": ""
+  },
+  {
+    "date": "2025-10-08",
+    "title": "Morning Stair-Stepper",
+    "distance_km": 0.0,
+    "time": "1h 4m",
+    "pace": "",
+    "activity_id": "16074478775",
+    "type": "StairStepper",
+    "elevation": ""
+  },
+  {
+    "date": "2025-10-07",
+    "title": "Weight training",
+    "distance_km": 0.0,
+    "time": "1h 0m",
+    "pace": "",
+    "activity_id": "16070030947",
+    "type": "WeightTraining",
+    "elevation": ""
+  },
+  {
+    "date": "2025-10-07",
+    "title": "3x(1min@3:40min/km, 2min@3:49min/km, 3min@3:58min/km)",
+    "distance_km": 11.02,
+    "time": "1h 2m",
+    "pace": "5:38 min/km",
+    "activity_id": "16063311205",
+    "type": "Run",
+    "elevation": "6m"
+  },
+  {
+    "date": "2025-10-07",
+    "title": "Warmup",
+    "distance_km": 3.52,
+    "time": "21m",
+    "pace": "6:15 min/km",
+    "activity_id": "16062526280",
+    "type": "Run",
+    "elevation": "1m"
+  },
+  {
+    "date": "2025-10-06",
+    "title": "2x(4 trail loops, 1 Bertha to and around lake and back)",
+    "distance_km": 19.02,
+    "time": "2h 16m",
+    "pace": "7:09 min/km",
+    "activity_id": "16052108256",
+    "type": "Run",
+    "elevation": "324m"
+  },
+  {
+    "date": "2025-10-05",
+    "title": "Recovery jog while Ronnie did 1km repeats",
+    "distance_km": 3.88,
+    "time": "41m",
+    "pace": "10:45 min/km",
+    "activity_id": "16046174924",
+    "type": "Run",
+    "elevation": ""
+  },
+  {
+    "date": "2025-10-05",
+    "title": "Morning Run",
+    "distance_km": 17.1,
+    "time": "2h 30m",
+    "pace": "8:47 min/km",
+    "activity_id": "16043610284",
+    "type": "Run",
+    "elevation": "472m"
+  },
+  {
+    "date": "2025-10-04",
+    "title": "Evening Run",
+    "distance_km": 1.51,
+    "time": "23m",
+    "pace": "15:36 min/km",
+    "activity_id": "16036000777",
+    "type": "Run",
+    "elevation": ""
+  },
+  {
+    "date": "2025-10-04",
+    "title": "Evening Walk",
+    "distance_km": 4.28,
+    "time": "1h 17m",
+    "pace": "",
+    "activity_id": "16035663892",
+    "type": "Walk",
+    "elevation": ""
+  },
+  {
+    "date": "2025-10-04",
+    "title": "Morning Run",
+    "distance_km": 4.08,
+    "time": "37m",
+    "pace": "9:10 min/km",
+    "activity_id": "16030728614",
+    "type": "Run",
+    "elevation": "105m"
+  },
+  {
+    "date": "2025-10-03",
+    "title": "Tempo run",
+    "distance_km": 19.67,
+    "time": "1h 29m",
+    "pace": "4:34 min/km",
+    "activity_id": "16020647276",
+    "type": "Run",
+    "elevation": "14m"
+  },
+  {
+    "date": "2025-10-02",
+    "title": "Recovery jog while Ronnie did track work",
+    "distance_km": 4.0,
+    "time": "1h 0m",
+    "pace": "15:00 min/km",
+    "activity_id": "16015382767",
+    "type": "Run",
+    "elevation": ""
+  },
+  {
+    "date": "2025-10-02",
+    "title": "Morning Run",
+    "distance_km": 9.14,
+    "time": "1h 0m",
+    "pace": "6:35 min/km",
+    "activity_id": "16009811363",
+    "type": "Run",
+    "elevation": "16m"
+  },
+  {
+    "date": "2025-10-01",
+    "title": "Night Run",
+    "distance_km": 2.63,
+    "time": "18m",
+    "pace": "6:56 min/km",
+    "activity_id": "16005419673",
+    "type": "Run",
+    "elevation": ""
+  },
+  {
+    "date": "2025-10-01",
+    "title": "Evening Run",
+    "distance_km": 6.08,
+    "time": "42m",
+    "pace": "6:55 min/km",
+    "activity_id": "16004812958",
+    "type": "Run",
+    "elevation": ""
+  },
+  {
+    "date": "2025-10-01",
+    "title": "Evening Stair-Stepper",
+    "distance_km": 0.0,
+    "time": "1h 15m",
+    "pace": "",
+    "activity_id": "16004435091",
+    "type": "StairStepper",
+    "elevation": ""
+  },
+  {
+    "date": "2025-09-30",
+    "title": "Track work for Ronnie (not me lol)",
+    "distance_km": 5.93,
+    "time": "54m",
+    "pace": "9:15 min/km",
+    "activity_id": "15992847161",
+    "type": "Run",
+    "elevation": "17m"
+  },
+  {
+    "date": "2025-09-30",
+    "title": "3x(1min@3:42min/km, 2min@3:50min/km, 3min@4:00min/km)",
+    "distance_km": 11.48,
+    "time": "1h 0m",
+    "pace": "5:14 min/km",
+    "activity_id": "15987154639",
+    "type": "Run",
+    "elevation": "19m"
+  },
+  {
+    "date": "2025-09-30",
+    "title": "Warmup",
+    "distance_km": 2.53,
+    "time": "16m",
+    "pace": "6:21 min/km",
+    "activity_id": "15986560291",
+    "type": "Run",
+    "elevation": "2m"
+  },
+  {
+    "date": "2025-09-29",
+    "title": "2x(4 trail loops, 1 Bertha to and around lake and back)",
+    "distance_km": 20.08,
+    "time": "2h 15m",
+    "pace": "6:44 min/km",
+    "activity_id": "15975730365",
+    "type": "Run",
+    "elevation": "338m"
+  },
+  {
+    "date": "2025-09-28",
+    "title": "Evening Row",
+    "distance_km": 0.0,
+    "time": "10m",
+    "pace": "",
+    "activity_id": "15970756974",
+    "type": "WaterSport",
+    "elevation": ""
+  },
+  {
+    "date": "2025-09-28",
+    "title": "Strength training",
+    "distance_km": 0.0,
+    "time": "1h 0m",
+    "pace": "",
+    "activity_id": "15970779788",
+    "type": "WeightTraining",
+    "elevation": ""
+  },
+  {
+    "date": "2025-09-28",
+    "title": "Hill repeats",
+    "distance_km": 25.15,
+    "time": "2h 30m",
+    "pace": "5:58 min/km",
+    "activity_id": "15967078377",
+    "type": "Run",
+    "elevation": "569m"
+  },
+  {
+    "date": "2025-09-27",
+    "title": "Morning Run",
+    "distance_km": 19.83,
+    "time": "2h 0m",
+    "pace": "6:03 min/km",
+    "activity_id": "15954415203",
+    "type": "Run",
+    "elevation": "53m"
+  },
+  {
+    "date": "2025-09-26",
+    "title": "Morning Run",
+    "distance_km": 10.07,
+    "time": "1h 0m",
+    "pace": "5:58 min/km",
+    "activity_id": "15943323960",
+    "type": "Run",
+    "elevation": "23m"
+  },
+  {
+    "date": "2025-09-25",
+    "title": "Tempo run",
+    "distance_km": 19.25,
+    "time": "1h 30m",
+    "pace": "4:41 min/km",
+    "activity_id": "15932663211",
+    "type": "Run",
+    "elevation": "24m"
+  },
+  {
+    "date": "2025-09-25",
+    "title": "Warmup",
+    "distance_km": 2.3,
+    "time": "15m",
+    "pace": "6:32 min/km",
+    "activity_id": "15931705523",
+    "type": "Run",
+    "elevation": "3m"
+  },
+  {
+    "date": "2025-09-24",
+    "title": "Evening Walk",
+    "distance_km": 2.62,
+    "time": "32m",
+    "pace": "",
+    "activity_id": "15926824627",
+    "type": "Walk",
+    "elevation": ""
+  },
+  {
+    "date": "2025-09-24",
+    "title": "Treadmill running",
+    "distance_km": 0.0,
+    "time": "1h 0m",
+    "pace": null,
+    "activity_id": "15921886037",
+    "type": "Run",
+    "elevation": ""
+  },
+  {
+    "date": "2025-09-24",
+    "title": "Morning Stair-Stepper",
+    "distance_km": 0.0,
+    "time": "1h 15m",
+    "pace": "",
+    "activity_id": "15921318176",
+    "type": "Workout",
+    "elevation": ""
+  },
+  {
+    "date": "2025-09-23",
+    "title": "Strength training",
+    "distance_km": 0.0,
+    "time": "1h 0m",
+    "pace": "",
+    "activity_id": "15970776393",
+    "type": "WeightTraining",
+    "elevation": ""
+  },
+  {
+    "date": "2025-09-23",
+    "title": "2x(4 trail loops, 1 Bertha to and around lake and back)",
+    "distance_km": 19.61,
+    "time": "2h 15m",
+    "pace": "6:53 min/km",
+    "activity_id": "15909917952",
+    "type": "Run",
+    "elevation": "325m"
+  },
+  {
+    "date": "2025-09-22",
+    "title": "3x(2x1min@3:48min/km, 2x2min@3:58min/km, 2x3min4:08min/km)",
+    "distance_km": 15.62,
+    "time": "1h 17m",
+    "pace": "4:56 min/km",
+    "activity_id": "15898791971",
+    "type": "Run",
+    "elevation": "25m"
+  },
+  {
+    "date": "2025-09-22",
+    "title": "Warmup",
+    "distance_km": 2.51,
+    "time": "15m",
+    "pace": "6:12 min/km",
+    "activity_id": "15897894186",
+    "type": "Run",
+    "elevation": "2m"
+  },
+  {
     "date": "2025-09-21",
     "title": "Strength training",
     "distance_km": 0.0,
