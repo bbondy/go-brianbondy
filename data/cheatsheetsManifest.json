@@ -1,0 +1,42 @@
+[
+  {
+    "title": "GDB",
+    "slug": "gdb",
+    "description": "Debugger commands and workflows for GNU Debugger (GDB)."
+  },
+  {
+    "title": "Claude Code",
+    "slug": "claude-code",
+    "description": "Notes and snippets for the Claude Code CLI workflow."
+  },
+  {
+    "title": "Docker",
+    "slug": "docker",
+    "description": "Common Docker commands, images, and container operations."
+  },
+  {
+    "title": "Go",
+    "slug": "go",
+    "description": "Go language commands, tooling, and syntax reference."
+  },
+  {
+    "title": "IPFS",
+    "slug": "ipfs",
+    "description": "IPFS commands and concepts for content-addressed data."
+  },
+  {
+    "title": "Kubernetes",
+    "slug": "kubernetes",
+    "description": "Kubernetes kubectl commands and cluster workflows."
+  },
+  {
+    "title": "Rust",
+    "slug": "rust",
+    "description": "Rust language syntax, tooling, and cargo commands."
+  },
+  {
+    "title": "Tmux",
+    "slug": "tmux",
+    "description": "tmux key bindings and session management shortcuts."
+  }
+]
