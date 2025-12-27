@@ -45,6 +45,16 @@ make test
 make format
 ```
 
+### Cheatsheets
+
+To fetch the latest cheatsheets markdown from https://github.com/bbondy/cheatsheets and generate the local manifest:
+
+```bash
+make cheatsheets
+```
+
+This writes `data/cheatsheetsManifest.json` and `data/markdown/cheatsheets/*.md`.
+
 ### Deployment
 
 ```bash

@@ -117,6 +117,30 @@ func TestGetProjectsCaching(t *testing.T) {
 	assert.False(t, &projects2[0] == &projects3[0], "After clearing cache, should reload from file (different element pointer)")
 }
 
+// TestGetCheatsheetsCaching tests the caching mechanism for GetCheatsheets
+func TestGetCheatsheetsCaching(t *testing.T) {
+	// Clear cache before test
+	data.ClearCheatsheetsCache()
+
+	// First call should load from file
+	cheatsheets1, err1 := data.GetCheatsheets()
+	assert.NoError(t, err1)
+	assert.NotEmpty(t, cheatsheets1)
+
+	// Second call should return cached data (same pointer to first element)
+	cheatsheets2, err2 := data.GetCheatsheets()
+	assert.NoError(t, err2)
+	assert.NotEmpty(t, cheatsheets2)
+	assert.True(t, &cheatsheets1[0] == &cheatsheets2[0], "Should return the same cached data instance (element pointer)")
+
+	// Clear cache and reload
+	data.ClearCheatsheetsCache()
+	cheatsheets3, err3 := data.GetCheatsheets()
+	assert.NoError(t, err3)
+	assert.NotEmpty(t, cheatsheets3)
+	assert.False(t, &cheatsheets2[0] == &cheatsheets3[0], "After clearing cache, should reload from file (different element pointer)")
+}
+
 // Helper function to set up test data
 func setupTestData() {
 	// Reset all the global variables

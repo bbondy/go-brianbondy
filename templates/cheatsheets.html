@@ -1,0 +1,16 @@
+{{define "mountPoint"}}
+<h1>Cheatsheets</h1>
+<p>Short, practical references for commands and workflows.</p>
+<div class="card-container">
+  {{range .Cheatsheets}}
+    <div class="card-entry">
+      <div class="project-entry">
+        <div class="project-content">
+          <h3><a href="/cheatsheets/{{.Slug}}">{{.Title}}</a></h3>
+          <div class="card-details">{{.Description}}</div>
+        </div>
+      </div>
+    </div>
+  {{end}}
+</div>
+{{end}}

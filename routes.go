@@ -48,6 +48,14 @@ func initializeRoutes(router *mux.Router) {
 		negroni.HandlerFunc(directToHttps),
 		negroni.Wrap(http.HandlerFunc(picturesHandler)),
 	)
+	handleCheatsheets := negroni.New(
+		negroni.HandlerFunc(directToHttps),
+		negroni.Wrap(http.HandlerFunc(cheatsheetsHandler)),
+	)
+	handleCheatsheet := negroni.New(
+		negroni.HandlerFunc(directToHttps),
+		negroni.Wrap(http.HandlerFunc(cheatsheetHandler)),
+	)
 
 	router.Handle("/", handleHome)
 	router.Handle("/rss", handleRSS)
@@ -87,6 +95,8 @@ func initializeRoutes(router *mux.Router) {
 	))
 	router.Handle("/resume", getMarkdownTemplateHandler("Resume", "resume.markdown", "/resume"))
 	router.Handle("/running", handleRunning)
+	router.Handle("/cheatsheets", handleCheatsheets)
+	router.Handle("/cheatsheets/{slug}", handleCheatsheet)
 	router.Handle("/api/runs-for-date", negroni.New(
 		negroni.HandlerFunc(directToHttps),
 		negroni.Wrap(http.HandlerFunc(runsForDateHandler)),

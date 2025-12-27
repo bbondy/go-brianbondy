@@ -158,6 +158,45 @@ func TestFiltersPageHandler(t *testing.T) {
 	assert.Equal(t, http.StatusOK, resp.StatusCode)
 }
 
+// Test for cheatsheetsHandler
+func TestCheatsheetsHandler(t *testing.T) {
+	w := httptest.NewRecorder()
+	r, _ := http.NewRequest("GET", "/cheatsheets", nil)
+
+	cheatsheetsHandler(w, r)
+
+	resp := w.Result()
+	assert.Equal(t, http.StatusOK, resp.StatusCode)
+	bodyBytes, _ := io.ReadAll(resp.Body)
+	bodyString := string(bodyBytes)
+	assert.Contains(t, bodyString, "Cheatsheets")
+	assert.Contains(t, bodyString, "Docker")
+}
+
+// Test for cheatsheetHandler
+func TestCheatsheetHandler(t *testing.T) {
+	// Existing cheatsheet
+	w := httptest.NewRecorder()
+	r := newRequestWithVars("GET", "/cheatsheets/go", map[string]string{"slug": "go"})
+
+	cheatsheetHandler(w, r)
+
+	resp := w.Result()
+	assert.Equal(t, http.StatusOK, resp.StatusCode)
+	bodyBytes, _ := io.ReadAll(resp.Body)
+	bodyString := string(bodyBytes)
+	assert.Contains(t, bodyString, ">Go<")
+
+	// Missing cheatsheet
+	w = httptest.NewRecorder()
+	r = newRequestWithVars("GET", "/cheatsheets/missing", map[string]string{"slug": "missing"})
+
+	cheatsheetHandler(w, r)
+
+	resp = w.Result()
+	assert.Equal(t, http.StatusNotFound, resp.StatusCode)
+}
+
 // Test for tagRedirectHandler
 func TestTagRedirectHandler(t *testing.T) {
 	setupTestEnvironment(t)

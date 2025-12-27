@@ -298,6 +298,70 @@ func projectsHandler(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
+func cheatsheetsHandler(w http.ResponseWriter, r *http.Request) {
+	cheatsheets, err := data.GetCheatsheets()
+	if err != nil {
+		errorPage(w, "Unable to load cheatsheets", "cheatsheets")
+		return
+	}
+
+	p := struct {
+		Title        string
+		MarkdownSlug string
+		Cheatsheets  data.Cheatsheets
+	}{
+		Title:        GetTitle("Cheatsheets"),
+		MarkdownSlug: "cheatsheets",
+		Cheatsheets:  cheatsheets,
+	}
+	t := template.Must(template.New("base.html").Funcs(funcMap).ParseFiles("templates/base.html", "templates/cheatsheets.html"))
+	err = t.Execute(w, p)
+	if err != nil {
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+}
+
+func cheatsheetHandler(w http.ResponseWriter, r *http.Request) {
+	vars := mux.Vars(r)
+	slug := vars["slug"]
+	if slug == "" {
+		errorPageWithStatus(w, "Cheatsheet not found", "cheatsheets", http.StatusNotFound)
+		return
+	}
+
+	cheatsheets, err := data.GetCheatsheets()
+	if err != nil {
+		errorPage(w, "Unable to load cheatsheets", "cheatsheets")
+		return
+	}
+
+	var found *data.Cheatsheet
+	for i := range cheatsheets {
+		if cheatsheets[i].Slug == slug {
+			found = &cheatsheets[i]
+			break
+		}
+	}
+	if found == nil {
+		errorPageWithStatus(w, "Cheatsheet not found", "cheatsheets", http.StatusNotFound)
+		return
+	}
+
+	p := &data.SimpleMarkdownPage{
+		Title:        GetTitle(found.Title),
+		Content:      getMarkdownData("cheatsheets/" + slug + ".md"),
+		MarkdownSlug: "cheatsheets",
+		ShareUrl:     "/cheatsheets/" + slug,
+	}
+	t := template.Must(template.New("base.html").Funcs(funcMap).ParseFiles("templates/base.html", "templates/simpleMarkdown.html"))
+	err = t.Execute(w, p)
+	if err != nil {
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+}
+
 func interviewsHandler(w http.ResponseWriter, r *http.Request) {
 	interviews, err := data.GetInterviews()
 	if err != nil {

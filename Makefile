@@ -5,6 +5,9 @@ update: format lint test update-cache webp github-stats memorable-runs
 memorable-runs:
 	python3 scripts/fetch_memorable_runs.py
 
+cheatsheets:
+	python3 scripts/generate_cheatsheets.py
+
 # Default target - runs all essential tasks
 all: lint format test update-cache webp pictures-manifest
 
@@ -92,6 +95,7 @@ help:
 	@echo "  blog-images  - Process new blog post images"
 	@echo "  github-stats - Fetch GitHub statistics for projects"
 	@echo "  memorable-runs - Fetch memorable run statistics"
+	@echo "  cheatsheets   - Generate cheatsheets manifest and markdown from GitHub"
 	@echo "  strava-clear-token - Delete cached Strava OAuth token (~/.strava_token.json)"
 	@echo "  deploy       - Deploy to Google App Engine"
 	@echo "  cache-version- Show current cache busting version" 
