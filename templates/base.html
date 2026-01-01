@@ -19,6 +19,45 @@
           
           // Apply theme immediately to prevent flash
           document.documentElement.setAttribute('data-theme', theme);
+
+          // Add subtle background variation per page load
+          (function() {
+            var root = document.documentElement;
+            var rand = function(min, max) { return Math.random() * (max - min) + min; };
+            var isDark = root.getAttribute('data-theme') === 'dark';
+            var palettes = isDark
+              ? [
+                  { g1: [86, 200, 255], g2: [40, 140, 255], g3: [86, 200, 255] },
+                  { g1: [94, 220, 255], g2: [34, 160, 255], g3: [94, 220, 255] },
+                  { g1: [64, 170, 255], g2: [24, 120, 230], g3: [64, 170, 255] },
+                  { g1: [60, 210, 240], g2: [30, 120, 200], g3: [60, 210, 240] }
+                ]
+              : [
+                  { g1: [20, 145, 190], g2: [95, 205, 240], g3: [20, 145, 190] },
+                  { g1: [15, 120, 175], g2: [110, 210, 245], g3: [15, 120, 175] },
+                  { g1: [30, 160, 205], g2: [70, 185, 230], g3: [30, 160, 205] },
+                  { g1: [10, 135, 175], g2: [130, 220, 245], g3: [10, 135, 175] }
+                ];
+
+            var palette = palettes[Math.floor(Math.random() * palettes.length)];
+            if (Math.random() > 0.5) {
+              var temp = palette.g1;
+              palette.g1 = palette.g2;
+              palette.g2 = temp;
+            }
+
+            root.style.setProperty('--bg-glow-1-x', rand(2, 36).toFixed(2) + '%');
+            root.style.setProperty('--bg-glow-1-y', rand(2, 30).toFixed(2) + '%');
+            root.style.setProperty('--bg-glow-2-x', rand(62, 98).toFixed(2) + '%');
+            root.style.setProperty('--bg-glow-2-y', rand(4, 34).toFixed(2) + '%');
+            root.style.setProperty('--bg-glow-1-stop', rand(28, 70).toFixed(2) + '%');
+            root.style.setProperty('--bg-glow-2-stop', rand(30, 72).toFixed(2) + '%');
+            root.style.setProperty('--bg-glow-angle', rand(85, 175).toFixed(2) + 'deg');
+
+            root.style.setProperty('--bg-glow-1', 'rgba(' + palette.g1.join(', ') + ', ' + rand(0.16, 0.36).toFixed(2) + ')');
+            root.style.setProperty('--bg-glow-2', 'rgba(' + palette.g2.join(', ') + ', ' + rand(0.16, 0.38).toFixed(2) + ')');
+            root.style.setProperty('--bg-glow-3', 'rgba(' + palette.g3.join(', ') + ', ' + rand(0.12, 0.26).toFixed(2) + ')');
+          })();
         } catch (e) {
           // Fallback to light theme if there's an error
           document.documentElement.setAttribute('data-theme', 'light');
@@ -39,44 +78,90 @@
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     
     <!-- Preload critical fonts -->
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet"></noscript>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Inter:wght@400;500;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"></noscript>
     
     <!-- Critical CSS inlined for above-the-fold content -->
     <style>
       /* CSS Variables for theming */
       :root {
-        --bg-color: #f8fafc;
-        --text-color: #4a5568;
-        --heading-color: #2d3748;
-        --link-color: #4d90fe;
+        --bg-color: #eef3f8;
+        --text-color: #273247;
+        --muted-color: #5a6b82;
+        --heading-color: #1a2333;
+        --link-color: #1483b3;
+        --link-color-strong: #0f6994;
         --topbar-bg: #ffffff;
         --mainbody-bg: #ffffff;
-        --border-color: #c8c8c8;
-        --shadow-color: rgba(0, 0, 0, 0.05);
-        --shadow-color-light: rgba(0, 0, 0, 0.03);
+        --panel-bg: #ffffff;
+        --border-color: #c7d3e3;
+        --panel-border: #d7e2ef;
+        --shadow-color: rgba(15, 23, 42, 0.08);
+        --shadow-color-light: rgba(15, 23, 42, 0.04);
         --topbar-shadow: 0 1px 3px var(--shadow-color);
         --mainbody-shadow: 0 1px 3px var(--shadow-color-light);
+        --bg-glow-1: rgba(20, 131, 179, 0.12);
+        --bg-glow-2: rgba(91, 192, 235, 0.14);
+        --bg-glow-3: rgba(20, 131, 179, 0.08);
+        --bg-glow-1-x: 12%;
+        --bg-glow-1-y: 10%;
+        --bg-glow-2-x: 88%;
+        --bg-glow-2-y: 15%;
+        --bg-glow-1-stop: 40%;
+        --bg-glow-2-stop: 45%;
+        --bg-glow-angle: 120deg;
+        --link-tint: rgba(20, 131, 179, 0.12);
+        --link-tint-strong: rgba(20, 131, 179, 0.2);
+        --link-shadow: rgba(20, 131, 179, 0.22);
+        --link-shadow-strong: rgba(20, 131, 179, 0.32);
+        --panel-shadow: 0 14px 32px rgba(15, 23, 42, 0.12);
+        --panel-shadow-hover: 0 18px 40px rgba(15, 23, 42, 0.16);
+        --font-heading: "Fraunces", "Iowan Old Style", "Palatino", "Times New Roman", serif;
         --transition: all 0.3s ease;
       }
 
       [data-theme="dark"] {
-        --bg-color: #1a202c;
-        --text-color: #e2e8f0;
-        --heading-color: #f7fafc;
-        --link-color: #63b3ed;
-        --topbar-bg: #2d3748;
-        --mainbody-bg: #2d3748;
-        --border-color: #4a5568;
-        --shadow-color: rgba(0, 0, 0, 0.3);
-        --shadow-color-light: rgba(0, 0, 0, 0.2);
+        --bg-color: #0d1522;
+        --text-color: #d7e2f0;
+        --muted-color: #9fb0c6;
+        --heading-color: #f2f7ff;
+        --link-color: #59c0ff;
+        --link-color-strong: #2ea1e6;
+        --topbar-bg: #121b2b;
+        --mainbody-bg: #121b2b;
+        --panel-bg: #121b2b;
+        --border-color: #2b3a52;
+        --panel-border: #2f3f5b;
+        --shadow-color: rgba(0, 0, 0, 0.35);
+        --shadow-color-light: rgba(0, 0, 0, 0.22);
         --topbar-shadow: 0 1px 3px var(--shadow-color);
         --mainbody-shadow: 0 1px 3px var(--shadow-color-light);
+        --bg-glow-1: rgba(89, 192, 255, 0.16);
+        --bg-glow-2: rgba(44, 146, 255, 0.12);
+        --bg-glow-3: rgba(89, 192, 255, 0.08);
+        --bg-glow-1-x: 12%;
+        --bg-glow-1-y: 10%;
+        --bg-glow-2-x: 88%;
+        --bg-glow-2-y: 15%;
+        --bg-glow-1-stop: 40%;
+        --bg-glow-2-stop: 45%;
+        --bg-glow-angle: 120deg;
+        --link-tint: rgba(89, 192, 255, 0.14);
+        --link-tint-strong: rgba(89, 192, 255, 0.22);
+        --link-shadow: rgba(89, 192, 255, 0.28);
+        --link-shadow-strong: rgba(89, 192, 255, 0.38);
+        --panel-shadow: 0 16px 36px rgba(0, 0, 0, 0.4);
+        --panel-shadow-hover: 0 20px 42px rgba(0, 0, 0, 0.5);
+        --font-heading: "Fraunces", "Iowan Old Style", "Palatino", "Times New Roman", serif;
       }
 
       /* Critical CSS for above-the-fold content */
       body {
         background-color: var(--bg-color);
+        background-image:
+          radial-gradient(circle at var(--bg-glow-1-x) var(--bg-glow-1-y), var(--bg-glow-1), transparent var(--bg-glow-1-stop)),
+          radial-gradient(circle at var(--bg-glow-2-x) var(--bg-glow-2-y), var(--bg-glow-2), transparent var(--bg-glow-2-stop)),
+          linear-gradient(var(--bg-glow-angle), var(--bg-glow-3), transparent 60%);
         color: var(--text-color);
         font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
         font-size: 1em;
@@ -117,15 +202,16 @@
       }
       .mainBody {
         background-color: var(--mainbody-bg);
-        padding: 18px 20px 40px 20px;
-        border-radius: 12px;
+        padding: 22px 22px 44px 22px;
+        border-radius: 16px;
+        border: 1px solid var(--border-color);
         box-shadow: var(--mainbody-shadow);
         transition: var(--transition);
       }
       h1, h2, h3, h4, h5, h6 {
-        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-        font-weight: 600;
-        line-height: 1.2;
+        font-family: var(--font-heading);
+        font-weight: 650;
+        line-height: 1.15;
         color: var(--heading-color);
         transition: var(--transition);
       }
@@ -698,8 +784,8 @@
     </style>
     
     <!-- Non-critical CSS loaded asynchronously -->
-        <link rel="stylesheet" href="/static/css/main.css?v=136" media="print" onload="this.media='all'">
-    <noscript><link rel="stylesheet" href="/static/css/main.css?v=136"></noscript>
+        <link rel="stylesheet" href="/static/css/main.css?v=138" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="/static/css/main.css?v=138"></noscript>
     
     <!-- Font Awesome loaded asynchronously -->
     <link rel="stylesheet" href="/static/font-awesome/css/all.min.css" media="print" onload="this.media='all'">
