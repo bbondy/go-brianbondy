@@ -35,7 +35,7 @@
     "description": "Rust language syntax, tooling, and cargo commands."
   },
   {
-    "title": "Tmux",
+    "title": "tmux",
     "slug": "tmux",
     "description": "tmux key bindings and session management shortcuts."
   }

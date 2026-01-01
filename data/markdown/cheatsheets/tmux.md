@@ -1,11 +1,11 @@
-#tmux
+# tmux
 
-##Info
+## Info
 
 Some of these shortcuts assume you have this [.tmux.conf file](https://github.com/bbondy/dotfiles/blob/master/.tmux.conf).
 
 
-##Sessions
+## Sessions
 
 Creating a new session:  
 `tmux new -s <session-name>`
@@ -33,12 +33,12 @@ Split horizontally:
 Killing the current pane:  
 `Ctrl-b x`
 
-##Pane navigation
+## Pane navigation
 
 Moving around to different panes:  
 `Ctrl-b <arrow-key>`
 
-##Reloading
+## Reloading
 
 Reloading config:  
 `Ctrl-b r`
