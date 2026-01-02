@@ -64,8 +64,7 @@ cargo update
 
 ### Checking for errors when building
 
-Check for errors without building:
-cargo check
+Check for errors without building: `cargo check`
 
 
 ## Language

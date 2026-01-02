@@ -49,15 +49,15 @@ You can navigate a mirrored folder by using its CID through an IPFS gateway:
 https://gateway.pinata.cloud/ipfs/<CID>
 
 To access IPNS through the gateway:
-https://gateway.pinata.cloud/ipns/<peer-id>
-https://gateway.pinata.cloud/ipns/<dns-link-txt-record-domain>
-https://gateway.pinata.cloud/ipns/<dns-link-txt-record-domain>/images/someImage.jpg
+- https://gateway.pinata.cloud/ipns/<peer-id>
+- https://gateway.pinata.cloud/ipns/<dns-link-txt-record-domain>
+- https://gateway.pinata.cloud/ipns/<dns-link-txt-record-domain>/images/someImage.jpg
 
 If you have a daemon running locally you can also navigate from your local server:
-http://localhost:8080/ipfs/<CID>
-http://localhost:8080/ipns/<peer-id>
-http://localhost:8080/ipns/<dns-link-txt-record-domain>
-http://localhost:8080/ipns/<dns-link-txt-record-domain>/images/someImage.jpg
+- http://localhost:8080/ipfs/<CID>
+- http://localhost:8080/ipns/<peer-id>
+- http://localhost:8080/ipns/<dns-link-txt-record-domain>
+- http://localhost:8080/ipns/<dns-link-txt-record-domain>/images/someImage.jpg
 
 
 If you update ANY content, the CID changes though.
@@ -297,9 +297,9 @@ https://proto.school/#/data-structures/resources <- other tutorials not yet read
 IPNS, DNSLink and more: https://hackernoon.com/ten-terrible-attempts-to-make-the-inter-planetary-file-system-human-friendly-e4e95df0c6fa
 
 LibP2P core concepts:
-https://docs.libp2p.io/concepts/?source=post_page-----f8bf7724d452----------------------
+- https://docs.libp2p.io/concepts/?source=post_page-----f8bf7724d452----------------------
 
 Simple as water tutorials:
-https://simpleaswater.com/?ref=medium_multiformats&source=post_page-----cf25eef83966----------------------
+- https://simpleaswater.com/?ref=medium_multiformats&source=post_page-----cf25eef83966----------------------
 
-https://simpleaswater.com/?ref=hackernoon_ipfs
+- https://simpleaswater.com/?ref=hackernoon_ipfs

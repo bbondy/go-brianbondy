@@ -22,7 +22,7 @@ Getting a list of sessions:
 Dettaching from a session:  
 `Ctrl-b d`
 
-##Pane management
+## Pane management
 
 Split vertically:  
 `Ctrl-b %`
@@ -43,7 +43,7 @@ Moving around to different panes:
 Reloading config:  
 `Ctrl-b r`
 
-##Mouse
+## Mouse
 
 Mouse mode on/off:  
 `Ctrl-b m`  

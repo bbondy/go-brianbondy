@@ -10,6 +10,11 @@
     "description": "Notes and snippets for the Claude Code CLI workflow."
   },
   {
+    "title": "c++",
+    "slug": "cpp",
+    "description": "Cheatsheet for c++ commands, tips, and workflows."
+  },
+  {
     "title": "css",
     "slug": "css",
     "description": "Cheatsheet for css commands, tips, and workflows."
@@ -45,9 +50,19 @@
     "description": "Kubernetes kubectl commands and cluster workflows."
   },
   {
+    "title": "python",
+    "slug": "python",
+    "description": "Cheatsheet for python commands, tips, and workflows."
+  },
+  {
     "title": "Rust",
     "slug": "rust",
     "description": "Rust language syntax, tooling, and cargo commands."
+  },
+  {
+    "title": "sql",
+    "slug": "sql",
+    "description": "Cheatsheet for sql commands, tips, and workflows."
   },
   {
     "title": "tmux",
