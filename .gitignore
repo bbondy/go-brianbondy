@@ -30,6 +30,7 @@ __pycache__/
 
 # Environment variables and secrets
 .env
+.envrc
 .env.local
 .env.production
 .env.staging
