@@ -10,14 +10,29 @@
     "description": "Notes and snippets for the Claude Code CLI workflow."
   },
   {
+    "title": "css",
+    "slug": "css",
+    "description": "Cheatsheet for css commands, tips, and workflows."
+  },
+  {
     "title": "Docker",
     "slug": "docker",
     "description": "Common Docker commands, images, and container operations."
   },
   {
+    "title": "git",
+    "slug": "git",
+    "description": "Cheatsheet for git commands, tips, and workflows."
+  },
+  {
     "title": "Go",
     "slug": "go",
     "description": "Go language commands, tooling, and syntax reference."
+  },
+  {
+    "title": "html5",
+    "slug": "html",
+    "description": "Cheatsheet for html5 commands, tips, and workflows."
   },
   {
     "title": "IPFS",
@@ -38,5 +53,10 @@
     "title": "tmux",
     "slug": "tmux",
     "description": "tmux key bindings and session management shortcuts."
+  },
+  {
+    "title": "vim",
+    "slug": "vim",
+    "description": "Cheatsheet for vim commands, tips, and workflows."
   }
 ]
