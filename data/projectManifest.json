@@ -46,6 +46,14 @@
     ]
   },
   {
+    "title": "Macro Lap",
+    "image": "static/img/projects/macro-lap.png",
+    "url": "https://github.com/bbondy/macro-lap",
+    "website": "https://apps.garmin.com/apps/c0891461-7d02-498f-9697-ae50f2819938",
+    "github": "https://github.com/bbondy/macro-lap",
+    "description": "Macro Lap lets you track a larger macro lap without losing the normal lap button. Double-tap the lap button to start or end a macro lap while single taps still record regular laps. Perfect for events like backyard ultras where you want stats for the full loop and the smaller splits within it."
+  },
+  {
     "title": "IPFS in Brave",
     "image": "static/img/projects/ipfs.webp",
     "url": "/blog/177/ipfs-support-in-brave",
