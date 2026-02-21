@@ -1,4 +1,4 @@
-In August 2023, Brave released [Leo—Brave's native AI assistant](https://brave.com/leo-release/)—on its [Nightly channel](https://brave.com/download-nightly/). Since then we've incorporated a lot of user feedback, and made numerous improvements to the feature. There are more changes on the way, and soon we will launch Leo on our full release channel, making it available to our 60 million users.
+In August 2023, Brave released [Leo, Brave's native AI assistant](https://brave.com/leo-release/), on its [Nightly channel](https://brave.com/download-nightly/). Since then we've incorporated a lot of user feedback, and made numerous improvements to the feature. There are more changes on the way, and soon we will launch Leo on our full release channel, making it available to our 60 million users.
 
 We thought now would be a great time to share more about how Brave is thinking about Leo, and the future AI integrations within the browser.
 
@@ -6,7 +6,7 @@ We thought now would be a great time to share more about how Brave is thinking a
 
 Brave has always been a [user agent](https://developer.mozilla.org/en-US/docs/Glossary/User_agent). A user agent is a [client](https://en.wikipedia.org/wiki/Client_(computing)) application that gives users better control of the content they access on the Internet, without conflicts of interest between server operators – including [third parties](https://en.wikipedia.org/wiki/Web_tracking) – and the user. Leo takes this concept one step further, moving beyond the limited stance of browsing content in the way the author or creator intended. With Leo, you're not passively consuming web pages and videos, rather you're actively exploring content: asking tangential questions, seeking clarifications, exploring diverse viewpoints, and overall tailoring the Web to your preferences.
 
-Leo "understands" the current page you're visiting—it's the next best thing to talking directly with the author. In fact, in many ways it's better, as Leo can independently analyze and reason about pages, free of the author's or creator's biases.
+Leo "understands" the current page you're visiting. It's the next best thing to talking directly with the author. In fact, in many ways it's better, as Leo can independently analyze and reason about pages, free of the author's or creator's biases.
 
 To be clear, Brave isn't trying to create the world's leading Large Language Model (LLM) from scratch. Instead, our goal is to link users with top LLMs and harness them in innovative and where feasible, privacy preserving ways. Our goal is to open novel, convenient, and private use cases that are often possible only in the context of a particular user's browsing session.
 
@@ -114,6 +114,5 @@ Today, if Leo is prompted in another language, it can already answer in that lan
 With Leo by their side, users can interact with the Web in groundbreaking new ways. The future of Leo outlined in this roadmap is exciting to us. Unlike other AI assistants, Leo is not a simple chat interface. Leo is a companion for helping you make sense of the Web as you browse, while preserving your privacy and helping you stay in charge of your experience.
 
 We genuinely value insights from our community. For any thoughts or feedback, connect with us on our [community question and answer site](https://community.brave.com/c/new-feature-feedback/brave-leo-feedback/158).
-
 
 
