@@ -153,6 +153,13 @@
     }
   },
   {
+    "title": "go-update",
+    "image": "static/img/projects/go-update-extension.svg",
+    "url": "https://github.com/brave/go-update",
+    "github": "https://github.com/brave/go-update",
+    "description": "Brave component update server written in Go and designed as a Chromium-compatible drop-in replacement. It handles both GET and POST /extensions update checks, serves Brave-managed components, redirects unsupported single-extension requests to Google's updater, and supports extension blacklisting. I sniffed Chromium's extension/component update HTTP API and flow and built this server implementation from that behavior."
+  },
+  {
     "title": "JS abstract syntax tree grader",
     "image": "static/img/projects/js.webp",
     "url": "https://github.com/bbondy/codecheckjs",
@@ -186,6 +193,18 @@
       "commitCount": 548,
       "prCount": 0
     }
+  },
+  {
+    "title": "Image Flow",
+    "url": "https://github.com/bbondy/image-flow",
+    "github": "https://github.com/bbondy/image-flow",
+    "description": "An image manipulation library that supports opening/obtaining info and modifying many different image file formats. Also has support for 'layers' in images and many different methods of blending."
+  },
+  {
+    "title": "Stego Flow",
+    "url": "https://github.com/bbondy/stego-flow",
+    "github": "https://github.com/bbondy/stego-flow",
+    "description": "Utilities and a library to encode data into an image and later decode it."
   },
   {
     "title": "ROBOBAK",
@@ -259,10 +278,6 @@
     "description": "Easy access and control over all windows schedules. Used in several large scale applications."
   },
   {
-    "title": "Image Flow",
-    "description": "An image manipulation library that supports opening/obtaining info and modifying many different image file formats. Also has support for 'layers' in images and many different methods of blending."
-  },
-  {
     "title": "Counter HTTP server",
     "description": "Generates images based on current count for given user. Responds to HTTP requests."
   },
@@ -281,10 +296,6 @@
   {
     "title": "Call .NET web services without .NET",
     "description": "Some SOAP wrappers and other misc to easily call .NET web services from any c++ application."
-  },
-  {
-    "title": "Stego Flow",
-    "description": "Utilities and a library to encode data into an image and later decode it."
   },
   {
     "title": "Adaptive Huffman Compression",
