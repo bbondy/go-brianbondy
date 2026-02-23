@@ -8,8 +8,8 @@
     "blogPostID": 174,
     "description": "Block ads and trackers, saves data, and speeds up web browsing.",
     "githubStats": {
-      "commitCount": 2500,
-      "prCount": 729
+      "commitCount": 2600,
+      "prCount": 769
     }
   },
   {
@@ -21,7 +21,7 @@
     "description": "Secure, native, built-in crypto wallet that supercharges Brave browser for Web3.",
     "githubStats": {
       "commitCount": 231,
-      "prCount": 136
+      "prCount": 138
     },
     "searchKeywords": [
       "wallet",
@@ -51,7 +51,11 @@
     "url": "https://github.com/bbondy/macro-lap",
     "website": "https://apps.garmin.com/apps/c0891461-7d02-498f-9697-ae50f2819938",
     "github": "https://github.com/bbondy/macro-lap",
-    "description": "Macro Lap lets you track a larger macro lap without losing the normal lap button. Double-tap the lap button to start or end a macro lap while single taps still record regular laps. Perfect for events like backyard ultras where you want stats for the full loop and the smaller splits within it."
+    "description": "Macro Lap lets you track a larger macro lap without losing the normal lap button. Double-tap the lap button to start or end a macro lap while single taps still record regular laps. Perfect for events like backyard ultras where you want stats for the full loop and the smaller splits within it.",
+    "githubStats": {
+      "commitCount": 8,
+      "prCount": 0
+    }
   },
   {
     "title": "IPFS in Brave",
@@ -91,7 +95,7 @@
     "website": "https://www.brianbondy.com",
     "description": "The current website for brianbondy.com. This website is written in Go. The version before that was written in Node, Hapi, Redis React, and ES6 transpiled with Babel. Before that the previous versions were written in Google App Engine, Django, ASP .NET (C#), Flash / ActionScript, and the original one was generated from C++ code.",
     "githubStats": {
-      "commitCount": 220,
+      "commitCount": 228,
       "prCount": 0
     }
   },
@@ -157,7 +161,11 @@
     "image": "static/img/projects/go-update-extension.svg",
     "url": "https://github.com/brave/go-update",
     "github": "https://github.com/brave/go-update",
-    "description": "Brave component update server written in Go and designed as a Chromium-compatible drop-in replacement. It handles both GET and POST /extensions update checks, serves Brave-managed components, redirects unsupported single-extension requests to Google's updater, and supports extension blacklisting. I sniffed Chromium's extension/component update HTTP API and flow and built this server implementation from that behavior."
+    "description": "Brave component update server written in Go and designed as a Chromium-compatible drop-in replacement. It handles both GET and POST /extensions update checks, serves Brave-managed components, redirects unsupported single-extension requests to Google's updater, and supports extension blacklisting. I sniffed Chromium's extension/component update HTTP API and flow and built this server implementation from that behavior.",
+    "githubStats": {
+      "commitCount": 39,
+      "prCount": 5
+    }
   },
   {
     "title": "JS abstract syntax tree grader",
@@ -204,7 +212,11 @@
     "title": "Stego Flow",
     "url": "https://github.com/bbondy/stego-flow",
     "github": "https://github.com/bbondy/stego-flow",
-    "description": "Utilities and a library to encode data into an image and later decode it."
+    "description": "Utilities and a library to encode data into an image and later decode it.",
+    "githubStats": {
+      "commitCount": 8,
+      "prCount": 0
+    }
   },
   {
     "title": "ROBOBAK",
