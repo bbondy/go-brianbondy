@@ -1,5 +1,7 @@
 # Brian Bondy's Website
 
+[![CI](https://github.com/bbondy/go-brianbondy/actions/workflows/ci.yml/badge.svg?branch=master)](https://github.com/bbondy/go-brianbondy/actions/workflows/ci.yml)
+
 This is the source code for [brianbondy.com](https://brianbondy.com), a personal website built with Go.
 
 ## Development

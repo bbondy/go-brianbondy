@@ -261,9 +261,10 @@ func GetStravaRunTotalsFor(yearFilter string) (int, float64, int, int, error) {
 		return 0, 0, 0, 0, err
 	}
 	var filtered StravaRuns
-	if yearFilter == "all" || yearFilter == "" {
+	switch yearFilter {
+	case "all", "":
 		filtered = runs
-	} else if yearFilter == "365" {
+	case "365":
 		now := time.Now()
 		endDate := time.Date(now.Year(), now.Month(), now.Day(), 0, 0, 0, 0, now.Location())
 		startDate := endDate.AddDate(0, 0, -364)
@@ -274,7 +275,7 @@ func GetStravaRunTotalsFor(yearFilter string) (int, float64, int, int, error) {
 				}
 			}
 		}
-	} else {
+	default:
 		if year, err := strconv.Atoi(yearFilter); err == nil {
 			for _, run := range runs {
 				if len(run.Date) >= 4 {
