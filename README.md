@@ -219,7 +219,7 @@ After running, your `data/memorableRuns.json` will be updated with time fields f
 The contribution graph on the running page is generated from `data/stravaRunManifest.json`.
 
 **Requirements:**
-- Strava API access (either `STRAVA_ACCESS_TOKEN` or client credentials)
+- Strava API access (either `STRAVA_ACCESS_TOKEN`, or `STRAVA_CLIENT_ID` + `STRAVA_CLIENT_SECRET` + `STRAVA_REFRESH_TOKEN`)
 
 **Usage:**
 
@@ -233,7 +233,13 @@ If the token is missing or expired, set one of the following before running:
 STRAVA_ACCESS_TOKEN=... make strava-run-manifest
 ```
 
-Or use OAuth client credentials (this opens a browser for login):
+Or use refresh-token credentials (no browser login):
+
+```bash
+STRAVA_CLIENT_ID=... STRAVA_CLIENT_SECRET=... STRAVA_REFRESH_TOKEN=... make strava-run-manifest
+```
+
+Or use OAuth client credentials (opens a browser for login when refresh token is not provided):
 
 ```bash
 STRAVA_CLIENT_ID=... STRAVA_CLIENT_SECRET=... make strava-run-manifest

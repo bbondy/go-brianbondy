@@ -30,6 +30,9 @@ from http.server import HTTPServer, BaseHTTPRequestHandler
 # quickly in Strava settings or reuse the OAuth flow used by other scripts
 # in this repository. Place it in the environment as STRAVA_ACCESS_TOKEN.
 STRAVA_ACCESS_TOKEN = os.environ.get("STRAVA_ACCESS_TOKEN")
+STRAVA_CLIENT_ID = os.environ.get("STRAVA_CLIENT_ID")
+STRAVA_CLIENT_SECRET = os.environ.get("STRAVA_CLIENT_SECRET")
+STRAVA_REFRESH_TOKEN = os.environ.get("STRAVA_REFRESH_TOKEN")
 
 # OAuth/Token constants (reused from generate_strava_run_manifest.py)
 TOKEN_PATH = os.path.expanduser('~/.strava_token.json')
@@ -93,6 +96,36 @@ def _get_access_token_via_oauth(client_id: str, client_secret: str) -> str:
     return token_data['access_token']
 
 
+def _refresh_access_token(refresh_token: Optional[str] = None) -> Optional[str]:
+    """Use refresh-token grant to obtain a new Strava access token."""
+    global STRAVA_ACCESS_TOKEN, STRAVA_REFRESH_TOKEN
+    refresh_token = refresh_token or STRAVA_REFRESH_TOKEN
+    if not (STRAVA_CLIENT_ID and STRAVA_CLIENT_SECRET and refresh_token):
+        return None
+
+    data = {
+        'client_id': STRAVA_CLIENT_ID,
+        'client_secret': STRAVA_CLIENT_SECRET,
+        'grant_type': 'refresh_token',
+        'refresh_token': refresh_token,
+    }
+    try:
+        resp = requests.post(TOKEN_URL, data=data, timeout=10)
+        if resp.status_code != 200:
+            print(f"Failed to refresh access token: {resp.status_code} – {resp.text[:200]}")
+            return None
+        token_data = resp.json()
+        STRAVA_ACCESS_TOKEN = token_data.get('access_token')
+        STRAVA_REFRESH_TOKEN = token_data.get('refresh_token', STRAVA_REFRESH_TOKEN)
+        with open(TOKEN_PATH, 'w') as f:
+            json.dump(token_data, f)
+        print('Access token refreshed and saved to', TOKEN_PATH)
+        return STRAVA_ACCESS_TOKEN
+    except Exception as e:
+        print(f"Failed to refresh access token: {e}")
+        return None
+
+
 def _load_saved_token() -> Optional[str]:
     if os.path.exists(TOKEN_PATH):
         with open(TOKEN_PATH, 'r') as f:
@@ -111,9 +144,12 @@ def ensure_access_token() -> Optional[str]:
     if saved:
         STRAVA_ACCESS_TOKEN = saved
         return STRAVA_ACCESS_TOKEN
+    refreshed = _refresh_access_token()
+    if refreshed:
+        return refreshed
     # Fallback to OAuth flow
-    client_id = os.environ.get('STRAVA_CLIENT_ID') or input('Enter your Strava client_id: ')
-    client_secret = os.environ.get('STRAVA_CLIENT_SECRET') or input('Enter your Strava client_secret: ')
+    client_id = STRAVA_CLIENT_ID or input('Enter your Strava client_id: ')
+    client_secret = STRAVA_CLIENT_SECRET or input('Enter your Strava client_secret: ')
     STRAVA_ACCESS_TOKEN = _get_access_token_via_oauth(client_id, client_secret)
     return STRAVA_ACCESS_TOKEN
 
@@ -139,6 +175,11 @@ def fetch_strava_activity_metrics_from_api(activity_id: str, access_token: str) 
     headers = {"Authorization": f"Bearer {access_token}"}
     try:
         resp = requests.get(url, headers=headers, timeout=10)
+        if resp.status_code == 401:
+            refreshed = _refresh_access_token()
+            if refreshed:
+                headers = {"Authorization": f"Bearer {refreshed}"}
+                resp = requests.get(url, headers=headers, timeout=10)
         if resp.status_code != 200:
             print(f"Failed to fetch {activity_id} via API: {resp.status_code} – {resp.text[:200]}")
             return None
@@ -188,27 +229,27 @@ def time_string_to_minutes(time_str: str) -> int:
     """Convert time string like '12h 34m' or '34m' to total minutes."""
     if not time_str:
         return 0
-    
+
     total_minutes = 0
     # Match hours and minutes
     h_match = re.search(r'(\d+)h', time_str)
     m_match = re.search(r'(\d+)m', time_str)
-    
+
     if h_match:
         total_minutes += int(h_match.group(1)) * 60
     if m_match:
         total_minutes += int(m_match.group(1))
-    
+
     return total_minutes
 
 def minutes_to_time_string(minutes: int) -> str:
     """Convert total minutes to 'Xh Ym' format."""
     if minutes == 0:
         return "0m"
-    
+
     hours = minutes // 60
     remaining_minutes = minutes % 60
-    
+
     if hours > 0 and remaining_minutes > 0:
         return f"{hours}h {remaining_minutes}m"
     elif hours > 0:
@@ -220,7 +261,7 @@ def distance_string_to_miles(distance_str: str) -> float:
     """Convert distance string to miles."""
     if not distance_str:
         return 0.0
-    
+
     # Match distance with units
     match = re.search(r'([\d.]+)\s*(mi|km)', distance_str, re.IGNORECASE)
     if match:
@@ -236,7 +277,7 @@ def miles_to_distance_string(miles: float) -> str:
     """Convert miles to distance string."""
     if miles == 0:
         return "0mi"
-    
+
     if miles >= 1:
         return f"{miles:.1f}mi"
     else:
@@ -246,7 +287,7 @@ def elevation_string_to_feet(elevation_str: str) -> int:
     """Convert elevation string to feet."""
     if not elevation_str:
         return 0
-    
+
     # Match elevation with units
     match = re.search(r'([\d,]+)\s*(ft|m)', elevation_str, re.IGNORECASE)
     if match:
@@ -262,7 +303,7 @@ def feet_to_elevation_string(feet: int) -> str:
     """Convert feet to elevation string."""
     if feet == 0:
         return "0ft"
-    
+
     if feet >= 1000:
         return f"{feet:,}ft"
     else:
@@ -290,6 +331,7 @@ def fetch_total_metrics_from_multiple_strava_urls(urls: List[str]) -> Optional[D
             continue
 
         metrics = fetch_strava_activity_metrics_from_api(activity_id, access_token)
+        access_token = STRAVA_ACCESS_TOKEN or access_token
         if not metrics:
             continue
 
@@ -334,7 +376,7 @@ def parse_time_from_description(description: str) -> Optional[str]:
     """Extract time information from existing descriptions."""
     if not description:
         return None
-    
+
     # Common time patterns in descriptions
     time_patterns = [
         r'(\d+)\s*h\s*(\d+)\s*m',  # 80h 37m
@@ -346,7 +388,7 @@ def parse_time_from_description(description: str) -> Optional[str]:
         r'(\d+)\s*hours?,\s*(\d+)\s*minutes?',  # 25 hours, 25 minutes
         r'(\d+)\s*h\s*and\s*(\d+)\s*loops?',  # 30h and 30 loops
     ]
-    
+
     for pattern in time_patterns:
         match = re.search(pattern, description, re.IGNORECASE)
         if match:
@@ -357,7 +399,7 @@ def parse_time_from_description(description: str) -> Optional[str]:
             elif len(match.groups()) == 1:
                 hours = int(match.group(1))
                 return f"{hours}h"
-    
+
     return None
 
 def clean_description(description: str, time_from_desc: Optional[str]) -> Optional[str]:
@@ -366,7 +408,7 @@ def clean_description(description: str, time_from_desc: Optional[str]) -> Option
     """
     if not description or not time_from_desc:
         return description
-    
+
     # Remove the time phrase and any leading/trailing conjunctions or punctuation
     # Remove patterns like '30h and 30 loops', 'Finished in 25 hours, 25 minutes', etc.
     cleanup_patterns = [
@@ -395,7 +437,7 @@ def clean_description(description: str, time_from_desc: Optional[str]) -> Option
 
 def update_run_manifest():
     """Update the run manifest with time, distance, and elevation information."""
-    
+
     # Read current manifest (if it exists)
     try:
         with open('data/memorableRuns.json', 'r') as f:
@@ -403,13 +445,13 @@ def update_run_manifest():
     except FileNotFoundError:
         print("memorableRuns.json not found – starting a new manifest from scratch.")
         runs = []
-    
+
     updated_runs = []
-    
+
     for run in runs:
         # Check if time is already in description
         time_from_desc = parse_time_from_description(run.get('description', ''))
-        
+
         if time_from_desc:
             # Add time field and clean up description
             run['time'] = time_from_desc
@@ -448,14 +490,14 @@ def update_run_manifest():
                     if not run.get('elevation') and 'elevation' in fetched_metrics:
                         run['elevation'] = fetched_metrics['elevation']
                     print(f"Updated missing metrics for '{run['title']}': {fetched_metrics}")
-        
+
         updated_runs.append(run)
-    
+
     # Write updated manifest
     with open('data/memorableRuns.json', 'w') as f:
         json.dump(updated_runs, f, indent=2)
-    
+
     print(f"Updated {len(updated_runs)} activities in memorableRuns.json")
 
 if __name__ == "__main__":
-    update_run_manifest() 
+    update_run_manifest()

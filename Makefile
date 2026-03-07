@@ -19,7 +19,7 @@ lint:
 	golangci-lint run
 
 test:
-	go test -v 
+	go test -v
 
 # Update cache busting version in templates
 update-cache:
@@ -32,10 +32,10 @@ update-cache:
 
 # Deployment
 deploy: all
-	gcloud app deploy 
+	gcloud app deploy
 
 auth:
-	gcloud auth login 
+	gcloud auth login
 
 # Image optimization
 webp:
@@ -64,6 +64,8 @@ run-km-manifest:
 # Generate Strava run manifest using Strava API
 strava-run-manifest:
 	python3 scripts/generate_strava_run_manifest.py
+
+strava: strava-run-manifest
 
 # Build for production (everything except deploy)
 build: all
@@ -98,6 +100,6 @@ help:
 	@echo "  cheatsheets   - Generate cheatsheets manifest and markdown from GitHub"
 	@echo "  strava-clear-token - Delete cached Strava OAuth token (~/.strava_token.json)"
 	@echo "  deploy       - Deploy to Google App Engine"
-	@echo "  cache-version- Show current cache busting version" 
-	@echo "  run-km-manifest - Generate run manifest with km and pace" 
-	@echo "  strava-run-manifest - Generate run manifest using Strava API (requires STRAVA_ACCESS_TOKEN)" 
+	@echo "  cache-version- Show current cache busting version"
+	@echo "  run-km-manifest - Generate run manifest with km and pace"
+	@echo "  strava-run-manifest - Generate run manifest using Strava API (expects STRAVA_ACCESS_TOKEN or STRAVA_CLIENT_ID/STRAVA_CLIENT_SECRET/STRAVA_REFRESH_TOKEN in env, e.g. via .envrc)"

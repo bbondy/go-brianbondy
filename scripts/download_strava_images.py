@@ -15,21 +15,11 @@ import threading
 import re
 
 # Strava API configuration
-STRAVA_CLIENT_ID = None  # Set this to your Strava Client ID
-STRAVA_CLIENT_SECRET = None  # Set this to your Strava Client Secret
+STRAVA_CLIENT_ID = None
+STRAVA_CLIENT_SECRET = None
 STRAVA_REDIRECT_URI = "http://localhost:8081/callback"
 STRAVA_AUTH_URL = "https://www.strava.com/oauth/authorize"
 STRAVA_TOKEN_URL = "https://www.strava.com/oauth/token"
-
-def load_env_file():
-    """Load environment variables from .env file"""
-    if os.path.exists('.env'):
-        with open('.env', 'r') as f:
-            for line in f:
-                line = line.strip()
-                if line and not line.startswith('#') and '=' in line:
-                    key, value = line.split('=', 1)
-                    os.environ[key] = value
 
 class OAuthCallbackHandler(BaseHTTPRequestHandler):
     auth_code = None  # Class variable to hold the auth code
@@ -54,7 +44,7 @@ class OAuthCallbackHandler(BaseHTTPRequestHandler):
 def get_strava_access_token():
     """Get Strava access token using OAuth flow"""
     if not STRAVA_CLIENT_ID or not STRAVA_CLIENT_SECRET:
-        print("Error: Please set STRAVA_CLIENT_ID and STRAVA_CLIENT_SECRET in the script")
+        print("Error: Please set STRAVA_CLIENT_ID and STRAVA_CLIENT_SECRET in .envrc or the environment")
         return None
 
     # Reset class variable before starting
@@ -250,27 +240,20 @@ def process_runs_manifest():
     print("Finished processing runs manifest")
 
 if __name__ == "__main__":
-    # Load environment variables from .env file
-    load_env_file()
-    
+    STRAVA_CLIENT_ID = os.getenv('STRAVA_CLIENT_ID')
+    STRAVA_CLIENT_SECRET = os.getenv('STRAVA_CLIENT_SECRET')
+
     # Check if credentials are set
     if not STRAVA_CLIENT_ID or not STRAVA_CLIENT_SECRET:
         print("Please set your Strava API credentials:")
         print("1. Go to https://www.strava.com/settings/api")
         print("2. Create a new application")
-        print("3. Set STRAVA_CLIENT_ID and STRAVA_CLIENT_SECRET in this script")
-        print("\nOr set them as environment variables:")
+        print("3. Add these lines to .envrc:")
         print("export STRAVA_CLIENT_ID='your_client_id'")
         print("export STRAVA_CLIENT_SECRET='your_client_secret'")
         print("\nOr run the setup script:")
         print("python3 scripts/setup_strava.py")
-        
-        # Try to get from environment variables
-        STRAVA_CLIENT_ID = os.getenv('STRAVA_CLIENT_ID')
-        STRAVA_CLIENT_SECRET = os.getenv('STRAVA_CLIENT_SECRET')
-        
-        if not STRAVA_CLIENT_ID or not STRAVA_CLIENT_SECRET:
-            print("No credentials found. Exiting.")
-            exit(1)
+        print("No credentials found. Exiting.")
+        exit(1)
     
-    process_runs_manifest() 
+    process_runs_manifest()

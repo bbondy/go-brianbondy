@@ -1,9 +1,9 @@
 import os
 import requests
 import json
-from datetime import datetime
 import webbrowser
 import threading
+import time
 from http.server import HTTPServer, BaseHTTPRequestHandler
 from urllib.parse import urlparse, parse_qs
 
@@ -66,13 +66,14 @@ def get_oauth_code():
     return server
 
 def get_access_token(client_id, client_secret):
+    OAuthHandler.code = None
     # Step 1: Open browser for user login
     params = {
         'client_id': client_id,
         'redirect_uri': REDIRECT_URI,
         'response_type': 'code',
-        'scope': 'activity:read_all',
-        'approval_prompt': 'auto',
+        'scope': 'read,activity:read_all',
+        'approval_prompt': 'force',
     }
     url = AUTH_URL + '?' + '&'.join(f'{k}={v}' for k, v in params.items())
     print(f'Opening browser for Strava login...')
@@ -80,7 +81,7 @@ def get_access_token(client_id, client_secret):
     # Step 2: Wait for redirect with code
     server = get_oauth_code()
     while OAuthHandler.code is None:
-        pass  # Wait for code
+        time.sleep(0.2)
     code = OAuthHandler.code
     # Step 3: Exchange code for access token
     data = {
@@ -98,6 +99,34 @@ def get_access_token(client_id, client_secret):
         json.dump(token_data, f)
     print('Access token saved to', TOKEN_PATH)
     return token_data['access_token']
+
+def refresh_access_token(refresh_token=None):
+    client_id = os.environ.get('STRAVA_CLIENT_ID')
+    client_secret = os.environ.get('STRAVA_CLIENT_SECRET')
+    if refresh_token is None and os.path.exists(TOKEN_PATH):
+        with open(TOKEN_PATH, 'r') as f:
+            token_data = json.load(f)
+        refresh_token = token_data.get('refresh_token')
+    refresh_token = refresh_token or os.environ.get('STRAVA_REFRESH_TOKEN')
+    if not (client_id and client_secret and refresh_token):
+        return None
+
+    data = {
+        'client_id': client_id,
+        'client_secret': client_secret,
+        'grant_type': 'refresh_token',
+        'refresh_token': refresh_token,
+    }
+    resp = requests.post(TOKEN_URL, data=data, timeout=10)
+    if resp.status_code != 200:
+        print(f"Failed to refresh access token: {resp.status_code} {resp.text}")
+        return None
+
+    token_data = resp.json()
+    with open(TOKEN_PATH, 'w') as f:
+        json.dump(token_data, f)
+    print('Access token refreshed and saved to', TOKEN_PATH)
+    return token_data.get('access_token')
 
 def load_saved_token():
     if os.path.exists(TOKEN_PATH):
@@ -154,28 +183,42 @@ class AuthorizationError(Exception):
     pass
 
 def main():
+    client_id = os.environ['STRAVA_CLIENT_ID']
+    client_secret = os.environ['STRAVA_CLIENT_SECRET']
+    access_token = load_saved_token() or os.environ.get('STRAVA_ACCESS_TOKEN')
+    if not access_token:
+        access_token = refresh_access_token()
+    if not access_token:
+        access_token = get_access_token(client_id, client_secret)
+
     try:
-        access_token = os.environ.get('STRAVA_ACCESS_TOKEN') or load_saved_token()
-        if not access_token:
-            client_id = os.environ.get('STRAVA_CLIENT_ID') or input('Enter your Strava client_id: ')
-            client_secret = os.environ.get('STRAVA_CLIENT_SECRET') or input('Enter your Strava client_secret: ')
-            access_token = get_access_token(client_id, client_secret)
         runs = fetch_all_activities(access_token)
-        with open(OUTPUT_PATH, 'w') as f:
-            json.dump(runs, f, indent=2)
-        print(f"Wrote {len(runs)} runs to {OUTPUT_PATH}")
     except AuthorizationError as e:
         print(f"Authorization failed: {e}")
-        if os.path.exists(TOKEN_PATH):
-            print(f"Deleting expired token file: {TOKEN_PATH}")
-            os.remove(TOKEN_PATH)
-            print("Restarting authentication process...")
-            print()
-            # Restart the main function to trigger OAuth flow
-            main()
+        refreshed_token = refresh_access_token()
+        if refreshed_token:
+            print("Retrying with refreshed access token...")
+            try:
+                runs = fetch_all_activities(refreshed_token)
+            except AuthorizationError as refreshed_error:
+                print(f"Authorization still failing after refresh: {refreshed_error}")
+                if os.path.exists(TOKEN_PATH):
+                    print(f"Deleting stale token file: {TOKEN_PATH}")
+                    os.remove(TOKEN_PATH)
+                print("Re-authorizing with Strava to refresh scopes...")
+                access_token = get_access_token(client_id, client_secret)
+                runs = fetch_all_activities(access_token)
         else:
-            print("No token file found. Please run the script again.")
-            exit(1)
+            if os.path.exists(TOKEN_PATH):
+                print(f"Deleting expired token file: {TOKEN_PATH}")
+                os.remove(TOKEN_PATH)
+            print("Re-authorizing with Strava...")
+            access_token = get_access_token(client_id, client_secret)
+            runs = fetch_all_activities(access_token)
+
+    with open(OUTPUT_PATH, 'w') as f:
+        json.dump(runs, f, indent=2)
+    print(f"Wrote {len(runs)} runs to {OUTPUT_PATH}")
 
 if __name__ == '__main__':
-    main() 
+    main()
