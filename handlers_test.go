@@ -71,10 +71,10 @@ func setupTestEnvironment(t *testing.T) {
 	markdownMap["home"] = "<p>This is test home content</p>"
 	markdownMap["about"] = "<p>This is test about content</p>"
 	markdownMap["filters"] = "<p>This is test filters content</p>"
-	
+
 	// Add blog post markdown content
 	for _, post := range blogPosts {
-		markdownMap["blog/"+fmt.Sprintf("%d", post.Id)+".markdown"] = 
+		markdownMap["blog/"+fmt.Sprintf("%d", post.Id)+".markdown"] =
 			"<p>This is content for blog post " + post.Title + "</p>"
 	}
 }
@@ -99,10 +99,10 @@ func assertRedirect(t *testing.T, w *httptest.ResponseRecorder, expectedStatus i
 // Test for errorPage handler
 func TestErrorPage(t *testing.T) {
 	setupTestEnvironment(t)
-	
+
 	w := httptest.NewRecorder()
 	errorPage(w, "Test error message", "blog")
-	
+
 	resp := w.Result()
 	assert.Equal(t, http.StatusNotFound, resp.StatusCode)
 	bodyBytes, _ := io.ReadAll(resp.Body)
@@ -114,17 +114,17 @@ func TestErrorPage(t *testing.T) {
 // Test for generateRSSHandler
 func TestGenerateRSSHandler(t *testing.T) {
 	setupTestEnvironment(t)
-	
+
 	w := httptest.NewRecorder()
 	r, _ := http.NewRequest("GET", "/rss", nil)
 	r.Host = "example.com"
-	
+
 	generateRSSHandler(w, r)
-	
+
 	resp := w.Result()
 	assert.Equal(t, http.StatusOK, resp.StatusCode)
 	assert.Equal(t, "application/xml", resp.Header.Get("Content-Type"))
-	
+
 	// Parse the XML to verify it's well-formed
 	var rssDoc struct {
 		XMLName xml.Name `xml:"rss"`
@@ -137,7 +137,7 @@ func TestGenerateRSSHandler(t *testing.T) {
 			} `xml:"item"`
 		} `xml:"channel"`
 	}
-	
+
 	bodyBytes, _ := io.ReadAll(resp.Body)
 	err := xml.Unmarshal(bodyBytes, &rssDoc)
 	assert.NoError(t, err, "Expected valid XML")
@@ -148,12 +148,12 @@ func TestGenerateRSSHandler(t *testing.T) {
 // Test for filtersPageHandler
 func TestFiltersPageHandler(t *testing.T) {
 	setupTestEnvironment(t)
-	
+
 	w := httptest.NewRecorder()
 	r, _ := http.NewRequest("GET", "/filters", nil)
-	
+
 	filtersPageHandler(w, r)
-	
+
 	resp := w.Result()
 	assert.Equal(t, http.StatusOK, resp.StatusCode)
 }
@@ -200,35 +200,35 @@ func TestCheatsheetHandler(t *testing.T) {
 // Test for tagRedirectHandler
 func TestTagRedirectHandler(t *testing.T) {
 	setupTestEnvironment(t)
-	
+
 	// Test with existing tag
 	w := httptest.NewRecorder()
 	r := newRequestWithVars("GET", "/tagged/golang", map[string]string{"tag": "golang"})
-	
+
 	tagRedirectHandler(w, r)
-	
+
 	// It should redirect to the first post with the golang tag
 	assertRedirect(t, w, http.StatusFound, "/blog/1/test-post-1?tag=golang")
-	
+
 	// Test with non-existent tag
 	w = httptest.NewRecorder()
 	r = newRequestWithVars("GET", "/tagged/nonexistent", map[string]string{"tag": "nonexistent"})
-	
+
 	tagRedirectHandler(w, r)
-	
+
 	assert.Equal(t, http.StatusNotFound, w.Code)
 }
 
 // Test for tagRedirectHandler with year
 func TestTagRedirectHandlerWithYear(t *testing.T) {
 	setupTestEnvironment(t)
-	
+
 	w := httptest.NewRecorder()
 	r := newRequestWithVars("GET", "/tagged/golang?year=2022", map[string]string{"tag": "golang"})
 	r.URL.RawQuery = "year=2022"
-	
+
 	tagRedirectHandler(w, r)
-	
+
 	// It should redirect to the first post from 2022 with the golang tag
 	assertRedirect(t, w, http.StatusFound, "/blog/3/test-post-3?tag=golang&year=2022")
 }
@@ -236,7 +236,7 @@ func TestTagRedirectHandlerWithYear(t *testing.T) {
 // Test for redirectHandler
 func TestRedirectHandler(t *testing.T) {
 	setupTestEnvironment(t)
-	
+
 	testCases := []struct {
 		path           string
 		expectedTarget string
@@ -245,14 +245,14 @@ func TestRedirectHandler(t *testing.T) {
 		{"/blog/tagged/test", "/tagged/test"},
 		{"/blog/posted/2022", "/posted/2022"},
 	}
-	
+
 	for _, tc := range testCases {
 		t.Run(fmt.Sprintf("Path: %s", tc.path), func(t *testing.T) {
 			w := httptest.NewRecorder()
 			r, _ := http.NewRequest("GET", tc.path, nil)
-			
+
 			redirectHandler(w, r)
-			
+
 			assertRedirect(t, w, http.StatusFound, tc.expectedTarget)
 		})
 	}
@@ -261,22 +261,22 @@ func TestRedirectHandler(t *testing.T) {
 // Test for paginationRedirectHandler
 func TestPaginationRedirectHandler(t *testing.T) {
 	setupTestEnvironment(t)
-	
+
 	// Test with valid page
 	w := httptest.NewRecorder()
 	r := newRequestWithVars("GET", "/page/2", map[string]string{"page": "2"})
-	
+
 	paginationRedirectHandler(w, r)
-	
+
 	// It should redirect to the second post
 	assertRedirect(t, w, http.StatusFound, "/blog/2/test-post-2?page=2")
-	
+
 	// Test with out-of-range page
 	w = httptest.NewRecorder()
 	r = newRequestWithVars("GET", "/page/10", map[string]string{"page": "10"})
-	
+
 	paginationRedirectHandler(w, r)
-	
+
 	assert.Equal(t, http.StatusNotFound, w.Code)
 }
 
@@ -294,62 +294,62 @@ func TestPaginationRedirectHandlerInvalidPage(t *testing.T) {
 // Test for paginationRedirectHandler with tag filter
 func TestPaginationRedirectHandlerWithFilters(t *testing.T) {
 	setupTestEnvironment(t)
-	
+
 	// Test with tag filter
 	w := httptest.NewRecorder()
 	r := newRequestWithVars("GET", "/page/2?tag=test", map[string]string{"page": "2"})
 	r.URL.RawQuery = "tag=test"
-	
+
 	paginationRedirectHandler(w, r)
-	
+
 	assertRedirect(t, w, http.StatusFound, "/blog/2/test-post-2?page=2&tag=test")
-	
+
 	// Test with year filter
 	w = httptest.NewRecorder()
 	r = newRequestWithVars("GET", "/page/1?year=2022", map[string]string{"page": "1"})
 	r.URL.RawQuery = "year=2022"
-	
+
 	paginationRedirectHandler(w, r)
-	
+
 	assertRedirect(t, w, http.StatusFound, "/blog/3/test-post-3?page=1&year=2022")
-	
+
 	// Test with both tag and year
 	w = httptest.NewRecorder()
 	r = newRequestWithVars("GET", "/page/1?tag=golang&year=2022", map[string]string{"page": "1"})
 	r.URL.RawQuery = "tag=golang&year=2022"
-	
+
 	paginationRedirectHandler(w, r)
-	
+
 	assertRedirect(t, w, http.StatusFound, "/blog/3/test-post-3?page=1&tag=golang&year=2022")
 }
 
 // Test for blogIdRedirectHandler
 func TestBlogIdRedirectHandler(t *testing.T) {
 	setupTestEnvironment(t)
-	
+
 	// Test with existing ID
 	w := httptest.NewRecorder()
 	r := newRequestWithVars("GET", "/blog/1", map[string]string{"id": "1"})
-	
+
 	blogIdRedirectHandler(w, r)
-	
+
 	assertRedirect(t, w, http.StatusMovedPermanently, "/blog/1/test-post-1")
-	
+
 	// Test with query parameters
 	w = httptest.NewRecorder()
 	r = newRequestWithVars("GET", "/blog/1?tag=test", map[string]string{"id": "1"})
 	r.URL.RawQuery = "tag=test"
-	
+
 	blogIdRedirectHandler(w, r)
-	
+
 	assertRedirect(t, w, http.StatusMovedPermanently, "/blog/1/test-post-1?tag=test")
-	
+
 	// Test with non-existent ID
 	w = httptest.NewRecorder()
 	r = newRequestWithVars("GET", "/blog/999", map[string]string{"id": "999"})
-	
+
 	blogIdRedirectHandler(w, r)
-	
+
 	assert.Equal(t, http.StatusNotFound, w.Code)
 }
 
@@ -367,30 +367,30 @@ func TestBlogIdRedirectHandlerInvalidID(t *testing.T) {
 // Test for yearRedirectHandler
 func TestYearRedirectHandler(t *testing.T) {
 	setupTestEnvironment(t)
-	
+
 	// Test with valid year
 	w := httptest.NewRecorder()
 	r := newRequestWithVars("GET", "/posted/2022", map[string]string{"year": "2022"})
-	
+
 	yearRedirectHandler(w, r)
-	
+
 	assertRedirect(t, w, http.StatusFound, "/blog/3/test-post-3?year=2022")
-	
+
 	// Test with year and tag
 	w = httptest.NewRecorder()
 	r = newRequestWithVars("GET", "/posted/2022?tag=golang", map[string]string{"year": "2022"})
 	r.URL.RawQuery = "tag=golang"
-	
+
 	yearRedirectHandler(w, r)
-	
+
 	assertRedirect(t, w, http.StatusFound, "/blog/3/test-post-3?year=2022&tag=golang")
-	
+
 	// Test with year that has no posts
 	w = httptest.NewRecorder()
 	r = newRequestWithVars("GET", "/posted/2020", map[string]string{"year": "2020"})
-	
+
 	yearRedirectHandler(w, r)
-	
+
 	assert.Equal(t, http.StatusNotFound, w.Code)
 }
 
@@ -408,12 +408,12 @@ func TestYearRedirectHandlerInvalidYear(t *testing.T) {
 // Test for homePageHandler
 func TestHomePageHandler(t *testing.T) {
 	setupTestEnvironment(t)
-	
+
 	w := httptest.NewRecorder()
 	r, _ := http.NewRequest("GET", "/", nil)
-	
+
 	homePageHandler(w, r)
-	
+
 	resp := w.Result()
 	assert.Equal(t, http.StatusOK, resp.StatusCode)
 }
@@ -421,12 +421,12 @@ func TestHomePageHandler(t *testing.T) {
 // Test for allPostsHandler
 func TestAllPostsHandler(t *testing.T) {
 	setupTestEnvironment(t)
-	
+
 	testCases := []struct {
-		name          string
-		url           string
-		query         string
-		expectStatus  int
+		name         string
+		url          string
+		query        string
+		expectStatus int
 	}{
 		{"All posts", "/blog/all", "", http.StatusOK},
 		{"Tag filtered", "/blog/all", "tag=test", http.StatusOK},
@@ -435,7 +435,7 @@ func TestAllPostsHandler(t *testing.T) {
 		{"No matching posts", "/blog/all", "tag=nonexistent", http.StatusOK},
 		{"Invalid year filter", "/blog/all", "year=abc", http.StatusBadRequest},
 	}
-	
+
 	for _, tc := range testCases {
 		t.Run(tc.name, func(t *testing.T) {
 			w := httptest.NewRecorder()
@@ -443,9 +443,9 @@ func TestAllPostsHandler(t *testing.T) {
 			if tc.query != "" {
 				r.URL.RawQuery = tc.query
 			}
-			
+
 			allPostsHandler(w, r)
-			
+
 			resp := w.Result()
 			assert.Equal(t, tc.expectStatus, resp.StatusCode)
 		})
@@ -455,7 +455,7 @@ func TestAllPostsHandler(t *testing.T) {
 // Test for blogPostPageHandler
 func TestBlogPostPageHandler(t *testing.T) {
 	setupTestEnvironment(t)
-	
+
 	testCases := []struct {
 		name         string
 		path         string
@@ -464,59 +464,59 @@ func TestBlogPostPageHandler(t *testing.T) {
 		expectStatus int
 	}{
 		{
-			"Valid post with ID", 
-			"/blog/1/test-post-1", 
-			map[string]string{"id": "1"}, 
-			"", 
+			"Valid post with ID",
+			"/blog/1/test-post-1",
+			map[string]string{"id": "1"},
+			"",
 			http.StatusOK,
 		},
 		{
-			"Invalid post ID", 
-			"/blog/999/not-found", 
-			map[string]string{"id": "999"}, 
-			"", 
+			"Invalid post ID",
+			"/blog/999/not-found",
+			map[string]string{"id": "999"},
+			"",
 			http.StatusNotFound,
 		},
 		{
-			"Post with tag filter", 
-			"/blog/1/test-post-1", 
-			map[string]string{"id": "1"}, 
-			"tag=golang", 
+			"Post with tag filter",
+			"/blog/1/test-post-1",
+			map[string]string{"id": "1"},
+			"tag=golang",
 			http.StatusOK,
 		},
 		{
-			"Post with year filter", 
-			"/blog/1/test-post-1", 
-			map[string]string{"id": "1"}, 
-			"year=2023", 
+			"Post with year filter",
+			"/blog/1/test-post-1",
+			map[string]string{"id": "1"},
+			"year=2023",
 			http.StatusOK,
 		},
 		{
-			"No ID provided, should show first post", 
-			"/blog", 
-			map[string]string{}, 
-			"", 
+			"No ID provided, should show first post",
+			"/blog",
+			map[string]string{},
+			"",
 			http.StatusOK,
 		},
 		{
-			"No ID with tag filter", 
-			"/blog", 
-			map[string]string{}, 
-			"tag=golang", 
+			"No ID with tag filter",
+			"/blog",
+			map[string]string{},
+			"tag=golang",
 			http.StatusOK,
 		},
 		{
-			"No ID with year filter", 
-			"/blog", 
-			map[string]string{}, 
-			"year=2022", 
+			"No ID with year filter",
+			"/blog",
+			map[string]string{},
+			"year=2022",
 			http.StatusOK,
 		},
 		{
-			"No matching posts", 
-			"/blog", 
-			map[string]string{}, 
-			"tag=nonexistent", 
+			"No matching posts",
+			"/blog",
+			map[string]string{},
+			"tag=nonexistent",
 			http.StatusNotFound,
 		},
 		{
@@ -534,7 +534,7 @@ func TestBlogPostPageHandler(t *testing.T) {
 			http.StatusBadRequest,
 		},
 	}
-	
+
 	for _, tc := range testCases {
 		t.Run(tc.name, func(t *testing.T) {
 			w := httptest.NewRecorder()
@@ -542,9 +542,9 @@ func TestBlogPostPageHandler(t *testing.T) {
 			if tc.query != "" {
 				r.URL.RawQuery = tc.query
 			}
-			
+
 			blogPostPageHandler(w, r)
-			
+
 			assert.Equal(t, tc.expectStatus, w.Code)
 		})
 	}
@@ -553,20 +553,20 @@ func TestBlogPostPageHandler(t *testing.T) {
 // Test for getMarkdownTemplateHandler
 func TestGetMarkdownTemplateHandler(t *testing.T) {
 	setupTestEnvironment(t)
-	
+
 	// Create a handler for the about page
 	handler := getMarkdownTemplateHandler("About", "about", "/about")
-	
+
 	// Create a test request
 	w := httptest.NewRecorder()
 	r, _ := http.NewRequest("GET", "/about", nil)
-	
+
 	// Set header to simulate HTTPS, so directToHttps won't redirect
 	r.Header.Set("X-Forwarded-Proto", "https")
-	
+
 	// Call the handler
 	handler.ServeHTTP(w, r)
-	
+
 	// Check response
 	resp := w.Result()
 	assert.Equal(t, http.StatusOK, resp.StatusCode)
