@@ -9,7 +9,7 @@
     "description": "Block ads and trackers, saves data, and speeds up web browsing.",
     "githubStats": {
       "commitCount": 2600,
-      "prCount": 769
+      "prCount": 795
     }
   },
   {
@@ -51,7 +51,11 @@
     "url": "https://github.com/bbondy/guardrails",
     "website": "https://github.com/bbondy/guardrails",
     "github": "https://github.com/bbondy/guardrails",
-    "description": "Native Rust CLI wrapper that blocks unsafe or prompt-injection style output from other CLIs, with both blocking (check) and sanitizing (filter) modes."
+    "description": "Native Rust CLI wrapper that blocks unsafe or prompt-injection style output from other CLIs, with both blocking (check) and sanitizing (filter) modes.",
+    "githubStats": {
+      "commitCount": 42,
+      "prCount": 0
+    }
   },
   {
     "title": "Macro Lap",
@@ -103,7 +107,7 @@
     "website": "https://www.brianbondy.com",
     "description": "The current website for brianbondy.com. This website is written in Go. The version before that was written in Node, Hapi, Redis React, and ES6 transpiled with Babel. Before that the previous versions were written in Google App Engine, Django, ASP .NET (C#), Flash / ActionScript, and the original one was generated from C++ code.",
     "githubStats": {
-      "commitCount": 228,
+      "commitCount": 233,
       "prCount": 0
     }
   },
@@ -214,7 +218,11 @@
     "title": "Image Flow",
     "url": "https://github.com/bbondy/image-flow",
     "github": "https://github.com/bbondy/image-flow",
-    "description": "An image manipulation library that supports opening/obtaining info and modifying many different image file formats. Also has support for 'layers' in images and many different methods of blending."
+    "description": "An image manipulation library that supports opening/obtaining info and modifying many different image file formats. Also has support for 'layers' in images and many different methods of blending.",
+    "githubStats": {
+      "commitCount": 100,
+      "prCount": 0
+    }
   },
   {
     "title": "Stego Flow",
