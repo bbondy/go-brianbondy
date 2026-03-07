@@ -58,6 +58,14 @@
     }
   },
   {
+    "title": "Guardrails",
+    "image": "static/img/projects/guardrails.png",
+    "url": "https://github.com/bbondy/guardrails",
+    "website": "https://github.com/bbondy/guardrails",
+    "github": "https://github.com/bbondy/guardrails",
+    "description": "Native Rust CLI wrapper that blocks unsafe or prompt-injection style output from other CLIs, with both blocking (check) and sanitizing (filter) modes."
+  },
+  {
     "title": "IPFS in Brave",
     "image": "static/img/projects/ipfs.webp",
     "url": "/blog/177/ipfs-support-in-brave",
