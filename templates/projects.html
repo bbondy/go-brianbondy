@@ -6,7 +6,11 @@
   {{range .Projects}}
     <div class="card-entry">
       <div class="project-entry">
-        {{if .Image}}
+        {{if .Emoji}}
+          <div class="project-emoji" role="img" aria-label="{{.Title}} logo">
+            <span class="project-emoji-glyph">{{.Emoji}}</span>
+          </div>
+        {{else if .Image}}
           <img class="project-image" src="/{{.Image}}" alt="Project image for {{.Title}}">
         {{end}}
         <div class="project-content">

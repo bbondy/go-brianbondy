@@ -4,6 +4,7 @@ package data
 type Project struct {
 	Title          string       `json:"title"`
 	Image          string       `json:"image"`
+	Emoji          string       `json:"emoji,omitempty"`
 	URL            string       `json:"url"`
 	Github         string       `json:"github,omitempty"`
 	Website        string       `json:"website,omitempty"`
