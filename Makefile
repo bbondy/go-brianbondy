@@ -65,8 +65,6 @@ run-km-manifest:
 strava-run-manifest:
 	python3 scripts/generate_strava_run_manifest.py
 
-strava: strava-run-manifest
-
 # Build for production (everything except deploy)
 build: all
 

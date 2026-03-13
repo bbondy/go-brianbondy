@@ -1,5 +1,45 @@
 [
   {
+    "date": "2026-03-10",
+    "title": "Evening Stair-Stepper",
+    "distance_km": 0.0,
+    "time": "1h 7m",
+    "pace": "",
+    "activity_id": "17679122999",
+    "type": "StairStepper",
+    "elevation": ""
+  },
+  {
+    "date": "2026-03-09",
+    "title": "Morning Run",
+    "distance_km": 7.73,
+    "time": "58m",
+    "pace": "7:35 min/km",
+    "activity_id": "17660000270",
+    "type": "Run",
+    "elevation": "215m"
+  },
+  {
+    "date": "2026-03-08",
+    "title": "Morning Run with Ronnie",
+    "distance_km": 21.14,
+    "time": "1h 52m",
+    "pace": "5:19 min/km",
+    "activity_id": "17650001192",
+    "type": "Run",
+    "elevation": "63m"
+  },
+  {
+    "date": "2026-03-07",
+    "title": "Evening Stair-Stepper",
+    "distance_km": 0.0,
+    "time": "1h 1m",
+    "pace": "",
+    "activity_id": "17642683119",
+    "type": "StairStepper",
+    "elevation": ""
+  },
+  {
     "date": "2026-03-06",
     "title": "6x 2min intervals with slow running in between",
     "distance_km": 8.48,
@@ -7,6 +47,16 @@
     "pace": "7:07 min/km",
     "activity_id": "17625229204",
     "type": "Run",
+    "elevation": ""
+  },
+  {
+    "date": "2026-03-06",
+    "title": "Weight training",
+    "distance_km": 0.0,
+    "time": "1h 0m",
+    "pace": "",
+    "activity_id": "17635877948",
+    "type": "WeightTraining",
     "elevation": ""
   },
   {
