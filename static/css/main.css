@@ -3471,3 +3471,38 @@ html[data-theme="light"] .legend-item.level-6 { background-color: hsl(137, 50%, 
 
 /* Slightly improve month label readability on wide views */
 .contribution-month-label { letter-spacing: 0.2px; }
+
+/* Back to Top Button */
+#back-to-top {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--link-color);
+  color: #fff;
+  border: none;
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.25s ease, visibility 0.25s ease, transform 0.25s ease;
+  z-index: 9990;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+#back-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+}
+#back-to-top:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 14px rgba(0,0,0,0.25);
+}
+[data-theme="dark"] #back-to-top {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+}

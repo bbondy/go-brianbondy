@@ -784,8 +784,8 @@
     </style>
     
     <!-- Non-critical CSS loaded asynchronously -->
-        <link rel="stylesheet" href="/static/css/main.css?v=138" media="print" onload="this.media='all'">
-    <noscript><link rel="stylesheet" href="/static/css/main.css?v=138"></noscript>
+        <link rel="stylesheet" href="/static/css/main.css?v=139" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="/static/css/main.css?v=139"></noscript>
     
     <!-- Font Awesome loaded asynchronously -->
     <link rel="stylesheet" href="/static/font-awesome/css/all.min.css" media="print" onload="this.media='all'">
@@ -892,6 +892,9 @@
       </footer>
     </div>
     
+    <!-- Back to Top Button -->
+    <button id="back-to-top" title="Back to top" aria-label="Back to top">&#8679;</button>
+
     <!-- Lightbox HTML -->
     <div id="lightbox" class="lightbox">
       <span class="lightbox-close">&times;</span>
@@ -2782,6 +2785,22 @@
         
         // Initial update
         updateReadingProgress();
+      })();
+
+      // Back to Top Button
+      (function() {
+        const btn = document.getElementById('back-to-top');
+        if (!btn) return;
+        window.addEventListener('scroll', function() {
+          if (window.pageYOffset > 300) {
+            btn.classList.add('visible');
+          } else {
+            btn.classList.remove('visible');
+          }
+        }, { passive: true });
+        btn.addEventListener('click', function() {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
       })();
 
       // Load remaining JavaScript after page load for better performance
