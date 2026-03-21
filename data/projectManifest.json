@@ -68,6 +68,13 @@
     }
   },
   {
+    "title": "Hutter Prize Workspace",
+    "image": "static/img/projects/hutter-compress2.webp",
+    "url": "https://github.com/bbondy/hutter",
+    "github": "https://github.com/bbondy/hutter",
+    "description": "Rust workspace for experimenting toward a future Hutter Prize submission, with several small experimental codecs including adaptive Huffman, naive LZ77, byte-level and bit-level PPM variants, plus a WikiMix-5 design skeleton for a future mixed-model codec."
+  },
+  {
     "title": "Macro Lap",
     "image": "static/img/projects/macro-lap.png",
     "url": "https://github.com/bbondy/macro-lap",
