@@ -453,6 +453,8 @@ func TestYearRedirectHandlerInvalidYear(t *testing.T) {
 // Test for homePageHandler
 func TestHomePageHandler(t *testing.T) {
 	setupTestEnvironment(t)
+	imagePath := "/static/img/test.webp"
+	blogPosts[0].ImagePath = &imagePath
 
 	w := httptest.NewRecorder()
 	r, _ := http.NewRequest("GET", "/", nil)
@@ -461,6 +463,10 @@ func TestHomePageHandler(t *testing.T) {
 
 	resp := w.Result()
 	assert.Equal(t, http.StatusOK, resp.StatusCode)
+	body, err := io.ReadAll(resp.Body)
+	assert.NoError(t, err)
+	assert.NotContains(t, string(body), `src="//static/`)
+	assert.Contains(t, string(body), `src="/static/img/test.webp"`)
 }
 
 // Test for allPostsHandler

@@ -36,6 +36,7 @@ func formatFullDate(dateStr string) string {
 
 var funcMap = template.FuncMap{
 	"avail":       avail,
+	"assetURL":    func(path string) string { return "/" + strings.TrimLeft(path, "/") },
 	"add":         func(a, b int) int { return a + b },
 	"addFloat":    func(a, b float64) float64 { return a + b },
 	"currentYear": func() int { return time.Now().Year() },

@@ -10,7 +10,7 @@
         <div class="preview">
           {{if .BlogPost.ImagePath}}
             <a href="{{.PostUrl}}">
-              <img src="/{{.BlogPost.ImagePath}}" 
+              <img src="{{assetURL .BlogPost.ImagePath}}"
                    class="previewImage" 
                    alt="Preview image for {{.BlogPost.Title}}"
                    loading="lazy"
@@ -29,4 +29,4 @@
   <div class="viewAllPosts">
     <a href="/all" class="viewAllLink">View All Blog Posts →</a>
   </div>
-{{end}} 
+{{end}}
