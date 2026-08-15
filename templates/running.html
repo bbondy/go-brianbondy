@@ -806,8 +806,11 @@ function setupContributionGraph() {
     var left = event.offsetX + 12;
     var top = event.offsetY + 12;
     var canvasBounds = canvas.getBoundingClientRect();
-    if (canvasBounds.left + left + tooltip.offsetWidth > window.innerWidth) left = event.offsetX - tooltip.offsetWidth - 12;
-    if (canvasBounds.top + top + tooltip.offsetHeight > window.innerHeight) top = event.offsetY - tooltip.offsetHeight - 12;
+    var graphBounds = canvas.closest('.contribution-graph-outer').getBoundingClientRect();
+    var rightLimit = Math.min(window.innerWidth, graphBounds.right);
+    var bottomLimit = Math.min(window.innerHeight, graphBounds.bottom);
+    if (canvasBounds.left + left + tooltip.offsetWidth > rightLimit) left = event.offsetX - tooltip.offsetWidth - 12;
+    if (canvasBounds.top + top + tooltip.offsetHeight > bottomLimit) top = event.offsetY - tooltip.offsetHeight - 12;
     tooltip.style.left = left + 'px';
     tooltip.style.top = top + 'px';
   });
