@@ -1,5 +1,2505 @@
 [
   {
+    "date": "2026-08-15",
+    "title": "Morning Run",
+    "distance_km": 10.38,
+    "time": "1h 4m",
+    "pace": "6:13 min/km",
+    "activity_id": "19753572455",
+    "type": "Run",
+    "elevation": "21m"
+  },
+  {
+    "date": "2026-08-14",
+    "title": "Evening Run",
+    "distance_km": 9.43,
+    "time": "1h 2m",
+    "pace": "6:36 min/km",
+    "activity_id": "19745163945",
+    "type": "Run",
+    "elevation": ""
+  },
+  {
+    "date": "2026-08-14",
+    "title": "Stair Stepper",
+    "distance_km": 0.0,
+    "time": "1h 0m",
+    "pace": "",
+    "activity_id": "19739051233",
+    "type": "StairStepper",
+    "elevation": ""
+  },
+  {
+    "date": "2026-08-13",
+    "title": "Morning Run",
+    "distance_km": 10.03,
+    "time": "1h 6m",
+    "pace": "6:39 min/km",
+    "activity_id": "19725662517",
+    "type": "Run",
+    "elevation": "27m"
+  },
+  {
+    "date": "2026-08-12",
+    "title": "Stair stepper",
+    "distance_km": 0.0,
+    "time": "1h 0m",
+    "pace": "",
+    "activity_id": "19716108365",
+    "type": "StairStepper",
+    "elevation": ""
+  },
+  {
+    "date": "2026-08-11",
+    "title": "Morning Run",
+    "distance_km": 10.39,
+    "time": "1h 30m",
+    "pace": "8:41 min/km",
+    "activity_id": "19696660024",
+    "type": "Run",
+    "elevation": "428m"
+  },
+  {
+    "date": "2026-08-10",
+    "title": "stair srepper",
+    "distance_km": 0.0,
+    "time": "1h 0m",
+    "pace": "",
+    "activity_id": "19680989396",
+    "type": "StairStepper",
+    "elevation": ""
+  },
+  {
+    "date": "2026-08-09",
+    "title": "Afternoon Walk",
+    "distance_km": 1.49,
+    "time": "18m",
+    "pace": "",
+    "activity_id": "19673692392",
+    "type": "Walk",
+    "elevation": "37m"
+  },
+  {
+    "date": "2026-08-09",
+    "title": "Morning Run",
+    "distance_km": 10.02,
+    "time": "1h 13m",
+    "pace": "7:21 min/km",
+    "activity_id": "19669428177",
+    "type": "Run",
+    "elevation": "238m"
+  },
+  {
+    "date": "2026-08-08",
+    "title": "Morning Run",
+    "distance_km": 10.41,
+    "time": "1h 13m",
+    "pace": "7:03 min/km",
+    "activity_id": "19654764989",
+    "type": "Run",
+    "elevation": "211m"
+  },
+  {
+    "date": "2026-08-07",
+    "title": "Stair Stepper",
+    "distance_km": 0.0,
+    "time": "1h 0m",
+    "pace": "",
+    "activity_id": "19680496708",
+    "type": "StairStepper",
+    "elevation": ""
+  },
+  {
+    "date": "2026-08-06",
+    "title": "Weight training",
+    "distance_km": 0.0,
+    "time": "1h 0m",
+    "pace": "",
+    "activity_id": "19634107457",
+    "type": "WeightTraining",
+    "elevation": ""
+  },
+  {
+    "date": "2026-08-06",
+    "title": "Morning Run",
+    "distance_km": 6.73,
+    "time": "46m",
+    "pace": "6:51 min/km",
+    "activity_id": "19627172971",
+    "type": "Run",
+    "elevation": "13m"
+  },
+  {
+    "date": "2026-08-05",
+    "title": "Evening Walk",
+    "distance_km": 2.45,
+    "time": "31m",
+    "pace": "",
+    "activity_id": "19620074830",
+    "type": "Walk",
+    "elevation": "126m"
+  },
+  {
+    "date": "2026-08-04",
+    "title": "Afternoon Walk",
+    "distance_km": 0.51,
+    "time": "6m",
+    "pace": "",
+    "activity_id": "19603466988",
+    "type": "Walk",
+    "elevation": "6m"
+  },
+  {
+    "date": "2026-08-03",
+    "title": "Evening Walk",
+    "distance_km": 1.82,
+    "time": "24m",
+    "pace": "",
+    "activity_id": "19589628573",
+    "type": "Walk",
+    "elevation": "32m"
+  },
+  {
+    "date": "2026-08-01",
+    "title": "Persistence Backyard Ultra 2026",
+    "distance_km": 165.85,
+    "time": "21h 59m",
+    "pace": "7:57 min/km",
+    "activity_id": "19569155622",
+    "type": "Run",
+    "elevation": "1775m"
+  },
+  {
+    "date": "2026-07-29",
+    "title": "Morning Run",
+    "distance_km": 7.02,
+    "time": "51m",
+    "pace": "7:17 min/km",
+    "activity_id": "19515178568",
+    "type": "Run",
+    "elevation": "64m"
+  },
+  {
+    "date": "2026-07-28",
+    "title": "(200m fast, 200 slow) for i in {3, 2, 2}",
+    "distance_km": 6.03,
+    "time": "48m",
+    "pace": "8:02 min/km",
+    "activity_id": "19507158006",
+    "type": "Run",
+    "elevation": ""
+  },
+  {
+    "date": "2026-07-28",
+    "title": "Morning Run",
+    "distance_km": 6.72,
+    "time": "47m",
+    "pace": "7:01 min/km",
+    "activity_id": "19500365243",
+    "type": "Run",
+    "elevation": "42m"
+  },
+  {
+    "date": "2026-07-27",
+    "title": "Morning Run",
+    "distance_km": 6.81,
+    "time": "47m",
+    "pace": "6:55 min/km",
+    "activity_id": "19485964202",
+    "type": "Run",
+    "elevation": "48m"
+  },
+  {
+    "date": "2026-07-26",
+    "title": "Afternoon Run",
+    "distance_km": 3.22,
+    "time": "58m",
+    "pace": "18:12 min/km",
+    "activity_id": "19479069518",
+    "type": "Run",
+    "elevation": ""
+  },
+  {
+    "date": "2026-07-26",
+    "title": "Morning Run",
+    "distance_km": 6.73,
+    "time": "34m",
+    "pace": "5:10 min/km",
+    "activity_id": "19474788846",
+    "type": "Run",
+    "elevation": "47m"
+  },
+  {
+    "date": "2026-07-26",
+    "title": "Morning Walk",
+    "distance_km": 1.05,
+    "time": "12m",
+    "pace": "",
+    "activity_id": "19474061869",
+    "type": "Walk",
+    "elevation": "39m"
+  },
+  {
+    "date": "2026-07-26",
+    "title": "Morning Run",
+    "distance_km": 6.73,
+    "time": "38m",
+    "pace": "5:40 min/km",
+    "activity_id": "19473891449",
+    "type": "Run",
+    "elevation": "31m"
+  },
+  {
+    "date": "2026-07-25",
+    "title": "Morning Run",
+    "distance_km": 7.01,
+    "time": "45m",
+    "pace": "6:32 min/km",
+    "activity_id": "19460763488",
+    "type": "Run",
+    "elevation": "117m"
+  },
+  {
+    "date": "2026-07-23",
+    "title": "Morning Walk",
+    "distance_km": 4.26,
+    "time": "1h 6m",
+    "pace": "",
+    "activity_id": "19437311767",
+    "type": "Walk",
+    "elevation": "200m"
+  },
+  {
+    "date": "2026-07-22",
+    "title": "Afternoon Walk",
+    "distance_km": 8.41,
+    "time": "2h 18m",
+    "pace": "",
+    "activity_id": "19427098658",
+    "type": "Walk",
+    "elevation": "180m"
+  },
+  {
+    "date": "2026-07-22",
+    "title": "Morning Walk",
+    "distance_km": 7.7,
+    "time": "1h 49m",
+    "pace": "",
+    "activity_id": "19423311824",
+    "type": "Walk",
+    "elevation": "187m"
+  },
+  {
+    "date": "2026-07-21",
+    "title": "Lunch Walk",
+    "distance_km": 5.4,
+    "time": "1h 35m",
+    "pace": "",
+    "activity_id": "19409740859",
+    "type": "Walk",
+    "elevation": "200m"
+  },
+  {
+    "date": "2026-07-21",
+    "title": "Night Walk",
+    "distance_km": 0.71,
+    "time": "10m",
+    "pace": "",
+    "activity_id": "19397841078",
+    "type": "Walk",
+    "elevation": "1m"
+  },
+  {
+    "date": "2026-07-20",
+    "title": "Afternoon Walk",
+    "distance_km": 6.95,
+    "time": "1h 48m",
+    "pace": "",
+    "activity_id": "19397841242",
+    "type": "Walk",
+    "elevation": "134m"
+  },
+  {
+    "date": "2026-07-20",
+    "title": "Morning Walk",
+    "distance_km": 4.61,
+    "time": "1h 7m",
+    "pace": "",
+    "activity_id": "19397808786",
+    "type": "Walk",
+    "elevation": "117m"
+  },
+  {
+    "date": "2026-07-19",
+    "title": "Morning Walk",
+    "distance_km": 11.49,
+    "time": "3h 7m",
+    "pace": "",
+    "activity_id": "19383499278",
+    "type": "Walk",
+    "elevation": "373m"
+  },
+  {
+    "date": "2026-07-18",
+    "title": "Night Walk",
+    "distance_km": 1.15,
+    "time": "18m",
+    "pace": "",
+    "activity_id": "19370330385",
+    "type": "Walk",
+    "elevation": "63m"
+  },
+  {
+    "date": "2026-07-18",
+    "title": "Morning Walk",
+    "distance_km": 7.34,
+    "time": "1h 51m",
+    "pace": "",
+    "activity_id": "19368549710",
+    "type": "Walk",
+    "elevation": "253m"
+  },
+  {
+    "date": "2026-07-17",
+    "title": "Morning Walk",
+    "distance_km": 8.67,
+    "time": "2h 19m",
+    "pace": "",
+    "activity_id": "19355441236",
+    "type": "Walk",
+    "elevation": "297m"
+  },
+  {
+    "date": "2026-07-16",
+    "title": "Morning Walk",
+    "distance_km": 17.63,
+    "time": "4h 31m",
+    "pace": "",
+    "activity_id": "19344843121",
+    "type": "Walk",
+    "elevation": "420m"
+  },
+  {
+    "date": "2026-07-15",
+    "title": "Afternoon Walk",
+    "distance_km": 2.79,
+    "time": "47m",
+    "pace": "",
+    "activity_id": "19329722257",
+    "type": "Walk",
+    "elevation": "85m"
+  },
+  {
+    "date": "2026-07-14",
+    "title": "3x800m",
+    "distance_km": 5.9,
+    "time": "54m",
+    "pace": "9:18 min/km",
+    "activity_id": "19315764721",
+    "type": "Run",
+    "elevation": "55m"
+  },
+  {
+    "date": "2026-07-14",
+    "title": "Morning Run",
+    "distance_km": 18.73,
+    "time": "2h 30m",
+    "pace": "8:01 min/km",
+    "activity_id": "19309088004",
+    "type": "Run",
+    "elevation": "68m"
+  },
+  {
+    "date": "2026-07-13",
+    "title": "Morning Run w/ 6x1min intermixed",
+    "distance_km": 33.7,
+    "time": "4h 10m",
+    "pace": "7:27 min/km",
+    "activity_id": "19295377758",
+    "type": "Run",
+    "elevation": "256m"
+  },
+  {
+    "date": "2026-07-12",
+    "title": "Evening Hike",
+    "distance_km": 3.19,
+    "time": "45m",
+    "pace": "",
+    "activity_id": "19288959081",
+    "type": "Hike",
+    "elevation": ""
+  },
+  {
+    "date": "2026-07-12",
+    "title": "Afternoon Walk",
+    "distance_km": 1.79,
+    "time": "26m",
+    "pace": "",
+    "activity_id": "19286716063",
+    "type": "Walk",
+    "elevation": "55m"
+  },
+  {
+    "date": "2026-07-11",
+    "title": "Morning Walk",
+    "distance_km": 10.36,
+    "time": "4h 29m",
+    "pace": "",
+    "activity_id": "19274013914",
+    "type": "Walk",
+    "elevation": "224m"
+  },
+  {
+    "date": "2026-07-10",
+    "title": "Evening Run",
+    "distance_km": 5.06,
+    "time": "38m",
+    "pace": "7:35 min/km",
+    "activity_id": "19261760930",
+    "type": "Run",
+    "elevation": "28m"
+  },
+  {
+    "date": "2026-07-10",
+    "title": "Morning Run",
+    "distance_km": 22.93,
+    "time": "2h 56m",
+    "pace": "7:42 min/km",
+    "activity_id": "19256832410",
+    "type": "Run",
+    "elevation": "201m"
+  },
+  {
+    "date": "2026-07-09",
+    "title": "3x(500m, 400m, 300m)",
+    "distance_km": 7.62,
+    "time": "1h 21m",
+    "pace": "10:41 min/km",
+    "activity_id": "19249262692",
+    "type": "Run",
+    "elevation": "166m"
+  },
+  {
+    "date": "2026-07-09",
+    "title": "Morning Run",
+    "distance_km": 21.18,
+    "time": "2h 46m",
+    "pace": "7:52 min/km",
+    "activity_id": "19243540484",
+    "type": "Run",
+    "elevation": "450m"
+  },
+  {
+    "date": "2026-07-08",
+    "title": "Morning Run",
+    "distance_km": 28.02,
+    "time": "3h 22m",
+    "pace": "7:14 min/km",
+    "activity_id": "19230209671",
+    "type": "Run",
+    "elevation": "220m"
+  },
+  {
+    "date": "2026-07-07",
+    "title": "Morning Run",
+    "distance_km": 24.2,
+    "time": "3h 4m",
+    "pace": "7:38 min/km",
+    "activity_id": "19215769109",
+    "type": "Run",
+    "elevation": "128m"
+  },
+  {
+    "date": "2026-07-06",
+    "title": "Morning Run",
+    "distance_km": 8.78,
+    "time": "1h 12m",
+    "pace": "8:17 min/km",
+    "activity_id": "19200596403",
+    "type": "Run",
+    "elevation": "150m"
+  },
+  {
+    "date": "2026-07-05",
+    "title": "Evening Run",
+    "distance_km": 3.84,
+    "time": "25m",
+    "pace": "6:39 min/km",
+    "activity_id": "19195609976",
+    "type": "Run",
+    "elevation": ""
+  },
+  {
+    "date": "2026-07-05",
+    "title": "By the river and through the rain to grandmother's house we go",
+    "distance_km": 44.78,
+    "time": "5h 43m",
+    "pace": "7:40 min/km",
+    "activity_id": "19192071734",
+    "type": "Run",
+    "elevation": "222m"
+  },
+  {
+    "date": "2026-07-04",
+    "title": "Evening Walk",
+    "distance_km": 1.94,
+    "time": "26m",
+    "pace": "",
+    "activity_id": "19182324915",
+    "type": "Walk",
+    "elevation": "20m"
+  },
+  {
+    "date": "2026-07-04",
+    "title": "Lunch Run",
+    "distance_km": 10.03,
+    "time": "1h 6m",
+    "pace": "6:36 min/km",
+    "activity_id": "19179742561",
+    "type": "Run",
+    "elevation": "72m"
+  },
+  {
+    "date": "2026-07-04",
+    "title": "Morning Run",
+    "distance_km": 16.02,
+    "time": "1h 57m",
+    "pace": "7:20 min/km",
+    "activity_id": "19175292991",
+    "type": "Run",
+    "elevation": "56m"
+  },
+  {
+    "date": "2026-07-03",
+    "title": "Morning Run",
+    "distance_km": 50.01,
+    "time": "5h 53m",
+    "pace": "7:04 min/km",
+    "activity_id": "19164070539",
+    "type": "Run",
+    "elevation": "271m"
+  },
+  {
+    "date": "2026-07-01",
+    "title": "Afternoon Run",
+    "distance_km": 8.0,
+    "time": "1h 2m",
+    "pace": "7:51 min/km",
+    "activity_id": "19144568103",
+    "type": "Run",
+    "elevation": "178m"
+  },
+  {
+    "date": "2026-07-01",
+    "title": "Morning Run",
+    "distance_km": 8.01,
+    "time": "1h 6m",
+    "pace": "8:19 min/km",
+    "activity_id": "19137201153",
+    "type": "Run",
+    "elevation": "148m"
+  },
+  {
+    "date": "2026-06-30",
+    "title": "Morning Run",
+    "distance_km": 5.15,
+    "time": "38m",
+    "pace": "7:24 min/km",
+    "activity_id": "19123459281",
+    "type": "Run",
+    "elevation": "28m"
+  },
+  {
+    "date": "2026-06-30",
+    "title": "Morning Run",
+    "distance_km": 5.01,
+    "time": "36m",
+    "pace": "7:13 min/km",
+    "activity_id": "19122972072",
+    "type": "Run",
+    "elevation": ""
+  },
+  {
+    "date": "2026-06-29",
+    "title": "Evening Walk",
+    "distance_km": 3.0,
+    "time": "40m",
+    "pace": "",
+    "activity_id": "19116933716",
+    "type": "Walk",
+    "elevation": "49m"
+  },
+  {
+    "date": "2026-06-29",
+    "title": "Morning Run",
+    "distance_km": 10.18,
+    "time": "1h 30m",
+    "pace": "8:51 min/km",
+    "activity_id": "19110075561",
+    "type": "Run",
+    "elevation": "245m"
+  },
+  {
+    "date": "2026-06-28",
+    "title": "Morning Run",
+    "distance_km": 42.26,
+    "time": "4h 30m",
+    "pace": "6:23 min/km",
+    "activity_id": "19099483340",
+    "type": "Run",
+    "elevation": "129m"
+  },
+  {
+    "date": "2026-06-27",
+    "title": "Afternoon Run",
+    "distance_km": 4.31,
+    "time": "34m",
+    "pace": "8:03 min/km",
+    "activity_id": "19089049376",
+    "type": "Run",
+    "elevation": "74m"
+  },
+  {
+    "date": "2026-06-27",
+    "title": "Morning Run",
+    "distance_km": 42.31,
+    "time": "4h 56m",
+    "pace": "7:01 min/km",
+    "activity_id": "19087459924",
+    "type": "Run",
+    "elevation": "190m"
+  },
+  {
+    "date": "2026-06-26",
+    "title": "Morning Run",
+    "distance_km": 42.24,
+    "time": "5h 2m",
+    "pace": "7:10 min/km",
+    "activity_id": "19074518609",
+    "type": "Run",
+    "elevation": "277m"
+  },
+  {
+    "date": "2026-06-25",
+    "title": "200m, 400m, 600m, 400m, 200m",
+    "distance_km": 4.87,
+    "time": "46m",
+    "pace": "9:31 min/km",
+    "activity_id": "19067727944",
+    "type": "Run",
+    "elevation": "62m"
+  },
+  {
+    "date": "2026-06-25",
+    "title": "Morning Run",
+    "distance_km": 42.24,
+    "time": "5h 4m",
+    "pace": "7:13 min/km",
+    "activity_id": "19062579269",
+    "type": "Run",
+    "elevation": "278m"
+  },
+  {
+    "date": "2026-06-23",
+    "title": "Morning Walk",
+    "distance_km": 5.98,
+    "time": "1h 17m",
+    "pace": "",
+    "activity_id": "19043791262",
+    "type": "Walk",
+    "elevation": "181m"
+  },
+  {
+    "date": "2026-06-22",
+    "title": "Night Walk",
+    "distance_km": 0.91,
+    "time": "8m",
+    "pace": "",
+    "activity_id": "19029907897",
+    "type": "Walk",
+    "elevation": "18m"
+  },
+  {
+    "date": "2026-06-22",
+    "title": "Evening Walk",
+    "distance_km": 2.34,
+    "time": "26m",
+    "pace": "",
+    "activity_id": "19029774148",
+    "type": "Walk",
+    "elevation": "14m"
+  },
+  {
+    "date": "2026-06-22",
+    "title": "Afternoon Walk",
+    "distance_km": 8.9,
+    "time": "2h 5m",
+    "pace": "",
+    "activity_id": "19027151994",
+    "type": "Walk",
+    "elevation": "118m"
+  },
+  {
+    "date": "2026-06-21",
+    "title": "Afternoon Walk",
+    "distance_km": 5.24,
+    "time": "1h 10m",
+    "pace": "",
+    "activity_id": "19017167556",
+    "type": "Walk",
+    "elevation": "119m"
+  },
+  {
+    "date": "2026-06-20",
+    "title": "Afternoon Run",
+    "distance_km": 10.03,
+    "time": "1h 6m",
+    "pace": "6:38 min/km",
+    "activity_id": "19000705075",
+    "type": "Run",
+    "elevation": "148m"
+  },
+  {
+    "date": "2026-06-20",
+    "title": "Morning Run",
+    "distance_km": 32.62,
+    "time": "3h 38m",
+    "pace": "6:42 min/km",
+    "activity_id": "18998526498",
+    "type": "Run",
+    "elevation": "176m"
+  },
+  {
+    "date": "2026-06-19",
+    "title": "Morning Run",
+    "distance_km": 23.01,
+    "time": "2h 33m",
+    "pace": "6:42 min/km",
+    "activity_id": "18985007859",
+    "type": "Run",
+    "elevation": "228m"
+  },
+  {
+    "date": "2026-06-18",
+    "title": "Evening Walk",
+    "distance_km": 2.55,
+    "time": "31m",
+    "pace": "",
+    "activity_id": "18978767094",
+    "type": "Walk",
+    "elevation": "8m"
+  },
+  {
+    "date": "2026-06-18",
+    "title": "Afternoon Run",
+    "distance_km": 9.01,
+    "time": "1h 20m",
+    "pace": "8:53 min/km",
+    "activity_id": "18976642677",
+    "type": "Run",
+    "elevation": ""
+  },
+  {
+    "date": "2026-06-18",
+    "title": "Morning Run",
+    "distance_km": 13.17,
+    "time": "1h 34m",
+    "pace": "7:10 min/km",
+    "activity_id": "18972069498",
+    "type": "Run",
+    "elevation": "267m"
+  },
+  {
+    "date": "2026-06-17",
+    "title": "Evening Stair-Stepper",
+    "distance_km": 0.0,
+    "time": "54m",
+    "pace": "",
+    "activity_id": "18965639389",
+    "type": "StairStepper",
+    "elevation": ""
+  },
+  {
+    "date": "2026-06-17",
+    "title": "Afternoon Run",
+    "distance_km": 15.02,
+    "time": "1h 49m",
+    "pace": "7:18 min/km",
+    "activity_id": "18962854904",
+    "type": "Run",
+    "elevation": ""
+  },
+  {
+    "date": "2026-06-17",
+    "title": "Morning Run",
+    "distance_km": 13.02,
+    "time": "1h 30m",
+    "pace": "6:56 min/km",
+    "activity_id": "18958176543",
+    "type": "Run",
+    "elevation": "72m"
+  },
+  {
+    "date": "2026-06-16",
+    "title": "8x(400m fast, 400m slow)",
+    "distance_km": 10.02,
+    "time": "1h 0m",
+    "pace": "6:02 min/km",
+    "activity_id": "18949919064",
+    "type": "Run",
+    "elevation": "89m"
+  },
+  {
+    "date": "2026-06-16",
+    "title": "Morning Run",
+    "distance_km": 18.21,
+    "time": "1h 59m",
+    "pace": "6:35 min/km",
+    "activity_id": "18944189988",
+    "type": "Run",
+    "elevation": "132m"
+  },
+  {
+    "date": "2026-06-15",
+    "title": "Afternoon Run",
+    "distance_km": 5.05,
+    "time": "37m",
+    "pace": "7:24 min/km",
+    "activity_id": "18933983454",
+    "type": "Run",
+    "elevation": ""
+  },
+  {
+    "date": "2026-06-15",
+    "title": "Morning Run",
+    "distance_km": 23.32,
+    "time": "2h 28m",
+    "pace": "6:23 min/km",
+    "activity_id": "18930041388",
+    "type": "Run",
+    "elevation": "98m"
+  },
+  {
+    "date": "2026-06-14",
+    "title": "Morning Run",
+    "distance_km": 30.58,
+    "time": "3h 33m",
+    "pace": "6:60 min/km",
+    "activity_id": "18918831238",
+    "type": "Run",
+    "elevation": "118m"
+  },
+  {
+    "date": "2026-06-13",
+    "title": "Afternoon Walk",
+    "distance_km": 5.13,
+    "time": "1h 1m",
+    "pace": "",
+    "activity_id": "18909553234",
+    "type": "Walk",
+    "elevation": "154m"
+  },
+  {
+    "date": "2026-06-13",
+    "title": "Afternoon Run",
+    "distance_km": 8.02,
+    "time": "55m",
+    "pace": "6:59 min/km",
+    "activity_id": "18907639202",
+    "type": "Run",
+    "elevation": "173m"
+  },
+  {
+    "date": "2026-06-13",
+    "title": "Morning Run",
+    "distance_km": 17.44,
+    "time": "2h 3m",
+    "pace": "7:06 min/km",
+    "activity_id": "18903540809",
+    "type": "Run",
+    "elevation": "84m"
+  },
+  {
+    "date": "2026-06-12",
+    "title": "Evening Run",
+    "distance_km": 10.23,
+    "time": "1h 12m",
+    "pace": "7:05 min/km",
+    "activity_id": "18896770317",
+    "type": "Run",
+    "elevation": "39m"
+  },
+  {
+    "date": "2026-06-12",
+    "title": "Morning Run",
+    "distance_km": 13.18,
+    "time": "1h 49m",
+    "pace": "8:20 min/km",
+    "activity_id": "18891362257",
+    "type": "Run",
+    "elevation": "278m"
+  },
+  {
+    "date": "2026-06-11",
+    "title": "3x(800m, 400m, 400m)",
+    "distance_km": 7.2,
+    "time": "1h 0m",
+    "pace": "8:20 min/km",
+    "activity_id": "18885433547",
+    "type": "Run",
+    "elevation": ""
+  },
+  {
+    "date": "2026-06-11",
+    "title": "Morning Run",
+    "distance_km": 10.02,
+    "time": "1h 24m",
+    "pace": "8:25 min/km",
+    "activity_id": "18878352218",
+    "type": "Run",
+    "elevation": "39m"
+  },
+  {
+    "date": "2026-06-10",
+    "title": "Evening Run",
+    "distance_km": 7.26,
+    "time": "45m",
+    "pace": "6:18 min/km",
+    "activity_id": "18872120086",
+    "type": "Run",
+    "elevation": "15m"
+  },
+  {
+    "date": "2026-06-10",
+    "title": "6x5min + a lot of normal running",
+    "distance_km": 18.09,
+    "time": "2h 0m",
+    "pace": "6:39 min/km",
+    "activity_id": "18865531194",
+    "type": "Run",
+    "elevation": ""
+  },
+  {
+    "date": "2026-06-09",
+    "title": "Morning Run",
+    "distance_km": 18.01,
+    "time": "2h 5m",
+    "pace": "6:57 min/km",
+    "activity_id": "18851701541",
+    "type": "Run",
+    "elevation": "69m"
+  },
+  {
+    "date": "2026-06-08",
+    "title": "Afternoon Run",
+    "distance_km": 6.72,
+    "time": "41m",
+    "pace": "6:14 min/km",
+    "activity_id": "18843034356",
+    "type": "Run",
+    "elevation": "41m"
+  },
+  {
+    "date": "2026-06-08",
+    "title": "Morning Run",
+    "distance_km": 23.02,
+    "time": "2h 38m",
+    "pace": "6:52 min/km",
+    "activity_id": "18837774650",
+    "type": "Run",
+    "elevation": "68m"
+  },
+  {
+    "date": "2026-06-07",
+    "title": "Evening Run",
+    "distance_km": 1.07,
+    "time": "6m",
+    "pace": "5:38 min/km",
+    "activity_id": "18831123132",
+    "type": "Run",
+    "elevation": "5m"
+  },
+  {
+    "date": "2026-06-07",
+    "title": "Evening Walk",
+    "distance_km": 1.49,
+    "time": "18m",
+    "pace": "",
+    "activity_id": "18830813841",
+    "type": "Walk",
+    "elevation": "27m"
+  },
+  {
+    "date": "2026-06-06",
+    "title": "weUltra SHoRT",
+    "distance_km": 80.26,
+    "time": "11h 43m",
+    "pace": "8:46 min/km",
+    "activity_id": "18816819428",
+    "type": "Run",
+    "elevation": "559m"
+  },
+  {
+    "date": "2026-06-04",
+    "title": "Morning Activity",
+    "distance_km": 0.0,
+    "time": "1h 0m",
+    "pace": "",
+    "activity_id": "18864161007",
+    "type": "WeightTraining",
+    "elevation": ""
+  },
+  {
+    "date": "2026-06-03",
+    "title": "Afternoon Run",
+    "distance_km": 8.96,
+    "time": "59m",
+    "pace": "6:35 min/km",
+    "activity_id": "18774336352",
+    "type": "Run",
+    "elevation": "68m"
+  },
+  {
+    "date": "2026-06-03",
+    "title": "Lunch Walk",
+    "distance_km": 1.97,
+    "time": "22m",
+    "pace": "",
+    "activity_id": "18772792886",
+    "type": "Walk",
+    "elevation": "54m"
+  },
+  {
+    "date": "2026-06-03",
+    "title": "Morning Run",
+    "distance_km": 10.01,
+    "time": "1h 17m",
+    "pace": "7:46 min/km",
+    "activity_id": "18770269909",
+    "type": "Run",
+    "elevation": "61m"
+  },
+  {
+    "date": "2026-06-02",
+    "title": "Lunch Walk",
+    "distance_km": 1.62,
+    "time": "20m",
+    "pace": "",
+    "activity_id": "18758522698",
+    "type": "Walk",
+    "elevation": "23m"
+  },
+  {
+    "date": "2026-06-02",
+    "title": "Morning Run",
+    "distance_km": 10.01,
+    "time": "1h 13m",
+    "pace": "7:23 min/km",
+    "activity_id": "18756086445",
+    "type": "Run",
+    "elevation": "237m"
+  },
+  {
+    "date": "2026-06-01",
+    "title": "Afternoon Run",
+    "distance_km": 8.67,
+    "time": "1h 3m",
+    "pace": "7:21 min/km",
+    "activity_id": "18748162585",
+    "type": "Run",
+    "elevation": "42m"
+  },
+  {
+    "date": "2026-06-01",
+    "title": "Morning Run",
+    "distance_km": 10.01,
+    "time": "1h 4m",
+    "pace": "6:24 min/km",
+    "activity_id": "18741922307",
+    "type": "Run",
+    "elevation": "42m"
+  },
+  {
+    "date": "2026-05-31",
+    "title": "Lunch Walk",
+    "distance_km": 1.48,
+    "time": "17m",
+    "pace": "",
+    "activity_id": "18731068008",
+    "type": "Walk",
+    "elevation": "8m"
+  },
+  {
+    "date": "2026-05-29",
+    "title": "24h Backyard Ultra with Ronnie",
+    "distance_km": 162.73,
+    "time": "23h 57m",
+    "pace": "8:50 min/km",
+    "activity_id": "18713733500",
+    "type": "Run",
+    "elevation": "1015m"
+  },
+  {
+    "date": "2026-05-28",
+    "title": "Morning Run",
+    "distance_km": 6.76,
+    "time": "42m",
+    "pace": "6:17 min/km",
+    "activity_id": "18689072314",
+    "type": "Run",
+    "elevation": "13m"
+  },
+  {
+    "date": "2026-05-27",
+    "title": "Morning Run",
+    "distance_km": 7.33,
+    "time": "1h 2m",
+    "pace": "8:31 min/km",
+    "activity_id": "18675478578",
+    "type": "Run",
+    "elevation": "156m"
+  },
+  {
+    "date": "2026-05-26",
+    "title": "Strength training",
+    "distance_km": 0.0,
+    "time": "1h 0m",
+    "pace": "",
+    "activity_id": "18675121337",
+    "type": "WeightTraining",
+    "elevation": ""
+  },
+  {
+    "date": "2026-05-26",
+    "title": "Afternoon Walk",
+    "distance_km": 1.27,
+    "time": "15m",
+    "pace": "",
+    "activity_id": "18664457362",
+    "type": "Walk",
+    "elevation": "2m"
+  },
+  {
+    "date": "2026-05-26",
+    "title": "Morning Run",
+    "distance_km": 10.02,
+    "time": "1h 8m",
+    "pace": "6:51 min/km",
+    "activity_id": "18661109913",
+    "type": "Run",
+    "elevation": "18m"
+  },
+  {
+    "date": "2026-05-25",
+    "title": "Afternoon Walk",
+    "distance_km": 4.02,
+    "time": "42m",
+    "pace": "",
+    "activity_id": "18654223602",
+    "type": "Walk",
+    "elevation": "12m"
+  },
+  {
+    "date": "2026-05-24",
+    "title": "Evening Ride",
+    "distance_km": 8.27,
+    "time": "27m",
+    "pace": "",
+    "activity_id": "18641130042",
+    "type": "Ride",
+    "elevation": ""
+  },
+  {
+    "date": "2026-05-24",
+    "title": "Evening Ride",
+    "distance_km": 30.58,
+    "time": "1h 42m",
+    "pace": "",
+    "activity_id": "18641601232",
+    "type": "Ride",
+    "elevation": "78m"
+  },
+  {
+    "date": "2026-05-24",
+    "title": "SHoRT scouting",
+    "distance_km": 21.15,
+    "time": "2h 33m",
+    "pace": "7:14 min/km",
+    "activity_id": "18637057335",
+    "type": "Run",
+    "elevation": "46m"
+  },
+  {
+    "date": "2026-05-23",
+    "title": "Afternoon Run",
+    "distance_km": 21.13,
+    "time": "2h 12m",
+    "pace": "6:16 min/km",
+    "activity_id": "18627961790",
+    "type": "Run",
+    "elevation": "30m"
+  },
+  {
+    "date": "2026-05-22",
+    "title": "Evening Run",
+    "distance_km": 8.04,
+    "time": "1h 4m",
+    "pace": "7:60 min/km",
+    "activity_id": "18614845113",
+    "type": "Run",
+    "elevation": ""
+  },
+  {
+    "date": "2026-05-22",
+    "title": "Weight training",
+    "distance_km": 0.0,
+    "time": "1h 0m",
+    "pace": "",
+    "activity_id": "18614434877",
+    "type": "WeightTraining",
+    "elevation": ""
+  },
+  {
+    "date": "2026-05-22",
+    "title": "Morning Run",
+    "distance_km": 10.42,
+    "time": "1h 34m",
+    "pace": "9:04 min/km",
+    "activity_id": "18609034463",
+    "type": "Run",
+    "elevation": "461m"
+  },
+  {
+    "date": "2026-05-21",
+    "title": "Evening Run",
+    "distance_km": 8.03,
+    "time": "1h 2m",
+    "pace": "7:43 min/km",
+    "activity_id": "18603083477",
+    "type": "Run",
+    "elevation": ""
+  },
+  {
+    "date": "2026-05-21",
+    "title": "Morning Run",
+    "distance_km": 15.26,
+    "time": "1h 47m",
+    "pace": "7:02 min/km",
+    "activity_id": "18595926877",
+    "type": "Run",
+    "elevation": "301m"
+  },
+  {
+    "date": "2026-05-20",
+    "title": "Evening Run",
+    "distance_km": 7.61,
+    "time": "53m",
+    "pace": "6:59 min/km",
+    "activity_id": "18589423339",
+    "type": "Run",
+    "elevation": "21m"
+  },
+  {
+    "date": "2026-05-20",
+    "title": "6x5min",
+    "distance_km": 15.04,
+    "time": "1h 38m",
+    "pace": "6:34 min/km",
+    "activity_id": "18582202476",
+    "type": "Run",
+    "elevation": ""
+  },
+  {
+    "date": "2026-05-19",
+    "title": "Evening Run",
+    "distance_km": 10.02,
+    "time": "1h 25m",
+    "pace": "8:30 min/km",
+    "activity_id": "18576269459",
+    "type": "Run",
+    "elevation": "25m"
+  },
+  {
+    "date": "2026-05-19",
+    "title": "Morning Run",
+    "distance_km": 20.02,
+    "time": "2h 5m",
+    "pace": "6:16 min/km",
+    "activity_id": "18568735006",
+    "type": "Run",
+    "elevation": "68m"
+  },
+  {
+    "date": "2026-05-18",
+    "title": "Evening Stair-Stepper",
+    "distance_km": 0.0,
+    "time": "1h 3m",
+    "pace": "",
+    "activity_id": "18562213475",
+    "type": "StairStepper",
+    "elevation": ""
+  },
+  {
+    "date": "2026-05-18",
+    "title": "Afternoon Run",
+    "distance_km": 10.01,
+    "time": "1h 8m",
+    "pace": "6:49 min/km",
+    "activity_id": "18558431113",
+    "type": "Run",
+    "elevation": "53m"
+  },
+  {
+    "date": "2026-05-18",
+    "title": "Morning Run",
+    "distance_km": 17.09,
+    "time": "2h 0m",
+    "pace": "7:02 min/km",
+    "activity_id": "18554477871",
+    "type": "Run",
+    "elevation": "91m"
+  },
+  {
+    "date": "2026-05-17",
+    "title": "Afternoon Walk",
+    "distance_km": 4.02,
+    "time": "45m",
+    "pace": "",
+    "activity_id": "18548010182",
+    "type": "Walk",
+    "elevation": "21m"
+  },
+  {
+    "date": "2026-05-17",
+    "title": "Afternoon Ride",
+    "distance_km": 5.48,
+    "time": "18m",
+    "pace": "",
+    "activity_id": "18546820707",
+    "type": "Ride",
+    "elevation": ""
+  },
+  {
+    "date": "2026-05-17",
+    "title": "Afternoon Ride",
+    "distance_km": 5.15,
+    "time": "18m",
+    "pace": "",
+    "activity_id": "18546774980",
+    "type": "Ride",
+    "elevation": "26m"
+  },
+  {
+    "date": "2026-05-17",
+    "title": "Morning Run",
+    "distance_km": 11.21,
+    "time": "1h 24m",
+    "pace": "7:34 min/km",
+    "activity_id": "18545081782",
+    "type": "Run",
+    "elevation": "245m"
+  },
+  {
+    "date": "2026-05-17",
+    "title": "Weight training",
+    "distance_km": 0.0,
+    "time": "1h 0m",
+    "pace": "",
+    "activity_id": "18546240360",
+    "type": "WeightTraining",
+    "elevation": ""
+  },
+  {
+    "date": "2026-05-16",
+    "title": "Evening Ride",
+    "distance_km": 5.89,
+    "time": "20m",
+    "pace": "",
+    "activity_id": "18536263079",
+    "type": "Ride",
+    "elevation": ""
+  },
+  {
+    "date": "2026-05-16",
+    "title": "Evening Ride",
+    "distance_km": 8.1,
+    "time": "30m",
+    "pace": "",
+    "activity_id": "18536367920",
+    "type": "Ride",
+    "elevation": "18m"
+  },
+  {
+    "date": "2026-05-16",
+    "title": "Evening Run",
+    "distance_km": 11.1,
+    "time": "1h 21m",
+    "pace": "7:23 min/km",
+    "activity_id": "18536043841",
+    "type": "Run",
+    "elevation": "15m"
+  },
+  {
+    "date": "2026-05-16",
+    "title": "Afternoon Run",
+    "distance_km": 7.02,
+    "time": "47m",
+    "pace": "6:49 min/km",
+    "activity_id": "18533259248",
+    "type": "Run",
+    "elevation": "35m"
+  },
+  {
+    "date": "2026-05-16",
+    "title": "Morning Walk",
+    "distance_km": 4.02,
+    "time": "41m",
+    "pace": "",
+    "activity_id": "18530276106",
+    "type": "Walk",
+    "elevation": "18m"
+  },
+  {
+    "date": "2026-05-15",
+    "title": "Evening Walk",
+    "distance_km": 2.99,
+    "time": "38m",
+    "pace": "",
+    "activity_id": "18523245543",
+    "type": "Walk",
+    "elevation": "10m"
+  },
+  {
+    "date": "2026-05-15",
+    "title": "Evening Run",
+    "distance_km": 10.03,
+    "time": "1h 11m",
+    "pace": "7:07 min/km",
+    "activity_id": "18522915661",
+    "type": "Run",
+    "elevation": "13m"
+  },
+  {
+    "date": "2026-05-15",
+    "title": "6x5min",
+    "distance_km": 14.02,
+    "time": "1h 29m",
+    "pace": "6:24 min/km",
+    "activity_id": "18517261109",
+    "type": "Run",
+    "elevation": ""
+  },
+  {
+    "date": "2026-05-14",
+    "title": "Evening Run",
+    "distance_km": 20.37,
+    "time": "2h 47m",
+    "pace": "8:13 min/km",
+    "activity_id": "18511213836",
+    "type": "Run",
+    "elevation": "260m"
+  },
+  {
+    "date": "2026-05-13",
+    "title": "Afternoon Run",
+    "distance_km": 8.14,
+    "time": "1h 1m",
+    "pace": "7:31 min/km",
+    "activity_id": "18496935933",
+    "type": "Run",
+    "elevation": ""
+  },
+  {
+    "date": "2026-05-13",
+    "title": "Morning Run",
+    "distance_km": 20.02,
+    "time": "2h 5m",
+    "pace": "6:15 min/km",
+    "activity_id": "18491722431",
+    "type": "Run",
+    "elevation": "116m"
+  },
+  {
+    "date": "2026-05-12",
+    "title": "Evening Run",
+    "distance_km": 10.14,
+    "time": "1h 19m",
+    "pace": "7:47 min/km",
+    "activity_id": "18485013026",
+    "type": "Run",
+    "elevation": ""
+  },
+  {
+    "date": "2026-05-12",
+    "title": "Morning Run",
+    "distance_km": 15.09,
+    "time": "1h 41m",
+    "pace": "6:44 min/km",
+    "activity_id": "18477793010",
+    "type": "Run",
+    "elevation": "240m"
+  },
+  {
+    "date": "2026-05-11",
+    "title": "Evening Stair-Stepper",
+    "distance_km": 0.0,
+    "time": "1h 6m",
+    "pace": "",
+    "activity_id": "18471381166",
+    "type": "StairStepper",
+    "elevation": ""
+  },
+  {
+    "date": "2026-05-11",
+    "title": "Afternoon Run",
+    "distance_km": 7.09,
+    "time": "38m",
+    "pace": "5:22 min/km",
+    "activity_id": "18469723971",
+    "type": "Run",
+    "elevation": "23m"
+  },
+  {
+    "date": "2026-05-11",
+    "title": "Morning Run",
+    "distance_km": 18.01,
+    "time": "1h 55m",
+    "pace": "6:23 min/km",
+    "activity_id": "18464299203",
+    "type": "Run",
+    "elevation": "86m"
+  },
+  {
+    "date": "2026-05-10",
+    "title": "Evening Walk",
+    "distance_km": 3.1,
+    "time": "39m",
+    "pace": "",
+    "activity_id": "18458626719",
+    "type": "Walk",
+    "elevation": "6m"
+  },
+  {
+    "date": "2026-05-10",
+    "title": "Weight training",
+    "distance_km": 0.0,
+    "time": "1h 0m",
+    "pace": "",
+    "activity_id": "18457679372",
+    "type": "WeightTraining",
+    "elevation": ""
+  },
+  {
+    "date": "2026-05-10",
+    "title": "Morning Run",
+    "distance_km": 8.39,
+    "time": "1h 1m",
+    "pace": "7:23 min/km",
+    "activity_id": "18452782279",
+    "type": "Run",
+    "elevation": "46m"
+  },
+  {
+    "date": "2026-05-09",
+    "title": "Afternoon Walk",
+    "distance_km": 3.02,
+    "time": "30m",
+    "pace": "",
+    "activity_id": "18442634055",
+    "type": "Walk",
+    "elevation": "50m"
+  },
+  {
+    "date": "2026-05-09",
+    "title": "Morning Run",
+    "distance_km": 18.1,
+    "time": "2h 28m",
+    "pace": "8:11 min/km",
+    "activity_id": "18440236458",
+    "type": "Run",
+    "elevation": "573m"
+  },
+  {
+    "date": "2026-05-08",
+    "title": "Afternoon Run",
+    "distance_km": 10.02,
+    "time": "1h 3m",
+    "pace": "6:21 min/km",
+    "activity_id": "18428869566",
+    "type": "Run",
+    "elevation": "28m"
+  },
+  {
+    "date": "2026-05-08",
+    "title": "4x6min intervals",
+    "distance_km": 11.13,
+    "time": "1h 11m",
+    "pace": "6:28 min/km",
+    "activity_id": "18425582302",
+    "type": "Run",
+    "elevation": ""
+  },
+  {
+    "date": "2026-05-07",
+    "title": "Evening Run",
+    "distance_km": 10.02,
+    "time": "1h 10m",
+    "pace": "7:04 min/km",
+    "activity_id": "18419566299",
+    "type": "Run",
+    "elevation": "46m"
+  },
+  {
+    "date": "2026-05-07",
+    "title": "Morning Run",
+    "distance_km": 15.23,
+    "time": "1h 27m",
+    "pace": "5:46 min/km",
+    "activity_id": "18412764782",
+    "type": "Run",
+    "elevation": "18m"
+  },
+  {
+    "date": "2026-05-06",
+    "title": "Evening Run",
+    "distance_km": 9.66,
+    "time": "1h 12m",
+    "pace": "7:30 min/km",
+    "activity_id": "18406563144",
+    "type": "Run",
+    "elevation": "51m"
+  },
+  {
+    "date": "2026-05-06",
+    "title": "Morning Run",
+    "distance_km": 13.14,
+    "time": "1h 30m",
+    "pace": "6:55 min/km",
+    "activity_id": "18399489420",
+    "type": "Run",
+    "elevation": "208m"
+  },
+  {
+    "date": "2026-05-05",
+    "title": "Evening Stair-Stepper",
+    "distance_km": 0.0,
+    "time": "1h 0m",
+    "pace": "",
+    "activity_id": "18392216777",
+    "type": "StairStepper",
+    "elevation": ""
+  },
+  {
+    "date": "2026-05-05",
+    "title": "Morning Run",
+    "distance_km": 21.14,
+    "time": "2h 16m",
+    "pace": "6:26 min/km",
+    "activity_id": "18386416756",
+    "type": "Run",
+    "elevation": "81m"
+  },
+  {
+    "date": "2026-05-04",
+    "title": "Evening Ride",
+    "distance_km": 4.26,
+    "time": "15m",
+    "pace": "",
+    "activity_id": "18536259241",
+    "type": "Ride",
+    "elevation": ""
+  },
+  {
+    "date": "2026-05-04",
+    "title": "Evening Ride",
+    "distance_km": 4.02,
+    "time": "15m",
+    "pace": "",
+    "activity_id": "18378252412",
+    "type": "Ride",
+    "elevation": "18m"
+  },
+  {
+    "date": "2026-05-04",
+    "title": "Afternoon Ride",
+    "distance_km": 3.96,
+    "time": "15m",
+    "pace": "",
+    "activity_id": "18536259353",
+    "type": "Ride",
+    "elevation": ""
+  },
+  {
+    "date": "2026-05-04",
+    "title": "Afternoon Run",
+    "distance_km": 6.74,
+    "time": "44m",
+    "pace": "6:37 min/km",
+    "activity_id": "18377971914",
+    "type": "Run",
+    "elevation": "42m"
+  },
+  {
+    "date": "2026-05-04",
+    "title": "Afternoon Rise",
+    "distance_km": 3.5,
+    "time": "15m",
+    "pace": "",
+    "activity_id": "18391637511",
+    "type": "Ride",
+    "elevation": ""
+  },
+  {
+    "date": "2026-05-04",
+    "title": "Morning Run",
+    "distance_km": 17.26,
+    "time": "2h 3m",
+    "pace": "7:08 min/km",
+    "activity_id": "18372690442",
+    "type": "Run",
+    "elevation": "87m"
+  },
+  {
+    "date": "2026-05-03",
+    "title": "Weight training",
+    "distance_km": 0.0,
+    "time": "40m",
+    "pace": "",
+    "activity_id": "18365455154",
+    "type": "WeightTraining",
+    "elevation": ""
+  },
+  {
+    "date": "2026-05-03",
+    "title": "Lunch Run",
+    "distance_km": 7.09,
+    "time": "51m",
+    "pace": "7:14 min/km",
+    "activity_id": "18362610758",
+    "type": "Run",
+    "elevation": "49m"
+  },
+  {
+    "date": "2026-05-03",
+    "title": "ESHF Run and Roll 5k",
+    "distance_km": 4.99,
+    "time": "20m",
+    "pace": "4:07 min/km",
+    "activity_id": "18359779434",
+    "type": "Run",
+    "elevation": "21m"
+  },
+  {
+    "date": "2026-05-02",
+    "title": "Lunch Run",
+    "distance_km": 17.04,
+    "time": "2h 22m",
+    "pace": "8:23 min/km",
+    "activity_id": "18349863486",
+    "type": "Run",
+    "elevation": "75m"
+  },
+  {
+    "date": "2026-05-01",
+    "title": "Morning Run",
+    "distance_km": 23.12,
+    "time": "2h 2m",
+    "pace": "5:17 min/km",
+    "activity_id": "18333993412",
+    "type": "Run",
+    "elevation": "28m"
+  },
+  {
+    "date": "2026-04-30",
+    "title": "Afternoon Run",
+    "distance_km": 10.01,
+    "time": "1h 3m",
+    "pace": "6:18 min/km",
+    "activity_id": "18324765039",
+    "type": "Run",
+    "elevation": "26m"
+  },
+  {
+    "date": "2026-04-30",
+    "title": "Morning Run",
+    "distance_km": 11.12,
+    "time": "1h 16m",
+    "pace": "6:54 min/km",
+    "activity_id": "18319516173",
+    "type": "Run",
+    "elevation": "158m"
+  },
+  {
+    "date": "2026-04-29",
+    "title": "Evening Stair-Stepper",
+    "distance_km": 0.0,
+    "time": "1h 4m",
+    "pace": "",
+    "activity_id": "18313499519",
+    "type": "StairStepper",
+    "elevation": ""
+  },
+  {
+    "date": "2026-04-29",
+    "title": "6x5min intervals",
+    "distance_km": 15.03,
+    "time": "1h 40m",
+    "pace": "6:40 min/km",
+    "activity_id": "18306374816",
+    "type": "Run",
+    "elevation": ""
+  },
+  {
+    "date": "2026-04-28",
+    "title": "Afternoon Run",
+    "distance_km": 10.01,
+    "time": "1h 13m",
+    "pace": "7:21 min/km",
+    "activity_id": "18299030731",
+    "type": "Run",
+    "elevation": "38m"
+  },
+  {
+    "date": "2026-04-28",
+    "title": "Morning Run",
+    "distance_km": 22.71,
+    "time": "2h 25m",
+    "pace": "6:23 min/km",
+    "activity_id": "18293246116",
+    "type": "Run",
+    "elevation": "75m"
+  },
+  {
+    "date": "2026-04-27",
+    "title": "Afternoon Walk",
+    "distance_km": 2.88,
+    "time": "40m",
+    "pace": "",
+    "activity_id": "18284999180",
+    "type": "Walk",
+    "elevation": ""
+  },
+  {
+    "date": "2026-04-27",
+    "title": "Morning Run",
+    "distance_km": 10.02,
+    "time": "1h 29m",
+    "pace": "8:55 min/km",
+    "activity_id": "18278945893",
+    "type": "Run",
+    "elevation": "466m"
+  },
+  {
+    "date": "2026-04-26",
+    "title": "Afternoon Run",
+    "distance_km": 10.64,
+    "time": "1h 9m",
+    "pace": "6:30 min/km",
+    "activity_id": "18271832231",
+    "type": "Run",
+    "elevation": "42m"
+  },
+  {
+    "date": "2026-04-26",
+    "title": "Big Red Shoe 5km",
+    "distance_km": 5.0,
+    "time": "20m",
+    "pace": "4:06 min/km",
+    "activity_id": "18267273759",
+    "type": "Run",
+    "elevation": "6m"
+  },
+  {
+    "date": "2026-04-25",
+    "title": "Lunch Run",
+    "distance_km": 10.49,
+    "time": "1h 13m",
+    "pace": "6:58 min/km",
+    "activity_id": "18254823355",
+    "type": "Run",
+    "elevation": "61m"
+  },
+  {
+    "date": "2026-04-25",
+    "title": "Morning Run",
+    "distance_km": 13.59,
+    "time": "1h 37m",
+    "pace": "7:10 min/km",
+    "activity_id": "18253322955",
+    "type": "Run",
+    "elevation": "20m"
+  },
+  {
+    "date": "2026-04-24",
+    "title": "Evening Stair-Stepper",
+    "distance_km": 0.0,
+    "time": "46m",
+    "pace": "",
+    "activity_id": "18244718917",
+    "type": "StairStepper",
+    "elevation": ""
+  },
+  {
+    "date": "2026-04-24",
+    "title": "Afternoon Run",
+    "distance_km": 5.06,
+    "time": "39m",
+    "pace": "7:44 min/km",
+    "activity_id": "18244307656",
+    "type": "Run",
+    "elevation": ""
+  },
+  {
+    "date": "2026-04-24",
+    "title": "Afternoon Run",
+    "distance_km": 10.02,
+    "time": "1h 7m",
+    "pace": "6:43 min/km",
+    "activity_id": "18243390988",
+    "type": "Run",
+    "elevation": "53m"
+  },
+  {
+    "date": "2026-04-24",
+    "title": "Morning Run",
+    "distance_km": 10.02,
+    "time": "1h 28m",
+    "pace": "8:49 min/km",
+    "activity_id": "18239742031",
+    "type": "Run",
+    "elevation": "428m"
+  },
+  {
+    "date": "2026-04-23",
+    "title": "Morning Run",
+    "distance_km": 18.02,
+    "time": "2h 0m",
+    "pace": "6:41 min/km",
+    "activity_id": "18226690310",
+    "type": "Run",
+    "elevation": "30m"
+  },
+  {
+    "date": "2026-04-22",
+    "title": "Weight training",
+    "distance_km": 0.0,
+    "time": "1h 0m",
+    "pace": "",
+    "activity_id": "18211515152",
+    "type": "WeightTraining",
+    "elevation": ""
+  },
+  {
+    "date": "2026-04-21",
+    "title": "Afternoon Stair-Stepper",
+    "distance_km": 0.0,
+    "time": "1h 7m",
+    "pace": "",
+    "activity_id": "18204817797",
+    "type": "StairStepper",
+    "elevation": ""
+  },
+  {
+    "date": "2026-04-21",
+    "title": "Morning Run",
+    "distance_km": 21.13,
+    "time": "1h 53m",
+    "pace": "5:23 min/km",
+    "activity_id": "18198476197",
+    "type": "Run",
+    "elevation": "67m"
+  },
+  {
+    "date": "2026-04-20",
+    "title": "Afternoon Run",
+    "distance_km": 5.02,
+    "time": "24m",
+    "pace": "4:50 min/km",
+    "activity_id": "18190084517",
+    "type": "Run",
+    "elevation": "14m"
+  },
+  {
+    "date": "2026-04-20",
+    "title": "6x 4min intervals",
+    "distance_km": 11.01,
+    "time": "1h 9m",
+    "pace": "6:20 min/km",
+    "activity_id": "18184208831",
+    "type": "Run",
+    "elevation": ""
+  },
+  {
+    "date": "2026-04-19",
+    "title": "Morning Run",
+    "distance_km": 13.22,
+    "time": "1h 43m",
+    "pace": "7:52 min/km",
+    "activity_id": "18174111908",
+    "type": "Run",
+    "elevation": "531m"
+  },
+  {
+    "date": "2026-04-18",
+    "title": "Evening Stair-Stepper",
+    "distance_km": 0.0,
+    "time": "1h 10m",
+    "pace": "",
+    "activity_id": "18165434396",
+    "type": "StairStepper",
+    "elevation": ""
+  },
+  {
+    "date": "2026-04-18",
+    "title": "Morning Run",
+    "distance_km": 17.41,
+    "time": "2h 2m",
+    "pace": "7:02 min/km",
+    "activity_id": "18159802372",
+    "type": "Run",
+    "elevation": "403m"
+  },
+  {
+    "date": "2026-04-17",
+    "title": "Morning Run",
+    "distance_km": 21.13,
+    "time": "2h 25m",
+    "pace": "6:52 min/km",
+    "activity_id": "18146937361",
+    "type": "Run",
+    "elevation": "32m"
+  },
+  {
+    "date": "2026-04-16",
+    "title": "Evening Stair-Stepper",
+    "distance_km": 0.0,
+    "time": "1h 11m",
+    "pace": "",
+    "activity_id": "18139563680",
+    "type": "StairStepper",
+    "elevation": ""
+  },
+  {
+    "date": "2026-04-16",
+    "title": "Morning Run",
+    "distance_km": 15.02,
+    "time": "1h 41m",
+    "pace": "6:44 min/km",
+    "activity_id": "18132492057",
+    "type": "Run",
+    "elevation": "21m"
+  },
+  {
+    "date": "2026-04-15",
+    "title": "Evening Run",
+    "distance_km": 10.03,
+    "time": "1h 10m",
+    "pace": "7:04 min/km",
+    "activity_id": "18126009489",
+    "type": "Run",
+    "elevation": ""
+  },
+  {
+    "date": "2026-04-15",
+    "title": "Morning Run",
+    "distance_km": 10.02,
+    "time": "1h 5m",
+    "pace": "6:34 min/km",
+    "activity_id": "18119404479",
+    "type": "Run",
+    "elevation": "33m"
+  },
+  {
+    "date": "2026-04-14",
+    "title": "Lunch Run",
+    "distance_km": 10.18,
+    "time": "1h 8m",
+    "pace": "6:45 min/km",
+    "activity_id": "18108130159",
+    "type": "Run",
+    "elevation": "77m"
+  },
+  {
+    "date": "2026-04-13",
+    "title": "Evening Stair-Stepper",
+    "distance_km": 0.0,
+    "time": "1h 5m",
+    "pace": "",
+    "activity_id": "18098158434",
+    "type": "StairStepper",
+    "elevation": ""
+  },
+  {
+    "date": "2026-04-13",
+    "title": "Evening Run",
+    "distance_km": 4.02,
+    "time": "25m",
+    "pace": "6:23 min/km",
+    "activity_id": "18097165240",
+    "type": "Run",
+    "elevation": ""
+  },
+  {
+    "date": "2026-04-13",
+    "title": "Afternoon Run",
+    "distance_km": 8.17,
+    "time": "53m",
+    "pace": "6:35 min/km",
+    "activity_id": "18094467122",
+    "type": "Run",
+    "elevation": "88m"
+  },
+  {
+    "date": "2026-04-12",
+    "title": "Evening Stair-Stepper",
+    "distance_km": 0.0,
+    "time": "47m",
+    "pace": "",
+    "activity_id": "18085688069",
+    "type": "StairStepper",
+    "elevation": ""
+  },
+  {
+    "date": "2026-04-12",
+    "title": "Morning Run",
+    "distance_km": 21.79,
+    "time": "2h 0m",
+    "pace": "5:30 min/km",
+    "activity_id": "18081299229",
+    "type": "Run",
+    "elevation": "45m"
+  },
+  {
+    "date": "2026-04-11",
+    "title": "Morning Run",
+    "distance_km": 9.81,
+    "time": "2h 7m",
+    "pace": "13:02 min/km",
+    "activity_id": "18067729830",
+    "type": "Run",
+    "elevation": "479m"
+  },
+  {
+    "date": "2026-04-10",
+    "title": "Stair Stepper",
+    "distance_km": 0.0,
+    "time": "1h 0m",
+    "pace": "",
+    "activity_id": "18054719051",
+    "type": "StairStepper",
+    "elevation": ""
+  },
+  {
+    "date": "2026-04-09",
+    "title": "Evening Run",
+    "distance_km": 8.1,
+    "time": "55m",
+    "pace": "6:51 min/km",
+    "activity_id": "18048190852",
+    "type": "Run",
+    "elevation": "9m"
+  },
+  {
+    "date": "2026-04-09",
+    "title": "6x 3min intervals on the treadmill with faster pace each one",
+    "distance_km": 9.67,
+    "time": "1h 4m",
+    "pace": "6:43 min/km",
+    "activity_id": "18040902841",
+    "type": "Run",
+    "elevation": ""
+  },
+  {
+    "date": "2026-04-08",
+    "title": "Evening Stair-Stepper",
+    "distance_km": 0.0,
+    "time": "1h 7m",
+    "pace": "",
+    "activity_id": "18034337422",
+    "type": "StairStepper",
+    "elevation": ""
+  },
+  {
+    "date": "2026-04-08",
+    "title": "Morning Run",
+    "distance_km": 8.01,
+    "time": "1h 2m",
+    "pace": "7:49 min/km",
+    "activity_id": "18027113419",
+    "type": "Run",
+    "elevation": "44m"
+  },
+  {
+    "date": "2026-04-07",
+    "title": "Afternoon Stair-Stepper",
+    "distance_km": 0.0,
+    "time": "1h 0m",
+    "pace": "",
+    "activity_id": "18019834853",
+    "type": "StairStepper",
+    "elevation": ""
+  },
+  {
+    "date": "2026-04-07",
+    "title": "Morning Run",
+    "distance_km": 10.05,
+    "time": "1h 24m",
+    "pace": "8:24 min/km",
+    "activity_id": "18013693554",
+    "type": "Run",
+    "elevation": "500m"
+  },
+  {
+    "date": "2026-04-06",
+    "title": "Morning Run",
+    "distance_km": 9.58,
+    "time": "1h 26m",
+    "pace": "9:03 min/km",
+    "activity_id": "18000664837",
+    "type": "Run",
+    "elevation": "439m"
+  },
+  {
+    "date": "2026-04-04",
+    "title": "Evening Stair-Stepper",
+    "distance_km": 0.0,
+    "time": "1h 0m",
+    "pace": "",
+    "activity_id": "17981738539",
+    "type": "StairStepper",
+    "elevation": ""
+  },
+  {
+    "date": "2026-04-04",
+    "title": "Morning Stair-Stepper",
+    "distance_km": 0.0,
+    "time": "1h 0m",
+    "pace": "",
+    "activity_id": "17976727364",
+    "type": "StairStepper",
+    "elevation": ""
+  },
+  {
+    "date": "2026-04-03",
+    "title": "Weight training",
+    "distance_km": 0.0,
+    "time": "1h 0m",
+    "pace": "",
+    "activity_id": "17966921047",
+    "type": "WeightTraining",
+    "elevation": ""
+  },
+  {
+    "date": "2026-04-03",
+    "title": "Morning Run",
+    "distance_km": 21.14,
+    "time": "2h 0m",
+    "pace": "5:41 min/km",
+    "activity_id": "17963247023",
+    "type": "Run",
+    "elevation": "100m"
+  },
+  {
+    "date": "2026-04-01",
+    "title": "Stair stepper",
+    "distance_km": 0.0,
+    "time": "1h 0m",
+    "pace": "",
+    "activity_id": "17940753683",
+    "type": "StairStepper",
+    "elevation": ""
+  },
+  {
+    "date": "2026-03-31",
+    "title": "Weight training",
+    "distance_km": 0.0,
+    "time": "1h 0m",
+    "pace": "",
+    "activity_id": "17936026058",
+    "type": "WeightTraining",
+    "elevation": ""
+  },
+  {
+    "date": "2026-03-28",
+    "title": "Capital Backyard Ultra",
+    "distance_km": 130.64,
+    "time": "16h 31m",
+    "pace": "7:35 min/km",
+    "activity_id": "17896390771",
+    "type": "Run",
+    "elevation": "1575m"
+  },
+  {
+    "date": "2026-03-27",
+    "title": "Most of Capital loop, monus a small out and back part",
+    "distance_km": 6.21,
+    "time": "1h 3m",
+    "pace": "10:15 min/km",
+    "activity_id": "17881761984",
+    "type": "Run",
+    "elevation": "102m"
+  },
+  {
+    "date": "2026-03-24",
+    "title": "Stair Stepper",
+    "distance_km": 0.0,
+    "time": "1h 0m",
+    "pace": "",
+    "activity_id": "17840461891",
+    "type": "StairStepper",
+    "elevation": ""
+  },
+  {
+    "date": "2026-03-23",
+    "title": "Morning Stair-Stepper",
+    "distance_km": 0.0,
+    "time": "1h 4m",
+    "pace": "",
+    "activity_id": "17827562380",
+    "type": "StairStepper",
+    "elevation": ""
+  },
+  {
+    "date": "2026-03-22",
+    "title": "Morning Run",
+    "distance_km": 7.97,
+    "time": "1h 0m",
+    "pace": "7:32 min/km",
+    "activity_id": "17818193107",
+    "type": "Run",
+    "elevation": ""
+  },
+  {
+    "date": "2026-03-21",
+    "title": "Lunch Stair-Stepper",
+    "distance_km": 0.0,
+    "time": "1h 1m",
+    "pace": "",
+    "activity_id": "17806063893",
+    "type": "StairStepper",
+    "elevation": ""
+  },
+  {
+    "date": "2026-03-21",
+    "title": "Stair stepper (1 of 2)",
+    "distance_km": 0.0,
+    "time": "1h 0m",
+    "pace": "",
+    "activity_id": "17806485742",
+    "type": "StairStepper",
+    "elevation": ""
+  },
+  {
+    "date": "2026-03-20",
+    "title": "Morning Stair-Stepper",
+    "distance_km": 0.0,
+    "time": "1h 6m",
+    "pace": "",
+    "activity_id": "17791439134",
+    "type": "StairStepper",
+    "elevation": ""
+  },
+  {
+    "date": "2026-03-18",
+    "title": "Afternoon Run",
+    "distance_km": 8.72,
+    "time": "1h 51m",
+    "pace": "12:50 min/km",
+    "activity_id": "17773136124",
+    "type": "Run",
+    "elevation": "388m"
+  },
+  {
+    "date": "2026-03-18",
+    "title": "Afternoon Hike",
+    "distance_km": 0.81,
+    "time": "41m",
+    "pace": "",
+    "activity_id": "17771222725",
+    "type": "Hike",
+    "elevation": ""
+  },
+  {
+    "date": "2026-03-18",
+    "title": "Morning Hike",
+    "distance_km": 4.37,
+    "time": "2h 40m",
+    "pace": "",
+    "activity_id": "17768816719",
+    "type": "Hike",
+    "elevation": ""
+  },
+  {
+    "date": "2026-03-16",
+    "title": "Morning Stair-Stepper",
+    "distance_km": 0.0,
+    "time": "1h 0m",
+    "pace": "",
+    "activity_id": "17741652284",
+    "type": "StairStepper",
+    "elevation": ""
+  },
+  {
+    "date": "2026-03-15",
+    "title": "Lunch Run with Ronnie",
+    "distance_km": 21.15,
+    "time": "1h 59m",
+    "pace": "5:38 min/km",
+    "activity_id": "17734922736",
+    "type": "Run",
+    "elevation": "108m"
+  },
+  {
+    "date": "2026-03-14",
+    "title": "2x Goliath",
+    "distance_km": 19.28,
+    "time": "2h 52m",
+    "pace": "8:58 min/km",
+    "activity_id": "17721231850",
+    "type": "Run",
+    "elevation": "909m"
+  },
+  {
+    "date": "2026-03-13",
+    "title": "Weight training",
+    "distance_km": 0.0,
+    "time": "1h 0m",
+    "pace": "",
+    "activity_id": "17713241890",
+    "type": "WeightTraining",
+    "elevation": ""
+  },
+  {
+    "date": "2026-03-13",
+    "title": "Stair Stepper",
+    "distance_km": 0.0,
+    "time": "1h 0m",
+    "pace": "",
+    "activity_id": "17713238249",
+    "type": "StairStepper",
+    "elevation": ""
+  },
+  {
+    "date": "2026-03-12",
+    "title": "Morning Run",
+    "distance_km": 10.01,
+    "time": "1h 25m",
+    "pace": "8:34 min/km",
+    "activity_id": "17697324369",
+    "type": "Run",
+    "elevation": "477m"
+  },
+  {
+    "date": "2026-03-11",
+    "title": "6x intervals",
+    "distance_km": 8.28,
+    "time": "1h 0m",
+    "pace": "7:19 min/km",
+    "activity_id": "17684921759",
+    "type": "Run",
+    "elevation": ""
+  },
+  {
     "date": "2026-03-10",
     "title": "Evening Stair-Stepper",
     "distance_km": 0.0,
@@ -458,6 +2958,16 @@
     "activity_id": "17307086085",
     "type": "Run",
     "elevation": "478m"
+  },
+  {
+    "date": "2026-02-05",
+    "title": "Night Ride",
+    "distance_km": 0.01,
+    "time": "0m",
+    "pace": "",
+    "activity_id": "18536259341",
+    "type": "Ride",
+    "elevation": ""
   },
   {
     "date": "2026-02-05",
@@ -10818,6 +13328,16 @@
     "activity_id": "10601470866",
     "type": "Run",
     "elevation": "245m"
+  },
+  {
+    "date": "2024-01-20",
+    "title": "Evening Ride",
+    "distance_km": 0.19,
+    "time": "5m",
+    "pace": "",
+    "activity_id": "18536259343",
+    "type": "Ride",
+    "elevation": ""
   },
   {
     "date": "2024-01-20",
