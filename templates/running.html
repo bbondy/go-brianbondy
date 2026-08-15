@@ -797,7 +797,11 @@ function setupContributionGraph() {
   canvas.addEventListener('mousemove', function(event) {
     var date = getCanvasDate(event);
     var day = window.runningGraph.activeDays[date];
-    tooltip.textContent = (day ? day.count : 0) + ((day ? day.count : 0) === 1 ? ' activity on ' : ' activities on ') + formatFriendlyDate(date);
+    if (!day) {
+      tooltip.hidden = true;
+      return;
+    }
+    tooltip.textContent = day.count + (day.count === 1 ? ' activity on ' : ' activities on ') + formatFriendlyDate(date);
     tooltip.hidden = false;
     var left = event.offsetX + 12;
     var top = event.offsetY + 12;
