@@ -167,6 +167,11 @@ func TestOptimizeImageTag(t *testing.T) {
 			`<img src="/other/image.jpg" alt="test">`,
 			`<img src="/other/image.jpg" alt="test">`,
 		},
+		{
+			"image with responsive variants",
+			`<img src="/static/img/blogpost_190/tahoe-start.webp" alt="test">`,
+			`<img src="/static/img/blogpost_190/tahoe-start.webp" alt="test" loading="lazy" data-lightbox-src="/static/img/blogpost_190/tahoe-start.webp" srcset="/static/img/blogpost_190/tahoe-start-640.webp 640w, /static/img/blogpost_190/tahoe-start-960.webp 960w, /static/img/blogpost_190/tahoe-start-1200.webp 1200w" sizes="(max-width: 800px) calc(100vw - 44px), 756px" decoding="async">`,
+		},
 	}
 
 	for _, tt := range tests {

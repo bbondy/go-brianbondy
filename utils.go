@@ -162,7 +162,7 @@ func optimizeImageTag(imgTag string) string {
 	}
 
 	if srcset := responsiveImageSrcset(src); srcset != "" && !strings.Contains(responsiveImg, "srcset=") {
-		responsiveImg = strings.Replace(responsiveImg, ">", ` srcset="`+srcset+`" sizes="`+responsiveImageSizes+`>`, 1)
+		responsiveImg = strings.Replace(responsiveImg, ">", ` srcset="`+srcset+`" sizes="`+responsiveImageSizes+`">`, 1)
 	}
 
 	// Add decoding="async" for better performance
