@@ -114,6 +114,9 @@ func GetStravaRuns() (StravaRuns, error) {
 
 // normalizeStravaActivityType groups equivalent Strava categories for display and filtering.
 func normalizeStravaActivityType(run StravaRun) string {
+	if run.Title == "Evening Row" && run.Type == "WaterSport" {
+		return "RowingMachine"
+	}
 	if run.Type == "Workout" {
 		return "StairStepper"
 	}

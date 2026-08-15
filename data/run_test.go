@@ -10,3 +10,9 @@ func TestNormalizeStravaActivityTypeGroupsWorkoutWithStairStepper(t *testing.T) 
 		t.Fatalf("normalizeStravaActivityType() = %q, want %q", got, "StairStepper")
 	}
 }
+
+func TestNormalizeStravaActivityTypeLabelsEveningRowAsRowingMachine(t *testing.T) {
+	if got := normalizeStravaActivityType(StravaRun{Title: "Evening Row", Type: "WaterSport"}); got != "RowingMachine" {
+		t.Fatalf("normalizeStravaActivityType() = %q, want %q", got, "RowingMachine")
+	}
+}
