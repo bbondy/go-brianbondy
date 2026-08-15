@@ -12,7 +12,7 @@
     <div class="pictures-grid">
       {{range $i, $pic := .Pictures}}
         <div class="picture-entry" data-id="{{$pic.Id}}">
-          <img src="/{{$pic.Image}}" alt="Photo from blog post {{$pic.Id}}" class="gallery-image" data-index="{{$i}}" loading="lazy">
+          <img src="/{{$pic.Image}}" srcset="{{responsiveImageSrcset (printf "/%s" $pic.Image)}}" sizes="{{responsiveImageSizes}}" data-lightbox-src="/{{$pic.Image}}" alt="Photo from blog post {{$pic.Id}}" class="gallery-image" data-index="{{$i}}" loading="lazy" decoding="async">
         </div>
       {{end}}
     </div>

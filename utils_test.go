@@ -145,12 +145,12 @@ func TestOptimizeImageTag(t *testing.T) {
 		{
 			"basic image optimization",
 			`<img src="/static/img/test.jpg" alt="test">`,
-			`<img src="/static/img/test.webp" alt="test" loading="lazy" srcset="/static/img/test.webp 1x, /static/img/test.webp 2x" decoding="async">`,
+			`<img src="/static/img/test.jpg" alt="test" loading="lazy" data-lightbox-src="/static/img/test.jpg" decoding="async">`,
 		},
 		{
 			"image with existing loading attribute",
 			`<img src="/static/img/test.png" alt="test" loading="lazy">`,
-			`<img src="/static/img/test.webp" alt="test" loading="lazy" srcset="/static/img/test.webp 1x, /static/img/test.webp 2x" decoding="async">`,
+			`<img src="/static/img/test.png" alt="test" loading="lazy" data-lightbox-src="/static/img/test.png" decoding="async">`,
 		},
 		{
 			"external image - no optimization",
@@ -181,10 +181,18 @@ func TestOptimizeImageTag(t *testing.T) {
 
 func TestOptimizeImagesInContent(t *testing.T) {
 	input := `<p>Some text</p><img src="/static/img/test.jpg" alt="test"><p>More text</p><img src="/static/img/test2.png" alt="test2">`
-	expected := `<p>Some text</p><img src="/static/img/test.webp" alt="test" loading="lazy" srcset="/static/img/test.webp 1x, /static/img/test.webp 2x" decoding="async"><p>More text</p><img src="/static/img/test2.webp" alt="test2" loading="lazy" srcset="/static/img/test2.webp 1x, /static/img/test2.webp 2x" decoding="async">`
+	expected := `<p>Some text</p><img src="/static/img/test.jpg" alt="test" loading="lazy" data-lightbox-src="/static/img/test.jpg" decoding="async"><p>More text</p><img src="/static/img/test2.png" alt="test2" loading="lazy" data-lightbox-src="/static/img/test2.png" decoding="async">`
 
 	got := optimizeImagesInContent(input)
 	if got != expected {
 		t.Errorf("optimizeImagesInContent() = %v, want %v", got, expected)
+	}
+}
+
+func TestResponsiveImageSrcset(t *testing.T) {
+	got := responsiveImageSrcset("/static/img/blogpost_190/tahoe-start.webp")
+	want := "/static/img/blogpost_190/tahoe-start-640.webp 640w, /static/img/blogpost_190/tahoe-start-960.webp 960w, /static/img/blogpost_190/tahoe-start-1200.webp 1200w"
+	if got != want {
+		t.Errorf("responsiveImageSrcset() = %q, want %q", got, want)
 	}
 }

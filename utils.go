@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"net/http"
+	"os"
 	"path/filepath"
 	"regexp"
 	"strings"
@@ -105,7 +106,26 @@ func getImageMimeType(imagePath string) string {
 	}
 }
 
-// Image optimization functions for PageSpeed improvements
+const responsiveImageSizes = "(max-width: 800px) calc(100vw - 44px), 756px"
+
+func responsiveImageSrcset(src string) string {
+	ext := strings.ToLower(filepath.Ext(src))
+	if !strings.HasPrefix(src, "/static/") || (ext != ".jpg" && ext != ".jpeg" && ext != ".png" && ext != ".webp") {
+		return ""
+	}
+
+	base := strings.TrimSuffix(src, filepath.Ext(src))
+	variants := make([]string, 0, 3)
+	for _, width := range []int{640, 960, 1200} {
+		variant := fmt.Sprintf("%s-%d.webp", base, width)
+		if _, err := os.Stat(strings.TrimPrefix(variant, "/")); err == nil {
+			variants = append(variants, fmt.Sprintf("%s %dw", variant, width))
+		}
+	}
+	return strings.Join(variants, ", ")
+}
+
+// Image optimization functions for PageSpeed improvements.
 func optimizeImageTag(imgTag string) string {
 	// Extract src attribute
 	srcRegex := regexp.MustCompile(`src=["']([^"']+)["']`)
@@ -126,29 +146,23 @@ func optimizeImageTag(imgTag string) string {
 		return imgTag
 	}
 
-	// Extract file extension
-	ext := strings.ToLower(filepath.Ext(src))
-	if ext != ".jpg" && ext != ".jpeg" && ext != ".png" && ext != ".gif" {
+	if strings.ToLower(filepath.Ext(src)) == ".gif" {
 		return imgTag
 	}
 
-	// Generate WebP version path
-	webpPath := strings.TrimSuffix(src, ext) + ".webp"
-
-	// Create responsive image with srcset
-	responsiveImg := strings.Replace(imgTag, src, webpPath, 1)
-
-	// Add srcset for responsive images
-	srcset := fmt.Sprintf(`srcset="%s 1x, %s 2x"`, webpPath, webpPath)
+	responsiveImg := imgTag
 
 	// Add loading="lazy" if not already present
 	if !strings.Contains(responsiveImg, `loading="`) {
 		responsiveImg = strings.Replace(responsiveImg, ">", ` loading="lazy">`, 1)
 	}
 
-	// Add srcset attribute
-	if !strings.Contains(responsiveImg, "srcset=") {
-		responsiveImg = strings.Replace(responsiveImg, ">", ` `+srcset+`>`, 1)
+	if !strings.Contains(responsiveImg, "data-lightbox-src=") {
+		responsiveImg = strings.Replace(responsiveImg, ">", ` data-lightbox-src="`+src+`">`, 1)
+	}
+
+	if srcset := responsiveImageSrcset(src); srcset != "" && !strings.Contains(responsiveImg, "srcset=") {
+		responsiveImg = strings.Replace(responsiveImg, ">", ` srcset="`+srcset+`" sizes="`+responsiveImageSizes+`>`, 1)
 	}
 
 	// Add decoding="async" for better performance

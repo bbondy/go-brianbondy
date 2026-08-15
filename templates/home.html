@@ -11,6 +11,8 @@
           {{if .BlogPost.ImagePath}}
             <a href="{{.PostUrl}}">
               <img src="{{assetURL .BlogPost.ImagePath}}"
+                   srcset="{{responsiveImageSrcset (assetURL .BlogPost.ImagePath)}}"
+                   sizes="{{responsiveImageSizes}}"
                    class="previewImage" 
                    alt="Preview image for {{.BlogPost.Title}}"
                    loading="lazy"

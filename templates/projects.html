@@ -11,7 +11,7 @@
             <span class="project-emoji-glyph">{{.Emoji}}</span>
           </div>
         {{else if .Image}}
-          <img class="project-image" src="/{{.Image}}" alt="Project image for {{.Title}}">
+          <img class="project-image" src="/{{.Image}}" srcset="{{responsiveImageSrcset (printf "/%s" .Image)}}" sizes="{{responsiveImageSizes}}" alt="Project image for {{.Title}}" loading="lazy" decoding="async">
         {{end}}
         <div class="project-content">
           <h3>

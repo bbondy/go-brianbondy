@@ -433,11 +433,32 @@
           lightboxImage.style.transform = `scale(${currentZoom}) translate(${translateX}px, ${translateY}px)`;
         }
 
+        function lightboxSource(img) {
+          return img.dataset.lightboxSrc || img.currentSrc || img.src;
+        }
+
+        function preloadAdjacentImages() {
+          if (images.length < 2) return;
+          const indexes = [
+            (currentImageIndex - 1 + images.length) % images.length,
+            (currentImageIndex + 1) % images.length
+          ];
+          indexes.forEach(function(index) {
+            const preload = new Image();
+            preload.src = lightboxSource(images[index]);
+          });
+        }
+
+        function showLightboxImage(index) {
+          const img = images[index];
+          lightboxImage.src = lightboxSource(img);
+          lightboxImage.alt = img.alt || 'Blog post image';
+          preloadAdjacentImages();
+        }
+
         function openLightbox(index) {
           currentImageIndex = index;
-          const img = images[index];
-          lightboxImage.src = img.src;
-          lightboxImage.alt = img.alt || 'Blog post image';
+          showLightboxImage(index);
           resetZoom();
           updateCounter();
           lightbox.classList.add('show');
@@ -452,17 +473,15 @@
 
         function showPrev() {
           currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
-          const img = images[currentImageIndex];
-          lightboxImage.src = img.src;
-          lightboxImage.alt = img.alt || 'Blog post image';
+          showLightboxImage(currentImageIndex);
+          resetZoom();
           updateCounter();
         }
 
         function showNext() {
           currentImageIndex = (currentImageIndex + 1) % images.length;
-          const img = images[currentImageIndex];
-          lightboxImage.src = img.src;
-          lightboxImage.alt = img.alt || 'Blog post image';
+          showLightboxImage(currentImageIndex);
+          resetZoom();
           updateCounter();
         }
 

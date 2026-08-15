@@ -35,11 +35,13 @@ func formatFullDate(dateStr string) string {
 }
 
 var funcMap = template.FuncMap{
-	"avail":       avail,
-	"assetURL":    func(path string) string { return "/" + strings.TrimLeft(path, "/") },
-	"add":         func(a, b int) int { return a + b },
-	"addFloat":    func(a, b float64) float64 { return a + b },
-	"currentYear": func() int { return time.Now().Year() },
+	"avail":                 avail,
+	"assetURL":              func(path string) string { return "/" + strings.TrimLeft(path, "/") },
+	"responsiveImageSrcset": responsiveImageSrcset,
+	"responsiveImageSizes":  func() string { return responsiveImageSizes },
+	"add":                   func(a, b int) int { return a + b },
+	"addFloat":              func(a, b float64) float64 { return a + b },
+	"currentYear":           func() int { return time.Now().Year() },
 	"formatDate": func(dateStr string) string {
 		t, err := time.Parse("2006-01-02", dateStr)
 		if err != nil {

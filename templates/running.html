@@ -678,13 +678,13 @@ K{{define "mountPoint"}}
           
           {{if .ImagePath}}
             <div class="run-image">
-              <img src="/static/{{.ImagePath}}" alt="Photo from run: {{.Title}}" loading="lazy">
+              <img src="/static/{{.ImagePath}}" srcset="{{responsiveImageSrcset (printf "/static/%s" .ImagePath)}}" sizes="{{responsiveImageSizes}}" alt="Photo from run: {{.Title}}" loading="lazy" decoding="async">
             </div>
           {{else if .ImagePaths}}
             <div class="run-images">
               {{range .ImagePaths}}
                 <div class="run-image">
-                  <img src="/static/{{.}}" alt="Photo from run: {{$.Title}}" loading="lazy">
+                  <img src="/static/{{.}}" srcset="{{responsiveImageSrcset (printf "/static/%s" .)}}" sizes="{{responsiveImageSizes}}" alt="Photo from run: {{$.Title}}" loading="lazy" decoding="async">
                 </div>
               {{end}}
             </div>

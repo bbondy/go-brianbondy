@@ -9,7 +9,7 @@ cheatsheets:
 	python3 scripts/generate_cheatsheets.py
 
 # Default target - runs all essential tasks
-all: lint format test update-cache webp pictures-manifest
+all: lint format test update-cache webp responsive-images pictures-manifest
 
 # Code quality
 format:
@@ -44,6 +44,9 @@ webp:
 # Force convert all images to WebP (even if they already exist)
 webp-force:
 	python3 scripts/convert_images_to_webp.py --force
+
+responsive-images:
+	python3 scripts/generate_responsive_images.py
 
 # Process new blog post images (run after adding a new blog post)
 blog-images:
@@ -92,6 +95,7 @@ help:
 	@echo "  update-cache - Update cache busting version"
 	@echo "  webp         - Convert images to WebP"
 	@echo "  webp-force   - Force convert all images to WebP"
+	@echo "  responsive-images - Generate 640w, 960w, and 1200w WebP variants"
 	@echo "  blog-images  - Process new blog post images"
 	@echo "  github-stats - Fetch GitHub statistics for projects"
 	@echo "  memorable-runs - Fetch memorable run statistics"
