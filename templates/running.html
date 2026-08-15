@@ -798,9 +798,11 @@ function setupContributionGraph() {
     var date = getCanvasDate(event);
     var day = window.runningGraph.activeDays[date];
     if (!day) {
+      canvas.style.cursor = 'default';
       tooltip.hidden = true;
       return;
     }
+    canvas.style.cursor = 'pointer';
     tooltip.textContent = day.count + (day.count === 1 ? ' activity on ' : ' activities on ') + formatFriendlyDate(date);
     tooltip.hidden = false;
     var left = event.offsetX + 12;
@@ -814,8 +816,14 @@ function setupContributionGraph() {
     tooltip.style.left = left + 'px';
     tooltip.style.top = top + 'px';
   });
-  canvas.addEventListener('mouseleave', function() { tooltip.hidden = true; });
-  canvas.addEventListener('click', function(event) { openModal(getCanvasDate(event)); });
+  canvas.addEventListener('mouseleave', function() {
+    canvas.style.cursor = 'default';
+    tooltip.hidden = true;
+  });
+  canvas.addEventListener('click', function(event) {
+    var date = getCanvasDate(event);
+    if (window.runningGraph.activeDays[date]) openModal(date);
+  });
   new MutationObserver(function() { drawContributionGraph(); }).observe(document.documentElement, {
     attributes: true,
     attributeFilter: ['data-theme']

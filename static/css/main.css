@@ -3192,7 +3192,7 @@ img[loading="lazy"] {
 }
 #contribution-graph {
   display: block;
-  cursor: pointer;
+  cursor: default;
 }
 .contribution-tooltip {
   position: absolute;
