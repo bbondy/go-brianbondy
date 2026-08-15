@@ -516,6 +516,13 @@ func generateSitemapHandler(w http.ResponseWriter, _ *http.Request) {
 	}
 }
 
+func robotsHandler(w http.ResponseWriter, _ *http.Request) {
+	w.Header().Set("Content-Type", "text/plain; charset=utf-8")
+	if _, err := fmt.Fprintf(w, "User-agent: *\nAllow: /\n\nSitemap: %s/sitemap.xml\n", siteURL); err != nil {
+		log.Printf("Error writing robots.txt: %v", err)
+	}
+}
+
 func filtersPageHandler(w http.ResponseWriter, r *http.Request) {
 	current_year := time.Now().Year()
 	start_year := 2005

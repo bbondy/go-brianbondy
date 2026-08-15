@@ -167,6 +167,20 @@ func TestGenerateSitemapHandler(t *testing.T) {
 	})
 }
 
+func TestRobotsHandler(t *testing.T) {
+	w := httptest.NewRecorder()
+	r, _ := http.NewRequest("GET", "/robots.txt", nil)
+
+	robotsHandler(w, r)
+
+	resp := w.Result()
+	assert.Equal(t, http.StatusOK, resp.StatusCode)
+	assert.Equal(t, "text/plain; charset=utf-8", resp.Header.Get("Content-Type"))
+	body, err := io.ReadAll(resp.Body)
+	assert.NoError(t, err)
+	assert.Equal(t, "User-agent: *\nAllow: /\n\nSitemap: https://brianbondy.com/sitemap.xml\n", string(body))
+}
+
 // Test for filtersPageHandler
 func TestFiltersPageHandler(t *testing.T) {
 	setupTestEnvironment(t)
