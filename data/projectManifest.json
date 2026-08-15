@@ -8,8 +8,8 @@
     "blogPostID": 174,
     "description": "Block ads and trackers, saves data, and speeds up web browsing.",
     "githubStats": {
-      "commitCount": 2600,
-      "prCount": 805
+      "commitCount": 2700,
+      "prCount": 965
     }
   },
   {
@@ -20,8 +20,8 @@
     "github": "https://github.com/brave/brave-core",
     "description": "Secure, native, built-in crypto wallet that supercharges Brave browser for Web3.",
     "githubStats": {
-      "commitCount": 231,
-      "prCount": 138
+      "commitCount": 237,
+      "prCount": 156
     },
     "searchKeywords": [
       "wallet",
@@ -37,8 +37,8 @@
     "blogPostID": 184,
     "description": "AI-powered assistant built into the Brave browser, offering features like question answering, content summarization, and more\u2014all while maintaining privacy.",
     "githubStats": {
-      "commitCount": 17,
-      "prCount": 33
+      "commitCount": 21,
+      "prCount": 48
     },
     "searchKeywords": [
       "Leo",
@@ -52,7 +52,7 @@
     "github": "https://github.com/brave-experiments/brave-dev-bot",
     "description": "Autonomous coding agent for Brave projects that reads PRDs, implements user stories, runs tests, creates PRs, handles review feedback, and manages CI in iterative loops.",
     "githubStats": {
-      "commitCount": 418,
+      "commitCount": 443,
       "prCount": 11
     }
   },
@@ -63,7 +63,7 @@
     "github": "https://github.com/bbondy/guardrails",
     "description": "Native Rust CLI wrapper that blocks unsafe or prompt-injection style output from other CLIs, with both blocking (check) and sanitizing (filter) modes.",
     "githubStats": {
-      "commitCount": 74,
+      "commitCount": 76,
       "prCount": 0
     }
   },
@@ -214,7 +214,7 @@
     "github": "https://github.com/Khan/khan-windows",
     "description": "Contributed a significant amount of contributions to the Khan Academy Modern UI Windows Store app. Khan Academy allows you to learn almost anything for free.  Our Windows app is the best way to view Khan Academy's complete library of over 6000 videos on your Windows device.",
     "githubStats": {
-      "commitCount": 0,
+      "commitCount": 54,
       "prCount": 22
     }
   },
@@ -227,7 +227,7 @@
     "description": "I started contributing to Firefox around when I started full time in 2011. I worked mostly on Windows related code in C++, but also XUL, XBL, Javascript, CSS, Python, and more. Some features I worked on were the Windows 8 Metro Firefox browser, the installer, silent updates, hundreds of fixes, and enhancements.",
     "blogPostID": 118,
     "githubStats": {
-      "commitCount": 548,
+      "commitCount": 547,
       "prCount": 0
     }
   },
