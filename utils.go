@@ -1,6 +1,7 @@
 package main
 
 import (
+	"compress/gzip"
 	"fmt"
 	"net/http"
 	"os"
@@ -8,6 +9,26 @@ import (
 	"regexp"
 	"strings"
 )
+
+type gzipResponseWriter struct {
+	http.ResponseWriter
+	writer *gzip.Writer
+}
+
+func (w gzipResponseWriter) Write(data []byte) (int, error) { return w.writer.Write(data) }
+
+// gzipHTML compresses dynamic HTML when the front proxy has not already done so.
+func gzipHTML(w http.ResponseWriter, r *http.Request, next http.HandlerFunc) {
+	if !strings.Contains(r.Header.Get("Accept-Encoding"), "gzip") {
+		next(w, r)
+		return
+	}
+	w.Header().Set("Content-Encoding", "gzip")
+	w.Header().Add("Vary", "Accept-Encoding")
+	gz := gzip.NewWriter(w)
+	defer gz.Close()
+	next(gzipResponseWriter{ResponseWriter: w, writer: gz}, r)
+}
 
 func slugifyTitle(title string) string {
 	// Convert to lowercase

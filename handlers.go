@@ -162,10 +162,10 @@ func runningHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	// Get year filter from query parameter, default to "all"
+	// Keep the initial page compact; the all-time view remains available in the selector.
 	yearFilter := r.URL.Query().Get("year")
 	if yearFilter == "" {
-		yearFilter = "all"
+		yearFilter = "365"
 	}
 
 	// Get Strava totals for selected view
@@ -182,6 +182,13 @@ func runningHandler(w http.ResponseWriter, r *http.Request) {
 	contributionGraph2D, err := data.GenerateContributionGraph2D(yearFilter)
 	if err != nil {
 		contributionGraph2D = nil
+	}
+	graphJSON := template.JS(`{"startDate":"","weeks":0,"activeDays":{}}`)
+	if contributionGraph2D != nil {
+		encoded, marshalErr := json.Marshal(contributionGraph2D.CanvasData())
+		if marshalErr == nil {
+			graphJSON = template.JS(encoded)
+		}
 	}
 	// Remove debug print
 	// if contributionGraph2D != nil {
@@ -232,6 +239,7 @@ func runningHandler(w http.ResponseWriter, r *http.Request) {
 		}(),
 		"SelectedYear":    yearFilter,
 		"LastUpdatedDate": lastUpdated,
+		"GraphJSON":       graphJSON,
 	})
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
@@ -263,6 +271,29 @@ func runsForDateHandler(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
 	}
+}
+
+// runningTotalsForTypesHandler keeps activity-type filtering client-light.
+func runningTotalsForTypesHandler(w http.ResponseWriter, r *http.Request) {
+	types := make(map[string]bool)
+	for _, typ := range strings.Split(r.URL.Query().Get("types"), ",") {
+		if typ != "" {
+			types[typ] = true
+		}
+	}
+	if len(types) == 0 {
+		http.Error(w, "At least one activity type is required", http.StatusBadRequest)
+		return
+	}
+	count, distance, elevation, minutes, err := data.GetStravaRunTotalsForTypes(r.URL.Query().Get("year"), types)
+	if err != nil {
+		http.Error(w, "Unable to load activity totals", http.StatusInternalServerError)
+		return
+	}
+	w.Header().Set("Content-Type", "application/json")
+	_ = json.NewEncoder(w).Encode(map[string]interface{}{
+		"activities": count, "distanceKm": distance, "elevationM": elevation, "minutes": minutes,
+	})
 }
 
 func projectsHandler(w http.ResponseWriter, r *http.Request) {

@@ -4,6 +4,7 @@ import (
 	"math"
 	"sort"
 	"strconv"
+	"sync"
 	"time"
 )
 
@@ -112,6 +113,9 @@ func GetStravaRuns() (StravaRuns, error) {
 func ClearStravaRunsCache() {
 	stravaRunsLoaded = false
 	cachedStravaRuns = nil
+	contributionGraphCache.Lock()
+	contributionGraphCache.graphs = make(map[string]*ContributionGraph2D)
+	contributionGraphCache.Unlock()
 }
 
 // isActiveRun returns true if the entry represents a real activity (non-zero distance or time)
@@ -299,6 +303,40 @@ func GetStravaRunTotalsFor(yearFilter string) (int, float64, int, int, error) {
 	return totalRuns, totalDistanceKm, totalElevationM, totalTimeMinutes, nil
 }
 
+// GetStravaRunTotalsForTypes returns view totals restricted to the selected activity types.
+func GetStravaRunTotalsForTypes(yearFilter string, types map[string]bool) (int, float64, int, int, error) {
+	runs, err := GetStravaRuns()
+	if err != nil {
+		return 0, 0, 0, 0, err
+	}
+	var totalRuns int
+	var totalDistanceKm float64
+	var totalTimeMinutes, totalElevationM int
+	now := time.Now()
+	startDate := now.AddDate(0, 0, -364)
+	for _, run := range runs {
+		inView := yearFilter == "" || yearFilter == "all"
+		if yearFilter == "365" {
+			t, parseErr := time.Parse("2006-01-02", run.Date)
+			inView = parseErr == nil && !t.Before(startDate) && !t.After(now)
+		} else if year, parseErr := strconv.Atoi(yearFilter); parseErr == nil {
+			inView = len(run.Date) >= 4 && run.Date[:4] == strconv.Itoa(year)
+		}
+		typ := run.Type
+		if typ == "" {
+			typ = "Unknown"
+		}
+		if !inView || !types[typ] {
+			continue
+		}
+		totalRuns++
+		totalDistanceKm += run.DistanceKm
+		totalTimeMinutes += parseTimeStringToMinutes(run.Time)
+		totalElevationM += parseElevationStringToMeters(run.Elevation)
+	}
+	return totalRuns, totalDistanceKm, totalElevationM, totalTimeMinutes, nil
+}
+
 // GetLastUpdatedDate returns the most recent date from Strava runs
 func GetLastUpdatedDate() (string, error) {
 	runs, err := GetStravaRuns()
@@ -428,8 +466,48 @@ type ContributionGraph2D struct {
 	Years          []int // Available years for dropdown
 }
 
+// ContributionGraphCanvas is the small client payload used to draw the heatmap.
+// It intentionally omits activity details; those are fetched only after a day is clicked.
+type ContributionGraphCanvas struct {
+	StartDate  string                           `json:"startDate"`
+	Weeks      int                              `json:"weeks"`
+	ActiveDays map[string]ContributionCanvasDay `json:"activeDays"`
+}
+
+type ContributionCanvasDay struct {
+	Count     int      `json:"count"`
+	Level     int      `json:"level"`
+	Lightness float64  `json:"lightness"`
+	Types     []string `json:"types"`
+}
+
+var contributionGraphCache = struct {
+	sync.RWMutex
+	graphs map[string]*ContributionGraph2D
+}{graphs: make(map[string]*ContributionGraph2D)}
+
 // GenerateContributionGraph2D returns a 2D grid for the contribution graph, with month and day labels
 func GenerateContributionGraph2D(yearFilter string) (*ContributionGraph2D, error) {
+	// The Strava manifest is static for the lifetime of this process.
+	cacheKey := yearFilter
+	contributionGraphCache.RLock()
+	graph := contributionGraphCache.graphs[cacheKey]
+	contributionGraphCache.RUnlock()
+	if graph != nil {
+		return graph, nil
+	}
+
+	graph, err := generateContributionGraph2D(yearFilter)
+	if err != nil {
+		return nil, err
+	}
+	contributionGraphCache.Lock()
+	contributionGraphCache.graphs[cacheKey] = graph
+	contributionGraphCache.Unlock()
+	return graph, nil
+}
+
+func generateContributionGraph2D(yearFilter string) (*ContributionGraph2D, error) {
 	runs, err := GetStravaRuns()
 	if err != nil {
 		return nil, err
@@ -774,6 +852,36 @@ func GenerateContributionGraph2D(yearFilter string) (*ContributionGraph2D, error
 		Days:           rows,
 		Years:          years,
 	}, nil
+}
+
+// CanvasData returns the minimum data required to draw and filter the heatmap.
+func (g *ContributionGraph2D) CanvasData() ContributionGraphCanvas {
+	payload := ContributionGraphCanvas{Weeks: g.Weeks, ActiveDays: make(map[string]ContributionCanvasDay)}
+	if len(g.Grid) == 0 || len(g.Grid[0]) == 0 {
+		return payload
+	}
+	payload.StartDate = g.Grid[0][0].Date
+	for _, row := range g.Grid {
+		for _, day := range row {
+			if day.Count == 0 {
+				continue
+			}
+			types := make([]string, 0, len(day.Runs))
+			seen := make(map[string]bool)
+			for _, run := range day.Runs {
+				typ := run.Type
+				if typ == "" {
+					typ = "Unknown"
+				}
+				if !seen[typ] {
+					seen[typ] = true
+					types = append(types, typ)
+				}
+			}
+			payload.ActiveDays[day.Date] = ContributionCanvasDay{Count: day.Count, Level: day.Level, Lightness: day.Lightness, Types: types}
+		}
+	}
+	return payload
 }
 
 // GetActivityTypeBreakdown calculates activity type percentages from Strava data

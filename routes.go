@@ -49,6 +49,7 @@ func initializeRoutes(router *mux.Router) {
 		negroni.Wrap(http.HandlerFunc(allPostsHandler)))
 	handleRunning := negroni.New(
 		negroni.HandlerFunc(directToHttps),
+		negroni.HandlerFunc(gzipHTML),
 		negroni.Wrap(http.HandlerFunc(runningHandler)))
 	handlePictures := negroni.New(
 		negroni.HandlerFunc(directToHttps),
@@ -108,6 +109,10 @@ func initializeRoutes(router *mux.Router) {
 	router.Handle("/api/runs-for-date", negroni.New(
 		negroni.HandlerFunc(directToHttps),
 		negroni.Wrap(http.HandlerFunc(runsForDateHandler)),
+	))
+	router.Handle("/api/running-totals", negroni.New(
+		negroni.HandlerFunc(directToHttps),
+		negroni.Wrap(http.HandlerFunc(runningTotalsForTypesHandler)),
 	))
 	router.Handle("/all", handleAllPosts)
 	router.Handle("/pictures", handlePictures)

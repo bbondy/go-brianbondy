@@ -24,28 +24,10 @@ K{{define "mountPoint"}}
         <h3 style="margin:0;">Running Activity ({{if or (eq $.SelectedYear "") (eq $.SelectedYear "all")}}All time{{else if eq $.SelectedYear "365"}}Last 365 Days{{else}}{{$.SelectedYear}}{{end}})</h3>
       </div>
       <div class="contribution-graph-outer">
-        <div class="contribution-month-labels-row" style="width: calc({{.Weeks}} * 13px + ({{.Weeks}} - 1) * 3px);">
-          {{range .UniqueMonths}}
-            <span class="contribution-month-label">{{.}}</span>
-          {{end}}
-        </div>
         <div class="contribution-graph-main">
-          <div class="contribution-day-labels-vertical">
-            {{range $i, $label := .DayLabels}}
-              {{if or (eq $label "Mon") (eq $label "Wed") (eq $label "Fri")}}
-                <span class="contribution-day-label-vertical">{{$label}}</span>
-              {{else}}
-                <span class="contribution-day-label-blank-vertical"></span>
-              {{end}}
-            {{end}}
-          </div>
-          <div class="contribution-graph-cells" style="grid-template-columns: repeat({{.Weeks}}, 13px);">
-            {{/* Render grid as 7 rows x 53 columns: outer loop over rows (days), inner loop over columns (weeks) */}}
-            {{range $rowIdx, $row := .Grid}}
-              {{range $colIdx, $cell := $row}}
-                <div class="contribution-day level-{{$cell.Level}}" title="{{$cell.Count}} {{if eq $cell.Count 1}}activity{{else}}activities{{end}} on {{$cell.Date | formatFullDate}}" data-date="{{$cell.Date}}" data-count="{{$cell.Count}}" style="{{if eq $cell.Count 0}}background-color: #374151;{{else}}background-color: hsl(137, 60%, {{$cell.Lightness}}%);{{end}}">&nbsp;</div>
-              {{end}}
-            {{end}}
+          <div class="contribution-canvas-wrap">
+            <canvas id="contribution-graph" aria-label="Running activity calendar. Hover a day for its activity count; click a day to view activities."></canvas>
+            <div id="contribution-tooltip" class="contribution-tooltip" role="tooltip" hidden></div>
           </div>
         </div>
       </div>
@@ -698,29 +680,9 @@ K{{define "mountPoint"}}
 {{define "scripts"}}
 <script>
 
-// Build a JS object mapping date to activities for the current graph
+// Compact data for the canvas: only active days, never the activity details.
+window.runningGraph = {{.GraphJSON}};
 window.stravaActivitiesByDate = {};
-{{if .ContributionGraph2D}}
-{{range $rowIdx, $row := .ContributionGraph2D.Grid}}
-  {{range $colIdx, $cell := $row}}
-    window.stravaActivitiesByDate["{{$cell.Date}}"] = [
-      {{range $i, $run := $cell.Runs}}
-        {
-          type: {{printf "%s" $run.Type}},
-          title: {{printf "%s" $run.Title}},
-          distance_km: {{printf "%v" $run.DistanceKm}},
-          time: {{printf "%s" $run.Time}},
-          pace: {{printf "%s" $run.Pace}},
-          activity_id: {{printf "%s" $run.ActivityID}},
-          elevation: {{printf "%s" $run.Elevation}}
-        }{{if lt (add $i 1) (len $cell.Runs)}},{{end}}
-      {{end}}
-    ];
-  {{end}}
-{{end}}
-{{else}}
-// No contribution graph data available
-{{end}}
 
 // Helper function to format activity types
 function formatActivityType(type) {
@@ -737,6 +699,114 @@ function formatFriendlyDate(dateStr) {
     year: 'numeric', 
     month: 'long', 
     day: 'numeric' 
+  });
+}
+
+var activeDates = Object.keys(window.runningGraph.activeDays || {}).sort();
+var activeActivityTypes = new Set();
+var canvasCellSize = 16;
+var canvasLabelWidth = 68;
+
+function dateForCell(col, row) {
+  var date = new Date(window.runningGraph.startDate + 'T00:00:00Z');
+  date.setUTCDate(date.getUTCDate() + col * 7 + row);
+  return date.toISOString().slice(0, 10);
+}
+
+function drawContributionGraph() {
+  var canvas = document.getElementById('contribution-graph');
+  if (!canvas || !window.runningGraph.weeks) return;
+  var dpr = window.devicePixelRatio || 1;
+  var width = canvasLabelWidth + window.runningGraph.weeks * canvasCellSize;
+  var labelHeight = 24;
+  var height = labelHeight + 7 * canvasCellSize;
+  canvas.width = width * dpr;
+  canvas.height = height * dpr;
+  canvas.style.width = width + 'px';
+  canvas.style.height = height + 'px';
+  var ctx = canvas.getContext('2d');
+  ctx.scale(dpr, dpr);
+  var isLightTheme = document.documentElement.getAttribute('data-theme') === 'light';
+  var lightLevelColors = ['', 'hsl(137, 90%, 85%)', 'hsl(137, 80%, 75%)', 'hsl(137, 70%, 60%)', 'hsl(137, 60%, 45%)', 'hsl(137, 55%, 35%)', 'hsl(137, 50%, 25%)'];
+  ctx.font = '16px Inter, sans-serif';
+  ctx.fillStyle = getComputedStyle(document.documentElement).getPropertyValue('--text-color') || '#273247';
+  ctx.globalAlpha = 0.7;
+  var previousMonth = '';
+  var lastMonthLabelRight = 0;
+  for (var monthCol = 0; monthCol < window.runningGraph.weeks; monthCol++) {
+    var monthDate = new Date(dateForCell(monthCol, 0) + 'T00:00:00Z');
+    var month = monthDate.toLocaleString('en-US', { month: 'short', timeZone: 'UTC' });
+    if (monthCol === 0 || month !== previousMonth) {
+      var labelText = month + (monthCol === 0 || monthDate.getUTCMonth() === 0 ? "'" + String(monthDate.getUTCFullYear()).slice(-2) : '');
+      var labelX = canvasLabelWidth + monthCol * canvasCellSize;
+      if (labelX >= lastMonthLabelRight + 8) {
+        ctx.fillText(labelText, labelX, 17);
+        lastMonthLabelRight = labelX + ctx.measureText(labelText).width;
+      }
+    }
+    previousMonth = month;
+  }
+  ctx.globalAlpha = 1;
+  ctx.fillStyle = getComputedStyle(document.documentElement).getPropertyValue('--text-color') || '#273247';
+  ctx.globalAlpha = 0.7;
+  ['Mon', 'Wed', 'Fri'].forEach(function(label, index) {
+    var row = index * 2;
+    ctx.fillText(label, 0, labelHeight + row * canvasCellSize + 12);
+  });
+  ctx.globalAlpha = 1;
+  for (var col = 0; col < window.runningGraph.weeks; col++) {
+    for (var row = 0; row < 7; row++) {
+      var date = dateForCell(col, row);
+      var day = window.runningGraph.activeDays[date];
+      var matches = !activeActivityTypes.size || (day && day.types.some(function(type) { return activeActivityTypes.has(type); }));
+      ctx.fillStyle = day && matches
+        ? (isLightTheme ? lightLevelColors[day.level] : 'hsl(137, 60%, ' + day.lightness + '%)')
+        : (isLightTheme ? '#ffffff' : '#374151');
+      ctx.beginPath();
+      ctx.roundRect(canvasLabelWidth + col * canvasCellSize + 1, labelHeight + row * canvasCellSize + 1, 13, 13, 3);
+      ctx.fill();
+      if ((!day || !matches) && isLightTheme) {
+        ctx.strokeStyle = '#d0d7de';
+        ctx.lineWidth = 1;
+        ctx.stroke();
+      }
+      if (day && activeActivityTypes.size && matches) {
+        var matchingType = day.types.find(function(type) { return activeActivityTypes.has(type); });
+        ctx.strokeStyle = activityTypeColors[matchingType] || '#4d90fe';
+        ctx.lineWidth = 2;
+        ctx.stroke();
+      }
+    }
+  }
+}
+
+function getCanvasDate(event) {
+  var canvas = document.getElementById('contribution-graph');
+  var rect = canvas.getBoundingClientRect();
+  var col = Math.floor((event.clientX - rect.left - canvasLabelWidth) / canvasCellSize);
+  var row = Math.floor((event.clientY - rect.top - 24) / canvasCellSize);
+  if (col < 0 || row < 0 || col >= window.runningGraph.weeks || row >= 7) return '';
+  return dateForCell(col, row);
+}
+
+function setupContributionGraph() {
+  var canvas = document.getElementById('contribution-graph');
+  var tooltip = document.getElementById('contribution-tooltip');
+  if (!canvas) return;
+  drawContributionGraph();
+  canvas.addEventListener('mousemove', function(event) {
+    var date = getCanvasDate(event);
+    var day = window.runningGraph.activeDays[date];
+    tooltip.textContent = (day ? day.count : 0) + ((day ? day.count : 0) === 1 ? ' activity on ' : ' activities on ') + formatFriendlyDate(date);
+    tooltip.style.left = (event.offsetX + 12) + 'px';
+    tooltip.style.top = (event.offsetY + 12) + 'px';
+    tooltip.hidden = false;
+  });
+  canvas.addEventListener('mouseleave', function() { tooltip.hidden = true; });
+  canvas.addEventListener('click', function(event) { openModal(getCanvasDate(event)); });
+  new MutationObserver(function() { drawContributionGraph(); }).observe(document.documentElement, {
+    attributes: true,
+    attributeFilter: ['data-theme']
   });
 }
 
@@ -761,10 +831,20 @@ function closeModal() {
 
 var currentModalDate = '';
 
-function openModal(date, runs) {
+async function openModal(date, runs) {
   currentModalDate = date;
   document.getElementById('modal-date').textContent = formatFriendlyDate(date);
   const modalRuns = document.getElementById('modal-runs');
+  if (!runs) {
+    modalRuns.innerHTML = '<div style="padding:1em;">Loading activities…</div>';
+    try {
+      var response = await fetch('/api/runs-for-date?date=' + encodeURIComponent(date));
+      runs = response.ok ? await response.json() : [];
+      window.stravaActivitiesByDate[date] = runs;
+    } catch (error) {
+      runs = [];
+    }
+  }
   if (!runs || runs.length === 0) {
     modalRuns.innerHTML = '<div style="padding:1em;">No activities for this day.</div>';
   } else {
@@ -812,24 +892,17 @@ function updateNavButtons(date) {
 }
 
 function findAdjacentDateWithData(currentDate, direction) {
-  if (!window.stravaActivitiesByDate) return null;
-  
-  // Get all dates that have data, sorted
-  const allDatesWithData = Object.keys(window.stravaActivitiesByDate)
-    .filter(date => window.stravaActivitiesByDate[date] && window.stravaActivitiesByDate[date].length > 0)
-    .sort();
-  
-  const currentIndex = allDatesWithData.indexOf(currentDate);
+  const currentIndex = activeDates.indexOf(currentDate);
   if (currentIndex === -1) return null;
   
   const targetIndex = currentIndex + direction;
-  if (targetIndex < 0 || targetIndex >= allDatesWithData.length) return null;
-  
-  return allDatesWithData[targetIndex];
+  if (targetIndex < 0 || targetIndex >= activeDates.length) return null;
+
+  return activeDates[targetIndex];
 }
 
 function navigateToDate(dateStr) {
-  const runs = window.stravaActivitiesByDate[dateStr] || [];
+  const runs = window.stravaActivitiesByDate[dateStr];
   openModal(dateStr, runs);
 }
 
@@ -838,7 +911,7 @@ var yearSelect = document.getElementById('year-select');
 if (yearSelect) {
   // Set the correct selected value based on current URL
   var urlParams = new URLSearchParams(window.location.search);
-  var currentYear = urlParams.get('year') || 'all';
+  var currentYear = urlParams.get('year') || '365';
   yearSelect.value = currentYear;
   
   yearSelect.addEventListener('change', function() {
@@ -854,23 +927,7 @@ if (yearSelect) {
 }
 
 // Use event delegation for contribution-day clicks
-var graphCells = document.querySelector('.contribution-graph-cells');
-console.log('graphCells:', graphCells);
-if (graphCells) {
-  graphCells.addEventListener('click', function(e) {
-    var cell = e.target.closest('.contribution-day');
-    if (!cell) return;
-    const date = cell.getAttribute('data-date');
-    if (!date) {
-      console.log('No date attribute found on clicked cell:', cell);
-      return;
-    }
-    const runs = window.stravaActivitiesByDate[date] || [];
-    console.log('Clicked day:', date, 'Runs found:', runs);
-    openModal(date, runs);
-    console.log('openModal called for date:', date);
-  });
-}
+setupContributionGraph();
 // Modal close on background click
 var runsModal = document.getElementById('runs-modal');
 if (runsModal) {
@@ -935,9 +992,6 @@ document.querySelectorAll('.activity-color, .activity-segment').forEach(function
   }
 });
 
-// Active filters (multi-select)
-var activeActivityTypes = new Set();
-
 function parseTimeToMinutes(timeStr) {
   if (!timeStr) return 0;
   var total = 0;
@@ -970,25 +1024,7 @@ function formatTimeFromMinutes(totalMinutes) {
 }
 
 function updateCellHighlights() {
-  // Clear first
-  document.querySelectorAll('.contribution-day').forEach(function(cell) {
-    cell.style.boxShadow = '';
-    cell.style.borderRadius = '';
-  });
-  if (activeActivityTypes.size === 0) return;
-  document.querySelectorAll('.contribution-day').forEach(function(cell) {
-    var date = cell.getAttribute('data-date');
-    if (!date) return;
-    var runs = (window.stravaActivitiesByDate && window.stravaActivitiesByDate[date]) || [];
-    var matches = runs.some(function(run) { return run && activeActivityTypes.has(run.type); });
-    if (matches) {
-      // Use first matching type's color
-      var match = runs.find(function(run) { return run && activeActivityTypes.has(run.type); });
-      var color = (match && activityTypeColors[match.type]) || '#4d90fe';
-      cell.style.boxShadow = '0 0 0 2px ' + color;
-      cell.style.borderRadius = '4px';
-    }
-  });
+  drawContributionGraph();
 }
 
 function updateTotalsDisplay() {
@@ -1010,41 +1046,21 @@ function updateTotalsDisplay() {
     badge.style.display = 'none';
     return;
   }
-  // Compute filtered totals from currently displayed graph data only
-  var totalActivities = 0;
-  var totalDistanceKm = 0;
-  var totalTimeMinutes = 0;
-  var totalElevationM = 0;
-  // Determine bounds based on visible cells
-  var minDate = null, maxDate = null;
-  document.querySelectorAll('.contribution-day').forEach(function(cell){
-    var d = cell.getAttribute('data-date');
-    if (!d) return;
-    if (!minDate || d < minDate) minDate = d;
-    if (!maxDate || d > maxDate) maxDate = d;
+  var query = new URLSearchParams({ year: document.getElementById('year-select').value, types: Array.from(activeActivityTypes).join(',') });
+  fetch('/api/running-totals?' + query.toString()).then(function(response) {
+    return response.ok ? response.json() : null;
+  }).then(function(totals) {
+    if (!totals) return;
+    var actEl = document.getElementById('total-activities-value');
+    var timeEl = document.getElementById('total-time-value');
+    var distEl = document.getElementById('total-distance-value');
+    var elevEl = document.getElementById('total-elevation-value');
+    if (actEl) actEl.textContent = totals.activities.toLocaleString();
+    if (timeEl) timeEl.textContent = formatTimeFromMinutes(totals.minutes);
+    if (distEl) distEl.textContent = (Math.round(totals.distanceKm * 10) / 10).toLocaleString() + 'km';
+    if (elevEl) elevEl.textContent = Math.round(totals.elevationM).toLocaleString() + 'm';
+    badge.style.display = '';
   });
-  Object.keys(window.stravaActivitiesByDate || {}).forEach(function(date) {
-    if ((minDate && date < minDate) || (maxDate && date > maxDate)) return;
-    var runs = window.stravaActivitiesByDate[date] || [];
-    runs.forEach(function(run) {
-      if (activeActivityTypes.has(run.type)) {
-        totalActivities += 1;
-        totalDistanceKm += (parseFloat(run.distance_km) || 0);
-        totalTimeMinutes += parseTimeToMinutes(run.time);
-        totalElevationM += parseElevationToMeters(run.elevation);
-      }
-    });
-  });
-  // Update DOM
-  var actEl = document.getElementById('total-activities-value');
-  var timeEl = document.getElementById('total-time-value');
-  var distEl = document.getElementById('total-distance-value');
-  var elevEl = document.getElementById('total-elevation-value');
-  if (actEl) actEl.textContent = totalActivities.toLocaleString();
-  if (timeEl) timeEl.textContent = formatTimeFromMinutes(totalTimeMinutes);
-  if (distEl) distEl.textContent = (Math.round(totalDistanceKm * 10) / 10).toLocaleString() + 'km';
-  if (elevEl) elevEl.textContent = Math.round(totalElevationM).toLocaleString() + 'm';
-  badge.style.display = '';
 }
 
 function setAriaPressed(el, pressed) {

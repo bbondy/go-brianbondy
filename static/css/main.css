@@ -3118,10 +3118,7 @@ img[loading="lazy"] {
   max-width: 100vw;
 }
 .contribution-month-labels-row {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
+  position: relative;
   margin-bottom: 8px;
   margin-left: 38px;
   margin-right: 4px;
@@ -3130,6 +3127,7 @@ img[loading="lazy"] {
 }
 
 .contribution-month-label {
+  position: absolute;
   font-size: 0.75em;
   color: var(--text-color);
   opacity: 0.7;
@@ -3140,13 +3138,18 @@ img[loading="lazy"] {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
+  width: max-content;
 }
 .contribution-day-labels-vertical {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   margin-right: 4px;
-  margin-top: 2px;
+  margin-top: 0;
+}
+.contribution-day-label-header {
+  display: block;
+  height: 24px;
 }
 .contribution-day-label-vertical {
   height: 13px;
@@ -3180,6 +3183,30 @@ img[loading="lazy"] {
   border: 1px solid var(--link-color);
   box-shadow: 0 0 0 2px var(--link-color)33;
   z-index: 2;
+}
+.contribution-canvas-wrap {
+  position: relative;
+  width: max-content;
+  height: 160px; /* 136px canvas plus reserved hover-tooltip space */
+  overflow: visible;
+}
+#contribution-graph {
+  display: block;
+  cursor: pointer;
+}
+.contribution-tooltip {
+  position: absolute;
+  z-index: 3;
+  padding: 4px 8px;
+  border-radius: 4px;
+  background: #1f2937;
+  color: #fff;
+  font-size: 0.75rem;
+  pointer-events: none;
+  white-space: nowrap;
+}
+.contribution-tooltip[hidden] {
+  display: none;
 }
 .contribution-legend {
   display: flex;
