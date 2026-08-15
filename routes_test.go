@@ -118,6 +118,7 @@ func TestRouteRegistration(t *testing.T) {
 	}{
 		{"Home route", "GET", "/", true},
 		{"RSS route", "GET", "/rss", true},
+		{"Sitemap route", "GET", "/sitemap.xml", true},
 		{"Blog post with ID and slug", "GET", "/blog/1/test-post-1", true},
 		{"Blog ID redirect", "GET", "/blog/1", true},
 		{"Pagination redirect", "GET", "/page/2", true},

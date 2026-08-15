@@ -2,6 +2,7 @@ package main
 
 import (
 	"encoding/json"
+	"encoding/xml"
 	"fmt"
 	"html/template"
 	"log"
@@ -20,6 +21,7 @@ import (
 const (
 	layoutISO = "2006-01-02"
 	layoutUS  = "January 2, 2006"
+	siteURL   = "https://brianbondy.com"
 )
 
 // getErrorMessageForCode returns a user-friendly message for a given HTTP error code.
@@ -460,6 +462,57 @@ func generateRSSHandler(w http.ResponseWriter, r *http.Request) {
 	_, err = w.Write([]byte(rss))
 	if err != nil {
 		log.Printf("Error writing response: %v", err)
+	}
+}
+
+type sitemapURLSet struct {
+	XMLName xml.Name     `xml:"urlset"`
+	XMLNS   string       `xml:"xmlns,attr"`
+	URLs    []sitemapURL `xml:"url"`
+}
+
+type sitemapURL struct {
+	Location string `xml:"loc"`
+	LastMod  string `xml:"lastmod,omitempty"`
+}
+
+func generateSitemapHandler(w http.ResponseWriter, _ *http.Request) {
+	paths := []string{
+		"/",
+		"/about",
+		"/advice",
+		"/all",
+		"/books",
+		"/cheatsheets",
+		"/contact",
+		"/interviews",
+		"/pictures",
+		"/projects",
+		"/resume",
+		"/running",
+	}
+
+	urls := make([]sitemapURL, 0, len(paths)+len(blogPosts))
+	for _, path := range paths {
+		urls = append(urls, sitemapURL{Location: siteURL + path})
+	}
+	for _, post := range blogPosts {
+		urls = append(urls, sitemapURL{
+			Location: siteURL + "/blog/" + strconv.Itoa(post.Id) + "/" + slugifyTitle(post.Title),
+			LastMod:  post.Created,
+		})
+	}
+
+	w.Header().Set("Content-Type", "application/xml; charset=utf-8")
+	if _, err := w.Write([]byte(xml.Header)); err != nil {
+		log.Printf("Error writing sitemap XML header: %v", err)
+		return
+	}
+	if err := xml.NewEncoder(w).Encode(sitemapURLSet{
+		XMLNS: "http://www.sitemaps.org/schemas/sitemap/0.9",
+		URLs:  urls,
+	}); err != nil {
+		log.Printf("Error generating sitemap: %v", err)
 	}
 }
 

@@ -145,6 +145,28 @@ func TestGenerateRSSHandler(t *testing.T) {
 	assert.Equal(t, 3, len(rssDoc.Channel.Items), "Expected 3 items in RSS feed")
 }
 
+func TestGenerateSitemapHandler(t *testing.T) {
+	setupTestEnvironment(t)
+
+	w := httptest.NewRecorder()
+	r, _ := http.NewRequest("GET", "/sitemap.xml", nil)
+
+	generateSitemapHandler(w, r)
+
+	resp := w.Result()
+	assert.Equal(t, http.StatusOK, resp.StatusCode)
+	assert.Equal(t, "application/xml; charset=utf-8", resp.Header.Get("Content-Type"))
+
+	var sitemap sitemapURLSet
+	assert.NoError(t, xml.NewDecoder(resp.Body).Decode(&sitemap))
+	assert.Equal(t, "http://www.sitemaps.org/schemas/sitemap/0.9", sitemap.XMLNS)
+	assert.Contains(t, sitemap.URLs, sitemapURL{Location: "https://brianbondy.com/about"})
+	assert.Contains(t, sitemap.URLs, sitemapURL{
+		Location: "https://brianbondy.com/blog/1/test-post-1",
+		LastMod:  "2023-01-01",
+	})
+}
+
 // Test for filtersPageHandler
 func TestFiltersPageHandler(t *testing.T) {
 	setupTestEnvironment(t)

@@ -23,6 +23,9 @@ func initializeRoutes(router *mux.Router) {
 	handleRSS := negroni.New(
 		negroni.HandlerFunc(directToHttps),
 		negroni.Wrap(http.HandlerFunc(generateRSSHandler)))
+	handleSitemap := negroni.New(
+		negroni.HandlerFunc(directToHttps),
+		negroni.Wrap(http.HandlerFunc(generateSitemapHandler)))
 	handleTagRedirect := negroni.New(
 		negroni.HandlerFunc(directToHttps),
 		negroni.Wrap(http.HandlerFunc(tagRedirectHandler)))
@@ -59,6 +62,7 @@ func initializeRoutes(router *mux.Router) {
 
 	router.Handle("/", handleHome)
 	router.Handle("/rss", handleRSS)
+	router.Handle("/sitemap.xml", handleSitemap).Methods("GET")
 
 	// Test error endpoint (remove in production) - place early to avoid conflicts
 	router.Handle("/test/{errorcode:[4-5][0-9][0-9]}", negroni.New(
