@@ -437,8 +437,12 @@ func generateRSSHandler(w http.ResponseWriter, r *http.Request) {
 
 		// Add image enclosure if available
 		if post.ImagePath != nil && *post.ImagePath != "" {
-			imageURL := fmt.Sprintf("https://%s%s", r.Host, *post.ImagePath)
-			mimeType := getImageMimeType(*post.ImagePath)
+			imagePath := *post.ImagePath
+			if !strings.HasPrefix(imagePath, "/") {
+				imagePath = "/" + imagePath
+			}
+			imageURL := fmt.Sprintf("https://%s%s", r.Host, imagePath)
+			mimeType := getImageMimeType(imagePath)
 			if mimeType != "" {
 				item.Enclosure = &feeds.Enclosure{
 					Url:    imageURL,

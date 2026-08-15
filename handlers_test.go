@@ -114,6 +114,10 @@ func TestErrorPage(t *testing.T) {
 // Test for generateRSSHandler
 func TestGenerateRSSHandler(t *testing.T) {
 	setupTestEnvironment(t)
+	imagePathWithoutLeadingSlash := "static/img/first.webp"
+	imagePathWithLeadingSlash := "/static/img/second.png"
+	blogPosts[0].ImagePath = &imagePathWithoutLeadingSlash
+	blogPosts[1].ImagePath = &imagePathWithLeadingSlash
 
 	w := httptest.NewRecorder()
 	r, _ := http.NewRequest("GET", "/rss", nil)
@@ -132,8 +136,11 @@ func TestGenerateRSSHandler(t *testing.T) {
 			Title string `xml:"title"`
 			Link  string `xml:"link"`
 			Items []struct {
-				Title string `xml:"title"`
-				Link  string `xml:"link"`
+				Title     string `xml:"title"`
+				Link      string `xml:"link"`
+				Enclosure struct {
+					URL string `xml:"url,attr"`
+				} `xml:"enclosure"`
 			} `xml:"item"`
 		} `xml:"channel"`
 	}
@@ -143,6 +150,8 @@ func TestGenerateRSSHandler(t *testing.T) {
 	assert.NoError(t, err, "Expected valid XML")
 	assert.Equal(t, "Brian R. Bondy's Blog", rssDoc.Channel.Title)
 	assert.Equal(t, 3, len(rssDoc.Channel.Items), "Expected 3 items in RSS feed")
+	assert.Equal(t, "https://example.com/static/img/first.webp", rssDoc.Channel.Items[0].Enclosure.URL)
+	assert.Equal(t, "https://example.com/static/img/second.png", rssDoc.Channel.Items[1].Enclosure.URL)
 }
 
 func TestGenerateSitemapHandler(t *testing.T) {

@@ -4,7 +4,7 @@
     "title": "Fighting Madness - Tahoe 200",
     "created": "2025-07-01",
     "tags": ["running", "tahoe", "destination-trails", "life"],
-    "fbImagePath": "static/img/blogpost_190/snow.webp",
+    "fbImagePath": "/static/img/blogpost_190/snow.webp",
     "fbDescription": " Hallucinations, green lichen, giant pinecones, and two fish sandwiches"
     },
     {
@@ -12,7 +12,7 @@
     "title": "49 Hours with My Son in the Desert - Sedona Canyons 125",
     "created": "2025-06-22",
     "tags": ["running", "cocodona", "life"],
-    "fbImagePath": "static/img/blogpost_189/plant-people.webp",
+    "fbImagePath": "/static/img/blogpost_189/plant-people.webp",
     "fbDescription": "16-year old Ronnie takes on 125 miles, 48 houurs, and 13,000 feet of climb."
     },
     {
@@ -20,7 +20,7 @@
     "title": "Can confirm, HURT 100 hurts",
     "created": "2025-01-20",
     "tags": ["running", "hurt100", "life"],
-    "fbImagePath": "static/img/blogpost_188/1.webp",
+    "fbImagePath": "/static/img/blogpost_188/1.webp",
     "fbDescription": "Blogged about my experience at the HURT 100 race in Honolulu, Hawaii"
   },
   {
@@ -28,14 +28,14 @@
     "title": "Cocodona 2024",
     "created": "2024-05-14",
     "tags": ["running", "cocodona", "life"],
-    "fbImagePath": "static/img/blogpost_187/img21.webp"
+    "fbImagePath": "/static/img/blogpost_187/img21.webp"
   },
   {
     "id": 186,
     "title": "Unwavering dedication",
     "created": "2024-02-23",
     "tags": ["running", "byu", "life", "family"],
-    "fbImagePath": "static/img/blogpost_186/class.webp"
+    "fbImagePath": "/static/img/blogpost_186/class.webp"
   },
   {
     "id": 185,
