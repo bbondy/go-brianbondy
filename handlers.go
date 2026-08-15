@@ -97,8 +97,7 @@ func errorPageWithStatus(w http.ResponseWriter, message string, slug string, sta
 		ErrorCode:    statusCode,
 	}
 
-	t := template.Must(template.New("base.html").Funcs(funcMap).ParseFiles("templates/base.html", "templates/error.html"))
-	err := t.Execute(w, p)
+	err := executeTemplate(w, "error", p)
 	if err != nil {
 		log.Printf("Error executing error page template: %v", err)
 		return
@@ -145,8 +144,7 @@ func getMarkdownTemplateHandler(titleSlug string, markdownSlug string, fbShareUr
 			MarkdownSlug: markdownSlug,
 			ShareUrl:     fbShareUrl,
 		}
-		t := template.Must(template.New("base.html").Funcs(funcMap).ParseFiles("templates/base.html", "templates/simpleMarkdown.html"))
-		err := t.Execute(w, p)
+		err := executeTemplate(w, "simpleMarkdown", p)
 		if err != nil {
 			http.Error(w, err.Error(), http.StatusInternalServerError)
 			return
@@ -223,8 +221,7 @@ func runningHandler(w http.ResponseWriter, r *http.Request) {
 	}
 
 	// Pass the 2D graph as a separate variable
-	t := template.Must(template.New("base.html").Funcs(funcMap).ParseFiles("templates/base.html", "templates/running.html"))
-	err = t.Execute(w, map[string]interface{}{
+	err = executeTemplate(w, "running", map[string]interface{}{
 		"Page":                p,
 		"ContributionGraph2D": contributionGraph2D,
 		"Years": func() []int {
@@ -292,8 +289,7 @@ func projectsHandler(w http.ResponseWriter, r *http.Request) {
 		Projects:     projects,
 		BlogPostMap:  blogPostMap,
 	}
-	t := template.Must(template.New("base.html").Funcs(funcMap).ParseFiles("templates/base.html", "templates/projects.html"))
-	err = t.Execute(w, p)
+	err = executeTemplate(w, "projects", p)
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
@@ -316,8 +312,7 @@ func cheatsheetsHandler(w http.ResponseWriter, r *http.Request) {
 		MarkdownSlug: "cheatsheets",
 		Cheatsheets:  cheatsheets,
 	}
-	t := template.Must(template.New("base.html").Funcs(funcMap).ParseFiles("templates/base.html", "templates/cheatsheets.html"))
-	err = t.Execute(w, p)
+	err = executeTemplate(w, "cheatsheets", p)
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
@@ -356,8 +351,7 @@ func cheatsheetHandler(w http.ResponseWriter, r *http.Request) {
 		MarkdownSlug: "cheatsheets",
 		ShareUrl:     "/cheatsheets/" + slug,
 	}
-	t := template.Must(template.New("base.html").Funcs(funcMap).ParseFiles("templates/base.html", "templates/simpleMarkdown.html"))
-	err = t.Execute(w, p)
+	err = executeTemplate(w, "simpleMarkdown", p)
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
@@ -380,8 +374,7 @@ func interviewsHandler(w http.ResponseWriter, r *http.Request) {
 		MarkdownSlug: "interviews",
 		Interviews:   interviews,
 	}
-	t := template.Must(template.New("base.html").Funcs(funcMap).ParseFiles("templates/base.html", "templates/interviews.html"))
-	err = t.Execute(w, p)
+	err = executeTemplate(w, "interviews", p)
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
@@ -543,8 +536,7 @@ func filtersPageHandler(w http.ResponseWriter, r *http.Request) {
 		MarkdownSlug: "filters",
 		Years:        year_range,
 	}
-	t := template.Must(template.New("base.html").Funcs(funcMap).ParseFiles("templates/base.html", "templates/filters.html"))
-	err := t.Execute(w, p)
+	err := executeTemplate(w, "filters", p)
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 	}
@@ -741,8 +733,7 @@ func homePageHandler(w http.ResponseWriter, r *http.Request) {
 		MarkdownSlug: "home",
 	}
 
-	t := template.Must(template.New("base.html").Funcs(funcMap).ParseFiles("templates/base.html", "templates/home.html"))
-	err := t.Execute(w, p)
+	err := executeTemplate(w, "home", p)
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 	}
@@ -794,8 +785,7 @@ func allPostsHandler(w http.ResponseWriter, r *http.Request) {
 		Year:         year,
 	}
 
-	t := template.Must(template.New("base.html").Funcs(funcMap).ParseFiles("templates/base.html", "templates/allPosts.html"))
-	err := t.Execute(w, p)
+	err := executeTemplate(w, "allPosts", p)
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 	}
@@ -872,8 +862,7 @@ func blogPostPageHandler(w http.ResponseWriter, r *http.Request) {
 				ShareUrl:     fmt.Sprintf("/blog/%d/%s", foundPost.Id, slugifyTitle(foundPost.Title)),
 				MarkdownSlug: "blog",
 			}
-			t := template.Must(template.New("base.html").Funcs(funcMap).ParseFiles("templates/base.html", "templates/blogPost.html"))
-			err := t.Execute(w, p)
+			err := executeTemplate(w, "blogPost", p)
 			if err != nil {
 				http.Error(w, err.Error(), http.StatusInternalServerError)
 			}
@@ -906,8 +895,7 @@ func blogPostPageHandler(w http.ResponseWriter, r *http.Request) {
 			Description:  derefString(post.Description),
 			MarkdownSlug: "blog",
 		}
-		t := template.Must(template.New("base.html").Funcs(funcMap).ParseFiles("templates/base.html", "templates/blogPost.html"))
-		err := t.Execute(w, p)
+		err := executeTemplate(w, "blogPost", p)
 		if err != nil {
 			http.Error(w, err.Error(), http.StatusInternalServerError)
 			return
@@ -1004,8 +992,7 @@ func picturesHandler(w http.ResponseWriter, r *http.Request) {
 		FilterBlogID:  filterBlogID,
 		BlogPostTitle: blogPostTitle,
 	}
-	t := template.Must(template.New("base.html").Funcs(funcMap).ParseFiles("templates/base.html", "templates/pictures.html"))
-	err = t.Execute(w, p)
+	err = executeTemplate(w, "pictures", p)
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 	}
@@ -1029,8 +1016,7 @@ func booksHandler(w http.ResponseWriter, r *http.Request) {
 		Books:        books,
 		BookCount:    len(books),
 	}
-	t := template.Must(template.New("base.html").Funcs(funcMap).ParseFiles("templates/base.html", "templates/books.html"))
-	err = t.Execute(w, p)
+	err = executeTemplate(w, "books", p)
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return

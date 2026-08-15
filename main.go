@@ -21,6 +21,9 @@ func main() {
 	if err := primeSiteData(); err != nil {
 		log.Fatal(err)
 	}
+	if err := initializeTemplates(); err != nil {
+		log.Fatal(err)
+	}
 	router := mux.NewRouter()
 	initializeRoutes(router)
 	log.Fatal(http.ListenAndServe(":8080", router))

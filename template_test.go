@@ -14,6 +14,23 @@ type TestPost struct {
 	Empty   string
 }
 
+func TestInitializeTemplates(t *testing.T) {
+	if err := initializeTemplates(); err != nil {
+		t.Fatalf("initializeTemplates() error = %v", err)
+	}
+	if len(compiledTemplates) != len(templateFiles) {
+		t.Fatalf("loaded %d templates, want %d", len(compiledTemplates), len(templateFiles))
+	}
+
+	firstHomeTemplate := compiledTemplates["home"]
+	if err := initializeTemplates(); err != nil {
+		t.Fatalf("second initializeTemplates() error = %v", err)
+	}
+	if compiledTemplates["home"] != firstHomeTemplate {
+		t.Error("initializeTemplates() reparsed the home template")
+	}
+}
+
 func TestAvail(t *testing.T) {
 	// Test with struct
 	post := TestPost{
