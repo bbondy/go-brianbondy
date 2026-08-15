@@ -103,10 +103,21 @@ func GetStravaRuns() (StravaRuns, error) {
 	if err != nil {
 		return runs, err
 	}
+	for i := range runs {
+		runs[i].Type = normalizeStravaActivityType(runs[i])
+	}
 	sort.Sort(runs)
 	cachedStravaRuns = runs
 	stravaRunsLoaded = true
 	return cachedStravaRuns, nil
+}
+
+// normalizeStravaActivityType groups equivalent Strava categories for display and filtering.
+func normalizeStravaActivityType(run StravaRun) string {
+	if run.Type == "Workout" {
+		return "StairStepper"
+	}
+	return run.Type
 }
 
 // ClearStravaRunsCache clears the cached Strava runs (for testing or reload)
