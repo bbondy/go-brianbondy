@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"io/ioutil"
+	"os"
 	"sort"
 	"strings"
 	"time"
@@ -55,6 +56,58 @@ func initializeBlogPosts() {
 		tag2 := sortedTags[j]
 		return tagCountMap[tag1] > tagCountMap[tag2]
 	})
+}
+
+// primeSiteData loads all handler-backed data before the HTTP server accepts
+// requests. The caches are then read-only for the lifetime of the process.
+func primeSiteData() error {
+	if _, err := data.GetProjects(); err != nil {
+		return fmt.Errorf("load projects: %w", err)
+	}
+	if _, err := data.GetInterviews(); err != nil {
+		return fmt.Errorf("load interviews: %w", err)
+	}
+	if _, err := data.GetBooks(); err != nil {
+		return fmt.Errorf("load books: %w", err)
+	}
+	if _, err := data.GetRuns(); err != nil {
+		return fmt.Errorf("load runs: %w", err)
+	}
+	if _, err := data.GetStravaRuns(); err != nil {
+		return fmt.Errorf("load Strava runs: %w", err)
+	}
+	if _, err := getCachedPictures(); err != nil {
+		return fmt.Errorf("load pictures: %w", err)
+	}
+
+	markdownSlugs := []string{
+		"about.markdown",
+		"advice.markdown",
+		"contact.markdown",
+		"resume.markdown",
+	}
+	cheatsheets, err := data.GetCheatsheets()
+	if err != nil {
+		return fmt.Errorf("load cheatsheets: %w", err)
+	}
+	for _, cheatsheet := range cheatsheets {
+		markdownSlugs = append(markdownSlugs, "cheatsheets/"+cheatsheet.Slug+".md")
+	}
+
+	for _, slug := range markdownSlugs {
+		if err := primeMarkdownData(slug); err != nil {
+			return err
+		}
+	}
+	return nil
+}
+
+func primeMarkdownData(slug string) error {
+	if _, err := os.Stat("data/markdown/" + slug); err != nil {
+		return fmt.Errorf("load markdown %q: %w", slug, err)
+	}
+	getMarkdownData(slug)
+	return nil
 }
 
 func getFilteredPosts(tag string, year int) []data.BlogPost {

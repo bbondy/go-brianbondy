@@ -93,6 +93,25 @@ func TestGetMarkdownData(t *testing.T) {
 	assert.Contains(t, html3, "Another Test", "HTML should contain the content from the new file")
 }
 
+func TestPrimeSiteData(t *testing.T) {
+	origMarkdownMap := markdownMap
+	defer func() { markdownMap = origMarkdownMap }()
+
+	data.ClearProjectsCache()
+	data.ClearInterviewsCache()
+	data.ClearBooksCache()
+	data.ClearRunsCache()
+	data.ClearStravaRunsCache()
+	data.ClearCheatsheetsCache()
+	ClearPicturesCache()
+	markdownMap = make(map[string]string)
+
+	assert.NoError(t, primeSiteData())
+	assert.NotEmpty(t, markdownMap["about.markdown"])
+	assert.NotEmpty(t, markdownMap["cheatsheets/go.md"])
+	assert.True(t, picturesLoaded)
+}
+
 // TestGetProjectsCaching tests the caching mechanism for GetProjects
 func TestGetProjectsCaching(t *testing.T) {
 	// Clear cache before test
