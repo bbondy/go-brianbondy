@@ -805,8 +805,9 @@ function setupContributionGraph() {
     tooltip.hidden = false;
     var left = event.offsetX + 12;
     var top = event.offsetY + 12;
-    if (left + tooltip.offsetWidth > canvas.clientWidth) left = event.offsetX - tooltip.offsetWidth - 12;
-    if (top + tooltip.offsetHeight > canvas.clientHeight) top = event.offsetY - tooltip.offsetHeight - 12;
+    var canvasBounds = canvas.getBoundingClientRect();
+    if (canvasBounds.left + left + tooltip.offsetWidth > window.innerWidth) left = event.offsetX - tooltip.offsetWidth - 12;
+    if (canvasBounds.top + top + tooltip.offsetHeight > window.innerHeight) top = event.offsetY - tooltip.offsetHeight - 12;
     tooltip.style.left = left + 'px';
     tooltip.style.top = top + 'px';
   });
