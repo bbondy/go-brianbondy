@@ -1,12 +1,78 @@
 package main
 
 import (
+	"os"
+	"path/filepath"
+	"regexp"
+	"strings"
 	"testing"
 	"time"
 
 	"github.com/bbondy/go-brianbondy/data"
 	"github.com/stretchr/testify/assert"
 )
+
+func TestSanitizeMarkdownHTML(t *testing.T) {
+	assert.True(t, safeInlineStyle.MatchString("float:left;padding-right:10px;padding-bottom:10px"))
+	input := `<p class="intro" style="width:90vw">Safe content</p><img src="/static/img/test.webp" style="float:left;padding-right:10px;padding-bottom:10px" onerror="alert(1)"><script>alert(1)</script><a href="javascript:alert(1)">bad link</a><iframe src="https://evil.example/embed"></iframe><iframe src="https://www.youtube.com/embed/abc123" width="320" height="560" frameborder="0" allowfullscreen></iframe><video controls><source src="/static/img/blogpost_183/video.mp4" type="video/mp4"></video>`
+
+	got := sanitizeMarkdownHTML(input)
+
+	assert.Contains(t, got, `<p class="intro" style="width:90vw">Safe content</p>`)
+	assert.Contains(t, got, `<img src="/static/img/test.webp" style="float:left;padding-right:10px;padding-bottom:10px">`)
+	assert.Contains(t, got, `<iframe src="https://www.youtube.com/embed/abc123" width="320" height="560" frameborder="0" allowfullscreen=""></iframe>`)
+	assert.Contains(t, got, `<video controls=""><source src="/static/img/blogpost_183/video.mp4" type="video/mp4"></video>`)
+	assert.NotContains(t, got, "<script")
+	assert.NotContains(t, got, "onerror")
+	assert.NotContains(t, got, "javascript:")
+	assert.NotContains(t, got, "evil.example")
+}
+
+func TestMarkdownSanitizationPreservesExistingMedia(t *testing.T) {
+	originalMarkdownMap := markdownMap
+	defer func() { markdownMap = originalMarkdownMap }()
+	markdownMap = make(map[string]string)
+
+	blogWithVideo := getMarkdownData("blog/183.markdown")
+	assert.Contains(t, blogWithVideo, `<img style="width:90vw" src="/static/img/blogpost_183/family-finish.webp">`)
+	assert.Contains(t, blogWithVideo, `<video controls="">`)
+	assert.Contains(t, blogWithVideo, `<source src="/static/img/blogpost_183/video.mp4" type="video/mp4">`)
+
+	blogWithEmbed := getMarkdownData("blog/190.markdown")
+	assert.Contains(t, blogWithEmbed, `<iframe src="https://www.youtube.com/embed/oaEKb0UJ-U8" width="320" height="560" frameborder="0" allowfullscreen=""></iframe>`)
+}
+
+func TestAllBlogMarkdownSurvivesSanitization(t *testing.T) {
+	files, err := filepath.Glob("data/markdown/blog/*.markdown")
+	if err != nil {
+		t.Fatalf("find blog Markdown files: %v", err)
+	}
+	if len(files) == 0 {
+		t.Fatal("no blog Markdown files found")
+	}
+
+	for _, file := range files {
+		content, err := os.ReadFile(file)
+		if err != nil {
+			t.Fatalf("read %s: %v", file, err)
+		}
+		rendered := renderMarkdown(content)
+		sanitized := sanitizeMarkdownHTML(rendered)
+		visibleRendered := regexp.MustCompile(`(?s)<!--.*?-->`).ReplaceAllString(rendered, "")
+
+		for _, marker := range []string{"style=", "class=", "<video", "<iframe"} {
+			if strings.Count(sanitized, marker) != strings.Count(visibleRendered, marker) {
+				t.Errorf("%s: sanitizer changed %q count from %d to %d", file, marker, strings.Count(visibleRendered, marker), strings.Count(sanitized, marker))
+			}
+		}
+		if strings.Contains(sanitized, "<script") {
+			t.Errorf("%s: sanitized output contains a script tag", file)
+		}
+		if regexp.MustCompile(`(?i)\son[a-z]+\s*=`).MatchString(sanitized) {
+			t.Errorf("%s: sanitized output contains an event handler", file)
+		}
+	}
+}
 
 // TestDerefString tests the derefString helper function
 func TestDerefString(t *testing.T) {

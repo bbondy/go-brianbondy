@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"io/ioutil"
 	"os"
+	"regexp"
 	"sort"
 	"strings"
 	"time"
@@ -12,6 +13,7 @@ import (
 	"github.com/bbondy/go-brianbondy/data"
 	"github.com/gomarkdown/markdown"
 	"github.com/gomarkdown/markdown/parser"
+	"github.com/microcosm-cc/bluemonday"
 )
 
 var markdownMap = make(map[string]string)
@@ -21,6 +23,52 @@ var blogPosts []data.BlogPost
 var blogPostIdMap = make(map[int]data.BlogPost)
 var tagCountMap = make(map[string]int)
 var sortedTags []string
+
+var (
+	// This permits declaration lists used by existing posts while excluding
+	// functions, quoted values, and URL syntax, which can make CSS executable.
+	safeInlineStyle = regexp.MustCompile(`(?i)^\s*[a-z-]+\s*:\s*[-#a-z0-9.%\s]+(?:;\s*[a-z-]+\s*:\s*[-#a-z0-9.%\s]+)*;?\s*$`)
+	iframeSource    = regexp.MustCompile(`^https://www\.youtube\.com/embed/[A-Za-z0-9_-]+(?:\?[-A-Za-z0-9_=&%./]+)?$|^http://s\.vid\.ly/embeded\.html\?link=[A-Za-z0-9]+&autoplay=(?:true|false)$`)
+	integerValue    = regexp.MustCompile(`^[0-9]+$`)
+	iframeAllow     = regexp.MustCompile(`^[a-z-]+(?:;\s*[a-z-]+)*$`)
+	markdownPolicy  = newMarkdownPolicy()
+)
+
+func newMarkdownPolicy() *bluemonday.Policy {
+	p := bluemonday.UGCPolicy()
+
+	// Existing content uses classes and a small set of presentational styles.
+	// Keep those styles while restricting both property names and values.
+	p.AllowAttrs("class").Globally()
+	p.AllowAttrs("style").Matching(safeInlineStyle).Globally()
+
+	// Preserve the existing, explicitly trusted media embeds without allowing
+	// arbitrary third-party documents to be embedded in the site.
+	p.AllowElements("iframe")
+	p.AllowAttrs("src").Matching(iframeSource).OnElements("iframe")
+	p.AllowAttrs("width", "height", "frameborder").Matching(integerValue).OnElements("iframe")
+	p.AllowAttrs("title", "name", "scrolling").OnElements("iframe")
+	p.AllowAttrs("allow").Matching(iframeAllow).OnElements("iframe")
+	p.AllowAttrs("allowfullscreen").OnElements("iframe")
+
+	// Preserve local HTML5 video without allowing remote media URLs.
+	p.AllowElements("video", "source")
+	p.AllowAttrs("controls").OnElements("video")
+	p.AllowAttrs("src").Matching(regexp.MustCompile(`^/static/[A-Za-z0-9_./-]+$`)).OnElements("video", "source")
+	p.AllowAttrs("type").Matching(regexp.MustCompile(`^video/[A-Za-z0-9.+-]+$`)).OnElements("source")
+
+	return p
+}
+
+func sanitizeMarkdownHTML(html string) string {
+	return markdownPolicy.Sanitize(html)
+}
+
+func renderMarkdown(content []byte) string {
+	extensions := parser.CommonExtensions | parser.AutoHeadingIDs
+	markdownParser := parser.NewWithExtensions(extensions)
+	return string(markdown.ToHTML(content, markdownParser, nil))
+}
 
 func initializeBlogPosts() {
 	blogPostManifest, _ := ioutil.ReadFile("data/blogPostManifest.json")
@@ -144,10 +192,7 @@ func getMarkdownData(slug string) string {
 	_, ok := markdownMap[slug]
 	if !ok {
 		data, _ := ioutil.ReadFile("data/markdown/" + slug)
-		extensions := parser.CommonExtensions | parser.AutoHeadingIDs
-		parser := parser.NewWithExtensions(extensions)
-		html := markdown.ToHTML([]byte(data), parser, nil)
-		markdownMap[slug] = string(html)
+		markdownMap[slug] = sanitizeMarkdownHTML(renderMarkdown(data))
 	}
 	return markdownMap[slug]
 }

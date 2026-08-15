@@ -5,7 +5,8 @@ go 1.16
 require (
 	github.com/codegangsta/negroni v1.0.0
 	github.com/gomarkdown/markdown v0.0.0-20210408062403-ad838ccf8cdd
-	github.com/gorilla/feeds v1.2.0 // indirect
+	github.com/gorilla/feeds v1.2.0
 	github.com/gorilla/mux v1.8.0
-	github.com/stretchr/testify v1.10.0 // indirect
+	github.com/microcosm-cc/bluemonday v1.0.27
+	github.com/stretchr/testify v1.10.0
 )

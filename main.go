@@ -61,8 +61,10 @@ var funcMap = template.FuncMap{
 		re := regexp.MustCompile(`([a-z])([A-Z])`)
 		return re.ReplaceAllString(activityType, "$1 $2")
 	},
-	"htmlSafe":       func(html string) template.HTML { return template.HTML(html) },
-	"optimizeImages": func(html string) template.HTML { return template.HTML(optimizeImagesInContent(html)) },
+	"htmlSafe": func(html string) template.HTML { return template.HTML(sanitizeMarkdownHTML(html)) },
+	"optimizeImages": func(html string) template.HTML {
+		return template.HTML(optimizeImagesInContent(sanitizeMarkdownHTML(html)))
+	},
 	"getTagCount": func(tag string) int {
 		count, ok := tagCountMap[tag]
 		if !ok {
