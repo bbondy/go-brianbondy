@@ -415,14 +415,14 @@ func interviewsHandler(w http.ResponseWriter, r *http.Request) {
 func generateRSSHandler(w http.ResponseWriter, r *http.Request) {
 	feed := &feeds.Feed{
 		Title:       "Brian R. Bondy's Blog",
-		Link:        &feeds.Link{Href: "https://" + r.Host},
+		Link:        &feeds.Link{Href: siteURL},
 		Description: "Brian R. Bondy's Blog - Coding, Running, and Life",
 		Author:      &feeds.Author{Name: "Brian R. Bondy"},
 		Created:     time.Now(),
 		Image: &feeds.Image{
-			Url:    fmt.Sprintf("https://%s/static/img/avatar.png", r.Host),
+			Url:    siteURL + "/static/img/avatar.png",
 			Title:  "Brian R. Bondy's Blog",
-			Link:   fmt.Sprintf("https://%s", r.Host),
+			Link:   siteURL,
 			Width:  200,
 			Height: 200,
 		},
@@ -447,8 +447,8 @@ func generateRSSHandler(w http.ResponseWriter, r *http.Request) {
 		}
 
 		// Create the full URL for both link and guid
-		postURL := fmt.Sprintf("https://%s/blog/%d/%s", r.Host, post.Id, slugifyTitle(post.Title))
-		guidURL := fmt.Sprintf("https://%s/blog/%d", r.Host, post.Id)
+		postURL := fmt.Sprintf("%s/blog/%d/%s", siteURL, post.Id, slugifyTitle(post.Title))
+		guidURL := fmt.Sprintf("%s/blog/%d", siteURL, post.Id)
 
 		item := &feeds.Item{
 			Title:       post.Title,
@@ -465,7 +465,7 @@ func generateRSSHandler(w http.ResponseWriter, r *http.Request) {
 			if !strings.HasPrefix(imagePath, "/") {
 				imagePath = "/" + imagePath
 			}
-			imageURL := fmt.Sprintf("https://%s%s", r.Host, imagePath)
+			imageURL := siteURL + imagePath
 			mimeType := getImageMimeType(imagePath)
 			if mimeType != "" {
 				item.Enclosure = &feeds.Enclosure{

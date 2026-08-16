@@ -150,8 +150,8 @@ func TestGenerateRSSHandler(t *testing.T) {
 	assert.NoError(t, err, "Expected valid XML")
 	assert.Equal(t, "Brian R. Bondy's Blog", rssDoc.Channel.Title)
 	assert.Equal(t, 3, len(rssDoc.Channel.Items), "Expected 3 items in RSS feed")
-	assert.Equal(t, "https://example.com/static/img/first.webp", rssDoc.Channel.Items[0].Enclosure.URL)
-	assert.Equal(t, "https://example.com/static/img/second.png", rssDoc.Channel.Items[1].Enclosure.URL)
+	assert.Equal(t, "https://brianbondy.com/static/img/first.webp", rssDoc.Channel.Items[0].Enclosure.URL)
+	assert.Equal(t, "https://brianbondy.com/static/img/second.png", rssDoc.Channel.Items[1].Enclosure.URL)
 }
 
 func TestGenerateSitemapHandler(t *testing.T) {
@@ -611,6 +611,7 @@ func TestGetMarkdownTemplateHandler(t *testing.T) {
 	// Create a test request
 	w := httptest.NewRecorder()
 	r, _ := http.NewRequest("GET", "/about", nil)
+	r.Host = "brianbondy.com"
 
 	// Set header to simulate HTTPS, so directToHttps won't redirect
 	r.Header.Set("X-Forwarded-Proto", "https")
