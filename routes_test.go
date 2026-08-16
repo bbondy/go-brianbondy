@@ -218,8 +218,8 @@ func TestMiddlewareChain(t *testing.T) {
 	router.ServeHTTP(w, req)
 
 	// Should redirect to HTTPS
-	assert.Equal(t, http.StatusTemporaryRedirect, w.Code)
+	assert.Equal(t, http.StatusPermanentRedirect, w.Code)
 	location, err := w.Result().Location()
 	assert.NoError(t, err)
-	assert.Equal(t, "https://"+req.Host+"/", location.String())
+	assert.Equal(t, "https://brianbondy.com/", location.String())
 }

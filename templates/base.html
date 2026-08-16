@@ -271,7 +271,8 @@
     <!-- Optimized favicon -->
     <link rel="icon" type="image/x-icon" href="/static/img/favicon.ico">
     <link rel="shortcut icon" type="image/x-icon" href="/static/img/favicon.ico">
-    <link rel="alternate" type="application/rss+xml" title="Brian Bondy RSS Feed" href="http://www.brianbondy.com/rss">
+    {{if canonicalURL .}}<link rel="canonical" href="{{canonicalURL .}}">{{end}}
+    <link rel="alternate" type="application/rss+xml" title="Brian Bondy RSS Feed" href="https://brianbondy.com/rss">
     <meta name="viewport" content="width=device-width, min-width=285, max-viewport=800, initial-scale=1">
     <meta name="theme-color" content="#9AC0FF">
     <meta property="og:title" content="{{.Title}}">

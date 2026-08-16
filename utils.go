@@ -6,6 +6,7 @@ import (
 	"net/http"
 	"os"
 	"path/filepath"
+	"reflect"
 	"regexp"
 	"strings"
 )
@@ -51,19 +52,59 @@ func GetTitle(titleSlug string) string {
 }
 
 func directToHttps(w http.ResponseWriter, r *http.Request, next http.HandlerFunc) {
-	if r.Host == "localhost:8080" ||
-		r.URL.Scheme == "https" ||
-		strings.HasPrefix(r.Proto, "HTTPS") ||
-		r.Header.Get("X-Forwarded-Proto") == "https" {
+	if r.Host == "localhost:8080" {
 		next(w, r)
-	} else {
-		target := "https://" + r.Host + r.URL.Path
-		if r.URL.RawQuery != "" {
-			target += "?" + r.URL.RawQuery
-		}
-		http.Redirect(w, r, target, http.StatusTemporaryRedirect)
-		// Don't call next() after redirect to prevent double header writes
+		return
 	}
+
+	isHTTPS := r.URL.Scheme == "https" || strings.HasPrefix(r.Proto, "HTTPS") || r.Header.Get("X-Forwarded-Proto") == "https"
+	if isHTTPS && r.Host == "brianbondy.com" {
+		next(w, r)
+		return
+	}
+
+	// Use a fixed hostname rather than the request Host header so every public
+	// URL resolves to the site's single canonical origin.
+	http.Redirect(w, r, siteURL+r.URL.RequestURI(), http.StatusPermanentRedirect)
+}
+
+// canonicalURL returns the preferred public URL for a rendered page.
+func canonicalURL(data interface{}) string {
+	pathBySlug := map[string]string{
+		"home":             "/",
+		"all":              "/all",
+		"filters":          "/blog/filters",
+		"running":          "/running",
+		"pictures":         "/pictures",
+		"projects":         "/projects",
+		"interviews":       "/interviews",
+		"cheatsheets":      "/cheatsheets",
+		"about.markdown":   "/about",
+		"advice.markdown":  "/advice",
+		"contact.markdown": "/contact",
+		"resume.markdown":  "/resume",
+		"books":            "/books",
+	}
+
+	v := reflect.ValueOf(data)
+	if v.Kind() == reflect.Ptr {
+		v = v.Elem()
+	}
+	if v.Kind() == reflect.Map {
+		if page := v.MapIndex(reflect.ValueOf("Page")); page.IsValid() {
+			return canonicalURL(page.Interface())
+		}
+	}
+	if v.Kind() != reflect.Struct {
+		return ""
+	}
+	if shareURL := v.FieldByName("ShareUrl"); shareURL.IsValid() && shareURL.Kind() == reflect.String && shareURL.String() != "" {
+		return siteURL + shareURL.String()
+	}
+	if slug := v.FieldByName("MarkdownSlug"); slug.IsValid() && slug.Kind() == reflect.String {
+		return siteURL + pathBySlug[slug.String()]
+	}
+	return ""
 }
 
 func extractFirstParagraph(content string) string {

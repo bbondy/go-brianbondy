@@ -5,6 +5,8 @@ import (
 	"net/http/httptest"
 	"strings"
 	"testing"
+
+	"github.com/bbondy/go-brianbondy/data"
 )
 
 func TestSlugifyTitle(t *testing.T) {
@@ -42,11 +44,13 @@ func TestDirectToHttps(t *testing.T) {
 		host           string
 		forwardedProto string
 		wantRedirect   bool
+		wantLocation   string
 	}{
-		{"http to https", "http://example.com", "HTTP/1.1", "example.com", "", true},
-		{"already https", "https://example.com", "HTTP/2.0", "example.com", "", false},
-		{"localhost no redirect", "http://localhost:8080", "HTTP/1.1", "localhost:8080", "", false},
-		{"forwarded https", "http://example.com", "HTTP/1.1", "example.com", "https", false},
+		{"http to canonical https", "http://example.com/test?x=1", "HTTP/1.1", "example.com", "", true, "https://brianbondy.com/test?x=1"},
+		{"www redirects to apex", "https://www.brianbondy.com", "HTTP/2.0", "www.brianbondy.com", "", true, "https://brianbondy.com/"},
+		{"canonical https", "https://brianbondy.com", "HTTP/2.0", "brianbondy.com", "", false, ""},
+		{"localhost no redirect", "http://localhost:8080", "HTTP/1.1", "localhost:8080", "", false, ""},
+		{"forwarded canonical https", "http://brianbondy.com", "HTTP/1.1", "brianbondy.com", "https", false, ""},
 	}
 
 	for _, tt := range tests {
@@ -60,8 +64,11 @@ func TestDirectToHttps(t *testing.T) {
 			directToHttps(w, req, func(w http.ResponseWriter, r *http.Request) {})
 
 			if tt.wantRedirect {
-				if w.Code != http.StatusTemporaryRedirect {
-					t.Errorf("expected status %v, got %v", http.StatusTemporaryRedirect, w.Code)
+				if w.Code != http.StatusPermanentRedirect {
+					t.Errorf("expected status %v, got %v", http.StatusPermanentRedirect, w.Code)
+				}
+				if got := w.Header().Get("Location"); got != tt.wantLocation {
+					t.Errorf("expected location %q, got %q", tt.wantLocation, got)
 				}
 			} else {
 				if w.Code != http.StatusOK {
@@ -69,6 +76,15 @@ func TestDirectToHttps(t *testing.T) {
 				}
 			}
 		})
+	}
+}
+
+func TestCanonicalURL(t *testing.T) {
+	if got := canonicalURL(&data.SimpleMarkdownPage{MarkdownSlug: "about.markdown"}); got != "https://brianbondy.com/about" {
+		t.Errorf("canonicalURL() = %q, want about URL", got)
+	}
+	if got := canonicalURL(&data.BlogPostPage{ShareUrl: "/blog/1/test-post"}); got != "https://brianbondy.com/blog/1/test-post" {
+		t.Errorf("canonicalURL() = %q, want blog URL", got)
 	}
 }
 
