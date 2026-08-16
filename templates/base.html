@@ -73,16 +73,28 @@
       <meta name="description" content="Brian Bondy - Father, runner, software engineer, entrepreneur, and writer.">
     {{end}}
     
-    <!-- DNS prefetch for external domains -->
-    <link rel="dns-prefetch" href="//fonts.googleapis.com">
-    <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    
-    <!-- Preload critical fonts -->
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Inter:wght@400;500;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"></noscript>
+    <!-- Preload self-hosted critical fonts -->
+    <link rel="preload" href="/static/fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/static/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
     
     <!-- Critical CSS inlined for above-the-fold content -->
     <style>
+      @font-face {
+        font-family: 'Fraunces';
+        font-style: normal;
+        font-weight: 600 700;
+        font-display: swap;
+        src: url('/static/fonts/fraunces-latin.woff2') format('woff2');
+      }
+
+      @font-face {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400 600;
+        font-display: swap;
+        src: url('/static/fonts/inter-latin.woff2') format('woff2');
+      }
+
       /* CSS Variables for theming */
       :root {
         --bg-color: #eef3f8;
