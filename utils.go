@@ -26,7 +26,9 @@ func gzipHTML(w http.ResponseWriter, r *http.Request, next http.HandlerFunc) {
 	w.Header().Set("Content-Encoding", "gzip")
 	w.Header().Add("Vary", "Accept-Encoding")
 	gz := gzip.NewWriter(w)
-	defer gz.Close()
+	defer func() {
+		_ = gz.Close()
+	}()
 	next(gzipResponseWriter{ResponseWriter: w, writer: gz}, r)
 }
 

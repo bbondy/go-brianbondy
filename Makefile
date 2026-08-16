@@ -24,10 +24,13 @@ test:
 # Update cache busting version in templates
 update-cache:
 	@echo "Updating cache busting version..."
-	@current_version=$$(grep -m1 -o 'cachebust=[0-9]*' templates/base.html | head -n1 | cut -d= -f2); \
+	@current_version=$$(grep -m1 -o 'main.css?v=[0-9]*' templates/base.html | cut -d= -f2); \
+	if [ -z "$$current_version" ]; then \
+		echo "Could not find the main.css cache version in templates/base.html" >&2; \
+		exit 1; \
+	fi; \
 	new_version=$$(expr $$current_version + 1); \
-	sed -i '' "0,/cachebust=$$current_version/s//cachebust=$$new_version/" templates/base.html; \
-	sed -i '' "0,/cachebust=$$current_version/s//cachebust=$$new_version/" templates/base.html; \
+	sed -i '' "s/main.css?v=$$current_version/main.css?v=$$new_version/g" templates/base.html; \
 	echo "Cache busting updated to version $$new_version"
 
 # Deployment
