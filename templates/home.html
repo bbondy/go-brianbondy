@@ -1,4 +1,31 @@
 {{define "mountPoint"}}
+  <section class="homeIntro" aria-labelledby="home-intro-title">
+    <div class="homeIntroCopy">
+      <h1 id="home-intro-title">Running, work, and life</h1>
+      <p>I’m a father and ultrarunner who occasionally writes things down. I also work on software, and co-founded Brave after time at Mozilla and Khan Academy.</p>
+      <p>Here you’ll find race reports, stories from work, and other things I’ve wanted to remember or share.</p>
+    </div>
+
+    <nav class="homeStartHere" aria-label="Start here">
+      <a href="/running" class="homeStartHereCard">
+        <span class="homeStartHereTitle">Running</span>
+        <span>Race reports and miles from the trail.</span>
+        <span class="homeStartHereLink">Read the running archive →</span>
+      </a>
+      <a href="/projects" class="homeStartHereCard">
+        <span class="homeStartHereTitle">Projects</span>
+        <span>Things I’ve built and helped build.</span>
+        <span class="homeStartHereLink">Explore projects →</span>
+      </a>
+      <a href="/all" class="homeStartHereCard">
+        <span class="homeStartHereTitle">Writing</span>
+        <span>Browse the full archive, going back to 2005.</span>
+        <span class="homeStartHereLink">Browse all writing →</span>
+      </a>
+    </nav>
+  </section>
+
+  <h2 class="latestPostsHeading">Latest writing</h2>
   <div class="previewContainer">
     {{range .Posts}}
       <article class="blogPostPreview">

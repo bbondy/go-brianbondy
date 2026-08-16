@@ -1257,6 +1257,73 @@ textarea {
   text-decoration: none;
 }
 
+.homeIntro {
+  margin-bottom: 36px;
+}
+
+.homeIntroCopy {
+  max-width: 680px;
+}
+
+.homeIntro h1 {
+  border: 0;
+  font-size: 2em;
+  margin: 0 0 14px;
+  padding: 0;
+}
+
+.homeIntroCopy p {
+  line-height: 1.7;
+  margin: 0 0 12px;
+}
+
+.homeStartHere {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 24px;
+}
+
+.homeStartHereCard {
+  background: var(--panel-bg);
+  border: 1px solid var(--panel-border);
+  border-radius: 12px;
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  line-height: 1.45;
+  padding: 16px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.homeStartHereCard:hover {
+  border-color: var(--link-color);
+  box-shadow: var(--panel-shadow);
+  transform: translateY(-2px);
+}
+
+.homeStartHereTitle {
+  color: var(--heading-color);
+  font-family: var(--font-heading);
+  font-size: 1.15em;
+  font-weight: 650;
+}
+
+.homeStartHereLink {
+  color: var(--link-color);
+  font-size: 0.9em;
+  font-weight: 600;
+  margin-top: auto;
+}
+
+.latestPostsHeading {
+  border: 0;
+  font-size: 1.35em;
+  margin: 0 0 18px;
+  padding: 0;
+}
+
 .blogPostPreview {
   padding: 20px;
   background-color: var(--panel-bg);
@@ -2770,6 +2837,14 @@ img[loading="lazy"] {
 
 /* Responsive images */
 @media (max-width: 768px) {
+  .homeIntro h1 {
+    font-size: 1.75em;
+  }
+
+  .homeStartHere {
+    grid-template-columns: 1fr;
+  }
+
   .blogPost img {
     max-width: 100%;
     margin: 10px 0;
