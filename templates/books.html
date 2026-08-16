@@ -10,12 +10,12 @@
     <div class="card-entry">
       <div class="project-entry">
         <div class="project-content">
-          <h3><a href="{{.GoodreadsURL}}" target="_blank" class="blog-title">{{.Title}}</a></h3>
+          <h3><a href="{{.GoodreadsURL}}" target="_blank" rel="noopener noreferrer" class="blog-title">{{.Title}}</a></h3>
           <div class="book-author">by {{.Author}}</div>
           <div class="book-meta"><em>{{.Year}}, {{.Publisher}}, {{.Pages}} pages</em></div>
           <div class="project-links">
-            <a href="{{.GoodreadsURL}}" target="_blank" title="View on Goodreads" class="action-link website-link"><i class="fas fa-book"></i></a>
-            <a href="{{.AudibleURL}}" target="_blank" title="Search on Audible" class="action-link audible-link"><i class="fab fa-audible"></i></a>
+            <a href="{{.GoodreadsURL}}" target="_blank" rel="noopener noreferrer" title="View on Goodreads" class="action-link website-link"><i class="fas fa-book"></i></a>
+            <a href="{{.AudibleURL}}" target="_blank" rel="noopener noreferrer" title="Search on Audible" class="action-link audible-link"><i class="fab fa-audible"></i></a>
           </div>
         </div>
       </div>
@@ -49,4 +49,4 @@
     updateCount();
   });
 </script>
-{{end}} 
+{{end}}

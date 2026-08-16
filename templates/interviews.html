@@ -7,7 +7,7 @@
       <div class="interview-entry">
         <div class="interview-content">
           <h3>
-            {{if .URL}}<a href="{{.URL}}" target="_blank">{{.Title}}</a>{{else}}{{.Title}}{{end}}
+            {{if .URL}}<a href="{{.URL}}" target="_blank" rel="noopener noreferrer">{{.Title}}</a>{{else}}{{.Title}}{{end}}
           </h3>
           <div class="interview-meta">
             <span class="interview-date">{{.Date}}</span>
@@ -17,7 +17,7 @@
           <div class="card-details">{{.Description}}</div>
           <div class="interview-links">
             {{if .URL}}
-              <a href="{{.URL}}" target="_blank" title="Watch/Listen" class="action-link interview-link">
+              <a href="{{.URL}}" target="_blank" rel="noopener noreferrer" title="Watch/Listen" class="action-link interview-link">
                 <i class="fas fa-external-link-alt"></i>
               </a>
             {{end}}
@@ -27,4 +27,4 @@
     </div>
   {{end}}
 </div>
-{{end}} 
+{{end}}

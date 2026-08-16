@@ -15,7 +15,7 @@
         {{end}}
         <div class="project-content">
           <h3>
-            {{if .URL}}<a href="{{.URL}}" target="_blank">{{.Title}}</a>{{else}}{{.Title}}{{end}}
+            {{if .URL}}<a href="{{.URL}}" target="_blank" rel="noopener noreferrer">{{.Title}}</a>{{else}}{{.Title}}{{end}}
           </h3>
           <div class="card-details">{{.Description}}</div>
           
@@ -34,7 +34,7 @@
                     {{else}}
                       {{ printf "%s&type=commits" $base }}
                     {{end}}
-                  " target="_blank">
+                  " target="_blank" rel="noopener noreferrer">
                     {{.GitHubStats.CommitCount}}+ commits by bbondy
                   </a>
                 </div>
@@ -52,7 +52,7 @@
                     {{else}}
                       {{ printf "%s&type=pullrequests" $base }}
                     {{end}}
-                  " target="_blank">
+                  " target="_blank" rel="noopener noreferrer">
                     {{.GitHubStats.PrCount}}+ pull requests by bbondy
                   </a>
                 </div>
@@ -76,10 +76,10 @@
           
           <div class="project-links">
             {{if .Website}}
-              <a href="{{.Website}}" target="_blank" title="Website" class="action-link website-link"><i class="fas fa-globe"></i></a>
+              <a href="{{.Website}}" target="_blank" rel="noopener noreferrer" title="Website" class="action-link website-link"><i class="fas fa-globe"></i></a>
             {{end}}
             {{if .Github}}
-              <a href="{{.Github}}" target="_blank" title="GitHub" class="action-link github-link"><i class="fab fa-github"></i></a>
+              <a href="{{.Github}}" target="_blank" rel="noopener noreferrer" title="GitHub" class="action-link github-link"><i class="fab fa-github"></i></a>
             {{end}}
             {{if .BlogPostID}}
               {{with index $.BlogPostMap .BlogPostID}}

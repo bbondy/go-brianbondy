@@ -1013,7 +1013,7 @@ async function openModal(date, runs) {
         <div><strong>Time:</strong> ${run.time || ''}</div>
         ${run.pace ? `<div><strong>Pace:</strong> ${run.pace}</div>` : ''}
         ${run.elevation ? `<div><strong>Elevation:</strong> ${run.elevation}</div>` : ''}
-        ${run.activity_id ? `<div><a href="https://www.strava.com/activities/${run.activity_id}" target="_blank">View on Strava</a></div>` : ''}
+        ${run.activity_id ? `<div><a href="https://www.strava.com/activities/${run.activity_id}" target="_blank" rel="noopener noreferrer">View on Strava</a></div>` : ''}
       </div>
     `).join('');
   }
