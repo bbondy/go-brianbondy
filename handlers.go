@@ -229,6 +229,7 @@ func runningHandler(w http.ResponseWriter, r *http.Request) {
 
 	// Pass the 2D graph as a separate variable
 	err = executeTemplate(w, "running", map[string]interface{}{
+		"MarkdownSlug":        p.MarkdownSlug,
 		"Page":                p,
 		"ContributionGraph2D": contributionGraph2D,
 		"Years": func() []int {
