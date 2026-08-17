@@ -895,14 +895,16 @@
         const themeToggle = document.getElementById('theme-toggle');
         const themeIcon = document.getElementById('theme-icon');
         
-        // Get saved theme or default to light
-        const savedTheme = localStorage.getItem('theme') || 'light';
+        // Keep the saved preference separate from the theme currently applied.
+        const savedTheme = localStorage.getItem('theme');
         const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
         
         // Set initial theme
-        function setTheme(theme) {
+        function setTheme(theme, savePreference) {
           document.documentElement.setAttribute('data-theme', theme);
-          localStorage.setItem('theme', theme);
+          if (savePreference) {
+            localStorage.setItem('theme', theme);
+          }
           
           // Update button icon
           if (theme === 'dark') {
@@ -913,17 +915,13 @@
         }
         
         // Initialize theme
-        if (savedTheme === 'dark' || (savedTheme === 'auto' && prefersDark)) {
-          setTheme('dark');
-        } else {
-          setTheme('light');
-        }
+        setTheme(savedTheme === 'dark' || (savedTheme !== 'light' && prefersDark) ? 'dark' : 'light');
         
         // Toggle theme
         themeToggle.addEventListener('click', function() {
           const currentTheme = document.documentElement.getAttribute('data-theme');
           const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-          setTheme(newTheme);
+          setTheme(newTheme, true);
         });
         
         // Listen for system theme changes
