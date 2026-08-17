@@ -5,20 +5,15 @@
       // Prevent flash of unstyled content (FOUC) for dark mode
       (function() {
         try {
-          // Check localStorage first
-          var theme = localStorage.getItem('theme');
-          
-          // If no theme in localStorage, check system preference
-          if (!theme) {
-            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-              theme = 'dark';
-            } else {
-              theme = 'light';
-            }
-          }
+          // Resolve the saved preference before styles are rendered.
+          var savedTheme = localStorage.getItem('theme');
+          var hasExplicitTheme = savedTheme === 'dark' || savedTheme === 'light';
+          var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+          var theme = hasExplicitTheme ? savedTheme : (prefersDark ? 'dark' : 'light');
           
           // Apply theme immediately to prevent flash
           document.documentElement.setAttribute('data-theme', theme);
+          document.documentElement.setAttribute('data-theme-preference', hasExplicitTheme ? savedTheme : 'auto');
 
           // Add subtle background variation per page load
           (function() {
@@ -61,6 +56,7 @@
         } catch (e) {
           // Fallback to light theme if there's an error
           document.documentElement.setAttribute('data-theme', 'light');
+          document.documentElement.setAttribute('data-theme-preference', 'auto');
         }
       })();
     </script>
@@ -895,27 +891,21 @@
         const themeToggle = document.getElementById('theme-toggle');
         const themeIcon = document.getElementById('theme-icon');
         
-        // Keep the saved preference separate from the theme currently applied.
-        const savedTheme = localStorage.getItem('theme');
-        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        
-        // Set initial theme
+        function updateThemeIcon(theme) {
+          themeIcon.textContent = theme === 'dark' ? '☀️' : '🌙';
+        }
+
         function setTheme(theme, savePreference) {
           document.documentElement.setAttribute('data-theme', theme);
           if (savePreference) {
             localStorage.setItem('theme', theme);
+            document.documentElement.setAttribute('data-theme-preference', theme);
           }
-          
-          // Update button icon
-          if (theme === 'dark') {
-            themeIcon.textContent = '☀️';
-          } else {
-            themeIcon.textContent = '🌙';
-          }
+          updateThemeIcon(theme);
         }
         
-        // Initialize theme
-        setTheme(savedTheme === 'dark' || (savedTheme !== 'light' && prefersDark) ? 'dark' : 'light');
+        // The theme was applied in the head; only synchronize the toggle icon.
+        updateThemeIcon(document.documentElement.getAttribute('data-theme'));
         
         // Toggle theme
         themeToggle.addEventListener('click', function() {
@@ -926,7 +916,7 @@
         
         // Listen for system theme changes
         window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
-          if (localStorage.getItem('theme') === 'auto') {
+          if (document.documentElement.getAttribute('data-theme-preference') === 'auto') {
             setTheme(e.matches ? 'dark' : 'light');
           }
         });
