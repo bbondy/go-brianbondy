@@ -772,6 +772,16 @@ var runnerGaitPhase = 0;
 var runnerFootprints = [];
 var runnerFootprintStep = -1;
 var runnerFleeing = false;
+var runnerAnimating = false;
+// Trip-and-recover animation. Null while he is running normally, otherwise the
+// phase he is in and how many ticks he has spent there.
+var runnerFall = null;
+var runnerFallDust = [];
+var RUNNER_FALL_PHASES = [
+  { name: 'falling', ticks: 8 },
+  { name: 'down', ticks: 14 },
+  { name: 'rising', ticks: 13 }
+];
 
 function dateForCell(col, row) {
   var date = new Date(window.runningGraph.startDate + 'T00:00:00Z');
@@ -855,6 +865,85 @@ function getCanvasDate(event) {
   return dateForCell(col, row);
 }
 
+// Horizontal position of the runner for the current progress along the lane.
+function runnerX() {
+  return canvasLabelWidth + 5 + runnerProgress * (window.runningGraph.weeks * canvasCellSize - 10);
+}
+
+// Bottom of the lane the runner travels along, below the last row of days.
+function runnerLaneY() {
+  return 24 + 7 * canvasCellSize + canvasRunnerLaneHeight;
+}
+
+function runnerFallPhaseName() {
+  return runnerFall ? RUNNER_FALL_PHASES[runnerFall.phase].name : '';
+}
+
+// Body lean for the current fall frame: 0 is upright, PI/2 is flat on the ground.
+function runnerFallLean() {
+  var phase = runnerFall && RUNNER_FALL_PHASES[runnerFall.phase];
+  if (!phase) return 0;
+  var progress = runnerFall.ticks / phase.ticks;
+  if (phase.name === 'falling') return Math.pow(progress, 1.7) * (Math.PI / 2);
+  if (phase.name === 'down') return Math.PI / 2;
+  // Push back up, rocking a little past vertical before settling into stride.
+  var rise = 1 - Math.pow(1 - progress, 2);
+  return (Math.PI / 2) * (1 - rise) - Math.sin(rise * Math.PI) * 0.12;
+}
+
+// The gait stops once he trips: his legs trail out behind him on the way down,
+// then tuck under him to push back up.
+function runnerFallLegs(phaseName) {
+  if (phaseName === 'rising') {
+    return [{ x: 1.5, y: 2, swinging: false }, { x: -5, y: 2, swinging: false }];
+  }
+  return [{ x: -4, y: 2, swinging: false }, { x: -8, y: 1, swinging: false }];
+}
+
+// A little dust kicked up where he lands.
+function puffRunnerFallDust() {
+  var y = runnerLaneY() - 2;
+  runnerFallDust = [];
+  for (var offset = -2; offset <= 2; offset++) {
+    runnerFallDust.push({
+      x: runnerX() + runnerDirection * 6 + offset * 4,
+      y: y - Math.abs(offset),
+      radius: 2 + Math.abs(offset) * 0.6,
+      life: 12
+    });
+  }
+}
+
+// Advance the fall by one frame, reporting whether he is still off his feet and
+// so making no forward progress.
+function advanceRunnerFall() {
+  if (!runnerFall) return false;
+  runnerFall.ticks++;
+  var phase = RUNNER_FALL_PHASES[runnerFall.phase];
+  if (runnerFall.ticks < phase.ticks) return true;
+  if (phase.name === 'falling') puffRunnerFallDust();
+  runnerFall.ticks = 0;
+  runnerFall.phase++;
+  if (runnerFall.phase < RUNNER_FALL_PHASES.length) return true;
+  var resolve = runnerFall.resolve;
+  runnerFall = null;
+  resolve();
+  return false;
+}
+
+// Trip the runner: he goes down, lies there a moment, gets up, and keeps going.
+// Resolves once he is back in stride; a second call while he is down just waits
+// on the fall already in progress.
+function tripRunner() {
+  if (runnerFall) return runnerFall.done;
+  var pending = {};
+  pending.done = new Promise(function(resolve) { pending.resolve = resolve; });
+  pending.phase = 0;
+  pending.ticks = 0;
+  runnerFall = pending;
+  return pending.done;
+}
+
 function runnerLegPose(phase, offset) {
   var cycle = ((phase / (Math.PI * 2)) + offset) % 1;
   if (cycle < 0) cycle += 1;
@@ -877,12 +966,17 @@ function drawStickRunner() {
   var canvas = document.getElementById('contribution-graph');
   if (!canvas || !window.runningGraph.weeks) return;
   var ctx = canvas.getContext('2d');
-  var x = canvasLabelWidth + 5 + runnerProgress * (window.runningGraph.weeks * canvasCellSize - 10);
-  var y = 24 + 7 * canvasCellSize + canvasRunnerLaneHeight - 7;
-  var stride = Math.sin(runnerGaitPhase);
-  var leadLeg = runnerLegPose(runnerGaitPhase, 0);
-  var trailingLeg = runnerLegPose(runnerGaitPhase, 0.5);
-  var bob = leadLeg.swinging && trailingLeg.swinging ? -3 : -1;
+  var x = runnerX();
+  var y = runnerLaneY() - 7;
+  var fallPhase = runnerFallPhaseName();
+  // Arms fling out to break the fall, then swing back as he pushes up.
+  var stride = fallPhase ? (fallPhase === 'rising' ? -0.6 : 1) : Math.sin(runnerGaitPhase);
+  var legs = fallPhase
+    ? runnerFallLegs(fallPhase)
+    : [runnerLegPose(runnerGaitPhase, 0), runnerLegPose(runnerGaitPhase, 0.5)];
+  var leadLeg = legs[0];
+  var trailingLeg = legs[1];
+  var bob = !fallPhase && leadLeg.swinging && trailingLeg.swinging ? -3 : -1;
   var runnerColor = document.documentElement.getAttribute('data-theme') === 'light' ? '#000' : '#fff';
   var motionPulse = (Math.sin(runnerGaitPhase * 0.45) + 1) / 2;
   ctx.save();
@@ -895,26 +989,47 @@ function drawStickRunner() {
     ctx.stroke();
   });
   ctx.restore();
-  ctx.save();
-  ctx.strokeStyle = runnerColor;
-  ctx.lineWidth = 1;
-  ctx.lineCap = 'round';
-  ctx.globalAlpha = 0.06 + motionPulse * 0.14;
-  ctx.beginPath();
-  ctx.moveTo(x - runnerDirection * (8 + motionPulse * 2), y + bob - 15); ctx.lineTo(x - runnerDirection * (14 + motionPulse * 3), y + bob - 15);
-  ctx.stroke();
-  ctx.globalAlpha = 0.05 + (1 - motionPulse) * 0.13;
-  ctx.beginPath();
-  ctx.moveTo(x - runnerDirection * (10 + motionPulse * 3), y + bob - 10); ctx.lineTo(x - runnerDirection * (18 + motionPulse * 4), y + bob - 10);
-  ctx.stroke();
-  ctx.globalAlpha = 0.04 + motionPulse * 0.1;
-  ctx.beginPath();
-  ctx.moveTo(x - runnerDirection * (7 + motionPulse), y + bob - 5); ctx.lineTo(x - runnerDirection * (13 + motionPulse * 2), y + bob - 5);
-  ctx.stroke();
-  ctx.restore();
+  if (runnerFallDust.length) {
+    ctx.save();
+    ctx.fillStyle = '#8b5a2b';
+    runnerFallDust.forEach(function(puff) {
+      ctx.globalAlpha = puff.life * 0.03;
+      ctx.beginPath();
+      ctx.ellipse(puff.x, puff.y, puff.radius, puff.radius * 0.5, 0, 0, Math.PI * 2);
+      ctx.fill();
+    });
+    ctx.restore();
+  }
+  // Speed lines only make sense while he is upright and moving.
+  if (!fallPhase) {
+    ctx.save();
+    ctx.strokeStyle = runnerColor;
+    ctx.lineWidth = 1;
+    ctx.lineCap = 'round';
+    ctx.globalAlpha = 0.06 + motionPulse * 0.14;
+    ctx.beginPath();
+    ctx.moveTo(x - runnerDirection * (8 + motionPulse * 2), y + bob - 15); ctx.lineTo(x - runnerDirection * (14 + motionPulse * 3), y + bob - 15);
+    ctx.stroke();
+    ctx.globalAlpha = 0.05 + (1 - motionPulse) * 0.13;
+    ctx.beginPath();
+    ctx.moveTo(x - runnerDirection * (10 + motionPulse * 3), y + bob - 10); ctx.lineTo(x - runnerDirection * (18 + motionPulse * 4), y + bob - 10);
+    ctx.stroke();
+    ctx.globalAlpha = 0.04 + motionPulse * 0.1;
+    ctx.beginPath();
+    ctx.moveTo(x - runnerDirection * (7 + motionPulse), y + bob - 5); ctx.lineTo(x - runnerDirection * (13 + motionPulse * 2), y + bob - 5);
+    ctx.stroke();
+    ctx.restore();
+  }
   ctx.save();
   ctx.translate(x, y + bob);
   ctx.scale(runnerDirection * 1.15, 1.15);
+  var lean = runnerFallLean();
+  if (lean) {
+    // Pivot at his feet so he topples over rather than sliding sideways.
+    ctx.translate(0, 2);
+    ctx.rotate(lean);
+    ctx.translate(0, -2);
+  }
   ctx.strokeStyle = runnerColor;
   ctx.lineWidth = 2;
   ctx.lineCap = 'round';
@@ -944,32 +1059,40 @@ function drawStickRunner() {
 }
 
 function leaveRunnerFootprint() {
-  var x = canvasLabelWidth + 5 + runnerProgress * (window.runningGraph.weeks * canvasCellSize - 10);
-  var y = 24 + 7 * canvasCellSize + canvasRunnerLaneHeight - 2;
+  var x = runnerX();
+  var y = runnerLaneY() - 2;
   runnerFootprints.forEach(function(footprint) { footprint.stepsRemaining -= 1; });
   runnerFootprints = runnerFootprints.filter(function(footprint) { return footprint.stepsRemaining > 0; });
   runnerFootprints.push({ x: x + runnerDirection * 5.2, y: y, stepsRemaining: 7 });
 }
 
 function isPointerOverRunner(event) {
-  var x = canvasLabelWidth + 5 + runnerProgress * (window.runningGraph.weeks * canvasCellSize - 10);
-  var y = 24 + 7 * canvasCellSize + canvasRunnerLaneHeight - 7 - Math.abs(Math.sin(runnerGaitPhase)) * 2;
+  var x = runnerX();
+  var y = runnerLaneY() - 7 - Math.abs(Math.sin(runnerGaitPhase)) * 2;
   return event.offsetX >= x - 9 && event.offsetX <= x + 9 && event.offsetY >= y - 23 && event.offsetY <= y + 4;
 }
 
 function startStickRunner() {
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  runnerAnimating = true;
   window.setInterval(function() {
-    runnerProgress += runnerDirection * 0.0025;
-    runnerGaitPhase += 0.6;
-    var footprintStep = Math.floor(runnerGaitPhase / Math.PI);
-    if (footprintStep !== runnerFootprintStep) {
-      runnerFootprintStep = footprintStep;
-      leaveRunnerFootprint();
+    var isDown = advanceRunnerFall();
+    if (runnerFallDust.length) {
+      runnerFallDust.forEach(function(puff) { puff.life -= 1; });
+      runnerFallDust = runnerFallDust.filter(function(puff) { return puff.life > 0; });
     }
-    if (runnerProgress >= 1 || runnerProgress <= 0) {
-      runnerProgress = Math.max(0, Math.min(1, runnerProgress));
-      runnerDirection *= -1;
+    if (!isDown) {
+      runnerProgress += runnerDirection * 0.0025;
+      runnerGaitPhase += 0.6;
+      var footprintStep = Math.floor(runnerGaitPhase / Math.PI);
+      if (footprintStep !== runnerFootprintStep) {
+        runnerFootprintStep = footprintStep;
+        leaveRunnerFootprint();
+      }
+      if (runnerProgress >= 1 || runnerProgress <= 0) {
+        runnerProgress = Math.max(0, Math.min(1, runnerProgress));
+        runnerDirection *= -1;
+      }
     }
     drawContributionGraph();
     drawStickRunner();
@@ -985,7 +1108,7 @@ function setupContributionGraph() {
   startStickRunner();
   canvas.addEventListener('mousemove', function(event) {
     var overRunner = isPointerOverRunner(event);
-    if (overRunner && !runnerFleeing) {
+    if (overRunner && !runnerFleeing && !runnerFall) {
       runnerDirection *= -1;
       runnerFleeing = true;
     } else if (!overRunner) {
@@ -1607,6 +1730,22 @@ if (hasActiveFilters()) applyFilters();
     execute: function() {
       return clearAllFilters().then(function() {
         return textResult('Cleared all filters. The calendar shows every activity day in the ' + viewLabel() + ' view.');
+      });
+    }
+  });
+
+  registerTool({
+    name: 'trip_running_stick_figure',
+    title: 'Trip the stick-figure runner',
+    description: 'Make the little stick figure jogging under the running activity calendar catch a toe and fall flat, then pick himself up and keep running. Purely cosmetic: no data, filter, or setting changes.',
+    inputSchema: { type: 'object', properties: {} },
+    annotations: { readOnlyHint: false, idempotentHint: false },
+    execute: function() {
+      if (!runnerAnimating) {
+        return errorResult('The stick figure is standing still because this browser asks for reduced motion, so there is nothing to trip.');
+      }
+      return tripRunner().then(function() {
+        return textResult('He caught a toe, hit the dirt, dusted himself off, and is back to running.');
       });
     }
   });
