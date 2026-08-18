@@ -920,6 +920,41 @@
             setTheme(e.matches ? 'dark' : 'light');
           }
         });
+
+        // WebMCP: let browser AI agents switch the theme (no-op where unsupported)
+        if (document.modelContext && document.modelContext.registerTool) {
+          // Registration is best effort; the site works fine without it
+          Promise.resolve().then(function() {
+            return document.modelContext.registerTool({
+              name: 'set_theme',
+              title: 'Set site theme',
+              description: 'Switch brianbondy.com between the light and dark color themes. The choice is remembered for future visits.',
+              inputSchema: {
+                type: 'object',
+                properties: {
+                  theme: {
+                    type: 'string',
+                    enum: ['light', 'dark'],
+                    description: 'The theme to apply.'
+                  }
+                },
+                required: ['theme']
+              },
+              annotations: { readOnlyHint: false, idempotentHint: true },
+              execute: function(input) {
+                const theme = input && input.theme;
+                if (theme !== 'light' && theme !== 'dark') {
+                  return {
+                    isError: true,
+                    content: [{ type: 'text', text: 'Invalid theme "' + theme + '". Use "light" or "dark".' }]
+                  };
+                }
+                setTheme(theme, true);
+                return { content: [{ type: 'text', text: 'Theme set to ' + theme + '.' }] };
+              }
+            });
+          }).catch(function() {});
+        }
       })();
 
       // Load the Easter egg only after its activation gesture. This keeps its
