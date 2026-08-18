@@ -112,7 +112,7 @@ func initializeRoutes(router *mux.Router) {
 	))
 	router.Handle("/api/running-totals", negroni.New(
 		negroni.HandlerFunc(directToHttps),
-		negroni.Wrap(http.HandlerFunc(runningTotalsForTypesHandler)),
+		negroni.Wrap(http.HandlerFunc(runningTotalsHandler)),
 	))
 	router.Handle("/all", handleAllPosts)
 	router.Handle("/pictures", handlePictures)

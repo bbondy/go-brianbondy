@@ -7,6 +7,7 @@ import (
 	"html/template"
 	"log"
 	"net/http"
+	"net/url"
 	"os"
 	"strconv"
 	"strings"
@@ -274,19 +275,78 @@ func runsForDateHandler(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
-// runningTotalsForTypesHandler keeps activity-type filtering client-light.
-func runningTotalsForTypesHandler(w http.ResponseWriter, r *http.Request) {
+// optionalFloatParam reads a query parameter that may be absent.
+func optionalFloatParam(query url.Values, name string) (*float64, error) {
+	raw := query.Get(name)
+	if raw == "" {
+		return nil, nil
+	}
+	value, err := strconv.ParseFloat(raw, 64)
+	if err != nil {
+		return nil, fmt.Errorf("invalid %s", name)
+	}
+	return &value, nil
+}
+
+// optionalIntParam reads a query parameter that may be absent.
+func optionalIntParam(query url.Values, name string) (*int, error) {
+	raw := query.Get(name)
+	if raw == "" {
+		return nil, nil
+	}
+	value, err := strconv.Atoi(raw)
+	if err != nil {
+		return nil, fmt.Errorf("invalid %s", name)
+	}
+	return &value, nil
+}
+
+// runningTotalsHandler keeps calendar filtering client-light: the client sends
+// the active activity types and day metric bounds, and gets back the totals for
+// the days those filters highlight.
+func runningTotalsHandler(w http.ResponseWriter, r *http.Request) {
+	query := r.URL.Query()
 	types := make(map[string]bool)
-	for _, typ := range strings.Split(r.URL.Query().Get("types"), ",") {
+	for _, typ := range strings.Split(query.Get("types"), ",") {
 		if typ != "" {
 			types[typ] = true
 		}
 	}
-	if len(types) == 0 {
-		http.Error(w, "At least one activity type is required", http.StatusBadRequest)
+
+	var metrics data.RunMetricFilter
+	var err error
+	for _, param := range []struct {
+		name   string
+		target **float64
+	}{
+		{"minKm", &metrics.MinDistanceKm},
+		{"maxKm", &metrics.MaxDistanceKm},
+	} {
+		if *param.target, err = optionalFloatParam(query, param.name); err != nil {
+			http.Error(w, err.Error(), http.StatusBadRequest)
+			return
+		}
+	}
+	for _, param := range []struct {
+		name   string
+		target **int
+	}{
+		{"minMinutes", &metrics.MinDurationMin},
+		{"maxMinutes", &metrics.MaxDurationMin},
+		{"minElevation", &metrics.MinElevationM},
+		{"maxElevation", &metrics.MaxElevationM},
+	} {
+		if *param.target, err = optionalIntParam(query, param.name); err != nil {
+			http.Error(w, err.Error(), http.StatusBadRequest)
+			return
+		}
+	}
+
+	if len(types) == 0 && metrics.IsZero() {
+		http.Error(w, "At least one activity type or metric bound is required", http.StatusBadRequest)
 		return
 	}
-	count, distance, elevation, minutes, err := data.GetStravaRunTotalsForTypes(r.URL.Query().Get("year"), types)
+	count, distance, elevation, minutes, err := data.GetStravaRunTotalsFiltered(query.Get("year"), types, metrics)
 	if err != nil {
 		http.Error(w, "Unable to load activity totals", http.StatusInternalServerError)
 		return

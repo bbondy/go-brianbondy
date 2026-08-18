@@ -317,36 +317,134 @@ func GetStravaRunTotalsFor(yearFilter string) (int, float64, int, int, error) {
 	return totalRuns, totalDistanceKm, totalElevationM, totalTimeMinutes, nil
 }
 
+// RunMetricFilter bounds the day totals shown on the activity calendar. A nil
+// field means that bound is unset.
+type RunMetricFilter struct {
+	MinDistanceKm  *float64
+	MaxDistanceKm  *float64
+	MinDurationMin *int
+	MaxDurationMin *int
+	MinElevationM  *int
+	MaxElevationM  *int
+}
+
+// IsZero reports whether no bound is set.
+func (f RunMetricFilter) IsZero() bool {
+	return f.MinDistanceKm == nil && f.MaxDistanceKm == nil &&
+		f.MinDurationMin == nil && f.MaxDurationMin == nil &&
+		f.MinElevationM == nil && f.MaxElevationM == nil
+}
+
+// MatchesDayTotals reports whether a day's totals satisfy every configured bound.
+func (f RunMetricFilter) MatchesDayTotals(distanceKm float64, minutes, elevationM int) bool {
+	if f.MinDistanceKm != nil && distanceKm < *f.MinDistanceKm {
+		return false
+	}
+	if f.MaxDistanceKm != nil && distanceKm > *f.MaxDistanceKm {
+		return false
+	}
+	if f.MinDurationMin != nil && minutes < *f.MinDurationMin {
+		return false
+	}
+	if f.MaxDurationMin != nil && minutes > *f.MaxDurationMin {
+		return false
+	}
+	if f.MinElevationM != nil && elevationM < *f.MinElevationM {
+		return false
+	}
+	if f.MaxElevationM != nil && elevationM > *f.MaxElevationM {
+		return false
+	}
+	return true
+}
+
+// activityTypeOf returns the activity type, falling back to the bucket the
+// calendar and breakdown chart use for entries Strava left untyped.
+func activityTypeOf(run StravaRun) string {
+	if run.Type == "" {
+		return "Unknown"
+	}
+	return run.Type
+}
+
+// runInYearView reports whether a run belongs to the selected view
+// ("all"/"", "365", or a specific year).
+func runInYearView(run StravaRun, yearFilter string, now time.Time) bool {
+	switch yearFilter {
+	case "", "all":
+		return true
+	case "365":
+		t, err := time.Parse("2006-01-02", run.Date)
+		return err == nil && !t.Before(now.AddDate(0, 0, -364)) && !t.After(now)
+	default:
+		year, err := strconv.Atoi(yearFilter)
+		if err != nil {
+			return true
+		}
+		return len(run.Date) >= 4 && run.Date[:4] == strconv.Itoa(year)
+	}
+}
+
 // GetStravaRunTotalsForTypes returns view totals restricted to the selected activity types.
 func GetStravaRunTotalsForTypes(yearFilter string, types map[string]bool) (int, float64, int, int, error) {
+	return GetStravaRunTotalsFiltered(yearFilter, types, RunMetricFilter{})
+}
+
+// GetStravaRunTotalsFiltered returns view totals for the activity types and day
+// metric bounds currently highlighted on the calendar. Metric bounds apply to a
+// day's combined totals, exactly as the calendar highlights days; the returned
+// totals then sum the activities of the selected types on those days.
+func GetStravaRunTotalsFiltered(yearFilter string, types map[string]bool, metrics RunMetricFilter) (int, float64, int, int, error) {
 	runs, err := GetStravaRuns()
 	if err != nil {
 		return 0, 0, 0, 0, err
 	}
+	runsByDate := make(map[string]StravaRuns)
+	for _, run := range runs {
+		if !runInYearView(run, yearFilter, time.Now()) {
+			continue
+		}
+		runsByDate[run.Date] = append(runsByDate[run.Date], run)
+	}
+
 	var totalRuns int
 	var totalDistanceKm float64
 	var totalTimeMinutes, totalElevationM int
-	now := time.Now()
-	startDate := now.AddDate(0, 0, -364)
-	for _, run := range runs {
-		inView := yearFilter == "" || yearFilter == "all"
-		if yearFilter == "365" {
-			t, parseErr := time.Parse("2006-01-02", run.Date)
-			inView = parseErr == nil && !t.Before(startDate) && !t.After(now)
-		} else if year, parseErr := strconv.Atoi(yearFilter); parseErr == nil {
-			inView = len(run.Date) >= 4 && run.Date[:4] == strconv.Itoa(year)
+	for _, dayRuns := range runsByDate {
+		var dayDistanceKm float64
+		var dayMinutes, dayElevationM int
+		hasSelectedType := len(types) == 0
+		hasActiveRun := false
+		for _, run := range dayRuns {
+			if len(types) > 0 && types[activityTypeOf(run)] {
+				hasSelectedType = true
+			}
+			if !isActiveRun(run) {
+				continue
+			}
+			hasActiveRun = true
+			dayDistanceKm += run.DistanceKm
+			dayMinutes += parseTimeStringToMinutes(run.Time)
+			dayElevationM += parseElevationStringToMeters(run.Elevation)
 		}
-		typ := run.Type
-		if typ == "" {
-			typ = "Unknown"
-		}
-		if !inView || !types[typ] {
+		if !hasSelectedType {
 			continue
 		}
-		totalRuns++
-		totalDistanceKm += run.DistanceKm
-		totalTimeMinutes += parseTimeStringToMinutes(run.Time)
-		totalElevationM += parseElevationStringToMeters(run.Elevation)
+		// Match on the same rounded distance the calendar draws with, so a day
+		// never highlights while sitting outside these totals.
+		dayDistanceKm = math.Round(dayDistanceKm*10) / 10
+		if !metrics.IsZero() && (!hasActiveRun || !metrics.MatchesDayTotals(dayDistanceKm, dayMinutes, dayElevationM)) {
+			continue
+		}
+		for _, run := range dayRuns {
+			if len(types) > 0 && !types[activityTypeOf(run)] {
+				continue
+			}
+			totalRuns++
+			totalDistanceKm += run.DistanceKm
+			totalTimeMinutes += parseTimeStringToMinutes(run.Time)
+			totalElevationM += parseElevationStringToMeters(run.Elevation)
+		}
 	}
 	return totalRuns, totalDistanceKm, totalElevationM, totalTimeMinutes, nil
 }
@@ -493,6 +591,11 @@ type ContributionCanvasDay struct {
 	Level     int      `json:"level"`
 	Lightness float64  `json:"lightness"`
 	Types     []string `json:"types"`
+	// Day totals, so the client can highlight days by distance, duration, or climb
+	// without shipping every activity.
+	DistanceKm float64 `json:"km"`
+	Minutes    int     `json:"min"`
+	ElevationM int     `json:"elev"`
 }
 
 var contributionGraphCache = struct {
@@ -882,17 +985,27 @@ func (g *ContributionGraph2D) CanvasData() ContributionGraphCanvas {
 			}
 			types := make([]string, 0, len(day.Runs))
 			seen := make(map[string]bool)
+			var distanceKm float64
+			var minutes, elevationM int
 			for _, run := range day.Runs {
-				typ := run.Type
-				if typ == "" {
-					typ = "Unknown"
-				}
+				typ := activityTypeOf(run)
 				if !seen[typ] {
 					seen[typ] = true
 					types = append(types, typ)
 				}
+				distanceKm += run.DistanceKm
+				minutes += parseTimeStringToMinutes(run.Time)
+				elevationM += parseElevationStringToMeters(run.Elevation)
 			}
-			payload.ActiveDays[day.Date] = ContributionCanvasDay{Count: day.Count, Level: day.Level, Lightness: day.Lightness, Types: types}
+			payload.ActiveDays[day.Date] = ContributionCanvasDay{
+				Count:      day.Count,
+				Level:      day.Level,
+				Lightness:  day.Lightness,
+				Types:      types,
+				DistanceKm: math.Round(distanceKm*10) / 10,
+				Minutes:    minutes,
+				ElevationM: elevationM,
+			}
 		}
 	}
 	return payload

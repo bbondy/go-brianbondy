@@ -573,7 +573,8 @@ K{{define "mountPoint"}}
         </div>
       </div>
       <div class="totals-filter-note" id="totals-filter-note" style="display:none;">
-        Showing totals filtered by selected activity types
+        <span id="totals-filter-text">Showing totals filtered by selected activity types</span>
+        <button type="button" id="clear-run-filters" class="clear-run-filters">Clear filters</button>
       </div>
     </div>
     
@@ -704,6 +705,64 @@ function formatFriendlyDate(dateStr) {
 
 var activeDates = Object.keys(window.runningGraph.activeDays || {}).sort();
 var activeActivityTypes = new Set();
+// Day-total bounds applied on top of the activity type filter. Null means "no bound".
+var activeMetricFilter = {
+  minDistanceKm: null,
+  maxDistanceKm: null,
+  minDurationMinutes: null,
+  maxDurationMinutes: null,
+  minElevationM: null,
+  maxElevationM: null
+};
+var METRIC_FILTER_KEYS = Object.keys(activeMetricFilter);
+// Query parameter used for each bound, so a filtered view survives a reload.
+var METRIC_QUERY_PARAMS = {
+  minDistanceKm: 'minKm',
+  maxDistanceKm: 'maxKm',
+  minDurationMinutes: 'minMinutes',
+  maxDurationMinutes: 'maxMinutes',
+  minElevationM: 'minElevation',
+  maxElevationM: 'maxElevation'
+};
+
+function hasMetricFilter() {
+  return METRIC_FILTER_KEYS.some(function(key) { return activeMetricFilter[key] !== null; });
+}
+
+function hasActiveFilters() {
+  return activeActivityTypes.size > 0 || hasMetricFilter();
+}
+
+function dayMatchesActivityTypes(day) {
+  if (!activeActivityTypes.size) return true;
+  return day.types.some(function(type) { return activeActivityTypes.has(type); });
+}
+
+function dayMatchesMetrics(day) {
+  var distance = day.km || 0;
+  var minutes = day.min || 0;
+  var elevation = day.elev || 0;
+  if (activeMetricFilter.minDistanceKm !== null && distance < activeMetricFilter.minDistanceKm) return false;
+  if (activeMetricFilter.maxDistanceKm !== null && distance > activeMetricFilter.maxDistanceKm) return false;
+  if (activeMetricFilter.minDurationMinutes !== null && minutes < activeMetricFilter.minDurationMinutes) return false;
+  if (activeMetricFilter.maxDurationMinutes !== null && minutes > activeMetricFilter.maxDurationMinutes) return false;
+  if (activeMetricFilter.minElevationM !== null && elevation < activeMetricFilter.minElevationM) return false;
+  if (activeMetricFilter.maxElevationM !== null && elevation > activeMetricFilter.maxElevationM) return false;
+  return true;
+}
+
+// A day is highlighted when it satisfies every active filter; the rest fade to
+// the empty-day color.
+function dayMatchesFilters(day) {
+  return !!day && dayMatchesActivityTypes(day) && dayMatchesMetrics(day);
+}
+
+function matchingDays() {
+  return Object.keys(window.runningGraph.activeDays || {}).filter(function(date) {
+    return dayMatchesFilters(window.runningGraph.activeDays[date]);
+  }).sort();
+}
+
 var canvasCellSize = 16;
 var canvasLabelWidth = 68;
 var canvasRunnerLaneHeight = 30;
@@ -765,7 +824,7 @@ function drawContributionGraph() {
     for (var row = 0; row < 7; row++) {
       var date = dateForCell(col, row);
       var day = window.runningGraph.activeDays[date];
-      var matches = !activeActivityTypes.size || (day && day.types.some(function(type) { return activeActivityTypes.has(type); }));
+      var matches = dayMatchesFilters(day);
       ctx.fillStyle = day && matches
         ? (isLightTheme ? lightLevelColors[day.level] : 'hsl(137, 60%, ' + day.lightness + '%)')
         : (isLightTheme ? '#ffffff' : '#374151');
@@ -777,9 +836,9 @@ function drawContributionGraph() {
         ctx.lineWidth = 1;
         ctx.stroke();
       }
-      if (day && activeActivityTypes.size && matches) {
+      if (day && matches && hasActiveFilters()) {
         var matchingType = day.types.find(function(type) { return activeActivityTypes.has(type); });
-        ctx.strokeStyle = activityTypeColors[matchingType] || '#4d90fe';
+        ctx.strokeStyle = (activityTypeColors && activityTypeColors[matchingType]) || '#4d90fe';
         ctx.lineWidth = 2;
         ctx.stroke();
       }
@@ -1072,14 +1131,10 @@ if (yearSelect) {
   yearSelect.value = currentYear;
   
   yearSelect.addEventListener('change', function() {
-    var year = yearSelect.value;
-    if (year === 'all') {
-      window.location = window.location.pathname + '?year=all';
-    } else if (year === '365') {
-      window.location = window.location.pathname + '?year=365';
-    } else {
-      window.location = window.location.pathname + '?year=' + encodeURIComponent(year);
-    }
+    // Carry any active filter across the view change.
+    var params = filterQueryParams();
+    params.set('year', yearSelect.value);
+    window.location = window.location.pathname + '?' + params.toString();
   });
 }
 
@@ -1184,30 +1239,98 @@ function updateCellHighlights() {
   drawContributionGraph();
 }
 
-function updateTotalsDisplay() {
-  var badge = document.getElementById('totals-filter-note');
-  if (!badge) return;
-  if (activeActivityTypes.size === 0) {
-    // Restore original server totals for the current view
-    captureInitialTotals();
-    var actEl = document.getElementById('total-activities-value');
-    var timeEl = document.getElementById('total-time-value');
-    var distEl = document.getElementById('total-distance-value');
-    var elevEl = document.getElementById('total-elevation-value');
-    if (window.initialTotals) {
-      if (actEl) actEl.textContent = window.initialTotals.activities;
-      if (timeEl) timeEl.textContent = window.initialTotals.time;
-      if (distEl) distEl.textContent = window.initialTotals.distance;
-      if (elevEl) elevEl.textContent = window.initialTotals.elevation;
+function selectedYearValue() {
+  var yearSelect = document.getElementById('year-select');
+  return (yearSelect && yearSelect.value) || '365';
+}
+
+function viewLabel() {
+  var year = selectedYearValue();
+  if (year === 'all' || year === '') return 'all time';
+  if (year === '365') return 'last 365 days';
+  return year;
+}
+
+// The active filter as query parameters, shared by the totals API call and the
+// page URL so a filtered view can be reloaded or shared.
+function filterQueryParams() {
+  var params = new URLSearchParams();
+  if (activeActivityTypes.size) {
+    params.set('types', Array.from(activeActivityTypes).join(','));
+  }
+  METRIC_FILTER_KEYS.forEach(function(key) {
+    if (activeMetricFilter[key] !== null) params.set(METRIC_QUERY_PARAMS[key], String(activeMetricFilter[key]));
+  });
+  return params;
+}
+
+function describeActiveFilters() {
+  var parts = [];
+  if (activeActivityTypes.size) {
+    parts.push('type ' + Array.from(activeActivityTypes).map(formatActivityType).join(' or '));
+  }
+  var ranges = [
+    { min: 'minDistanceKm', max: 'maxDistanceKm', label: 'distance', unit: 'km' },
+    { min: 'minDurationMinutes', max: 'maxDurationMinutes', label: 'duration', unit: 'min' },
+    { min: 'minElevationM', max: 'maxElevationM', label: 'elevation', unit: 'm' }
+  ];
+  ranges.forEach(function(range) {
+    var min = activeMetricFilter[range.min];
+    var max = activeMetricFilter[range.max];
+    if (min !== null && max !== null) {
+      parts.push(range.label + ' ' + min + '-' + max + range.unit);
+    } else if (min !== null) {
+      parts.push(range.label + ' ≥ ' + min + range.unit);
+    } else if (max !== null) {
+      parts.push(range.label + ' ≤ ' + max + range.unit);
     }
-    badge.style.display = 'none';
+  });
+  return parts;
+}
+
+function restoreInitialTotals() {
+  captureInitialTotals();
+  if (!window.initialTotals) return;
+  var actEl = document.getElementById('total-activities-value');
+  var timeEl = document.getElementById('total-time-value');
+  var distEl = document.getElementById('total-distance-value');
+  var elevEl = document.getElementById('total-elevation-value');
+  if (actEl) actEl.textContent = window.initialTotals.activities;
+  if (timeEl) timeEl.textContent = window.initialTotals.time;
+  if (distEl) distEl.textContent = window.initialTotals.distance;
+  if (elevEl) elevEl.textContent = window.initialTotals.elevation;
+}
+
+function updateFilterNote() {
+  var note = document.getElementById('totals-filter-note');
+  var text = document.getElementById('totals-filter-text');
+  if (!note || !text) return;
+  if (!hasActiveFilters()) {
+    note.style.display = 'none';
     return;
   }
-  var query = new URLSearchParams({ year: document.getElementById('year-select').value, types: Array.from(activeActivityTypes).join(',') });
-  fetch('/api/running-totals?' + query.toString()).then(function(response) {
+  var days = matchingDays().length;
+  text.textContent = 'Highlighting ' + days + (days === 1 ? ' day' : ' days') +
+    ' matching ' + describeActiveFilters().join(' + ') + '. Totals cover the highlighted days.';
+  note.style.display = '';
+}
+
+// Metric bounds apply to a day's combined totals, so the totals come from the
+// server, which groups activities the same way.
+var pendingTotalsRequest = 0;
+function updateTotalsDisplay() {
+  if (!hasActiveFilters()) {
+    pendingTotalsRequest++;
+    restoreInitialTotals();
+    return Promise.resolve(null);
+  }
+  var params = filterQueryParams();
+  params.set('year', selectedYearValue());
+  var requestId = ++pendingTotalsRequest;
+  return fetch('/api/running-totals?' + params.toString()).then(function(response) {
     return response.ok ? response.json() : null;
   }).then(function(totals) {
-    if (!totals) return;
+    if (requestId !== pendingTotalsRequest || !totals) return totals;
     var actEl = document.getElementById('total-activities-value');
     var timeEl = document.getElementById('total-time-value');
     var distEl = document.getElementById('total-distance-value');
@@ -1216,54 +1339,307 @@ function updateTotalsDisplay() {
     if (timeEl) timeEl.textContent = formatTimeFromMinutes(totals.minutes);
     if (distEl) distEl.textContent = (Math.round(totals.distanceKm * 10) / 10).toLocaleString() + 'km';
     if (elevEl) elevEl.textContent = Math.round(totals.elevationM).toLocaleString() + 'm';
-    badge.style.display = '';
+    return totals;
+  }).catch(function() {
+    return null;
   });
+}
+
+function syncFilterToURL() {
+  if (!window.history || !window.history.replaceState) return;
+  var params = filterQueryParams();
+  var currentYear = new URLSearchParams(window.location.search).get('year');
+  if (currentYear) params.set('year', currentYear);
+  var query = params.toString();
+  window.history.replaceState(null, '', window.location.pathname + (query ? '?' + query : ''));
+}
+
+function applyFilters() {
+  updateCellHighlights();
+  updateFilterNote();
+  syncFilterToURL();
+  return updateTotalsDisplay();
 }
 
 function setAriaPressed(el, pressed) {
   try { el.setAttribute('aria-pressed', pressed ? 'true' : 'false'); } catch(e) {}
 }
 
+function syncLegendState() {
+  document.querySelectorAll('.activity-legend-item[data-activity-type]').forEach(function(item) {
+    var active = activeActivityTypes.has(item.getAttribute('data-activity-type'));
+    item.classList.toggle('is-active', active);
+    setAriaPressed(item, active);
+  });
+}
+
 function toggleActivityType(type) {
   if (!type) return;
   if (activeActivityTypes.has(type)) {
     activeActivityTypes.delete(type);
-    // Unmark all matching items as active
-    document.querySelectorAll('[data-activity-type="' + CSS.escape(type) + '"]').forEach(function(el){ el.closest('.activity-legend-item') && el.closest('.activity-legend-item').classList.remove('is-active'); setAriaPressed(el.closest('.activity-legend-item') || el, false); });
   } else {
     activeActivityTypes.add(type);
-    document.querySelectorAll('[data-activity-type="' + CSS.escape(type) + '"]').forEach(function(el){ el.closest('.activity-legend-item') && el.closest('.activity-legend-item').classList.add('is-active'); setAriaPressed(el.closest('.activity-legend-item') || el, true); });
   }
-  updateCellHighlights();
-  updateTotalsDisplay();
+  syncLegendState();
+  applyFilters();
+}
+
+function clearAllFilters() {
+  activeActivityTypes.clear();
+  METRIC_FILTER_KEYS.forEach(function(key) { activeMetricFilter[key] = null; });
+  syncLegendState();
+  return applyFilters();
+}
+
+// Restore a filter that was encoded in the URL (a shared link, a reload, or a
+// year switch made while a filter was active).
+function readFiltersFromURL() {
+  var params = new URLSearchParams(window.location.search);
+  (params.get('types') || '').split(',').forEach(function(type) {
+    if (type) activeActivityTypes.add(type);
+  });
+  METRIC_FILTER_KEYS.forEach(function(key) {
+    var raw = params.get(METRIC_QUERY_PARAMS[key]);
+    if (raw === null || raw === '') return;
+    var value = parseFloat(raw);
+    if (!isNaN(value)) activeMetricFilter[key] = value;
+  });
+  syncLegendState();
 }
 
 // Click/keyboard handlers
 document.querySelectorAll('.activity-segment, .activity-color, .activity-legend-item').forEach(function(el) {
   el.addEventListener('click', function(ev) {
     ev.stopPropagation();
-    var type = el.getAttribute('data-activity-type') || (el.classList.contains('activity-legend-item') ? el.getAttribute('data-activity-type') : null);
-    toggleActivityType(type);
+    toggleActivityType(el.getAttribute('data-activity-type'));
   });
   el.addEventListener('keydown', function(ev) {
     var isActivationKey = (ev.key === 'Enter' || ev.key === ' ' || ev.keyCode === 13 || ev.keyCode === 32);
     if (!isActivationKey) return;
     ev.preventDefault();
-    var type = el.getAttribute('data-activity-type') || (el.classList.contains('activity-legend-item') ? el.getAttribute('data-activity-type') : null);
-    toggleActivityType(type);
+    toggleActivityType(el.getAttribute('data-activity-type'));
   });
 });
 
-// Clicking outside clears filters and restores server totals
+var clearFiltersButton = document.getElementById('clear-run-filters');
+if (clearFiltersButton) {
+  clearFiltersButton.addEventListener('click', function(ev) {
+    ev.stopPropagation();
+    clearAllFilters();
+  });
+}
+
+// Clicking outside the legend clears the type selection it drives. Metric
+// bounds stay until they are cleared explicitly, so a stray click cannot
+// silently undo them.
 document.addEventListener('click', function(ev) {
-  var withinControls = ev.target.closest('.activity-legend, .activity-bar');
-  if (withinControls) return;
-  if (activeActivityTypes.size > 0) {
-    activeActivityTypes.clear();
-    document.querySelectorAll('.activity-legend-item.is-active').forEach(function(el){ el.classList.remove('is-active'); setAriaPressed(el, false); });
-    updateCellHighlights();
-    updateTotalsDisplay(); // will restore server-rendered totals
-  }
+  if (ev.target.closest('.activity-legend, .activity-bar, .totals-filter-note')) return;
+  if (activeActivityTypes.size === 0) return;
+  activeActivityTypes.clear();
+  syncLegendState();
+  applyFilters();
 });
+
+readFiltersFromURL();
+if (hasActiveFilters()) applyFilters();
+
+// -------------------------------------------------------------
+// WebMCP: let browser AI agents drive the calendar filters
+// -------------------------------------------------------------
+(function() {
+  if (!document.modelContext || !document.modelContext.registerTool) return;
+
+  function activityTypesInView() {
+    var days = window.runningGraph.activeDays || {};
+    var counts = {};
+    Object.keys(days).forEach(function(date) {
+      days[date].types.forEach(function(type) { counts[type] = (counts[type] || 0) + 1; });
+    });
+    return counts;
+  }
+
+  function metricRange(key) {
+    var days = window.runningGraph.activeDays || {};
+    var values = Object.keys(days).map(function(date) { return days[date][key] || 0; }).sort(function(a, b) { return a - b; });
+    if (!values.length) return null;
+    return {
+      min: values[0],
+      median: values[Math.floor(values.length / 2)],
+      p90: values[Math.floor(values.length * 0.9)],
+      max: values[values.length - 1]
+    };
+  }
+
+  function textResult(text) {
+    return { content: [{ type: 'text', text: text }] };
+  }
+
+  function errorResult(text) {
+    return { isError: true, content: [{ type: 'text', text: text }] };
+  }
+
+  function summaryText(totals) {
+    var days = matchingDays();
+    var total = Object.keys(window.runningGraph.activeDays || {}).length;
+    var lines = ['View: ' + viewLabel() + '.'];
+    lines.push(hasActiveFilters() ? 'Filters: ' + describeActiveFilters().join(' + ') + '.' : 'Filters: none.');
+    lines.push('Highlighted days: ' + days.length + ' of ' + total + ' days with activity.');
+    if (days.length) {
+      lines.push('Date range of highlighted days: ' + days[0] + ' to ' + days[days.length - 1] + '.');
+    }
+    if (totals) {
+      lines.push('Totals for highlighted days: ' + totals.activities + ' activities, ' +
+        (Math.round(totals.distanceKm * 10) / 10) + 'km, ' + formatTimeFromMinutes(totals.minutes) +
+        ', ' + Math.round(totals.elevationM) + 'm elevation.');
+    }
+    return lines.join(' ');
+  }
+
+  var numericBounds = [
+    { field: 'minDistanceKm', description: 'Only highlight days whose total distance is at least this many kilometers.' },
+    { field: 'maxDistanceKm', description: 'Only highlight days whose total distance is at most this many kilometers.' },
+    { field: 'minDurationMinutes', description: 'Only highlight days whose total moving time is at least this many minutes.' },
+    { field: 'maxDurationMinutes', description: 'Only highlight days whose total moving time is at most this many minutes.' },
+    { field: 'minElevationM', description: 'Only highlight days whose total elevation gain is at least this many meters.' },
+    { field: 'maxElevationM', description: 'Only highlight days whose total elevation gain is at most this many meters.' }
+  ];
+
+  var filterProperties = {
+    activityTypes: {
+      type: 'array',
+      items: { type: 'string' },
+      description: 'Activity types to highlight, e.g. ["Run", "Ride"]. Call describe_running_activities for the types present in the current view. Omit to highlight every type.'
+    }
+  };
+  numericBounds.forEach(function(bound) {
+    filterProperties[bound.field] = { type: 'number', description: bound.description };
+  });
+
+  function registerTool(definition) {
+    Promise.resolve().then(function() {
+      return document.modelContext.registerTool(definition);
+    }).catch(function() {});
+  }
+
+  registerTool({
+    name: 'describe_running_activities',
+    title: 'Describe the running activity calendar',
+    description: 'Report what the running activity calendar currently shows: the selected view, the activity types present, the spread of daily distance, duration, and elevation, and any filter that is active. Use it before filter_running_activities to pick sensible thresholds.',
+    inputSchema: { type: 'object', properties: {} },
+    annotations: { readOnlyHint: true, idempotentHint: true },
+    execute: function() {
+      var counts = activityTypesInView();
+      var lines = [summaryText(null)];
+      lines.push('Activity types (days with that type): ' + Object.keys(counts).sort(function(a, b) {
+        return counts[b] - counts[a];
+      }).map(function(type) { return type + ' (' + counts[type] + ')'; }).join(', ') + '.');
+      [
+        { key: 'km', label: 'Daily distance (km)' },
+        { key: 'min', label: 'Daily moving time (minutes)' },
+        { key: 'elev', label: 'Daily elevation gain (m)' }
+      ].forEach(function(metric) {
+        var range = metricRange(metric.key);
+        if (!range) return;
+        lines.push(metric.label + ': min ' + range.min + ', median ' + range.median + ', 90th percentile ' + range.p90 + ', max ' + range.max + '.');
+      });
+      return textResult(lines.join(' '));
+    }
+  });
+
+  registerTool({
+    name: 'filter_running_activities',
+    title: 'Filter the running activity calendar',
+    description: 'Highlight days on the running activity calendar by activity type, daily distance, daily duration, or daily elevation gain, and update the totals to cover just those days. Bounds apply to a day\'s combined totals. Every call replaces the previous filter, so pass all wanted criteria together. At least one criterion is required; use clear_running_filters to show everything again.',
+    inputSchema: { type: 'object', properties: filterProperties },
+    annotations: { readOnlyHint: false, idempotentHint: true },
+    execute: function(input) {
+      input = input || {};
+      var requestedTypes = input.activityTypes || [];
+      if (!Array.isArray(requestedTypes)) return errorResult('activityTypes must be an array of activity type names.');
+      var known = activityTypesInView();
+      var unknown = requestedTypes.filter(function(type) { return !known[type]; });
+      if (unknown.length) {
+        return errorResult('Unknown activity type(s): ' + unknown.join(', ') + '. Available in this view: ' + Object.keys(known).sort().join(', ') + '.');
+      }
+
+      var bounds = {};
+      for (var i = 0; i < numericBounds.length; i++) {
+        var field = numericBounds[i].field;
+        if (input[field] === undefined || input[field] === null) continue;
+        var value = Number(input[field]);
+        if (!isFinite(value) || value < 0) return errorResult(field + ' must be a non-negative number.');
+        bounds[field] = value;
+      }
+      var pairs = [['minDistanceKm', 'maxDistanceKm'], ['minDurationMinutes', 'maxDurationMinutes'], ['minElevationM', 'maxElevationM']];
+      for (var j = 0; j < pairs.length; j++) {
+        var min = bounds[pairs[j][0]];
+        var max = bounds[pairs[j][1]];
+        if (min !== undefined && max !== undefined && min > max) {
+          return errorResult(pairs[j][0] + ' cannot be greater than ' + pairs[j][1] + '.');
+        }
+      }
+      if (!requestedTypes.length && !Object.keys(bounds).length) {
+        return errorResult('Provide at least one of activityTypes, ' + numericBounds.map(function(bound) { return bound.field; }).join(', ') + '.');
+      }
+
+      activeActivityTypes.clear();
+      requestedTypes.forEach(function(type) { activeActivityTypes.add(type); });
+      METRIC_FILTER_KEYS.forEach(function(key) {
+        activeMetricFilter[key] = bounds[key] === undefined ? null : bounds[key];
+      });
+      syncLegendState();
+      return applyFilters().then(function(totals) {
+        var days = matchingDays();
+        if (!days.length) {
+          return textResult('No days match ' + describeActiveFilters().join(' + ') + ' in the ' + viewLabel() + ' view. The calendar is showing no highlighted days.');
+        }
+        return textResult(summaryText(totals));
+      });
+    }
+  });
+
+  registerTool({
+    name: 'clear_running_filters',
+    title: 'Clear running calendar filters',
+    description: 'Remove every activity type and distance, duration, or elevation filter from the running activity calendar and restore the unfiltered totals.',
+    inputSchema: { type: 'object', properties: {} },
+    annotations: { readOnlyHint: false, idempotentHint: true },
+    execute: function() {
+      return clearAllFilters().then(function() {
+        return textResult('Cleared all filters. The calendar shows every activity day in the ' + viewLabel() + ' view.');
+      });
+    }
+  });
+
+  registerTool({
+    name: 'set_running_view',
+    title: 'Change the running calendar date range',
+    description: 'Switch the running activity calendar between all time, the last 365 days, or a single year. This reloads the page and keeps any active filter.',
+    inputSchema: {
+      type: 'object',
+      properties: {
+        view: {
+          type: 'string',
+          description: 'Use "all" for all time, "365" for the last 365 days, or a four-digit year such as "2024".'
+        }
+      },
+      required: ['view']
+    },
+    annotations: { readOnlyHint: false, idempotentHint: true },
+    execute: function(input) {
+      var view = String((input && input.view) || '').trim();
+      var yearSelect = document.getElementById('year-select');
+      var allowed = yearSelect ? Array.from(yearSelect.options).map(function(option) { return option.value; }) : ['all', '365'];
+      if (allowed.indexOf(view) === -1) {
+        return errorResult('Unknown view "' + view + '". Available views: ' + allowed.join(', ') + '.');
+      }
+      var params = filterQueryParams();
+      params.set('year', view);
+      window.location = window.location.pathname + '?' + params.toString();
+      return textResult('Loading the ' + (view === 'all' ? 'all time' : view === '365' ? 'last 365 days' : view) + ' view.');
+    }
+  });
+})();
+
 </script>
 {{end}}
