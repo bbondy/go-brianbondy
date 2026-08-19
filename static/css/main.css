@@ -468,13 +468,13 @@
 
 /* Dark mode styles for filters and navigation */
 [data-theme="dark"] .filtersContainer {
-  background-color: #2d3748;
+  background-color: transparent;
   border: none !important;
 }
 
 [data-theme="dark"] .tagContainer,
 [data-theme="dark"] .tagContainer.years {
-  background-color: #2d3748;
+  background-color: transparent;
   border: none !important;
 }
 
