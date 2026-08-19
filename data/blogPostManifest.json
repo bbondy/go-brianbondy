@@ -814,7 +814,7 @@
     "id": 62,
     "title": "UDP-TCP hole punching",
     "created": "2006-07-14",
-    "tags": ["nat", "tc", "udp"]
+    "tags": ["nat", "tcp", "udp"]
   }, {
     "id": 63,
     "title": "Got a new apple computer",

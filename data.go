@@ -24,6 +24,21 @@ var blogPostIdMap = make(map[int]data.BlogPost)
 var tagCountMap = make(map[string]int)
 var sortedTags []string
 
+// tagGroupDefinitions controls the category order on the filters page. Tags
+// not listed here remain visible in the final "Other" group.
+var tagGroupDefinitions = []data.TagGroup{
+	{Name: "Running", Tags: []string{"running", "byu", "cocodona", "destination-trails", "hurt100", "tahoe"}},
+	{Name: "Programming", Tags: []string{"ai", "c", "c++", "c++0x", "c-sharp", "data-structure", "development", "django", "electron", "g++", "javascript", "node", "nodejs", "objective-c", "programming", "python", "stl"}},
+	{Name: "Browsers", Tags: []string{"brave", "codefirefox", "firebug", "firefox", "firefox-ios", "firefox-os", "gecko", "mozilla", "snappy", "thunderbird", "xul", "xpcom"}},
+	{Name: "Web Development", Tags: []string{"akismet", "analytics", "captcha", "css", "dataurl", "google-app-engine", "html", "html5", "http", "nofollow", "seo", "site", "svg", "urlzip", "web", "xhtml"}},
+	{Name: "Platforms & Systems", Tags: []string{"android", "apple", "cocoa", "directx", "ia64", "imac", "internet-explorer", "linux", "mac", "mac-book-pro", "microsoft", "mobile", "uac", "ubuntu", "visual-studio", "win7", "winapi", "windows", "windows-8", "windows8", "wp7", "x64", "xaml", "xcode"}},
+	{Name: "Networking & Infrastructure", Tags: []string{"backup", "compression", "ddns", "email", "encoding", "ftp", "imap", "ipfs", "nat", "networking", "pipelining", "pop3", "protocol", "silent-update", "smtp", "spam", "tcp", "udp"}},
+	{Name: "Learning & Data", Tags: []string{"book", "data-analysis", "english", "khan-academy", "math", "oreilly", "puzzle", "review", "wikipedia"}},
+	{Name: "Career & Industry", Tags: []string{"business", "career", "google", "hackathon", "mentor", "mvp", "stackoverflow", "stackexchange", "talks", "tech", "twitter", "yahoo"}},
+	{Name: "Personal", Tags: []string{"family", "gaming", "life", "personal"}},
+	{Name: "Site Updates", Tags: []string{"how-stuff-works", "link-bubble", "pref", "status-report"}},
+}
+
 var (
 	// This permits declaration lists used by existing posts while excluding
 	// functions, quoted values, and URL syntax, which can make CSS executable.
@@ -104,6 +119,40 @@ func initializeBlogPosts() {
 		tag2 := sortedTags[j]
 		return tagCountMap[tag1] > tagCountMap[tag2]
 	})
+}
+
+func buildTagGroups(counts map[string]int) []data.TagGroup {
+	groups := make([]data.TagGroup, 0, len(tagGroupDefinitions)+1)
+	assigned := make(map[string]bool)
+	for _, definition := range tagGroupDefinitions {
+		group := data.TagGroup{Name: definition.Name}
+		for _, tag := range definition.Tags {
+			if counts[tag] > 0 {
+				group.Tags = append(group.Tags, tag)
+				assigned[tag] = true
+			}
+		}
+		if len(group.Tags) > 0 {
+			groups = append(groups, group)
+		}
+	}
+
+	other := data.TagGroup{Name: "Other"}
+	for tag := range counts {
+		if !assigned[tag] {
+			other.Tags = append(other.Tags, tag)
+		}
+	}
+	sort.Slice(other.Tags, func(i, j int) bool {
+		if counts[other.Tags[i]] == counts[other.Tags[j]] {
+			return other.Tags[i] < other.Tags[j]
+		}
+		return counts[other.Tags[i]] > counts[other.Tags[j]]
+	})
+	if len(other.Tags) > 0 {
+		groups = append(groups, other)
+	}
+	return groups
 }
 
 // primeSiteData loads all handler-backed data before the HTTP server accepts

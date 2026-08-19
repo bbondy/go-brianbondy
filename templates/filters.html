@@ -9,10 +9,13 @@
       {{end}}
     </div>
     <h1>Blog posts by tag</h1>
+    {{range .TagGroups}}
+    <h2>{{.Name}}</h2>
     <div class="tagContainer">
-      {{range .SortedTags}}
+      {{range .Tags}}
       <div><a href="{{tagUrl .}}" class="tag">{{.}}</a> x {{getTagCount .}}</div>
       {{end}}
     </div>
+    {{end}}
   </div>
 {{end}}

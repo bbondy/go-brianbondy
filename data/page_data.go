@@ -54,8 +54,15 @@ type FiltersPage struct {
 	MarkdownSlug                     string
 	TagCountMap                      map[string]int
 	SortedTags                       []string
+	TagGroups                        []TagGroup
 	Years                            []int
 	ShareUrl, Description, ImagePath string
+}
+
+// TagGroup is a named collection of related blog tags for navigation.
+type TagGroup struct {
+	Name string
+	Tags []string
 }
 
 type BlogPostPreview struct {

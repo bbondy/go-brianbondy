@@ -625,6 +625,7 @@ func filtersPageHandler(w http.ResponseWriter, r *http.Request) {
 		Content:      "Test content - filters",
 		TagCountMap:  tagCountMap,
 		SortedTags:   sortedTags,
+		TagGroups:    buildTagGroups(tagCountMap),
 		MarkdownSlug: "filters",
 		Years:        year_range,
 	}
