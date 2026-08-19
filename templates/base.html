@@ -283,6 +283,11 @@
     <!-- Syntax highlighting loaded asynchronously -->
     <link rel="stylesheet" href="/static/css/highlight-default.css" media="print" onload="this.media='all'">
     <noscript><link rel="stylesheet" href="/static/css/highlight-default.css"></noscript>
+
+    {{if or (avail "BlogPost" .) (avail "Pictures" .)}}
+    <link rel="stylesheet" href="/static/css/lightbox.css?v=1" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="/static/css/lightbox.css?v=1"></noscript>
+    {{end}}
     
     <!-- Optimized favicon -->
     <link rel="icon" type="image/x-icon" href="/static/img/favicon.ico">
@@ -379,6 +384,7 @@
     <!-- Back to Top Button -->
     <button id="back-to-top" title="Back to top" aria-label="Back to top">&#8679;</button>
 
+    {{if or (avail "BlogPost" .) (avail "Pictures" .)}}
     <!-- Lightbox HTML -->
     <div id="lightbox" class="lightbox">
       <span class="lightbox-close">&times;</span>
@@ -665,7 +671,10 @@
           initLightbox('.blogPost img');
         }
       })();
+    </script>
+    {{end}}
 
+    <script>
       // Enhanced Code Block Functionality
       (function() {
         // Language detection patterns
