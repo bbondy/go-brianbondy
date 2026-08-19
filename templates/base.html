@@ -202,6 +202,14 @@
       .topBar .topBarLinks {
         margin: 0 auto;
       }
+      .topBar .topBarLinks > li {
+        padding: 0;
+      }
+      .topBar .topBarLinks > li > a {
+        display: inline-flex;
+        align-items: center;
+        padding: 10px 14px;
+      }
       .topBar li {
         color: var(--text-color);
         display: inline-block;
@@ -290,7 +298,7 @@
     <meta property="og:type" content="article">
     {{end}}
     {{if (avail "Description" .)}}
-    <meta property="og:description" content={{.Description}}>
+    <meta property="og:description" content="{{.Description}}">
     {{end}}
     {{if (avail "ImagePath" .)}}
     <meta property="og:image" content="https://brianbondy.com/{{.ImagePath}}">
@@ -306,21 +314,15 @@
           <img title="Brian R. Bondy" src="/static/img/logo.png" alt="Brian R. Bondy logo" class="logo-img" id="site-logo">
         </a>
         <ul class="topBarLinks">
-          <a href="/all" class="blog">
-            <li class="{{if eq .MarkdownSlug "all"}}current{{end}}">Blog</li>
-          </a>
-          <a href="/running" class="running">
-            <li class="{{if eq .MarkdownSlug "running"}}current{{end}}">Runs</li>
-          </a>
-          <a href="/projects" class="projects">
-            <li class="{{if eq .MarkdownSlug "projects"}}current{{end}}">Projects</li>
-          </a>
-          <a href="/about">
-            <li class="{{if eq .MarkdownSlug "about.markdown"}}current{{end}}">About</li>
-          </a>
-          <button class="theme-toggle" id="theme-toggle" title="Toggle dark mode">
-            <span class="icon" id="theme-icon">🌙</span>
-          </button>
+          <li class="{{if eq .MarkdownSlug "all"}}current{{end}}"><a href="/all" class="blog">Blog</a></li>
+          <li class="{{if eq .MarkdownSlug "running"}}current{{end}}"><a href="/running" class="running">Runs</a></li>
+          <li class="{{if eq .MarkdownSlug "projects"}}current{{end}}"><a href="/projects" class="projects">Projects</a></li>
+          <li class="{{if eq .MarkdownSlug "about.markdown"}}current{{end}}"><a href="/about">About</a></li>
+          <li>
+            <button class="theme-toggle" id="theme-toggle" title="Toggle dark mode">
+              <span class="icon" id="theme-icon">🌙</span>
+            </button>
+          </li>
         </ul>
       </div>
       <div class="mainBody">

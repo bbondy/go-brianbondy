@@ -981,6 +981,15 @@ a {
   margin-left: 0;
   padding-left: 0;
 }
+.topBar .topBarLinks > li {
+  align-self: stretch;
+  padding: 0;
+}
+.topBar .topBarLinks > li > a {
+  display: flex;
+  align-items: center;
+  padding: 10px 14px;
+}
 .topBar li {
   color: var(--text-color);
   display: flex;
@@ -1007,7 +1016,7 @@ a {
 }
 .topBar li.current {
   color: var(--link-color);
-  border-bottom: 2px solid var(--link-color);
+  box-shadow: inset 0 -2px 0 var(--link-color);
 }
 .topBar li .fa-twitter {
   color: #00ABF1;
