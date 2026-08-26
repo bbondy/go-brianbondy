@@ -172,6 +172,17 @@ func getImageMimeType(imagePath string) string {
 
 const responsiveImageSizes = "(max-width: 800px) calc(100vw - 44px), 756px"
 
+// responsiveImageSizesFor returns the sizes attribute for an image slot. It
+// defaults to the article body width; templates rendering smaller slots (such
+// as gallery thumbnails) pass their own value so browsers pick a smaller
+// srcset candidate.
+func responsiveImageSizesFor(override ...string) string {
+	if len(override) > 0 && override[0] != "" {
+		return override[0]
+	}
+	return responsiveImageSizes
+}
+
 func responsiveImageSrcset(src string) string {
 	ext := strings.ToLower(filepath.Ext(src))
 	if !strings.HasPrefix(src, "/static/") || (ext != ".jpg" && ext != ".jpeg" && ext != ".png" && ext != ".webp") {

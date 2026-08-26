@@ -217,3 +217,15 @@ func TestResponsiveImageSrcset(t *testing.T) {
 		t.Errorf("responsiveImageSrcset() = %q, want %q", got, want)
 	}
 }
+
+func TestResponsiveImageSizesFor(t *testing.T) {
+	if got := responsiveImageSizesFor(); got != responsiveImageSizes {
+		t.Errorf("responsiveImageSizesFor() = %q, want %q", got, responsiveImageSizes)
+	}
+	if got := responsiveImageSizesFor(""); got != responsiveImageSizes {
+		t.Errorf("responsiveImageSizesFor(\"\") = %q, want %q", got, responsiveImageSizes)
+	}
+	if got := responsiveImageSizesFor("160px"); got != "160px" {
+		t.Errorf("responsiveImageSizesFor(\"160px\") = %q, want %q", got, "160px")
+	}
+}
