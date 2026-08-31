@@ -39,7 +39,7 @@ For getting in touch with me, please visit my [contact page](/contact).
 - Red Sun is my go-to place for Chinese food
 - My preferred coffee shop is Starbucks
 - Monty Python's Spamalot, Phantom of the Opera, and Les Miserables are my favorite plays
-- I have a cat named Loki
+- I have two cats named Remy and Emile
 - Having been born and raised on a farm, I attribute my hard work ethic to those early years
 - I'm a homebody but also enjoy going out and spending my time constructively
 - I have a thirst for knowledge and enjoy being challenged

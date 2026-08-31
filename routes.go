@@ -87,7 +87,10 @@ func initializeRoutes(router *mux.Router) {
 	router.Handle("/blog/filters", handleFilterPage)
 	router.Handle("/blog/{id:[^/]*[^0-9/][^/]*}", handleBlogIdRedirect)
 	router.Handle("/blog/{id:[^/]*[^0-9/][^/]*}/{slug}", handleBlogPost)
-	router.Handle("/about", getMarkdownTemplateHandler("About", "about.markdown", "/about"))
+	router.Handle("/about", negroni.New(
+		negroni.HandlerFunc(directToHttps),
+		negroni.Wrap(http.HandlerFunc(aboutPageHandler)),
+	))
 	router.Handle("/contact", getMarkdownTemplateHandler("Contact", "contact.markdown", "/contact"))
 	router.Handle("/projects", negroni.New(
 		negroni.HandlerFunc(directToHttps),

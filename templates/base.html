@@ -278,6 +278,9 @@
     {{if or (eq .MarkdownSlug "resume") (eq .MarkdownSlug "career")}}
     <link rel="stylesheet" href="/static/css/resume.css?v=4">
     {{end}}
+    {{if eq .MarkdownSlug "about.markdown"}}
+    <link rel="stylesheet" href="/static/css/about.css?v=2">
+    {{end}}
     
     <!-- Font Awesome loaded asynchronously -->
     <link rel="stylesheet" href="/static/font-awesome/css/all.min.css" media="print" onload="this.media='all'">

@@ -162,6 +162,18 @@ func renderCareerPage(w http.ResponseWriter, templateName string, page *data.Car
 	}
 }
 
+func aboutPageHandler(w http.ResponseWriter, _ *http.Request) {
+	if err := executeTemplate(w, "about", &data.AboutPage{
+		Title:        GetTitle("About"),
+		Description:  "Brian Bondy is a husband, father, software builder, Brave co-founder and CTO, and ultrarunner based in Belle River, Ontario.",
+		ImagePath:    "static/img/family2.webp",
+		MarkdownSlug: "about.markdown",
+		ShareUrl:     "/about",
+	}); err != nil {
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+	}
+}
+
 func resumePageHandler(w http.ResponseWriter, _ *http.Request) {
 	renderCareerPage(w, "resume", &data.CareerPage{
 		Title:        GetTitle("Resume"),
