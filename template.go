@@ -24,6 +24,8 @@ var templateFiles = map[string]string{
 	"interviews":     "templates/interviews.html",
 	"pictures":       "templates/pictures.html",
 	"projects":       "templates/projects.html",
+	"resume":         "templates/resume.html",
+	"career":         "templates/career.html",
 	"running":        "templates/running.html",
 	"simpleMarkdown": "templates/simpleMarkdown.html",
 }

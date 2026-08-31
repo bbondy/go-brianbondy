@@ -181,7 +181,6 @@ func primeSiteData() error {
 		"about.markdown",
 		"advice.markdown",
 		"contact.markdown",
-		"resume.markdown",
 	}
 	cheatsheets, err := data.GetCheatsheets()
 	if err != nil {

@@ -132,6 +132,7 @@ func TestRouteRegistration(t *testing.T) {
 		{"About page", "GET", "/about", true},
 		{"Projects page", "GET", "/projects", true},
 		{"Resume page", "GET", "/resume", true},
+		{"Career archive page", "GET", "/career", true},
 		{"All posts page", "GET", "/all", true},
 		{"Non-existent route", "GET", "/this-does-not-exist", false},
 	}

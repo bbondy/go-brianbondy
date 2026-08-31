@@ -170,6 +170,7 @@ func TestGenerateSitemapHandler(t *testing.T) {
 	assert.NoError(t, xml.NewDecoder(resp.Body).Decode(&sitemap))
 	assert.Equal(t, "http://www.sitemaps.org/schemas/sitemap/0.9", sitemap.XMLNS)
 	assert.Contains(t, sitemap.URLs, sitemapURL{Location: "https://brianbondy.com/about"})
+	assert.Contains(t, sitemap.URLs, sitemapURL{Location: "https://brianbondy.com/career"})
 	assert.Contains(t, sitemap.URLs, sitemapURL{
 		Location: "https://brianbondy.com/blog/1/test-post-1",
 		LastMod:  "2023-01-01",

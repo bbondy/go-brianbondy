@@ -273,8 +273,11 @@
     </style>
     
     <!-- Non-critical CSS loaded asynchronously -->
-        <link rel="stylesheet" href="/static/css/main.css?v=149" media="print" onload="this.media='all'">
-    <noscript><link rel="stylesheet" href="/static/css/main.css?v=149"></noscript>
+        <link rel="stylesheet" href="/static/css/main.css?v=153" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="/static/css/main.css?v=153"></noscript>
+    {{if or (eq .MarkdownSlug "resume") (eq .MarkdownSlug "career")}}
+    <link rel="stylesheet" href="/static/css/resume.css?v=3">
+    {{end}}
     
     <!-- Font Awesome loaded asynchronously -->
     <link rel="stylesheet" href="/static/font-awesome/css/all.min.css" media="print" onload="this.media='all'">
@@ -344,6 +347,7 @@
             <ul>
               <li><a href="/about">About Me</a></li>
               <li><a href="/resume">Resume</a></li>
+              <li><a href="/career">Career Archive</a></li>
               <li><a href="/contact">Contact</a></li>
             </ul>
           </div>
@@ -1055,6 +1059,15 @@
         }, { passive: true });
         btn.addEventListener('click', function() {
           window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      })();
+
+      // Save as PDF (resume / career archive)
+      (function() {
+        const btn = document.querySelector('[data-print-page]');
+        if (!btn) return;
+        btn.addEventListener('click', function() {
+          window.print();
         });
       })();
 

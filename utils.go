@@ -83,6 +83,8 @@ func canonicalURL(data interface{}) string {
 		"advice.markdown":  "/advice",
 		"contact.markdown": "/contact",
 		"resume.markdown":  "/resume",
+		"resume":           "/resume",
+		"career":           "/career",
 		"books":            "/books",
 	}
 

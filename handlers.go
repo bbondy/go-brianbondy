@@ -156,6 +156,32 @@ func getMarkdownTemplateHandler(titleSlug string, markdownSlug string, fbShareUr
 		negroni.Wrap(http.HandlerFunc(handler)))
 }
 
+func renderCareerPage(w http.ResponseWriter, templateName string, page *data.CareerPage) {
+	if err := executeTemplate(w, templateName, page); err != nil {
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+	}
+}
+
+func resumePageHandler(w http.ResponseWriter, _ *http.Request) {
+	renderCareerPage(w, "resume", &data.CareerPage{
+		Title:        GetTitle("Resume"),
+		Description:  "Brian Bondy is the co-founder and CTO of Brave Software, a board member, and a hands-on browser, systems, privacy, security, and AI engineer.",
+		MarkdownSlug: "resume",
+		ShareUrl:     "/resume",
+		Profile:      data.CareerProfileData(),
+	})
+}
+
+func careerPageHandler(w http.ResponseWriter, _ *http.Request) {
+	renderCareerPage(w, "career", &data.CareerPage{
+		Title:        GetTitle("Career & Technical Archive"),
+		Description:  "Brian Bondy's complete technical career history, from early systems and product work through Mozilla, Khan Academy, and co-founding Brave Software.",
+		MarkdownSlug: "career",
+		ShareUrl:     "/career",
+		Profile:      data.CareerProfileData(),
+	})
+}
+
 func runningHandler(w http.ResponseWriter, r *http.Request) {
 	runs, err := data.GetRuns()
 	if err != nil {
@@ -574,6 +600,7 @@ func generateSitemapHandler(w http.ResponseWriter, _ *http.Request) {
 		"/books",
 		"/cheatsheets",
 		"/contact",
+		"/career",
 		"/interviews",
 		"/pictures",
 		"/projects",

@@ -12,6 +12,14 @@ type SimpleMarkdownPage struct {
 	ErrorCode    int // Added for error pages
 }
 
+type CareerPage struct {
+	Title        string
+	Description  string
+	MarkdownSlug string
+	ShareUrl     string
+	Profile      CareerProfile
+}
+
 type ActivityTypeBreakdown struct {
 	Type       string  `json:"type"`
 	Count      int     `json:"count"`

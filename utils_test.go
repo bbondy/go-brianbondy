@@ -86,6 +86,12 @@ func TestCanonicalURL(t *testing.T) {
 	if got := canonicalURL(&data.BlogPostPage{ShareUrl: "/blog/1/test-post"}); got != "https://brianbondy.com/blog/1/test-post" {
 		t.Errorf("canonicalURL() = %q, want blog URL", got)
 	}
+	if got := canonicalURL(&data.CareerPage{MarkdownSlug: "resume"}); got != "https://brianbondy.com/resume" {
+		t.Errorf("canonicalURL() = %q, want resume URL", got)
+	}
+	if got := canonicalURL(&data.CareerPage{MarkdownSlug: "career"}); got != "https://brianbondy.com/career" {
+		t.Errorf("canonicalURL() = %q, want career URL", got)
+	}
 }
 
 func TestExtractFirstParagraph(t *testing.T) {
