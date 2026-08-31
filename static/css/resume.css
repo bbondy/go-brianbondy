@@ -395,6 +395,12 @@
   text-align: right;
 }
 
+/* Identifies the saved PDF on its own line; the screen already shows the name
+   in the hero. */
+.career-print-signature {
+  display: none;
+}
+
 /* Career archive */
 .career-archive-hero h1 {
   max-width: 650px;
@@ -838,6 +844,40 @@
     margin: 0.55in;
   }
 
+  /* Print on paper, not in the reader's theme: pin the palette to the light
+     values so a dark-mode visitor still gets a readable PDF. */
+  :root,
+  [data-theme="dark"] {
+    --bg-color: #fff;
+    --border-color: #b8c2cf;
+    --heading-color: #111827;
+    --link-color: #0d627f;
+    --link-color-strong: #0d627f;
+    --link-shadow: transparent;
+    --link-shadow-strong: transparent;
+    --link-tint: transparent;
+    --link-tint-strong: transparent;
+    --mainbody-bg: #fff;
+    --mainbody-shadow: none;
+    --muted-color: #4c5c72;
+    --panel-bg: #fff;
+    --panel-border: #c9d3de;
+    --panel-shadow: none;
+    --panel-shadow-hover: none;
+    --shadow-color: transparent;
+    --shadow-color-light: transparent;
+    --text-color: #1c2736;
+    --topbar-bg: #fff;
+    --topbar-shadow: none;
+  }
+
+  [data-theme="dark"] .resume-page,
+  [data-theme="dark"] .career-page {
+    --career-accent: #0d749e;
+    --career-accent-soft: rgba(13, 116, 158, 0.09);
+    --career-ink-soft: #42536a;
+  }
+
   body {
     background: #fff !important;
     color: #1c2736 !important;
@@ -860,7 +900,18 @@
     display: none !important;
   }
 
+  .career-print-signature {
+    border-top: 1px solid #b8c2cf;
+    break-inside: avoid;
+    color: #4c5c72;
+    display: block;
+    font-size: 8pt;
+    margin: 26px 0 0;
+    padding-top: 8px;
+  }
+
   .mainBody {
+    background: #fff;
     border: 0;
     box-shadow: none;
     padding: 0;
@@ -906,7 +957,10 @@
     padding-top: 22px;
   }
 
-  .resume-section-heading {
+  .resume-section-heading,
+  .archive-section-heading {
+    break-after: avoid;
+    break-inside: avoid;
     margin-bottom: 15px;
   }
 
@@ -919,10 +973,27 @@
     gap: 21px;
   }
 
+  /* Roles print as blocks so a long one flows onto the next page instead of
+     leaving the rest of the current page blank. */
   .resume-role {
-    break-inside: avoid;
-    gap: 16px;
-    grid-template-columns: 105px minmax(0, 1fr);
+    display: block;
+  }
+
+  .resume-role-meta {
+    break-after: avoid;
+    flex-direction: row;
+    gap: 0;
+    margin-bottom: 3px;
+    padding-top: 0;
+  }
+
+  .resume-role-meta span + span::before {
+    content: "·";
+    margin: 0 6px;
+  }
+
+  .resume-role-body > header {
+    break-after: avoid;
   }
 
   .resume-role-featured {
@@ -937,14 +1008,56 @@
     line-height: 1.45;
   }
 
+  .resume-role-summary {
+    margin: 6px 0 9px;
+  }
+
   .resume-role-body li + li {
     margin-top: 5px;
+  }
+
+  .resume-role-body li,
+  .resume-closing-grid > div {
+    break-inside: avoid;
   }
 
   .technical-depth-item {
     break-inside: avoid;
     padding-bottom: 10px;
     padding-top: 10px;
+  }
+
+  /* Everything is expanded on paper, so the disclosure affordances are noise.
+     The role marker keeps its grid cell so the summary layout holds. */
+  .archive-role-marker {
+    visibility: hidden;
+  }
+
+  .inventory-group summary::after {
+    display: none;
+  }
+
+  .archive-role summary,
+  .inventory-group summary,
+  .archive-final-grid > div,
+  .inventory-group {
+    break-inside: avoid;
+  }
+
+  .archive-role summary {
+    break-after: avoid;
+  }
+
+  h1,
+  h2,
+  h3 {
+    break-after: avoid;
+  }
+
+  p,
+  li {
+    orphans: 3;
+    widows: 3;
   }
 
   a {

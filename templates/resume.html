@@ -1,7 +1,6 @@
 {{define "mountPoint"}}
 <article class="resume-page">
   <header class="resume-hero">
-    <p class="career-kicker">Executive &amp; technical-founder resume</p>
     <h1>{{.Profile.Name}}</h1>
     <p class="resume-headline">{{.Profile.Headline}}</p>
     <p class="resume-summary">{{.Profile.ExecutiveSummary}}</p>
@@ -97,5 +96,7 @@
   <footer class="career-local-footer">
     <a href="/career">Explore the complete career archive <span aria-hidden="true">→</span></a>
   </footer>
+
+  <p class="career-print-signature">{{.Profile.Name}} · {{.Profile.Headline}} · brianbondy.com/resume</p>
 </article>
 {{end}}

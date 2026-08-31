@@ -1,8 +1,9 @@
 {{define "mountPoint"}}
 <article class="career-page" id="career-top">
   <header class="career-archive-hero">
-    <p class="career-kicker">The long version</p>
-    <h1>Career &amp; Technical Archive</h1>
+    <p class="career-kicker">Career &amp; Technical Archive</p>
+    <h1>{{.Profile.Name}}</h1>
+    <p class="resume-headline">{{.Profile.Headline}}</p>
     <p class="career-archive-intro">A chronological record of what I have built, the systems I have worked in, and the technologies accumulated along the way.</p>
     <div class="career-hero-actions">
       <nav class="career-links" aria-label="Professional profiles">
@@ -152,5 +153,7 @@
     <a href="/resume"><span aria-hidden="true">←</span> Return to the concise resume</a>
     <a href="#career-top">Back to top <span aria-hidden="true">↑</span></a>
   </footer>
+
+  <p class="career-print-signature">{{.Profile.Name}} · {{.Profile.Headline}} · brianbondy.com/career</p>
 </article>
 {{end}}

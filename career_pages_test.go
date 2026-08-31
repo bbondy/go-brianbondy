@@ -21,7 +21,9 @@ func TestResumePageContent(t *testing.T) {
 	content := string(body)
 	plainText := html.UnescapeString(content)
 
+	assert.Contains(t, plainText, "Brian R. Bondy")
 	assert.Contains(t, plainText, "Co-founder & CTO, Brave Software")
+	assert.Contains(t, content, "career-print-signature")
 	assert.Contains(t, plainText, "120M+")
 	assert.Contains(t, content, "https://brave.com/about/")
 	assert.Contains(t, content, "Khan Academy")
@@ -48,6 +50,9 @@ func TestCareerArchiveContent(t *testing.T) {
 	plainText := html.UnescapeString(content)
 
 	assert.Contains(t, plainText, "Career & Technical Archive")
+	assert.Contains(t, plainText, "Brian R. Bondy")
+	assert.Contains(t, plainText, "Co-founder & CTO, Brave Software")
+	assert.Contains(t, content, "career-print-signature")
 	assert.Contains(t, plainText, "Microsoft SourceSafe")
 	assert.Contains(t, plainText, "Silverlight")
 	assert.Contains(t, plainText, "Borland C++ 4.2")

@@ -276,7 +276,7 @@
         <link rel="stylesheet" href="/static/css/main.css?v=153" media="print" onload="this.media='all'">
     <noscript><link rel="stylesheet" href="/static/css/main.css?v=153"></noscript>
     {{if or (eq .MarkdownSlug "resume") (eq .MarkdownSlug "career")}}
-    <link rel="stylesheet" href="/static/css/resume.css?v=3">
+    <link rel="stylesheet" href="/static/css/resume.css?v=4">
     {{end}}
     
     <!-- Font Awesome loaded asynchronously -->
@@ -1068,6 +1068,29 @@
         if (!btn) return;
         btn.addEventListener('click', function() {
           window.print();
+        });
+      })();
+
+      // Print the whole archive: collapsed sections would otherwise be missing
+      // from the PDF entirely.
+      (function() {
+        const details = document.querySelectorAll('.resume-page details, .career-page details');
+        if (!details.length) return;
+        let expanded = [];
+        window.addEventListener('beforeprint', function() {
+          expanded = [];
+          details.forEach(function(el) {
+            if (!el.open) {
+              expanded.push(el);
+              el.open = true;
+            }
+          });
+        });
+        window.addEventListener('afterprint', function() {
+          expanded.forEach(function(el) {
+            el.open = false;
+          });
+          expanded = [];
         });
       })();
 
