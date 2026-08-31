@@ -113,8 +113,11 @@ type AllPostsPage struct {
 
 type ProjectsPage struct {
 	Title        string
+	Description  string
 	MarkdownSlug string
+	ShareUrl     string
 	Projects     Projects
+	BlogPostMap  map[int]BlogPost
 }
 
 type Picture struct {

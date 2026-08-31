@@ -1,29 +1,56 @@
 {{define "mountPoint"}}
-<h1>Projects</h1>
-<p>Listed below are some of the projects I've worked on throughout my career. Some are full-fledged products, and some are just libraries. Some I'm the primary developer (e.g. most things below) and some I've just contributed to (e.g. Link Bubble).</p>
-<input type="text" id="search-projects" placeholder="Search projects..." style="width:100%;max-width:400px;padding:10px 14px;font-size:1em;border-radius:8px;border:1px solid #e2e8f0;outline:none;margin:24px 0 12px 0;">
-<div class="card-container" id="projects-grid">
-  {{range .Projects}}
-    <div class="card-entry">
-      <div class="project-entry">
-        {{if .Emoji}}
-          <div class="project-emoji" role="img" aria-label="{{.Title}} logo">
-            <span class="project-emoji-glyph">{{.Emoji}}</span>
+<article class="projects-page editorial-page" id="projects-top">
+  <header class="projects-hero editorial-hero">
+    <div class="projects-hero-copy">
+      <p class="projects-kicker editorial-kicker">Projects, products, and experiments archive</p>
+      <h1 class="editorial-title">Projects</h1>
+      <p class="projects-intro editorial-intro">A collection of software work spanning browsers, desktop applications, developer tools, libraries, contributions, and smaller experiments.</p>
+    </div>
+  </header>
+
+  <section class="projects-controls" aria-labelledby="projects-controls-heading">
+    <div class="projects-search-group">
+      <label id="projects-controls-heading" for="search-projects">Search the archive</label>
+      <div class="projects-search-field">
+        <i class="fas fa-search" aria-hidden="true"></i>
+        <input type="search" id="search-projects" placeholder="Project, technology, or keyword" autocomplete="off">
+      </div>
+    </div>
+  </section>
+
+  <section class="projects-archive" aria-labelledby="projects-archive-heading">
+    <header class="projects-section-heading editorial-section-heading">
+      <p>Archive</p>
+      <h2 id="projects-archive-heading">All projects</h2>
+    </header>
+
+    <div class="projects-grid" id="projects-grid">
+      {{range $index, $project := .Projects}}
+        <article class="projects-card">
+          <div class="projects-card-media">
+            {{if .Emoji}}
+              <span class="projects-card-emoji" role="img" aria-label="{{.Title}} logo">{{.Emoji}}</span>
+            {{else if .Image}}
+              <img src="/{{.Image}}" srcset="{{responsiveImageSrcset (printf "/%s" .Image)}}" sizes="96px" alt="Project image for {{.Title}}" loading="lazy" decoding="async">
+            {{else}}
+              <span class="projects-card-placeholder" aria-hidden="true"><i class="fas fa-code"></i></span>
+            {{end}}
           </div>
-        {{else if .Image}}
-          <img class="project-image" src="/{{.Image}}" srcset="{{responsiveImageSrcset (printf "/%s" .Image)}}" sizes="{{responsiveImageSizes}}" alt="Project image for {{.Title}}" loading="lazy" decoding="async">
-        {{end}}
-        <div class="project-content">
-          <h3>
-            {{if .URL}}<a href="{{.URL}}" target="_blank" rel="noopener noreferrer">{{.Title}}</a>{{else}}{{.Title}}{{end}}
-          </h3>
-          <div class="card-details">{{.Description}}</div>
-          
+          <div class="projects-card-body">
+            <header class="projects-card-header">
+            <div class="projects-card-title">
+              <h3>
+                {{if .URL}}<a href="{{.URL}}" target="_blank" rel="noopener noreferrer">{{.Title}} <span aria-hidden="true">↗</span></a>{{else}}{{.Title}}{{end}}
+              </h3>
+            </div>
+            </header>
+
+          <p class="projects-card-description">{{.Description}}</p>
+
           {{if .GitHubStats}}
-            <div class="github-stats">
-              {{if gt .GitHubStats.CommitCount 0}}
-                <div class="commit-count">
-                  <i class="fas fa-code-branch"></i>
+            {{if or (gt .GitHubStats.CommitCount 0) (gt .GitHubStats.PrCount 0)}}
+              <div class="projects-contributions" aria-label="GitHub contributions">
+                {{if gt .GitHubStats.CommitCount 0}}
                   <a href="{{/* Build the GitHub search URL for commits */}}
                     {{ $owner := (index (split (replace (replace .Github "https://github.com/" "") ".git" "") "/") 0) }}
                     {{ $repo := (index (split (replace (replace .Github "https://github.com/" "") ".git" "") "/") 1) }}
@@ -34,14 +61,9 @@
                     {{else}}
                       {{ printf "%s&type=commits" $base }}
                     {{end}}
-                  " target="_blank" rel="noopener noreferrer">
-                    {{.GitHubStats.CommitCount}}+ commits by bbondy
-                  </a>
-                </div>
-              {{end}}
-              {{if gt .GitHubStats.PrCount 0}}
-                <div class="pr-count">
-                  <i class="fas fa-exchange-alt"></i> <!-- Use fa-code-pull-request if using Font Awesome 6+ -->
+                  " target="_blank" rel="noopener noreferrer"><i class="fas fa-code-branch" aria-hidden="true"></i> {{.GitHubStats.CommitCount}}+ commits</a>
+                {{end}}
+                {{if gt .GitHubStats.PrCount 0}}
                   <a href="{{/* Build the GitHub search URL for PRs */}}
                     {{ $owner := (index (split (replace (replace .Github "https://github.com/" "") ".git" "") "/") 0) }}
                     {{ $repo := (index (split (replace (replace .Github "https://github.com/" "") ".git" "") "/") 1) }}
@@ -52,75 +74,83 @@
                     {{else}}
                       {{ printf "%s&type=pullrequests" $base }}
                     {{end}}
-                  " target="_blank" rel="noopener noreferrer">
-                    {{.GitHubStats.PrCount}}+ pull requests by bbondy
-                  </a>
-                </div>
-              {{end}}
-              
-              {{if .GitHubStats.Languages}}
-                <div class="language-breakdown">
-                  {{range .GitHubStats.Languages}}
-                    <div class="language-bar">
-                      <span class="language-name">{{.Name}}</span>
-                      <div class="language-progress">
-                        <div class="language-progress-fill" style="width: {{.Percent}}%; background-color: {{.Color}};"></div>
-                      </div>
-                      <span class="language-percent">{{printf "%.1f" .Percent}}%</span>
-                    </div>
-                  {{end}}
-                </div>
-              {{end}}
-            </div>
+                  " target="_blank" rel="noopener noreferrer"><i class="fas fa-exchange-alt" aria-hidden="true"></i> {{.GitHubStats.PrCount}}+ PRs</a>
+                {{end}}
+              </div>
+            {{end}}
+
+            {{if .GitHubStats.Languages}}
+              <div class="projects-languages" aria-label="Repository languages">
+                {{range .GitHubStats.Languages}}
+                  <div class="projects-language">
+                    <span class="projects-language-name">{{.Name}}</span>
+                    <span class="projects-language-track" aria-hidden="true">
+                      <span style="width: {{.Percent}}%; background-color: {{.Color}};"></span>
+                    </span>
+                    <span>{{printf "%.1f" .Percent}}%</span>
+                  </div>
+                {{end}}
+              </div>
+            {{end}}
           {{end}}
-          
-          <div class="project-links">
-            {{if .Website}}
-              <a href="{{.Website}}" target="_blank" rel="noopener noreferrer" title="Website" class="action-link website-link"><i class="fas fa-globe"></i></a>
-            {{end}}
-            {{if .Github}}
-              <a href="{{.Github}}" target="_blank" rel="noopener noreferrer" title="GitHub" class="action-link github-link"><i class="fab fa-github"></i></a>
-            {{end}}
-            {{if .BlogPostID}}
-              {{with index $.BlogPostMap .BlogPostID}}
-                <a href="/blog/{{.Id}}/{{slugifyTitle .Title}}" title="Read blog post" class="action-link blog-link">
-                  <i class="fas fa-blog"></i>
-                </a>
+
+          {{if or .Website .Github .BlogPostID}}
+            <footer class="projects-card-links" aria-label="Links for {{.Title}}">
+              {{if .Website}}
+                <a href="{{.Website}}" target="_blank" rel="noopener noreferrer"><i class="fas fa-globe" aria-hidden="true"></i> Website</a>
               {{end}}
-              {{if eq .BlogPostID 174}}
-                <a href="/pictures?tag=brave" class="action-link pictures-link" title="View Brave Pictures Gallery" aria-label="View Brave Pictures Gallery">
-                  <i class="fas fa-images"></i>
-                </a>
+              {{if .Github}}
+                <a href="{{.Github}}" target="_blank" rel="noopener noreferrer"><i class="fab fa-github" aria-hidden="true"></i> Source</a>
               {{end}}
-            {{end}}
+              {{if .BlogPostID}}
+                {{with index $.BlogPostMap .BlogPostID}}
+                  <a href="/blog/{{.Id}}/{{slugifyTitle .Title}}"><i class="fas fa-file-alt" aria-hidden="true"></i> Related post</a>
+                {{end}}
+                {{if eq .BlogPostID 174}}
+                  <a href="/pictures?tag=brave"><i class="fas fa-images" aria-hidden="true"></i> Gallery</a>
+                {{end}}
+              {{end}}
+            </footer>
+          {{end}}
           </div>
-        </div>
-      </div>
+        </article>
+      {{end}}
     </div>
-  {{end}}
-</div>
+
+    <p class="projects-empty" id="projects-empty" hidden>No projects match that search.</p>
+  </section>
+
+  <footer class="projects-local-footer">
+    <span>{{len .Projects}} entries, shown in manifest order</span>
+    <a href="#projects-top">Back to top <span aria-hidden="true">↑</span></a>
+  </footer>
+</article>
+
 <script>
-  // Client-side search for projects
   document.addEventListener('DOMContentLoaded', function() {
     const searchInput = document.getElementById('search-projects');
     const projectsGrid = document.getElementById('projects-grid');
-    if (!searchInput || !projectsGrid) return;
-    searchInput.addEventListener('input', function() {
+    const emptyState = document.getElementById('projects-empty');
+    if (!searchInput || !projectsGrid || !emptyState) return;
+
+    const cards = Array.from(projectsGrid.querySelectorAll('.projects-card'));
+    function applyProjectSearch() {
       const query = searchInput.value.trim().toLowerCase();
-      const items = projectsGrid.querySelectorAll('.card-entry');
-      items.forEach(function(item) {
-        const title = item.querySelector('h3').textContent.toLowerCase();
-        const details = item.querySelector('.card-details').textContent.toLowerCase();
-        const langElems = item.querySelectorAll('.language-name');
-        let langs = '';
-        langElems.forEach(function(le) { langs += le.textContent.toLowerCase() + ' '; });
-        if (title.includes(query) || details.includes(query) || langs.includes(query)) {
-          item.style.display = '';
-        } else {
-          item.style.display = 'none';
-        }
+      let shown = 0;
+
+      cards.forEach(function(card) {
+        const matchesQuery = !query || card.textContent.toLowerCase().includes(query);
+        const isVisible = matchesQuery;
+        card.hidden = !isVisible;
+        if (isVisible) shown += 1;
       });
-    });
+
+      emptyState.hidden = shown !== 0;
+    }
+
+    searchInput.addEventListener('input', applyProjectSearch);
+    searchInput.addEventListener('search', applyProjectSearch);
+
   });
 </script>
-{{end}} 
+{{end}}

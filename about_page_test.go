@@ -20,7 +20,8 @@ func TestAboutPageContent(t *testing.T) {
 	content := string(body)
 	plainText := html.UnescapeString(content)
 
-	assert.Contains(t, plainText, "Hi, I’m Brian.")
+	assert.Contains(t, plainText, "About")
+	assert.Contains(t, plainText, "I’m Brian R. Bondy.")
 	assert.Contains(t, plainText, "Shannon, Link, Ronnie, and Asher")
 	assert.Contains(t, plainText, "264.7 miles")
 	assert.Contains(t, plainText, "Tahoe 200")
@@ -33,4 +34,9 @@ func TestAboutPageContent(t *testing.T) {
 	assert.Contains(t, content, "href=\"/resume\"")
 	assert.Contains(t, content, "href=\"/running\"")
 	assert.Contains(t, content, "id=\"personal-index\"")
+	assert.NotContains(t, content, "id=\"north-star\"")
+	assert.NotContains(t, plainText, "What matters to me")
+	assert.Contains(t, plainText, "raison d’être")
+	assert.Contains(t, plainText, "turning ambitious ideas into working systems")
+	assert.Contains(t, plainText, "difficult things that demand growth")
 }

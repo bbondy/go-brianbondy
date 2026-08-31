@@ -406,7 +406,7 @@ func runningTotalsHandler(w http.ResponseWriter, r *http.Request) {
 	})
 }
 
-func projectsHandler(w http.ResponseWriter, r *http.Request) {
+func projectsHandler(w http.ResponseWriter, _ *http.Request) {
 	projects, err := data.GetProjects()
 	if err != nil {
 		errorPage(w, "Unable to load project data", "projects")
@@ -419,14 +419,11 @@ func projectsHandler(w http.ResponseWriter, r *http.Request) {
 		blogPostMap[post.Id] = post
 	}
 
-	p := struct {
-		Title        string
-		MarkdownSlug string
-		Projects     data.Projects
-		BlogPostMap  map[int]data.BlogPost
-	}{
+	p := &data.ProjectsPage{
 		Title:        GetTitle("Projects"),
+		Description:  "A searchable archive of Brian Bondy's software projects, products, libraries, contributions, and experiments.",
 		MarkdownSlug: "projects",
+		ShareUrl:     "/projects",
 		Projects:     projects,
 		BlogPostMap:  blogPostMap,
 	}

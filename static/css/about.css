@@ -3,12 +3,9 @@
   --about-accent-soft: rgba(13, 116, 158, 0.09);
   --about-accent-mid: rgba(13, 116, 158, 0.18);
   --about-ink-soft: #42536a;
-  color: var(--text-color);
-  font-size: 0.96rem;
-}
-
-.mainBody {
-  box-sizing: border-box;
+  --editorial-accent: var(--about-accent);
+  --editorial-accent-mid: var(--about-accent-mid);
+  --editorial-ink-soft: var(--about-ink-soft);
 }
 
 [data-theme="dark"] .about-page {
@@ -18,61 +15,14 @@
   --about-ink-soft: #aebdd0;
 }
 
-.about-page * {
-  box-sizing: border-box;
-}
-
-.about-page h1 {
-  border: 0;
-  font-size: clamp(2.7rem, 7vw, 4.7rem);
-  letter-spacing: -0.05em;
-  line-height: 0.96;
-  margin: 0;
-  padding: 0;
-}
-
-.about-page h2,
-.about-page h3 {
-  padding-top: 0;
-}
-
-.about-page a:focus-visible {
-  border-radius: 4px;
-  outline: 3px solid var(--about-accent-mid);
-  outline-offset: 3px;
-}
-
-.about-kicker {
-  color: var(--about-accent);
-  font-size: 0.7rem;
-  font-weight: 750;
-  letter-spacing: 0.14em;
-  margin: 0 0 17px;
-  text-transform: uppercase;
-}
-
 .about-hero {
   background:
     linear-gradient(135deg, var(--about-accent-soft), transparent 48%),
     var(--panel-bg);
-  border: 1px solid var(--panel-border);
-  border-radius: 14px;
   display: grid;
   gap: clamp(24px, 5vw, 46px);
   grid-template-columns: minmax(0, 1.04fr) minmax(260px, 0.96fr);
-  overflow: hidden;
   padding: clamp(24px, 5vw, 44px);
-  position: relative;
-}
-
-.about-hero::before {
-  background: var(--about-accent);
-  content: "";
-  height: 3px;
-  left: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
 }
 
 .about-hero-copy {
@@ -80,20 +30,7 @@
   min-width: 0;
 }
 
-.about-headline {
-  color: var(--about-accent);
-  font-family: var(--font-heading);
-  font-size: clamp(1.1rem, 2.7vw, 1.42rem);
-  font-weight: 650;
-  letter-spacing: -0.015em;
-  line-height: 1.35;
-  margin: 14px 0 18px;
-}
-
 .about-intro {
-  color: var(--about-ink-soft);
-  line-height: 1.72;
-  margin: 0;
   max-width: 60ch;
 }
 
@@ -210,76 +147,11 @@
   scroll-margin-top: 20px;
 }
 
-.about-section-heading {
-  align-items: baseline;
-  border-bottom: 1px solid var(--panel-border);
-  display: flex;
-  gap: 12px;
-  margin-bottom: 27px;
-  padding-bottom: 10px;
-}
-
-.about-section-heading > p {
-  color: var(--about-accent);
-  font-size: 0.68rem;
-  font-weight: 750;
-  letter-spacing: 0.1em;
-  margin: 0;
-  text-transform: uppercase;
-}
-
-.about-section-heading h2 {
-  border: 0;
-  font-size: 1.5rem;
-  letter-spacing: -0.025em;
-  margin: 0;
-}
-
 .about-section-intro {
   color: var(--about-ink-soft);
   line-height: 1.68;
   margin: -8px 0 24px;
   max-width: 70ch;
-}
-
-.about-values {
-  display: grid;
-  gap: 1px;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  overflow: hidden;
-}
-
-.about-value {
-  border-left: 1px solid var(--panel-border);
-  padding: 5px 22px 2px;
-}
-
-.about-value:first-child {
-  border-left: 0;
-  padding-left: 0;
-}
-
-.about-value:last-child {
-  padding-right: 0;
-}
-
-.about-value-number {
-  color: var(--about-accent);
-  font-size: 0.66rem;
-  font-weight: 750;
-  letter-spacing: 0.08em;
-}
-
-.about-value h3 {
-  font-size: 1.05rem;
-  margin: 8px 0 8px;
-}
-
-.about-value p {
-  color: var(--about-ink-soft);
-  font-size: 0.86rem;
-  line-height: 1.62;
-  margin: 0;
 }
 
 .about-family-grid {
@@ -507,22 +379,10 @@
 }
 
 @media (max-width: 700px) {
-  .mainBody {
-    padding: 14px 14px 34px;
-  }
-
-  .about-page {
-    font-size: 0.93rem;
-  }
-
   .about-hero {
     gap: 27px;
     grid-template-columns: 1fr;
     padding: 25px 20px;
-  }
-
-  .about-page h1 {
-    font-size: clamp(2.6rem, 13vw, 3.45rem);
   }
 
   .about-hero-photo picture {
@@ -541,30 +401,10 @@
     padding-top: 42px;
   }
 
-  .about-section-heading {
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 3px;
-  }
-
-  .about-values,
   .about-work-grid,
   .about-running-feature,
   .about-index-grid {
     grid-template-columns: 1fr;
-  }
-
-  .about-value,
-  .about-value:first-child,
-  .about-value:last-child {
-    border-left: 0;
-    border-top: 1px solid var(--panel-border);
-    padding: 18px 0;
-  }
-
-  .about-value:first-child {
-    border-top: 0;
-    padding-top: 2px;
   }
 
   .about-family-grid {

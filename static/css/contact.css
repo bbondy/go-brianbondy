@@ -3,12 +3,9 @@
   --contact-accent-soft: rgba(13, 116, 158, 0.09);
   --contact-accent-mid: rgba(13, 116, 158, 0.18);
   --contact-ink-soft: #42536a;
-  color: var(--text-color);
-  font-size: 0.96rem;
-}
-
-.mainBody {
-  box-sizing: border-box;
+  --editorial-accent: var(--contact-accent);
+  --editorial-accent-mid: var(--contact-accent-mid);
+  --editorial-ink-soft: var(--contact-ink-soft);
 }
 
 [data-theme="dark"] .contact-page {
@@ -18,31 +15,6 @@
   --contact-ink-soft: #aebdd0;
 }
 
-.contact-page * {
-  box-sizing: border-box;
-}
-
-.contact-page h1 {
-  border: 0;
-  font-size: clamp(2.55rem, 6vw, 3.65rem);
-  letter-spacing: -0.05em;
-  line-height: 0.98;
-  margin: 0;
-  padding: 0;
-}
-
-.contact-page h2,
-.contact-page h3 {
-  padding-top: 0;
-}
-
-.contact-page a:focus-visible {
-  border-radius: 4px;
-  outline: 3px solid var(--contact-accent-mid);
-  outline-offset: 3px;
-}
-
-.contact-kicker,
 .contact-eyebrow,
 .contact-card-label {
   color: var(--contact-accent);
@@ -52,32 +24,14 @@
   text-transform: uppercase;
 }
 
-.contact-kicker {
-  margin: 0 0 17px;
-}
-
 .contact-hero {
   background:
     linear-gradient(135deg, var(--contact-accent-soft), transparent 52%),
     var(--panel-bg);
-  border: 1px solid var(--panel-border);
-  border-radius: 14px;
   display: grid;
   gap: clamp(28px, 6vw, 50px);
   grid-template-columns: minmax(0, 1.08fr) minmax(245px, 0.92fr);
-  overflow: hidden;
   padding: clamp(25px, 6vw, 47px);
-  position: relative;
-}
-
-.contact-hero::before {
-  background: var(--contact-accent);
-  content: "";
-  height: 3px;
-  left: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
 }
 
 .contact-hero-copy {
@@ -86,9 +40,6 @@
 }
 
 .contact-intro {
-  color: var(--contact-ink-soft);
-  line-height: 1.72;
-  margin: 20px 0 0;
   max-width: 54ch;
 }
 
@@ -406,10 +357,6 @@
     margin-left: -5px;
     margin-right: -5px;
     padding: 25px 20px;
-  }
-
-  .contact-page h1 {
-    font-size: clamp(2.35rem, 13vw, 3.15rem);
   }
 
   .contact-local-footer {
