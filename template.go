@@ -19,6 +19,7 @@ var templateFiles = map[string]string{
 	"blogPost":       "templates/blogPost.html",
 	"books":          "templates/books.html",
 	"cheatsheets":    "templates/cheatsheets.html",
+	"contact":        "templates/contact.html",
 	"error":          "templates/error.html",
 	"filters":        "templates/filters.html",
 	"home":           "templates/home.html",

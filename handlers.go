@@ -174,6 +174,17 @@ func aboutPageHandler(w http.ResponseWriter, _ *http.Request) {
 	}
 }
 
+func contactPageHandler(w http.ResponseWriter, _ *http.Request) {
+	if err := executeTemplate(w, "contact", &data.ContactPage{
+		Title:        GetTitle("Contact"),
+		Description:  "Contact Brian Bondy by email or find him on GitHub, LinkedIn, Strava, and other social platforms.",
+		MarkdownSlug: "contact.markdown",
+		ShareUrl:     "/contact",
+	}); err != nil {
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+	}
+}
+
 func resumePageHandler(w http.ResponseWriter, _ *http.Request) {
 	renderCareerPage(w, "resume", &data.CareerPage{
 		Title:        GetTitle("Resume"),

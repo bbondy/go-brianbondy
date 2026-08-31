@@ -28,6 +28,13 @@ type AboutPage struct {
 	ShareUrl     string
 }
 
+type ContactPage struct {
+	Title        string
+	Description  string
+	MarkdownSlug string
+	ShareUrl     string
+}
+
 type ActivityTypeBreakdown struct {
 	Type       string  `json:"type"`
 	Count      int     `json:"count"`

@@ -130,6 +130,7 @@ func TestRouteRegistration(t *testing.T) {
 		{"Legacy blog tag redirect", "GET", "/blog/tagged/golang", true},
 		{"Filters page", "GET", "/blog/filters", true},
 		{"About page", "GET", "/about", true},
+		{"Contact page", "GET", "/contact", true},
 		{"Projects page", "GET", "/projects", true},
 		{"Resume page", "GET", "/resume", true},
 		{"Career archive page", "GET", "/career", true},
