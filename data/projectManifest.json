@@ -57,6 +57,14 @@
     }
   },
   {
+    "title": "Brave Bot",
+    "emoji": "🛡️",
+    "url": "https://github.com/brave-experiments/brave-bot",
+    "website": "https://brave-experiments.github.io/brave-bot-docs/",
+    "github": "https://github.com/brave-experiments/brave-bot",
+    "description": "General-purpose agent designed as a drop-in replacement for Claude Code, Codex, and OpenCode, with structural resistance to indirect prompt injection."
+  },
+  {
     "title": "Guardrails",
     "image": "static/img/projects/guardrails.png",
     "url": "https://github.com/bbondy/guardrails",

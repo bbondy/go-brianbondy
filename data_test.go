@@ -223,6 +223,28 @@ func TestProjectsManifestIncludesBraveDevBotEmoji(t *testing.T) {
 	assert.True(t, found, "Brave Dev Bot project should exist in the manifest")
 }
 
+func TestProjectsManifestIncludesBraveBot(t *testing.T) {
+	data.ClearProjectsCache()
+
+	projects, err := data.GetProjects()
+	assert.NoError(t, err)
+
+	found := false
+	for _, project := range projects {
+		if project.Github != "https://github.com/brave-experiments/brave-bot" {
+			continue
+		}
+
+		found = true
+		assert.Equal(t, "Brave Bot", project.Title)
+		assert.Equal(t, "🛡️", project.Emoji)
+		assert.Equal(t, "https://brave-experiments.github.io/brave-bot-docs/", project.Website)
+		assert.Contains(t, project.Description, "structural resistance to indirect prompt injection")
+	}
+
+	assert.True(t, found, "Brave Bot project should exist in the manifest")
+}
+
 // TestGetCheatsheetsCaching tests the caching mechanism for GetCheatsheets
 func TestGetCheatsheetsCaching(t *testing.T) {
 	// Clear cache before test
