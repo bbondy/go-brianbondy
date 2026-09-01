@@ -2,44 +2,60 @@
 <html lang="en">
   <head>
     <script>
-      // Prevent flash of unstyled content (FOUC) for dark mode
+      // Resolve the saved light/dark and color preferences before first paint.
       (function() {
         try {
-          // Resolve the saved preference before styles are rendered.
+          var root = document.documentElement;
+          var paletteOrder = ['ocean', 'forest', 'ember', 'violet', 'rose'];
           var savedTheme = localStorage.getItem('theme');
           var hasExplicitTheme = savedTheme === 'dark' || savedTheme === 'light';
           var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
           var theme = hasExplicitTheme ? savedTheme : (prefersDark ? 'dark' : 'light');
-          
-          // Apply theme immediately to prevent flash
-          document.documentElement.setAttribute('data-theme', theme);
-          document.documentElement.setAttribute('data-theme-preference', hasExplicitTheme ? savedTheme : 'auto');
+          var savedPalette = localStorage.getItem('palette');
+          var palette = paletteOrder.indexOf(savedPalette) === -1 ? 'ocean' : savedPalette;
 
-          // Add subtle background variation per page load
-          (function() {
-            var root = document.documentElement;
+          root.setAttribute('data-theme', theme);
+          root.setAttribute('data-theme-preference', hasExplicitTheme ? savedTheme : 'auto');
+          root.setAttribute('data-palette', palette);
+          window.sitePaletteOrder = paletteOrder;
+
+          window.applyBackgroundVariation = function() {
             var rand = function(min, max) { return Math.random() * (max - min) + min; };
             var isDark = root.getAttribute('data-theme') === 'dark';
-            var palettes = isDark
-              ? [
-                  { g1: [86, 200, 255], g2: [40, 140, 255], g3: [86, 200, 255] },
-                  { g1: [94, 220, 255], g2: [34, 160, 255], g3: [94, 220, 255] },
-                  { g1: [64, 170, 255], g2: [24, 120, 230], g3: [64, 170, 255] },
-                  { g1: [60, 210, 240], g2: [30, 120, 200], g3: [60, 210, 240] }
-                ]
-              : [
-                  { g1: [20, 145, 190], g2: [95, 205, 240], g3: [20, 145, 190] },
-                  { g1: [15, 120, 175], g2: [110, 210, 245], g3: [15, 120, 175] },
-                  { g1: [30, 160, 205], g2: [70, 185, 230], g3: [30, 160, 205] },
-                  { g1: [10, 135, 175], g2: [130, 220, 245], g3: [10, 135, 175] }
-                ];
-
-            var palette = palettes[Math.floor(Math.random() * palettes.length)];
-            if (Math.random() > 0.5) {
-              var temp = palette.g1;
-              palette.g1 = palette.g2;
-              palette.g2 = temp;
+            var families = {
+              ocean: {
+                light: [[20, 145, 190], [95, 205, 240], [15, 120, 175], [110, 210, 245], [30, 160, 205], [70, 185, 230]],
+                dark: [[86, 200, 255], [40, 140, 255], [94, 220, 255], [34, 160, 255], [64, 170, 255], [24, 120, 230]]
+              },
+              forest: {
+                light: [[23, 128, 91], [91, 193, 143], [42, 153, 113], [121, 210, 162], [17, 107, 77], [70, 174, 127]],
+                dark: [[95, 214, 164], [44, 170, 116], [118, 230, 183], [36, 140, 96], [72, 198, 145], [26, 120, 82]]
+              },
+              ember: {
+                light: [[191, 88, 45], [235, 145, 91], [213, 105, 55], [244, 173, 110], [167, 70, 38], [225, 123, 65]],
+                dark: [[255, 155, 104], [225, 102, 58], [255, 184, 120], [190, 75, 42], [240, 129, 75], [168, 61, 34]]
+              },
+              violet: {
+                light: [[118, 82, 181], [178, 139, 229], [99, 68, 160], [197, 161, 237], [139, 99, 198], [84, 59, 139]],
+                dark: [[185, 154, 255], [137, 94, 221], [202, 174, 255], [110, 73, 184], [164, 125, 236], [91, 58, 161]]
+              },
+              rose: {
+                light: [[182, 77, 114], [232, 139, 170], [161, 57, 95], [241, 164, 188], [201, 101, 135], [145, 49, 82]],
+                dark: [[255, 143, 181], [219, 82, 130], [255, 169, 196], [185, 60, 105], [237, 111, 153], [164, 48, 88]]
+              }
+            };
+            var paletteName = root.getAttribute('data-palette') || 'ocean';
+            var family = families[paletteName] || families.ocean;
+            var colors = isDark ? family.dark : family.light;
+            var firstIndex = Math.floor(Math.random() * colors.length);
+            var secondIndex = Math.floor(Math.random() * colors.length);
+            if (secondIndex === firstIndex) {
+              secondIndex = (secondIndex + 1) % colors.length;
             }
+            var thirdIndex = Math.floor(Math.random() * colors.length);
+            var g1 = colors[firstIndex];
+            var g2 = colors[secondIndex];
+            var g3 = colors[thirdIndex];
 
             root.style.setProperty('--bg-glow-1-x', rand(2, 36).toFixed(2) + '%');
             root.style.setProperty('--bg-glow-1-y', rand(2, 30).toFixed(2) + '%');
@@ -49,14 +65,16 @@
             root.style.setProperty('--bg-glow-2-stop', rand(30, 72).toFixed(2) + '%');
             root.style.setProperty('--bg-glow-angle', rand(85, 175).toFixed(2) + 'deg');
 
-            root.style.setProperty('--bg-glow-1', 'rgba(' + palette.g1.join(', ') + ', ' + rand(0.16, 0.36).toFixed(2) + ')');
-            root.style.setProperty('--bg-glow-2', 'rgba(' + palette.g2.join(', ') + ', ' + rand(0.16, 0.38).toFixed(2) + ')');
-            root.style.setProperty('--bg-glow-3', 'rgba(' + palette.g3.join(', ') + ', ' + rand(0.12, 0.26).toFixed(2) + ')');
-          })();
+            root.style.setProperty('--bg-glow-1', 'rgba(' + g1.join(', ') + ', ' + rand(0.16, 0.36).toFixed(2) + ')');
+            root.style.setProperty('--bg-glow-2', 'rgba(' + g2.join(', ') + ', ' + rand(0.16, 0.38).toFixed(2) + ')');
+            root.style.setProperty('--bg-glow-3', 'rgba(' + g3.join(', ') + ', ' + rand(0.12, 0.26).toFixed(2) + ')');
+          };
+
+          window.applyBackgroundVariation();
         } catch (e) {
-          // Fallback to light theme if there's an error
           document.documentElement.setAttribute('data-theme', 'light');
           document.documentElement.setAttribute('data-theme-preference', 'auto');
+          document.documentElement.setAttribute('data-palette', 'ocean');
         }
       })();
     </script>
@@ -122,6 +140,12 @@
         --link-tint-strong: rgba(20, 131, 179, 0.2);
         --link-shadow: rgba(20, 131, 179, 0.22);
         --link-shadow-strong: rgba(20, 131, 179, 0.32);
+        --accent-color: #0d749e;
+        --accent-soft: rgba(13, 116, 158, 0.09);
+        --accent-mid: rgba(13, 116, 158, 0.2);
+        --ink-soft: #42536a;
+        --palette-swatch: #1483b3;
+        --logo-hue: 0deg;
         --panel-shadow: 0 14px 32px rgba(15, 23, 42, 0.12);
         --panel-shadow-hover: 0 18px 40px rgba(15, 23, 42, 0.16);
         --font-heading: "Fraunces", "Iowan Old Style", "Palatino", "Times New Roman", serif;
@@ -158,9 +182,190 @@
         --link-tint-strong: rgba(89, 192, 255, 0.22);
         --link-shadow: rgba(89, 192, 255, 0.28);
         --link-shadow-strong: rgba(89, 192, 255, 0.38);
+        --accent-color: #62c8f5;
+        --accent-soft: rgba(98, 200, 245, 0.1);
+        --accent-mid: rgba(98, 200, 245, 0.22);
+        --ink-soft: #aebdd0;
+        --palette-swatch: #59c0ff;
         --panel-shadow: 0 16px 36px rgba(0, 0, 0, 0.4);
         --panel-shadow-hover: 0 20px 42px rgba(0, 0, 0, 0.5);
         --font-heading: "Fraunces", "Iowan Old Style", "Palatino", "Times New Roman", serif;
+      }
+
+      :root[data-palette="forest"] {
+        --bg-color: #edf5f0;
+        --text-color: #293a32;
+        --muted-color: #5a7165;
+        --heading-color: #18291f;
+        --link-color: #177a57;
+        --link-color-strong: #105f43;
+        --border-color: #bfd5c9;
+        --panel-border: #d3e5dc;
+        --link-tint: rgba(23, 122, 87, 0.12);
+        --link-tint-strong: rgba(23, 122, 87, 0.2);
+        --link-shadow: rgba(23, 122, 87, 0.22);
+        --link-shadow-strong: rgba(23, 122, 87, 0.32);
+        --accent-color: #177a57;
+        --accent-soft: rgba(23, 122, 87, 0.09);
+        --accent-mid: rgba(23, 122, 87, 0.2);
+        --ink-soft: #486457;
+        --palette-swatch: #177a57;
+        --logo-hue: 290deg;
+      }
+
+      :root[data-theme="dark"][data-palette="forest"] {
+        --bg-color: #0c1712;
+        --text-color: #d6e8df;
+        --muted-color: #9eb9aa;
+        --heading-color: #f0faf5;
+        --link-color: #61d3a4;
+        --link-color-strong: #3bb987;
+        --topbar-bg: #111f19;
+        --mainbody-bg: #111f19;
+        --panel-bg: #111f19;
+        --border-color: #29483a;
+        --panel-border: #2d5241;
+        --link-tint: rgba(97, 211, 164, 0.14);
+        --link-tint-strong: rgba(97, 211, 164, 0.22);
+        --link-shadow: rgba(97, 211, 164, 0.28);
+        --link-shadow-strong: rgba(97, 211, 164, 0.38);
+        --accent-color: #61d3a4;
+        --accent-soft: rgba(97, 211, 164, 0.1);
+        --accent-mid: rgba(97, 211, 164, 0.22);
+        --ink-soft: #abc4b7;
+        --palette-swatch: #61d3a4;
+      }
+
+      :root[data-palette="ember"] {
+        --bg-color: #f8f0ea;
+        --text-color: #3b302a;
+        --muted-color: #755f53;
+        --heading-color: #2d201a;
+        --link-color: #b5512c;
+        --link-color-strong: #91401f;
+        --border-color: #dfc8bb;
+        --panel-border: #ead9cf;
+        --link-tint: rgba(181, 81, 44, 0.12);
+        --link-tint-strong: rgba(181, 81, 44, 0.2);
+        --link-shadow: rgba(181, 81, 44, 0.22);
+        --link-shadow-strong: rgba(181, 81, 44, 0.32);
+        --accent-color: #b5512c;
+        --accent-soft: rgba(181, 81, 44, 0.09);
+        --accent-mid: rgba(181, 81, 44, 0.2);
+        --ink-soft: #685448;
+        --palette-swatch: #b5512c;
+        --logo-hue: 175deg;
+      }
+
+      :root[data-theme="dark"][data-palette="ember"] {
+        --bg-color: #1a100c;
+        --text-color: #eddcd2;
+        --muted-color: #c0a295;
+        --heading-color: #fff5ef;
+        --link-color: #ff9a67;
+        --link-color-strong: #e67745;
+        --topbar-bg: #241713;
+        --mainbody-bg: #241713;
+        --panel-bg: #241713;
+        --border-color: #5a3c2e;
+        --panel-border: #674536;
+        --link-tint: rgba(255, 154, 103, 0.14);
+        --link-tint-strong: rgba(255, 154, 103, 0.22);
+        --link-shadow: rgba(255, 154, 103, 0.28);
+        --link-shadow-strong: rgba(255, 154, 103, 0.38);
+        --accent-color: #ff9a67;
+        --accent-soft: rgba(255, 154, 103, 0.1);
+        --accent-mid: rgba(255, 154, 103, 0.22);
+        --ink-soft: #d2b3a4;
+        --palette-swatch: #ff9a67;
+      }
+
+      :root[data-palette="violet"] {
+        --bg-color: #f3f0f8;
+        --text-color: #342f43;
+        --muted-color: #665e79;
+        --heading-color: #261f35;
+        --link-color: #7350ad;
+        --link-color-strong: #593b91;
+        --border-color: #d2c8e2;
+        --panel-border: #e0d8ec;
+        --link-tint: rgba(115, 80, 173, 0.12);
+        --link-tint-strong: rgba(115, 80, 173, 0.2);
+        --link-shadow: rgba(115, 80, 173, 0.22);
+        --link-shadow-strong: rgba(115, 80, 173, 0.32);
+        --accent-color: #7350ad;
+        --accent-soft: rgba(115, 80, 173, 0.09);
+        --accent-mid: rgba(115, 80, 173, 0.2);
+        --ink-soft: #5d536f;
+        --palette-swatch: #7350ad;
+        --logo-hue: 60deg;
+      }
+
+      :root[data-theme="dark"][data-palette="violet"] {
+        --bg-color: #14101d;
+        --text-color: #e4dcf2;
+        --muted-color: #afa1c5;
+        --heading-color: #faf6ff;
+        --link-color: #bc9cff;
+        --link-color-strong: #9c76e2;
+        --topbar-bg: #1d1728;
+        --mainbody-bg: #1d1728;
+        --panel-bg: #1d1728;
+        --border-color: #46375d;
+        --panel-border: #51416a;
+        --link-tint: rgba(188, 156, 255, 0.14);
+        --link-tint-strong: rgba(188, 156, 255, 0.22);
+        --link-shadow: rgba(188, 156, 255, 0.28);
+        --link-shadow-strong: rgba(188, 156, 255, 0.38);
+        --accent-color: #bc9cff;
+        --accent-soft: rgba(188, 156, 255, 0.1);
+        --accent-mid: rgba(188, 156, 255, 0.22);
+        --ink-soft: #b9abcf;
+        --palette-swatch: #bc9cff;
+      }
+
+      :root[data-palette="rose"] {
+        --bg-color: #f8eff2;
+        --text-color: #3e2f35;
+        --muted-color: #755b65;
+        --heading-color: #2d1c23;
+        --link-color: #b34b70;
+        --link-color-strong: #913753;
+        --border-color: #dfc6d0;
+        --panel-border: #ead7de;
+        --link-tint: rgba(179, 75, 112, 0.12);
+        --link-tint-strong: rgba(179, 75, 112, 0.2);
+        --link-shadow: rgba(179, 75, 112, 0.22);
+        --link-shadow-strong: rgba(179, 75, 112, 0.32);
+        --accent-color: #b34b70;
+        --accent-soft: rgba(179, 75, 112, 0.09);
+        --accent-mid: rgba(179, 75, 112, 0.2);
+        --ink-soft: #69505a;
+        --palette-swatch: #b34b70;
+        --logo-hue: 120deg;
+      }
+
+      :root[data-theme="dark"][data-palette="rose"] {
+        --bg-color: #190f14;
+        --text-color: #efdae2;
+        --muted-color: #c1a0ad;
+        --heading-color: #fff4f8;
+        --link-color: #ff8fb5;
+        --link-color-strong: #e56893;
+        --topbar-bg: #24161d;
+        --mainbody-bg: #24161d;
+        --panel-bg: #24161d;
+        --border-color: #593646;
+        --panel-border: #684052;
+        --link-tint: rgba(255, 143, 181, 0.14);
+        --link-tint-strong: rgba(255, 143, 181, 0.22);
+        --link-shadow: rgba(255, 143, 181, 0.28);
+        --link-shadow-strong: rgba(255, 143, 181, 0.38);
+        --accent-color: #ff8fb5;
+        --accent-soft: rgba(255, 143, 181, 0.1);
+        --accent-mid: rgba(255, 143, 181, 0.22);
+        --ink-soft: #d0aeba;
+        --palette-swatch: #ff8fb5;
       }
 
       /* Critical CSS for above-the-fold content */
@@ -184,37 +389,74 @@
         margin: 0 auto 3em auto;
       }
       .topBar {
+        align-items: center;
         background-color: var(--topbar-bg);
-        border: none;
-        box-shadow: var(--topbar-shadow);
-        border-radius: 12px;
+        border: 1px solid var(--panel-border);
+        border-radius: 14px;
+        box-shadow: var(--panel-shadow);
+        display: flex;
         margin: 15px 0;
         list-style-type: none;
+        padding: 6px;
+        position: relative;
         transition: var(--transition);
       }
+      .topBar > .site-brand {
+        align-items: center;
+        border-radius: 9px;
+        display: inline-flex;
+        flex: 0 0 38px;
+        height: 38px;
+        justify-content: center;
+      }
+      .topBar > .site-brand:hover {
+        background: var(--accent-soft);
+      }
       .topBar img {
-        float: left;
-        margin: 8px 0px 0px 9px;
-        padding-right: 10px;
-        width: 28px;
-        transition: transform 0.3s ease;
+        float: none;
+        height: 27px;
+        margin: 0;
+        padding: 0;
+        width: auto;
+        filter: hue-rotate(var(--logo-hue));
+        transition: filter 0.3s ease, transform 0.3s ease;
       }
       .topBar .topBarLinks {
-        margin: 0 auto;
+        align-items: center;
+        display: flex;
+        flex: 1;
+        gap: 3px;
+        list-style: none;
+        margin: 0;
+        padding: 0 0 0 5px;
       }
       .topBar .topBarLinks > li {
+        align-self: auto;
         padding: 0;
       }
       .topBar .topBarLinks > li > a {
         display: inline-flex;
         align-items: center;
-        padding: 10px 14px;
+        border-radius: 8px;
+        color: var(--text-color);
+        font-size: 0.78rem;
+        font-weight: 650;
+        padding: 9px 11px;
       }
       .topBar li {
         color: var(--text-color);
-        display: inline-block;
-        padding: 10px 14px;
-        transition: var(--transition);
+        display: flex;
+        margin: 0;
+        transition: background-color 0.15s ease, color 0.15s ease;
+      }
+      .topBar .topBarLinks > li:not(.theme-controls):hover > a {
+        background: var(--accent-soft);
+        color: var(--accent-color);
+      }
+      .topBar .topBarLinks > li.current > a {
+        background: var(--accent-soft);
+        box-shadow: inset 0 0 0 1px var(--accent-mid);
+        color: var(--accent-color);
       }
       .mainBody {
         background-color: var(--mainbody-bg);
@@ -246,7 +488,20 @@
       }
 
       
-      /* Dark mode toggle button */
+      /* Theme controls */
+      .theme-controls {
+        align-items: center;
+        background: var(--accent-soft);
+        border: 1px solid var(--panel-border);
+        border-radius: 10px;
+        display: inline-flex !important;
+        gap: 2px;
+        margin-left: auto !important;
+        padding: 2px !important;
+      }
+      .topBar .topBarLinks > li.theme-controls:hover {
+        background-color: transparent;
+      }
       .theme-toggle {
         background: none;
         border: none;
@@ -259,51 +514,89 @@
         align-items: center;
         justify-content: center;
         border-radius: 6px;
-        min-width: 36px;
-        height: 36px;
+        min-width: 34px;
+        height: 34px;
       }
       .theme-toggle:hover {
         color: var(--link-color);
-        background-color: rgba(99, 179, 237, 0.1);
+        background-color: var(--link-tint);
       }
       .theme-toggle .icon {
         font-size: 1.1em;
+      }
+      .palette-icon {
+        color: var(--palette-swatch);
+        font-size: 1rem;
+        transition: color 0.3s ease;
+      }
+
+      @media only screen and (max-width: 600px) {
+        .topBar {
+          display: grid;
+          grid-template-columns: 42px 1fr;
+          padding: 6px;
+        }
+        .topBar > .site-brand {
+          grid-column: 1;
+          grid-row: 1;
+        }
+        .topBar .topBarLinks {
+          border-top: 1px solid var(--panel-border);
+          display: grid;
+          grid-column: 1 / -1;
+          grid-row: 2;
+          grid-template-columns: repeat(4, minmax(0, 1fr));
+          margin-top: 6px;
+          padding: 6px 0 0;
+        }
+        .topBar .topBarLinks > li:not(.theme-controls) > a {
+          font-size: clamp(0.67rem, 3.1vw, 0.76rem);
+          justify-content: center;
+          padding: 8px 3px;
+          width: 100%;
+        }
+        .theme-controls {
+          margin: 0 !important;
+          position: absolute;
+          right: 6px;
+          top: 6px;
+        }
       }
 
     </style>
     
     <!-- Non-critical CSS loaded asynchronously -->
-        <link rel="stylesheet" href="/static/css/main.css?v=157" media="print" onload="this.media='all'">
-    <noscript><link rel="stylesheet" href="/static/css/main.css?v=157"></noscript>
+        <link rel="stylesheet" href="/static/css/main.css?v=158" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="/static/css/main.css?v=158"></noscript>
     {{if or (eq .MarkdownSlug "home") (eq .MarkdownSlug "about.markdown") (eq .MarkdownSlug "contact.markdown") (eq .MarkdownSlug "projects") (eq .MarkdownSlug "resume") (eq .MarkdownSlug "career") (eq .MarkdownSlug "running") (eq .MarkdownSlug "all") (eq .MarkdownSlug "filters") (eq .MarkdownSlug "pictures") (eq .MarkdownSlug "interviews") (eq .MarkdownSlug "cheatsheets") (eq .MarkdownSlug "books") (eq .MarkdownSlug "advice.markdown")}}
-    <link rel="stylesheet" href="/static/css/editorial.css?v=1">
+    <link rel="stylesheet" href="/static/css/editorial.css?v=2">
     {{end}}
     {{if or (eq .MarkdownSlug "resume") (eq .MarkdownSlug "career")}}
-    <link rel="stylesheet" href="/static/css/resume.css?v=4">
+    <link rel="stylesheet" href="/static/css/resume.css?v=5">
     {{end}}
     {{if eq .MarkdownSlug "about.markdown"}}
-    <link rel="stylesheet" href="/static/css/about.css?v=2">
+    <link rel="stylesheet" href="/static/css/about.css?v=3">
     {{end}}
     {{if eq .MarkdownSlug "contact.markdown"}}
-    <link rel="stylesheet" href="/static/css/contact.css?v=1">
+    <link rel="stylesheet" href="/static/css/contact.css?v=2">
     {{end}}
     {{if eq .MarkdownSlug "projects"}}
-    <link rel="stylesheet" href="/static/css/projects.css?v=1">
+    <link rel="stylesheet" href="/static/css/projects.css?v=2">
     {{end}}
     {{if eq .MarkdownSlug "running"}}
-    <link rel="stylesheet" href="/static/css/running.css?v=2">
+    <link rel="stylesheet" href="/static/css/running.css?v=3">
     {{end}}
     {{if eq .MarkdownSlug "all"}}
-    <link rel="stylesheet" href="/static/css/all-posts.css?v=1">
+    <link rel="stylesheet" href="/static/css/all-posts.css?v=2">
     {{end}}
     {{if eq .MarkdownSlug "filters"}}
-    <link rel="stylesheet" href="/static/css/filters.css?v=1">
+    <link rel="stylesheet" href="/static/css/filters.css?v=2">
     {{end}}
     {{if or (eq .MarkdownSlug "pictures") (eq .MarkdownSlug "interviews") (eq .MarkdownSlug "cheatsheets") (eq .MarkdownSlug "books") (eq .MarkdownSlug "advice.markdown")}}
-    <link rel="stylesheet" href="/static/css/collections.css?v=1">
+    <link rel="stylesheet" href="/static/css/collections.css?v=2">
     {{end}}
     {{if eq .MarkdownSlug "home"}}
-    <link rel="stylesheet" href="/static/css/home.css?v=1">
+    <link rel="stylesheet" href="/static/css/home.css?v=2">
     {{end}}
     
     <!-- Font Awesome loaded asynchronously -->
@@ -325,7 +618,7 @@
     {{if canonicalURL .}}<link rel="canonical" href="{{canonicalURL .}}">{{end}}
     <link rel="alternate" type="application/rss+xml" title="Brian Bondy RSS Feed" href="https://brianbondy.com/rss">
     <meta name="viewport" content="width=device-width, min-width=285, max-viewport=800, initial-scale=1">
-    <meta name="theme-color" content="#9AC0FF">
+    <meta name="theme-color" id="theme-color-meta" content="#eef3f8">
     <meta property="og:title" content="{{.Title}}">
     <meta property="og:site_name" content="Brian R. Bondy">
     {{if (avail "ShareUrl" .)}}
@@ -345,7 +638,7 @@
   <body>
     <div class="content">
       <div class="topBar">
-        <a href="/">
+        <a class="site-brand" href="/" aria-label="Brian R. Bondy home">
           <img title="Brian R. Bondy" src="/static/img/logo.png" alt="Brian R. Bondy logo" class="logo-img" id="site-logo">
         </a>
         <ul class="topBarLinks">
@@ -353,9 +646,12 @@
           <li class="{{if eq .MarkdownSlug "running"}}current{{end}}"><a href="/running" class="running">Runs</a></li>
           <li class="{{if eq .MarkdownSlug "projects"}}current{{end}}"><a href="/projects" class="projects">Projects</a></li>
           <li class="{{if eq .MarkdownSlug "about.markdown"}}current{{end}}"><a href="/about">About</a></li>
-          <li>
-            <button class="theme-toggle" id="theme-toggle" title="Toggle dark mode">
-              <span class="icon" id="theme-icon">🌙</span>
+          <li class="theme-controls">
+            <button class="theme-toggle" id="theme-toggle" type="button" title="Switch to dark mode" aria-label="Switch to dark mode">
+              <span class="icon" id="theme-icon" aria-hidden="true">🌙</span>
+            </button>
+            <button class="theme-toggle palette-toggle" id="palette-toggle" type="button" title="Color palette: Ocean" aria-label="Color palette: Ocean. Click for Forest">
+              <i class="fas fa-palette palette-icon" id="palette-icon" aria-hidden="true"></i>
             </button>
           </li>
         </ul>
@@ -935,6 +1231,10 @@
         
         function updateThemeIcon(theme) {
           themeIcon.textContent = theme === 'dark' ? '☀️' : '🌙';
+          const nextTheme = theme === 'dark' ? 'light' : 'dark';
+          const label = 'Switch to ' + nextTheme + ' mode';
+          themeToggle.title = label;
+          themeToggle.setAttribute('aria-label', label);
         }
 
         function setTheme(theme, savePreference) {
@@ -944,6 +1244,12 @@
             document.documentElement.setAttribute('data-theme-preference', theme);
           }
           updateThemeIcon(theme);
+          if (window.applyBackgroundVariation) {
+            window.applyBackgroundVariation();
+          }
+          if (window.updateBrowserThemeColor) {
+            window.updateBrowserThemeColor();
+          }
         }
         
         // The theme was applied in the head; only synchronize the toggle icon.
@@ -993,6 +1299,98 @@
                 }
                 setTheme(theme, true);
                 return { content: [{ type: 'text', text: 'Theme set to ' + theme + '.' }] };
+              }
+            });
+          }).catch(function() {});
+        }
+      })();
+
+      // Color palette functionality
+      (function() {
+        const paletteToggle = document.getElementById('palette-toggle');
+        const root = document.documentElement;
+        const paletteOrder = window.sitePaletteOrder || ['ocean', 'forest', 'ember', 'violet', 'rose'];
+        const paletteLabels = {
+          ocean: 'Ocean',
+          forest: 'Forest',
+          ember: 'Ember',
+          violet: 'Violet',
+          rose: 'Rose'
+        };
+
+        function updateBrowserThemeColor() {
+          const meta = document.getElementById('theme-color-meta');
+          if (!meta) return;
+          const background = getComputedStyle(root).getPropertyValue('--bg-color').trim();
+          if (background) {
+            meta.setAttribute('content', background);
+          }
+        }
+
+        function updatePaletteButton(palette) {
+          const currentIndex = paletteOrder.indexOf(palette);
+          const nextPalette = paletteOrder[(currentIndex + 1) % paletteOrder.length];
+          const label = 'Color palette: ' + paletteLabels[palette] + '. Click for ' + paletteLabels[nextPalette];
+          paletteToggle.title = label;
+          paletteToggle.setAttribute('aria-label', label);
+        }
+
+        function setPalette(palette, savePreference) {
+          if (paletteOrder.indexOf(palette) === -1) return false;
+          root.setAttribute('data-palette', palette);
+          if (savePreference) {
+            localStorage.setItem('palette', palette);
+          }
+          updatePaletteButton(palette);
+          updateBrowserThemeColor();
+          if (window.applyBackgroundVariation) {
+            window.applyBackgroundVariation();
+          }
+          return true;
+        }
+
+        window.updateBrowserThemeColor = updateBrowserThemeColor;
+        window.setSitePalette = setPalette;
+
+        const initialPalette = root.getAttribute('data-palette') || 'ocean';
+        updatePaletteButton(initialPalette);
+        updateBrowserThemeColor();
+
+        paletteToggle.addEventListener('click', function() {
+          const currentPalette = root.getAttribute('data-palette') || 'ocean';
+          const currentIndex = paletteOrder.indexOf(currentPalette);
+          const nextPalette = paletteOrder[(currentIndex + 1) % paletteOrder.length];
+          setPalette(nextPalette, true);
+        });
+
+        // WebMCP: let browser AI agents select a palette (no-op where unsupported)
+        if (document.modelContext && document.modelContext.registerTool) {
+          Promise.resolve().then(function() {
+            return document.modelContext.registerTool({
+              name: 'set_color_palette',
+              title: 'Set site color palette',
+              description: 'Set the site color palette. The choice is remembered for future visits.',
+              inputSchema: {
+                type: 'object',
+                properties: {
+                  palette: {
+                    type: 'string',
+                    enum: paletteOrder,
+                    description: 'The color palette to apply.'
+                  }
+                },
+                required: ['palette']
+              },
+              annotations: { readOnlyHint: false, idempotentHint: true },
+              execute: function(input) {
+                const palette = input && input.palette;
+                if (!setPalette(palette, true)) {
+                  return {
+                    isError: true,
+                    content: [{ type: 'text', text: 'Invalid color palette.' }]
+                  };
+                }
+                return { content: [{ type: 'text', text: 'Color palette set to ' + paletteLabels[palette] + '.' }] };
               }
             });
           }).catch(function() {});

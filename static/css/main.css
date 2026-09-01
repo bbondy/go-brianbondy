@@ -287,7 +287,7 @@
 [data-theme="dark"] input:focus,
 [data-theme="dark"] textarea:focus {
   border-color: var(--link-color);
-  box-shadow: 0 0 0 3px rgba(99, 179, 237, 0.1);
+  box-shadow: 0 0 0 3px var(--link-tint);
 }
 
 /* Dark mode styles for running page and other card components */
@@ -437,7 +437,7 @@
 }
 
 [data-theme="dark"] .postListItem:hover {
-  background-color: rgba(99, 179, 237, 0.15) !important;
+  background-color: var(--link-tint) !important;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   border-color: var(--link-color);
 }
@@ -629,7 +629,7 @@
 [data-theme="dark"] .blogPost blockquote {
   color: #e2e8f0;
   border-left: 4px solid var(--link-color);
-  background-color: rgba(99, 179, 237, 0.1);
+  background-color: var(--link-tint);
   padding: 1px 16px;
   margin: 0;
   border-radius: 0 6px 6px 0;
@@ -948,28 +948,43 @@ a {
   transition: var(--transition);
 }
 .topBar {
+  align-items: center;
   background-color: var(--topbar-bg);
-  border: none;
-  box-shadow: var(--topbar-shadow);
-  border-radius: 12px;
+  border: 1px solid var(--panel-border);
+  border-radius: 14px;
+  box-shadow: var(--panel-shadow);
+  display: flex;
   margin: 15px 0;
   list-style-type: none;
+  padding: 6px;
+  position: relative;
   transition: var(--transition);
 }
+.topBar > .site-brand {
+  align-items: center;
+  border-radius: 9px;
+  display: inline-flex;
+  flex: 0 0 38px;
+  height: 38px;
+  justify-content: center;
+}
+.topBar > .site-brand:hover {
+  background: var(--accent-soft);
+}
 .topBar img {
-  float: left;
-  margin: 8px 0px 0px 9px;
-  padding-right: 5px;
-  transition: transform 0.3s ease;
+  float: none;
+  margin: 0;
+  padding: 0;
+  transition: filter 0.3s ease, transform 0.3s ease;
 }
 .logo-img {
-  height: 28px;
+  height: 27px;
   width: auto;
   display: block;
   aspect-ratio: 204 / 212;
 }
 .topBar.scrolled img {
-  transform: rotate(180deg);
+  transform: none;
 }
 .topBar a {
   outline: none;
@@ -977,30 +992,41 @@ a {
 .topBar .topBarLinks {
   display: flex;
   align-items: center;
-  gap: 0;
-  margin-left: 0;
-  padding-left: 0;
+  flex: 1;
+  gap: 3px;
+  list-style: none;
+  margin: 0;
+  padding: 0 0 0 5px;
 }
 .topBar .topBarLinks > li {
-  align-self: stretch;
+  align-self: auto;
   padding: 0;
 }
 .topBar .topBarLinks > li > a {
   display: flex;
   align-items: center;
-  padding: 10px 14px;
+  border-radius: 8px;
+  color: var(--text-color);
+  font-size: 0.78rem;
+  font-weight: 650;
+  padding: 9px 11px;
 }
 .topBar li {
   color: var(--text-color);
   display: flex;
   align-items: center;
-  padding: 10px 14px;
+  padding: 0;
   margin: 0;
-  transition: var(--transition);
+  transition: background-color 0.15s ease, color 0.15s ease;
 }
-.topBar li:hover:not(.social) {
-  background-color: rgba(99, 179, 237, 0.1);
-  color: var(--link-color);
+.topBar .topBarLinks > li:not(.theme-controls):hover > a {
+  background: var(--accent-soft);
+  color: var(--accent-color);
+}
+.topBar .topBarLinks > li.current > a {
+  background: var(--accent-soft);
+  box-shadow: inset 0 0 0 1px var(--accent-mid);
+  color: var(--accent-color);
 }
 .topBar li.social {
   float: right;
@@ -1015,8 +1041,8 @@ a {
   transform: translateY(-2px);
 }
 .topBar li.current {
-  color: var(--link-color);
-  box-shadow: inset 0 -2px 0 var(--link-color);
+  box-shadow: none;
+  color: var(--accent-color);
 }
 .topBar li .fa-twitter {
   color: #00ABF1;
@@ -1210,21 +1236,36 @@ textarea {
   height: 100px;
 }
 
-@media only screen and (max-width: 443px) {
-  .topBarLinks .filters {
-    display: none;
+@media only screen and (max-width: 600px) {
+  .topBar {
+    display: grid;
+    grid-template-columns: 42px 1fr;
+    padding: 6px;
   }
-}
-
-@media only screen and (max-width: 363px) {
-  .topBarLinks .projects{
-    display: none;
+  .topBar > .site-brand {
+    grid-column: 1;
+    grid-row: 1;
   }
-}
-
-@media only screen and (max-width: 269px) {
-  .topBarLinks .running {
-    display: none;
+  .topBar .topBarLinks {
+    border-top: 1px solid var(--panel-border);
+    display: grid;
+    grid-column: 1 / -1;
+    grid-row: 2;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    margin-top: 6px;
+    padding: 6px 0 0;
+  }
+  .topBar .topBarLinks > li:not(.theme-controls) > a {
+    font-size: clamp(0.67rem, 3.1vw, 0.76rem);
+    justify-content: center;
+    padding: 8px 3px;
+    width: 100%;
+  }
+  .theme-controls {
+    margin: 0 !important;
+    position: absolute;
+    right: 6px;
+    top: 6px;
   }
 }
 

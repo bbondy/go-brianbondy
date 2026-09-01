@@ -1,18 +1,11 @@
 .contact-page {
-  --contact-accent: #0d749e;
-  --contact-accent-soft: rgba(13, 116, 158, 0.09);
-  --contact-accent-mid: rgba(13, 116, 158, 0.18);
-  --contact-ink-soft: #42536a;
+  --contact-accent: var(--accent-color);
+  --contact-accent-soft: var(--accent-soft);
+  --contact-accent-mid: var(--accent-mid);
+  --contact-ink-soft: var(--ink-soft);
   --editorial-accent: var(--contact-accent);
   --editorial-accent-mid: var(--contact-accent-mid);
   --editorial-ink-soft: var(--contact-ink-soft);
-}
-
-[data-theme="dark"] .contact-page {
-  --contact-accent: #62c8f5;
-  --contact-accent-soft: rgba(98, 200, 245, 0.1);
-  --contact-accent-mid: rgba(98, 200, 245, 0.2);
-  --contact-ink-soft: #aebdd0;
 }
 
 .contact-eyebrow,

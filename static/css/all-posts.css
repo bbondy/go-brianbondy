@@ -1,18 +1,11 @@
 .all-posts-page {
-  --all-posts-accent: #0d749e;
-  --all-posts-accent-soft: rgba(13, 116, 158, 0.09);
-  --all-posts-accent-mid: rgba(13, 116, 158, 0.18);
-  --all-posts-ink-soft: #42536a;
+  --all-posts-accent: var(--accent-color);
+  --all-posts-accent-soft: var(--accent-soft);
+  --all-posts-accent-mid: var(--accent-mid);
+  --all-posts-ink-soft: var(--ink-soft);
   --editorial-accent: var(--all-posts-accent);
   --editorial-accent-mid: var(--all-posts-accent-mid);
   --editorial-ink-soft: var(--all-posts-ink-soft);
-}
-
-[data-theme="dark"] .all-posts-page {
-  --all-posts-accent: #62c8f5;
-  --all-posts-accent-soft: rgba(98, 200, 245, 0.1);
-  --all-posts-accent-mid: rgba(98, 200, 245, 0.2);
-  --all-posts-ink-soft: #aebdd0;
 }
 
 .all-posts-hero {

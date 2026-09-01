@@ -1,18 +1,11 @@
 .filters-page {
-  --filters-accent: #0d749e;
-  --filters-accent-soft: rgba(13, 116, 158, 0.09);
-  --filters-accent-mid: rgba(13, 116, 158, 0.2);
-  --filters-ink-soft: #42536a;
+  --filters-accent: var(--accent-color);
+  --filters-accent-soft: var(--accent-soft);
+  --filters-accent-mid: var(--accent-mid);
+  --filters-ink-soft: var(--ink-soft);
   --editorial-accent: var(--filters-accent);
   --editorial-accent-mid: var(--filters-accent-mid);
   --editorial-ink-soft: var(--filters-ink-soft);
-}
-
-[data-theme="dark"] .filters-page {
-  --filters-accent: #62c8f5;
-  --filters-accent-soft: rgba(98, 200, 245, 0.1);
-  --filters-accent-mid: rgba(98, 200, 245, 0.22);
-  --filters-ink-soft: #aebdd0;
 }
 
 .filters-hero {

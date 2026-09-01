@@ -58,8 +58,8 @@ func TestFiltersPageUsesEditorialLayout(t *testing.T) {
 		`Posts by year`,
 		`Posts by tag`,
 		`id="search-tags"`,
-		`href="/static/css/editorial.css?v=1"`,
-		`href="/static/css/filters.css?v=1"`,
+		`href="/static/css/editorial.css?v=2"`,
+		`href="/static/css/filters.css?v=2"`,
 		`content="Browse Brian Bondy&#39;s complete blog archive by year and topic."`,
 	} {
 		if !strings.Contains(body, expected) {

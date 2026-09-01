@@ -92,6 +92,13 @@
   margin: 0;
 }
 
+/* Shared alignment for search controls across editorial archive pages. */
+.editorial-page [class$="-search-field"] > i {
+  line-height: 1;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 @media (max-width: 700px) {
   .mainBody {
     padding: 14px 14px 34px;

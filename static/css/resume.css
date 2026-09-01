@@ -1,18 +1,11 @@
 .resume-page,
 .career-page {
-  --career-accent: #0d749e;
-  --career-accent-soft: rgba(13, 116, 158, 0.09);
-  --career-ink-soft: #42536a;
+  --career-accent: var(--accent-color);
+  --career-accent-soft: var(--accent-soft);
+  --career-ink-soft: var(--ink-soft);
   --editorial-accent: var(--career-accent);
   --editorial-accent-mid: var(--career-accent-soft);
   --editorial-ink-soft: var(--career-ink-soft);
-}
-
-[data-theme="dark"] .resume-page,
-[data-theme="dark"] .career-page {
-  --career-accent: #62c8f5;
-  --career-accent-soft: rgba(98, 200, 245, 0.1);
-  --career-ink-soft: #aebdd0;
 }
 
 .resume-hero,

@@ -1,18 +1,11 @@
 .projects-page {
-  --projects-accent: #0d749e;
-  --projects-accent-soft: rgba(13, 116, 158, 0.09);
-  --projects-accent-mid: rgba(13, 116, 158, 0.18);
-  --projects-ink-soft: #42536a;
+  --projects-accent: var(--accent-color);
+  --projects-accent-soft: var(--accent-soft);
+  --projects-accent-mid: var(--accent-mid);
+  --projects-ink-soft: var(--ink-soft);
   --editorial-accent: var(--projects-accent);
   --editorial-accent-mid: var(--projects-accent-mid);
   --editorial-ink-soft: var(--projects-ink-soft);
-}
-
-[data-theme="dark"] .projects-page {
-  --projects-accent: #62c8f5;
-  --projects-accent-soft: rgba(98, 200, 245, 0.1);
-  --projects-accent-mid: rgba(98, 200, 245, 0.2);
-  --projects-ink-soft: #aebdd0;
 }
 
 .projects-hero {

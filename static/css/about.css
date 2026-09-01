@@ -1,18 +1,11 @@
 .about-page {
-  --about-accent: #0d749e;
-  --about-accent-soft: rgba(13, 116, 158, 0.09);
-  --about-accent-mid: rgba(13, 116, 158, 0.18);
-  --about-ink-soft: #42536a;
+  --about-accent: var(--accent-color);
+  --about-accent-soft: var(--accent-soft);
+  --about-accent-mid: var(--accent-mid);
+  --about-ink-soft: var(--ink-soft);
   --editorial-accent: var(--about-accent);
   --editorial-accent-mid: var(--about-accent-mid);
   --editorial-ink-soft: var(--about-ink-soft);
-}
-
-[data-theme="dark"] .about-page {
-  --about-accent: #62c8f5;
-  --about-accent-soft: rgba(98, 200, 245, 0.1);
-  --about-accent-mid: rgba(98, 200, 245, 0.2);
-  --about-ink-soft: #aebdd0;
 }
 
 .about-hero {

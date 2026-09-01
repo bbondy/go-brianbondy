@@ -50,8 +50,8 @@ func TestAllPostsPageUsesEditorialArchiveLayout(t *testing.T) {
 	assert.Contains(t, content, `<h1 class="editorial-title">`)
 	assert.Contains(t, content, `All Blog Posts`)
 	assert.Contains(t, content, `id="search-posts"`)
-	assert.Contains(t, content, `/static/css/editorial.css?v=1`)
-	assert.Contains(t, content, `/static/css/all-posts.css?v=1`)
+	assert.Contains(t, content, `/static/css/editorial.css?v=2`)
+	assert.Contains(t, content, `/static/css/all-posts.css?v=2`)
 	assert.Contains(t, content, `Brian Bondy's complete blog archive`)
 }
 

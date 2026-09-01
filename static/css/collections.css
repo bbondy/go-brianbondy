@@ -1,18 +1,11 @@
 .collection-page {
-  --collection-accent: #0d749e;
-  --collection-accent-soft: rgba(13, 116, 158, 0.09);
-  --collection-accent-mid: rgba(13, 116, 158, 0.2);
-  --collection-ink-soft: #42536a;
+  --collection-accent: var(--accent-color);
+  --collection-accent-soft: var(--accent-soft);
+  --collection-accent-mid: var(--accent-mid);
+  --collection-ink-soft: var(--ink-soft);
   --editorial-accent: var(--collection-accent);
   --editorial-accent-mid: var(--collection-accent-mid);
   --editorial-ink-soft: var(--collection-ink-soft);
-}
-
-[data-theme="dark"] .collection-page {
-  --collection-accent: #62c8f5;
-  --collection-accent-soft: rgba(98, 200, 245, 0.1);
-  --collection-accent-mid: rgba(98, 200, 245, 0.22);
-  --collection-ink-soft: #aebdd0;
 }
 
 .collection-hero {
