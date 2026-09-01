@@ -273,9 +273,9 @@
     </style>
     
     <!-- Non-critical CSS loaded asynchronously -->
-        <link rel="stylesheet" href="/static/css/main.css?v=156" media="print" onload="this.media='all'">
-    <noscript><link rel="stylesheet" href="/static/css/main.css?v=156"></noscript>
-    {{if or (eq .MarkdownSlug "about.markdown") (eq .MarkdownSlug "contact.markdown") (eq .MarkdownSlug "projects") (eq .MarkdownSlug "resume") (eq .MarkdownSlug "career") (eq .MarkdownSlug "running") (eq .MarkdownSlug "all") (eq .MarkdownSlug "filters")}}
+        <link rel="stylesheet" href="/static/css/main.css?v=157" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="/static/css/main.css?v=157"></noscript>
+    {{if or (eq .MarkdownSlug "about.markdown") (eq .MarkdownSlug "contact.markdown") (eq .MarkdownSlug "projects") (eq .MarkdownSlug "resume") (eq .MarkdownSlug "career") (eq .MarkdownSlug "running") (eq .MarkdownSlug "all") (eq .MarkdownSlug "filters") (eq .MarkdownSlug "pictures") (eq .MarkdownSlug "interviews") (eq .MarkdownSlug "cheatsheets") (eq .MarkdownSlug "books") (eq .MarkdownSlug "advice.markdown")}}
     <link rel="stylesheet" href="/static/css/editorial.css?v=1">
     {{end}}
     {{if or (eq .MarkdownSlug "resume") (eq .MarkdownSlug "career")}}
@@ -298,6 +298,9 @@
     {{end}}
     {{if eq .MarkdownSlug "filters"}}
     <link rel="stylesheet" href="/static/css/filters.css?v=1">
+    {{end}}
+    {{if or (eq .MarkdownSlug "pictures") (eq .MarkdownSlug "interviews") (eq .MarkdownSlug "cheatsheets") (eq .MarkdownSlug "books") (eq .MarkdownSlug "advice.markdown")}}
+    <link rel="stylesheet" href="/static/css/collections.css?v=1">
     {{end}}
     
     <!-- Font Awesome loaded asynchronously -->

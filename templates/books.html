@@ -1,52 +1,69 @@
 {{define "mountPoint"}}
-<h1>Books</h1>
-<p class="books-intro">The list below contains books that I’ve read and good enough to share.</p>
-<div style="display:flex;align-items:center;gap:12px;margin-bottom:18px;">
-  <input type="text" id="search-books" placeholder="Search books..." style="width:100%;max-width:400px;padding:10px 14px;font-size:1em;border-radius:8px;border:1px solid #e2e8f0;outline:none;">
-  <span id="book-count" style="color:#94a3b8;font-size:1em;white-space:nowrap;">({{.BookCount}} total)</span>
-</div>
-<div class="books-grid" id="books-grid" style="display: flex; flex-direction: column; gap: 28px;">
-  {{range .Books}}
-    <div class="card-entry">
-      <div class="project-entry">
-        <div class="project-content">
-          <h3><a href="{{.GoodreadsURL}}" target="_blank" rel="noopener noreferrer" class="blog-title">{{.Title}}</a></h3>
-          <div class="book-author">by {{.Author}}</div>
-          <div class="book-meta"><em>{{.Year}}, {{.Publisher}}, {{.Pages}} pages</em></div>
-          <div class="project-links">
-            <a href="{{.GoodreadsURL}}" target="_blank" rel="noopener noreferrer" title="View on Goodreads" class="action-link website-link"><i class="fas fa-book"></i></a>
-            <a href="{{.AudibleURL}}" target="_blank" rel="noopener noreferrer" title="Search on Audible" class="action-link audible-link"><i class="fab fa-audible"></i></a>
-          </div>
-        </div>
+<article class="collection-page collection-page--books editorial-page" id="books-top">
+  <header class="collection-hero editorial-hero">
+    <p class="collection-kicker editorial-kicker">Reading archive</p>
+    <h1 class="editorial-title">Books</h1>
+    <p class="collection-intro editorial-intro">Books I’ve read and thought worth sharing.</p>
+  </header>
+
+  <section class="collection-section" aria-labelledby="books-heading">
+    <header class="collection-section-heading editorial-section-heading">
+      <p>Library</p>
+      <h2 id="books-heading">All books</h2>
+    </header>
+
+    <div class="collection-search">
+      <label for="search-books">Search the archive</label>
+      <div class="collection-search-field">
+        <i class="fas fa-search" aria-hidden="true"></i>
+        <input type="search" id="search-books" placeholder="Title, author, publisher, or year" autocomplete="off">
       </div>
     </div>
-  {{end}}
-</div>
+
+    <div class="collection-list" id="books-list">
+      {{range .Books}}
+        <article class="collection-card book-card" data-book>
+          <span class="collection-card-icon" aria-hidden="true"><i class="fas fa-book-open"></i></span>
+          <div class="collection-card-copy">
+            <h3><a href="{{.GoodreadsURL}}" target="_blank" rel="noopener noreferrer">{{.Title}}</a></h3>
+            <p class="book-author">{{.Author}}</p>
+            <p class="book-meta"><span>{{.Year}}</span><span>{{.Publisher}}</span><span>{{.Pages}} pages</span></p>
+          </div>
+          <div class="book-links">
+            <a href="{{.GoodreadsURL}}" target="_blank" rel="noopener noreferrer">Goodreads <span aria-hidden="true">↗</span></a>
+            <a href="{{.AudibleURL}}" target="_blank" rel="noopener noreferrer">Audible <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+      {{end}}
+    </div>
+    <p class="collection-empty" id="books-empty" hidden>No books match that search.</p>
+  </section>
+
+  <footer class="collection-local-footer">
+    <a href="#books-top">Back to top <span aria-hidden="true">↑</span></a>
+  </footer>
+</article>
+
 <script>
-  // Client-side search for books and update count
   document.addEventListener('DOMContentLoaded', function() {
     const searchInput = document.getElementById('search-books');
-    const booksGrid = document.getElementById('books-grid');
-    const bookCount = document.getElementById('book-count');
-    if (!searchInput || !booksGrid || !bookCount) return;
-    function updateCount() {
-      const entries = booksGrid.getElementsByClassName('card-entry');
-      let visible = 0;
-      for (const entry of entries) {
-        if (entry.style.display !== 'none') visible++;
-      }
-      bookCount.textContent = `(${visible} total)`;
-    }
-    searchInput.addEventListener('input', function() {
+    const books = Array.from(document.querySelectorAll('[data-book]'));
+    const emptyState = document.getElementById('books-empty');
+    if (!searchInput || !books.length || !emptyState) return;
+
+    function applyBookSearch() {
       const query = searchInput.value.trim().toLowerCase();
-      const entries = booksGrid.getElementsByClassName('card-entry');
-      for (const entry of entries) {
-        const text = entry.textContent.toLowerCase();
-        entry.style.display = text.includes(query) ? '' : 'none';
-      }
-      updateCount();
-    });
-    updateCount();
+      let visible = 0;
+      books.forEach(function(book) {
+        const isVisible = !query || book.textContent.toLowerCase().includes(query);
+        book.hidden = !isVisible;
+        if (isVisible) visible += 1;
+      });
+      emptyState.hidden = visible !== 0;
+    }
+
+    searchInput.addEventListener('input', applyBookSearch);
+    searchInput.addEventListener('search', applyBookSearch);
   });
 </script>
 {{end}}

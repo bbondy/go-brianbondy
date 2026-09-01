@@ -1,30 +1,39 @@
 {{define "mountPoint"}}
-<h1>Interviews</h1>
-<p>Below are various interviews and appearances I've done over the years, covering topics from Brave Software and privacy to running and endurance sports.</p>
-<div class="card-container">
-  {{range .Interviews}}
-    <div class="card-entry">
-      <div class="interview-entry">
-        <div class="interview-content">
-          <h3>
-            {{if .URL}}<a href="{{.URL}}" target="_blank" rel="noopener noreferrer">{{.Title}}</a>{{else}}{{.Title}}{{end}}
-          </h3>
-          <div class="interview-meta">
-            <span class="interview-date">{{.Date}}</span>
-            <span class="interview-platform">{{.Platform}}</span>
-            <span class="interview-channel">{{.Channel}}</span>
+<article class="collection-page collection-page--interviews editorial-page" id="interviews-top">
+  <header class="collection-hero editorial-hero">
+    <p class="collection-kicker editorial-kicker">Appearances archive</p>
+    <h1 class="editorial-title">Interviews</h1>
+    <p class="collection-intro editorial-intro">Interviews and appearances about software, privacy, browsers, running, and endurance sports.</p>
+  </header>
+
+  <section class="collection-section" aria-labelledby="interviews-heading">
+    <header class="collection-section-heading editorial-section-heading">
+      <p>Archive</p>
+      <h2 id="interviews-heading">Interviews and appearances</h2>
+    </header>
+    <div class="collection-list">
+      {{range .Interviews}}
+        <article class="collection-card interview-card">
+          <span class="collection-card-icon" aria-hidden="true"><i class="fas fa-microphone"></i></span>
+          <div class="collection-card-copy">
+            <div class="interview-card-meta">
+              <span>{{.Date}}</span>
+              <span>{{.Platform}}</span>
+              <span>{{.Channel}}</span>
+            </div>
+            <h3>{{if .URL}}<a href="{{.URL}}" target="_blank" rel="noopener noreferrer">{{.Title}}</a>{{else}}{{.Title}}{{end}}</h3>
+            <p>{{.Description}}</p>
           </div>
-          <div class="card-details">{{.Description}}</div>
-          <div class="interview-links">
-            {{if .URL}}
-              <a href="{{.URL}}" target="_blank" rel="noopener noreferrer" title="Watch/Listen" class="action-link interview-link">
-                <i class="fas fa-external-link-alt"></i>
-              </a>
-            {{end}}
-          </div>
-        </div>
-      </div>
+          {{if .URL}}
+            <a class="collection-card-action" href="{{.URL}}" target="_blank" rel="noopener noreferrer" aria-label="Open {{.Title}}">Open <span aria-hidden="true">↗</span></a>
+          {{end}}
+        </article>
+      {{end}}
     </div>
-  {{end}}
-</div>
+  </section>
+
+  <footer class="collection-local-footer">
+    <a href="#interviews-top">Back to top <span aria-hidden="true">↑</span></a>
+  </footer>
+</article>
 {{end}}

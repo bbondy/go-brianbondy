@@ -1,0 +1,21 @@
+{{define "mountPoint"}}
+<article class="collection-page collection-page--advice editorial-page" id="advice-top">
+  <header class="collection-hero editorial-hero">
+    <p class="collection-kicker editorial-kicker">Collected notes</p>
+    <h1 class="editorial-title">Advice</h1>
+    <p class="collection-intro editorial-intro">Personal principles and lessons I’ve collected over the years.</p>
+  </header>
+
+  <section class="collection-section" aria-labelledby="advice-heading">
+    <header class="collection-section-heading editorial-section-heading">
+      <p>Notes</p>
+      <h2 id="advice-heading">Principles and lessons</h2>
+    </header>
+    <div class="advice-list">{{htmlSafe .Content}}</div>
+  </section>
+
+  <footer class="collection-local-footer">
+    <a href="#advice-top">Back to top <span aria-hidden="true">↑</span></a>
+  </footer>
+</article>
+{{end}}

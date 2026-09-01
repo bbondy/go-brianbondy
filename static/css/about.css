@@ -369,7 +369,7 @@
   color: var(--muted-color);
   display: flex;
   font-size: 0.76rem;
-  justify-content: space-between;
+  justify-content: flex-end;
   margin-top: 44px;
   padding-top: 18px;
 }
@@ -437,11 +437,6 @@
     order: 1;
   }
 
-  .about-local-footer {
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 9px;
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {

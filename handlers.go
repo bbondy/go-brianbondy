@@ -429,6 +429,19 @@ func projectsHandler(w http.ResponseWriter, _ *http.Request) {
 	}
 }
 
+func adviceHandler(w http.ResponseWriter, _ *http.Request) {
+	p := &data.SimpleMarkdownPage{
+		Title:        GetTitle("Advice"),
+		Description:  "Personal principles and lessons collected by Brian Bondy.",
+		Content:      getMarkdownData("advice.markdown"),
+		MarkdownSlug: "advice.markdown",
+		ShareUrl:     "/advice",
+	}
+	if err := executeTemplate(w, "advice", p); err != nil {
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+	}
+}
+
 func cheatsheetsHandler(w http.ResponseWriter, r *http.Request) {
 	cheatsheets, err := data.GetCheatsheets()
 	if err != nil {
@@ -436,13 +449,11 @@ func cheatsheetsHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	p := struct {
-		Title        string
-		MarkdownSlug string
-		Cheatsheets  data.Cheatsheets
-	}{
+	p := &data.CheatsheetsPage{
 		Title:        GetTitle("Cheatsheets"),
+		Description:  "Short references for commands, tools, and development workflows.",
 		MarkdownSlug: "cheatsheets",
+		ShareUrl:     "/cheatsheets",
 		Cheatsheets:  cheatsheets,
 	}
 	err = executeTemplate(w, "cheatsheets", p)
@@ -498,13 +509,11 @@ func interviewsHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	p := struct {
-		Title        string
-		MarkdownSlug string
-		Interviews   data.Interviews
-	}{
+	p := &data.InterviewsPage{
 		Title:        GetTitle("Interviews"),
+		Description:  "Interviews and appearances about software, privacy, browsers, running, and endurance sports.",
 		MarkdownSlug: "interviews",
+		ShareUrl:     "/interviews",
 		Interviews:   interviews,
 	}
 	err = executeTemplate(w, "interviews", p)
@@ -1137,8 +1146,10 @@ func picturesHandler(w http.ResponseWriter, r *http.Request) {
 	}
 
 	p := &data.PicturesPage{
-		Title:         "Pictures Gallery",
+		Title:         GetTitle("Pictures Gallery"),
+		Description:   "A gallery of photographs from Brian Bondy's blog posts.",
 		MarkdownSlug:  "pictures",
+		ShareUrl:      r.URL.RequestURI(),
 		Pictures:      pictures,
 		FilterTag:     tag,
 		FilterBlogID:  filterBlogID,
@@ -1157,16 +1168,12 @@ func booksHandler(w http.ResponseWriter, r *http.Request) {
 		errorPage(w, "Could not load books", "books")
 		return
 	}
-	p := struct {
-		Title        string
-		MarkdownSlug string
-		Books        data.Books
-		BookCount    int
-	}{
+	p := &data.BooksPage{
 		Title:        GetTitle("Books"),
+		Description:  "Books Brian Bondy has read and thought worth sharing.",
 		MarkdownSlug: "books",
+		ShareUrl:     "/books",
 		Books:        books,
-		BookCount:    len(books),
 	}
 	err = executeTemplate(w, "books", p)
 	if err != nil {

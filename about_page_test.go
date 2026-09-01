@@ -39,4 +39,5 @@ func TestAboutPageContent(t *testing.T) {
 	assert.Contains(t, plainText, "raison d’être")
 	assert.Contains(t, plainText, "turning ambitious ideas into working systems")
 	assert.Contains(t, plainText, "difficult things that demand growth")
+	assert.NotContains(t, content, `<footer class="about-local-footer">\n    <span>Belle River, Ontario, Canada</span>`)
 }

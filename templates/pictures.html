@@ -1,20 +1,37 @@
 {{define "mountPoint"}}
-  <div class="pictures-gallery">
-    <h1>
-      {{if .FilterTag}}
-        <a href="/all?tag={{.FilterTag}}">{{.FilterTag | title}}</a> Pictures Gallery
-      {{else if gt .FilterBlogID 0}}
-        Pictures from Blog Post: <a href="/blog/{{.FilterBlogID}}">{{.BlogPostTitle}}</a>
-      {{else}}
-        Pictures Gallery
-      {{end}}
+<article class="collection-page collection-page--pictures editorial-page" id="pictures-top">
+  <header class="collection-hero editorial-hero">
+    <p class="collection-kicker editorial-kicker">Photo archive</p>
+    <h1 class="editorial-title">
+      {{if .FilterTag}}{{.FilterTag | title}} pictures{{else if gt .FilterBlogID 0}}Pictures from {{.BlogPostTitle}}{{else}}Pictures gallery{{end}}
     </h1>
-    <div class="pictures-grid">
-      {{range $i, $pic := .Pictures}}
-        <div class="picture-entry" data-id="{{$pic.Id}}">
-          <img src="/{{$pic.Image}}" srcset="{{responsiveImageSrcset (printf "/%s" $pic.Image)}}" sizes="{{responsiveImageSizes "160px"}}" data-lightbox-src="/{{$pic.Image}}" alt="Photo from blog post {{$pic.Id}}" class="gallery-image" data-index="{{$i}}" loading="lazy" decoding="async">
-        </div>
+    <p class="collection-intro editorial-intro">
+      {{if .FilterTag}}
+        Photos tagged <a href="/all?tag={{.FilterTag}}">{{.FilterTag}}</a>. <a href="/pictures">View the complete gallery.</a>
+      {{else if gt .FilterBlogID 0}}
+        Photos from <a href="/blog/{{.FilterBlogID}}">{{.BlogPostTitle}}</a>. <a href="/pictures">View the complete gallery.</a>
+      {{else}}
+        Photographs from posts across the site.
       {{end}}
-    </div>
-  </div>
-{{end}} 
+    </p>
+  </header>
+
+  <section class="pictures-section" aria-label="Pictures">
+    {{if .Pictures}}
+      <div class="pictures-grid">
+        {{range $i, $pic := .Pictures}}
+          <div class="picture-entry" data-id="{{$pic.Id}}">
+            <img src="/{{$pic.Image}}" srcset="{{responsiveImageSrcset (printf "/%s" $pic.Image)}}" sizes="{{responsiveImageSizes "(max-width: 700px) 46vw, 280px"}}" data-lightbox-src="/{{$pic.Image}}" alt="Photo from blog post {{$pic.Id}}" class="gallery-image" data-index="{{$i}}" loading="lazy" decoding="async">
+          </div>
+        {{end}}
+      </div>
+    {{else}}
+      <p class="collection-empty">No pictures match this filter.</p>
+    {{end}}
+  </section>
+
+  <footer class="collection-local-footer">
+    <a href="#pictures-top">Back to top <span aria-hidden="true">↑</span></a>
+  </footer>
+</article>
+{{end}}

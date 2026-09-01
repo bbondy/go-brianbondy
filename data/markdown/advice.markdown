@@ -1,7 +1,3 @@
-# Advice
-
-Here are some personal principles and lessons I've learned over the years. I hope you find them helpful.
-
 <div class="card-container">
   <div class="card-entry">
     <p>When I'm struggling to grasp a new concept, I've found it helpful to start over from the beginning. Each time I restart, I bring a little more context with me, which often illuminates details I missed before. Sometimes, the issue is the explanation itself, and seeking an alternative source, like a different author or an AI explanation, can make all the difference. I believe anything is understandable with the right background and a clear explanation.</p>

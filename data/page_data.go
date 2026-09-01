@@ -6,6 +6,7 @@ import (
 
 type SimpleMarkdownPage struct {
 	Title        string
+	Description  string
 	Content      string
 	MarkdownSlug string
 	ShareUrl     string
@@ -131,6 +132,30 @@ type ProjectsPage struct {
 	BlogPostMap  map[int]BlogPost
 }
 
+type BooksPage struct {
+	Title        string
+	Description  string
+	MarkdownSlug string
+	ShareUrl     string
+	Books        Books
+}
+
+type InterviewsPage struct {
+	Title        string
+	Description  string
+	MarkdownSlug string
+	ShareUrl     string
+	Interviews   Interviews
+}
+
+type CheatsheetsPage struct {
+	Title        string
+	Description  string
+	MarkdownSlug string
+	ShareUrl     string
+	Cheatsheets  Cheatsheets
+}
+
 type Picture struct {
 	Id    int      `json:"id"`
 	Image string   `json:"image"`
@@ -139,7 +164,9 @@ type Picture struct {
 
 type PicturesPage struct {
 	Title         string
+	Description   string
 	MarkdownSlug  string
+	ShareUrl      string
 	Pictures      []Picture
 	FilterTag     string
 	FilterBlogID  int
