@@ -875,9 +875,11 @@ func homePageHandler(w http.ResponseWriter, r *http.Request) {
 
 	p := &data.HomePage{
 		Title:        "Brian R. Bondy",
+		Description:  "Brian Bondy's writing about software, running, work, and life.",
 		Posts:        previewPosts,
 		AllPosts:     allPosts,
 		MarkdownSlug: "home",
+		ShareUrl:     "/",
 	}
 
 	err := executeTemplate(w, "home", p)

@@ -108,9 +108,11 @@ type BlogPostPreview struct {
 
 type HomePage struct {
 	Title        string
+	Description  string
 	Posts        []BlogPostPreview
 	AllPosts     []BlogPostPreview
 	MarkdownSlug string
+	ShareUrl     string
 }
 
 type AllPostsPage struct {

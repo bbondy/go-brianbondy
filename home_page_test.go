@@ -1,0 +1,59 @@
+package main
+
+import (
+	"fmt"
+	"html"
+	"io"
+	"net/http/httptest"
+	"strings"
+	"testing"
+
+	"github.com/stretchr/testify/assert"
+	"github.com/stretchr/testify/require"
+)
+
+func TestHomePagePreservesLatestPostData(t *testing.T) {
+	setupTestEnvironment(t)
+	imagePath := "/static/img/test.webp"
+	blogPosts[0].ImagePath = &imagePath
+
+	w := httptest.NewRecorder()
+	homePageHandler(w, httptest.NewRequest("GET", "/", nil))
+	require.Equal(t, 200, w.Code)
+	body, err := io.ReadAll(w.Result().Body)
+	require.NoError(t, err)
+	content := html.UnescapeString(string(body))
+
+	expectedCount := len(blogPosts)
+	if expectedCount > 4 {
+		expectedCount = 4
+	}
+	assert.Equal(t, expectedCount, strings.Count(content, `class="home-post-card`))
+	for _, post := range blogPosts[:expectedCount] {
+		postURL := fmt.Sprintf("/blog/%d/%s", post.Id, slugifyTitle(post.Title))
+		assert.Contains(t, content, post.Title)
+		assert.Contains(t, content, `href="`+postURL+`"`)
+		assert.Contains(t, content, "This is content for blog post "+post.Title)
+	}
+	assert.Contains(t, content, `src="/static/img/test.webp"`)
+}
+
+func TestHomePageUsesEditorialLayout(t *testing.T) {
+	setupTestEnvironment(t)
+
+	w := httptest.NewRecorder()
+	homePageHandler(w, httptest.NewRequest("GET", "/", nil))
+	body, err := io.ReadAll(w.Result().Body)
+	require.NoError(t, err)
+	content := html.UnescapeString(string(body))
+
+	assert.Contains(t, content, `<article class="home-page editorial-page"`)
+	assert.Contains(t, content, `<h1 class="editorial-title">Running, work, and life</h1>`)
+	assert.Contains(t, content, `href="/static/css/editorial.css?v=1"`)
+	assert.Contains(t, content, `href="/static/css/home.css?v=1"`)
+	assert.Contains(t, content, `href="/running"`)
+	assert.Contains(t, content, `href="/projects"`)
+	assert.Contains(t, content, `href="/all"`)
+	assert.Contains(t, content, `href="/blog/filters"`)
+	assert.Contains(t, content, `content="Brian Bondy's writing about software, running, work, and life."`)
+}

@@ -1,61 +1,76 @@
 {{define "mountPoint"}}
-  <section class="homeIntro" aria-labelledby="home-intro-title">
-    <div class="homeIntroCopy">
-      <h1 id="home-intro-title">Running, work, and life</h1>
-      <p>I’m a father and ultrarunner who occasionally writes things down. I also work on software, and co-founded Brave after time at Mozilla and Khan Academy.</p>
-      <p>Here you’ll find race reports, stories from work, and other things I’ve wanted to remember or share.</p>
+<article class="home-page editorial-page" id="home-top">
+  <header class="home-hero editorial-hero">
+    <p class="home-kicker editorial-kicker">Brian R. Bondy</p>
+    <h1 class="editorial-title">Running, work, and life</h1>
+    <p class="home-intro editorial-intro">I’m a father, software builder, and ultrarunner. I co-founded Brave after working at Mozilla and Khan Academy.</p>
+    <p class="home-hero-note">This site is an archive of race reports, software work, and other things I wanted to write down.</p>
+    <div class="home-hero-actions">
+      <a class="home-action home-action--primary" href="/about">About</a>
+      <a class="home-action" href="/contact">Contact</a>
     </div>
+  </header>
 
-    <nav class="homeStartHere" aria-label="Start here">
-      <a href="/running" class="homeStartHereCard">
-        <span class="homeStartHereTitle">Running</span>
+  <nav class="home-portals" aria-label="Start here">
+    <a href="/running" class="home-portal-card">
+      <span class="home-portal-icon" aria-hidden="true"><i class="fas fa-running"></i></span>
+      <span class="home-portal-copy">
+        <strong>Running</strong>
         <span>Race reports and miles from the trail.</span>
-        <span class="homeStartHereLink">Read the running archive →</span>
-      </a>
-      <a href="/projects" class="homeStartHereCard">
-        <span class="homeStartHereTitle">Projects</span>
-        <span>Things I’ve built and helped build.</span>
-        <span class="homeStartHereLink">Explore projects →</span>
-      </a>
-      <a href="/all" class="homeStartHereCard">
-        <span class="homeStartHereTitle">Writing</span>
-        <span>Browse the full archive, going back to 2005.</span>
-        <span class="homeStartHereLink">Browse all writing →</span>
-      </a>
-    </nav>
-  </section>
+        <span class="home-portal-link">Running archive →</span>
+      </span>
+    </a>
+    <a href="/projects" class="home-portal-card">
+      <span class="home-portal-icon" aria-hidden="true"><i class="fas fa-code"></i></span>
+      <span class="home-portal-copy">
+        <strong>Projects</strong>
+        <span>Software I’ve built and helped build.</span>
+        <span class="home-portal-link">Projects archive →</span>
+      </span>
+    </a>
+    <a href="/all" class="home-portal-card">
+      <span class="home-portal-icon" aria-hidden="true"><i class="fas fa-pen-nib"></i></span>
+      <span class="home-portal-copy">
+        <strong>Writing</strong>
+        <span>The complete archive, going back to 2005.</span>
+        <span class="home-portal-link">Writing archive →</span>
+      </span>
+    </a>
+  </nav>
 
-  <h2 class="latestPostsHeading">Latest writing</h2>
-  <div class="previewContainer">
-    {{range .Posts}}
-      <article class="blogPostPreview">
-        <h1><a href="{{.PostUrl}}" class="blogPostPreviewLink">{{.BlogPost.Title}}</a></h1>
-        <div class="post-meta">
-          <span class="datePosted">Posted on {{.PostDate}}</span>
-          <span class="reading-time">{{.ReadingTime}} min read</span>
-        </div>
-        <div class="preview">
+  <section class="home-latest" aria-labelledby="latest-writing-heading">
+    <header class="home-section-heading editorial-section-heading">
+      <p>Recent</p>
+      <h2 id="latest-writing-heading">Latest writing</h2>
+    </header>
+
+    <div class="home-post-list">
+      {{range .Posts}}
+        <article class="home-post-card{{if .BlogPost.ImagePath}} home-post-card--with-image{{end}}">
           {{if .BlogPost.ImagePath}}
-            <a href="{{.PostUrl}}">
+            <a class="home-post-media" href="{{.PostUrl}}" tabindex="-1" aria-hidden="true">
               <img src="{{assetURL .BlogPost.ImagePath}}"
                    srcset="{{responsiveImageSrcset (assetURL .BlogPost.ImagePath)}}"
-                   sizes="{{responsiveImageSizes}}"
-                   class="previewImage" 
-                   alt="Preview image for {{.BlogPost.Title}}"
+                   sizes="{{responsiveImageSizes "(max-width: 700px) calc(100vw - 60px), 225px"}}"
+                   alt=""
                    loading="lazy"
                    decoding="async">
             </a>
           {{end}}
-          {{.Preview}}
-        </div>
-        <div class="readMore">
-          <a href="{{.PostUrl}}"><span>Read more...</span></a>
-        </div>
-      </article>
-    {{end}}
-  </div>
+          <div class="home-post-copy">
+            <p class="home-post-meta"><span>{{.PostDate}}</span><span>{{.ReadingTime}} min read</span></p>
+            <h3><a href="{{.PostUrl}}">{{.BlogPost.Title}}</a></h3>
+            <div class="home-post-preview">{{.Preview}}</div>
+            <a class="home-post-link" href="{{.PostUrl}}">Read post <span aria-hidden="true">→</span></a>
+          </div>
+        </article>
+      {{end}}
+    </div>
+  </section>
 
-  <div class="viewAllPosts">
-    <a href="/all" class="viewAllLink">View All Blog Posts →</a>
-  </div>
+  <footer class="home-local-footer">
+    <a href="/all">View all blog posts <span aria-hidden="true">→</span></a>
+    <a href="/blog/filters">Browse by year or topic <span aria-hidden="true">→</span></a>
+  </footer>
+</article>
 {{end}}
