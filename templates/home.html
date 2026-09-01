@@ -2,46 +2,46 @@
 <article class="home-page editorial-page" id="home-top">
   <header class="home-hero editorial-hero">
     <p class="home-kicker editorial-kicker">Brian R. Bondy</p>
-    <h1 class="editorial-title">Running, work, and life</h1>
-    <p class="home-intro editorial-intro">I’m a father, software builder, and ultrarunner. I co-founded Brave after working at Mozilla and Khan Academy. This site is an archive of race reports, software work, and other things I wanted to write down.</p>
+    <h1 class="editorial-title">{{t "Running, work, and life"}}</h1>
+    <p class="home-intro editorial-intro">{{t "I’m a father, software builder, and ultrarunner. I co-founded Brave after working at Mozilla and Khan Academy. This site is an archive of race reports, software work, and other things I wanted to write down."}}</p>
     <div class="home-hero-actions">
-      <a class="home-action home-action--primary" href="/about">About</a>
-      <a class="home-action" href="/resume">Work &amp; Career</a>
-      <a class="home-action" href="/contact">Contact</a>
+      <a class="home-action home-action--primary" href="/about">{{t "About"}}</a>
+      <a class="home-action" href="/resume">{{t "Work & Career"}}</a>
+      <a class="home-action" href="/contact">{{t "Contact"}}</a>
     </div>
   </header>
 
-  <nav class="home-portals" aria-label="Start here">
+  <nav class="home-portals" aria-label="{{t "Start here"}}">
     <a href="/all" class="home-portal-card">
       <span class="home-portal-icon" aria-hidden="true"><i class="fas fa-pen-nib"></i></span>
       <span class="home-portal-copy">
-        <strong>Writing</strong>
-        <span>The complete archive, going back to 2005.</span>
-        <span class="home-portal-link">Writing archive →</span>
+        <strong>{{t "Writing"}}</strong>
+        <span>{{t "The complete archive, going back to 2005."}}</span>
+        <span class="home-portal-link">{{t "Writing archive"}} →</span>
       </span>
     </a>
     <a href="/running" class="home-portal-card">
       <span class="home-portal-icon" aria-hidden="true"><i class="fas fa-running"></i></span>
       <span class="home-portal-copy">
-        <strong>Running</strong>
-        <span>Race reports and miles from the trail.</span>
-        <span class="home-portal-link">Running archive →</span>
+        <strong>{{t "Running"}}</strong>
+        <span>{{t "Race reports and miles from the trail."}}</span>
+        <span class="home-portal-link">{{t "Running archive"}} →</span>
       </span>
     </a>
     <a href="/projects" class="home-portal-card">
       <span class="home-portal-icon" aria-hidden="true"><i class="fas fa-code"></i></span>
       <span class="home-portal-copy">
-        <strong>Projects</strong>
-        <span>Software I’ve built and helped build.</span>
-        <span class="home-portal-link">Projects archive →</span>
+        <strong>{{t "Projects"}}</strong>
+        <span>{{t "Software I’ve built and helped build."}}</span>
+        <span class="home-portal-link">{{t "Projects archive"}} →</span>
       </span>
     </a>
   </nav>
 
   <section class="home-latest" aria-labelledby="latest-writing-heading">
     <header class="home-section-heading editorial-section-heading">
-      <p>Recent</p>
-      <h2 id="latest-writing-heading">Latest writing</h2>
+      <p>{{t "Recent"}}</p>
+      <h2 id="latest-writing-heading">{{t "Latest writing"}}</h2>
     </header>
 
     <div class="home-post-list">
@@ -58,10 +58,10 @@
             </a>
           {{end}}
           <div class="home-post-copy">
-            <p class="home-post-meta"><span>{{.PostDate}}</span><span>{{.ReadingTime}} min read</span></p>
+            <p class="home-post-meta"><span>{{formatDate .BlogPost.Created}}</span><span>{{t "%d min read" .ReadingTime}}</span></p>
             <h3><a href="{{.PostUrl}}">{{.BlogPost.Title}}</a></h3>
             <div class="home-post-preview">{{.Preview}}</div>
-            <a class="home-post-link" href="{{.PostUrl}}">Read post <span aria-hidden="true">→</span></a>
+            <a class="home-post-link" href="{{.PostUrl}}">{{t "Read post"}} <span aria-hidden="true">→</span></a>
           </div>
         </article>
       {{end}}
@@ -69,8 +69,8 @@
   </section>
 
   <footer class="home-local-footer">
-    <a href="/all">View all blog posts <span aria-hidden="true">→</span></a>
-    <a href="/blog/filters">Browse by year or topic <span aria-hidden="true">→</span></a>
+    <a href="/all">{{t "View all blog posts"}} <span aria-hidden="true">→</span></a>
+    <a href="/blog/filters">{{t "Browse by year or topic"}} <span aria-hidden="true">→</span></a>
   </footer>
 </article>
 {{end}}

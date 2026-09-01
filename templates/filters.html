@@ -2,23 +2,23 @@
 <article class="filters-page editorial-page" id="filters-top">
   <header class="filters-hero editorial-hero">
     <div class="filters-hero-copy">
-      <p class="filters-kicker editorial-kicker">Blog navigation</p>
-      <h1 class="editorial-title">Browse the archive</h1>
-      <p class="filters-intro editorial-intro">{{.PostCount}} posts organized by year and across {{.TagCount}} topics.</p>
+      <p class="filters-kicker editorial-kicker">{{t "Blog navigation"}}</p>
+      <h1 class="editorial-title">{{t "Browse the archive"}}</h1>
+      <p class="filters-intro editorial-intro">{{t "%d posts organized by year and across %d topics." .PostCount .TagCount}}</p>
     </div>
   </header>
 
   <section class="filters-years" aria-labelledby="filters-years-heading">
     <header class="filters-section-heading editorial-section-heading">
-      <p>Timeline</p>
-      <h2 id="filters-years-heading">Posts by year</h2>
+      <p>{{t "Timeline"}}</p>
+      <h2 id="filters-years-heading">{{t "Posts by year"}}</h2>
     </header>
     <div class="filters-year-grid">
       {{range .Years}}
         {{if gt (getYearCount .) 0}}
           <a href="{{yearUrl .}}" class="filters-year-card">
             <span class="filters-year">{{.}}</span>
-            <span class="filters-count">{{getYearCount .}} {{if eq (getYearCount .) 1}}post{{else}}posts{{end}}</span>
+            <span class="filters-count">{{getYearCount .}} {{if eq (getYearCount .) 1}}{{t "post"}}{{else}}{{t "posts"}}{{end}}</span>
             <span class="filters-arrow" aria-hidden="true">→</span>
           </a>
         {{end}}
@@ -28,22 +28,22 @@
 
   <section class="filters-tags" aria-labelledby="filters-tags-heading">
     <header class="filters-section-heading editorial-section-heading">
-      <p>Topics</p>
-      <h2 id="filters-tags-heading">Posts by tag</h2>
+      <p>{{t "Topics"}}</p>
+      <h2 id="filters-tags-heading">{{t "Posts by tag"}}</h2>
     </header>
 
     <div class="filters-search">
-      <label for="search-tags">Find a tag</label>
+      <label for="search-tags">{{t "Find a tag"}}</label>
       <div class="filters-search-field">
         <i class="fas fa-search" aria-hidden="true"></i>
-        <input type="search" id="search-tags" placeholder="Search {{.TagCount}} tags" autocomplete="off">
+        <input type="search" id="search-tags" placeholder="{{t "Search %d tags" .TagCount}}" autocomplete="off">
       </div>
     </div>
 
     <div class="filters-tag-groups" id="tag-groups">
       {{range .TagGroups}}
         <section class="filters-tag-group" data-tag-group>
-          <h3>{{.Name}}</h3>
+          <h3>{{t .Name}}</h3>
           <div class="filters-tag-list">
             {{range .Tags}}
               <a href="{{tagUrl .}}" class="filters-tag" data-tag="{{.}}">
@@ -56,12 +56,12 @@
       {{end}}
     </div>
 
-    <p class="filters-empty" id="filters-empty" hidden>No tags match that search.</p>
+    <p class="filters-empty" id="filters-empty" hidden>{{t "No tags match that search."}}</p>
   </section>
 
   <footer class="filters-local-footer">
-    <a href="/all">View all blog posts <span aria-hidden="true">→</span></a>
-    <a href="#filters-top">Back to top <span aria-hidden="true">↑</span></a>
+    <a href="/all">{{t "View all blog posts"}} <span aria-hidden="true">→</span></a>
+    <a href="#filters-top">{{t "Back to top"}} <span aria-hidden="true">↑</span></a>
   </footer>
 </article>
 

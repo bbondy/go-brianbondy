@@ -2,36 +2,36 @@
 <article class="resume-page editorial-page">
   <header class="resume-hero editorial-hero">
     <h1 class="editorial-title">{{.Profile.Name}}</h1>
-    <p class="resume-headline">{{.Profile.Headline}}</p>
-    <p class="resume-summary">{{.Profile.ExecutiveSummary}}</p>
+    <p class="resume-headline">{{t .Profile.Headline}}</p>
+    <p class="resume-summary">{{t .Profile.ExecutiveSummary}}</p>
 
-    <div class="resume-proof" aria-label="Brave company scale">
+    <div class="resume-proof" aria-label="{{t "Brave company scale"}}">
       <span class="resume-proof-value">{{.Profile.ScaleProof.Value}}</span>
-      <span class="resume-proof-label">{{.Profile.ScaleProof.Label}}</span>
-      <a href="{{.Profile.ScaleProof.SourceURL}}" target="_blank" rel="noopener noreferrer">{{.Profile.ScaleProof.SourceLabel}} <span aria-hidden="true">↗</span></a>
+      <span class="resume-proof-label">{{t .Profile.ScaleProof.Label}}</span>
+      <a href="{{.Profile.ScaleProof.SourceURL}}" target="_blank" rel="noopener noreferrer">{{t .Profile.ScaleProof.SourceLabel}} <span aria-hidden="true">↗</span></a>
     </div>
 
     <div class="career-hero-actions">
-      <nav class="career-links" aria-label="Professional profiles">
+      <nav class="career-links" aria-label="{{t "Professional profiles"}}">
         {{range .Profile.Links}}
           <a href="{{.URL}}">{{.Label}}</a>
         {{end}}
       </nav>
-      <button type="button" class="career-print-button" data-print-page title="Print or save this resume as a PDF">
-        <i class="fas fa-file-pdf" aria-hidden="true"></i> Save as PDF
+      <button type="button" class="career-print-button" data-print-page title="{{t "Print or save this resume as a PDF"}}">
+        <i class="fas fa-file-pdf" aria-hidden="true"></i> {{t "Save as PDF"}}
       </button>
     </div>
   </header>
 
   <div class="career-page-switch">
-    <span>Concise resume</span>
-    <a href="/career">Looking for the exhaustive version? View my full career &amp; technical history <span aria-hidden="true">→</span></a>
+    <span>{{t "Concise resume"}}</span>
+    <a href="/career">{{t "Looking for the exhaustive version? View my full career & technical history"}} <span aria-hidden="true">→</span></a>
   </div>
 
   <section class="resume-section" aria-labelledby="experience-heading">
     <div class="resume-section-heading">
       <p>01</p>
-      <h2 id="experience-heading">Experience</h2>
+      <h2 id="experience-heading">{{t "Experience"}}</h2>
     </div>
 
     <div class="resume-roles">
@@ -40,17 +40,17 @@
           <article class="resume-role {{if eq .Company "Brave Software"}}resume-role-featured{{end}}">
             <aside class="resume-role-meta">
               <span>{{.Dates}}</span>
-              <span>{{.Location}}</span>
+              <span>{{t .Location}}</span>
             </aside>
             <div class="resume-role-body">
               <header>
                 <h3>{{if .CompanyURL}}<a href="{{.CompanyURL}}">{{.Company}}</a>{{else}}{{.Company}}{{end}}</h3>
-                <p>{{.Title}}</p>
+                <p>{{t .Title}}</p>
               </header>
-              <p class="resume-role-summary">{{.Summary}}</p>
+              <p class="resume-role-summary">{{t .Summary}}</p>
               <ul>
                 {{range .ResumeHighlights}}
-                  <li>{{.Text}}</li>
+                  <li>{{t .Text}}</li>
                 {{end}}
               </ul>
             </div>
@@ -63,13 +63,13 @@
   <section class="resume-section" aria-labelledby="depth-heading">
     <div class="resume-section-heading">
       <p>02</p>
-      <h2 id="depth-heading">Technical Depth</h2>
+      <h2 id="depth-heading">{{t "Technical Depth"}}</h2>
     </div>
     <div class="technical-depth-grid">
       {{range .Profile.TechnicalDepth}}
         <div class="technical-depth-item">
-          <h3>{{.Name}}</h3>
-          <p>{{.Items}}</p>
+          <h3>{{t .Name}}</h3>
+          <p>{{t .Items}}</p>
         </div>
       {{end}}
     </div>
@@ -78,25 +78,25 @@
   <section class="resume-section resume-closing" aria-labelledby="education-heading">
     <div class="resume-section-heading">
       <p>03</p>
-      <h2 id="education-heading">Education &amp; Interests</h2>
+      <h2 id="education-heading">{{t "Education & Interests"}}</h2>
     </div>
     <div class="resume-closing-grid">
       <div>
         <h3>{{.Profile.Education.School}}</h3>
-        <p>{{.Profile.Education.Degree}}</p>
-        <p class="career-muted">{{.Profile.Education.Dates}} · {{.Profile.Education.Location}}</p>
+        <p>{{t .Profile.Education.Degree}}</p>
+        <p class="career-muted">{{.Profile.Education.Dates}} · {{t .Profile.Education.Location}}</p>
       </div>
       <div>
-        <h3>Outside work</h3>
-        <p>{{range $index, $interest := .Profile.Interests}}{{if $index}} · {{end}}{{$interest}}{{end}}</p>
+        <h3>{{t "Outside work"}}</h3>
+        <p>{{range $index, $interest := .Profile.Interests}}{{if $index}} · {{end}}{{t $interest}}{{end}}</p>
       </div>
     </div>
   </section>
 
   <footer class="career-local-footer">
-    <a href="/career">Explore the complete career archive <span aria-hidden="true">→</span></a>
+    <a href="/career">{{t "Explore the complete career archive"}} <span aria-hidden="true">→</span></a>
   </footer>
 
-  <p class="career-print-signature">{{.Profile.Name}} · {{.Profile.Headline}} · brianbondy.com/resume</p>
+  <p class="career-print-signature">{{.Profile.Name}} · {{t .Profile.Headline}} · brianbondy.com/resume</p>
 </article>
 {{end}}

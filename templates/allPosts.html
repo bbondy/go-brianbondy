@@ -2,69 +2,69 @@
 <article class="all-posts-page editorial-page" id="all-posts-top">
   <header class="all-posts-hero editorial-hero">
     <div class="all-posts-hero-copy">
-      <p class="all-posts-kicker editorial-kicker">Writing archive</p>
+      <p class="all-posts-kicker editorial-kicker">{{t "Writing archive"}}</p>
       <h1 class="editorial-title">
         {{if and .Tag .Year}}
-          Blog Posts from {{.Year}} Tagged with “{{.Tag}}”
+          {{t "Blog Posts from %d Tagged with “%s”" .Year .Tag}}
         {{else if .Tag}}
-          Blog Posts Tagged with “{{.Tag}}”
+          {{t "Blog Posts Tagged with “%s”" .Tag}}
         {{else if .Year}}
-          Blog Posts from {{.Year}}
+          {{t "Blog Posts from %d" .Year}}
         {{else}}
-          All Blog Posts
+          {{t "All Blog Posts"}}
         {{end}}
       </h1>
-      <p class="all-posts-intro editorial-intro">Writing about software, privacy, running, business, family, and other things I wanted to remember or share.</p>
+      <p class="all-posts-intro editorial-intro">{{t "Writing about software, privacy, running, business, family, and other things I wanted to remember or share."}}</p>
     </div>
   </header>
 
   <section class="all-posts-controls" aria-labelledby="all-posts-controls-heading">
     <div class="all-posts-controls-row">
       <div class="all-posts-search-group">
-        <label id="all-posts-controls-heading" for="search-posts">Search the archive</label>
+        <label id="all-posts-controls-heading" for="search-posts">{{t "Search the archive"}}</label>
         <div class="all-posts-search-field">
           <i class="fas fa-search" aria-hidden="true"></i>
-          <input type="search" id="search-posts" placeholder="Title, date, or tag" autocomplete="off">
+          <input type="search" id="search-posts" placeholder="{{t "Title, date, or tag"}}" autocomplete="off">
         </div>
       </div>
       <a href="/blog/filters" class="all-posts-filter-link">
-        <i class="fas fa-tags" aria-hidden="true"></i> Navigate by tags
+        <i class="fas fa-tags" aria-hidden="true"></i> {{t "Navigate by tags"}}
       </a>
     </div>
 
     {{if or .Tag .Year}}
-      <div class="all-posts-active-filters" aria-label="Active blog filters">
-        <span class="all-posts-filter-label">Filtered by</span>
+      <div class="all-posts-active-filters" aria-label="{{t "Active blog filters"}}">
+        <span class="all-posts-filter-label">{{t "Filtered by"}}</span>
         {{if .Tag}}<span class="all-posts-filter-chip"><i class="fas fa-tag" aria-hidden="true"></i> {{.Tag}}</span>{{end}}
         {{if .Year}}<span class="all-posts-filter-chip"><i class="fas fa-calendar-alt" aria-hidden="true"></i> {{.Year}}</span>{{end}}
-        <a href="/all">Clear filters</a>
+        <a href="/all">{{t "Clear filters"}}</a>
       </div>
     {{end}}
   </section>
 
   <section class="all-posts-archive" aria-labelledby="all-posts-archive-heading">
     <header class="all-posts-section-heading editorial-section-heading">
-      <p>Archive</p>
-      <h2 id="all-posts-archive-heading">{{len .Posts}} {{if eq (len .Posts) 1}}post{{else}}posts{{end}}</h2>
+      <p>{{t "Archive"}}</p>
+      <h2 id="all-posts-archive-heading">{{len .Posts}} {{if eq (len .Posts) 1}}{{t "post"}}{{else}}{{t "posts"}}{{end}}</h2>
     </header>
 
     <div class="all-posts-list" id="post-list">
       {{range .Posts}}
         <article class="all-posts-card">
-          <time class="all-posts-date postDate" datetime="{{.BlogPost.Created}}">{{.PostDate}}</time>
+          <time class="all-posts-date postDate" datetime="{{.BlogPost.Created}}">{{formatDate .BlogPost.Created}}</time>
           <div class="all-posts-card-body">
             <header class="all-posts-card-header">
               <h3><a href="{{.PostUrl}}" class="postTitle">{{.BlogPost.Title}} <span aria-hidden="true">→</span></a></h3>
-              <span class="reading-time">{{.ReadingTime}} min read</span>
+              <span class="reading-time">{{t "%d min read" .ReadingTime}}</span>
             </header>
 
             <footer class="all-posts-card-footer">
-              <nav class="all-posts-card-links" aria-label="Links for {{.BlogPost.Title}}">
-                <a href="{{.PostUrl}}"><i class="fas fa-file-alt" aria-hidden="true"></i> Read post</a>
-                <a href="/pictures?blog_id={{.BlogPost.Id}}"><i class="fas fa-images" aria-hidden="true"></i> Photos</a>
+              <nav class="all-posts-card-links" aria-label="{{t "Links for %s" .BlogPost.Title}}">
+                <a href="{{.PostUrl}}"><i class="fas fa-file-alt" aria-hidden="true"></i> {{t "Read post"}}</a>
+                <a href="/pictures?blog_id={{.BlogPost.Id}}"><i class="fas fa-images" aria-hidden="true"></i> {{t "Photos"}}</a>
               </nav>
               {{if .BlogPost.Tags}}
-                <div class="postTags" aria-label="Tags for {{.BlogPost.Title}}">
+                <div class="postTags" aria-label="{{t "Tags for %s" .BlogPost.Title}}">
                   {{range .BlogPost.Tags}}<a href="{{tagUrl .}}" class="tag">{{.}}</a>{{end}}
                 </div>
               {{end}}
@@ -74,12 +74,12 @@
       {{end}}
     </div>
 
-    <p class="all-posts-empty" id="all-posts-empty" {{if .Posts}}hidden{{end}}>No blog posts match the current filters or search.</p>
+    <p class="all-posts-empty" id="all-posts-empty" {{if .Posts}}hidden{{end}}>{{t "No blog posts match the current filters or search."}}</p>
   </section>
 
   <footer class="all-posts-local-footer">
-    <span>{{len .Posts}} archive {{if eq (len .Posts) 1}}entry{{else}}entries{{end}}</span>
-    <a href="#all-posts-top">Back to top <span aria-hidden="true">↑</span></a>
+    <span>{{len .Posts}} {{if eq (len .Posts) 1}}{{t "archive entry"}}{{else}}{{t "archive entries"}}{{end}}</span>
+    <a href="#all-posts-top">{{t "Back to top"}} <span aria-hidden="true">↑</span></a>
   </footer>
 </article>
 

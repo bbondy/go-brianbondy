@@ -5,10 +5,10 @@
   </div>
   
   <article class="blogPost">
-    <h1><a href="/blog/{{.BlogPost.Id}}/{{slugifyTitle .BlogPost.Title}}">{{.BlogPost.Title}}</a></h1>
+    <h1><a href="{{blogPostURL .BlogPost}}">{{.BlogPost.Title}}</a></h1>
     <div class="post-meta">
-      <div class="datePosted">Posted on {{.BlogPostDate}}</div>
-      <div class="reading-time">{{.ReadingTime}} min read</div>
+      <div class="datePosted">{{t "Posted on %s" (formatDate .BlogPost.Created)}}</div>
+      <div class="reading-time">{{t "%d min read" .ReadingTime}}</div>
     </div>
     <div>
       {{optimizeImages .BlogPostBody}}
@@ -21,44 +21,44 @@
     
     <div class="socialShare">
       <div class="shareButtons">
-        <a href="https://twitter.com/intent/tweet?text={{.BlogPost.Title}}&url=https://brianbondy.com/blog/{{.BlogPost.Id}}/{{slugifyTitle .BlogPost.Title}}" 
+        <a href="https://twitter.com/intent/tweet?text={{.BlogPost.Title}}&url=https://brianbondy.com{{blogPostURL .BlogPost}}" 
            target="_blank" 
            rel="noopener noreferrer" 
            class="shareButton twitter">
           X
         </a>
-        <a href="https://www.facebook.com/sharer/sharer.php?u=https://brianbondy.com/blog/{{.BlogPost.Id}}/{{slugifyTitle .BlogPost.Title}}" 
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https://brianbondy.com{{blogPostURL .BlogPost}}" 
            target="_blank" 
            rel="noopener noreferrer" 
            class="shareButton facebook">
           <i class="fab fa-facebook"></i> Facebook
         </a>
-        <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://brianbondy.com/blog/{{.BlogPost.Id}}/{{slugifyTitle .BlogPost.Title}}" 
+        <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://brianbondy.com{{blogPostURL .BlogPost}}" 
            target="_blank" 
            rel="noopener noreferrer" 
            class="shareButton linkedin">
           <i class="fab fa-linkedin"></i> LinkedIn
         </a>
-        <a href="https://news.ycombinator.com/submitlink?u=https://brianbondy.com/blog/{{.BlogPost.Id}}/{{slugifyTitle .BlogPost.Title}}&t={{.BlogPost.Title}}" 
+        <a href="https://news.ycombinator.com/submitlink?u=https://brianbondy.com{{blogPostURL .BlogPost}}&t={{.BlogPost.Title}}" 
            target="_blank" 
            rel="noopener noreferrer" 
            class="shareButton hackernews">
           <i class="fab fa-hacker-news"></i> HN
         </a>
-        <a href="https://reddit.com/submit?url=https://brianbondy.com/blog/{{.BlogPost.Id}}/{{slugifyTitle .BlogPost.Title}}&title={{.BlogPost.Title}}" 
+        <a href="https://reddit.com/submit?url=https://brianbondy.com{{blogPostURL .BlogPost}}&title={{.BlogPost.Title}}" 
            target="_blank" 
            rel="noopener noreferrer" 
            class="shareButton reddit">
           <i class="fab fa-reddit"></i> Reddit
         </a>
-        <a href="mailto:?subject={{.BlogPost.Title}}&body=Check out this blog post: https://brianbondy.com/blog/{{.BlogPost.Id}}/{{slugifyTitle .BlogPost.Title}}" 
+        <a href="mailto:?subject={{.BlogPost.Title}}&body={{t "Check out this blog post:"}} https://brianbondy.com{{blogPostURL .BlogPost}}"
            class="shareButton email">
-          <i class="fas fa-envelope"></i> Email
+          <i class="fas fa-envelope"></i> {{t "Email"}}
         </a>
         <button onclick="copyLink(this)" 
                 class="shareButton copylink"
-                data-url="https://brianbondy.com/blog/{{.BlogPost.Id}}/{{slugifyTitle .BlogPost.Title}}">
-          <i class="fas fa-link"></i> Copy
+                data-url="https://brianbondy.com{{blogPostURL .BlogPost}}">
+          <i class="fas fa-link"></i> {{t "Copy"}}
         </button>
       </div>
     </div>
@@ -68,13 +68,13 @@
 
   <div class="navigationButtons">
     {{if .PrevPost}}
-    <a href="/blog/{{.PrevPost.Id}}/{{slugifyTitle .PrevPost.Title}}{{if .Tag}}?tag={{.Tag}}{{else if .Year}}?year={{.Year}}{{end}}" id="prevPostLink">
-      <span class="navigationButton">Previous: {{truncateTitle .PrevPost.Title}}</span>
+    <a href="{{blogPostURL .PrevPost}}{{if .Tag}}?tag={{.Tag}}{{else if .Year}}?year={{.Year}}{{end}}" id="prevPostLink">
+      <span class="navigationButton">{{t "Previous: %s" (truncateTitle .PrevPost.Title)}}</span>
     </a>
     {{end}}
     {{if .NextPost}}
-    <a href="/blog/{{.NextPost.Id}}/{{slugifyTitle .NextPost.Title}}{{if .Tag}}?tag={{.Tag}}{{else if .Year}}?year={{.Year}}{{end}}" id="nextPostLink">
-      <span class="navigationButton">Next: {{truncateTitle .NextPost.Title}}</span>
+    <a href="{{blogPostURL .NextPost}}{{if .Tag}}?tag={{.Tag}}{{else if .Year}}?year={{.Year}}{{end}}" id="nextPostLink">
+      <span class="navigationButton">{{t "Next: %s" (truncateTitle .NextPost.Title)}}</span>
     </a>
     {{end}}
   </div>

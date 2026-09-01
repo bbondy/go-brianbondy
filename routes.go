@@ -8,6 +8,8 @@ import (
 )
 
 func initializeRoutes(router *mux.Router) {
+	router.Use(languageMiddleware)
+
 	fs := http.FileServer(http.Dir("static/"))
 	router.PathPrefix("/static/").Handler(http.StripPrefix("/static/", fs))
 

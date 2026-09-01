@@ -1,39 +1,39 @@
 {{define "mountPoint"}}
 <article class="career-page editorial-page" id="career-top">
   <header class="career-archive-hero editorial-hero">
-    <p class="career-kicker editorial-kicker">Career &amp; Technical Archive</p>
+    <p class="career-kicker editorial-kicker">{{t "Career & Technical Archive"}}</p>
     <h1 class="editorial-title">{{.Profile.Name}}</h1>
-    <p class="resume-headline">{{.Profile.Headline}}</p>
-    <p class="career-archive-intro">A chronological record of what I have built, the systems I have worked in, and the technologies accumulated along the way.</p>
+    <p class="resume-headline">{{t .Profile.Headline}}</p>
+    <p class="career-archive-intro">{{t "A chronological record of what I have built, the systems I have worked in, and the technologies accumulated along the way."}}</p>
     <div class="career-hero-actions">
-      <nav class="career-links" aria-label="Professional profiles">
+      <nav class="career-links" aria-label="{{t "Professional profiles"}}">
         {{range .Profile.Links}}
           <a href="{{.URL}}">{{.Label}}</a>
         {{end}}
       </nav>
-      <button type="button" class="career-print-button" data-print-page title="Print or save this career archive as a PDF">
-        <i class="fas fa-file-pdf" aria-hidden="true"></i> Save as PDF
+      <button type="button" class="career-print-button" data-print-page title="{{t "Print or save this career archive as a PDF"}}">
+        <i class="fas fa-file-pdf" aria-hidden="true"></i> {{t "Save as PDF"}}
       </button>
     </div>
   </header>
 
   <div class="career-page-switch career-page-switch-archive">
-    <a href="/resume"><span aria-hidden="true">←</span> Back to the concise resume</a>
-    <span>Full career &amp; technical history</span>
+    <a href="/resume"><span aria-hidden="true">←</span> {{t "Back to the concise resume"}}</a>
+    <span>{{t "Full career & technical history"}}</span>
   </div>
 
-  <nav class="career-contents" aria-label="Career archive sections">
-    <a href="#career-history">Career history</a>
-    <a href="#technology-timeline">Technology timeline</a>
-    <a href="#technical-inventory">Technical inventory</a>
-    <a href="#selected-projects">Selected projects</a>
-    <a href="#education">Education</a>
+  <nav class="career-contents" aria-label="{{t "Career archive sections"}}">
+    <a href="#career-history">{{t "Career history"}}</a>
+    <a href="#technology-timeline">{{t "Technology timeline"}}</a>
+    <a href="#technical-inventory">{{t "Technical inventory"}}</a>
+    <a href="#selected-projects">{{t "Selected projects"}}</a>
+    <a href="#education">{{t "Education"}}</a>
   </nav>
 
   <section class="career-archive-section" id="career-history" aria-labelledby="career-history-heading">
     <header class="archive-section-heading">
-      <p>Chronology</p>
-      <h2 id="career-history-heading">Career history</h2>
+      <p>{{t "Chronology"}}</p>
+      <h2 id="career-history-heading">{{t "Career history"}}</h2>
     </header>
 
     <div class="archive-roles">
@@ -43,18 +43,18 @@
             <span class="archive-role-marker" aria-hidden="true"></span>
             <span class="archive-role-heading">
               <strong>{{.Company}}</strong>
-              <span>{{.Title}}</span>
+              <span>{{t .Title}}</span>
             </span>
             <span class="archive-role-dates">{{.Dates}}</span>
           </summary>
           <div class="archive-role-content">
-            <p class="archive-role-location">{{.Location}}{{if .CompanyURL}} · <a href="{{.CompanyURL}}">Company site <span aria-hidden="true">↗</span></a>{{end}}</p>
-            <p class="archive-role-summary">{{.Summary}}</p>
+            <p class="archive-role-location">{{t .Location}}{{if .CompanyURL}} · <a href="{{.CompanyURL}}">{{t "Company site"}} <span aria-hidden="true">↗</span></a>{{end}}</p>
+            <p class="archive-role-summary">{{t .Summary}}</p>
             <ul>
               {{range .ArchiveHighlights}}
                 <li>
-                  {{.Text}}
-                  {{if .SourceURL}}<a class="career-source" href="{{.SourceURL}}">{{.SourceLabel}} <span aria-hidden="true">→</span></a>{{end}}
+                  {{t .Text}}
+                  {{if .SourceURL}}<a class="career-source" href="{{.SourceURL}}">{{t .SourceLabel}} <span aria-hidden="true">→</span></a>{{end}}
                 </li>
               {{end}}
             </ul>
@@ -66,16 +66,16 @@
 
   <section class="career-archive-section" id="technology-timeline" aria-labelledby="technology-timeline-heading">
     <header class="archive-section-heading">
-      <p>By era</p>
-      <h2 id="technology-timeline-heading">Technology timeline</h2>
+      <p>{{t "By era"}}</p>
+      <h2 id="technology-timeline-heading">{{t "Technology timeline"}}</h2>
     </header>
     <div class="technology-timeline">
       {{range .Profile.Timeline}}
         <article class="timeline-entry">
-          <p class="timeline-era">{{.Era}}</p>
-          <h3>{{.Title}}</h3>
-          <p>{{.Description}}</p>
-          <p class="timeline-technologies">{{.Technologies}}</p>
+          <p class="timeline-era">{{t .Era}}</p>
+          <h3>{{t .Title}}</h3>
+          <p>{{t .Description}}</p>
+          <p class="timeline-technologies">{{t .Technologies}}</p>
         </article>
       {{end}}
     </div>
@@ -83,15 +83,15 @@
 
   <section class="career-archive-section" id="technical-inventory" aria-labelledby="technical-inventory-heading">
     <header class="archive-section-heading">
-      <p>The whole toolbox</p>
-      <h2 id="technical-inventory-heading">Historical technical inventory</h2>
+      <p>{{t "The whole toolbox"}}</p>
+      <h2 id="technical-inventory-heading">{{t "Historical technical inventory"}}</h2>
     </header>
-    <p class="archive-section-intro">Tools age; the experience does not. This preserves the detailed inventory from earlier versions of my resume, including the IDE versions, protocols, systems, and libraries that mark each era.</p>
+    <p class="archive-section-intro">{{t "Tools age; the experience does not. This preserves the detailed inventory from earlier versions of my resume, including the IDE versions, protocols, systems, and libraries that mark each era."}}</p>
     <div class="inventory-list">
       {{range .Profile.TechnicalInventory}}
         <details class="inventory-group">
-          <summary>{{.Name}}</summary>
-          <p>{{.Items}}</p>
+          <summary>{{t .Name}}</summary>
+          <p>{{t .Items}}</p>
         </details>
       {{end}}
     </div>
@@ -99,60 +99,60 @@
 
   <section class="career-archive-section" id="selected-projects" aria-labelledby="selected-projects-heading">
     <header class="archive-section-heading">
-      <p>Built along the way</p>
-      <h2 id="selected-projects-heading">Selected projects</h2>
+      <p>{{t "Built along the way"}}</p>
+      <h2 id="selected-projects-heading">{{t "Selected projects"}}</h2>
     </header>
     <div class="archive-projects">
       {{range .Profile.Projects}}
         <article class="archive-project">
           <h3>{{if .URL}}<a href="{{.URL}}">{{.Name}}</a>{{else}}{{.Name}}{{end}}</h3>
-          <p>{{.Description}}</p>
+          <p>{{t .Description}}</p>
         </article>
       {{end}}
     </div>
-    <p class="archive-more-projects"><a href="/projects">Browse the wider projects catalog <span aria-hidden="true">→</span></a></p>
+    <p class="archive-more-projects"><a href="/projects">{{t "Browse the wider projects catalog"}} <span aria-hidden="true">→</span></a></p>
   </section>
 
   <section class="career-archive-section" id="education" aria-labelledby="archive-education-heading">
     <header class="archive-section-heading">
-      <p>Degree &amp; coursework</p>
-      <h2 id="archive-education-heading">Education</h2>
+      <p>{{t "Degree & coursework"}}</p>
+      <h2 id="archive-education-heading">{{t "Education"}}</h2>
     </header>
     <div class="archive-education">
       <h3>{{.Profile.Education.School}}</h3>
-      <p><strong>{{.Profile.Education.Degree}}</strong></p>
-      <p class="career-muted">{{.Profile.Education.Dates}} · {{.Profile.Education.Location}}</p>
-      <p><strong>Coursework:</strong> {{.Profile.Education.Coursework}}</p>
-      <p>{{.Profile.Education.Development}}</p>
+      <p><strong>{{t .Profile.Education.Degree}}</strong></p>
+      <p class="career-muted">{{.Profile.Education.Dates}} · {{t .Profile.Education.Location}}</p>
+      <p><strong>{{t "Coursework:"}}</strong> {{t .Profile.Education.Coursework}}</p>
+      <p>{{t .Profile.Education.Development}}</p>
     </div>
   </section>
 
-  <section class="career-archive-section archive-final-grid" aria-label="Additional background and interests">
+  <section class="career-archive-section archive-final-grid" aria-label="{{t "Additional background and interests"}}">
     <div>
       <header class="archive-section-heading archive-section-heading-small">
-        <p>Additional context</p>
-        <h2>Background</h2>
+        <p>{{t "Additional context"}}</p>
+        <h2>{{t "Background"}}</h2>
       </header>
       <ul>
-        {{range .Profile.ArchiveBackground}}<li>{{.}}</li>{{end}}
+        {{range .Profile.ArchiveBackground}}<li>{{t .}}</li>{{end}}
       </ul>
     </div>
     <div>
       <header class="archive-section-heading archive-section-heading-small">
-        <p>Beyond software</p>
-        <h2>Interests</h2>
+        <p>{{t "Beyond software"}}</p>
+        <h2>{{t "Interests"}}</h2>
       </header>
       <ul>
-        {{range .Profile.Interests}}<li>{{.}}</li>{{end}}
+        {{range .Profile.Interests}}<li>{{t .}}</li>{{end}}
       </ul>
     </div>
   </section>
 
   <footer class="career-local-footer career-archive-footer">
-    <a href="/resume"><span aria-hidden="true">←</span> Return to the concise resume</a>
-    <a href="#career-top">Back to top <span aria-hidden="true">↑</span></a>
+    <a href="/resume"><span aria-hidden="true">←</span> {{t "Return to the concise resume"}}</a>
+    <a href="#career-top">{{t "Back to top"}} <span aria-hidden="true">↑</span></a>
   </footer>
 
-  <p class="career-print-signature">{{.Profile.Name}} · {{.Profile.Headline}} · brianbondy.com/career</p>
+  <p class="career-print-signature">{{.Profile.Name}} · {{t .Profile.Headline}} · brianbondy.com/career</p>
 </article>
 {{end}}

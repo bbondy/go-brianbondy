@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html lang="en">
+<html lang="{{lang}}">
   <head>
     <script>
       // Resolve the saved light/dark and color preferences before first paint.
@@ -90,12 +90,26 @@
       })();
     </script>
     <meta charset="utf-8">
-    <title>{{.Title}}</title>
+    <title>{{pageTitle .Title}}</title>
+    <script>
+      window.siteLocale = '{{lang}}';
+      window.siteTranslations = {{translationsJSON}};
+      window.siteT = function(english) {
+        return window.siteTranslations[english] || english;
+      };
+      window.siteFormat = function(english) {
+        var args = Array.prototype.slice.call(arguments, 1);
+        var index = 0;
+        return window.siteT(english).replace(/%[sd]/g, function() {
+          return String(args[index++]);
+        });
+      };
+    </script>
     
     {{if (avail "Description" .)}}
-      <meta name="description" content="{{.Description}}">
+      <meta name="description" content="{{t .Description}}">
     {{else}}
-      <meta name="description" content="Brian Bondy - Father, runner, software engineer, entrepreneur, and writer.">
+      <meta name="description" content="{{t "Brian Bondy - Father, runner, software engineer, entrepreneur, and writer."}}">
     {{end}}
     
     <!-- Preload self-hosted critical fonts -->
@@ -628,6 +642,11 @@
         font-size: 1rem;
         transition: color 0.3s ease;
       }
+      .language-toggle {
+        font-size: 0.7rem;
+        font-weight: 700;
+        letter-spacing: 0.03em;
+      }
 
       @media only screen and (max-width: 600px) {
         .topBar {
@@ -665,8 +684,8 @@
     </style>
     
     <!-- Non-critical CSS loaded asynchronously -->
-        <link rel="stylesheet" href="/static/css/main.css?v=160" media="print" onload="this.media='all'">
-    <noscript><link rel="stylesheet" href="/static/css/main.css?v=160"></noscript>
+        <link rel="stylesheet" href="/static/css/main.css?v=161" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="/static/css/main.css?v=161"></noscript>
     {{if or (eq .MarkdownSlug "home") (eq .MarkdownSlug "about.markdown") (eq .MarkdownSlug "contact.markdown") (eq .MarkdownSlug "projects") (eq .MarkdownSlug "resume") (eq .MarkdownSlug "career") (eq .MarkdownSlug "running") (eq .MarkdownSlug "all") (eq .MarkdownSlug "filters") (eq .MarkdownSlug "pictures") (eq .MarkdownSlug "interviews") (eq .MarkdownSlug "cheatsheets") (eq .MarkdownSlug "books") (eq .MarkdownSlug "advice.markdown")}}
     <link rel="stylesheet" href="/static/css/editorial.css?v=3">
     {{end}}
@@ -715,17 +734,17 @@
     <link rel="icon" type="image/x-icon" href="/static/img/favicon.ico">
     <link rel="shortcut icon" type="image/x-icon" href="/static/img/favicon.ico">
     {{if canonicalURL .}}<link rel="canonical" href="{{canonicalURL .}}">{{end}}
-    <link rel="alternate" type="application/rss+xml" title="Brian Bondy RSS Feed" href="https://brianbondy.com/rss">
+    <link rel="alternate" type="application/rss+xml" title="{{t "Brian Bondy RSS Feed"}}" href="https://brianbondy.com/rss">
     <meta name="viewport" content="width=device-width, min-width=285, max-viewport=800, initial-scale=1">
     <meta name="theme-color" id="theme-color-meta" content="#eef3f8">
-    <meta property="og:title" content="{{.Title}}">
+    <meta property="og:title" content="{{pageTitle .Title}}">
     <meta property="og:site_name" content="Brian R. Bondy">
     {{if (avail "ShareUrl" .)}}
     <meta property="og:url" content="https://brianbondy.com{{.ShareUrl}}">
     <meta property="og:type" content="article">
     {{end}}
     {{if (avail "Description" .)}}
-    <meta property="og:description" content="{{.Description}}">
+    <meta property="og:description" content="{{t .Description}}">
     {{end}}
     {{if (avail "ImagePath" .)}}
     <meta property="og:image" content="https://brianbondy.com/{{.ImagePath}}">
@@ -737,20 +756,23 @@
   <body>
     <div class="content">
       <div class="topBar">
-        <a class="site-brand" href="/" aria-label="Brian R. Bondy home">
-          <img title="Brian R. Bondy" src="/static/img/logo.png" alt="Brian R. Bondy logo" class="logo-img" id="site-logo">
+        <a class="site-brand" href="/" aria-label="{{t "Brian R. Bondy home"}}">
+          <img title="Brian R. Bondy" src="/static/img/logo.png" alt="{{t "Brian R. Bondy logo"}}" class="logo-img" id="site-logo">
         </a>
         <ul class="topBarLinks">
-          <li class="{{if eq .MarkdownSlug "all"}}current{{end}}"><a href="/all" class="blog">Blog</a></li>
-          <li class="{{if eq .MarkdownSlug "running"}}current{{end}}"><a href="/running" class="running">Runs</a></li>
-          <li class="{{if eq .MarkdownSlug "projects"}}current{{end}}"><a href="/projects" class="projects">Projects</a></li>
-          <li class="{{if eq .MarkdownSlug "about.markdown"}}current{{end}}"><a href="/about">About</a></li>
+          <li class="{{if eq .MarkdownSlug "all"}}current{{end}}"><a href="/all" class="blog">{{t "Blog"}}</a></li>
+          <li class="{{if eq .MarkdownSlug "running"}}current{{end}}"><a href="/running" class="running">{{t "Runs"}}</a></li>
+          <li class="{{if eq .MarkdownSlug "projects"}}current{{end}}"><a href="/projects" class="projects">{{t "Projects"}}</a></li>
+          <li class="{{if eq .MarkdownSlug "about.markdown"}}current{{end}}"><a href="/about">{{t "About"}}</a></li>
           <li class="theme-controls">
-            <button class="theme-toggle" id="theme-toggle" type="button" title="Switch to dark mode" aria-label="Switch to dark mode">
+            <button class="theme-toggle" id="theme-toggle" type="button" title="{{t "Switch to dark mode"}}" aria-label="{{t "Switch to dark mode"}}">
               <span class="icon" id="theme-icon" aria-hidden="true">🌙</span>
             </button>
-            <button class="theme-toggle palette-toggle" id="palette-toggle" type="button" title="Color palette: Ocean" aria-label="Color palette: Ocean. Click for Forest">
+            <button class="theme-toggle palette-toggle" id="palette-toggle" type="button" title="{{t "Color palette: Ocean"}}" aria-label="{{t "Color palette: Ocean. Click for Forest"}}">
               <i class="fas fa-palette palette-icon" id="palette-icon" aria-hidden="true"></i>
+            </button>
+            <button class="theme-toggle language-toggle" id="language-toggle" type="button" data-language="{{alternateLang}}" title="{{if eq (lang) "en"}}{{t "View site in French"}}{{else}}{{t "View site in English"}}{{end}}" aria-label="{{if eq (lang) "en"}}{{t "View site in French"}}{{else}}{{t "View site in English"}}{{end}}">
+              {{if eq (lang) "fr"}}FR{{else}}EN{{end}}
             </button>
           </li>
         </ul>
@@ -765,31 +787,31 @@
       <footer class="site-footer">
         <div class="footer-content">
           <div class="footer-section">
-            <h4>About</h4>
+            <h4>{{t "About"}}</h4>
             <ul>
-              <li><a href="/about">About</a></li>
-              <li><a href="/resume">Resume</a></li>
-              <li><a href="/career">Career Archive</a></li>
-              <li><a href="/contact">Contact</a></li>
+              <li><a href="/about">{{t "About"}}</a></li>
+              <li><a href="/resume">{{t "Resume"}}</a></li>
+              <li><a href="/career">{{t "Career Archive"}}</a></li>
+              <li><a href="/contact">{{t "Contact"}}</a></li>
             </ul>
           </div>
           
           <div class="footer-section">
-            <h4>Content</h4>
+            <h4>{{t "Content"}}</h4>
             <ul>
-              <li><a href="/all">All Blog Posts</a></li>
-              <li><a href="/advice">Advice</a></li>
-              <li><a href="/books">Books</a></li>
-              <li><a href="/cheatsheets">Cheatsheets</a></li>
-              <li><a href="/interviews">Interviews</a></li>
-              <li><a href="/projects">Projects</a></li>
-              <li><a href="/running">Running</a></li>
-              <li><a href="/pictures">Pictures Gallery</a></li>
+              <li><a href="/all">{{t "All Blog Posts"}}</a></li>
+              <li><a href="/advice">{{t "Advice"}}</a></li>
+              <li><a href="/books">{{t "Books"}}</a></li>
+              <li><a href="/cheatsheets">{{t "Cheatsheets"}}</a></li>
+              <li><a href="/interviews">{{t "Interviews"}}</a></li>
+              <li><a href="/projects">{{t "Projects"}}</a></li>
+              <li><a href="/running">{{t "Running"}}</a></li>
+              <li><a href="/pictures">{{t "Pictures Gallery"}}</a></li>
             </ul>
           </div>
           
           <div class="footer-section">
-            <h4>Connect</h4>
+            <h4>{{t "Connect"}}</h4>
             <ul>
               <li><a href="https://twitter.com/brianbondy" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i> Twitter <i class="fas fa-external-link-alt"></i></a></li>
               <li><a href="https://github.com/bbondy" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub <i class="fas fa-external-link-alt"></i></a></li>
@@ -802,22 +824,22 @@
         </div>
         
         <div class="footer-bottom">
-          <p>&copy; {{currentYear}} Brian R. Bondy. All rights reserved.</p>
+          <p>&copy; {{currentYear}} Brian R. Bondy. {{t "All rights reserved."}}</p>
         </div>
       </footer>
     </div>
     
     <!-- Back to Top Button -->
-    <button id="back-to-top" title="Back to top" aria-label="Back to top">&#8679;</button>
+    <button id="back-to-top" title="{{t "Back to top"}}" aria-label="{{t "Back to top"}}">&#8679;</button>
 
     {{if or (avail "BlogPost" .) (avail "Pictures" .)}}
     <!-- Lightbox HTML -->
     <div id="lightbox" class="lightbox">
       <span class="lightbox-close">&times;</span>
       <div class="lightbox-controls">
-        <button class="lightbox-zoom-in" id="lightbox-zoom-in" title="Zoom In">+</button>
-        <button class="lightbox-zoom-out" id="lightbox-zoom-out" title="Zoom Out">−</button>
-        <button class="lightbox-reset" id="lightbox-reset" title="Reset Zoom">⟲</button>
+        <button class="lightbox-zoom-in" id="lightbox-zoom-in" title="{{t "Zoom In"}}">+</button>
+        <button class="lightbox-zoom-out" id="lightbox-zoom-out" title="{{t "Zoom Out"}}">−</button>
+        <button class="lightbox-reset" id="lightbox-reset" title="{{t "Reset Zoom"}}">⟲</button>
       </div>
       <div class="lightbox-content">
         <img class="lightbox-image" id="lightbox-image" src="" alt="">
@@ -895,7 +917,7 @@
         function showLightboxImage(index) {
           const img = images[index];
           lightboxImage.src = lightboxSource(img);
-          lightboxImage.alt = img.alt || 'Blog post image';
+          lightboxImage.alt = img.alt || window.siteT('Blog post image');
           preloadAdjacentImages();
         }
 
@@ -1257,8 +1279,8 @@
                 // Create copy button
                 const copyBtn = document.createElement('button');
                 copyBtn.className = 'copy-code-btn';
-                copyBtn.innerHTML = '<i class="fas fa-copy"></i> Copy';
-                copyBtn.title = 'Copy code to clipboard';
+                copyBtn.innerHTML = '<i class="fas fa-copy"></i> ' + window.siteT('Copy');
+                copyBtn.title = window.siteT('Copy code to clipboard');
                 
 
                 
@@ -1270,7 +1292,7 @@
                     const originalText = copyBtn.innerHTML;
                     
                     // Immediately update the button to show feedback
-                    copyBtn.innerHTML = '<i class="fas fa-check"></i> Copied!';
+                    copyBtn.innerHTML = '<i class="fas fa-check"></i> ' + window.siteT('Copied!');
                     copyBtn.classList.add('copied');
                     
                     navigator.clipboard.writeText(code.textContent).then(() => {
@@ -1331,7 +1353,7 @@
         function updateThemeIcon(theme) {
           themeIcon.textContent = theme === 'dark' ? '☀️' : '🌙';
           const nextTheme = theme === 'dark' ? 'light' : 'dark';
-          const label = 'Switch to ' + nextTheme + ' mode';
+          const label = nextTheme === 'dark' ? window.siteT('Switch to dark mode') : window.siteT('Switch to light mode');
           themeToggle.title = label;
           themeToggle.setAttribute('aria-label', label);
         }
@@ -1404,19 +1426,31 @@
         }
       })();
 
+      // Language functionality
+      (function() {
+        const languageToggle = document.getElementById('language-toggle');
+        if (!languageToggle) return;
+        languageToggle.addEventListener('click', function() {
+          const language = languageToggle.dataset.language;
+          const url = new URL(window.location.href);
+          url.searchParams.set('lang', language);
+          window.location.assign(url.toString());
+        });
+      })();
+
       // Color palette functionality
       (function() {
         const paletteToggle = document.getElementById('palette-toggle');
         const root = document.documentElement;
         const paletteOrder = window.sitePaletteOrder || ['ocean', 'forest', 'ember', 'violet', 'rose', 'gold', 'slate'];
         const paletteLabels = {
-          ocean: 'Ocean',
-          forest: 'Forest',
-          ember: 'Ember',
-          violet: 'Violet',
-          rose: 'Rose',
-          gold: 'Gold',
-          slate: 'Slate'
+          ocean: window.siteT('Ocean'),
+          forest: window.siteT('Forest'),
+          ember: window.siteT('Ember'),
+          violet: window.siteT('Violet'),
+          rose: window.siteT('Rose'),
+          gold: window.siteT('Gold'),
+          slate: window.siteT('Slate')
         };
 
         function updateBrowserThemeColor() {
@@ -1431,7 +1465,7 @@
         function updatePaletteButton(palette) {
           const currentIndex = paletteOrder.indexOf(palette);
           const nextPalette = paletteOrder[(currentIndex + 1) % paletteOrder.length];
-          const label = 'Color palette: ' + paletteLabels[palette] + '. Click for ' + paletteLabels[nextPalette];
+          const label = window.siteFormat('Color palette: %s. Click for %s', paletteLabels[palette], paletteLabels[nextPalette]);
           paletteToggle.title = label;
           paletteToggle.setAttribute('aria-label', label);
         }
@@ -1518,7 +1552,7 @@
           document.head.appendChild(stylesheet);
 
           const script = document.createElement('script');
-          script.src = '/static/js/easter-egg.js?v=1';
+          script.src = '/static/js/easter-egg.js?v=2';
           script.onload = function() {
             themeToggle.dispatchEvent(new Event('eastereggactivate'));
           };
@@ -1635,7 +1669,7 @@
           const url = button.getAttribute('data-url');
           navigator.clipboard.writeText(url).then(() => {
             const originalText = button.innerHTML;
-            button.innerHTML = '<i class="fas fa-check"></i> Copied!';
+            button.innerHTML = '<i class="fas fa-check"></i> ' + window.siteT('Copied!');
             button.classList.add('copied');
             
             setTimeout(() => {

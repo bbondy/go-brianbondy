@@ -18,6 +18,10 @@ type gzipResponseWriter struct {
 
 func (w gzipResponseWriter) Write(data []byte) (int, error) { return w.writer.Write(data) }
 
+func (w gzipResponseWriter) Language() string {
+	return languageFromWriter(w.ResponseWriter)
+}
+
 // gzipHTML compresses dynamic HTML when the front proxy has not already done so.
 func gzipHTML(w http.ResponseWriter, r *http.Request, next http.HandlerFunc) {
 	if !strings.Contains(r.Header.Get("Accept-Encoding"), "gzip") {

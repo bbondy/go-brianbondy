@@ -304,8 +304,8 @@
     if (!scoreDisplay) return;
     const isNewRecord = gameScore > highScore;
     scoreDisplay.innerHTML = `
-      <div><strong>🎯 Score:</strong> ${gameScore} ${isNewRecord ? '🔥' : ''}</div>
-      <div style="font-size: 12px; opacity: 0.8;"><strong>👑 Best:</strong> ${Math.max(gameScore, highScore)}</div>
+      <div><strong>🎯 ${window.siteT('Score:')}</strong> ${gameScore} ${isNewRecord ? '🔥' : ''}</div>
+      <div style="font-size: 12px; opacity: 0.8;"><strong>👑 ${window.siteT('Best:')}</strong> ${Math.max(gameScore, highScore)}</div>
     `;
   }
   
@@ -373,7 +373,7 @@
   function updateHealthDisplay() {
     if (!healthDisplay) return;
     const hearts = '❤️'.repeat(playerHealth) + '🖤'.repeat(maxHealth - playerHealth);
-    healthDisplay.innerHTML = `<strong>💖 Health:</strong> ${hearts}`;
+    healthDisplay.innerHTML = `<strong>💖 ${window.siteT('Health:')}</strong> ${hearts}`;
   }
   
   // Take damage
@@ -428,11 +428,11 @@
     
     const survivalTime = Math.floor((Date.now() - gameStartTime) / 1000);
     gameOverDiv.innerHTML = `
-      <h2 style="margin: 0 0 15px 0; color: #ff4444;">💀 GAME OVER 💀</h2>
-      <p><strong>Final Score:</strong> ${gameScore}</p>
-      <p><strong>Survived:</strong> ${survivalTime}s</p>
-      <p><strong>High Score:</strong> ${Math.max(gameScore, highScore)}</p>
-      <p style="font-size: 16px; margin-top: 20px; color: #ffff00;">✨ Tap or Click to Restart ✨</p>
+      <h2 style="margin: 0 0 15px 0; color: #ff4444;">💀 ${window.siteT('GAME OVER')} 💀</h2>
+      <p><strong>${window.siteT('Final Score:')}</strong> ${gameScore}</p>
+      <p><strong>${window.siteT('Survived:')}</strong> ${survivalTime}s</p>
+      <p><strong>${window.siteT('High Score:')}</strong> ${Math.max(gameScore, highScore)}</p>
+      <p style="font-size: 16px; margin-top: 20px; color: #ffff00;">✨ ${window.siteT('Tap or Click to Restart')} ✨</p>
     `;
     
     // Add click to restart functionality
@@ -1193,12 +1193,12 @@ function checkBallStickCollision(ball) {
         border: 2px solid var(--link-color);
       `;
                                 hint.innerHTML = `
-         <h3>🎉 Easter Egg Activated! 🎉</h3>
-         <p><strong>Desktop:</strong> H/J/K/L (move), F (shoot), Space (jump)</p>
-         <p><strong>Mobile:</strong> Use the virtual D-pad and center shoot button!</p>
-         <p><strong>Combat:</strong> Shoot elements AND bouncing balls!</p>
-         <p><strong>Survival:</strong> Dodge or destroy the orange bouncing balls!</p>
-         <small>Survive as long as you can! Balls get more frequent over time. Click to dismiss.</small>
+         <h3>🎉 ${window.siteT('Easter Egg Activated!')} 🎉</h3>
+         <p><strong>${window.siteT('Desktop:')}</strong> ${window.siteT('H/J/K/L (move), F (shoot), Space (jump)')}</p>
+         <p><strong>${window.siteT('Mobile:')}</strong> ${window.siteT('Use the virtual D-pad and center shoot button!')}</p>
+         <p><strong>${window.siteT('Combat:')}</strong> ${window.siteT('Shoot elements AND bouncing balls!')}</p>
+         <p><strong>${window.siteT('Survival:')}</strong> ${window.siteT('Dodge or destroy the orange bouncing balls!')}</p>
+         <small>${window.siteT('Survive as long as you can! Balls get more frequent over time. Click to dismiss.')}</small>
        `;
        document.body.appendChild(hint);
        

@@ -18,15 +18,20 @@ func TestInitializeTemplates(t *testing.T) {
 	if err := initializeTemplates(); err != nil {
 		t.Fatalf("initializeTemplates() error = %v", err)
 	}
-	if len(compiledTemplates) != len(templateFiles) {
-		t.Fatalf("loaded %d templates, want %d", len(compiledTemplates), len(templateFiles))
+	if len(compiledTemplates) != len(supportedLanguages) {
+		t.Fatalf("loaded %d template languages, want %d", len(compiledTemplates), len(supportedLanguages))
+	}
+	for _, language := range supportedLanguages {
+		if len(compiledTemplates[language]) != len(templateFiles) {
+			t.Fatalf("loaded %d %s templates, want %d", len(compiledTemplates[language]), language, len(templateFiles))
+		}
 	}
 
-	firstHomeTemplate := compiledTemplates["home"]
+	firstHomeTemplate := compiledTemplates[defaultLanguage]["home"]
 	if err := initializeTemplates(); err != nil {
 		t.Fatalf("second initializeTemplates() error = %v", err)
 	}
-	if compiledTemplates["home"] != firstHomeTemplate {
+	if compiledTemplates[defaultLanguage]["home"] != firstHomeTemplate {
 		t.Error("initializeTemplates() reparsed the home template")
 	}
 }

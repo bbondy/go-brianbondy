@@ -2,10 +2,10 @@
 <article class="running-page editorial-page" id="running-top">
   <header class="running-hero editorial-hero">
     <div class="running-hero-copy">
-      <p class="running-kicker editorial-kicker">Running &amp; endurance</p>
-      <h1 class="editorial-title">Runs</h1>
+      <p class="running-kicker editorial-kicker">{{t "Running & endurance"}}</p>
+      <h1 class="editorial-title">{{t "Runs"}}</h1>
       <blockquote class="running-quote">
-        <p class="quote-text">We are what we repeatedly do. Excellence, then, is not an act, but a habit.</p>
+        <p class="quote-text">{{t "We are what we repeatedly do. Excellence, then, is not an act, but a habit."}}</p>
         <cite class="quote-author">— Will Durant</cite>
       </blockquote>
     </div>
@@ -13,19 +13,19 @@
 
   <section class="running-activity-section" aria-labelledby="running-activity-heading">
     <header class="running-section-heading editorial-section-heading">
-      <p>Activity archive</p>
-      <h2 id="running-activity-heading">Running Activity ({{if or (eq .SelectedYear "") (eq .SelectedYear "all")}}All time{{else if eq .SelectedYear "365"}}Last 365 Days{{else}}{{.SelectedYear}}{{end}})</h2>
+      <p>{{t "Activity archive"}}</p>
+      <h2 id="running-activity-heading">{{t "Running Activity"}} ({{if or (eq .SelectedYear "") (eq .SelectedYear "all")}}{{t "All time"}}{{else if eq .SelectedYear "365"}}{{t "Last 365 Days"}}{{else}}{{.SelectedYear}}{{end}})</h2>
     </header>
 
     {{with .ContributionGraph2D}}
       {{if .MonthLabels}}
       <div class="running-view-controls">
         <div class="running-select-group">
-          <label for="year-select">View</label>
+          <label for="year-select">{{t "View"}}</label>
           <div class="running-select-field">
             <select id="year-select">
-              <option value="all" {{if or (eq $.SelectedYear "") (eq $.SelectedYear "all")}}selected{{end}}>All time</option>
-              <option value="365" {{if eq $.SelectedYear "365"}}selected{{end}}>Last 365 Days</option>
+              <option value="all" {{if or (eq $.SelectedYear "") (eq $.SelectedYear "all")}}selected{{end}}>{{t "All time"}}</option>
+              <option value="365" {{if eq $.SelectedYear "365"}}selected{{end}}>{{t "Last 365 Days"}}</option>
               {{range $year := $.Years}}
                 <option value="{{$year}}" {{if eq $.SelectedYear (printf "%d" $year)}}selected{{end}}>{{$year}}</option>
               {{end}}
@@ -38,13 +38,13 @@
 
       <div class="contribution-graph-section running-panel running-calendar-panel">
         <div class="running-panel-heading">
-          <p>Daily activity</p>
-          <h3>Calendar</h3>
+          <p>{{t "Daily activity"}}</p>
+          <h3>{{t "Calendar"}}</h3>
         </div>
         <div class="contribution-graph-outer">
           <div class="contribution-graph-main">
             <div class="contribution-canvas-wrap">
-              <canvas id="contribution-graph" aria-label="Running activity calendar. Hover a day for its activity count; click a day to view activities."></canvas>
+              <canvas id="contribution-graph" aria-label="{{t "Running activity calendar. Hover a day for its activity count; click a day to view activities."}}"></canvas>
               <div id="contribution-tooltip" class="contribution-tooltip" role="tooltip" hidden></div>
             </div>
           </div>
@@ -52,18 +52,18 @@
         <div class="contribution-legend">
           <div class="legend-container">
             <div class="legend-items">
-              <span>Less</span>
+              <span>{{t "Less"}}</span>
               <span class="legend-item level-0"></span>
               <span class="legend-item level-1"></span>
               <span class="legend-item level-2"></span>
               <span class="legend-item level-3"></span>
               <span class="legend-item level-4"></span>
-              <span class="legend-item level-5" title="Outlier (90th+ percentile)"></span>
-              <span class="legend-item level-6" title="Ultra-distance (50+ miles)"></span>
-              <span>More</span>
+              <span class="legend-item level-5" title="{{t "Outlier (90th+ percentile)"}}"></span>
+              <span class="legend-item level-6" title="{{t "Ultra-distance (50+ miles)"}}"></span>
+              <span>{{t "More"}}</span>
             </div>
             <div class="last-updated">
-              Activity data last updated: <span id="last-updated-date">{{$.LastUpdatedDate}}</span>
+              {{t "Activity data last updated:"}} <span id="last-updated-date">{{t (formatDate $.LastUpdatedDate)}}</span>
             </div>
           </div>
         </div>
@@ -75,10 +75,10 @@
     <div class="contribution-graph-section running-panel running-activity-panel">
       <div class="activity-breakdown-chart-container">
         <div class="activity-breakdown-header">
-          <h3>Activity Types ({{if or (eq .SelectedYear "") (eq .SelectedYear "all")}}All time{{else if eq .SelectedYear "365"}}Last 365 Days{{else}}{{.SelectedYear}}{{end}})</h3>
+          <h3>{{t "Activity Types"}} ({{if or (eq .SelectedYear "") (eq .SelectedYear "all")}}{{t "All time"}}{{else if eq .SelectedYear "365"}}{{t "Last 365 Days"}}{{else}}{{.SelectedYear}}{{end}})</h3>
           <div class="activity-tip" aria-hidden="true">
-            <span class="activity-tip-icon" title="Tip">💡</span>
-            <span class="activity-tip-text">Click a color dot or bar segment to highlight days of that activity on the calendar</span>
+            <span class="activity-tip-icon" title="{{t "Tip"}}">💡</span>
+            <span class="activity-tip-text">{{t "Click a color dot or bar segment to highlight days of that activity on the calendar"}}</span>
           </div>
         </div>
         <div class="activity-breakdown-chart">
@@ -87,18 +87,18 @@
               <div class="activity-segment activity-type-{{$i}}" 
                    data-activity-type="{{$breakdown.Type}}" 
                    style="width: {{printf "%.1f" $breakdown.Percentage}}%;" 
-                   title="{{formatActivityType $breakdown.Type}}: {{$breakdown.Count}} activities ({{printf "%.1f" $breakdown.Percentage}}%)"
-                   role="button" tabindex="0" aria-label="Highlight {{formatActivityType $breakdown.Type}} days on the calendar">
+                   title="{{t "%s: %d activities (%s%%)" (t (formatActivityType $breakdown.Type)) $breakdown.Count (printf "%.1f" $breakdown.Percentage)}}"
+                   role="button" tabindex="0" aria-label="{{t "Highlight %s days on the calendar" (t (formatActivityType $breakdown.Type))}}">
               </div>
             {{end}}
           </div>
           <div class="activity-legend">
             {{range $i, $breakdown := .ActivityTypeBreakdown}}
-              <div class="activity-legend-item" data-activity-type="{{$breakdown.Type}}" role="button" tabindex="0" aria-pressed="false" aria-label="Toggle {{formatActivityType $breakdown.Type}} filter for the calendar and totals">
+              <div class="activity-legend-item" data-activity-type="{{$breakdown.Type}}" role="button" tabindex="0" aria-pressed="false" aria-label="{{t "Toggle %s filter for the calendar and totals" (t (formatActivityType $breakdown.Type))}}">
                 <span class="activity-color activity-type-{{$i}}" 
                       data-activity-type="{{$breakdown.Type}}" 
-                      title="{{$breakdown.Count}} {{formatActivityType $breakdown.Type}} {{if eq $breakdown.Count 1}}activity{{else}}activities{{end}} (click to highlight)"></span>
-                <span class="activity-name">{{formatActivityType $breakdown.Type}}</span>
+                      title="{{$breakdown.Count}} {{t (formatActivityType $breakdown.Type)}} {{if eq $breakdown.Count 1}}{{t "activity"}}{{else}}{{t "activities"}}{{end}} ({{t "click to highlight"}})"></span>
+                <span class="activity-name">{{t (formatActivityType $breakdown.Type)}}</span>
                 <span class="activity-percentage">{{printf "%.1f" $breakdown.Percentage}}%</span>
               </div>
             {{end}}
@@ -537,12 +537,12 @@
     <div id="runs-modal" class="modal">
       <div class="modal-content">
         <div class="modal-header">
-          <button class="nav-btn prev-day" id="prev-day-btn" title="Previous day (Left arrow)">
+          <button class="nav-btn prev-day" id="prev-day-btn" title="{{t "Previous day (Left arrow)"}}">
             <span>←</span>
           </button>
           <h3 id="modal-date"></h3>
           <div class="header-right">
-            <button class="nav-btn next-day" id="next-day-btn" title="Next day (Right arrow)">
+            <button class="nav-btn next-day" id="next-day-btn" title="{{t "Next day (Right arrow)"}}">
               <span>→</span>
             </button>
             <span class="close" onclick="closeModal()">&times;</span>
@@ -557,15 +557,15 @@
     {{/* Display totals using Strava data */}}
     <div class="totals-section running-panel">
       <h3 class="totals-heading">
-        Totals ({{if or (eq .SelectedYear "") (eq .SelectedYear "all")}}All time{{else if eq .SelectedYear "365"}}Last 365 Days{{else}}{{.SelectedYear}}{{end}})
+        {{t "Totals"}} ({{if or (eq .SelectedYear "") (eq .SelectedYear "all")}}{{t "All time"}}{{else if eq .SelectedYear "365"}}{{t "Last 365 Days"}}{{else}}{{.SelectedYear}}{{end}})
       </h3>
       <div class="totals-grid">
         <div class="total-item">
-          <span class="total-label">Activities:</span>
+          <span class="total-label">{{t "Activities:"}}</span>
           <span class="total-value" id="total-activities-value">{{commai .StravaRunTotals.TotalRuns}}</span>
         </div>
         <div class="total-item">
-          <span class="total-label">Time:</span>
+          <span class="total-label">{{t "Time:"}}</span>
           <span class="total-value" id="total-time-value">
             {{if gt .StravaRunTotals.TotalTimeDays 0}}
               {{.StravaRunTotals.TotalTimeDays}}d {{.StravaRunTotals.TotalTimeHours}}h {{.StravaRunTotals.TotalTimeMinutes}}m
@@ -577,23 +577,23 @@
           </span>
         </div>
         <div class="total-item">
-          <span class="total-label">Distance:</span>
+          <span class="total-label">{{t "Distance:"}}</span>
           <span class="total-value" id="total-distance-value">{{commaf .StravaRunTotals.TotalDistanceKm 1}}km</span>
         </div>
         <div class="total-item">
-          <span class="total-label">Elevation:</span>
+          <span class="total-label">{{t "Elevation:"}}</span>
           <span class="total-value" id="total-elevation-value">{{commai .StravaRunTotals.TotalElevationM}}m</span>
         </div>
         <div class="total-item total-item-link">
-          <a href="/pictures?tag=running" aria-label="View Running Pictures Gallery" title="View Running Pictures Gallery">
+          <a href="/pictures?tag=running" aria-label="{{t "View Running Pictures Gallery"}}" title="{{t "View Running Pictures Gallery"}}">
             <i class="fas fa-images" aria-hidden="true"></i>
-            <span>Running photos</span>
+            <span>{{t "Running photos"}}</span>
           </a>
         </div>
       </div>
       <div class="totals-filter-note" id="totals-filter-note" style="display:none;">
-        <span id="totals-filter-text">Showing totals filtered by selected activity types</span>
-        <button type="button" id="clear-run-filters" class="clear-run-filters">Clear filters</button>
+        <span id="totals-filter-text">{{t "Showing totals filtered by selected activity types"}}</span>
+        <button type="button" id="clear-run-filters" class="clear-run-filters">{{t "Clear filters"}}</button>
       </div>
     </div>
 
@@ -601,15 +601,15 @@
 
   <section class="running-runs-section" aria-labelledby="memorable-runs-heading">
     <header class="running-section-heading editorial-section-heading">
-      <p>Archive</p>
-      <h2 id="memorable-runs-heading">Memorable Runs</h2>
+      <p>{{t "Archive"}}</p>
+      <h2 id="memorable-runs-heading">{{t "Memorable Runs"}}</h2>
     </header>
 
     <div class="running-search-group">
-      <label for="search-runs">Search memorable runs</label>
+      <label for="search-runs">{{t "Search memorable runs"}}</label>
       <div class="running-search-field">
         <i class="fas fa-search" aria-hidden="true"></i>
-        <input type="search" id="search-runs" placeholder="Search memorable runs..." autocomplete="off">
+        <input type="search" id="search-runs" placeholder="{{t "Search memorable runs..."}}" autocomplete="off">
       </div>
     </div>
 
@@ -630,7 +630,7 @@
 
           <div class="run-stats">
           {{if .Time}}
-            <div class="run-time"><strong>Time:</strong> {{.Time}}</div>
+            <div class="run-time"><strong>{{t "Time:"}}</strong> {{.Time}}</div>
           {{end}}
 
           {{if .Distance}}
@@ -640,12 +640,12 @@
               {{if gt (len $parts) 0}}
                 {{$miles := atof (index $parts 0)}}
                 {{$km := mulFloat $miles 1.60934}}
-                <div class="run-distance"><strong>Distance:</strong> {{printf "%.1f" $km}}km ({{.Distance}})</div>
+                <div class="run-distance"><strong>{{t "Distance:"}}</strong> {{printf "%.1f" $km}}km ({{.Distance}})</div>
               {{else}}
-                <div class="run-distance"><strong>Distance:</strong> {{.Distance}}</div>
+                <div class="run-distance"><strong>{{t "Distance:"}}</strong> {{.Distance}}</div>
               {{end}}
             {{else}}
-              <div class="run-distance"><strong>Distance:</strong> {{.Distance}}</div>
+              <div class="run-distance"><strong>{{t "Distance:"}}</strong> {{.Distance}}</div>
             {{end}}
           {{end}}
 
@@ -656,12 +656,12 @@
               {{if gt (len $parts) 0}}
                 {{$feet := replace (index $parts 0) "," ""}}
                 {{$meters := mulFloat (atof $feet) 0.3048}}
-                <div class="run-elevation"><strong>Elevation:</strong> {{printf "%.0f" $meters}}m ({{.Elevation}})</div>
+                <div class="run-elevation"><strong>{{t "Elevation:"}}</strong> {{printf "%.0f" $meters}}m ({{.Elevation}})</div>
               {{else}}
-                <div class="run-elevation"><strong>Elevation:</strong> {{.Elevation}}</div>
+                <div class="run-elevation"><strong>{{t "Elevation:"}}</strong> {{.Elevation}}</div>
               {{end}}
             {{else}}
-              <div class="run-elevation"><strong>Elevation:</strong> {{.Elevation}}</div>
+              <div class="run-elevation"><strong>{{t "Elevation:"}}</strong> {{.Elevation}}</div>
             {{end}}
           {{end}}
           </div>
@@ -671,13 +671,13 @@
           {{end}}
 
           {{if or .BlogPostID .StravaURLs}}
-          <footer class="run-links" aria-label="Links for {{.Title}}">
+          <footer class="run-links" aria-label="{{t "Links for %s" .Title}}">
             {{if .BlogPostID}}
-              <a href="/blog/{{.BlogPostID}}" class="blog-link" title="Read blog post">
-                <i class="fas fa-file-alt" aria-hidden="true"></i> Related post
+              <a href="/blog/{{.BlogPostID}}" class="blog-link" title="{{t "Read blog post"}}">
+                <i class="fas fa-file-alt" aria-hidden="true"></i> {{t "Related post"}}
               </a>
-              <a href="/pictures?blog_id={{.BlogPostID}}" class="pictures-link" title="View pictures from this run" aria-label="View pictures from this run">
-                <i class="fas fa-images" aria-hidden="true"></i> Photos
+              <a href="/pictures?blog_id={{.BlogPostID}}" class="pictures-link" title="{{t "View pictures from this run"}}" aria-label="{{t "View pictures from this run"}}">
+                <i class="fas fa-images" aria-hidden="true"></i> {{t "Photos"}}
               </a>
             {{end}}
 
@@ -689,7 +689,7 @@
                   </a>
                 {{end}}
               {{else}}
-                <a href="{{index .StravaURLs 0}}" target="_blank" rel="noopener noreferrer" class="strava-link" title="View on Strava">
+                <a href="{{index .StravaURLs 0}}" target="_blank" rel="noopener noreferrer" class="strava-link" title="{{t "View on Strava"}}">
                   <i class="fab fa-strava" aria-hidden="true"></i> Strava
                 </a>
               {{end}}
@@ -699,13 +699,13 @@
 
           {{if .ImagePath}}
             <div class="run-image">
-              <img src="/static/{{.ImagePath}}" srcset="{{responsiveImageSrcset (printf "/static/%s" .ImagePath)}}" sizes="{{responsiveImageSizes}}" alt="Photo from run: {{.Title}}" loading="lazy" decoding="async">
+              <img src="/static/{{.ImagePath}}" srcset="{{responsiveImageSrcset (printf "/static/%s" .ImagePath)}}" sizes="{{responsiveImageSizes}}" alt="{{t "Photo from run: %s" .Title}}" loading="lazy" decoding="async">
             </div>
           {{else if .ImagePaths}}
             <div class="run-images">
               {{range .ImagePaths}}
                 <div class="run-image">
-                  <img src="/static/{{.}}" srcset="{{responsiveImageSrcset (printf "/static/%s" .)}}" sizes="{{responsiveImageSizes}}" alt="Photo from run: {{$run.Title}}" loading="lazy" decoding="async">
+                  <img src="/static/{{.}}" srcset="{{responsiveImageSrcset (printf "/static/%s" .)}}" sizes="{{responsiveImageSizes}}" alt="{{t "Photo from run: %s" $run.Title}}" loading="lazy" decoding="async">
                 </div>
               {{end}}
             </div>
@@ -714,12 +714,12 @@
       {{end}}
     </div>
 
-    <p class="runs-empty" id="runs-empty" hidden>No memorable runs match that search.</p>
+    <p class="runs-empty" id="runs-empty" hidden>{{t "No memorable runs match that search."}}</p>
   </section>
 
   <footer class="running-local-footer">
-    <span>{{len .Runs}} memorable runs</span>
-    <a href="#running-top">Back to top <span aria-hidden="true">↑</span></a>
+    <span>{{t "%d memorable runs" (len .Runs)}}</span>
+    <a href="#running-top">{{t "Back to top"}} <span aria-hidden="true">↑</span></a>
   </footer>
 </article>
 {{end}}
@@ -731,18 +731,36 @@
 window.runningGraph = {{.GraphJSON}};
 window.stravaActivitiesByDate = {};
 
+var activityTypeLabels = {
+  AlpineSki: window.siteT('Alpine Ski'),
+  Elliptical: window.siteT('Elliptical'),
+  Hike: window.siteT('Hike'),
+  Kayaking: window.siteT('Kayaking'),
+  Ride: window.siteT('Ride'),
+  Rowing: window.siteT('Rowing'),
+  RowingMachine: window.siteT('Rowing Machine'),
+  Run: window.siteT('Run'),
+  StairStepper: window.siteT('Stair Stepper'),
+  StandUpPaddling: window.siteT('Stand Up Paddling'),
+  Walk: window.siteT('Walk'),
+  WaterSport: window.siteT('Water Sport'),
+  WeightTraining: window.siteT('Weight Training'),
+  Workout: window.siteT('Workout')
+};
+
 // Helper function to format activity types
 function formatActivityType(type) {
   if (!type) return '';
+  if (activityTypeLabels[type]) return activityTypeLabels[type];
   // Convert camelCase or PascalCase to spaced words
-  return type.replace(/([a-z])([A-Z])/g, '$1 $2');
+  return window.siteT(type.replace(/([a-z])([A-Z])/g, '$1 $2'));
 }
 
 // Helper function to format dates in a friendly format
 function formatFriendlyDate(dateStr) {
   if (!dateStr) return '';
   const date = new Date(dateStr + 'T00:00:00');
-  return date.toLocaleDateString('en-US', { 
+  return date.toLocaleDateString(window.siteLocale === 'fr' ? 'fr-CA' : 'en-US', {
     year: 'numeric', 
     month: 'long', 
     day: 'numeric' 
@@ -857,7 +875,7 @@ function drawContributionGraph() {
   var lastMonthLabelRight = 0;
   for (var monthCol = 0; monthCol < window.runningGraph.weeks; monthCol++) {
     var monthDate = new Date(dateForCell(monthCol, 0) + 'T00:00:00Z');
-    var month = monthDate.toLocaleString('en-US', { month: 'short', timeZone: 'UTC' });
+    var month = monthDate.toLocaleString(window.siteLocale === 'fr' ? 'fr-CA' : 'en-US', { month: 'short', timeZone: 'UTC' });
     if (monthCol === 0 || month !== previousMonth) {
       var labelText = month + (monthCol === 0 || monthDate.getUTCMonth() === 0 ? "'" + String(monthDate.getUTCFullYear()).slice(-2) : '');
       var labelX = canvasLabelWidth + monthCol * canvasCellSize;
@@ -871,7 +889,7 @@ function drawContributionGraph() {
   ctx.globalAlpha = 1;
   ctx.fillStyle = getComputedStyle(document.documentElement).getPropertyValue('--text-color') || '#273247';
   ctx.globalAlpha = 0.7;
-  ['Mon', 'Wed', 'Fri'].forEach(function(label, index) {
+  [window.siteT('Mon'), window.siteT('Wed'), window.siteT('Fri')].forEach(function(label, index) {
     var row = index * 2;
     ctx.fillText(label, 0, labelHeight + row * canvasCellSize + 12);
   });
@@ -1168,7 +1186,9 @@ function setupContributionGraph() {
       return;
     }
     canvas.style.cursor = 'pointer';
-    tooltip.textContent = day.count + (day.count === 1 ? ' activity on ' : ' activities on ') + formatFriendlyDate(date);
+    tooltip.textContent = day.count === 1
+      ? window.siteFormat('%d activity on %s', day.count, formatFriendlyDate(date))
+      : window.siteFormat('%d activities on %s', day.count, formatFriendlyDate(date));
     tooltip.hidden = false;
     var left = event.offsetX + 12;
     var top = event.offsetY + 12;
@@ -1221,7 +1241,7 @@ async function openModal(date, runs) {
   document.getElementById('modal-date').textContent = formatFriendlyDate(date);
   const modalRuns = document.getElementById('modal-runs');
   if (!runs) {
-    modalRuns.innerHTML = '<div style="padding:1em;">Loading activities…</div>';
+    modalRuns.innerHTML = '<div style="padding:1em;">' + window.siteT('Loading activities…') + '</div>';
     try {
       var response = await fetch('/api/runs-for-date?date=' + encodeURIComponent(date));
       runs = response.ok ? await response.json() : [];
@@ -1231,17 +1251,17 @@ async function openModal(date, runs) {
     }
   }
   if (!runs || runs.length === 0) {
-    modalRuns.innerHTML = '<div style="padding:1em;">No activities for this day.</div>';
+    modalRuns.innerHTML = '<div style="padding:1em;">' + window.siteT('No activities for this day.') + '</div>';
   } else {
     modalRuns.innerHTML = runs.map(run => `
       <div class="modal-run-entry" style="margin-bottom:1em;padding-bottom:0.5em;">
-        <div><strong>Type:</strong> ${formatActivityType(run.type || '')}</div>
-        <div><strong>Title:</strong> ${run.title || ''}</div>
-        ${run.distance_km && run.distance_km > 0 ? `<div><strong>Distance:</strong> ${run.distance_km} km</div>` : ''}
-        <div><strong>Time:</strong> ${run.time || ''}</div>
-        ${run.pace ? `<div><strong>Pace:</strong> ${run.pace}</div>` : ''}
-        ${run.elevation ? `<div><strong>Elevation:</strong> ${run.elevation}</div>` : ''}
-        ${run.activity_id ? `<div><a href="https://www.strava.com/activities/${run.activity_id}" target="_blank" rel="noopener noreferrer">View on Strava</a></div>` : ''}
+        <div><strong>${window.siteT('Type:')}</strong> ${formatActivityType(run.type || '')}</div>
+        <div><strong>${window.siteT('Title:')}</strong> ${run.title || ''}</div>
+        ${run.distance_km && run.distance_km > 0 ? `<div><strong>${window.siteT('Distance:')}</strong> ${run.distance_km} km</div>` : ''}
+        <div><strong>${window.siteT('Time:')}</strong> ${run.time || ''}</div>
+        ${run.pace ? `<div><strong>${window.siteT('Pace:')}</strong> ${run.pace}</div>` : ''}
+        ${run.elevation ? `<div><strong>${window.siteT('Elevation:')}</strong> ${run.elevation}</div>` : ''}
+        ${run.activity_id ? `<div><a href="https://www.strava.com/activities/${run.activity_id}" target="_blank" rel="noopener noreferrer">${window.siteT('View on Strava')}</a></div>` : ''}
       </div>
     `).join('');
   }
@@ -1422,8 +1442,8 @@ function selectedYearValue() {
 
 function viewLabel() {
   var year = selectedYearValue();
-  if (year === 'all' || year === '') return 'all time';
-  if (year === '365') return 'last 365 days';
+  if (year === 'all' || year === '') return window.siteT('all time');
+  if (year === '365') return window.siteT('last 365 days');
   return year;
 }
 
@@ -1443,12 +1463,12 @@ function filterQueryParams() {
 function describeActiveFilters() {
   var parts = [];
   if (activeActivityTypes.size) {
-    parts.push('type ' + Array.from(activeActivityTypes).map(formatActivityType).join(' or '));
+    parts.push(window.siteT('type') + ' ' + Array.from(activeActivityTypes).map(formatActivityType).join(' ' + window.siteT('or') + ' '));
   }
   var ranges = [
-    { min: 'minDistanceKm', max: 'maxDistanceKm', label: 'distance', unit: 'km' },
-    { min: 'minDurationMinutes', max: 'maxDurationMinutes', label: 'duration', unit: 'min' },
-    { min: 'minElevationM', max: 'maxElevationM', label: 'elevation', unit: 'm' }
+    { min: 'minDistanceKm', max: 'maxDistanceKm', label: window.siteT('distance'), unit: 'km' },
+    { min: 'minDurationMinutes', max: 'maxDurationMinutes', label: window.siteT('duration'), unit: 'min' },
+    { min: 'minElevationM', max: 'maxElevationM', label: window.siteT('elevation'), unit: 'm' }
   ];
   ranges.forEach(function(range) {
     var min = activeMetricFilter[range.min];
@@ -1486,8 +1506,9 @@ function updateFilterNote() {
     return;
   }
   var days = matchingDays().length;
-  text.textContent = 'Highlighting ' + days + (days === 1 ? ' day' : ' days') +
-    ' matching ' + describeActiveFilters().join(' + ') + '. Totals cover the highlighted days.';
+  text.textContent = days === 1
+    ? window.siteFormat('Highlighting %d day matching %s. Totals cover the highlighted days.', days, describeActiveFilters().join(' + '))
+    : window.siteFormat('Highlighting %d days matching %s. Totals cover the highlighted days.', days, describeActiveFilters().join(' + '));
   note.style.display = '';
 }
 

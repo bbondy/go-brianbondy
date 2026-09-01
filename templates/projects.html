@@ -2,26 +2,26 @@
 <article class="projects-page editorial-page" id="projects-top">
   <header class="projects-hero editorial-hero">
     <div class="projects-hero-copy">
-      <p class="projects-kicker editorial-kicker">Projects, products, and experiments archive</p>
-      <h1 class="editorial-title">Projects</h1>
-      <p class="projects-intro editorial-intro">A collection of software work spanning browsers, desktop applications, developer tools, libraries, contributions, and smaller experiments.</p>
+      <p class="projects-kicker editorial-kicker">{{t "Projects, products, and experiments archive"}}</p>
+      <h1 class="editorial-title">{{t "Projects"}}</h1>
+      <p class="projects-intro editorial-intro">{{t "A collection of software work spanning browsers, desktop applications, developer tools, libraries, contributions, and smaller experiments."}}</p>
     </div>
   </header>
 
   <section class="projects-controls" aria-labelledby="projects-controls-heading">
     <div class="projects-search-group">
-      <label id="projects-controls-heading" for="search-projects">Search the archive</label>
+      <label id="projects-controls-heading" for="search-projects">{{t "Search the archive"}}</label>
       <div class="projects-search-field">
         <i class="fas fa-search" aria-hidden="true"></i>
-        <input type="search" id="search-projects" placeholder="Project, technology, or keyword" autocomplete="off">
+        <input type="search" id="search-projects" placeholder="{{t "Project, technology, or keyword"}}" autocomplete="off">
       </div>
     </div>
   </section>
 
   <section class="projects-archive" aria-labelledby="projects-archive-heading">
     <header class="projects-section-heading editorial-section-heading">
-      <p>Archive</p>
-      <h2 id="projects-archive-heading">All projects</h2>
+      <p>{{t "Archive"}}</p>
+      <h2 id="projects-archive-heading">{{t "All projects"}}</h2>
     </header>
 
     <div class="projects-grid" id="projects-grid">
@@ -29,9 +29,9 @@
         <article class="projects-card">
           <div class="projects-card-media">
             {{if .Emoji}}
-              <span class="projects-card-emoji" role="img" aria-label="{{.Title}} logo">{{.Emoji}}</span>
+              <span class="projects-card-emoji" role="img" aria-label="{{t "Logo for %s" (t .Title)}}">{{.Emoji}}</span>
             {{else if .Image}}
-              <img src="/{{.Image}}" srcset="{{responsiveImageSrcset (printf "/%s" .Image)}}" sizes="96px" alt="Project image for {{.Title}}" loading="lazy" decoding="async">
+              <img src="/{{.Image}}" srcset="{{responsiveImageSrcset (printf "/%s" .Image)}}" sizes="96px" alt="{{t "Project image for %s" (t .Title)}}" loading="lazy" decoding="async">
             {{else}}
               <span class="projects-card-placeholder" aria-hidden="true"><i class="fas fa-code"></i></span>
             {{end}}
@@ -40,16 +40,16 @@
             <header class="projects-card-header">
             <div class="projects-card-title">
               <h3>
-                {{if .URL}}<a href="{{.URL}}" target="_blank" rel="noopener noreferrer">{{.Title}} <span aria-hidden="true">↗</span></a>{{else}}{{.Title}}{{end}}
+                {{if .URL}}<a href="{{.URL}}" target="_blank" rel="noopener noreferrer">{{t .Title}} <span aria-hidden="true">↗</span></a>{{else}}{{t .Title}}{{end}}
               </h3>
             </div>
             </header>
 
-          <p class="projects-card-description">{{.Description}}</p>
+          <p class="projects-card-description">{{t .Description}}</p>
 
           {{if .GitHubStats}}
             {{if or (gt .GitHubStats.CommitCount 0) (gt .GitHubStats.PrCount 0)}}
-              <div class="projects-contributions" aria-label="GitHub contributions">
+              <div class="projects-contributions" aria-label="{{t "GitHub contributions"}}">
                 {{if gt .GitHubStats.CommitCount 0}}
                   <a href="{{/* Build the GitHub search URL for commits */}}
                     {{ $owner := (index (split (replace (replace .Github "https://github.com/" "") ".git" "") "/") 0) }}
@@ -61,7 +61,7 @@
                     {{else}}
                       {{ printf "%s&type=commits" $base }}
                     {{end}}
-                  " target="_blank" rel="noopener noreferrer"><i class="fas fa-code-branch" aria-hidden="true"></i> {{.GitHubStats.CommitCount}}+ commits</a>
+                  " target="_blank" rel="noopener noreferrer"><i class="fas fa-code-branch" aria-hidden="true"></i> {{t "%d+ commits" .GitHubStats.CommitCount}}</a>
                 {{end}}
                 {{if gt .GitHubStats.PrCount 0}}
                   <a href="{{/* Build the GitHub search URL for PRs */}}
@@ -74,13 +74,13 @@
                     {{else}}
                       {{ printf "%s&type=pullrequests" $base }}
                     {{end}}
-                  " target="_blank" rel="noopener noreferrer"><i class="fas fa-exchange-alt" aria-hidden="true"></i> {{.GitHubStats.PrCount}}+ PRs</a>
+                  " target="_blank" rel="noopener noreferrer"><i class="fas fa-exchange-alt" aria-hidden="true"></i> {{t "%d+ PRs" .GitHubStats.PrCount}}</a>
                 {{end}}
               </div>
             {{end}}
 
             {{if .GitHubStats.Languages}}
-              <div class="projects-languages" aria-label="Repository languages">
+              <div class="projects-languages" aria-label="{{t "Repository languages"}}">
                 {{range .GitHubStats.Languages}}
                   <div class="projects-language">
                     <span class="projects-language-name">{{.Name}}</span>
@@ -95,19 +95,19 @@
           {{end}}
 
           {{if or .Website .Github .BlogPostID}}
-            <footer class="projects-card-links" aria-label="Links for {{.Title}}">
+            <footer class="projects-card-links" aria-label="{{t "Links for %s" (t .Title)}}">
               {{if .Website}}
-                <a href="{{.Website}}" target="_blank" rel="noopener noreferrer"><i class="fas fa-globe" aria-hidden="true"></i> Website</a>
+                <a href="{{.Website}}" target="_blank" rel="noopener noreferrer"><i class="fas fa-globe" aria-hidden="true"></i> {{t "Website"}}</a>
               {{end}}
               {{if .Github}}
-                <a href="{{.Github}}" target="_blank" rel="noopener noreferrer"><i class="fab fa-github" aria-hidden="true"></i> Source</a>
+                <a href="{{.Github}}" target="_blank" rel="noopener noreferrer"><i class="fab fa-github" aria-hidden="true"></i> {{t "Source"}}</a>
               {{end}}
               {{if .BlogPostID}}
                 {{with index $.BlogPostMap .BlogPostID}}
-                  <a href="/blog/{{.Id}}/{{slugifyTitle .Title}}"><i class="fas fa-file-alt" aria-hidden="true"></i> Related post</a>
+                  <a href="{{blogPostURL .}}"><i class="fas fa-file-alt" aria-hidden="true"></i> {{t "Related post"}}</a>
                 {{end}}
                 {{if eq .BlogPostID 174}}
-                  <a href="/pictures?tag=brave"><i class="fas fa-images" aria-hidden="true"></i> Gallery</a>
+                  <a href="/pictures?tag=brave"><i class="fas fa-images" aria-hidden="true"></i> {{t "Gallery"}}</a>
                 {{end}}
               {{end}}
             </footer>
@@ -117,12 +117,12 @@
       {{end}}
     </div>
 
-    <p class="projects-empty" id="projects-empty" hidden>No projects match that search.</p>
+    <p class="projects-empty" id="projects-empty" hidden>{{t "No projects match that search."}}</p>
   </section>
 
   <footer class="projects-local-footer">
-    <span>{{len .Projects}} entries, shown in manifest order</span>
-    <a href="#projects-top">Back to top <span aria-hidden="true">↑</span></a>
+    <span>{{t "%d entries, shown in manifest order" (len .Projects)}}</span>
+    <a href="#projects-top">{{t "Back to top"}} <span aria-hidden="true">↑</span></a>
   </footer>
 </article>
 

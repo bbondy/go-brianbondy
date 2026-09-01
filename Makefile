@@ -1,5 +1,12 @@
 .DEFAULT_GOAL := update
 
+# Every target is a command, not a file. Without this, `make locales` is a no-op
+# because the locales/ directory already exists and looks up to date.
+.PHONY: update memorable-runs cheatsheets locales blog-translations all format \
+	lint test update-cache deploy auth webp webp-force responsive-images \
+	blog-images github-stats pictures-manifest run-km-manifest \
+	strava-run-manifest build dev cache-version strava-clear-token help
+
 update: format lint test update-cache webp github-stats memorable-runs
 
 memorable-runs:
@@ -7,6 +14,12 @@ memorable-runs:
 
 cheatsheets:
 	python3 scripts/generate_cheatsheets.py
+
+locales:
+	python3 scripts/update_locales.py
+
+blog-translations:
+	python3 scripts/translate_blog_posts.py
 
 # Default target - runs all essential tasks
 all: lint format test update-cache webp responsive-images pictures-manifest
@@ -100,9 +113,11 @@ help:
 	@echo "  webp-force   - Force convert all images to WebP"
 	@echo "  responsive-images - Generate 640w, 960w, and 1200w WebP variants"
 	@echo "  blog-images  - Process new blog post images"
+	@echo "  blog-translations - Generate missing French blog sidecars with local Ollama"
 	@echo "  github-stats - Fetch GitHub statistics for projects"
 	@echo "  memorable-runs - Fetch memorable run statistics"
 	@echo "  cheatsheets   - Generate cheatsheets manifest and markdown from GitHub"
+	@echo "  locales       - Extract and deduplicate translatable UI strings"
 	@echo "  strava-clear-token - Delete cached Strava OAuth token (~/.strava_token.json)"
 	@echo "  deploy       - Deploy to Google App Engine"
 	@echo "  cache-version- Show current cache busting version"

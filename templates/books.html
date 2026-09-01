@@ -1,22 +1,22 @@
 {{define "mountPoint"}}
 <article class="collection-page collection-page--books editorial-page" id="books-top">
   <header class="collection-hero editorial-hero">
-    <p class="collection-kicker editorial-kicker">Reading archive</p>
-    <h1 class="editorial-title">Books</h1>
-    <p class="collection-intro editorial-intro">Books I’ve read and thought worth sharing.</p>
+    <p class="collection-kicker editorial-kicker">{{t "Reading archive"}}</p>
+    <h1 class="editorial-title">{{t "Books"}}</h1>
+    <p class="collection-intro editorial-intro">{{t "Books I’ve read and thought worth sharing."}}</p>
   </header>
 
   <section class="collection-section" aria-labelledby="books-heading">
     <header class="collection-section-heading editorial-section-heading">
-      <p>Library</p>
-      <h2 id="books-heading">All books</h2>
+      <p>{{t "Library"}}</p>
+      <h2 id="books-heading">{{t "All books"}}</h2>
     </header>
 
     <div class="collection-search">
-      <label for="search-books">Search the archive</label>
+      <label for="search-books">{{t "Search the archive"}}</label>
       <div class="collection-search-field">
         <i class="fas fa-search" aria-hidden="true"></i>
-        <input type="search" id="search-books" placeholder="Title, author, publisher, or year" autocomplete="off">
+        <input type="search" id="search-books" placeholder="{{t "Title, author, publisher, or year"}}" autocomplete="off">
       </div>
     </div>
 
@@ -27,7 +27,7 @@
           <div class="collection-card-copy">
             <h3><a href="{{.GoodreadsURL}}" target="_blank" rel="noopener noreferrer">{{.Title}}</a></h3>
             <p class="book-author">{{.Author}}</p>
-            <p class="book-meta"><span>{{.Year}}</span><span>{{.Publisher}}</span><span>{{.Pages}} pages</span></p>
+            <p class="book-meta"><span>{{.Year}}</span><span>{{.Publisher}}</span><span>{{t "%d pages" .Pages}}</span></p>
           </div>
           <div class="book-links">
             <a href="{{.GoodreadsURL}}" target="_blank" rel="noopener noreferrer">Goodreads <span aria-hidden="true">↗</span></a>
@@ -36,11 +36,11 @@
         </article>
       {{end}}
     </div>
-    <p class="collection-empty" id="books-empty" hidden>No books match that search.</p>
+    <p class="collection-empty" id="books-empty" hidden>{{t "No books match that search."}}</p>
   </section>
 
   <footer class="collection-local-footer">
-    <a href="#books-top">Back to top <span aria-hidden="true">↑</span></a>
+    <a href="#books-top">{{t "Back to top"}} <span aria-hidden="true">↑</span></a>
   </footer>
 </article>
 

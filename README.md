@@ -41,6 +41,38 @@ The site will be available at `http://localhost:8080`
 make test
 ```
 
+### Localization
+
+English is the default language and French is the only additional supported
+language. Use the `EN`/`FR` control in the top-right corner, or add `?lang=fr`
+to a local URL while testing. A missing translation always falls back to its
+English source string.
+
+UI strings live in `locales/en.json` and `locales/fr.json`. After adding or
+changing translatable template or JavaScript copy, update the deduplicated
+catalogs and then fill any new empty French values:
+
+```bash
+make locales
+```
+
+The English blog workflow is unchanged: write `data/markdown/blog/123.markdown`
+and add its entry to `data/blogPostManifest.json`. An optional French body is
+stored beside it as `data/markdown/blog/123.fr.markdown`; translated titles and
+descriptions live in `data/blogPostTranslations.fr.json`. Missing files, posts,
+or individual metadata fields fall back to English automatically.
+
+A typo fix does not require regenerating a whole post. Edit the relevant line
+in the English file and, when necessary, the same line in its French sidecar.
+Hand-written sidecars are never overwritten by the optional generator unless
+`--force` is explicitly passed. To generate only missing French sidecars with
+a locally installed Ollama model:
+
+```bash
+make blog-translations
+# or: python3 scripts/translate_blog_posts.py --post 190
+```
+
 ### Formatting
 
 ```bash

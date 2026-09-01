@@ -8,6 +8,7 @@ import (
 	"regexp"
 	"sort"
 	"strings"
+	"sync"
 	"time"
 
 	"github.com/bbondy/go-brianbondy/data"
@@ -17,6 +18,7 @@ import (
 )
 
 var markdownMap = make(map[string]string)
+var markdownMapMutex sync.RWMutex
 var blogPostTagMap = make(map[string][]data.BlogPost)
 var blogPostYearMap = make(map[int][]data.BlogPost)
 var blogPosts []data.BlogPost
@@ -86,6 +88,9 @@ func renderMarkdown(content []byte) string {
 }
 
 func initializeBlogPosts() {
+	if err := initializeBlogPostTranslations(); err != nil {
+		panic(err)
+	}
 	blogPostManifest, _ := ioutil.ReadFile("data/blogPostManifest.json")
 	err := json.Unmarshal([]byte(blogPostManifest), &blogPosts)
 	if err != nil {
@@ -237,12 +242,23 @@ func getFilteredPosts(tag string, year int) []data.BlogPost {
 }
 
 func getMarkdownData(slug string) string {
-	_, ok := markdownMap[slug]
-	if !ok {
-		data, _ := ioutil.ReadFile("data/markdown/" + slug)
-		markdownMap[slug] = sanitizeMarkdownHTML(renderMarkdown(data))
+	markdownMapMutex.RLock()
+	content, ok := markdownMap[slug]
+	markdownMapMutex.RUnlock()
+	if ok {
+		return content
 	}
-	return markdownMap[slug]
+
+	markdownData, _ := ioutil.ReadFile("data/markdown/" + slug)
+	content = sanitizeMarkdownHTML(renderMarkdown(markdownData))
+	markdownMapMutex.Lock()
+	if cached, exists := markdownMap[slug]; exists {
+		content = cached
+	} else {
+		markdownMap[slug] = content
+	}
+	markdownMapMutex.Unlock()
+	return content
 }
 
 func derefString(s *string) string {

@@ -409,9 +409,10 @@ func projectsHandler(w http.ResponseWriter, _ *http.Request) {
 	}
 
 	// Build a map of blog post IDs to blog post data for use in the template
+	language := languageFromWriter(w)
 	blogPostMap := make(map[int]data.BlogPost)
 	for _, post := range blogPosts {
-		blogPostMap[post.Id] = post
+		blogPostMap[post.Id] = localizedBlogPost(post, language)
 	}
 
 	p := &data.ProjectsPage{
@@ -842,33 +843,36 @@ func yearRedirectHandler(w http.ResponseWriter, r *http.Request) {
 
 func homePageHandler(w http.ResponseWriter, r *http.Request) {
 	const previewCount = 4
+	language := languageFromWriter(w)
 
 	// Get the most recent posts for preview cards
 	previewPosts := make([]data.BlogPostPreview, 0, previewCount)
 	for i := 0; i < previewCount && i < len(blogPosts); i++ {
-		post := blogPosts[i]
-		parsedDate, _ := time.Parse(layoutISO, post.Created)
+		sourcePost := blogPosts[i]
+		post := localizedBlogPost(sourcePost, language)
+		parsedDate, _ := time.Parse(layoutISO, sourcePost.Created)
 
-		fullContent := getMarkdownData("blog/" + strconv.Itoa(post.Id) + ".markdown")
+		fullContent := getLocalizedMarkdownData("blog/"+strconv.Itoa(sourcePost.Id)+".markdown", language)
 		preview := extractFirstParagraph(fullContent)
 
 		previewPosts = append(previewPosts, data.BlogPostPreview{
 			BlogPost:    post,
 			Preview:     template.HTML(preview),
 			PostDate:    parsedDate.Format(layoutUS),
-			PostUrl:     fmt.Sprintf("/blog/%d/%s", post.Id, slugifyTitle(post.Title)),
-			ReadingTime: post.ReadingTime,
+			PostUrl:     blogPostURL(sourcePost),
+			ReadingTime: calculateReadingTime(fullContent),
 		})
 	}
 
 	// Get all posts for the list
 	allPosts := make([]data.BlogPostPreview, 0, len(blogPosts))
-	for _, post := range blogPosts {
-		parsedDate, _ := time.Parse(layoutISO, post.Created)
+	for _, sourcePost := range blogPosts {
+		post := localizedBlogPost(sourcePost, language)
+		parsedDate, _ := time.Parse(layoutISO, sourcePost.Created)
 		allPosts = append(allPosts, data.BlogPostPreview{
 			BlogPost:    post,
 			PostDate:    parsedDate.Format(layoutUS),
-			PostUrl:     fmt.Sprintf("/blog/%d/%s", post.Id, slugifyTitle(post.Title)),
+			PostUrl:     blogPostURL(sourcePost),
 			ReadingTime: post.ReadingTime,
 		})
 	}
@@ -889,6 +893,7 @@ func homePageHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 func allPostsHandler(w http.ResponseWriter, r *http.Request) {
+	language := languageFromWriter(w)
 	// Get tag and year from query parameters
 	tag := r.URL.Query().Get("tag")
 	year := 0
@@ -904,12 +909,13 @@ func allPostsHandler(w http.ResponseWriter, r *http.Request) {
 	filteredPosts := getFilteredPosts(tag, year)
 
 	allPosts := make([]data.BlogPostPreview, 0, len(filteredPosts))
-	for _, post := range filteredPosts {
-		parsedDate, _ := time.Parse(layoutISO, post.Created)
+	for _, sourcePost := range filteredPosts {
+		post := localizedBlogPost(sourcePost, language)
+		parsedDate, _ := time.Parse(layoutISO, sourcePost.Created)
 		allPosts = append(allPosts, data.BlogPostPreview{
 			BlogPost:    post,
 			PostDate:    parsedDate.Format(layoutUS),
-			PostUrl:     fmt.Sprintf("/blog/%d/%s", post.Id, slugifyTitle(post.Title)),
+			PostUrl:     blogPostURL(sourcePost),
 			ReadingTime: post.ReadingTime,
 		})
 	}
@@ -957,6 +963,7 @@ func allPostsHandler(w http.ResponseWriter, r *http.Request) {
 // Keeps it simple with 1 blog post per page
 func blogPostPageHandler(w http.ResponseWriter, r *http.Request) {
 	vars := mux.Vars(r)
+	language := languageFromWriter(w)
 
 	// Get tag and year from either URL vars or query parameters
 	tag := vars["tag"]
@@ -988,7 +995,7 @@ func blogPostPageHandler(w http.ResponseWriter, r *http.Request) {
 		if !parseOk {
 			return
 		}
-		if foundPost, ok := blogPostIdMap[id]; ok {
+		if sourcePost, ok := blogPostIdMap[id]; ok {
 			// Get the filtered posts based on tag/year
 			filteredPosts := getFilteredPosts(tag, year)
 
@@ -1008,21 +1015,25 @@ func blogPostPageHandler(w http.ResponseWriter, r *http.Request) {
 				nextPost = &filteredPosts[currentIndex+1]
 			}
 
-			parsedDate, _ := time.Parse(layoutISO, foundPost.Created)
+			foundPost := localizedBlogPost(sourcePost, language)
+			prevPost = localizedBlogPostPointer(prevPost, language)
+			nextPost = localizedBlogPostPointer(nextPost, language)
+			parsedDate, _ := time.Parse(layoutISO, sourcePost.Created)
+			body := getLocalizedMarkdownData("blog/"+strconv.Itoa(sourcePost.Id)+".markdown", language)
 
 			p := &data.BlogPostPage{
 				Title:        GetTitle(foundPost.Title),
 				BlogPost:     foundPost,
-				BlogPostBody: getMarkdownData("blog/" + strconv.Itoa(foundPost.Id) + ".markdown"),
+				BlogPostBody: body,
 				BlogPostDate: parsedDate.Format(layoutUS),
-				ReadingTime:  foundPost.ReadingTime,
+				ReadingTime:  calculateReadingTime(body),
 				NextPost:     nextPost,
 				PrevPost:     prevPost,
 				Tag:          tag,
 				Year:         year,
 				ImagePath:    derefString(foundPost.ImagePath),
 				Description:  derefString(foundPost.Description),
-				ShareUrl:     fmt.Sprintf("/blog/%d/%s", foundPost.Id, slugifyTitle(foundPost.Title)),
+				ShareUrl:     blogPostURL(sourcePost),
 				MarkdownSlug: "blog",
 			}
 			err := executeTemplate(w, "blogPost", p)
@@ -1036,26 +1047,30 @@ func blogPostPageHandler(w http.ResponseWriter, r *http.Request) {
 
 	// Handle root URL or other listing pages
 	if len(filteredBlogPosts) > 0 {
-		post := filteredBlogPosts[0]
-		parsedDate, _ := time.Parse(layoutISO, post.Created)
+		sourcePost := filteredBlogPosts[0]
+		post := localizedBlogPost(sourcePost, language)
+		parsedDate, _ := time.Parse(layoutISO, sourcePost.Created)
 
 		// Set up next post for the first post
 		var nextPost *data.BlogPost
 		if len(filteredBlogPosts) > 1 {
 			nextPost = &filteredBlogPosts[1]
 		}
+		nextPost = localizedBlogPostPointer(nextPost, language)
+		body := getLocalizedMarkdownData("blog/"+strconv.Itoa(sourcePost.Id)+".markdown", language)
 
 		p := &data.BlogPostPage{
 			Title:        GetTitle("Blog posts"),
 			BlogPost:     post,
-			BlogPostBody: getMarkdownData("blog/" + strconv.Itoa(post.Id) + ".markdown"),
+			BlogPostBody: body,
 			BlogPostDate: parsedDate.Format(layoutUS),
-			ReadingTime:  post.ReadingTime,
+			ReadingTime:  calculateReadingTime(body),
 			NextPost:     nextPost,
 			Tag:          tag,
 			Year:         year,
 			ImagePath:    derefString(post.ImagePath),
 			Description:  derefString(post.Description),
+			ShareUrl:     blogPostURL(sourcePost),
 			MarkdownSlug: "blog",
 		}
 		err := executeTemplate(w, "blogPost", p)
@@ -1115,7 +1130,7 @@ func picturesHandler(w http.ResponseWriter, r *http.Request) {
 		if err == nil {
 			filterBlogID = blogIDInt
 			if blogPost, exists := blogPostIdMap[blogIDInt]; exists {
-				blogPostTitle = blogPost.Title
+				blogPostTitle = localizedBlogPost(blogPost, languageFromWriter(w)).Title
 			}
 		}
 	}

@@ -8,7 +8,7 @@ import (
 )
 
 var (
-	compiledTemplates     map[string]*template.Template
+	compiledTemplates     map[string]map[string]*template.Template
 	compiledTemplatesOnce sync.Once
 	compiledTemplatesErr  error
 )
@@ -37,14 +37,21 @@ var templateFiles = map[string]string{
 // requests. The resulting templates are safe for concurrent execution.
 func initializeTemplates() error {
 	compiledTemplatesOnce.Do(func() {
-		compiledTemplates = make(map[string]*template.Template, len(templateFiles))
-		for name, pageFile := range templateFiles {
-			t, err := template.New("base.html").Funcs(funcMap).ParseFiles("templates/base.html", pageFile)
-			if err != nil {
-				compiledTemplatesErr = fmt.Errorf("parse %s template: %w", name, err)
-				return
+		if err := initializeTranslations(); err != nil {
+			compiledTemplatesErr = err
+			return
+		}
+		compiledTemplates = make(map[string]map[string]*template.Template, len(supportedLanguages))
+		for _, language := range supportedLanguages {
+			compiledTemplates[language] = make(map[string]*template.Template, len(templateFiles))
+			for name, pageFile := range templateFiles {
+				t, err := template.New("base.html").Funcs(localizedFuncMap(language)).ParseFiles("templates/base.html", pageFile)
+				if err != nil {
+					compiledTemplatesErr = fmt.Errorf("parse %s template for %s: %w", name, language, err)
+					return
+				}
+				compiledTemplates[language][name] = t
 			}
-			compiledTemplates[name] = t
 		}
 	})
 	return compiledTemplatesErr
@@ -54,7 +61,8 @@ func executeTemplate(wr templateWriter, name string, data interface{}) error {
 	if err := initializeTemplates(); err != nil {
 		return err
 	}
-	t, ok := compiledTemplates[name]
+	language := languageFromWriter(wr)
+	t, ok := compiledTemplates[language][name]
 	if !ok {
 		return fmt.Errorf("unknown template %q", name)
 	}
