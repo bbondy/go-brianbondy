@@ -50,7 +50,7 @@
     "emoji": "\ud83e\udd16",
     "url": "https://github.com/brave-experiments/brave-dev-bot",
     "github": "https://github.com/brave-experiments/brave-dev-bot",
-    "description": "Autonomous coding agent for Brave projects that reads PRDs, implements user stories, runs tests, creates PRs, handles review feedback, and manages CI in iterative loops.",
+    "description": "Ralph Wiggum loop-inspired coding agent for Brave projects that reads PRDs, implements user stories, runs tests, creates PRs, handles review feedback, and manages CI in iterative loops.",
     "githubStats": {
       "commitCount": 443,
       "prCount": 11

@@ -125,7 +125,7 @@ func CareerProfileData() CareerProfile {
 					{Text: "Led architecture and development of major products and capabilities including Brave Browser, Brave Wallet, and the privacy-preserving Leo AI assistant, while continuing to contribute smaller enhancements and fixes."},
 					{Text: "The platform added Brave Shields, a high-performance ad-blocking engine, privacy-preserving ads and Rewards, Tor windows, WebTorrent, IPFS with an embedded node, and a native multi-chain wallet. These were company and team efforts, not individual projects."},
 					{Text: "Built and mentored engineering teams and managed as many as 60 employees and contractors, roughly one-third of the company. Brave had grown from two people to more than 100 teammates by the 1.0 launch in 2019."},
-					{Text: "Remain hands-on in Brave code and developer tooling, including browser work, the Go component-update service, and Brave Dev Bot, an autonomous agent that implements stories, opens pull requests, responds to review, and manages CI loops."},
+					{Text: "Remain hands-on in Brave code and developer tooling, including browser work, the Go component-update service, and Brave Dev Bot, a Ralph Wiggum loop-inspired coding agent that implements stories, opens pull requests, responds to review, and manages CI loops."},
 				},
 			},
 			{
@@ -275,7 +275,7 @@ func CareerProfileData() CareerProfile {
 			{Name: "Brave Browser", Description: "Privacy-focused browser for Windows, macOS, Linux, Android, and iOS with built-in blocking and privacy protections.", URL: "https://brave.com"},
 			{Name: "Brave Wallet", Description: "Secure, native, multi-chain wallet built directly into Brave rather than delivered as an extension.", URL: "https://brave.com/wallet/"},
 			{Name: "Brave Leo", Description: "AI assistant built into the browser for question answering, summarization, and other workflows with privacy protections.", URL: "https://brave.com/leo/"},
-			{Name: "Brave Dev Bot", Description: "Autonomous coding agent for Brave projects that reads product requirements, implements user stories, runs tests, creates pull requests, handles review feedback, and manages CI in iterative loops.", URL: "https://github.com/brave-experiments/brave-dev-bot"},
+			{Name: "Brave Dev Bot", Description: "Ralph Wiggum loop-inspired coding agent for Brave projects that reads product requirements, implements user stories, runs tests, creates pull requests, handles review feedback, and manages CI in iterative loops.", URL: "https://github.com/brave-experiments/brave-dev-bot"},
 			{Name: "IPFS in Brave", Description: "Deep browser integration of IPFS with CID-aware origin boundaries, public gateway support, an optional managed local node, component updates, and privacy-conscious lifecycle behavior.", URL: "/blog/177/ipfs-support-in-brave"},
 			{Name: "Brave component update service", Description: "Go implementation of a Chromium-compatible component update server, built by observing Chromium's extension/component update protocol and flow.", URL: "https://github.com/brave/go-update"},
 			{Name: "Code Firefox", Description: "A self-funded platform of short videos and exercises that explained how to become a Mozilla contributor. It received more than 100,000 unique visits and 30,000 full video views and helped hundreds of contributors and employees ramp up.", URL: "/blog/173/shutting-down-code-firefox"},
