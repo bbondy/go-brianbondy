@@ -39,7 +39,7 @@
         {{if .ShowOnResume}}
           <article class="resume-role {{if eq .Company "Brave Software"}}resume-role-featured{{end}}">
             <aside class="resume-role-meta">
-              <span>{{.Dates}}</span>
+              <span>{{t .Dates}}</span>
               <span>{{t .Location}}</span>
             </aside>
             <div class="resume-role-body">
@@ -84,7 +84,7 @@
       <div>
         <h3>{{.Profile.Education.School}}</h3>
         <p>{{t .Profile.Education.Degree}}</p>
-        <p class="career-muted">{{.Profile.Education.Dates}} · {{t .Profile.Education.Location}}</p>
+        <p class="career-muted">{{t .Profile.Education.Dates}} · {{t .Profile.Education.Location}}</p>
       </div>
       <div>
         <h3>{{t "Outside work"}}</h3>

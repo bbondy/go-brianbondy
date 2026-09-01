@@ -21,7 +21,9 @@ CAREER_SOURCE = ROOT / "data" / "career.go"
 PROJECT_SOURCE = ROOT / "data" / "projectManifest.json"
 
 # Only prose is translatable. Proper nouns (a person, company, school, or
-# product name), dates, URLs, and counts deliberately stay out of the catalog.
+# product name), URLs, and counts deliberately stay out of the catalog. Date
+# ranges are included because they spell out month names, which have to read in
+# the reader's language on the resume and career pages.
 CAREER_TEXT_FIELDS = {
     ("CareerProfile", "Headline"),
     ("CareerProfile", "ExecutiveSummary"),
@@ -29,6 +31,7 @@ CAREER_TEXT_FIELDS = {
     ("CareerScaleProof", "SourceLabel"),
     ("CareerRole", "Title"),
     ("CareerRole", "Location"),
+    ("CareerRole", "Dates"),
     ("CareerRole", "Summary"),
     ("CareerHighlight", "Text"),
     ("CareerHighlight", "SourceLabel"),
@@ -41,6 +44,7 @@ CAREER_TEXT_FIELDS = {
     ("CareerProject", "Description"),
     ("CareerEducation", "Degree"),
     ("CareerEducation", "Location"),
+    ("CareerEducation", "Dates"),
     ("CareerEducation", "Coursework"),
     ("CareerEducation", "Development"),
 }

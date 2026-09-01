@@ -45,7 +45,7 @@
               <strong>{{.Company}}</strong>
               <span>{{t .Title}}</span>
             </span>
-            <span class="archive-role-dates">{{.Dates}}</span>
+            <span class="archive-role-dates">{{t .Dates}}</span>
           </summary>
           <div class="archive-role-content">
             <p class="archive-role-location">{{t .Location}}{{if .CompanyURL}} · <a href="{{.CompanyURL}}">{{t "Company site"}} <span aria-hidden="true">↗</span></a>{{end}}</p>
@@ -121,7 +121,7 @@
     <div class="archive-education">
       <h3>{{.Profile.Education.School}}</h3>
       <p><strong>{{t .Profile.Education.Degree}}</strong></p>
-      <p class="career-muted">{{.Profile.Education.Dates}} · {{t .Profile.Education.Location}}</p>
+      <p class="career-muted">{{t .Profile.Education.Dates}} · {{t .Profile.Education.Location}}</p>
       <p><strong>{{t "Coursework:"}}</strong> {{t .Profile.Education.Coursework}}</p>
       <p>{{t .Profile.Education.Development}}</p>
     </div>
