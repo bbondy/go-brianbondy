@@ -984,7 +984,7 @@ a {
   aspect-ratio: 204 / 212;
 }
 .topBar.scrolled img {
-  transform: none;
+  transform: rotate(180deg);
 }
 .topBar a {
   outline: none;
