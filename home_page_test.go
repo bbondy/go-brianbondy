@@ -53,6 +53,7 @@ func TestHomePageUsesEditorialLayout(t *testing.T) {
 	assert.Contains(t, content, `href="/static/css/home.css?v=1"`)
 	assert.Contains(t, content, `href="/running"`)
 	assert.Contains(t, content, `href="/projects"`)
+	assert.Contains(t, content, `href="/resume">Work & Career</a>`)
 	assert.Contains(t, content, `href="/all"`)
 	assert.Contains(t, content, `href="/blog/filters"`)
 	assert.Contains(t, content, `content="Brian Bondy's writing about software, running, work, and life."`)
