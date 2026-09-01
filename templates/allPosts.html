@@ -1,67 +1,111 @@
 {{define "mountPoint"}}
-  <h1>
-    {{if and .Tag .Year}}
-      Blog Posts from {{.Year}} Tagged with "{{.Tag}}"
-    {{else if .Tag}}
-      Blog Posts Tagged with "{{.Tag}}"
-    {{else if .Year}}
-      Blog Posts from {{.Year}}
-    {{else}}
-      All Blog Posts
-    {{end}}
-  </h1>
-  <div class="filters-link-container">
-    <a href="/blog/filters" class="advanced-filters-link">
-      <i class="fas fa-tags"></i> Navigate by tags
-    </a>
-  </div>
-  <div style="margin: 24px 0 12px 0;">
-    <input type="text" id="search-posts" placeholder="Search blog posts..." style="width:100%;max-width:400px;padding:10px 14px;font-size:1em;border-radius:8px;border:1px solid #e2e8f0;outline:none;">
-  </div>
-  <div class="postList" id="post-list">
-    {{range .Posts}}
-      <div class="postListItem">
-        <span class="postDate">{{.PostDate}}</span>
-        <div class="postInfo">
-          <a href="{{.PostUrl}}" class="postTitle">{{.BlogPost.Title}}</a>
-          <div class="reading-time">{{.ReadingTime}} min read</div>
-          <div class="post-meta">
-            <a href="{{.PostUrl}}" class="action-link blog-link" title="Read blog post" aria-label="Read blog post">
-              <i class="fas fa-blog"></i>
-            </a>
-            <a href="/pictures?blog_id={{.BlogPost.Id}}" class="action-link pictures-link" title="View pictures from this blog post" aria-label="View pictures from this blog post">
-              <i class="fas fa-images"></i>
-            </a>
-            {{if .BlogPost.Tags}}
-              <span class="postTags">
-                {{range $index, $tag := .BlogPost.Tags}}<a href="{{tagUrl .}}" class="tag">{{.}}</a>{{end}}
-              </span>
-            {{end}}
-          </div>
+<article class="all-posts-page editorial-page" id="all-posts-top">
+  <header class="all-posts-hero editorial-hero">
+    <div class="all-posts-hero-copy">
+      <p class="all-posts-kicker editorial-kicker">Writing archive</p>
+      <h1 class="editorial-title">
+        {{if and .Tag .Year}}
+          Blog Posts from {{.Year}} Tagged with “{{.Tag}}”
+        {{else if .Tag}}
+          Blog Posts Tagged with “{{.Tag}}”
+        {{else if .Year}}
+          Blog Posts from {{.Year}}
+        {{else}}
+          All Blog Posts
+        {{end}}
+      </h1>
+      <p class="all-posts-intro editorial-intro">Writing about software, privacy, running, business, family, and other things I wanted to remember or share.</p>
+    </div>
+  </header>
+
+  <section class="all-posts-controls" aria-labelledby="all-posts-controls-heading">
+    <div class="all-posts-controls-row">
+      <div class="all-posts-search-group">
+        <label id="all-posts-controls-heading" for="search-posts">Search the archive</label>
+        <div class="all-posts-search-field">
+          <i class="fas fa-search" aria-hidden="true"></i>
+          <input type="search" id="search-posts" placeholder="Title, date, or tag" autocomplete="off">
         </div>
       </div>
+      <a href="/blog/filters" class="all-posts-filter-link">
+        <i class="fas fa-tags" aria-hidden="true"></i> Navigate by tags
+      </a>
+    </div>
+
+    {{if or .Tag .Year}}
+      <div class="all-posts-active-filters" aria-label="Active blog filters">
+        <span class="all-posts-filter-label">Filtered by</span>
+        {{if .Tag}}<span class="all-posts-filter-chip"><i class="fas fa-tag" aria-hidden="true"></i> {{.Tag}}</span>{{end}}
+        {{if .Year}}<span class="all-posts-filter-chip"><i class="fas fa-calendar-alt" aria-hidden="true"></i> {{.Year}}</span>{{end}}
+        <a href="/all">Clear filters</a>
+      </div>
     {{end}}
-  </div>
-  <script>
-    // Client-side search for blog posts
-    document.addEventListener('DOMContentLoaded', function() {
-      const searchInput = document.getElementById('search-posts');
-      const postList = document.getElementById('post-list');
-      if (!searchInput || !postList) return;
-      searchInput.addEventListener('input', function() {
-        const query = searchInput.value.trim().toLowerCase();
-        const items = postList.querySelectorAll('.postListItem');
-        items.forEach(function(item) {
-          const title = item.querySelector('.postTitle').textContent.toLowerCase();
-          const date = item.querySelector('.postDate').textContent.toLowerCase();
-          const tags = Array.from(item.querySelectorAll('.postTags .tag')).map(t => t.textContent.toLowerCase()).join(' ');
-          if (title.includes(query) || date.includes(query) || tags.includes(query)) {
-            item.style.display = '';
-          } else {
-            item.style.display = 'none';
-          }
-        });
+  </section>
+
+  <section class="all-posts-archive" aria-labelledby="all-posts-archive-heading">
+    <header class="all-posts-section-heading editorial-section-heading">
+      <p>Archive</p>
+      <h2 id="all-posts-archive-heading">{{len .Posts}} {{if eq (len .Posts) 1}}post{{else}}posts{{end}}</h2>
+    </header>
+
+    <div class="all-posts-list" id="post-list">
+      {{range .Posts}}
+        <article class="all-posts-card">
+          <time class="all-posts-date postDate" datetime="{{.BlogPost.Created}}">{{.PostDate}}</time>
+          <div class="all-posts-card-body">
+            <header class="all-posts-card-header">
+              <h3><a href="{{.PostUrl}}" class="postTitle">{{.BlogPost.Title}} <span aria-hidden="true">→</span></a></h3>
+              <span class="reading-time">{{.ReadingTime}} min read</span>
+            </header>
+
+            <footer class="all-posts-card-footer">
+              <nav class="all-posts-card-links" aria-label="Links for {{.BlogPost.Title}}">
+                <a href="{{.PostUrl}}"><i class="fas fa-file-alt" aria-hidden="true"></i> Read post</a>
+                <a href="/pictures?blog_id={{.BlogPost.Id}}"><i class="fas fa-images" aria-hidden="true"></i> Photos</a>
+              </nav>
+              {{if .BlogPost.Tags}}
+                <div class="postTags" aria-label="Tags for {{.BlogPost.Title}}">
+                  {{range .BlogPost.Tags}}<a href="{{tagUrl .}}" class="tag">{{.}}</a>{{end}}
+                </div>
+              {{end}}
+            </footer>
+          </div>
+        </article>
+      {{end}}
+    </div>
+
+    <p class="all-posts-empty" id="all-posts-empty" {{if .Posts}}hidden{{end}}>No blog posts match the current filters or search.</p>
+  </section>
+
+  <footer class="all-posts-local-footer">
+    <span>{{len .Posts}} archive {{if eq (len .Posts) 1}}entry{{else}}entries{{end}}</span>
+    <a href="#all-posts-top">Back to top <span aria-hidden="true">↑</span></a>
+  </footer>
+</article>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const searchInput = document.getElementById('search-posts');
+    const postList = document.getElementById('post-list');
+    const emptyState = document.getElementById('all-posts-empty');
+    if (!searchInput || !postList || !emptyState) return;
+
+    const items = Array.from(postList.querySelectorAll('.all-posts-card'));
+    function applyPostSearch() {
+      const query = searchInput.value.trim().toLowerCase();
+      let shown = 0;
+
+      items.forEach(function(item) {
+        const isVisible = !query || item.textContent.toLowerCase().includes(query);
+        item.hidden = !isVisible;
+        if (isVisible) shown += 1;
       });
-    });
-  </script>
-{{end}} 
+
+      emptyState.hidden = shown !== 0;
+    }
+
+    searchInput.addEventListener('input', applyPostSearch);
+    searchInput.addEventListener('search', applyPostSearch);
+  });
+</script>
+{{end}}

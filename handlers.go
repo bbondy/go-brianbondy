@@ -914,10 +914,24 @@ func allPostsHandler(w http.ResponseWriter, r *http.Request) {
 
 	p := &data.AllPostsPage{
 		Title:        GetTitle(title),
+		Description:  "Brian Bondy's complete blog archive, with writing about software, privacy, running, business, and life.",
 		Posts:        allPosts,
 		MarkdownSlug: "all",
-		Tag:          tag,
-		Year:         year,
+		ShareUrl: func() string {
+			values := url.Values{}
+			if tag != "" {
+				values.Set("tag", tag)
+			}
+			if year != 0 {
+				values.Set("year", strconv.Itoa(year))
+			}
+			if encoded := values.Encode(); encoded != "" {
+				return "/all?" + encoded
+			}
+			return "/all"
+		}(),
+		Tag:  tag,
+		Year: year,
 	}
 
 	err := executeTemplate(w, "allPosts", p)

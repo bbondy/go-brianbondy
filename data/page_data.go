@@ -112,8 +112,10 @@ type HomePage struct {
 
 type AllPostsPage struct {
 	Title        string
+	Description  string
 	Posts        []BlogPostPreview
 	MarkdownSlug string
+	ShareUrl     string
 	Tag          string
 	Year         int
 }
