@@ -664,12 +664,15 @@ func filtersPageHandler(w http.ResponseWriter, r *http.Request) {
 
 	p := &data.FiltersPage{
 		Title:        GetTitle("Filters"),
-		Content:      "Test content - filters",
+		Description:  "Browse Brian Bondy's complete blog archive by year and topic.",
 		TagCountMap:  tagCountMap,
 		SortedTags:   sortedTags,
 		TagGroups:    buildTagGroups(tagCountMap),
 		MarkdownSlug: "filters",
 		Years:        year_range,
+		PostCount:    len(blogPosts),
+		TagCount:     len(tagCountMap),
+		ShareUrl:     "/blog/filters",
 	}
 	err := executeTemplate(w, "filters", p)
 	if err != nil {

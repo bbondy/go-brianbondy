@@ -1,21 +1,97 @@
 {{define "mountPoint"}}
-  <div class="filtersContainer">
-    <h1>Blog posts by year</h1>
-    <div class="tagContainer years">
+<article class="filters-page editorial-page" id="filters-top">
+  <header class="filters-hero editorial-hero">
+    <div class="filters-hero-copy">
+      <p class="filters-kicker editorial-kicker">Blog navigation</p>
+      <h1 class="editorial-title">Browse the archive</h1>
+      <p class="filters-intro editorial-intro">{{.PostCount}} posts organized by year and across {{.TagCount}} topics.</p>
+    </div>
+  </header>
+
+  <section class="filters-years" aria-labelledby="filters-years-heading">
+    <header class="filters-section-heading editorial-section-heading">
+      <p>Timeline</p>
+      <h2 id="filters-years-heading">Posts by year</h2>
+    </header>
+    <div class="filters-year-grid">
       {{range .Years}}
         {{if gt (getYearCount .) 0}}
-        <div><a href="{{yearUrl .}}" class="yearTag">{{.}}</a> x {{getYearCount .}}</div>
+          <a href="{{yearUrl .}}" class="filters-year-card">
+            <span class="filters-year">{{.}}</span>
+            <span class="filters-count">{{getYearCount .}} {{if eq (getYearCount .) 1}}post{{else}}posts{{end}}</span>
+            <span class="filters-arrow" aria-hidden="true">→</span>
+          </a>
         {{end}}
       {{end}}
     </div>
-    <h1>Blog posts by tag</h1>
-    {{range .TagGroups}}
-    <h2>{{.Name}}</h2>
-    <div class="tagContainer">
-      {{range .Tags}}
-      <div><a href="{{tagUrl .}}" class="tag">{{.}}</a> x {{getTagCount .}}</div>
+  </section>
+
+  <section class="filters-tags" aria-labelledby="filters-tags-heading">
+    <header class="filters-section-heading editorial-section-heading">
+      <p>Topics</p>
+      <h2 id="filters-tags-heading">Posts by tag</h2>
+    </header>
+
+    <div class="filters-search">
+      <label for="search-tags">Find a tag</label>
+      <div class="filters-search-field">
+        <i class="fas fa-search" aria-hidden="true"></i>
+        <input type="search" id="search-tags" placeholder="Search {{.TagCount}} tags" autocomplete="off">
+      </div>
+    </div>
+
+    <div class="filters-tag-groups" id="tag-groups">
+      {{range .TagGroups}}
+        <section class="filters-tag-group" data-tag-group>
+          <h3>{{.Name}}</h3>
+          <div class="filters-tag-list">
+            {{range .Tags}}
+              <a href="{{tagUrl .}}" class="filters-tag" data-tag="{{.}}">
+                <span>{{.}}</span>
+                <span class="filters-tag-count">{{getTagCount .}}</span>
+              </a>
+            {{end}}
+          </div>
+        </section>
       {{end}}
     </div>
-    {{end}}
-  </div>
+
+    <p class="filters-empty" id="filters-empty" hidden>No tags match that search.</p>
+  </section>
+
+  <footer class="filters-local-footer">
+    <a href="/all">View all blog posts <span aria-hidden="true">→</span></a>
+    <a href="#filters-top">Back to top <span aria-hidden="true">↑</span></a>
+  </footer>
+</article>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const searchInput = document.getElementById('search-tags');
+    const groups = Array.from(document.querySelectorAll('[data-tag-group]'));
+    const emptyState = document.getElementById('filters-empty');
+    if (!searchInput || !groups.length || !emptyState) return;
+
+    function applyTagSearch() {
+      const query = searchInput.value.trim().toLowerCase();
+      let visibleTags = 0;
+
+      groups.forEach(function(group) {
+        let visibleInGroup = 0;
+        group.querySelectorAll('[data-tag]').forEach(function(tag) {
+          const isVisible = !query || tag.dataset.tag.toLowerCase().includes(query);
+          tag.hidden = !isVisible;
+          if (isVisible) visibleInGroup += 1;
+        });
+        group.hidden = visibleInGroup === 0;
+        visibleTags += visibleInGroup;
+      });
+
+      emptyState.hidden = visibleTags !== 0;
+    }
+
+    searchInput.addEventListener('input', applyTagSearch);
+    searchInput.addEventListener('search', applyTagSearch);
+  });
+</script>
 {{end}}

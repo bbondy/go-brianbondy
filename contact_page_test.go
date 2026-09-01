@@ -20,9 +20,12 @@ func TestContactPageContent(t *testing.T) {
 	content := string(body)
 	plainText := html.UnescapeString(content)
 
-	assert.Contains(t, plainText, "Contact me.")
+	assert.Contains(t, content, `<h1 class="editorial-title">Contact</h1>`)
+	assert.NotContains(t, plainText, "Contact me.")
 	assert.NotContains(t, plainText, "The inbox is the shortest path.")
 	assert.NotContains(t, plainText, "A little context in the first note is always helpful.")
+	assert.NotContains(t, plainText, "Work, code, running, photos, and the occasional short thought each have their own home.")
+	assert.NotContains(t, content, "<p>01</p>")
 	assert.Contains(t, plainText, "bbondy [at] gmail.com")
 	assert.Contains(t, content, "href=\"mailto:bbondy@gmail.com\"")
 	assert.Contains(t, content, "href=\"https://github.com/bbondy/\"")

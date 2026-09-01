@@ -86,6 +86,8 @@ type FiltersPage struct {
 	SortedTags                       []string
 	TagGroups                        []TagGroup
 	Years                            []int
+	PostCount                        int
+	TagCount                         int
 	ShareUrl, Description, ImagePath string
 }
 

@@ -133,25 +133,13 @@
 }
 
 .contact-section-heading {
-  align-items: center;
   border-bottom: 1px solid var(--panel-border);
-  display: flex;
-  gap: 14px;
   margin-bottom: 18px;
   padding-bottom: 13px;
 }
 
-.contact-section-heading > p {
-  color: var(--contact-accent);
-  font-family: var(--font-heading);
-  font-size: 1.1rem;
-  font-weight: 700;
-  margin: 0;
-}
-
 .contact-section-heading > div {
-  border-left: 1px solid var(--panel-border);
-  padding-left: 14px;
+  padding: 0;
 }
 
 .contact-eyebrow {
@@ -163,13 +151,6 @@
   font-size: clamp(1.45rem, 4vw, 2rem);
   letter-spacing: -0.025em;
   margin: 0;
-}
-
-.contact-section-intro {
-  color: var(--contact-ink-soft);
-  line-height: 1.7;
-  margin: 0 0 23px;
-  max-width: 62ch;
 }
 
 .contact-link-grid {
