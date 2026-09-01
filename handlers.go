@@ -264,11 +264,16 @@ func runningHandler(w http.ResponseWriter, r *http.Request) {
 
 	p := &data.RunningPage{
 		Title:                 GetTitle("Running"),
+		Description:           "Brian Bondy's running history, activity totals, training calendar, and memorable ultramarathon and endurance events.",
 		MarkdownSlug:          "running",
+		ShareUrl:              "/running",
 		Runs:                  runs,
 		ContributionGraph:     nil, // not used in new template
+		ContributionGraph2D:   contributionGraph2D,
 		StravaRunTotals:       stravaTotals,
 		ActivityTypeBreakdown: activityBreakdown,
+		SelectedYear:          yearFilter,
+		GraphJSON:             graphJSON,
 	}
 
 	// Get last updated date
@@ -276,22 +281,12 @@ func runningHandler(w http.ResponseWriter, r *http.Request) {
 	if err != nil {
 		lastUpdated = "Unknown"
 	}
+	p.LastUpdatedDate = lastUpdated
+	if contributionGraph2D != nil {
+		p.Years = contributionGraph2D.Years
+	}
 
-	// Pass the 2D graph as a separate variable
-	err = executeTemplate(w, "running", map[string]interface{}{
-		"MarkdownSlug":        p.MarkdownSlug,
-		"Page":                p,
-		"ContributionGraph2D": contributionGraph2D,
-		"Years": func() []int {
-			if contributionGraph2D != nil {
-				return contributionGraph2D.Years
-			}
-			return nil
-		}(),
-		"SelectedYear":    yearFilter,
-		"LastUpdatedDate": lastUpdated,
-		"GraphJSON":       graphJSON,
-	})
+	err = executeTemplate(w, "running", p)
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return

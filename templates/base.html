@@ -275,7 +275,7 @@
     <!-- Non-critical CSS loaded asynchronously -->
         <link rel="stylesheet" href="/static/css/main.css?v=155" media="print" onload="this.media='all'">
     <noscript><link rel="stylesheet" href="/static/css/main.css?v=155"></noscript>
-    {{if or (eq .MarkdownSlug "about.markdown") (eq .MarkdownSlug "contact.markdown") (eq .MarkdownSlug "projects") (eq .MarkdownSlug "resume") (eq .MarkdownSlug "career")}}
+    {{if or (eq .MarkdownSlug "about.markdown") (eq .MarkdownSlug "contact.markdown") (eq .MarkdownSlug "projects") (eq .MarkdownSlug "resume") (eq .MarkdownSlug "career") (eq .MarkdownSlug "running")}}
     <link rel="stylesheet" href="/static/css/editorial.css?v=1">
     {{end}}
     {{if or (eq .MarkdownSlug "resume") (eq .MarkdownSlug "career")}}
@@ -289,6 +289,9 @@
     {{end}}
     {{if eq .MarkdownSlug "projects"}}
     <link rel="stylesheet" href="/static/css/projects.css?v=1">
+    {{end}}
+    {{if eq .MarkdownSlug "running"}}
+    <link rel="stylesheet" href="/static/css/running.css?v=2">
     {{end}}
     
     <!-- Font Awesome loaded asynchronously -->

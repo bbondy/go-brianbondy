@@ -43,11 +43,18 @@ type ActivityTypeBreakdown struct {
 
 type RunningPage struct {
 	Title                 string
+	Description           string
 	MarkdownSlug          string
+	ShareUrl              string
 	Runs                  Runs
 	ContributionGraph     *ContributionGraph
+	ContributionGraph2D   *ContributionGraph2D
 	StravaRunTotals       StravaRunTotals
 	ActivityTypeBreakdown []ActivityTypeBreakdown
+	Years                 []int
+	SelectedYear          string
+	LastUpdatedDate       string
+	GraphJSON             template.JS
 }
 
 type StravaRunTotals struct {
