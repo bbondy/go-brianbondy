@@ -84,7 +84,7 @@ func TestHomePageNavigationAndThemeControls(t *testing.T) {
 	assert.Contains(t, content, `id="theme-toggle"`)
 	assert.Contains(t, content, `localStorage.getItem('palette')`)
 	assert.Contains(t, content, `localStorage.setItem('palette', palette)`)
-	for _, palette := range []string{"ocean", "forest", "ember", "violet", "rose"} {
+	for _, palette := range []string{"ocean", "forest", "ember", "violet", "rose", "gold", "slate"} {
 		assert.Contains(t, content, palette)
 	}
 }

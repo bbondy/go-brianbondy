@@ -6,7 +6,7 @@
       (function() {
         try {
           var root = document.documentElement;
-          var paletteOrder = ['ocean', 'forest', 'ember', 'violet', 'rose'];
+          var paletteOrder = ['ocean', 'forest', 'ember', 'violet', 'rose', 'gold', 'slate'];
           var savedTheme = localStorage.getItem('theme');
           var hasExplicitTheme = savedTheme === 'dark' || savedTheme === 'light';
           var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
@@ -42,6 +42,14 @@
               rose: {
                 light: [[182, 77, 114], [232, 139, 170], [161, 57, 95], [241, 164, 188], [201, 101, 135], [145, 49, 82]],
                 dark: [[255, 143, 181], [219, 82, 130], [255, 169, 196], [185, 60, 105], [237, 111, 153], [164, 48, 88]]
+              },
+              gold: {
+                light: [[166, 120, 22], [222, 178, 76], [142, 98, 15], [235, 197, 105], [190, 143, 39], [124, 84, 10]],
+                dark: [[230, 190, 102], [190, 143, 55], [242, 207, 128], [161, 116, 39], [213, 166, 74], [139, 96, 29]]
+              },
+              slate: {
+                light: [[82, 109, 136], [137, 160, 181], [65, 91, 117], [157, 177, 196], [103, 130, 155], [55, 78, 101]],
+                dark: [[157, 178, 199], [105, 135, 164], [179, 198, 216], [86, 113, 140], [130, 158, 184], [72, 96, 120]]
               }
             };
             var paletteName = root.getAttribute('data-palette') || 'ocean';
@@ -162,9 +170,9 @@
         --heading-color: #f2f7ff;
         --link-color: #59c0ff;
         --link-color-strong: #2ea1e6;
-        --topbar-bg: #121b2b;
-        --mainbody-bg: #121b2b;
-        --panel-bg: #121b2b;
+        --topbar-bg: #171c24;
+        --mainbody-bg: #171c24;
+        --panel-bg: #171c24;
         --border-color: #2b3a52;
         --panel-border: #2f3f5b;
         --shadow-color: rgba(0, 0, 0, 0.35);
@@ -223,9 +231,9 @@
         --heading-color: #f0faf5;
         --link-color: #61d3a4;
         --link-color-strong: #3bb987;
-        --topbar-bg: #111f19;
-        --mainbody-bg: #111f19;
-        --panel-bg: #111f19;
+        --topbar-bg: #171d1a;
+        --mainbody-bg: #171d1a;
+        --panel-bg: #171d1a;
         --border-color: #29483a;
         --panel-border: #2d5241;
         --link-tint: rgba(97, 211, 164, 0.14);
@@ -267,9 +275,9 @@
         --heading-color: #fff5ef;
         --link-color: #ff9a67;
         --link-color-strong: #e67745;
-        --topbar-bg: #241713;
-        --mainbody-bg: #241713;
-        --panel-bg: #241713;
+        --topbar-bg: #1e1a18;
+        --mainbody-bg: #1e1a18;
+        --panel-bg: #1e1a18;
         --border-color: #5a3c2e;
         --panel-border: #674536;
         --link-tint: rgba(255, 154, 103, 0.14);
@@ -311,9 +319,9 @@
         --heading-color: #faf6ff;
         --link-color: #bc9cff;
         --link-color-strong: #9c76e2;
-        --topbar-bg: #1d1728;
-        --mainbody-bg: #1d1728;
-        --panel-bg: #1d1728;
+        --topbar-bg: #1c1921;
+        --mainbody-bg: #1c1921;
+        --panel-bg: #1c1921;
         --border-color: #46375d;
         --panel-border: #51416a;
         --link-tint: rgba(188, 156, 255, 0.14);
@@ -355,9 +363,9 @@
         --heading-color: #fff4f8;
         --link-color: #ff8fb5;
         --link-color-strong: #e56893;
-        --topbar-bg: #24161d;
-        --mainbody-bg: #24161d;
-        --panel-bg: #24161d;
+        --topbar-bg: #1e191c;
+        --mainbody-bg: #1e191c;
+        --panel-bg: #1e191c;
         --border-color: #593646;
         --panel-border: #684052;
         --link-tint: rgba(255, 143, 181, 0.14);
@@ -369,6 +377,94 @@
         --accent-mid: rgba(255, 143, 181, 0.22);
         --ink-soft: #d0aeba;
         --palette-swatch: #ff8fb5;
+      }
+
+      :root[data-palette="gold"] {
+        --bg-color: #f7f3e9;
+        --text-color: #3a3528;
+        --muted-color: #6f6651;
+        --heading-color: #292416;
+        --link-color: #8a6818;
+        --link-color-strong: #6e5010;
+        --border-color: #d9cfb4;
+        --panel-border: #e8e0ca;
+        --link-tint: rgba(138, 104, 24, 0.12);
+        --link-tint-strong: rgba(138, 104, 24, 0.2);
+        --link-shadow: rgba(138, 104, 24, 0.22);
+        --link-shadow-strong: rgba(138, 104, 24, 0.32);
+        --accent-color: #8a6818;
+        --accent-soft: rgba(138, 104, 24, 0.09);
+        --accent-mid: rgba(138, 104, 24, 0.2);
+        --ink-soft: #635a45;
+        --palette-swatch: #a67816;
+        --logo-hue: 190deg;
+      }
+
+      :root[data-theme="dark"][data-palette="gold"] {
+        --bg-color: #18150d;
+        --text-color: #ece3ce;
+        --muted-color: #c0ae86;
+        --heading-color: #fff8e8;
+        --link-color: #e6be66;
+        --link-color-strong: #c99a37;
+        --topbar-bg: #1e1b17;
+        --mainbody-bg: #1e1b17;
+        --panel-bg: #1e1b17;
+        --border-color: #54472b;
+        --panel-border: #625334;
+        --link-tint: rgba(230, 190, 102, 0.14);
+        --link-tint-strong: rgba(230, 190, 102, 0.22);
+        --link-shadow: rgba(230, 190, 102, 0.28);
+        --link-shadow-strong: rgba(230, 190, 102, 0.38);
+        --accent-color: #e6be66;
+        --accent-soft: rgba(230, 190, 102, 0.1);
+        --accent-mid: rgba(230, 190, 102, 0.22);
+        --ink-soft: #d0bd94;
+        --palette-swatch: #e6be66;
+      }
+
+      :root[data-palette="slate"] {
+        --bg-color: #eef2f5;
+        --text-color: #2e3742;
+        --muted-color: #5f6d7a;
+        --heading-color: #202831;
+        --link-color: #526d88;
+        --link-color-strong: #3e566e;
+        --border-color: #c7d1da;
+        --panel-border: #d8e0e7;
+        --link-tint: rgba(82, 109, 136, 0.12);
+        --link-tint-strong: rgba(82, 109, 136, 0.2);
+        --link-shadow: rgba(82, 109, 136, 0.22);
+        --link-shadow-strong: rgba(82, 109, 136, 0.32);
+        --accent-color: #526d88;
+        --accent-soft: rgba(82, 109, 136, 0.09);
+        --accent-mid: rgba(82, 109, 136, 0.2);
+        --ink-soft: #536271;
+        --palette-swatch: #607b96;
+        --logo-hue: 350deg;
+      }
+
+      :root[data-theme="dark"][data-palette="slate"] {
+        --bg-color: #11161c;
+        --text-color: #dce3ea;
+        --muted-color: #a5b2bf;
+        --heading-color: #f3f7fa;
+        --link-color: #9db2c7;
+        --link-color-strong: #7f9ab4;
+        --topbar-bg: #181c20;
+        --mainbody-bg: #181c20;
+        --panel-bg: #181c20;
+        --border-color: #354351;
+        --panel-border: #3e4e5e;
+        --link-tint: rgba(157, 178, 199, 0.14);
+        --link-tint-strong: rgba(157, 178, 199, 0.22);
+        --link-shadow: rgba(157, 178, 199, 0.28);
+        --link-shadow-strong: rgba(157, 178, 199, 0.38);
+        --accent-color: #9db2c7;
+        --accent-soft: rgba(157, 178, 199, 0.1);
+        --accent-mid: rgba(157, 178, 199, 0.22);
+        --ink-soft: #b6c1cc;
+        --palette-swatch: #9db2c7;
       }
 
       /* Critical CSS for above-the-fold content */
@@ -569,8 +665,8 @@
     </style>
     
     <!-- Non-critical CSS loaded asynchronously -->
-        <link rel="stylesheet" href="/static/css/main.css?v=159" media="print" onload="this.media='all'">
-    <noscript><link rel="stylesheet" href="/static/css/main.css?v=159"></noscript>
+        <link rel="stylesheet" href="/static/css/main.css?v=160" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="/static/css/main.css?v=160"></noscript>
     {{if or (eq .MarkdownSlug "home") (eq .MarkdownSlug "about.markdown") (eq .MarkdownSlug "contact.markdown") (eq .MarkdownSlug "projects") (eq .MarkdownSlug "resume") (eq .MarkdownSlug "career") (eq .MarkdownSlug "running") (eq .MarkdownSlug "all") (eq .MarkdownSlug "filters") (eq .MarkdownSlug "pictures") (eq .MarkdownSlug "interviews") (eq .MarkdownSlug "cheatsheets") (eq .MarkdownSlug "books") (eq .MarkdownSlug "advice.markdown")}}
     <link rel="stylesheet" href="/static/css/editorial.css?v=3">
     {{end}}
@@ -1312,13 +1408,15 @@
       (function() {
         const paletteToggle = document.getElementById('palette-toggle');
         const root = document.documentElement;
-        const paletteOrder = window.sitePaletteOrder || ['ocean', 'forest', 'ember', 'violet', 'rose'];
+        const paletteOrder = window.sitePaletteOrder || ['ocean', 'forest', 'ember', 'violet', 'rose', 'gold', 'slate'];
         const paletteLabels = {
           ocean: 'Ocean',
           forest: 'Forest',
           ember: 'Ember',
           violet: 'Violet',
-          rose: 'Rose'
+          rose: 'Rose',
+          gold: 'Gold',
+          slate: 'Slate'
         };
 
         function updateBrowserThemeColor() {
