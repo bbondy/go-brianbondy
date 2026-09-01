@@ -49,7 +49,7 @@ func TestHomePageUsesEditorialLayout(t *testing.T) {
 
 	assert.Contains(t, content, `<article class="home-page editorial-page"`)
 	assert.Contains(t, content, `<h1 class="editorial-title">Running, work, and life</h1>`)
-	assert.Contains(t, content, `href="/static/css/editorial.css?v=2"`)
+	assert.Contains(t, content, `href="/static/css/editorial.css?v=3"`)
 	assert.Contains(t, content, `href="/static/css/home.css?v=2"`)
 	assert.Contains(t, content, `href="/running"`)
 	assert.Contains(t, content, `href="/projects"`)

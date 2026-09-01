@@ -93,6 +93,10 @@
 }
 
 /* Shared alignment for search controls across editorial archive pages. */
+.editorial-page [class$="-search-field"] > input[type="search"] {
+  margin: 0;
+}
+
 .editorial-page [class$="-search-field"] > i {
   line-height: 1;
   top: 50%;

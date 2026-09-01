@@ -63,7 +63,7 @@ func TestRunningPageUsesEditorialArchiveLayout(t *testing.T) {
 
 	assert.Contains(t, content, `<article class="running-page editorial-page"`)
 	assert.Contains(t, content, `<h1 class="editorial-title">Runs</h1>`)
-	assert.Contains(t, content, `/static/css/editorial.css?v=2`)
+	assert.Contains(t, content, `/static/css/editorial.css?v=3`)
 	assert.Contains(t, content, `/static/css/running.css?v=3`)
 	assert.Contains(t, content, `Brian Bondy's running history`)
 	assert.NotContains(t, content, `K<article class="running-page`)

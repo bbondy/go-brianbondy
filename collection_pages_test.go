@@ -125,7 +125,7 @@ func TestCollectionPagesUseSharedEditorialStyles(t *testing.T) {
 			body := renderCollectionPage(t, test.path, test.handler)
 			assert.Contains(t, body, `class="collection-page`)
 			assert.Contains(t, body, `class="collection-hero editorial-hero"`)
-			assert.Contains(t, body, `href="/static/css/editorial.css?v=2"`)
+			assert.Contains(t, body, `href="/static/css/editorial.css?v=3"`)
 			assert.Contains(t, body, `href="/static/css/collections.css?v=2"`)
 			assert.Contains(t, html.UnescapeString(body), test.title)
 		})

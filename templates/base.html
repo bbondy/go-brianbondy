@@ -65,9 +65,12 @@
             root.style.setProperty('--bg-glow-2-stop', rand(30, 72).toFixed(2) + '%');
             root.style.setProperty('--bg-glow-angle', rand(85, 175).toFixed(2) + 'deg');
 
-            root.style.setProperty('--bg-glow-1', 'rgba(' + g1.join(', ') + ', ' + rand(0.16, 0.36).toFixed(2) + ')');
-            root.style.setProperty('--bg-glow-2', 'rgba(' + g2.join(', ') + ', ' + rand(0.16, 0.38).toFixed(2) + ')');
-            root.style.setProperty('--bg-glow-3', 'rgba(' + g3.join(', ') + ', ' + rand(0.12, 0.26).toFixed(2) + ')');
+            var glow1Alpha = isDark ? rand(0.07, 0.15) : rand(0.16, 0.36);
+            var glow2Alpha = isDark ? rand(0.06, 0.14) : rand(0.16, 0.38);
+            var glow3Alpha = isDark ? rand(0.04, 0.09) : rand(0.12, 0.26);
+            root.style.setProperty('--bg-glow-1', 'rgba(' + g1.join(', ') + ', ' + glow1Alpha.toFixed(2) + ')');
+            root.style.setProperty('--bg-glow-2', 'rgba(' + g2.join(', ') + ', ' + glow2Alpha.toFixed(2) + ')');
+            root.style.setProperty('--bg-glow-3', 'rgba(' + g3.join(', ') + ', ' + glow3Alpha.toFixed(2) + ')');
           };
 
           window.applyBackgroundVariation();
@@ -569,7 +572,7 @@
         <link rel="stylesheet" href="/static/css/main.css?v=158" media="print" onload="this.media='all'">
     <noscript><link rel="stylesheet" href="/static/css/main.css?v=158"></noscript>
     {{if or (eq .MarkdownSlug "home") (eq .MarkdownSlug "about.markdown") (eq .MarkdownSlug "contact.markdown") (eq .MarkdownSlug "projects") (eq .MarkdownSlug "resume") (eq .MarkdownSlug "career") (eq .MarkdownSlug "running") (eq .MarkdownSlug "all") (eq .MarkdownSlug "filters") (eq .MarkdownSlug "pictures") (eq .MarkdownSlug "interviews") (eq .MarkdownSlug "cheatsheets") (eq .MarkdownSlug "books") (eq .MarkdownSlug "advice.markdown")}}
-    <link rel="stylesheet" href="/static/css/editorial.css?v=2">
+    <link rel="stylesheet" href="/static/css/editorial.css?v=3">
     {{end}}
     {{if or (eq .MarkdownSlug "resume") (eq .MarkdownSlug "career")}}
     <link rel="stylesheet" href="/static/css/resume.css?v=5">
