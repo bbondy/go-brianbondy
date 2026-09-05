@@ -1430,12 +1430,55 @@
       (function() {
         const languageToggle = document.getElementById('language-toggle');
         if (!languageToggle) return;
-        languageToggle.addEventListener('click', function() {
-          const language = languageToggle.dataset.language;
+
+        const languageNames = { en: 'English', fr: 'French' };
+
+        function setLanguage(language) {
           const url = new URL(window.location.href);
           url.searchParams.set('lang', language);
           window.location.assign(url.toString());
+        }
+
+        languageToggle.addEventListener('click', function() {
+          setLanguage(languageToggle.dataset.language);
         });
+
+        // WebMCP: let browser AI agents switch languages (no-op where unsupported)
+        if (document.modelContext && document.modelContext.registerTool) {
+          Promise.resolve().then(function() {
+            return document.modelContext.registerTool({
+              name: 'set_language',
+              title: 'Set site language',
+              description: 'Show brianbondy.com in English or French. The page reloads in the chosen language and the choice is remembered for future visits.',
+              inputSchema: {
+                type: 'object',
+                properties: {
+                  language: {
+                    type: 'string',
+                    enum: ['en', 'fr'],
+                    description: 'The language to display the site in: "en" for English, "fr" for French.'
+                  }
+                },
+                required: ['language']
+              },
+              annotations: { readOnlyHint: false, idempotentHint: true },
+              execute: function(input) {
+                const language = input && input.language;
+                if (language !== 'en' && language !== 'fr') {
+                  return {
+                    isError: true,
+                    content: [{ type: 'text', text: 'Invalid language "' + language + '". Use "en" or "fr".' }]
+                  };
+                }
+                if (language === document.documentElement.lang) {
+                  return { content: [{ type: 'text', text: 'The site is already in ' + languageNames[language] + '.' }] };
+                }
+                setLanguage(language);
+                return { content: [{ type: 'text', text: 'Reloading the page in ' + languageNames[language] + '.' }] };
+              }
+            });
+          }).catch(function() {});
+        }
       })();
 
       // Color palette functionality
