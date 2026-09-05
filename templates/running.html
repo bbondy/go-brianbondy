@@ -1042,6 +1042,8 @@ function drawStickRunner() {
   var trailingLeg = legs[1];
   var bob = !fallPhase && leadLeg.swinging && trailingLeg.swinging ? -3 : -1;
   var runnerColor = document.documentElement.getAttribute('data-theme') === 'light' ? '#000' : '#fff';
+  // His cap picks up the accent color of the palette the reader picked.
+  var runnerHatColor = getComputedStyle(document.documentElement).getPropertyValue('--accent-color').trim() || '#2563eb';
   var motionPulse = (Math.sin(runnerGaitPhase * 0.45) + 1) / 2;
   ctx.save();
   ctx.strokeStyle = '#8b5a2b';
@@ -1114,7 +1116,7 @@ function drawStickRunner() {
   drawRunnerLeg(ctx, leadLeg);
   drawRunnerLeg(ctx, trailingLeg);
   ctx.stroke();
-  ctx.fillStyle = '#2563eb';
+  ctx.fillStyle = runnerHatColor;
   ctx.beginPath();
   ctx.arc(0, -16, 4.4, Math.PI, Math.PI * 2);
   ctx.fill();
