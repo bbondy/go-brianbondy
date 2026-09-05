@@ -14,6 +14,26 @@ PER_PAGE = 200
 REDIRECT_URI = 'http://localhost:8080/'
 AUTH_URL = 'https://www.strava.com/oauth/authorize'
 TOKEN_URL = 'https://www.strava.com/oauth/token'
+# Strava may hand back a new refresh token on any refresh. When that happens in
+# CI the stored secret is now stale, so drop the replacement here for the
+# workflow to pick up.
+ROTATED_TOKEN_PATH = 'strava_rotated_refresh_token.txt'
+
+
+def non_interactive() -> bool:
+    """True when there is no human around to complete the browser OAuth flow."""
+    return bool(os.environ.get('CI') or os.environ.get('STRAVA_NON_INTERACTIVE'))
+
+
+def require_interactive(action: str) -> None:
+    """Abort instead of hanging on a browser prompt that nobody can answer."""
+    if non_interactive():
+        raise SystemExit(
+            f"Cannot {action} without a browser. Set STRAVA_CLIENT_ID, "
+            "STRAVA_CLIENT_SECRET and a valid STRAVA_REFRESH_TOKEN. "
+            "Run scripts/strava_refresh_token.py locally to mint a new refresh token."
+        )
+
 
 # Helper to convert seconds to "Xh Ym" or "Xm"
 def seconds_to_time_str(seconds):
@@ -66,6 +86,7 @@ def get_oauth_code():
     return server
 
 def get_access_token(client_id, client_secret):
+    require_interactive('authorize with Strava')
     OAuthHandler.code = None
     # Step 1: Open browser for user login
     params = {
@@ -126,6 +147,14 @@ def refresh_access_token(refresh_token=None):
     with open(TOKEN_PATH, 'w') as f:
         json.dump(token_data, f)
     print('Access token refreshed and saved to', TOKEN_PATH)
+
+    new_refresh_token = token_data.get('refresh_token')
+    if new_refresh_token and new_refresh_token != refresh_token:
+        print('WARNING: Strava rotated the refresh token. '
+              'The stored STRAVA_REFRESH_TOKEN is now stale and must be replaced.')
+        with open(ROTATED_TOKEN_PATH, 'w') as f:
+            f.write(new_refresh_token)
+
     return token_data.get('access_token')
 
 def load_saved_token():
@@ -183,8 +212,8 @@ class AuthorizationError(Exception):
     pass
 
 def main():
-    client_id = os.environ['STRAVA_CLIENT_ID']
-    client_secret = os.environ['STRAVA_CLIENT_SECRET']
+    client_id = os.environ.get('STRAVA_CLIENT_ID')
+    client_secret = os.environ.get('STRAVA_CLIENT_SECRET')
     access_token = load_saved_token() or os.environ.get('STRAVA_ACCESS_TOKEN')
     if not access_token:
         access_token = refresh_access_token()

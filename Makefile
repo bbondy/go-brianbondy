@@ -5,7 +5,8 @@
 .PHONY: update memorable-runs cheatsheets locales blog-translations all format \
 	lint test update-cache deploy auth webp webp-force responsive-images \
 	blog-images github-stats pictures-manifest run-km-manifest \
-	strava-run-manifest build dev cache-version strava-clear-token help
+	strava-run-manifest build dev cache-version strava-clear-token \
+	strava-refresh-token help
 
 update: format lint test update-cache webp github-stats memorable-runs
 
@@ -98,6 +99,10 @@ cache-version:
 strava-clear-token:
 	rm -f ~/.strava_token.json
 
+# Mint a Strava refresh token for the daily stats workflow (opens a browser)
+strava-refresh-token:
+	python3 scripts/strava_refresh_token.py
+
 # Show help
 help:
 	@echo "Available targets:"
@@ -119,6 +124,7 @@ help:
 	@echo "  cheatsheets   - Generate cheatsheets manifest and markdown from GitHub"
 	@echo "  locales       - Extract and deduplicate translatable UI strings"
 	@echo "  strava-clear-token - Delete cached Strava OAuth token (~/.strava_token.json)"
+	@echo "  strava-refresh-token - Mint a Strava refresh token for the daily stats workflow"
 	@echo "  deploy       - Deploy to Google App Engine"
 	@echo "  cache-version- Show current cache busting version"
 	@echo "  run-km-manifest - Generate run manifest with km and pace"

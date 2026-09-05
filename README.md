@@ -283,7 +283,7 @@ STRAVA_CLIENT_ID=... STRAVA_CLIENT_SECRET=... make strava-run-manifest
 The script `scripts/fetch_github_stats.py` automates fetching commit and pull request counts for your projects from GitHub and updates `data/projectManifest.json`.
 
 **Features:**
-- Scrapes GitHub search pages for commit and PR counts by author (bbondy)
+- Reads commit and PR counts by author (bbondy) from the GitHub REST search API when `GITHUB_TOKEN` (or `GH_TOKEN`) is set, and falls back to scraping the public search pages otherwise
 - Supports keyword-based filtering for subprojects (see `searchKeywords` in the manifest)
 - Handles abbreviated numbers (e.g., "2.3k" → 2300)
 - Retries on rate limiting with exponential backoff
@@ -300,4 +300,38 @@ The script `scripts/fetch_github_stats.py` automates fetching commit and pull re
 python3 scripts/fetch_github_stats.py
 ```
 
-After running, your `data/projectManifest.json` will be updated with the latest commit and PR counts for each project. If a project's data can't be fetched (e.g., due to rate limiting), it will be omitted from the stats until a successful fetch.
+After running, your `data/projectManifest.json` will be updated with the latest commit and PR counts for each project. If a project's data can't be fetched (e.g., due to rate limiting), it will be omitted from the stats until a successful fetch. If no project at all yields stats, the script exits non-zero, since that means the search backend rejected us rather than the projects being genuinely empty.
+
+Anonymous scraping is heavily rate limited from shared addresses such as CI runners, so pass a token when running unattended:
+
+```bash
+GITHUB_TOKEN=$(gh auth token) make github-stats
+```
+
+### Scheduled Stats Refresh
+
+`.github/workflows/update-stats.yml` refreshes the GitHub and Strava manifests every day at 09:17 UTC and commits any changes back to `master`. It can also be run on demand from the Actions tab, where `targets` limits the run to `github` or `strava` and `dry_run` fetches and prints the diff without committing.
+
+The push uses a repository deploy key rather than `GITHUB_TOKEN` so that the resulting commit triggers CI.
+
+**Repository secrets:**
+
+| Secret | Required | Purpose |
+| --- | --- | --- |
+| `STATS_DEPLOY_KEY` | yes | Private half of a write-enabled deploy key on this repo, used to push the daily commit |
+| `STRAVA_CLIENT_ID` | yes | Strava API application ID |
+| `STRAVA_CLIENT_SECRET` | yes | Strava API application secret |
+| `STRAVA_REFRESH_TOKEN` | yes | Long-lived Strava refresh token, minted by `make strava-refresh-token` |
+| `STATS_GITHUB_TOKEN` | no | PAT used for the search API instead of the built-in `GITHUB_TOKEN` |
+
+Mint the Strava refresh token locally, once:
+
+```bash
+make strava-refresh-token
+```
+
+That opens a browser for the Strava consent screen, then prints the refresh token along with the `gh secret set` commands to store it.
+
+Strava can rotate a refresh token on any refresh. When that happens the workflow writes a note into the run summary saying the stored secret is stale; re-run `make strava-refresh-token` and update `STRAVA_REFRESH_TOKEN`.
+
+The Strava scripts refuse to open a browser when `CI` or `STRAVA_NON_INTERACTIVE` is set, so a bad credential fails the run with a clear message instead of hanging on an OAuth prompt nobody can answer.

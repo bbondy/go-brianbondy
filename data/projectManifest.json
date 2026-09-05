@@ -8,8 +8,8 @@
     "blogPostID": 174,
     "description": "Block ads and trackers, saves data, and speeds up web browsing.",
     "githubStats": {
-      "commitCount": 2700,
-      "prCount": 965
+      "commitCount": 2702,
+      "prCount": 967
     }
   },
   {
@@ -20,7 +20,7 @@
     "github": "https://github.com/brave/brave-core",
     "description": "Secure, native, built-in crypto wallet that supercharges Brave browser for Web3.",
     "githubStats": {
-      "commitCount": 237,
+      "commitCount": 238,
       "prCount": 156
     },
     "searchKeywords": [
@@ -35,7 +35,7 @@
     "website": "https://brave.com/leo/",
     "github": "https://github.com/brave/brave-core",
     "blogPostID": 184,
-    "description": "AI-powered assistant built into the Brave browser, offering features like question answering, content summarization, and more\u2014all while maintaining privacy.",
+    "description": "AI-powered assistant built into the Brave browser, offering features like question answering, content summarization, and more—all while maintaining privacy.",
     "githubStats": {
       "commitCount": 21,
       "prCount": 48
@@ -47,7 +47,7 @@
   },
   {
     "title": "Brave Dev Bot",
-    "emoji": "\ud83e\udd16",
+    "emoji": "🤖",
     "url": "https://github.com/brave-experiments/brave-dev-bot",
     "github": "https://github.com/brave-experiments/brave-dev-bot",
     "description": "Ralph Wiggum loop-inspired coding agent for Brave projects that reads PRDs, implements user stories, runs tests, creates PRs, handles review feedback, and manages CI in iterative loops.",
@@ -62,7 +62,11 @@
     "url": "https://github.com/brave-experiments/brave-bot",
     "website": "https://brave-experiments.github.io/brave-bot-docs/",
     "github": "https://github.com/brave-experiments/brave-bot",
-    "description": "General-purpose agent designed as a drop-in replacement for Claude Code, Codex, and OpenCode, with structural resistance to indirect prompt injection."
+    "description": "General-purpose agent designed as a drop-in replacement for Claude Code, Codex, and OpenCode, with structural resistance to indirect prompt injection.",
+    "githubStats": {
+      "commitCount": 435,
+      "prCount": 3
+    }
   },
   {
     "title": "Guardrails",
@@ -72,7 +76,7 @@
     "description": "Native Rust CLI wrapper that blocks unsafe or prompt-injection style output from other CLIs, with both blocking (check) and sanitizing (filter) modes.",
     "githubStats": {
       "commitCount": 76,
-      "prCount": 0
+      "prCount": 1
     }
   },
   {
@@ -80,7 +84,11 @@
     "image": "static/img/projects/hutter-compress2.webp",
     "url": "https://github.com/bbondy/hutter",
     "github": "https://github.com/bbondy/hutter",
-    "description": "Rust workspace for experimenting toward a future Hutter Prize submission, with several small experimental codecs including adaptive Huffman, naive LZ77, byte-level and bit-level PPM variants, plus a WikiMix-5 design skeleton for a future mixed-model codec."
+    "description": "Rust workspace for experimenting toward a future Hutter Prize submission, with several small experimental codecs including adaptive Huffman, naive LZ77, byte-level and bit-level PPM variants, plus a WikiMix-5 design skeleton for a future mixed-model codec.",
+    "githubStats": {
+      "commitCount": 36,
+      "prCount": 0
+    }
   },
   {
     "title": "Macro Lap",
@@ -132,7 +140,7 @@
     "website": "https://www.brianbondy.com",
     "description": "The current website for brianbondy.com. This website is written in Go. The version before that was written in Node, Hapi, Redis React, and ES6 transpiled with Babel. Before that the previous versions were written in Google App Engine, Django, ASP .NET (C#), Flash / ActionScript, and the original one was generated from C++ code.",
     "githubStats": {
-      "commitCount": 235,
+      "commitCount": 307,
       "prCount": 0
     }
   },

@@ -1,0 +1,109 @@
+name: Update stats
+
+on:
+  schedule:
+    # 09:17 UTC daily. Off the hour so we are not competing with the crowd of
+    # jobs everyone else scheduled at :00.
+    - cron: "17 9 * * *"
+  workflow_dispatch:
+    inputs:
+      targets:
+        description: Which stats to refresh
+        type: choice
+        default: all
+        options:
+          - all
+          - github
+          - strava
+      dry_run:
+        description: Fetch and show the diff without committing
+        type: boolean
+        default: false
+
+# The push goes out over the deploy key, not GITHUB_TOKEN, so that the commit
+# triggers CI like any other push.
+permissions:
+  contents: read
+
+concurrency:
+  group: update-stats
+  cancel-in-progress: false
+
+jobs:
+  update:
+    name: Refresh stats manifests
+    runs-on: ubuntu-latest
+    env:
+      TARGETS: ${{ inputs.targets || 'all' }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ssh-key: ${{ secrets.STATS_DEPLOY_KEY }}
+          persist-credentials: true
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install Python dependencies
+        run: pip install --disable-pip-version-check requests
+
+      - name: Fetch GitHub stats
+        if: env.TARGETS == 'all' || env.TARGETS == 'github'
+        env:
+          GITHUB_TOKEN: ${{ secrets.STATS_GITHUB_TOKEN || secrets.GITHUB_TOKEN }}
+        run: make github-stats
+
+      - name: Fetch Strava run manifest
+        if: env.TARGETS == 'all' || env.TARGETS == 'strava'
+        env:
+          STRAVA_CLIENT_ID: ${{ secrets.STRAVA_CLIENT_ID }}
+          STRAVA_CLIENT_SECRET: ${{ secrets.STRAVA_CLIENT_SECRET }}
+          STRAVA_REFRESH_TOKEN: ${{ secrets.STRAVA_REFRESH_TOKEN }}
+        run: make strava-run-manifest
+
+      - name: Fetch memorable runs
+        if: env.TARGETS == 'all' || env.TARGETS == 'strava'
+        env:
+          STRAVA_CLIENT_ID: ${{ secrets.STRAVA_CLIENT_ID }}
+          STRAVA_CLIENT_SECRET: ${{ secrets.STRAVA_CLIENT_SECRET }}
+          STRAVA_REFRESH_TOKEN: ${{ secrets.STRAVA_REFRESH_TOKEN }}
+        run: make memorable-runs
+
+      - name: Check for a rotated Strava refresh token
+        if: always()
+        run: |
+          if [ -f strava_rotated_refresh_token.txt ]; then
+            {
+              echo "### Strava refresh token rotated"
+              echo
+              echo "Strava issued a new refresh token, so the \`STRAVA_REFRESH_TOKEN\`"
+              echo "secret is now stale and this workflow will fail on its next run."
+              echo "Re-run \`python3 scripts/strava_refresh_token.py\` locally and update the secret."
+            } >> "$GITHUB_STEP_SUMMARY"
+            rm -f strava_rotated_refresh_token.txt
+          fi
+
+      - name: Show pending changes
+        id: diff
+        run: |
+          git add -A data/
+          if git diff --cached --quiet; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "No stat changes to commit."
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            git diff --cached --stat
+          fi
+
+      - name: Commit and push
+        if: steps.diff.outputs.changed == 'true' && !inputs.dry_run
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Update GitHub and Strava stats"
+          # master may have moved while we were talking to GitHub and Strava.
+          git pull --rebase origin master
+          git push origin HEAD:master

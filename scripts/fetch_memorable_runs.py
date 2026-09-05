@@ -58,6 +58,22 @@ class _OAuthHandler(BaseHTTPRequestHandler):
             self.wfile.write(b'<h1>Authorization failed.</h1>')
 
 
+
+def non_interactive() -> bool:
+    """True when there is no human around to complete the browser OAuth flow."""
+    return bool(os.environ.get('CI') or os.environ.get('STRAVA_NON_INTERACTIVE'))
+
+
+def require_interactive(action: str) -> None:
+    """Abort instead of hanging on a browser prompt that nobody can answer."""
+    if non_interactive():
+        raise SystemExit(
+            f"Cannot {action} without a browser. Set STRAVA_CLIENT_ID, "
+            "STRAVA_CLIENT_SECRET and a valid STRAVA_REFRESH_TOKEN. "
+            "Run scripts/strava_refresh_token.py locally to mint a new refresh token."
+        )
+
+
 def _start_oauth_server():
     server = HTTPServer(('localhost', 8080), _OAuthHandler)
     thread = threading.Thread(target=server.handle_request)
@@ -67,6 +83,7 @@ def _start_oauth_server():
 
 def _get_access_token_via_oauth(client_id: str, client_secret: str) -> str:
     """Launch browser OAuth flow and return fresh access token."""
+    require_interactive('authorize with Strava')
     params = {
         'client_id': client_id,
         'redirect_uri': REDIRECT_URI,
@@ -148,6 +165,7 @@ def ensure_access_token() -> Optional[str]:
     if refreshed:
         return refreshed
     # Fallback to OAuth flow
+    require_interactive('authorize with Strava')
     client_id = STRAVA_CLIENT_ID or input('Enter your Strava client_id: ')
     client_secret = STRAVA_CLIENT_SECRET or input('Enter your Strava client_secret: ')
     STRAVA_ACCESS_TOKEN = _get_access_token_via_oauth(client_id, client_secret)
