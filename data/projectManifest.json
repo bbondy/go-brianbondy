@@ -64,7 +64,7 @@
     "github": "https://github.com/brave-experiments/brave-bot",
     "description": "General-purpose agent designed as a drop-in replacement for Claude Code, Codex, and OpenCode, with structural resistance to indirect prompt injection.",
     "githubStats": {
-      "commitCount": 435,
+      "commitCount": 436,
       "prCount": 3
     }
   },
@@ -140,7 +140,7 @@
     "website": "https://www.brianbondy.com",
     "description": "The current website for brianbondy.com. This website is written in Go. The version before that was written in Node, Hapi, Redis React, and ES6 transpiled with Babel. Before that the previous versions were written in Google App Engine, Django, ASP .NET (C#), Flash / ActionScript, and the original one was generated from C++ code.",
     "githubStats": {
-      "commitCount": 311,
+      "commitCount": 313,
       "prCount": 0
     }
   },

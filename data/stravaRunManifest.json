@@ -11,6 +11,16 @@
   },
   {
     "date": "2026-09-04",
+    "title": "Weight training",
+    "distance_km": 0.0,
+    "time": "1h 0m",
+    "pace": "",
+    "activity_id": "20040647459",
+    "type": "WeightTraining",
+    "elevation": ""
+  },
+  {
+    "date": "2026-09-04",
     "title": "Morning Run",
     "distance_km": 8.81,
     "time": "1h 2m",
