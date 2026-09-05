@@ -310,9 +310,13 @@ GITHUB_TOKEN=$(gh auth token) make github-stats
 
 ### Scheduled Stats Refresh
 
-`.github/workflows/update-stats.yml` refreshes the GitHub and Strava manifests every day at 09:17 UTC and commits any changes back to `master`. It can also be run on demand from the Actions tab, where `targets` limits the run to `github` or `strava` and `dry_run` fetches and prints the diff without committing.
+`.github/workflows/update-stats.yml` refreshes the GitHub and Strava manifests every day at 09:17 UTC, commits any changes back to `master`, and deploys the result to App Engine. It can also be run on demand from the Actions tab, where `targets` limits the run to `github` or `strava`, `dry_run` fetches and prints the diff without committing or deploying, and `force_deploy` deploys even when nothing changed.
 
 The push uses a repository deploy key rather than `GITHUB_TOKEN` so that the resulting commit triggers CI.
+
+The manifests under `data/` are read from disk on every request rather than compiled into the binary, so a commit alone does not change the live site. The workflow therefore runs `gcloud app deploy` whenever it commits something. It does not run `make deploy`, since the full `all` pipeline would also reformat code and bump the CSS cache version, none of which is warranted by a data-only change.
+
+App Engine standard caps a project at 210 versions, which a daily deploy would eventually exhaust, so the workflow prunes afterward. It keeps the 10 most recent versions and deletes older ones, always skipping whichever version is serving traffic.
 
 **Repository secrets:**
 
@@ -323,6 +327,16 @@ The push uses a repository deploy key rather than `GITHUB_TOKEN` so that the res
 | `STRAVA_CLIENT_SECRET` | yes | Strava API application secret |
 | `STRAVA_REFRESH_TOKEN` | yes | Long-lived Strava refresh token, minted by `make strava-refresh-token` |
 | `STATS_GITHUB_TOKEN` | no | PAT used for the search API instead of the built-in `GITHUB_TOKEN` |
+
+Google Cloud needs no secret. The workflow federates into the `go-brianbondy` project with Workload Identity, so nothing long lived is stored in GitHub:
+
+| Resource | Value |
+| --- | --- |
+| Provider | `projects/77808394846/locations/global/workloadIdentityPools/github/providers/go-brianbondy` |
+| Service account | `github-deployer@go-brianbondy.iam.gserviceaccount.com` |
+| Trust condition | `assertion.repository=='bbondy/go-brianbondy'` |
+
+The provider only issues credentials to workflows running in this repository, and the service account holds just the roles a deploy needs: `appengine.deployer`, `appengine.serviceAdmin`, `cloudbuild.builds.editor`, `storage.admin`, `artifactregistry.writer`, plus `iam.serviceAccountUser` on the App Engine runtime account.
 
 Mint the Strava refresh token locally, once:
 

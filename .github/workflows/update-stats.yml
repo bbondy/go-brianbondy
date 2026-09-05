@@ -19,11 +19,17 @@ on:
         description: Fetch and show the diff without committing
         type: boolean
         default: false
+      force_deploy:
+        description: Deploy even when no stats changed
+        type: boolean
+        default: false
 
 # The push goes out over the deploy key, not GITHUB_TOKEN, so that the commit
-# triggers CI like any other push.
+# triggers CI like any other push. id-token lets us federate into Google Cloud
+# without storing a service account key.
 permissions:
   contents: read
+  id-token: write
 
 concurrency:
   group: update-stats
@@ -98,6 +104,19 @@ jobs:
             git diff --cached --stat
           fi
 
+      - name: Decide whether to deploy
+        run: |
+          if [ "${{ inputs.dry_run }}" = "true" ]; then
+            should=false
+          elif [ "${{ steps.diff.outputs.changed }}" = "true" ] \
+            || [ "${{ inputs.force_deploy }}" = "true" ]; then
+            should=true
+          else
+            should=false
+          fi
+          echo "Deploy: $should"
+          echo "SHOULD_DEPLOY=$should" >> "$GITHUB_ENV"
+
       - name: Commit and push
         if: steps.diff.outputs.changed == 'true' && !inputs.dry_run
         run: |
@@ -107,3 +126,45 @@ jobs:
           # master may have moved while we were talking to GitHub and Strava.
           git pull --rebase origin master
           git push origin HEAD:master
+
+      # The manifests are read off disk on every request rather than compiled
+      # in, so the committed data only reaches the site through a deploy.
+      - name: Authenticate to Google Cloud
+        if: env.SHOULD_DEPLOY == 'true'
+        uses: google-github-actions/auth@v2
+        with:
+          project_id: go-brianbondy
+          workload_identity_provider: projects/77808394846/locations/global/workloadIdentityPools/github/providers/go-brianbondy
+          service_account: github-deployer@go-brianbondy.iam.gserviceaccount.com
+
+      - name: Setup gcloud
+        if: env.SHOULD_DEPLOY == 'true'
+        uses: google-github-actions/setup-gcloud@v2
+
+      - name: Deploy to App Engine
+        if: env.SHOULD_DEPLOY == 'true'
+        run: gcloud app deploy app.yaml --project=go-brianbondy --quiet
+
+      - name: Prune old App Engine versions
+        if: env.SHOULD_DEPLOY == 'true'
+        env:
+          KEEP: "10"
+        run: |
+          set -euo pipefail
+          # App Engine standard caps a project at 210 versions and a daily
+          # deploy would walk into that. Keep the newest KEEP regardless, and
+          # drop anything older that is not serving traffic.
+          serving=$(gcloud app versions list --service=default \
+            --hide-no-traffic --format="value(id)")
+          stale=$(gcloud app versions list --service=default \
+            --sort-by="~last_deployed_time" --format="value(id)" \
+            | tail -n +$((KEEP + 1)) \
+            | { grep -vxF "$serving" || true; })
+          if [ -z "$stale" ]; then
+            echo "Nothing to prune."
+            exit 0
+          fi
+          echo "Deleting $(echo "$stale" | wc -l | tr -d ' ') old version(s):"
+          echo "$stale"
+          # shellcheck disable=SC2086
+          gcloud app versions delete --service=default --quiet $stale
