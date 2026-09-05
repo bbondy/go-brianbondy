@@ -99,7 +99,19 @@ def main() -> None:
     with open(TOKEN_PATH, 'w') as f:
         json.dump(token_data, f)
     print(f'Token saved to {TOKEN_PATH}')
-    print(f'Granted scopes: {token_data.get("scope", SCOPE)}\n')
+
+    # Strava's consent screen has a checkbox per permission and it is easy to
+    # leave the activity one unticked. Such a token refreshes fine but 401s on
+    # every activity call, so catch it here rather than in a CI run tomorrow.
+    granted = token_data.get('scope', '')
+    print(f'Granted scopes: {granted or "(not reported)"}')
+    if 'activity:read_all' not in granted:
+        raise SystemExit(
+            "\nThis token cannot read your activities, so the stats workflow "
+            "will fail with it.\nRe-run this script and tick the box for "
+            "viewing your activity data on the Strava consent screen."
+        )
+    print()
 
     print('Refresh token:')
     print(f'  {refresh_token}\n')

@@ -173,7 +173,8 @@ def fetch_all_activities(access_token):
         params = {'per_page': PER_PAGE, 'page': page}
         resp = requests.get(STRAVA_API_URL, headers=headers, params=params)
         if resp.status_code == 401:
-            # Token is invalid or expired
+            # Either the token expired or it never had the scopes we need.
+            check_missing_scope(resp.text)
             raise AuthorizationError(f"Strava API authorization error: {resp.status_code} {resp.text}")
         elif resp.status_code != 200:
             raise Exception(f"Strava API error: {resp.status_code} {resp.text}")
@@ -211,6 +212,29 @@ def fetch_all_activities(access_token):
 class AuthorizationError(Exception):
     pass
 
+
+# Custom exception for a token that is valid but was granted too few scopes
+class MissingScopeError(AuthorizationError):
+    pass
+
+
+def check_missing_scope(body: str) -> None:
+    """Raise if Strava rejected the token for lacking the activity scope.
+
+    A token minted straight from https://www.strava.com/settings/api only
+    carries the "read" scope, which is not enough to list activities. Refreshing
+    such a token succeeds but every activity call still 401s, so say what is
+    actually wrong rather than blaming the refresh token.
+    """
+    if 'activity:read_permission' in body:
+        raise MissingScopeError(
+            "The Strava token is valid but was granted only the 'read' scope. "
+            "Listing activities needs 'activity:read_all'. Re-run "
+            "`make strava-refresh-token` and tick the box for viewing your "
+            "activity data on the consent screen, then update "
+            "STRAVA_REFRESH_TOKEN."
+        )
+
 def main():
     client_id = os.environ.get('STRAVA_CLIENT_ID')
     client_secret = os.environ.get('STRAVA_CLIENT_SECRET')
@@ -222,6 +246,8 @@ def main():
 
     try:
         runs = fetch_all_activities(access_token)
+    except MissingScopeError as e:
+        raise SystemExit(str(e))
     except AuthorizationError as e:
         print(f"Authorization failed: {e}")
         refreshed_token = refresh_access_token()
