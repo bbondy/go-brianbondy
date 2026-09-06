@@ -64,7 +64,7 @@
     "github": "https://github.com/brave-experiments/brave-bot",
     "description": "General-purpose agent designed as a drop-in replacement for Claude Code, Codex, and OpenCode, with structural resistance to indirect prompt injection.",
     "githubStats": {
-      "commitCount": 436,
+      "commitCount": 449,
       "prCount": 3
     }
   },
