@@ -69,9 +69,7 @@ func setupRoutesTestData() {
 	markdownMap["contact.markdown"] = "<h1>Contact</h1>"
 
 	markdownMap["advice.markdown"] = "<h1>Advice</h1>"
-	markdownMap["books.markdown"] = "<h1>Books</h1>"
 	markdownMap["resume.markdown"] = "<h1>Resume</h1>"
-	markdownMap["running.markdown"] = "<h1>Running</h1>"
 
 	// Add blog post markdown content
 	for _, post := range blogPosts {
