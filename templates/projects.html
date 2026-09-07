@@ -56,7 +56,7 @@
                     {{ $repo := (index (split (replace (replace .Github "https://github.com/" "") ".git" "") "/") 1) }}
                     {{ $base := printf "https://github.com/search?q=repo:%s/%s+author:bbondy" $owner $repo }}
                     {{if .SearchKeywords}}
-                      {{ $keywords := join .SearchKeywords " OR " }}
+                      {{ $keywords := printf "\"%s\"" (join .SearchKeywords "\" OR \"") }}
                       {{ printf "%s+(%s)&type=commits" $base $keywords }}
                     {{else}}
                       {{ printf "%s&type=commits" $base }}
@@ -69,7 +69,7 @@
                     {{ $repo := (index (split (replace (replace .Github "https://github.com/" "") ".git" "") "/") 1) }}
                     {{ $base := printf "https://github.com/search?q=repo:%s/%s+author:bbondy" $owner $repo }}
                     {{if .SearchKeywords}}
-                      {{ $keywords := join .SearchKeywords " OR " }}
+                      {{ $keywords := printf "\"%s\"" (join .SearchKeywords "\" OR \"") }}
                       {{ printf "%s+(%s)&type=pullrequests" $base $keywords }}
                     {{else}}
                       {{ printf "%s&type=pullrequests" $base }}

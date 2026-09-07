@@ -16,7 +16,7 @@ func TestProjectsPagePreservesManifestData(t *testing.T) {
 	data.ClearProjectsCache()
 	projects, err := data.GetProjects()
 	require.NoError(t, err)
-	require.Len(t, projects, 57)
+	require.Len(t, projects, 58)
 
 	w := httptest.NewRecorder()
 	r := httptest.NewRequest("GET", "/projects", nil)
