@@ -103,8 +103,8 @@ func TestAdvicePagePreservesEveryEntry(t *testing.T) {
 
 	body := renderCollectionPage(t, "/advice", adviceHandler)
 	unescaped := html.UnescapeString(body)
-	assert.Equal(t, 22, strings.Count(body, `class="card-entry"`))
-	assert.Contains(t, unescaped, "anything is understandable with the right background")
+	assert.Equal(t, 23, strings.Count(body, `class="card-entry"`))
+	assert.Contains(t, unescaped, "Anything is understandable with the right background")
 	assert.Contains(t, unescaped, "Arnold's Pump Club")
 }
 
