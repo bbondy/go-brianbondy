@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"os"
+	"path"
 	"strconv"
 	"strings"
 
@@ -73,12 +74,19 @@ func blogPostURL(post data.BlogPost) string {
 	return "/blog/" + strconv.Itoa(post.Id) + "/" + slugifyTitle(title)
 }
 
+// localizedMarkdownSlug points at a "<name>.<language>.<extension>" sibling of
+// the given markdown slug when one exists, so any markdown backed page can be
+// translated by dropping a file next to the English source.
 func localizedMarkdownSlug(slug, language string) string {
 	language = normalizeLanguage(language)
-	if language == defaultLanguage || !strings.HasPrefix(slug, "blog/") || !strings.HasSuffix(slug, ".markdown") {
+	if language == defaultLanguage {
 		return slug
 	}
-	translated := strings.TrimSuffix(slug, ".markdown") + "." + language + ".markdown"
+	extension := path.Ext(slug)
+	if extension != ".markdown" && extension != ".md" {
+		return slug
+	}
+	translated := strings.TrimSuffix(slug, extension) + "." + language + extension
 	if _, err := os.Stat("data/markdown/" + translated); err == nil {
 		return translated
 	}

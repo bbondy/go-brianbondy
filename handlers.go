@@ -434,7 +434,7 @@ func adviceHandler(w http.ResponseWriter, _ *http.Request) {
 	p := &data.SimpleMarkdownPage{
 		Title:        GetTitle("Advice"),
 		Description:  "Personal principles and lessons collected by Brian Bondy.",
-		Content:      getMarkdownData("advice.markdown"),
+		Content:      getLocalizedMarkdownData("advice.markdown", languageFromWriter(w)),
 		MarkdownSlug: "advice.markdown",
 		ShareUrl:     "/advice",
 	}

@@ -139,6 +139,29 @@ func TestLanguageMiddlewareExposesLocale(t *testing.T) {
 	}
 }
 
+func TestLocalizedMarkdownSlug(t *testing.T) {
+	tests := []struct {
+		name     string
+		slug     string
+		language string
+		want     string
+	}{
+		{"English keeps the source", "advice.markdown", "en", "advice.markdown"},
+		{"translated page", "advice.markdown", "fr", "advice.fr.markdown"},
+		{"translated blog post", "blog/187.markdown", "fr", "blog/187.fr.markdown"},
+		{"missing translation falls back", "about.markdown", "fr", "about.markdown"},
+		{"non markdown slug is untouched", "projects", "fr", "projects"},
+	}
+
+	for _, test := range tests {
+		t.Run(test.name, func(t *testing.T) {
+			if got := localizedMarkdownSlug(test.slug, test.language); got != test.want {
+				t.Fatalf("localizedMarkdownSlug(%q, %q) = %q, want %q", test.slug, test.language, got, test.want)
+			}
+		})
+	}
+}
+
 func TestFrenchTemplateRendering(t *testing.T) {
 	recorder := httptest.NewRecorder()
 	writer := localizedResponseWriter{ResponseWriter: recorder, language: "fr"}

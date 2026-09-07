@@ -108,6 +108,25 @@ func TestAdvicePagePreservesEveryEntry(t *testing.T) {
 	assert.Contains(t, unescaped, "Arnold's Pump Club")
 }
 
+func TestAdvicePageServesFrenchEntries(t *testing.T) {
+	originalMarkdownMap := markdownMap
+	markdownMap = make(map[string]string)
+	t.Cleanup(func() { markdownMap = originalMarkdownMap })
+
+	recorder := httptest.NewRecorder()
+	adviceHandler(localizedResponseWriter{ResponseWriter: recorder, language: "fr"},
+		httptest.NewRequest(http.MethodGet, "/advice", nil))
+	require.Equal(t, http.StatusOK, recorder.Code)
+
+	body := recorder.Body.String()
+	unescaped := html.UnescapeString(body)
+	assert.Equal(t, 23, strings.Count(body, `class="card-entry"`))
+	assert.Contains(t, unescaped, "Principes et leçons")
+	assert.Contains(t, unescaped, "Tout est compréhensible avec les bases nécessaires")
+	assert.Contains(t, unescaped, "Arnold’s Pump Club")
+	assert.NotContains(t, unescaped, "Anything is understandable with the right background")
+}
+
 func TestCollectionPagesUseSharedEditorialStyles(t *testing.T) {
 	tests := []struct {
 		path    string
