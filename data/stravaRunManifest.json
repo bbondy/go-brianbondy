@@ -1,5 +1,25 @@
 [
   {
+    "date": "2026-09-07",
+    "title": "Evening Stair-Stepper",
+    "distance_km": 0.0,
+    "time": "36m",
+    "pace": "",
+    "activity_id": "20081422592",
+    "type": "StairStepper",
+    "elevation": ""
+  },
+  {
+    "date": "2026-09-07",
+    "title": "6x hill intervals",
+    "distance_km": 5.9,
+    "time": "56m",
+    "pace": "9:30 min/km",
+    "activity_id": "20073442429",
+    "type": "Run",
+    "elevation": "184m"
+  },
+  {
     "date": "2026-09-06",
     "title": "Lunch Run",
     "distance_km": 7.04,
