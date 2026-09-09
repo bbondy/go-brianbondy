@@ -1,5 +1,25 @@
 [
   {
+    "date": "2026-09-08",
+    "title": "Morning Elliptical",
+    "distance_km": 0.0,
+    "time": "15m",
+    "pace": "",
+    "activity_id": "20087877086",
+    "type": "Elliptical",
+    "elevation": ""
+  },
+  {
+    "date": "2026-09-08",
+    "title": "Weight training",
+    "distance_km": 0.0,
+    "time": "1h 0m",
+    "pace": "",
+    "activity_id": "20087888597",
+    "type": "WeightTraining",
+    "elevation": ""
+  },
+  {
     "date": "2026-09-07",
     "title": "Evening Stair-Stepper",
     "distance_km": 0.0,
