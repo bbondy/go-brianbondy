@@ -1,5 +1,15 @@
 [
   {
+    "date": "2026-09-09",
+    "title": "6x 600m intervals - treadmill",
+    "distance_km": 9.44,
+    "time": "1h 0m",
+    "pace": "6:24 min/km",
+    "activity_id": "20102683330",
+    "type": "Run",
+    "elevation": ""
+  },
+  {
     "date": "2026-09-08",
     "title": "Morning Elliptical",
     "distance_km": 0.0,
