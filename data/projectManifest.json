@@ -74,10 +74,10 @@
     }
   },
   {
-    "title": "Brave Dev Bot",
+    "title": "Brave Dev Loop",
     "emoji": "🤖",
-    "url": "https://github.com/brave-experiments/brave-dev-bot",
-    "github": "https://github.com/brave-experiments/brave-dev-bot",
+    "url": "https://github.com/brave-experiments/brave-dev-loop",
+    "github": "https://github.com/brave-experiments/brave-dev-loop",
     "description": "Ralph Wiggum loop-inspired coding agent for Brave projects that reads PRDs, implements user stories, runs tests, creates PRs, handles review feedback, and manages CI in iterative loops.",
     "githubStats": {
       "commitCount": 443,

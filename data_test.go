@@ -202,7 +202,7 @@ func TestGetProjectsCaching(t *testing.T) {
 	assert.False(t, &projects2[0] == &projects3[0], "After clearing cache, should reload from file (different element pointer)")
 }
 
-func TestProjectsManifestIncludesBraveDevBotEmoji(t *testing.T) {
+func TestProjectsManifestIncludesBraveDevLoopEmoji(t *testing.T) {
 	data.ClearProjectsCache()
 
 	projects, err := data.GetProjects()
@@ -210,17 +210,17 @@ func TestProjectsManifestIncludesBraveDevBotEmoji(t *testing.T) {
 
 	found := false
 	for _, project := range projects {
-		if project.Github != "https://github.com/brave-experiments/brave-dev-bot" {
+		if project.Github != "https://github.com/brave-experiments/brave-dev-loop" {
 			continue
 		}
 
 		found = true
-		assert.Equal(t, "Brave Dev Bot", project.Title)
+		assert.Equal(t, "Brave Dev Loop", project.Title)
 		assert.Equal(t, "🤖", project.Emoji)
-		assert.Equal(t, "https://github.com/brave-experiments/brave-dev-bot", project.URL)
+		assert.Equal(t, "https://github.com/brave-experiments/brave-dev-loop", project.URL)
 	}
 
-	assert.True(t, found, "Brave Dev Bot project should exist in the manifest")
+	assert.True(t, found, "Brave Dev Loop project should exist in the manifest")
 }
 
 func TestProjectsManifestIncludesBraveBot(t *testing.T) {
