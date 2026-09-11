@@ -80,7 +80,7 @@
     "github": "https://github.com/brave-experiments/brave-dev-loop",
     "description": "Ralph Wiggum loop-inspired coding agent for Brave projects that reads PRDs, implements user stories, runs tests, creates PRs, handles review feedback, and manages CI in iterative loops.",
     "githubStats": {
-      "commitCount": 456,
+      "commitCount": 462,
       "prCount": 13
     }
   },
@@ -156,7 +156,7 @@
     "website": "https://www.brianbondy.com",
     "description": "The current website for brianbondy.com. This website is written in Go. The version before that was written in Node, Hapi, Redis React, and ES6 transpiled with Babel. Before that the previous versions were written in Google App Engine, Django, ASP .NET (C#), Flash / ActionScript, and the original one was generated from C++ code.",
     "githubStats": {
-      "commitCount": 318,
+      "commitCount": 319,
       "prCount": 0
     }
   },
