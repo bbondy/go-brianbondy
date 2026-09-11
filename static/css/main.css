@@ -1199,10 +1199,6 @@ h2 {
   color: white;
   box-shadow: 0 2px 8px rgba(77, 144, 254, 0.3);
 }
-
-.current {
-  border-bottom: 1px solid var(--link-color);
-}
 input,
 textarea {
   background-color: #fff;
