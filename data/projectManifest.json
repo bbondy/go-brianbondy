@@ -80,8 +80,8 @@
     "github": "https://github.com/brave-experiments/brave-dev-loop",
     "description": "Ralph Wiggum loop-inspired coding agent for Brave projects that reads PRDs, implements user stories, runs tests, creates PRs, handles review feedback, and manages CI in iterative loops.",
     "githubStats": {
-      "commitCount": 462,
-      "prCount": 13
+      "commitCount": 470,
+      "prCount": 14
     }
   },
   {
