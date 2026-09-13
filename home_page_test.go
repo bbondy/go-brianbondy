@@ -84,7 +84,12 @@ func TestHomePageNavigationAndThemeControls(t *testing.T) {
 	assert.Contains(t, content, `id="theme-toggle"`)
 	assert.Contains(t, content, `localStorage.getItem('palette')`)
 	assert.Contains(t, content, `localStorage.setItem('palette', palette)`)
-	for _, palette := range []string{"ocean", "forest", "ember", "violet", "rose", "gold", "slate"} {
-		assert.Contains(t, content, palette)
+	// Ocean is the default, so its variables live in the bare :root and
+	// [data-theme="dark"] blocks rather than in palette specific ones.
+	for _, palette := range []string{"forest", "ember", "violet", "rose", "gold", "slate", "teal", "indigo", "moss", "crimson", "plum"} {
+		assert.Contains(t, content, fmt.Sprintf(`:root[data-palette=%q] {`, palette))
+		assert.Contains(t, content, fmt.Sprintf(`:root[data-theme="dark"][data-palette=%q] {`, palette))
+		assert.Contains(t, content, fmt.Sprintf(`'%s'`, palette))
 	}
+	assert.Contains(t, content, `'ocean'`)
 }
