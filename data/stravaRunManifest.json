@@ -1,5 +1,25 @@
 [
   {
+    "date": "2026-09-15",
+    "title": "10x400m intervals treadmill",
+    "distance_km": 10.07,
+    "time": "1h 0m",
+    "pace": "5:58 min/km",
+    "activity_id": "20185004762",
+    "type": "Run",
+    "elevation": ""
+  },
+  {
+    "date": "2026-09-14",
+    "title": "Weight training",
+    "distance_km": 0.0,
+    "time": "1h 0m",
+    "pace": "",
+    "activity_id": "20184023838",
+    "type": "WeightTraining",
+    "elevation": ""
+  },
+  {
     "date": "2026-09-14",
     "title": "Morning Run",
     "distance_km": 8.27,
