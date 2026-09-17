@@ -1,5 +1,25 @@
 [
   {
+    "date": "2026-09-16",
+    "title": "Stair Stepper",
+    "distance_km": 0.0,
+    "time": "1h 0m",
+    "pace": "",
+    "activity_id": "20200220580",
+    "type": "StairStepper",
+    "elevation": ""
+  },
+  {
+    "date": "2026-09-15",
+    "title": "Weight training",
+    "distance_km": 0.0,
+    "time": "1h 0m",
+    "pace": "",
+    "activity_id": "20200229144",
+    "type": "WeightTraining",
+    "elevation": ""
+  },
+  {
     "date": "2026-09-15",
     "title": "10x400m intervals treadmill",
     "distance_km": 10.07,
