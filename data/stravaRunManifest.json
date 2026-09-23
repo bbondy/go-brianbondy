@@ -20,6 +20,16 @@
     "elevation": ""
   },
   {
+    "date": "2026-09-19",
+    "title": "BFC",
+    "distance_km": 42.2,
+    "time": "11h 19m",
+    "pace": "16:05 min/km",
+    "activity_id": "20281885004",
+    "type": "Run",
+    "elevation": "3048m"
+  },
+  {
     "date": "2026-09-18",
     "title": "Afternoon Walk",
     "distance_km": 2.07,
