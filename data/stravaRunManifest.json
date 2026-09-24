@@ -1,5 +1,15 @@
 [
   {
+    "date": "2026-09-23",
+    "title": "Weight training",
+    "distance_km": 0.0,
+    "time": "1h 0m",
+    "pace": "",
+    "activity_id": "20302448452",
+    "type": "WeightTraining",
+    "elevation": ""
+  },
+  {
     "date": "2026-09-21",
     "title": "Evening Walk",
     "distance_km": 1.12,
