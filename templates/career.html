@@ -1,8 +1,8 @@
 {{define "mountPoint"}}
 <article class="career-page editorial-page" id="career-top">
   <header class="career-archive-hero editorial-hero">
-    <p class="career-kicker editorial-kicker">{{t "Career & Technical Archive"}}</p>
     <h1 class="editorial-title">{{.Profile.Name}}</h1>
+    <p class="career-kicker editorial-kicker">{{t "Career & Technical Archive"}}</p>
     <p class="resume-headline">{{t .Profile.Headline}}</p>
     <p class="career-archive-intro">{{t "A chronological record of what I have built, the systems I have worked in, and the technologies accumulated along the way."}}</p>
     <div class="career-hero-actions">
@@ -32,8 +32,8 @@
 
   <section class="career-archive-section" id="career-history" aria-labelledby="career-history-heading">
     <header class="archive-section-heading">
-      <p>{{t "Chronology"}}</p>
       <h2 id="career-history-heading">{{t "Career history"}}</h2>
+      <p>{{t "Chronology"}}</p>
     </header>
 
     <div class="archive-roles">
@@ -66,14 +66,14 @@
 
   <section class="career-archive-section" id="technology-timeline" aria-labelledby="technology-timeline-heading">
     <header class="archive-section-heading">
-      <p>{{t "By era"}}</p>
       <h2 id="technology-timeline-heading">{{t "Technology timeline"}}</h2>
+      <p>{{t "By era"}}</p>
     </header>
     <div class="technology-timeline">
       {{range .Profile.Timeline}}
         <article class="timeline-entry">
-          <p class="timeline-era">{{t .Era}}</p>
           <h3>{{t .Title}}</h3>
+          <p class="timeline-era">{{t .Era}}</p>
           <p>{{t .Description}}</p>
           <p class="timeline-technologies">{{t .Technologies}}</p>
         </article>
@@ -83,8 +83,8 @@
 
   <section class="career-archive-section" id="technical-inventory" aria-labelledby="technical-inventory-heading">
     <header class="archive-section-heading">
-      <p>{{t "The whole toolbox"}}</p>
       <h2 id="technical-inventory-heading">{{t "Historical technical inventory"}}</h2>
+      <p>{{t "The whole toolbox"}}</p>
     </header>
     <p class="archive-section-intro">{{t "Tools age; the experience does not. This preserves the detailed inventory from earlier versions of my resume, including the IDE versions, protocols, systems, and libraries that mark each era."}}</p>
     <div class="inventory-list">
@@ -99,8 +99,8 @@
 
   <section class="career-archive-section" id="selected-projects" aria-labelledby="selected-projects-heading">
     <header class="archive-section-heading">
-      <p>{{t "Built along the way"}}</p>
       <h2 id="selected-projects-heading">{{t "Selected projects"}}</h2>
+      <p>{{t "Built along the way"}}</p>
     </header>
     <div class="archive-projects">
       {{range .Profile.Projects}}
@@ -115,8 +115,8 @@
 
   <section class="career-archive-section" id="education" aria-labelledby="archive-education-heading">
     <header class="archive-section-heading">
-      <p>{{t "Degree & coursework"}}</p>
       <h2 id="archive-education-heading">{{t "Education"}}</h2>
+      <p>{{t "Degree & coursework"}}</p>
     </header>
     <div class="archive-education">
       <h3>{{.Profile.Education.School}}</h3>
@@ -130,8 +130,8 @@
   <section class="career-archive-section archive-final-grid" aria-label="{{t "Additional background and interests"}}">
     <div>
       <header class="archive-section-heading archive-section-heading-small">
-        <p>{{t "Additional context"}}</p>
         <h2>{{t "Background"}}</h2>
+        <p>{{t "Additional context"}}</p>
       </header>
       <ul>
         {{range .Profile.ArchiveBackground}}<li>{{t .}}</li>{{end}}
@@ -139,8 +139,8 @@
     </div>
     <div>
       <header class="archive-section-heading archive-section-heading-small">
-        <p>{{t "Beyond software"}}</p>
         <h2>{{t "Interests"}}</h2>
+        <p>{{t "Beyond software"}}</p>
       </header>
       <ul>
         {{range .Profile.Interests}}<li>{{t .}}</li>{{end}}

@@ -1,10 +1,10 @@
 {{define "mountPoint"}}
 <article class="collection-page collection-page--pictures editorial-page" id="pictures-top">
   <header class="collection-hero editorial-hero">
-    <p class="collection-kicker editorial-kicker">{{t "Photo archive"}}</p>
     <h1 class="editorial-title">
       {{if .FilterTag}}{{t "%s pictures" (.FilterTag | title)}}{{else if gt .FilterBlogID 0}}{{t "Pictures from %s" .BlogPostTitle}}{{else}}{{t "Pictures gallery"}}{{end}}
     </h1>
+    <p class="collection-kicker editorial-kicker">{{t "Photo archive"}}</p>
     <p class="collection-intro editorial-intro">
       {{if .FilterTag}}
         {{t "Photos tagged"}} <a href="/all?tag={{.FilterTag}}">{{.FilterTag}}</a>. <a href="/pictures">{{t "View the complete gallery."}}</a>

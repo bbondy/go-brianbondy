@@ -2,7 +2,6 @@
 <article class="all-posts-page editorial-page" id="all-posts-top">
   <header class="all-posts-hero editorial-hero">
     <div class="all-posts-hero-copy">
-      <p class="all-posts-kicker editorial-kicker">{{t "Writing archive"}}</p>
       <h1 class="editorial-title">
         {{if and .Tag .Year}}
           {{t "Blog Posts from %d Tagged with “%s”" .Year .Tag}}
@@ -14,6 +13,7 @@
           {{t "All Blog Posts"}}
         {{end}}
       </h1>
+      <p class="all-posts-kicker editorial-kicker">{{t "Writing archive"}}</p>
       <p class="all-posts-intro editorial-intro">{{t "Writing about software, privacy, running, business, family, and other things I wanted to remember or share."}}</p>
     </div>
   </header>
@@ -44,8 +44,8 @@
 
   <section class="all-posts-archive" aria-labelledby="all-posts-archive-heading">
     <header class="all-posts-section-heading editorial-section-heading">
-      <p>{{t "Archive"}}</p>
       <h2 id="all-posts-archive-heading">{{len .Posts}} {{if eq (len .Posts) 1}}{{t "post"}}{{else}}{{t "posts"}}{{end}}</h2>
+      <p>{{t "Archive"}}</p>
     </header>
 
     <div class="all-posts-list" id="post-list">

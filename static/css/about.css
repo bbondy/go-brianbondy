@@ -217,13 +217,13 @@
   font-size: 0.66rem;
   font-weight: 750;
   letter-spacing: 0.09em;
-  margin: 0 0 8px;
+  margin: 0 0 9px;
   text-transform: uppercase;
 }
 
 .about-work-grid h3 {
   font-size: 1.06rem;
-  margin: 0 0 9px;
+  margin: 0 0 5px;
 }
 
 .about-work-feature h3 {
@@ -348,6 +348,10 @@
   font-size: clamp(1.45rem, 4vw, 2rem);
   letter-spacing: -0.03em;
   margin: 0;
+}
+
+.about-closing .about-kicker {
+  margin-top: 9px;
 }
 
 .about-closing > p:not(.about-kicker) {

@@ -2,8 +2,8 @@
 <article class="running-page editorial-page" id="running-top">
   <header class="running-hero editorial-hero">
     <div class="running-hero-copy">
-      <p class="running-kicker editorial-kicker">{{t "Running & endurance"}}</p>
       <h1 class="editorial-title">{{t "Runs"}}</h1>
+      <p class="running-kicker editorial-kicker">{{t "Running & endurance"}}</p>
       <blockquote class="running-quote">
         <p class="quote-text">{{t "We are what we repeatedly do. Excellence, then, is not an act, but a habit."}}</p>
         <cite class="quote-author">— Will Durant</cite>
@@ -13,8 +13,8 @@
 
   <section class="running-activity-section" aria-labelledby="running-activity-heading">
     <header class="running-section-heading editorial-section-heading">
-      <p>{{t "Activity archive"}}</p>
       <h2 id="running-activity-heading">{{t "Running Activity"}} ({{if or (eq .SelectedYear "") (eq .SelectedYear "all")}}{{t "All time"}}{{else if eq .SelectedYear "365"}}{{t "Last 365 Days"}}{{else}}{{.SelectedYear}}{{end}})</h2>
+      <p>{{t "Activity archive"}}</p>
     </header>
 
     {{with .ContributionGraph2D}}
@@ -38,8 +38,8 @@
 
       <div class="contribution-graph-section running-panel running-calendar-panel">
         <div class="running-panel-heading">
-          <p>{{t "Daily activity"}}</p>
           <h3>{{t "Calendar"}}</h3>
+          <p>{{t "Daily activity"}}</p>
         </div>
         <div class="contribution-graph-outer">
           <div class="contribution-graph-main">
@@ -601,8 +601,8 @@
 
   <section class="running-runs-section" aria-labelledby="memorable-runs-heading">
     <header class="running-section-heading editorial-section-heading">
-      <p>{{t "Archive"}}</p>
       <h2 id="memorable-runs-heading">{{t "Memorable Runs"}}</h2>
+      <p>{{t "Archive"}}</p>
     </header>
 
     <div class="running-search-group">

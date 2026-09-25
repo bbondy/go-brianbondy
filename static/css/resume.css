@@ -190,6 +190,11 @@
   margin: 0;
 }
 
+.archive-section-heading {
+  flex-wrap: wrap;
+  row-gap: 3px;
+}
+
 .resume-roles {
   display: grid;
   gap: 36px;
@@ -519,13 +524,13 @@
   font-size: 0.7rem;
   font-weight: 700;
   letter-spacing: 0.07em;
-  margin: 0 0 4px;
+  margin: 0 0 8px;
   text-transform: uppercase;
 }
 
 .timeline-entry h3 {
   font-size: 1.05rem;
-  margin: 0 0 8px;
+  margin: 0 0 4px;
 }
 
 .timeline-entry > p:not(.timeline-era) {
@@ -638,6 +643,9 @@
 
 .archive-section-heading-small h2 {
   font-size: 1.2rem;
+}
+
+.archive-section-heading-small > p {
   margin-top: 3px;
 }
 
