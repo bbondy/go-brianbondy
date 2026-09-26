@@ -29,7 +29,7 @@ var sortedTags []string
 // tagGroupDefinitions controls the category order on the filters page. Tags
 // not listed here remain visible in the final "Other" group.
 var tagGroupDefinitions = []data.TagGroup{
-	{Name: "Running", Tags: []string{"running", "byu", "cocodona", "destination-trails", "hurt100", "tahoe"}},
+	{Name: "Running", Tags: []string{"running", "bfc", "byu", "cocodona", "destination-trails", "hurt100", "tahoe"}},
 	{Name: "Programming", Tags: []string{"ai", "c", "c++", "c++0x", "c-sharp", "data-structure", "development", "django", "electron", "g++", "javascript", "node", "nodejs", "objective-c", "programming", "python", "stl"}},
 	{Name: "Browsers", Tags: []string{"brave", "codefirefox", "firebug", "firefox", "firefox-ios", "firefox-os", "gecko", "mozilla", "snappy", "thunderbird", "xul", "xpcom"}},
 	{Name: "Web Development", Tags: []string{"akismet", "analytics", "captcha", "css", "dataurl", "google-app-engine", "html", "html5", "http", "nofollow", "seo", "site", "svg", "urlzip", "web", "xhtml"}},
