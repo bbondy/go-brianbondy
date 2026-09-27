@@ -87,7 +87,7 @@ func TestPicturesPagePreservesManifestData(t *testing.T) {
 	ClearPicturesCache()
 	pictures, err := getCachedPictures()
 	require.NoError(t, err)
-	require.Len(t, pictures, 318)
+	require.Len(t, pictures, 339)
 
 	body := renderCollectionPage(t, "/pictures", picturesHandler)
 	assert.Equal(t, len(pictures), strings.Count(body, `class="picture-entry"`))
