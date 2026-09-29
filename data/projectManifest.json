@@ -8,7 +8,7 @@
     "blogPostID": 174,
     "description": "Block ads and trackers, saves data, and speeds up web browsing.",
     "githubStats": {
-      "commitCount": 2702,
+      "commitCount": 2703,
       "prCount": 968
     }
   },
@@ -80,7 +80,7 @@
     "github": "https://github.com/brave-experiments/brave-dev-loop",
     "description": "Ralph Wiggum loop-inspired coding agent for Brave projects that reads PRDs, implements user stories, runs tests, creates PRs, handles review feedback, and manages CI in iterative loops.",
     "githubStats": {
-      "commitCount": 523,
+      "commitCount": 527,
       "prCount": 18
     }
   },
