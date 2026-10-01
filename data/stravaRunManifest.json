@@ -1,5 +1,15 @@
 [
   {
+    "date": "2026-09-30",
+    "title": "6x hill intervalls, walk back down",
+    "distance_km": 6.73,
+    "time": "55m",
+    "pace": "8:16 min/km",
+    "activity_id": "20393038969",
+    "type": "Run",
+    "elevation": "148m"
+  },
+  {
     "date": "2026-09-29",
     "title": "Morning Stair-Stepper",
     "distance_km": 0.0,
