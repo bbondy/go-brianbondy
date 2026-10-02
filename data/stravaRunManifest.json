@@ -1,5 +1,25 @@
 [
   {
+    "date": "2026-10-01",
+    "title": "Weight Training",
+    "distance_km": 0.0,
+    "time": "1h 0m",
+    "pace": "",
+    "activity_id": "20414823216",
+    "type": "WeightTraining",
+    "elevation": ""
+  },
+  {
+    "date": "2026-10-01",
+    "title": "12x300m intervals with increasing pace",
+    "distance_km": 10.55,
+    "time": "1h 0m",
+    "pace": "5:43 min/km",
+    "activity_id": "20406896882",
+    "type": "Run",
+    "elevation": ""
+  },
+  {
     "date": "2026-09-30",
     "title": "6x hill intervalls, walk back down",
     "distance_km": 6.73,
