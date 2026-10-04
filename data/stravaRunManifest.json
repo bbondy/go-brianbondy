@@ -1,5 +1,25 @@
 [
   {
+    "date": "2026-10-03",
+    "title": "Evening Stair-Stepper",
+    "distance_km": 0.0,
+    "time": "45m",
+    "pace": "",
+    "activity_id": "20439631471",
+    "type": "StairStepper",
+    "elevation": ""
+  },
+  {
+    "date": "2026-10-03",
+    "title": "Morning Run",
+    "distance_km": 8.2,
+    "time": "1h 0m",
+    "pace": "7:19 min/km",
+    "activity_id": "20433839852",
+    "type": "Run",
+    "elevation": "150m"
+  },
+  {
     "date": "2026-10-02",
     "title": "Morning Run",
     "distance_km": 10.01,
