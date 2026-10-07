@@ -1,5 +1,25 @@
 [
   {
+    "date": "2026-10-06",
+    "title": "Morning Run",
+    "distance_km": 12.02,
+    "time": "1h 18m",
+    "pace": "6:31 min/km",
+    "activity_id": "20474754986",
+    "type": "Run",
+    "elevation": "78m"
+  },
+  {
+    "date": "2026-10-05",
+    "title": "Weight training",
+    "distance_km": 0.0,
+    "time": "1h 0m",
+    "pace": "",
+    "activity_id": "20475212408",
+    "type": "WeightTraining",
+    "elevation": ""
+  },
+  {
     "date": "2026-10-05",
     "title": "12x300m Treadmill",
     "distance_km": 10.4,
