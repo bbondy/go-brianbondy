@@ -207,6 +207,13 @@
   object-fit: contain;
   transition: transform 0.3s ease;
   cursor: grab;
+  touch-action: none;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.lightbox-image.is-gesturing {
+  transition: none;
 }
 
 .lightbox-image:active {

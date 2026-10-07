@@ -930,8 +930,8 @@
     </style>
     
     <!-- Non-critical CSS loaded asynchronously -->
-        <link rel="stylesheet" href="/static/css/main.css?v=172" media="print" onload="this.media='all'">
-    <noscript><link rel="stylesheet" href="/static/css/main.css?v=172"></noscript>
+        <link rel="stylesheet" href="/static/css/main.css?v=174" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="/static/css/main.css?v=174"></noscript>
     {{if or (eq .MarkdownSlug "home") (eq .MarkdownSlug "about.markdown") (eq .MarkdownSlug "contact.markdown") (eq .MarkdownSlug "projects") (eq .MarkdownSlug "resume") (eq .MarkdownSlug "career") (eq .MarkdownSlug "running") (eq .MarkdownSlug "all") (eq .MarkdownSlug "filters") (eq .MarkdownSlug "pictures") (eq .MarkdownSlug "interviews") (eq .MarkdownSlug "cheatsheets") (eq .MarkdownSlug "books") (eq .MarkdownSlug "advice.markdown")}}
     <link rel="stylesheet" href="/static/css/editorial.css?v=4">
     {{end}}
@@ -972,8 +972,8 @@
     <noscript><link rel="stylesheet" href="/static/css/highlight-default.css"></noscript>
 
     {{if or (avail "BlogPost" .) (avail "Pictures" .)}}
-    <link rel="stylesheet" href="/static/css/lightbox.css?v=1" media="print" onload="this.media='all'">
-    <noscript><link rel="stylesheet" href="/static/css/lightbox.css?v=1"></noscript>
+    <link rel="stylesheet" href="/static/css/lightbox.css?v=2" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="/static/css/lightbox.css?v=2"></noscript>
     {{end}}
     
     <!-- Optimized favicon -->
@@ -1083,9 +1083,9 @@
     <div id="lightbox" class="lightbox">
       <span class="lightbox-close">&times;</span>
       <div class="lightbox-controls">
-        <button class="lightbox-zoom-in" id="lightbox-zoom-in" title="{{t "Zoom In"}}">+</button>
-        <button class="lightbox-zoom-out" id="lightbox-zoom-out" title="{{t "Zoom Out"}}">−</button>
-        <button class="lightbox-reset" id="lightbox-reset" title="{{t "Reset Zoom"}}">⟲</button>
+        <button type="button" class="lightbox-zoom-in" id="lightbox-zoom-in" title="{{t "Zoom In"}}">+</button>
+        <button type="button" class="lightbox-zoom-out" id="lightbox-zoom-out" title="{{t "Zoom Out"}}">−</button>
+        <button type="button" class="lightbox-reset" id="lightbox-reset" title="{{t "Reset Zoom"}}">⟲</button>
       </div>
       <div class="lightbox-content">
         <img class="lightbox-image" id="lightbox-image" src="" alt="">
@@ -1117,6 +1117,15 @@
         let dragStartY = 0;
         let translateX = 0;
         let translateY = 0;
+        let isPinching = false;
+        let pinchStartDistance = 0;
+        let pinchStartZoom = 1;
+        let pinchBaseCenterX = 0;
+        let pinchBaseCenterY = 0;
+        let pinchContentX = 0;
+        let pinchContentY = 0;
+        const minZoom = 0.5;
+        const maxZoom = 3;
         window.images = images;
 
         // Initialize lightbox for blog post images or gallery
@@ -1141,7 +1150,30 @@
         }
 
         function updateImageTransform() {
-          lightboxImage.style.transform = `scale(${currentZoom}) translate(${translateX}px, ${translateY}px)`;
+          lightboxImage.style.transform = `translate3d(${translateX}px, ${translateY}px, 0) scale(${currentZoom})`;
+        }
+
+        function setZoom(zoom) {
+          currentZoom = Math.min(maxZoom, Math.max(minZoom, zoom));
+          if (currentZoom <= 1) {
+            translateX = 0;
+            translateY = 0;
+          }
+          updateImageTransform();
+        }
+
+        function touchDistance(touches) {
+          return Math.hypot(
+            touches[0].clientX - touches[1].clientX,
+            touches[0].clientY - touches[1].clientY
+          );
+        }
+
+        function touchMidpoint(touches) {
+          return {
+            x: (touches[0].clientX + touches[1].clientX) / 2,
+            y: (touches[0].clientY + touches[1].clientY) / 2
+          };
         }
 
         function lightboxSource(img) {
@@ -1206,46 +1238,39 @@
         }
 
         // Zoom control event listeners
-        lightboxZoomIn.addEventListener('click', function() {
-          if (currentZoom < 3) {
-            currentZoom += 0.5;
-            updateImageTransform();
-          }
+        lightboxZoomIn.addEventListener('click', function(e) {
+          e.stopPropagation();
+          setZoom(currentZoom + 0.5);
         });
 
-        lightboxZoomOut.addEventListener('click', function() {
-          if (currentZoom > 0.5) {
-            currentZoom -= 0.5;
-            updateImageTransform();
-          }
+        lightboxZoomOut.addEventListener('click', function(e) {
+          e.stopPropagation();
+          setZoom(currentZoom - 0.5);
         });
 
-        lightboxReset.addEventListener('click', resetZoom);
+        lightboxReset.addEventListener('click', function(e) {
+          e.stopPropagation();
+          resetZoom();
+        });
 
         // Mouse wheel zoom
         lightboxImage.addEventListener('wheel', function(e) {
           e.preventDefault();
           if (e.deltaY < 0) {
-            // Zoom in
-            if (currentZoom < 3) {
-              currentZoom += 0.2;
-              updateImageTransform();
-            }
+            setZoom(currentZoom + 0.2);
           } else {
-            // Zoom out
-            if (currentZoom > 0.5) {
-              currentZoom -= 0.2;
-              updateImageTransform();
-            }
+            setZoom(currentZoom - 0.2);
           }
         });
 
         // Mouse drag functionality
         lightboxImage.addEventListener('mousedown', function(e) {
           if (currentZoom > 1) {
+            e.preventDefault();
             isDragging = true;
             dragStartX = e.clientX - translateX;
             dragStartY = e.clientY - translateY;
+            lightboxImage.classList.add('is-gesturing');
             lightboxImage.style.cursor = 'grabbing';
           }
         });
@@ -1260,29 +1285,72 @@
 
         document.addEventListener('mouseup', function() {
           isDragging = false;
+          lightboxImage.classList.remove('is-gesturing');
           lightboxImage.style.cursor = 'grab';
         });
 
-        // Touch support for mobile
+        // Touch panning and pinch-to-zoom support for mobile
         lightboxImage.addEventListener('touchstart', function(e) {
-          if (currentZoom > 1 && e.touches.length === 1) {
+          if (e.touches.length === 2) {
+            e.preventDefault();
+            isPinching = true;
+            isDragging = false;
+            pinchStartDistance = Math.max(touchDistance(e.touches), 1);
+            pinchStartZoom = currentZoom;
+
+            const midpoint = touchMidpoint(e.touches);
+            const imageRect = lightboxImage.getBoundingClientRect();
+            pinchBaseCenterX = imageRect.left + imageRect.width / 2 - translateX;
+            pinchBaseCenterY = imageRect.top + imageRect.height / 2 - translateY;
+            pinchContentX = (midpoint.x - pinchBaseCenterX - translateX) / currentZoom;
+            pinchContentY = (midpoint.y - pinchBaseCenterY - translateY) / currentZoom;
+            lightboxImage.classList.add('is-gesturing');
+          } else if (currentZoom > 1 && e.touches.length === 1) {
             isDragging = true;
             dragStartX = e.touches[0].clientX - translateX;
             dragStartY = e.touches[0].clientY - translateY;
+            lightboxImage.classList.add('is-gesturing');
           }
-        });
+        }, { passive: false });
 
-        document.addEventListener('touchmove', function(e) {
-          if (isDragging && currentZoom > 1 && e.touches.length === 1) {
+        lightboxImage.addEventListener('touchmove', function(e) {
+          if (isPinching && e.touches.length === 2) {
+            e.preventDefault();
+            const distance = touchDistance(e.touches);
+            const midpoint = touchMidpoint(e.touches);
+            currentZoom = Math.min(maxZoom, Math.max(minZoom,
+              pinchStartZoom * distance / pinchStartDistance));
+
+            if (currentZoom > 1) {
+              translateX = midpoint.x - pinchBaseCenterX - currentZoom * pinchContentX;
+              translateY = midpoint.y - pinchBaseCenterY - currentZoom * pinchContentY;
+            } else {
+              translateX = 0;
+              translateY = 0;
+            }
+            updateImageTransform();
+          } else if (isDragging && currentZoom > 1 && e.touches.length === 1) {
             e.preventDefault();
             translateX = e.touches[0].clientX - dragStartX;
             translateY = e.touches[0].clientY - dragStartY;
             updateImageTransform();
           }
+        }, { passive: false });
+
+        lightboxImage.addEventListener('touchend', function(e) {
+          if (isPinching && e.touches.length < 2) {
+            isPinching = false;
+          }
+          if (e.touches.length === 0) {
+            isDragging = false;
+            lightboxImage.classList.remove('is-gesturing');
+          }
         });
 
-        document.addEventListener('touchend', function() {
+        lightboxImage.addEventListener('touchcancel', function() {
+          isPinching = false;
           isDragging = false;
+          lightboxImage.classList.remove('is-gesturing');
         });
 
         // Event listeners
@@ -1306,16 +1374,10 @@
               break;
             case '+':
             case '=':
-              if (currentZoom < 3) {
-                currentZoom += 0.5;
-                updateImageTransform();
-              }
+              setZoom(currentZoom + 0.5);
               break;
             case '-':
-              if (currentZoom > 0.5) {
-                currentZoom -= 0.5;
-                updateImageTransform();
-              }
+              setZoom(currentZoom - 0.5);
               break;
             case '0':
               resetZoom();
@@ -1332,21 +1394,37 @@
         // Swipe gesture support for touch devices
         let touchStartX = 0;
         let touchEndX = 0;
+        let touchStartY = 0;
+        let touchEndY = 0;
+        let isSwipeGesture = false;
         const swipeThreshold = 50; // Minimum px distance for swipe
 
         lightbox.addEventListener('touchstart', function(e) {
-          if (e.touches.length === 1) {
+          const isInteractiveControl = e.target.closest(
+            '.lightbox-controls, .lightbox-close, .lightbox-nav'
+          );
+          isSwipeGesture = e.touches.length === 1 && currentZoom <= 1 && !isInteractiveControl;
+          if (isSwipeGesture) {
             touchStartX = e.touches[0].clientX;
+            touchEndX = touchStartX;
+            touchStartY = e.touches[0].clientY;
+            touchEndY = touchStartY;
           }
         });
         lightbox.addEventListener('touchmove', function(e) {
-          if (e.touches.length === 1) {
+          if (isSwipeGesture && e.touches.length === 1) {
             touchEndX = e.touches[0].clientX;
+            touchEndY = e.touches[0].clientY;
+          } else {
+            isSwipeGesture = false;
           }
         });
-        lightbox.addEventListener('touchend', function(e) {
+        lightbox.addEventListener('touchend', function() {
+          if (!isSwipeGesture) return;
+
           const deltaX = touchEndX - touchStartX;
-          if (Math.abs(deltaX) > swipeThreshold) {
+          const deltaY = touchEndY - touchStartY;
+          if (Math.abs(deltaX) > swipeThreshold && Math.abs(deltaX) > Math.abs(deltaY)) {
             if (deltaX < 0) {
               showNext(); // Swipe left
             } else {
@@ -1356,6 +1434,12 @@
           // Reset
           touchStartX = 0;
           touchEndX = 0;
+          touchStartY = 0;
+          touchEndY = 0;
+          isSwipeGesture = false;
+        });
+        lightbox.addEventListener('touchcancel', function() {
+          isSwipeGesture = false;
         });
 
         // Try to auto-detect gallery or blog context
