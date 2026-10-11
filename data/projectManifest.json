@@ -81,7 +81,7 @@
     "description": "Ralph Wiggum loop-inspired coding agent for Brave projects that reads PRDs, implements user stories, runs tests, creates PRs, handles review feedback, and manages CI in iterative loops.",
     "githubStats": {
       "commitCount": 562,
-      "prCount": 18
+      "prCount": 19
     }
   },
   {
