@@ -1,5 +1,35 @@
 [
   {
+    "date": "2026-10-14",
+    "title": "Stair Stepper",
+    "distance_km": 0.0,
+    "time": "1h 0m",
+    "pace": "",
+    "activity_id": "20590131255",
+    "type": "StairStepper",
+    "elevation": ""
+  },
+  {
+    "date": "2026-10-14",
+    "title": "Morning Run",
+    "distance_km": 10.03,
+    "time": "1h 4m",
+    "pace": "6:27 min/km",
+    "activity_id": "20582339929",
+    "type": "Run",
+    "elevation": "34m"
+  },
+  {
+    "date": "2026-10-13",
+    "title": "Weight training",
+    "distance_km": 0.0,
+    "time": "1h 0m",
+    "pace": "",
+    "activity_id": "20582240042",
+    "type": "WeightTraining",
+    "elevation": ""
+  },
+  {
     "date": "2026-10-13",
     "title": "10x400m treadmill",
     "distance_km": 10.51,
