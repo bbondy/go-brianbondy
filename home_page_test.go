@@ -83,6 +83,13 @@ func TestHomePageNavigationAndThemeControls(t *testing.T) {
 
 	assert.Contains(t, content, `id="palette-toggle"`)
 	assert.Contains(t, content, `id="theme-toggle"`)
+	assert.Contains(t, content, `id="theme-icon" aria-hidden="true">🖥️</span>`)
+	assert.Contains(t, content, `id="next-theme-icon" aria-hidden="true">☀️</span>`)
+	assert.Contains(t, content, `<span class="toggle-current" aria-hidden="true">EN</span>`)
+	assert.Contains(t, content, `<span class="toggle-preview" aria-hidden="true">FR</span>`)
+	assert.Contains(t, content, `.theme-toggle:hover .toggle-preview,`)
+	assert.Contains(t, content, `.theme-toggle:focus-visible .toggle-preview {`)
+	assert.Contains(t, content, `const nextThemePreference = { system: 'light', light: 'dark', dark: 'system' };`)
 	assert.Contains(t, content, `System theme. Click for light mode`)
 	assert.Contains(t, content, `enum: ['light', 'dark', 'system']`)
 	assert.Contains(t, content, `setTheme('system', false)`)

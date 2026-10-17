@@ -899,6 +899,15 @@
       .theme-toggle .icon {
         font-size: 1.1em;
       }
+      .toggle-preview,
+      .theme-toggle:hover .toggle-current,
+      .theme-toggle:focus-visible .toggle-current {
+        display: none;
+      }
+      .theme-toggle:hover .toggle-preview,
+      .theme-toggle:focus-visible .toggle-preview {
+        display: inline;
+      }
       .palette-icon {
         color: var(--palette-swatch);
         font-size: 1rem;
@@ -1041,13 +1050,15 @@
         </ul>
         <div class="theme-controls">
           <button class="theme-toggle" id="theme-toggle" type="button" title="{{t "System theme. Click for light mode"}}" aria-label="{{t "System theme. Click for light mode"}}">
-            <span class="icon" id="theme-icon" aria-hidden="true">🖥️</span>
+            <span class="icon toggle-current" id="theme-icon" aria-hidden="true">🖥️</span>
+            <span class="icon toggle-preview" id="next-theme-icon" aria-hidden="true">☀️</span>
           </button>
           <button class="theme-toggle palette-toggle" id="palette-toggle" type="button" title="{{t "Color palette: Ocean"}}" aria-label="{{t "Color palette: Ocean. Click for Forest"}}">
             <i class="fas fa-palette palette-icon" id="palette-icon" aria-hidden="true"></i>
           </button>
           <button class="theme-toggle language-toggle" id="language-toggle" type="button" data-language="{{alternateLang}}" title="{{if eq (lang) "en"}}{{t "View site in French"}}{{else}}{{t "View site in English"}}{{end}}" aria-label="{{if eq (lang) "en"}}{{t "View site in French"}}{{else}}{{t "View site in English"}}{{end}}">
-            {{if eq (lang) "fr"}}FR{{else}}EN{{end}}
+            <span class="toggle-current" aria-hidden="true">{{if eq (lang) "fr"}}FR{{else}}EN{{end}}</span>
+            <span class="toggle-preview" aria-hidden="true">{{if eq (lang) "fr"}}EN{{else}}FR{{end}}</span>
           </button>
         </div>
       </div>
@@ -1707,6 +1718,9 @@
       (function() {
         const themeToggle = document.getElementById('theme-toggle');
         const themeIcon = document.getElementById('theme-icon');
+        const nextThemeIcon = document.getElementById('next-theme-icon');
+        const themeIcons = { system: '🖥️', light: '☀️', dark: '🌙' };
+        const nextThemePreference = { system: 'light', light: 'dark', dark: 'system' };
         
         const root = document.documentElement;
         const systemThemeQuery = window.matchMedia ? window.matchMedia('(prefers-color-scheme: dark)') : null;
@@ -1717,7 +1731,8 @@
             light: window.siteT('Light theme. Click for dark mode'),
             dark: window.siteT('Dark theme. Click for system mode')
           };
-          themeIcon.textContent = preference === 'system' ? '🖥️' : preference === 'light' ? '☀️' : '🌙';
+          themeIcon.textContent = themeIcons[preference];
+          nextThemeIcon.textContent = themeIcons[nextThemePreference[preference]];
           const label = labels[preference];
           themeToggle.title = label;
           themeToggle.setAttribute('aria-label', label);
@@ -1745,8 +1760,7 @@
         // Toggle theme
         themeToggle.addEventListener('click', function() {
           const currentPreference = root.getAttribute('data-theme-preference');
-          const nextPreference = currentPreference === 'system' ? 'light' : currentPreference === 'light' ? 'dark' : 'system';
-          setTheme(nextPreference, true);
+          setTheme(nextThemePreference[currentPreference], true);
         });
         
         // Listen for system theme changes
