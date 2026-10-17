@@ -5,6 +5,7 @@ import (
 	"html"
 	"io"
 	"net/http/httptest"
+	"regexp"
 	"strings"
 	"testing"
 
@@ -95,4 +96,54 @@ func TestHomePageNavigationAndThemeControls(t *testing.T) {
 		assert.Contains(t, content, fmt.Sprintf(`'%s'`, palette))
 	}
 	assert.Contains(t, content, `'ocean'`)
+}
+
+func TestPaletteTogglePreviewsNextPaletteColor(t *testing.T) {
+	setupTestEnvironment(t)
+
+	recorder := httptest.NewRecorder()
+	homePageHandler(recorder, httptest.NewRequest("GET", "/", nil))
+	require.Equal(t, 200, recorder.Code)
+	body, err := io.ReadAll(recorder.Result().Body)
+	require.NoError(t, err)
+	content := html.UnescapeString(string(body))
+
+	assert.Contains(t, content, `color: var(--next-palette-swatch);`)
+	readColor := func(selector, variable string) string {
+		block := regexp.MustCompile(regexp.QuoteMeta(selector) + `\s*\{([^{}]*)\}`).FindStringSubmatch(content)
+		require.Len(t, block, 2, "missing CSS block for %s", selector)
+		property := regexp.MustCompile(regexp.QuoteMeta(variable) + `:\s*([^;]+);`).FindStringSubmatch(block[1])
+		require.Len(t, property, 2, "missing %s in %s", variable, selector)
+		return strings.TrimSpace(property[1])
+	}
+
+	palettes := []struct {
+		name  string
+		light string
+		dark  string
+	}{
+		{"ocean", "#1483b3", "#59c0ff"},
+		{"forest", "#177a57", "#61d3a4"},
+		{"ember", "#b5512c", "#ff9a67"},
+		{"violet", "#7350ad", "#bc9cff"},
+		{"rose", "#b34b70", "#ff8fb5"},
+		{"gold", "#a67816", "#e6be66"},
+		{"slate", "#607b96", "#9db2c7"},
+		{"teal", "#0f7f80", "#4fd2d2"},
+		{"indigo", "#4453a6", "#8f9dff"},
+		{"moss", "#5f7a1c", "#b3d15f"},
+		{"crimson", "#b32f38", "#ff8b91"},
+		{"plum", "#973d8a", "#eb92dc"},
+	}
+	for index, palette := range palettes {
+		nextPalette := palettes[(index+1)%len(palettes)]
+		lightSelector := fmt.Sprintf(`:root[data-palette=%q]`, palette.name)
+		darkSelector := fmt.Sprintf(`:root[data-theme="dark"][data-palette=%q]`, palette.name)
+		if palette.name == "ocean" {
+			lightSelector = ":root"
+			darkSelector = `[data-theme="dark"]`
+		}
+		assert.Equal(t, nextPalette.light, readColor(lightSelector, "--next-palette-swatch"), "%s in light mode", palette.name)
+		assert.Equal(t, nextPalette.dark, readColor(darkSelector, "--next-palette-swatch"), "%s in dark mode", palette.name)
+	}
 }
