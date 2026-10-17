@@ -181,6 +181,8 @@ func TestFrenchTemplateRendering(t *testing.T) {
 		`<h1 class="editorial-title">Course, travail et vie</h1>`,
 		`id="language-toggle"`,
 		`data-language="en"`,
+		`<span class="toggle-current" aria-hidden="true">FR</span>`,
+		`<span class="toggle-preview" aria-hidden="true">EN</span>`,
 	} {
 		if !strings.Contains(html, expected) {
 			t.Errorf("French HTML does not contain %q", expected)
