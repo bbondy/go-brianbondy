@@ -1,6 +1,7 @@
 package main
 
 import (
+	"encoding/json"
 	"net/http"
 	"net/http/httptest"
 	"os"
@@ -159,6 +160,46 @@ func TestLocalizedMarkdownSlug(t *testing.T) {
 				t.Fatalf("localizedMarkdownSlug(%q, %q) = %q, want %q", test.slug, test.language, got, test.want)
 			}
 		})
+	}
+}
+
+func TestLatestBlogPostFrenchTranslation(t *testing.T) {
+	if got := localizedMarkdownSlug("blog/191.markdown", "fr"); got != "blog/191.fr.markdown" {
+		t.Fatalf("localizedMarkdownSlug() = %q, want French sidecar", got)
+	}
+
+	metadataBytes, err := os.ReadFile("data/blogPostTranslations.fr.json")
+	if err != nil {
+		t.Fatal(err)
+	}
+	var metadata map[int]blogPostTranslation
+	if err := json.Unmarshal(metadataBytes, &metadata); err != nil {
+		t.Fatal(err)
+	}
+	translation := metadata[191]
+	if !strings.HasPrefix(translation.Title, "Tout le monde saigne sur Rat Jaw") || !strings.Contains(translation.Description, "ronces") {
+		t.Fatal("latest post is missing French title or description")
+	}
+
+	source, err := os.ReadFile("data/markdown/blog/191.markdown")
+	if err != nil {
+		t.Fatal(err)
+	}
+	translated, err := os.ReadFile("data/markdown/blog/191.fr.markdown")
+	if err != nil {
+		t.Fatal(err)
+	}
+	if !strings.HasPrefix(string(translated), "Dites à quelqu’un qui a déjà couru") {
+		t.Fatal("latest post does not start with its French translation")
+	}
+	if !strings.HasSuffix(strings.TrimSpace(string(translated)), "Nous avons hâte d’y retourner.") {
+		t.Fatal("latest post does not end with its French translation")
+	}
+	for _, pattern := range []string{`src=['"][^'"]+['"]`, `\]\([^)]+\)`} {
+		links := regexp.MustCompile(pattern)
+		if !reflect.DeepEqual(links.FindAll(source, -1), links.FindAll(translated, -1)) {
+			t.Errorf("French post changed links or media matching %q", pattern)
+		}
 	}
 }
 
