@@ -98,7 +98,7 @@ func TestHomePageNavigationAndThemeControls(t *testing.T) {
 	assert.Contains(t, content, `'ocean'`)
 }
 
-func TestPaletteTogglePreviewsNextPaletteColor(t *testing.T) {
+func TestPaletteTogglePreviewsNextPaletteColorOnHover(t *testing.T) {
 	setupTestEnvironment(t)
 
 	recorder := httptest.NewRecorder()
@@ -108,7 +108,11 @@ func TestPaletteTogglePreviewsNextPaletteColor(t *testing.T) {
 	require.NoError(t, err)
 	content := html.UnescapeString(string(body))
 
-	assert.Contains(t, content, `color: var(--next-palette-swatch);`)
+	assert.Contains(t, content, `.palette-icon {
+        color: var(--palette-swatch);`)
+	assert.Contains(t, content, `.palette-toggle:hover .palette-icon,`)
+	assert.Contains(t, content, `.palette-toggle:focus-visible .palette-icon {
+        color: var(--next-palette-swatch);`)
 	readColor := func(selector, variable string) string {
 		block := regexp.MustCompile(regexp.QuoteMeta(selector) + `\s*\{([^{}]*)\}`).FindStringSubmatch(content)
 		require.Len(t, block, 2, "missing CSS block for %s", selector)
@@ -143,6 +147,8 @@ func TestPaletteTogglePreviewsNextPaletteColor(t *testing.T) {
 			lightSelector = ":root"
 			darkSelector = `[data-theme="dark"]`
 		}
+		assert.Equal(t, palette.light, readColor(lightSelector, "--palette-swatch"), "%s in light mode", palette.name)
+		assert.Equal(t, palette.dark, readColor(darkSelector, "--palette-swatch"), "%s in dark mode", palette.name)
 		assert.Equal(t, nextPalette.light, readColor(lightSelector, "--next-palette-swatch"), "%s in light mode", palette.name)
 		assert.Equal(t, nextPalette.dark, readColor(darkSelector, "--next-palette-swatch"), "%s in dark mode", palette.name)
 	}
