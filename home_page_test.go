@@ -82,6 +82,9 @@ func TestHomePageNavigationAndThemeControls(t *testing.T) {
 
 	assert.Contains(t, content, `id="palette-toggle"`)
 	assert.Contains(t, content, `id="theme-toggle"`)
+	assert.Contains(t, content, `System theme. Click for light mode`)
+	assert.Contains(t, content, `enum: ['light', 'dark', 'system']`)
+	assert.Contains(t, content, `setTheme('system', false)`)
 	assert.Contains(t, content, `localStorage.getItem('palette')`)
 	assert.Contains(t, content, `localStorage.setItem('palette', palette)`)
 	// Ocean is the default, so its variables live in the bare :root and
