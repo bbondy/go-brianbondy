@@ -1,5 +1,25 @@
 [
   {
+    "date": "2026-10-16",
+    "title": "6x hill intervals, walk down recovery",
+    "distance_km": 5.48,
+    "time": "46m",
+    "pace": "8:32 min/km",
+    "activity_id": "20608666667",
+    "type": "Run",
+    "elevation": "142m"
+  },
+  {
+    "date": "2026-10-15",
+    "title": "Weight training",
+    "distance_km": 0.0,
+    "time": "1h 0m",
+    "pace": "",
+    "activity_id": "20612852563",
+    "type": "WeightTraining",
+    "elevation": ""
+  },
+  {
     "date": "2026-10-15",
     "title": "Morning Run",
     "distance_km": 10.01,
