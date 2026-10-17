@@ -8,14 +8,14 @@
           var root = document.documentElement;
           var paletteOrder = ['ocean', 'forest', 'ember', 'violet', 'rose', 'gold', 'slate', 'teal', 'indigo', 'moss', 'crimson', 'plum'];
           var savedTheme = localStorage.getItem('theme');
-          var hasExplicitTheme = savedTheme === 'dark' || savedTheme === 'light';
+          var themePreference = savedTheme === 'dark' || savedTheme === 'light' ? savedTheme : 'system';
           var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-          var theme = hasExplicitTheme ? savedTheme : (prefersDark ? 'dark' : 'light');
+          var theme = themePreference === 'system' ? (prefersDark ? 'dark' : 'light') : themePreference;
           var savedPalette = localStorage.getItem('palette');
           var palette = paletteOrder.indexOf(savedPalette) === -1 ? 'ocean' : savedPalette;
 
           root.setAttribute('data-theme', theme);
-          root.setAttribute('data-theme-preference', hasExplicitTheme ? savedTheme : 'auto');
+          root.setAttribute('data-theme-preference', themePreference);
           root.setAttribute('data-palette', palette);
           window.sitePaletteOrder = paletteOrder;
 
@@ -104,7 +104,7 @@
           window.applyBackgroundVariation();
         } catch (e) {
           document.documentElement.setAttribute('data-theme', 'light');
-          document.documentElement.setAttribute('data-theme-preference', 'auto');
+          document.documentElement.setAttribute('data-theme-preference', 'system');
           document.documentElement.setAttribute('data-palette', 'ocean');
         }
       })();
@@ -1012,8 +1012,8 @@
           <li class="{{if eq .MarkdownSlug "about.markdown"}}current{{end}}"><a href="/about">{{t "About"}}</a></li>
         </ul>
         <div class="theme-controls">
-          <button class="theme-toggle" id="theme-toggle" type="button" title="{{t "Switch to dark mode"}}" aria-label="{{t "Switch to dark mode"}}">
-            <span class="icon" id="theme-icon" aria-hidden="true">🌙</span>
+          <button class="theme-toggle" id="theme-toggle" type="button" title="{{t "System theme. Click for light mode"}}" aria-label="{{t "System theme. Click for light mode"}}">
+            <span class="icon" id="theme-icon" aria-hidden="true">🖥️</span>
           </button>
           <button class="theme-toggle palette-toggle" id="palette-toggle" type="button" title="{{t "Color palette: Ocean"}}" aria-label="{{t "Color palette: Ocean. Click for Forest"}}">
             <i class="fas fa-palette palette-icon" id="palette-icon" aria-hidden="true"></i>
@@ -1680,21 +1680,29 @@
         const themeToggle = document.getElementById('theme-toggle');
         const themeIcon = document.getElementById('theme-icon');
         
-        function updateThemeIcon(theme) {
-          themeIcon.textContent = theme === 'dark' ? '☀️' : '🌙';
-          const nextTheme = theme === 'dark' ? 'light' : 'dark';
-          const label = nextTheme === 'dark' ? window.siteT('Switch to dark mode') : window.siteT('Switch to light mode');
+        const root = document.documentElement;
+        const systemThemeQuery = window.matchMedia ? window.matchMedia('(prefers-color-scheme: dark)') : null;
+
+        function updateThemeIcon(preference) {
+          const labels = {
+            system: window.siteT('System theme. Click for light mode'),
+            light: window.siteT('Light theme. Click for dark mode'),
+            dark: window.siteT('Dark theme. Click for system mode')
+          };
+          themeIcon.textContent = preference === 'system' ? '🖥️' : preference === 'light' ? '☀️' : '🌙';
+          const label = labels[preference];
           themeToggle.title = label;
           themeToggle.setAttribute('aria-label', label);
         }
 
-        function setTheme(theme, savePreference) {
-          document.documentElement.setAttribute('data-theme', theme);
+        function setTheme(preference, savePreference) {
+          const theme = preference === 'system' ? (systemThemeQuery && systemThemeQuery.matches ? 'dark' : 'light') : preference;
+          root.setAttribute('data-theme', theme);
+          root.setAttribute('data-theme-preference', preference);
           if (savePreference) {
-            localStorage.setItem('theme', theme);
-            document.documentElement.setAttribute('data-theme-preference', theme);
+            localStorage.setItem('theme', preference);
           }
-          updateThemeIcon(theme);
+          updateThemeIcon(preference);
           if (window.applyBackgroundVariation) {
             window.applyBackgroundVariation();
           }
@@ -1704,21 +1712,28 @@
         }
         
         // The theme was applied in the head; only synchronize the toggle icon.
-        updateThemeIcon(document.documentElement.getAttribute('data-theme'));
+        updateThemeIcon(root.getAttribute('data-theme-preference'));
         
         // Toggle theme
         themeToggle.addEventListener('click', function() {
-          const currentTheme = document.documentElement.getAttribute('data-theme');
-          const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-          setTheme(newTheme, true);
+          const currentPreference = root.getAttribute('data-theme-preference');
+          const nextPreference = currentPreference === 'system' ? 'light' : currentPreference === 'light' ? 'dark' : 'system';
+          setTheme(nextPreference, true);
         });
         
         // Listen for system theme changes
-        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
-          if (document.documentElement.getAttribute('data-theme-preference') === 'auto') {
-            setTheme(e.matches ? 'dark' : 'light');
+        if (systemThemeQuery) {
+          const handleSystemThemeChange = function() {
+            if (root.getAttribute('data-theme-preference') === 'system') {
+              setTheme('system', false);
+            }
+          };
+          if (systemThemeQuery.addEventListener) {
+            systemThemeQuery.addEventListener('change', handleSystemThemeChange);
+          } else if (systemThemeQuery.addListener) {
+            systemThemeQuery.addListener(handleSystemThemeChange);
           }
-        });
+        }
 
         // WebMCP: let browser AI agents switch the theme (no-op where unsupported)
         if (document.modelContext && document.modelContext.registerTool) {
@@ -1727,13 +1742,13 @@
             return document.modelContext.registerTool({
               name: 'set_theme',
               title: 'Set site theme',
-              description: 'Switch brianbondy.com between the light and dark color themes. The choice is remembered for future visits.',
+              description: 'Set brianbondy.com to light, dark, or system theme. System follows the device color preference. The choice is remembered for future visits.',
               inputSchema: {
                 type: 'object',
                 properties: {
                   theme: {
                     type: 'string',
-                    enum: ['light', 'dark'],
+                    enum: ['light', 'dark', 'system'],
                     description: 'The theme to apply.'
                   }
                 },
@@ -1742,14 +1757,15 @@
               annotations: { readOnlyHint: false, idempotentHint: true },
               execute: function(input) {
                 const theme = input && input.theme;
-                if (theme !== 'light' && theme !== 'dark') {
+                if (theme !== 'light' && theme !== 'dark' && theme !== 'system') {
                   return {
                     isError: true,
-                    content: [{ type: 'text', text: 'Invalid theme "' + theme + '". Use "light" or "dark".' }]
+                    content: [{ type: 'text', text: 'Invalid theme "' + theme + '". Use "light", "dark", or "system".' }]
                   };
                 }
                 setTheme(theme, true);
-                return { content: [{ type: 'text', text: 'Theme set to ' + theme + '.' }] };
+                const effectiveTheme = root.getAttribute('data-theme');
+                return { content: [{ type: 'text', text: 'Theme set to ' + theme + (theme === 'system' ? ' (currently ' + effectiveTheme + ')' : '') + '.' }] };
               }
             });
           }).catch(function() {});
