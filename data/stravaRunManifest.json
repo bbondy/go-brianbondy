@@ -1,5 +1,15 @@
 [
   {
+    "date": "2026-10-21",
+    "title": "Afternoon Walk",
+    "distance_km": 2.96,
+    "time": "40m",
+    "pace": "",
+    "activity_id": "20679606398",
+    "type": "Walk",
+    "elevation": "59m"
+  },
+  {
     "date": "2026-10-20",
     "title": "Morning Run",
     "distance_km": 10.02,
