@@ -80,7 +80,7 @@
     "github": "https://github.com/brave-experiments/brave-dev-loop",
     "description": "Ralph Wiggum loop-inspired coding agent for Brave projects that reads PRDs, implements user stories, runs tests, creates PRs, handles review feedback, and manages CI in iterative loops.",
     "githubStats": {
-      "commitCount": 584,
+      "commitCount": 587,
       "prCount": 19
     }
   },
@@ -103,7 +103,7 @@
     "github": "https://github.com/bbondy/hutter",
     "description": "Rust workspace for experimenting toward a future Hutter Prize submission, with several small experimental codecs including adaptive Huffman, naive LZ77, byte-level and bit-level PPM variants, plus a WikiMix-5 design skeleton for a future mixed-model codec.",
     "githubStats": {
-      "commitCount": 180,
+      "commitCount": 182,
       "prCount": 5
     }
   },
