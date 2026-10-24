@@ -103,7 +103,7 @@
     "github": "https://github.com/bbondy/hutter",
     "description": "Rust workspace for experimenting toward a future Hutter Prize submission, with several small experimental codecs including adaptive Huffman, naive LZ77, byte-level and bit-level PPM variants, plus a WikiMix-5 design skeleton for a future mixed-model codec.",
     "githubStats": {
-      "commitCount": 182,
+      "commitCount": 183,
       "prCount": 5
     }
   },
