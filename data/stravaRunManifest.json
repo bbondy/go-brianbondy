@@ -1,5 +1,15 @@
 [
   {
+    "date": "2026-10-24",
+    "title": "Evening Stair-Stepper",
+    "distance_km": 0.0,
+    "time": "35m",
+    "pace": "",
+    "activity_id": "20718639394",
+    "type": "StairStepper",
+    "elevation": ""
+  },
+  {
     "date": "2026-10-23",
     "title": "Evening Stair-Stepper",
     "distance_km": 0.0,
