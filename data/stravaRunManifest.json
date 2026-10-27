@@ -1,5 +1,35 @@
 [
   {
+    "date": "2026-10-26",
+    "title": "Weight training",
+    "distance_km": 0.0,
+    "time": "1h 0m",
+    "pace": "",
+    "activity_id": "20744778521",
+    "type": "WeightTraining",
+    "elevation": ""
+  },
+  {
+    "date": "2026-10-26",
+    "title": "Morning Run",
+    "distance_km": 10.02,
+    "time": "59m",
+    "pace": "5:55 min/km",
+    "activity_id": "20738584589",
+    "type": "Run",
+    "elevation": "14m"
+  },
+  {
+    "date": "2026-10-26",
+    "title": "Morning Walk",
+    "distance_km": 1.86,
+    "time": "18m",
+    "pace": "",
+    "activity_id": "20737103207",
+    "type": "Walk",
+    "elevation": "6m"
+  },
+  {
     "date": "2026-10-25",
     "title": "Afternoon Walk",
     "distance_km": 5.57,
