@@ -9,7 +9,7 @@
     "description": "Block ads and trackers, saves data, and speeds up web browsing.",
     "githubStats": {
       "commitCount": 2706,
-      "prCount": 971
+      "prCount": 972
     }
   },
   {
@@ -103,7 +103,7 @@
     "github": "https://github.com/bbondy/hutter",
     "description": "Rust workspace for experimenting toward a future Hutter Prize submission, with several small experimental codecs including adaptive Huffman, naive LZ77, byte-level and bit-level PPM variants, plus a WikiMix-5 design skeleton for a future mixed-model codec.",
     "githubStats": {
-      "commitCount": 188,
+      "commitCount": 189,
       "prCount": 5
     }
   },
