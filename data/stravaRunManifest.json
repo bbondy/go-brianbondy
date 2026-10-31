@@ -1,5 +1,25 @@
 [
   {
+    "date": "2026-10-30",
+    "title": "Evening Stair-Stepper",
+    "distance_km": 0.0,
+    "time": "1h 0m",
+    "pace": "",
+    "activity_id": "20797705711",
+    "type": "StairStepper",
+    "elevation": ""
+  },
+  {
+    "date": "2026-10-30",
+    "title": "Morning Walk",
+    "distance_km": 1.39,
+    "time": "15m",
+    "pace": "",
+    "activity_id": "20791363828",
+    "type": "Walk",
+    "elevation": "7m"
+  },
+  {
     "date": "2026-10-29",
     "title": "Weight training",
     "distance_km": 0.0,
