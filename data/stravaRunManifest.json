@@ -1,5 +1,25 @@
 [
   {
+    "date": "2026-11-07",
+    "title": "Afternoon Walk",
+    "distance_km": 1.32,
+    "time": "16m",
+    "pace": "",
+    "activity_id": "20900259451",
+    "type": "Walk",
+    "elevation": "41m"
+  },
+  {
+    "date": "2026-11-07",
+    "title": "Morning Walk",
+    "distance_km": 5.18,
+    "time": "1h 9m",
+    "pace": "",
+    "activity_id": "20898310694",
+    "type": "Walk",
+    "elevation": "73m"
+  },
+  {
     "date": "2026-11-05",
     "title": "2x(3x400m, 200m)",
     "distance_km": 7.1,
