@@ -1,5 +1,15 @@
 [
   {
+    "date": "2026-11-08",
+    "title": "Run 519 race",
+    "distance_km": 5.19,
+    "time": "21m",
+    "pace": "4:06 min/km",
+    "activity_id": "20910211083",
+    "type": "Run",
+    "elevation": "31m"
+  },
+  {
     "date": "2026-11-07",
     "title": "Afternoon Walk",
     "distance_km": 1.32,
