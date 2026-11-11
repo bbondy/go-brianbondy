@@ -1,0 +1,73 @@
+<svg width="576" height="576" viewBox="0 0 576 576" fill="none" shape-rendering="crispEdges" xmlns="http://www.w3.org/2000/svg">
+<!-- 8 by 9 cells of 64 units. icon.ico and icons/ are rendered from this file, and icon.icns from icon.icon, the same figure as Icon Composer layers: docs/development.md says how. -->
+<g clip-path="url(#clip0_317_3315)">
+<path d="M288 0H224V64H288V0Z" fill="#FF4E00"/>
+<path d="M160 64H96V128H160V64Z" fill="#F64800"/>
+<path d="M288 64H224V128H288V64Z" fill="#FD4700"/>
+<path d="M352 64H288V128H352V64Z" fill="#FF4B06"/>
+<path d="M480 64H416V128H480V64Z" fill="#FF4F18"/>
+<path d="M96 128H32V192H96V128Z" fill="#FA4C00"/>
+<path d="M160 128H96V192H160V128Z" fill="#FF510C"/>
+<path d="M224 128H160V192H224V128Z" fill="#FA4800"/>
+<path d="M288 128H224V192H288V128Z" fill="#FC4300"/>
+<path d="M352 128H288V192H352V128Z" fill="#F83E00"/>
+<path d="M416 128H352V192H416V128Z" fill="#FF4309"/>
+<path d="M480 128H416V192H480V128Z" fill="#FF4918"/>
+<path d="M544 128H480V192H544V128Z" fill="#FF3E0D"/>
+<path d="M96 192H32V256H96V192Z" fill="#FF5917"/>
+<path d="M160 192H96V256H160V192Z" fill="#FF5310"/>
+<path d="M224 192H160V256H224V192Z" fill="#FD4500"/>
+<path d="M288 192H224V256H288V192Z" fill="#F83900"/>
+<path d="M352 192H288V256H352V192Z" fill="#F93900"/>
+<path d="M416 192H352V256H416V192Z" fill="#F73300"/>
+<path d="M480 192H416V256H480V192Z" fill="#FF4316"/>
+<path d="M544 192H480V256H544V192Z" fill="#FC3400"/>
+<path d="M96 256H32V320H96V256Z" fill="#FF5213"/>
+<path d="M160 256H96V320H160V256Z" fill="#FF5518"/>
+<path d="M224 256H160V320H224V256Z" fill="#FF4B13"/>
+<path d="M288 256H224V320H288V256Z" fill="#FF460B"/>
+<path d="M352 256H288V320H352V256Z" fill="#FF4C16"/>
+<path d="M416 256H352V320H416V256Z" fill="#FF3F0B"/>
+<path d="M480 256H416V320H480V256Z" fill="#F82F00"/>
+<path d="M544 256H480V320H544V256Z" fill="#FF350A"/>
+<path d="M96 320H32V384H96V320Z" fill="#FF4D10"/>
+<path d="M160 320H96V384H160V320Z" fill="#FF4E0F"/>
+<path d="M224 320H160V384H224V320Z" fill="#F53700"/>
+<path d="M288 320H224V384H288V320Z" fill="#FF4407"/>
+<path d="M352 320H288V384H352V320Z" fill="#F52C00"/>
+<path d="M416 320H352V384H416V320Z" fill="#FF3E10"/>
+<path d="M480 320H416V384H480V320Z" fill="#FA2E00"/>
+<path d="M544 320H480V384H544V320Z" fill="#FF3C12"/>
+<path d="M96 384H32V448H96V384Z" fill="#F63C00"/>
+<path d="M160 384H96V448H160V384Z" fill="#FF4C18"/>
+<path d="M480 384H416V448H480V384Z" fill="#FF3509"/>
+<path d="M544 384H480V448H544V384Z" fill="#FE2B00"/>
+<path d="M96 448H32V512H96V448Z" fill="#FF4E12"/>
+<path d="M160 448H96V512H160V448Z" fill="#F43100"/>
+<path d="M224 448H160V512H224V448Z" fill="#FF4715"/>
+<path d="M224 384H160V448H224V384Z" fill="#FF4715"/>
+<path d="M288 448H224V512H288V448Z" fill="#FF3E06"/>
+<path d="M288 384H224V448H288V384Z" fill="#FF3E06"/>
+<path d="M352 448H288V512H352V448Z" fill="#F92F00"/>
+<path d="M352 384H288V448H352V384Z" fill="#F92F00"/>
+<path d="M416 448H352V512H416V448Z" fill="#FF360C"/>
+<path d="M416 384H352V448H416V384Z" fill="#FF360C"/>
+<path d="M480 448H416V512H480V448Z" fill="#FB2100"/>
+<path d="M544 448H480V512H544V448Z" fill="#FC1E00"/>
+<path d="M160 512H96V576H160V512Z" fill="#FF4610"/>
+<path d="M224 512H160V576H224V512Z" fill="#FF410D"/>
+<path d="M288 512H224V576H288V512Z" fill="#FF390F"/>
+<path d="M352 512H288V576H352V512Z" fill="#FF3A13"/>
+<path d="M416 512H352V576H416V512Z" fill="#FF2701"/>
+<path d="M480 512H416V576H480V512Z" fill="#F91A00"/>
+<path d="M224 384H160V448H224V384Z" fill="white"/>
+<path d="M288 384H224V448H288V384Z" fill="#1D1F27"/>
+<path d="M352 384H288V448H352V384Z" fill="white"/>
+<path d="M416 384H352V448H416V384Z" fill="#1D1F27"/>
+</g>
+<defs>
+<clipPath id="clip0_317_3315">
+<rect width="576" height="576" fill="white"/>
+</clipPath>
+</defs>
+</svg>

@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """
 Script to fetch GitHub statistics for projects and update the project manifest.
+Commit and pull request totals include bbondy, netzenbot, and netzenbot-reviewer.
 
 When a GitHub token is available (GITHUB_TOKEN or GH_TOKEN) the counts come from
 the GitHub REST search API, which is what CI uses. Without a token the script
@@ -17,6 +18,7 @@ from typing import Dict, Any, Optional, Tuple
 
 GITHUB_API_URL = "https://api.github.com"
 GITHUB_TOKEN = os.environ.get("GITHUB_TOKEN") or os.environ.get("GH_TOKEN")
+PROJECT_AUTHORS = ("bbondy", "netzenbot", "netzenbot-reviewer")
 
 # The authenticated search API allows 30 requests per minute.
 SEARCH_API_DELAY_SECONDS = 2.5
@@ -179,7 +181,8 @@ def get_project_keywords(project: dict) -> list | None:
     """Get keywords for specific projects to avoid double counting."""
     return project.get("searchKeywords")
 
-def fetch_github_stats(github_url: str, author: str, project: dict | None = None) -> Dict[str, Any]:
+def fetch_github_stats(github_url: str, authors: tuple[str, ...] = PROJECT_AUTHORS,
+                       project: dict | None = None) -> Dict[str, Any]:
     try:
         owner, repo = extract_repo_info(github_url)
         print(f"Fetching stats for {owner}/{repo}...")
@@ -188,8 +191,13 @@ def fetch_github_stats(github_url: str, author: str, project: dict | None = None
         if keywords:
             print(f"  Using keywords: {', '.join(keywords)}")
         
-        commit_count = get_commit_count(owner, repo, author, keywords)
-        pr_count = get_pr_count(owner, repo, author, keywords)
+        # Query each account separately so both search backends use the same
+        # author filtering while retaining project-specific keywords.
+        commit_count = 0
+        pr_count = 0
+        for author in authors:
+            commit_count += get_commit_count(owner, repo, author, keywords)
+            pr_count += get_pr_count(owner, repo, author, keywords)
         time.sleep(1)
         return {
             "commitCount": commit_count,
@@ -222,7 +230,7 @@ def update_project_manifest():
                 print("  Force re-parsing (current commitCount is 70)")
                 force_update = True
 
-            stats = fetch_github_stats(project["github"], "bbondy", project)
+            stats = fetch_github_stats(project["github"], project=project)
             if stats["commitCount"] > 0 or stats["prCount"] > 0:
                 with_stats += 1
                 # Only include githubStats if we have real data

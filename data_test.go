@@ -231,15 +231,16 @@ func TestProjectsManifestIncludesBraveBot(t *testing.T) {
 
 	found := false
 	for _, project := range projects {
-		if project.Github != "https://github.com/brave-experiments/brave-bot" {
+		if project.Github != "https://github.com/brave/bravebot" {
 			continue
 		}
 
 		found = true
 		assert.Equal(t, "Brave Bot", project.Title)
-		assert.Equal(t, "🛡️", project.Emoji)
+		assert.Empty(t, project.Emoji)
+		assert.Equal(t, "static/img/projects/bravebot.svg", project.Image)
 		assert.Equal(t, "https://brave-experiments.github.io/brave-bot-docs/", project.Website)
-		assert.Contains(t, project.Description, "structural resistance to indirect prompt injection")
+		assert.Contains(t, project.Description, "resist indirect prompt injection")
 	}
 
 	assert.True(t, found, "Brave Bot project should exist in the manifest")
