@@ -1,5 +1,15 @@
 [
   {
+    "date": "2026-11-12",
+    "title": "Weight training",
+    "distance_km": 0.0,
+    "time": "1h 0m",
+    "pace": "",
+    "activity_id": "20966287150",
+    "type": "WeightTraining",
+    "elevation": ""
+  },
+  {
     "date": "2026-11-11",
     "title": "Morning Run",
     "distance_km": 8.7,
