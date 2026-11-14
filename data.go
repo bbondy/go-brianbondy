@@ -3,7 +3,6 @@ package main
 import (
 	"encoding/json"
 	"fmt"
-	"io/ioutil"
 	"os"
 	"regexp"
 	"sort"
@@ -91,7 +90,7 @@ func initializeBlogPosts() {
 	if err := initializeBlogPostTranslations(); err != nil {
 		panic(err)
 	}
-	blogPostManifest, _ := ioutil.ReadFile("data/blogPostManifest.json")
+	blogPostManifest, _ := os.ReadFile("data/blogPostManifest.json")
 	err := json.Unmarshal([]byte(blogPostManifest), &blogPosts)
 	if err != nil {
 		panic(fmt.Errorf("error parsing JSON"))
@@ -249,7 +248,7 @@ func getMarkdownData(slug string) string {
 		return content
 	}
 
-	markdownData, _ := ioutil.ReadFile("data/markdown/" + slug)
+	markdownData, _ := os.ReadFile("data/markdown/" + slug)
 	content = sanitizeMarkdownHTML(renderMarkdown(markdownData))
 	markdownMapMutex.Lock()
 	if cached, exists := markdownMap[slug]; exists {

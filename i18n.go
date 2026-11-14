@@ -94,7 +94,7 @@ func languageFromWriter(writer interface{}) string {
 		}
 
 		value := reflect.ValueOf(writer)
-		for value.IsValid() && (value.Kind() == reflect.Interface || value.Kind() == reflect.Ptr) {
+		for value.IsValid() && (value.Kind() == reflect.Interface || value.Kind() == reflect.Pointer) {
 			if value.IsNil() {
 				return defaultLanguage
 			}

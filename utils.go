@@ -93,7 +93,7 @@ func canonicalURL(data interface{}) string {
 	}
 
 	v := reflect.ValueOf(data)
-	if v.Kind() == reflect.Ptr {
+	if v.Kind() == reflect.Pointer {
 		v = v.Elem()
 	}
 	if v.Kind() == reflect.Map {

@@ -75,7 +75,7 @@ type templateWriter interface {
 
 func avail(name string, data interface{}) bool {
 	v := reflect.ValueOf(data)
-	if v.Kind() == reflect.Ptr {
+	if v.Kind() == reflect.Pointer {
 		v = v.Elem()
 	}
 	if v.Kind() != reflect.Struct {
