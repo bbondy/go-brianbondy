@@ -8,8 +8,8 @@
     "blogPostID": 174,
     "description": "Block ads and trackers, saves data, and speeds up web browsing.",
     "githubStats": {
-      "commitCount": 2904,
-      "prCount": 1222
+      "commitCount": 2905,
+      "prCount": 1223
     }
   },
   {
@@ -20,8 +20,8 @@
     "github": "https://github.com/brave/bravebot",
     "description": "Open-source, general-purpose AI agent for the terminal, editors, and scripts, with support for hosted and local models. Designed to resist indirect prompt injection by keeping untrusted content out of its planner and processing it in isolated, tool-free agents.",
     "githubStats": {
-      "commitCount": 2448,
-      "prCount": 1916
+      "commitCount": 2468,
+      "prCount": 1935
     }
   },
   {
@@ -80,8 +80,8 @@
     "github": "https://github.com/brave-experiments/brave-dev-loop",
     "description": "Ralph Wiggum loop-inspired coding agent for Brave projects that reads PRDs, implements user stories, runs tests, creates PRs, handles review feedback, and manages CI in iterative loops.",
     "githubStats": {
-      "commitCount": 963,
-      "prCount": 195
+      "commitCount": 970,
+      "prCount": 196
     }
   },
   {
