@@ -20,8 +20,8 @@
     "github": "https://github.com/brave/bravebot",
     "description": "Open-source, general-purpose AI agent for the terminal, editors, and scripts, with support for hosted and local models. Designed to resist indirect prompt injection by keeping untrusted content out of its planner and processing it in isolated, tool-free agents.",
     "githubStats": {
-      "commitCount": 2509,
-      "prCount": 1978
+      "commitCount": 2519,
+      "prCount": 1995
     }
   },
   {
