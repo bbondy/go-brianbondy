@@ -1,5 +1,25 @@
 [
   {
+    "date": "2026-11-17",
+    "title": "(200, 400, 200), (400, 200, 400), (200, 400, 200)",
+    "distance_km": 6.39,
+    "time": "53m",
+    "pace": "8:26 min/km",
+    "activity_id": "21028439384",
+    "type": "Run",
+    "elevation": ""
+  },
+  {
+    "date": "2026-11-16",
+    "title": "Weight training",
+    "distance_km": 0.0,
+    "time": "1h 0m",
+    "pace": "",
+    "activity_id": "21023966520",
+    "type": "WeightTraining",
+    "elevation": ""
+  },
+  {
     "date": "2026-11-16",
     "title": "12x300m",
     "distance_km": 10.04,
