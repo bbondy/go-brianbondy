@@ -9,7 +9,7 @@
     "description": "Block ads and trackers, saves data, and speeds up web browsing.",
     "githubStats": {
       "commitCount": 2909,
-      "prCount": 1225
+      "prCount": 1226
     }
   },
   {
@@ -20,8 +20,8 @@
     "github": "https://github.com/brave/bravebot",
     "description": "Open-source, general-purpose AI agent for the terminal, editors, and scripts, with support for hosted and local models. Designed to resist indirect prompt injection by keeping untrusted content out of its planner and processing it in isolated, tool-free agents.",
     "githubStats": {
-      "commitCount": 2544,
-      "prCount": 2016
+      "commitCount": 2554,
+      "prCount": 2023
     }
   },
   {
@@ -33,7 +33,7 @@
     "description": "Secure, native, built-in crypto wallet that supercharges Brave browser for Web3.",
     "githubStats": {
       "commitCount": 249,
-      "prCount": 177
+      "prCount": 178
     },
     "searchKeywords": [
       "wallet",
