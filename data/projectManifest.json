@@ -8,7 +8,7 @@
     "blogPostID": 174,
     "description": "Block ads and trackers, saves data, and speeds up web browsing.",
     "githubStats": {
-      "commitCount": 2909,
+      "commitCount": 2910,
       "prCount": 1226
     }
   },
@@ -20,8 +20,8 @@
     "github": "https://github.com/brave/bravebot",
     "description": "Open-source, general-purpose AI agent for the terminal, editors, and scripts, with support for hosted and local models. Designed to resist indirect prompt injection by keeping untrusted content out of its planner and processing it in isolated, tool-free agents.",
     "githubStats": {
-      "commitCount": 2554,
-      "prCount": 2023
+      "commitCount": 2568,
+      "prCount": 2036
     }
   },
   {
@@ -49,7 +49,7 @@
     "blogPostID": 184,
     "description": "AI-powered assistant built into the Brave browser, offering features like question answering, content summarization, and more—all while maintaining privacy.",
     "githubStats": {
-      "commitCount": 24,
+      "commitCount": 25,
       "prCount": 54
     },
     "searchKeywords": [
