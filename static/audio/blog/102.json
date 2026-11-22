@@ -1,0 +1,123 @@
+{
+  "post": 102,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "17782f517387bd5435d689c115bbbac12cf8484c54c978f76ae5bdb496d204ae",
+  "audioSHA256": "d4e8a2382736757e7d8079dde99b61fd0597447ff88626973a99c276b8583a0f",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "\u2605\u2605\u2605\u2605\u2605 (5 stars out of 5)",
+      "start": 0.0,
+      "end": 3.04
+    },
+    {
+      "block": 1,
+      "text": "If like me, the last time you read about HTML you read that XHTML was the future, and you are wondering what happened since then, this book is for you.",
+      "start": 3.22,
+      "end": 12.26
+    },
+    {
+      "block": 2,
+      "text": "Mark Pilgrim does a great job of showing you:",
+      "start": 12.44,
+      "end": 15.16
+    },
+    {
+      "block": 3,
+      "text": "The direction that web standards are going",
+      "start": 15.34,
+      "end": 17.74
+    },
+    {
+      "block": 4,
+      "text": "How web browsers and hence web standards have evolved to get to where they are today",
+      "start": 17.92,
+      "end": 22.24
+    },
+    {
+      "block": 5,
+      "text": "Introduction to the main new HTML5 elements and DOM APIs",
+      "start": 22.42,
+      "end": 26.82
+    },
+    {
+      "block": 6,
+      "text": "How HTML5 is already thriving, and how you can use it today. (Including the Javascript library Modernizr for detecting HTML5 features)",
+      "start": 27.0,
+      "end": 35.56
+    },
+    {
+      "block": 7,
+      "text": "If you work on websites, web apps, have a blog, have a company website, or are just curious about how HTML is evolving, HTML5: Up and Running published by O\u2019Reilly is for you.",
+      "start": 35.74,
+      "end": 47.34
+    },
+    {
+      "block": 8,
+      "text": "Before reading this book I always had the feeling of: \u201chow can I improve my blog and company website\u201d.",
+      "start": 47.52,
+      "end": 52.88
+    },
+    {
+      "block": 8,
+      "text": "Now I have a long TODO list of things I know I can do to improve them.",
+      "start": 53.06,
+      "end": 56.82
+    },
+    {
+      "block": 9,
+      "text": "HTML5 was designed around already existing browser features.",
+      "start": 57.0,
+      "end": 61.4
+    },
+    {
+      "block": 9,
+      "text": "The latest versions of Safari, Chrome, Firefox, IE9, and Opera all support most HTML5 features, and do it consistently according to what the standard says.",
+      "start": 61.58,
+      "end": 71.74
+    },
+    {
+      "block": 9,
+      "text": "Default browsers on iPhone, iPads, and Android phones also support most HTML5 features already, and also do it well.",
+      "start": 71.92,
+      "end": 79.84
+    },
+    {
+      "block": 9,
+      "text": "Many parts of HTML5 can be used with fallback methods if HTML5 support does not exist already for older browsers.",
+      "start": 80.02,
+      "end": 87.22
+    },
+    {
+      "block": 10,
+      "text": "This book contains very enjoyable coverage on new HTML5 elements, new DOM APIs, and some other related web technologies.",
+      "start": 87.4,
+      "end": 95.32
+    },
+    {
+      "block": 10,
+      "text": "Some topics covered include: canvas, video, local storage, web workers, offline web applications, geolocation API, microformats, and adding semantics to your web pages.",
+      "start": 95.5,
+      "end": 106.78
+    },
+    {
+      "block": 10,
+      "text": "The book is a quick read and leaves you feeling that you have learnt something which will help you in the future.",
+      "start": 106.96,
+      "end": 111.76
+    },
+    {
+      "block": 11,
+      "text": "I would have liked to see coverage on Drag-and-drop and also when to use SVG over the new canvas element and canvas APIs.",
+      "start": 111.94,
+      "end": 118.5
+    },
+    {
+      "block": 12,
+      "text": "This book is derived from Dive into HTML5 which is by the author.",
+      "start": 118.68,
+      "end": 123.08
+    }
+  ]
+}

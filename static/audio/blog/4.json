@@ -1,0 +1,27 @@
+{
+  "post": 4,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "7353cb730d29753dcc171427c86292e50389e68f476cd4bfcc319b77755d0a41",
+  "audioSHA256": "1e48b27cfb230cb93cf1cfffd459980abe2ab8f5ff691c89955fb9729f8ba8c9",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "I used this program to do my taxes (and my wife\u2019s).",
+      "start": 0.0,
+      "end": 3.28
+    },
+    {
+      "block": 0,
+      "text": "Once done using the program, it will give you a .tax file which you can use to file your taxes online.",
+      "start": 3.46,
+      "end": 9.14
+    },
+    {
+      "block": 0,
+      "text": "You simply upload the .tax file to the government\u2019s online site here.",
+      "start": 9.32,
+      "end": 13.32
+    }
+  ]
+}

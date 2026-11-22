@@ -1,0 +1,51 @@
+{
+  "post": 18,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "b7742e735a49cf996071ae7b5ba0cefe782b58b9f8cf48c6a1e8cf22d487936c",
+  "audioSHA256": "391a13c398f0b1497c4370f959bcbf6be3d8f70e0d2cd2847937fbb5116c58f5",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "The most important rule to writing great easy to understand emails, is simply that: Writing is not a linear process.",
+      "start": 0.0,
+      "end": 6.56
+    },
+    {
+      "block": 1,
+      "text": "Read the email over, add to your email, spend time on your email, cut your email up into sections.",
+      "start": 6.74,
+      "end": 12.58
+    },
+    {
+      "block": 2,
+      "text": "Replace words like \u201cit\u201d with the object that you are talking about.",
+      "start": 12.76,
+      "end": 16.04
+    },
+    {
+      "block": 2,
+      "text": "Your readers will probably have no clue what you\u2019re referring to in your email.",
+      "start": 16.22,
+      "end": 19.98
+    },
+    {
+      "block": 3,
+      "text": "Reading is a linear process.",
+      "start": 20.16,
+      "end": 22.24
+    },
+    {
+      "block": 3,
+      "text": "Writing is not.",
+      "start": 22.42,
+      "end": 24.1
+    },
+    {
+      "block": 3,
+      "text": "It\u2019s really that simple.",
+      "start": 24.28,
+      "end": 26.2
+    }
+  ]
+}

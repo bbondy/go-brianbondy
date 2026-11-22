@@ -1,0 +1,171 @@
+{
+  "post": 106,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "c752e3e42ec4ec0345ffd71e547dece7d2b5b36430f8967cf30faa7eee8de071",
+  "audioSHA256": "b84258e0848f0e44809137f49232f38cba3a67ca356ba61756cb8eb76266ca1d",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "StackExchange is a group of Q&A sites created by StackOverflow (SO).",
+      "start": 0.0,
+      "end": 4.64
+    },
+    {
+      "block": 1,
+      "text": "But exactly which part of the new StackExchange Q&A sites are new users and which part of are shared from StackOverflow?",
+      "start": 4.82,
+      "end": 11.62
+    },
+    {
+      "block": 2,
+      "text": "I mined the November 2010 data dump again and came up with some interesting stats.",
+      "start": 11.8,
+      "end": 16.2
+    },
+    {
+      "block": 3,
+      "text": "To figure out the common percentage between StackOverflow and other sites, I created lists of in memory users for each site, and then figured out which users had the same email hash.",
+      "start": 16.38,
+      "end": 25.82
+    },
+    {
+      "block": 3,
+      "text": "A user across sites with the same email hash can be considered the same user.",
+      "start": 26.0,
+      "end": 30.4
+    },
+    {
+      "block": 4,
+      "text": "I knew before doing this analysis that the percentage of common users to StackExchange users would be high because of the relative size of the StackOverflow community.",
+      "start": 30.58,
+      "end": 39.3
+    },
+    {
+      "block": 4,
+      "text": "I do fully expect for this 73% to decrease for future data dumps though and it will be interesting to re-run these stats and compare when the next data dump comes out.",
+      "start": 39.48,
+      "end": 48.44
+    },
+    {
+      "block": 5,
+      "text": "Here are the statistics per site:",
+      "start": 48.62,
+      "end": 50.78
+    },
+    {
+      "block": 6,
+      "text": "Cooking: 2630 of 3155 in common (83.36%)",
+      "start": 50.96,
+      "end": 58.24
+    },
+    {
+      "block": 7,
+      "text": "Game Development: 2497 of 2938 in common (84.99%)",
+      "start": 58.42,
+      "end": 66.18
+    },
+    {
+      "block": 8,
+      "text": "Gaming: 3813 of 4418 in common (86.31%)",
+      "start": 66.36,
+      "end": 73.72
+    },
+    {
+      "block": 9,
+      "text": "Mathematics: 2162 of 2965 in common (72.92%)",
+      "start": 73.9,
+      "end": 81.5
+    },
+    {
+      "block": 10,
+      "text": "Photography: 1659 of 1916 in common (86.59%)",
+      "start": 81.68,
+      "end": 87.76
+    },
+    {
+      "block": 11,
+      "text": "Server Fault: 28770 of 38434 in common (74.86%)",
+      "start": 87.94,
+      "end": 95.7
+    },
+    {
+      "block": 12,
+      "text": "StackApps: 3656 of 3874 in common (94.37%)",
+      "start": 95.88,
+      "end": 103.4
+    },
+    {
+      "block": 13,
+      "text": "Statistical Analysis: 1298 of 1728 in common (75.12%)",
+      "start": 103.58,
+      "end": 109.98
+    },
+    {
+      "block": 14,
+      "text": "Super User: 31897 of 49157 in common (64.89%)",
+      "start": 110.16,
+      "end": 118.16
+    },
+    {
+      "block": 15,
+      "text": "Ubuntu: 3245 of 5090 in common (63.75%)",
+      "start": 118.34,
+      "end": 125.3
+    },
+    {
+      "block": 16,
+      "text": "WebApplications: 5575 of 6223 in common (89.59%)",
+      "start": 125.48,
+      "end": 133.16
+    },
+    {
+      "block": 17,
+      "text": "WebMasters: 2612 of 2820 in common (92.62%)",
+      "start": 133.34,
+      "end": 140.94
+    },
+    {
+      "block": 18,
+      "text": "Total: 73.19% in common, 26.81% distinct",
+      "start": 141.12,
+      "end": 146.88
+    },
+    {
+      "block": 19,
+      "text": "Of particular interest are the sites with a very high common percentage and some overlapping questions like the WebMasters StackExchange site.",
+      "start": 147.06,
+      "end": 154.26
+    },
+    {
+      "block": 20,
+      "text": "Update:",
+      "start": 154.44,
+      "end": 155.8
+    },
+    {
+      "block": 21,
+      "text": "What percentage of SO users come from the other sites?",
+      "start": 155.98,
+      "end": 159.1
+    },
+    {
+      "block": 21,
+      "text": "I checked the registration dates and a surprising 5% of SO accounts come from the other sites.",
+      "start": 159.28,
+      "end": 164.4
+    },
+    {
+      "block": 21,
+      "text": "This doesn\u2019t change the result much above though.",
+      "start": 164.58,
+      "end": 167.3
+    },
+    {
+      "block": 21,
+      "text": "Almost all of these 5% of distinct accounts come from Ask Ubuntu, Super User, and Server Fault.",
+      "start": 167.48,
+      "end": 173.8
+    }
+  ]
+}

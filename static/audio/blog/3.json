@@ -1,0 +1,39 @@
+{
+  "post": 3,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "875087facfb93b7e28dcb3525634096b71dc207c01eafcb0ba3afe3225c4992d",
+  "audioSHA256": "80e56931ec1813a433cf85c27941a8a293b8a8ac58e58a413c6d5a071f72b2b6",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "Modify this registry entry: HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Control\\TerminalServer\\WinStations\\RDP-Tcp\\PortNumber Enter a new value for the port you would like.",
+      "start": 0.0,
+      "end": 11.52
+    },
+    {
+      "block": 1,
+      "text": "Turn off the option in my computer properties to enable remote access.",
+      "start": 11.7,
+      "end": 15.46
+    },
+    {
+      "block": 2,
+      "text": "Turn on the option in my computer properties to enable remote access.",
+      "start": 15.64,
+      "end": 19.32
+    },
+    {
+      "block": 3,
+      "text": "Verify via command prompt that RDP is working with the current information: telnet localhost If a blank prompt comes up RDP is listening on the new port.",
+      "start": 19.5,
+      "end": 28.54
+    },
+    {
+      "block": 4,
+      "text": "Configure your firewall/NAT to allow outside connections to this port.",
+      "start": 28.72,
+      "end": 32.64
+    }
+  ]
+}

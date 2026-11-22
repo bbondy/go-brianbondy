@@ -1,0 +1,261 @@
+{
+  "post": 164,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "d5b2254a2507b432b98f201cf027f3f7d0392bfe9475d324dfb053255ceb8fa0",
+  "audioSHA256": "93f7e9e08a9474b85156cbbd516f7ef36a6ca0f9ec1744737ba8f8045d8dd786",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "I had an amazing first week at Khan Academy as a remote employee.",
+      "start": 0.0,
+      "end": 3.84
+    },
+    {
+      "block": 1,
+      "text": "My first week",
+      "start": 4.02,
+      "end": 5.62
+    },
+    {
+      "block": 2,
+      "text": "For the week I, finished and pushed out 12 bugs fixes, posted 7 bugs, got myself added to the team page, and did a deploy of the site.",
+      "start": 5.8,
+      "end": 13.72
+    },
+    {
+      "block": 2,
+      "text": "I felt productive largely thanks to having great docs, and great people who helped on-ramp me.",
+      "start": 13.9,
+      "end": 19.1
+    },
+    {
+      "block": 3,
+      "text": "I don\u2019t think I waited more than 30 minutes for any single review (Thanks John and Pamela!).",
+      "start": 19.28,
+      "end": 24.08
+    },
+    {
+      "block": 4,
+      "text": "Each day that I landed changes, I seen the change live on the site later that day.",
+      "start": 24.26,
+      "end": 28.74
+    },
+    {
+      "block": 4,
+      "text": "Having the code you write deployed on the same day to production, is an amazing and inspiring feeling.",
+      "start": 28.92,
+      "end": 34.28
+    },
+    {
+      "block": 5,
+      "text": "I feel welcomed and included in everything.",
+      "start": 34.46,
+      "end": 37.18
+    },
+    {
+      "block": 5,
+      "text": "People seem to live on HipChat which makes it feel like I\u2019m with the team at all times.",
+      "start": 37.36,
+      "end": 41.6
+    },
+    {
+      "block": 6,
+      "text": "On Friday, I received an amazing care package delivered to my door.",
+      "start": 41.78,
+      "end": 45.7
+    },
+    {
+      "block": 6,
+      "text": "The highlight was a Khan Academy notebook who\u2019s first page was signed by some members of the team.",
+      "start": 45.88,
+      "end": 50.92
+    },
+    {
+      "block": 7,
+      "text": "Computer Science team",
+      "start": 51.1,
+      "end": 53.1
+    },
+    {
+      "block": 8,
+      "text": "I\u2019m working on the computer science team along with 2 very decorated and talented developers:",
+      "start": 53.28,
+      "end": 58.4
+    },
+    {
+      "block": 9,
+      "text": "Pamela Fox (@pamelafox) who teaches and develops for Khan Academy.",
+      "start": 58.58,
+      "end": 63.46
+    },
+    {
+      "block": 9,
+      "text": "She also teaches for an awesome program called GirlDevelopIt.",
+      "start": 63.64,
+      "end": 67.4
+    },
+    {
+      "block": 9,
+      "text": "She previously worked at Coursera and Google.",
+      "start": 67.58,
+      "end": 70.38
+    },
+    {
+      "block": 10,
+      "text": "John Resig (@jeresig) who created jQuery, Processing.js, and several other open source projects.",
+      "start": 70.56,
+      "end": 78.0
+    },
+    {
+      "block": 10,
+      "text": "He also comes from Mozilla and has authored a couple of very popular JavaScript books.",
+      "start": 78.18,
+      "end": 82.98
+    },
+    {
+      "block": 11,
+      "text": "A different world, but a good fit",
+      "start": 83.16,
+      "end": 85.8
+    },
+    {
+      "block": 12,
+      "text": "This is my first job doing web development.",
+      "start": 85.98,
+      "end": 88.7
+    },
+    {
+      "block": 12,
+      "text": "I\u2019ve been mostly a C++ programmer for the past 20 years, but I\u2019ve used a lot of technologies in use at Khan Academy.",
+      "start": 88.88,
+      "end": 95.52
+    },
+    {
+      "block": 13,
+      "text": "My personal blog is coded in Python / Flask for Google App Engine, and I run another site Code Firefox in Node.",
+      "start": 95.7,
+      "end": 102.5
+    },
+    {
+      "block": 13,
+      "text": "Both sites use React and Backbone.",
+      "start": 102.68,
+      "end": 105.24
+    },
+    {
+      "block": 13,
+      "text": "These are all in use by Khan Academy.",
+      "start": 105.42,
+      "end": 107.98
+    },
+    {
+      "block": 13,
+      "text": "I\u2019ve also used JavaScript pretty extensively at Mozilla.",
+      "start": 108.16,
+      "end": 111.6
+    },
+    {
+      "block": 14,
+      "text": "A long time coming",
+      "start": 111.78,
+      "end": 113.7
+    },
+    {
+      "block": 15,
+      "text": "Before joining Mozilla, I actually applied and interviewed with Khan Academy back in 2011.",
+      "start": 113.88,
+      "end": 119.4
+    },
+    {
+      "block": 15,
+      "text": "I also previously wrote a blog post about their development process.",
+      "start": 119.58,
+      "end": 123.5
+    },
+    {
+      "block": 15,
+      "text": "Warning: The technical information on that post is very out of date.",
+      "start": 123.68,
+      "end": 127.68
+    },
+    {
+      "block": 16,
+      "text": "I didn\u2019t get the job in early 2011 but another awesome place reached out to me a bit later, Mozilla.",
+      "start": 127.86,
+      "end": 133.54
+    },
+    {
+      "block": 16,
+      "text": "I never felt discouraged at the time though, sometimes you just aren\u2019t the right, current best person for the job, but that doesn\u2019t mean you won\u2019t be in the future.",
+      "start": 133.72,
+      "end": 141.24
+    },
+    {
+      "block": 16,
+      "text": "And that doesn\u2019t mean you aren\u2019t good at what you do.",
+      "start": 141.42,
+      "end": 143.9
+    },
+    {
+      "block": 17,
+      "text": "Later in 2011 I was also scheduled to go for a Stack Overflow conference in which Sal (@salkhanacademy) and Ben Kamens (@kamens) were scheduled to talk.",
+      "start": 144.08,
+      "end": 154.16
+    },
+    {
+      "block": 17,
+      "text": "The conference got canceled, but Ben was nice enough to let me hang out at his office for the day instead.",
+      "start": 154.34,
+      "end": 159.46
+    },
+    {
+      "block": 17,
+      "text": "The development team was a lot smaller back then, but it was an awesome experience to meet the team.",
+      "start": 159.64,
+      "end": 164.84
+    },
+    {
+      "block": 18,
+      "text": "Over the years, I continued to align the technologies I was learning with what Khan Academy was doing.",
+      "start": 165.02,
+      "end": 170.62
+    },
+    {
+      "block": 18,
+      "text": "I launched a Khan Academy inspired site for on-boarding Firefox contributors, I contributed significantly to one of their open source projects.",
+      "start": 170.8,
+      "end": 178.32
+    },
+    {
+      "block": 18,
+      "text": "And I eventually made it in on my next round of interviews.",
+      "start": 178.5,
+      "end": 181.38
+    },
+    {
+      "block": 19,
+      "text": "Soon enough I was flying out to the Khan Academy offices to meet Sal, Shantanu, and the rest of the team.",
+      "start": 181.56,
+      "end": 187.56
+    },
+    {
+      "block": 19,
+      "text": "I started on my first day April 21, 2014.",
+      "start": 187.74,
+      "end": 191.5
+    },
+    {
+      "block": 20,
+      "text": "Next steps?",
+      "start": 191.68,
+      "end": 193.2
+    },
+    {
+      "block": 21,
+      "text": "Learn, consistently work extremely hard, and try to do epic things.",
+      "start": 193.38,
+      "end": 197.94
+    }
+  ]
+}

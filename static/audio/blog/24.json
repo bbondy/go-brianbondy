@@ -1,0 +1,51 @@
+{
+  "post": 24,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "2109d737e673781df6793518804e1bfc3e64c75d66900d9aa4da40549cbb873b",
+  "audioSHA256": "f40e8f4b259e4152470c519850f75aca6fe4a7b7884acda0aaa87c4fe4eba3fc",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "If you\u2019re a programmer, and you you use visual studio for programming then you should be using this shortcut.",
+      "start": 0.0,
+      "end": 5.52
+    },
+    {
+      "block": 0,
+      "text": "Go to Tools Customize and then click on the Keyboard button.",
+      "start": 5.7,
+      "end": 9.22
+    },
+    {
+      "block": 0,
+      "text": "Select \u201cEdit.GotoNextLocation\u201d.",
+      "start": 9.4,
+      "end": 12.28
+    },
+    {
+      "block": 0,
+      "text": "And assign a global keyboard value of F4.",
+      "start": 12.46,
+      "end": 15.42
+    },
+    {
+      "block": 0,
+      "text": "For the GotoPrevLocation set it to shift F4.",
+      "start": 15.6,
+      "end": 18.8
+    },
+    {
+      "block": 0,
+      "text": "Then whenever you have build errors you just hit F4 to go to the next error.",
+      "start": 18.98,
+      "end": 23.22
+    },
+    {
+      "block": 0,
+      "text": "Ditto for when you have a find in files window.",
+      "start": 23.4,
+      "end": 26.2
+    }
+  ]
+}

@@ -1,0 +1,945 @@
+{
+  "post": 176,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "603f7850fac757766d50d9a94b4651ff8c46908b8a20c0b833e798f9c3447b07",
+  "audioSHA256": "c837ea56e7b2efb554bff28d2d1ba6e9f86ab59873b112447b237f3dabb63f1c",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "April 11th 2006",
+      "start": 0.0,
+      "end": 2.4
+    },
+    {
+      "block": 1,
+      "text": "I was born today!",
+      "start": 2.58,
+      "end": 4.34
+    },
+    {
+      "block": 2,
+      "text": "All of my brothers and sisters are bigger than me.",
+      "start": 4.52,
+      "end": 7.24
+    },
+    {
+      "block": 2,
+      "text": "They said I\u2019m the runt of the litter.",
+      "start": 7.42,
+      "end": 9.5
+    },
+    {
+      "block": 2,
+      "text": "I overheard that I\u2019m a Red Tri Colored Border Collie, that sounds fancy.",
+      "start": 9.68,
+      "end": 13.92
+    },
+    {
+      "block": 2,
+      "text": "My name doesn\u2019t sound so fancy though, they call me \u201cPatches\u201d because of some little white patches of hair on my back.",
+      "start": 14.1,
+      "end": 19.7
+    },
+    {
+      "block": 3,
+      "text": "A nice guy and girl came to visit us, they played with all of my brothers and sisters, but they paid extra attention to me.",
+      "start": 19.88,
+      "end": 26.36
+    },
+    {
+      "block": 3,
+      "text": "It was so nice to be singled out like that.",
+      "start": 26.54,
+      "end": 29.18
+    },
+    {
+      "block": 3,
+      "text": "I gave them kisses.",
+      "start": 29.36,
+      "end": 31.12
+    },
+    {
+      "block": 4,
+      "text": "June 2th 2006",
+      "start": 31.3,
+      "end": 33.7
+    },
+    {
+      "block": 5,
+      "text": "That guy from before came back and brought me in a car.",
+      "start": 33.88,
+      "end": 37.08
+    },
+    {
+      "block": 5,
+      "text": "I got so sick, I hate cars.",
+      "start": 37.26,
+      "end": 39.82
+    },
+    {
+      "block": 5,
+      "text": "I\u2019ll never go in another car from now on.",
+      "start": 40.0,
+      "end": 42.56
+    },
+    {
+      "block": 5,
+      "text": "He told me he was my new daddy.",
+      "start": 42.74,
+      "end": 44.9
+    },
+    {
+      "block": 6,
+      "text": "When we got to my new home, I met 2 new things called cats.",
+      "start": 45.08,
+      "end": 48.84
+    },
+    {
+      "block": 6,
+      "text": "I guess cats are similar to dogs but more terrifying.",
+      "start": 49.02,
+      "end": 52.3
+    },
+    {
+      "block": 7,
+      "text": "The guy that called himself dad was running around like crazy.",
+      "start": 52.48,
+      "end": 56.08
+    },
+    {
+      "block": 7,
+      "text": "He put a picture of himself holding a ring in my collar.",
+      "start": 56.26,
+      "end": 59.38
+    },
+    {
+      "block": 8,
+      "text": "The girl who I figured was my new mom came home and I ran to her.",
+      "start": 59.56,
+      "end": 63.24
+    },
+    {
+      "block": 8,
+      "text": "I was so happy to see her again.",
+      "start": 63.42,
+      "end": 65.58
+    },
+    {
+      "block": 8,
+      "text": "She picked me up and I gave her kisses.",
+      "start": 65.76,
+      "end": 68.0
+    },
+    {
+      "block": 8,
+      "text": "She looked at the picture and then my dad went down on his knee.",
+      "start": 68.18,
+      "end": 71.3
+    },
+    {
+      "block": 8,
+      "text": "They started crying and kissing each other.",
+      "start": 71.48,
+      "end": 73.96
+    },
+    {
+      "block": 8,
+      "text": "People are weird.",
+      "start": 74.14,
+      "end": 75.82
+    },
+    {
+      "block": 9,
+      "text": "They told me my name was Leia and they brought me to meet a lot of people.",
+      "start": 76.0,
+      "end": 79.68
+    },
+    {
+      "block": 9,
+      "text": "They said the name was after something called Star Wars.",
+      "start": 79.86,
+      "end": 82.9
+    },
+    {
+      "block": 9,
+      "text": "I don\u2019t know what that is, but I like this new name much better.",
+      "start": 83.08,
+      "end": 86.52
+    },
+    {
+      "block": 10,
+      "text": "That night, they threw a ball to me and I brought it back.",
+      "start": 86.7,
+      "end": 89.98
+    },
+    {
+      "block": 10,
+      "text": "They told me I was a good girl.",
+      "start": 90.16,
+      "end": 92.24
+    },
+    {
+      "block": 10,
+      "text": "That was the best thing ever.",
+      "start": 92.42,
+      "end": 94.42
+    },
+    {
+      "block": 10,
+      "text": "I liked making them happy, I\u2019m going to bring them my toys from now on.",
+      "start": 94.6,
+      "end": 98.52
+    },
+    {
+      "block": 11,
+      "text": "I met mom\u2019s older dog named Shelby today.",
+      "start": 98.7,
+      "end": 101.5
+    },
+    {
+      "block": 11,
+      "text": "She lives at my grandparent\u2019s house.",
+      "start": 101.68,
+      "end": 104.0
+    },
+    {
+      "block": 11,
+      "text": "Shelby is a Dalmatian and she looks pretty old.",
+      "start": 104.18,
+      "end": 106.98
+    },
+    {
+      "block": 11,
+      "text": "She can beat me at tug of war though.",
+      "start": 107.16,
+      "end": 109.48
+    },
+    {
+      "block": 11,
+      "text": "She taught me how to get a drink of water any time I want in this magical thing called a toilet.",
+      "start": 109.66,
+      "end": 114.38
+    },
+    {
+      "block": 12,
+      "text": "I went to dog training and graduated!",
+      "start": 114.56,
+      "end": 117.12
+    },
+    {
+      "block": 12,
+      "text": "The best part is mom and dad keep giving me treats for doing silly little things like sit, lay down, roll over, shake a paw, speak and take a bow.",
+      "start": 117.3,
+      "end": 125.86
+    },
+    {
+      "block": 13,
+      "text": "Mom and dad take me with them a lot when they go out.",
+      "start": 126.04,
+      "end": 128.84
+    },
+    {
+      "block": 13,
+      "text": "I hate the car part, but I love being with other people and doggy friends too.",
+      "start": 129.02,
+      "end": 133.58
+    },
+    {
+      "block": 14,
+      "text": "I learnt another trick called \u201cGet the kitties!\u201d.",
+      "start": 133.76,
+      "end": 136.4
+    },
+    {
+      "block": 14,
+      "text": "I get to bark and chase away those kitties from the kitchen.",
+      "start": 136.58,
+      "end": 139.54
+    },
+    {
+      "block": 14,
+      "text": "It\u2019s so fun.",
+      "start": 139.72,
+      "end": 141.32
+    },
+    {
+      "block": 14,
+      "text": "The kitties are starting to grow on me, they\u2019re pretty lazy though!",
+      "start": 141.5,
+      "end": 145.02
+    },
+    {
+      "block": 15,
+      "text": "We played this awesome game where mom and dad chase me around outside.",
+      "start": 145.2,
+      "end": 148.96
+    },
+    {
+      "block": 15,
+      "text": "Any time they get close to me, I bolt.",
+      "start": 149.14,
+      "end": 151.7
+    },
+    {
+      "block": 15,
+      "text": "Then dad starts running trying to catch me and mom starts yelling at me.",
+      "start": 151.88,
+      "end": 155.56
+    },
+    {
+      "block": 15,
+      "text": "They look angry, but I know they\u2019re having just as much fun as me.",
+      "start": 155.74,
+      "end": 159.5
+    },
+    {
+      "block": 16,
+      "text": "It stormed outside, it was so loud and there\u2019s bright lightning flashes in the sky.",
+      "start": 159.68,
+      "end": 164.32
+    },
+    {
+      "block": 16,
+      "text": "I\u2019m terrified of storms.",
+      "start": 164.5,
+      "end": 166.58
+    },
+    {
+      "block": 17,
+      "text": "I learnt this cool new trick called \u201cGO CRAZY\u201d.",
+      "start": 166.76,
+      "end": 169.56
+    },
+    {
+      "block": 17,
+      "text": "I take the nearest toy and growl and shake it side to side.",
+      "start": 169.74,
+      "end": 173.58
+    },
+    {
+      "block": 17,
+      "text": "Mom and dad must love it because they show everyone that comes to the house.",
+      "start": 173.76,
+      "end": 177.52
+    },
+    {
+      "block": 18,
+      "text": "I played outside for the first time in the snow, I love it.",
+      "start": 177.7,
+      "end": 181.14
+    },
+    {
+      "block": 18,
+      "text": "Dad throws up some snow with a shovel and I jump, bark, and try to bite it.",
+      "start": 181.32,
+      "end": 185.72
+    },
+    {
+      "block": 18,
+      "text": "He says he can\u2019t shovel properly though because I get in the way.",
+      "start": 185.9,
+      "end": 189.34
+    },
+    {
+      "block": 18,
+      "text": "How else am I supposed to get the snow under his shovel though?",
+      "start": 189.52,
+      "end": 192.56
+    },
+    {
+      "block": 19,
+      "text": "This new home is pretty great.",
+      "start": 192.74,
+      "end": 194.82
+    },
+    {
+      "block": 19,
+      "text": "We have the perfect family.",
+      "start": 195.0,
+      "end": 197.0
+    },
+    {
+      "block": 19,
+      "text": "I love it when mom and dad throw me the ball, I catch it every time.",
+      "start": 197.18,
+      "end": 201.02
+    },
+    {
+      "block": 20,
+      "text": "I\u2019m not a fan of this thing called Halloween.",
+      "start": 201.2,
+      "end": 203.76
+    },
+    {
+      "block": 20,
+      "text": "Mom and dad dress me up in these weird costumes and I try to shake them off right away.",
+      "start": 203.94,
+      "end": 208.34
+    },
+    {
+      "block": 21,
+      "text": "My good friend Shelby passed away, They said she was old and suffering.",
+      "start": 208.52,
+      "end": 212.6
+    },
+    {
+      "block": 21,
+      "text": "I\u2019m so sad.",
+      "start": 212.78,
+      "end": 214.38
+    },
+    {
+      "block": 22,
+      "text": "I learnt the name of all of my toys.",
+      "start": 214.56,
+      "end": 216.88
+    },
+    {
+      "block": 22,
+      "text": "Mom and dad hide the toys around the house and then tell me which one to bring back.",
+      "start": 217.06,
+      "end": 221.06
+    },
+    {
+      "block": 22,
+      "text": "They think it\u2019s pretty cool and keep telling their friends that I\u2019m such a smart girl.",
+      "start": 221.24,
+      "end": 225.08
+    },
+    {
+      "block": 23,
+      "text": "I love getting belly scratches, I think I must have gotten that from my dad.",
+      "start": 225.26,
+      "end": 229.26
+    },
+    {
+      "block": 23,
+      "text": "He\u2019s not very good at tug of war though.",
+      "start": 229.44,
+      "end": 231.84
+    },
+    {
+      "block": 24,
+      "text": "Feb 5th 2009",
+      "start": 232.02,
+      "end": 234.42
+    },
+    {
+      "block": 25,
+      "text": "Mom and dad brought home a human baby boy today!",
+      "start": 234.6,
+      "end": 237.56
+    },
+    {
+      "block": 26,
+      "text": "I\u2019m really worried about him, I\u2019m going to protect him.",
+      "start": 237.74,
+      "end": 240.86
+    },
+    {
+      "block": 26,
+      "text": "They said his name is Ronnie.",
+      "start": 241.04,
+      "end": 243.04
+    },
+    {
+      "block": 27,
+      "text": "Another baby came home!",
+      "start": 243.22,
+      "end": 245.3
+    },
+    {
+      "block": 28,
+      "text": "Isn\u2019t it supposed to take 9 months to make a new baby human?",
+      "start": 245.48,
+      "end": 248.68
+    },
+    {
+      "block": 29,
+      "text": "Now I have to watch over 2 babies?",
+      "start": 248.86,
+      "end": 251.26
+    },
+    {
+      "block": 29,
+      "text": "I\u2019m so stressed out, mom sent me to Nana\u2019s house so I could calm down.",
+      "start": 251.44,
+      "end": 255.6
+    },
+    {
+      "block": 29,
+      "text": "This new one is named Link.",
+      "start": 255.78,
+      "end": 257.86
+    },
+    {
+      "block": 30,
+      "text": "My boys are pretty great, I\u2019m going to protect and love them forever.",
+      "start": 258.04,
+      "end": 261.8
+    },
+    {
+      "block": 30,
+      "text": "They\u2019re getting so big over the years.",
+      "start": 261.98,
+      "end": 264.22
+    },
+    {
+      "block": 30,
+      "text": "I love playing with them, it makes them so happy.",
+      "start": 264.4,
+      "end": 267.52
+    },
+    {
+      "block": 31,
+      "text": "Dad took me on a run, he goes really slow though and he keeps taking breaks.",
+      "start": 267.7,
+      "end": 272.34
+    },
+    {
+      "block": 31,
+      "text": "I think he\u2019s out of shape and getting old.",
+      "start": 272.52,
+      "end": 274.84
+    },
+    {
+      "block": 31,
+      "text": "I like running with him though.",
+      "start": 275.02,
+      "end": 276.86
+    },
+    {
+      "block": 32,
+      "text": "Dad left me a treat on the couch!",
+      "start": 277.04,
+      "end": 279.28
+    },
+    {
+      "block": 32,
+      "text": "He unwrapped a 12\u201d sub from Subway and then ran off to go on a meeting in a hurry.",
+      "start": 279.46,
+      "end": 283.86
+    },
+    {
+      "block": 32,
+      "text": "It was so good.",
+      "start": 284.04,
+      "end": 285.8
+    },
+    {
+      "block": 33,
+      "text": "Later, I got in trouble though, I probably shouldn\u2019t have, but it was worth it.",
+      "start": 285.98,
+      "end": 290.46
+    },
+    {
+      "block": 33,
+      "text": "I felt really guilty when dad confronted me, I put my ears back.",
+      "start": 290.64,
+      "end": 294.64
+    },
+    {
+      "block": 34,
+      "text": "My boys are chasing me around the house everywhere.",
+      "start": 294.82,
+      "end": 297.62
+    },
+    {
+      "block": 34,
+      "text": "It\u2019s so much fun.",
+      "start": 297.8,
+      "end": 299.56
+    },
+    {
+      "block": 34,
+      "text": "I love them so much.",
+      "start": 299.74,
+      "end": 301.5
+    },
+    {
+      "block": 35,
+      "text": "Mom, dad, and I did a 5k run for dogs today!",
+      "start": 301.68,
+      "end": 305.44
+    },
+    {
+      "block": 35,
+      "text": "It was called Santa Paws 5k.",
+      "start": 305.62,
+      "end": 308.1
+    },
+    {
+      "block": 36,
+      "text": "August 27 2012",
+      "start": 308.28,
+      "end": 310.84
+    },
+    {
+      "block": 37,
+      "text": "They had another baby!",
+      "start": 311.02,
+      "end": 312.94
+    },
+    {
+      "block": 37,
+      "text": "Mom and dad already aren\u2019t throwing my toys as much to me even though I put big piles of toys in their lap.",
+      "start": 313.12,
+      "end": 318.4
+    },
+    {
+      "block": 37,
+      "text": "That new baby is pretty cute, his name is Asher.",
+      "start": 318.58,
+      "end": 321.94
+    },
+    {
+      "block": 37,
+      "text": "I\u2019m going to protect him too.",
+      "start": 322.12,
+      "end": 323.96
+    },
+    {
+      "block": 38,
+      "text": "My 3 boys are so fun, they play with me a lot and they laugh when I do silly things.",
+      "start": 324.14,
+      "end": 329.02
+    },
+    {
+      "block": 39,
+      "text": "Oh god they did it again, they brought home another baby.",
+      "start": 329.2,
+      "end": 332.8
+    },
+    {
+      "block": 39,
+      "text": "A puppy this time.",
+      "start": 332.98,
+      "end": 334.74
+    },
+    {
+      "block": 39,
+      "text": "This one is trouble.",
+      "start": 334.92,
+      "end": 336.6
+    },
+    {
+      "block": 39,
+      "text": "Mom and dad keep saying bad dog to her as she pees in the house and bites things she isn\u2019t supposed to.",
+      "start": 336.78,
+      "end": 342.14
+    },
+    {
+      "block": 40,
+      "text": "I\u2019m starting to like this puppy they call Nym, when she gets out of line I put her in her place though.",
+      "start": 342.32,
+      "end": 347.28
+    },
+    {
+      "block": 41,
+      "text": "As a wise old dog once taught me, I passed down the toilet water drinking trick to her.",
+      "start": 347.46,
+      "end": 352.34
+    },
+    {
+      "block": 42,
+      "text": "This puppy is starting to get to be the same size as me.",
+      "start": 352.52,
+      "end": 355.72
+    },
+    {
+      "block": 42,
+      "text": "I can\u2019t beat her at tug of war anymore.",
+      "start": 355.9,
+      "end": 358.38
+    },
+    {
+      "block": 43,
+      "text": "It was my birthday again today, I think I might be getting old.",
+      "start": 358.56,
+      "end": 362.08
+    },
+    {
+      "block": 43,
+      "text": "Dad recently said he\u2019s not going to take me on runs anymore because I can\u2019t keep up.",
+      "start": 362.26,
+      "end": 366.66
+    },
+    {
+      "block": 43,
+      "text": "I hope he\u2019s not disappointed in me.",
+      "start": 366.84,
+      "end": 369.08
+    },
+    {
+      "block": 43,
+      "text": "At least mom, dad, and my boys still walk me though.",
+      "start": 369.26,
+      "end": 372.86
+    },
+    {
+      "block": 44,
+      "text": "I can\u2019t even get balls properly anymore, my favourite thing in the world.",
+      "start": 373.04,
+      "end": 377.12
+    },
+    {
+      "block": 44,
+      "text": "It hurts for me to jump up and get the ball, and Nym is just too fast.",
+      "start": 377.3,
+      "end": 381.46
+    },
+    {
+      "block": 44,
+      "text": "I don\u2019t know what\u2019s wrong with me.",
+      "start": 381.64,
+      "end": 383.48
+    },
+    {
+      "block": 45,
+      "text": "I do chase Nym when she gets a ball and I wag my tail and bark at her.",
+      "start": 383.66,
+      "end": 387.66
+    },
+    {
+      "block": 45,
+      "text": "I wish I could still play ball though.",
+      "start": 387.84,
+      "end": 389.92
+    },
+    {
+      "block": 46,
+      "text": "I used to go on long walks, but now I can only do the 3 streets.",
+      "start": 390.1,
+      "end": 393.94
+    },
+    {
+      "block": 46,
+      "text": "I hope mom and dad aren\u2019t mad at me.",
+      "start": 394.12,
+      "end": 396.44
+    },
+    {
+      "block": 46,
+      "text": "I wish I could keep up.",
+      "start": 396.62,
+      "end": 398.3
+    },
+    {
+      "block": 46,
+      "text": "They take me on a short walk, and then bring me home.",
+      "start": 398.48,
+      "end": 401.76
+    },
+    {
+      "block": 46,
+      "text": "Then they go back out with Nym on a longer walk.",
+      "start": 401.94,
+      "end": 404.82
+    },
+    {
+      "block": 46,
+      "text": "They started giving me pain medicine every night.",
+      "start": 405.0,
+      "end": 407.88
+    },
+    {
+      "block": 47,
+      "text": "Mom and dad cut my walks down to just 2 streets.",
+      "start": 408.06,
+      "end": 411.1
+    },
+    {
+      "block": 47,
+      "text": "It hurts to walk but I love being outside so much.",
+      "start": 411.28,
+      "end": 414.32
+    },
+    {
+      "block": 48,
+      "text": "I feel really bad, I can\u2019t control my bladder and sometimes pee when I\u2019m sleeping.",
+      "start": 414.5,
+      "end": 419.06
+    },
+    {
+      "block": 48,
+      "text": "I\u2019m so embarrassed.",
+      "start": 419.24,
+      "end": 421.08
+    },
+    {
+      "block": 48,
+      "text": "I didn\u2019t mean to.",
+      "start": 421.26,
+      "end": 422.86
+    },
+    {
+      "block": 49,
+      "text": "August 16th 2020",
+      "start": 423.04,
+      "end": 425.44
+    },
+    {
+      "block": 50,
+      "text": "I could only make it half way down 1 street and we had to turn back.",
+      "start": 425.62,
+      "end": 429.62
+    },
+    {
+      "block": 50,
+      "text": "I was stumbling, I\u2019m so sorry I couldn\u2019t walk better mom.",
+      "start": 429.8,
+      "end": 433.4
+    },
+    {
+      "block": 51,
+      "text": "August 17th 2020",
+      "start": 433.58,
+      "end": 435.98
+    },
+    {
+      "block": 52,
+      "text": "I was very sick and dad brought me in to the vet to get checked out.",
+      "start": 436.16,
+      "end": 439.6
+    },
+    {
+      "block": 52,
+      "text": "They told him it was another vestibular attack and that I couldn\u2019t support my own weight anymore.",
+      "start": 439.78,
+      "end": 444.58
+    },
+    {
+      "block": 52,
+      "text": "They said they thought it was time and that they were worried about my quality of life.",
+      "start": 444.76,
+      "end": 448.84
+    },
+    {
+      "block": 52,
+      "text": "They put me on IV until mom and my boys could be there.",
+      "start": 449.02,
+      "end": 452.38
+    },
+    {
+      "block": 53,
+      "text": "Mom, dad, and my boys came to see me outside in a tent at the vet.",
+      "start": 452.56,
+      "end": 456.8
+    },
+    {
+      "block": 53,
+      "text": "They all seemed very sad and were crying.",
+      "start": 456.98,
+      "end": 459.62
+    },
+    {
+      "block": 53,
+      "text": "I\u2019m scared but they\u2019re all there with me, hugging me, and telling me they love me.",
+      "start": 459.8,
+      "end": 464.2
+    },
+    {
+      "block": 53,
+      "text": "It\u2019s making me feel better.",
+      "start": 464.38,
+      "end": 466.22
+    },
+    {
+      "block": 53,
+      "text": "I gave each of my boys one last kiss.",
+      "start": 466.4,
+      "end": 468.96
+    },
+    {
+      "block": 54,
+      "text": "When the vet came out she had a needle and they pricked me.",
+      "start": 469.14,
+      "end": 472.1
+    },
+    {
+      "block": 54,
+      "text": "I\u2019m scared, but I\u2019m with my family.",
+      "start": 472.28,
+      "end": 474.84
+    },
+    {
+      "block": 54,
+      "text": "I just need to put my head down.",
+      "start": 475.02,
+      "end": 477.02
+    },
+    {
+      "block": 54,
+      "text": "I\u2019m getting sleepy, I need to sleep.",
+      "start": 477.2,
+      "end": 479.6
+    },
+    {
+      "block": 55,
+      "text": "I met this new guy today that called himself grandpa.",
+      "start": 479.78,
+      "end": 483.06
+    },
+    {
+      "block": 55,
+      "text": "He told me he has been watching over my family and keeping us safe all along.",
+      "start": 483.24,
+      "end": 487.4
+    },
+    {
+      "block": 55,
+      "text": "He told me I was a good dog and threw a ball for me.",
+      "start": 487.58,
+      "end": 490.46
+    },
+    {
+      "block": 56,
+      "text": "The ball flew so far, I ran the whole time at full speed without getting tired.",
+      "start": 490.64,
+      "end": 495.04
+    },
+    {
+      "block": 56,
+      "text": "I ran for 3 miles and then caught the ball mid air.",
+      "start": 495.22,
+      "end": 498.26
+    },
+    {
+      "block": 56,
+      "text": "I wish mom and dad could have seen it.",
+      "start": 498.44,
+      "end": 500.68
+    },
+    {
+      "block": 57,
+      "text": "When I looked around after catching the ball, I saw that Shelby was there!",
+      "start": 500.86,
+      "end": 504.78
+    },
+    {
+      "block": 57,
+      "text": "She told me to come and get a drink from a giant toilet bowl.",
+      "start": 504.96,
+      "end": 508.16
+    },
+    {
+      "block": 57,
+      "text": "When I went to get a drink I saw my doggy mom, dad, brothers, sisters, the kitties, and many more of the doggy friends I knew over the years.",
+      "start": 508.34,
+      "end": 516.34
+    },
+    {
+      "block": 57,
+      "text": "I missed them all so much.",
+      "start": 516.52,
+      "end": 518.36
+    },
+    {
+      "block": 58,
+      "text": "Best of all, I learned that I could watch over and be with my family any time I wanted, so I got to keep the job of protecting my family.",
+      "start": 518.54,
+      "end": 525.5
+    }
+  ]
+}

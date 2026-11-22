@@ -1,0 +1,915 @@
+{
+  "post": 178,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "c7f7a78559f70cde09698d46a5a374974dbac6e52dd8ac20c373cc866269046a",
+  "audioSHA256": "86357edd405296101d1e16487db0875578adf740e3df2a06ab3b35b6b1214101",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "Despair",
+      "start": 0.0,
+      "end": 1.36
+    },
+    {
+      "block": 1,
+      "text": "It\u2019s past 8pm, I\u2019m sitting on the edge of the road in the dark.",
+      "start": 1.54,
+      "end": 5.22
+    },
+    {
+      "block": 1,
+      "text": "It\u2019s raining, I\u2019m shivering, and I\u2019m out of breath.",
+      "start": 5.4,
+      "end": 8.6
+    },
+    {
+      "block": 1,
+      "text": "I just threw up 5 times, I wipe the puke from my mouth and it washes away easily in the rain.",
+      "start": 8.78,
+      "end": 13.98
+    },
+    {
+      "block": 1,
+      "text": "I just need a few minutes to regroup.",
+      "start": 14.16,
+      "end": 16.4
+    },
+    {
+      "block": 1,
+      "text": "I get back up and throw up twice more.",
+      "start": 16.58,
+      "end": 19.14
+    },
+    {
+      "block": 1,
+      "text": "I instantly feel better but I\u2019m not on pace to finish the out and back route within the hour, which will mean I\u2019ll be out of the race.",
+      "start": 19.32,
+      "end": 25.88
+    },
+    {
+      "block": 1,
+      "text": "I came here hoping for over 48h of running.",
+      "start": 26.06,
+      "end": 29.1
+    },
+    {
+      "block": 1,
+      "text": "I\u2019m only on my 14th hour.",
+      "start": 29.28,
+      "end": 31.36
+    },
+    {
+      "block": 1,
+      "text": "Having emptied my stomach, I\u2019m able to run again and I\u2019m making up time.",
+      "start": 31.54,
+      "end": 35.62
+    },
+    {
+      "block": 1,
+      "text": "I start to think it\u2019s possible to finish before the hour so I can start my 15th loop.",
+      "start": 35.8,
+      "end": 40.28
+    },
+    {
+      "block": 1,
+      "text": "But 55 minutes into the loop I realize I\u2019ll just miss the cutoff, even if I sprint.",
+      "start": 40.46,
+      "end": 45.58
+    },
+    {
+      "block": 1,
+      "text": "And I do end up missing the cutoff.",
+      "start": 45.76,
+      "end": 47.92
+    },
+    {
+      "block": 1,
+      "text": "I feel like I\u2019ve let everyone down despite the kind words I know I\u2019ll hear.",
+      "start": 48.1,
+      "end": 52.02
+    },
+    {
+      "block": 1,
+      "text": "Maybe this isn\u2019t the format for me.",
+      "start": 52.2,
+      "end": 54.44
+    },
+    {
+      "block": 1,
+      "text": "I\u2019m not as good as I hoped I was.",
+      "start": 54.62,
+      "end": 56.7
+    },
+    {
+      "block": 2,
+      "text": "1 hour earlier, it\u2019s yard 13 (a yard is a 6.7km loop or out and back).",
+      "start": 56.88,
+      "end": 63.04
+    },
+    {
+      "block": 2,
+      "text": "I start the yard completely spent.",
+      "start": 63.22,
+      "end": 65.38
+    },
+    {
+      "block": 2,
+      "text": "I can\u2019t breathe at all.",
+      "start": 65.56,
+      "end": 67.16
+    },
+    {
+      "block": 2,
+      "text": "I decide to walk and try to catch my breath.",
+      "start": 67.34,
+      "end": 70.06
+    },
+    {
+      "block": 2,
+      "text": "My phone rings and it\u2019s my wife.",
+      "start": 70.24,
+      "end": 72.4
+    },
+    {
+      "block": 2,
+      "text": "I have trouble answering my phone because I\u2019m soaked, despite it being in a plastic bag, but we somehow get connected.",
+      "start": 72.58,
+      "end": 78.9
+    },
+    {
+      "block": 2,
+      "text": "I can\u2019t believe what just happened on the last yard.",
+      "start": 79.08,
+      "end": 81.88
+    },
+    {
+      "block": 2,
+      "text": "I tell her that there\u2019s no way I can recover from that.",
+      "start": 82.06,
+      "end": 84.94
+    },
+    {
+      "block": 2,
+      "text": "I walk for 12 minutes and I start feeling better as I chat to her.",
+      "start": 85.12,
+      "end": 88.72
+    },
+    {
+      "block": 2,
+      "text": "I tell her I\u2019m freezing cold, soaked and I just wish I had a sweater.",
+      "start": 88.9,
+      "end": 92.9
+    },
+    {
+      "block": 2,
+      "text": "My stomach feels like I\u2019m going to throw up but I can\u2019t get at a baggy of pills that has gravol in it because it\u2019s raining.",
+      "start": 93.08,
+      "end": 98.6
+    },
+    {
+      "block": 2,
+      "text": "She calms me down in a way only she could.",
+      "start": 98.78,
+      "end": 101.42
+    },
+    {
+      "block": 2,
+      "text": "I finally catch my breath and I tell her I\u2019m ready to run.",
+      "start": 101.6,
+      "end": 104.8
+    },
+    {
+      "block": 2,
+      "text": "I alternate between running and walking and grind it out.",
+      "start": 104.98,
+      "end": 108.18
+    },
+    {
+      "block": 2,
+      "text": "I notice an arrow on the road that reflects from my headlamp pointing to the only intersection where you turn.",
+      "start": 108.36,
+      "end": 113.48
+    },
+    {
+      "block": 2,
+      "text": "I follow the turn correctly and eventually I finish this yard exhausted.",
+      "start": 113.66,
+      "end": 117.58
+    },
+    {
+      "block": 2,
+      "text": "I have 2 minutes before the end of the hour and I hear the 2 whistles blow that signifies 2 minutes until the next yard begins.",
+      "start": 117.76,
+      "end": 124.4
+    },
+    {
+      "block": 2,
+      "text": "I\u2019m safe for another yard.",
+      "start": 124.58,
+      "end": 126.5
+    },
+    {
+      "block": 2,
+      "text": "I want to sit for my 2 minutes, but my the chair was moved because of the rain.",
+      "start": 126.68,
+      "end": 131.0
+    },
+    {
+      "block": 2,
+      "text": "Kamil (my friend and crew) gets my chair and I sit for 30 seconds before entering the corral again.",
+      "start": 131.18,
+      "end": 136.94
+    },
+    {
+      "block": 3,
+      "text": "The turning point",
+      "start": 137.12,
+      "end": 138.72
+    },
+    {
+      "block": 4,
+      "text": "1 hour earlier I start my 12th yard and first road out and back.",
+      "start": 138.9,
+      "end": 142.98
+    },
+    {
+      "block": 4,
+      "text": "I\u2019m tired and thankful there\u2019s not another trail loop.",
+      "start": 143.16,
+      "end": 146.28
+    },
+    {
+      "block": 4,
+      "text": "I think I\u2019d have made a 12th trail loop, but I\u2019m just not sure.",
+      "start": 146.46,
+      "end": 149.98
+    },
+    {
+      "block": 4,
+      "text": "In most backyard ultras, yards in the dark hours are run on a road.",
+      "start": 150.16,
+      "end": 154.32
+    },
+    {
+      "block": 4,
+      "text": "I\u2019m making great time.",
+      "start": 154.5,
+      "end": 156.42
+    },
+    {
+      "block": 4,
+      "text": "I do most of my training on roads so this is my time to shine, that is, if I still have any energy left.",
+      "start": 156.6,
+      "end": 162.6
+    },
+    {
+      "block": 4,
+      "text": "I\u2019m not sure if I do.",
+      "start": 162.78,
+      "end": 164.38
+    },
+    {
+      "block": 5,
+      "text": "I notice an intersection up ahead and make sure the group of runners ahead of me are in sight so I don\u2019t turn the wrong way.",
+      "start": 164.56,
+      "end": 170.56
+    },
+    {
+      "block": 5,
+      "text": "I briefly think of checking a map of the route I found on Strava, but I\u2019m wet and I probably won\u2019t be able to unlock my phone.",
+      "start": 170.74,
+      "end": 177.06
+    },
+    {
+      "block": 5,
+      "text": "I\u2019m fairly sure some of them have done this course before.",
+      "start": 177.24,
+      "end": 180.2
+    },
+    {
+      "block": 5,
+      "text": "I\u2019m half way through the 12th loop and I\u2019m on track to finish within 47 minutes, it would be my fastest yard if so.",
+      "start": 180.38,
+      "end": 186.78
+    },
+    {
+      "block": 5,
+      "text": "I see a car coming up behind me honking like crazy.",
+      "start": 186.96,
+      "end": 190.08
+    },
+    {
+      "block": 5,
+      "text": "Is he angry at me for running on the road?",
+      "start": 190.26,
+      "end": 192.74
+    },
+    {
+      "block": 5,
+      "text": "What\u2019s his problem?",
+      "start": 192.92,
+      "end": 194.6
+    },
+    {
+      "block": 5,
+      "text": "As he passes he screams YOU\u2019RE ALL GOING THE WRONG WAY.",
+      "start": 194.78,
+      "end": 197.74
+    },
+    {
+      "block": 5,
+      "text": "All 13 of us left.",
+      "start": 197.92,
+      "end": 199.76
+    },
+    {
+      "block": 5,
+      "text": "I think of the intersection I passed and know that\u2019s where we all went wrong.",
+      "start": 199.94,
+      "end": 203.7
+    },
+    {
+      "block": 5,
+      "text": "I realize I\u2019ll be adding over 1km to my run, I don\u2019t know if I can make up that much distance within the hour.",
+      "start": 203.88,
+      "end": 209.88
+    },
+    {
+      "block": 5,
+      "text": "It\u2019ll be close.",
+      "start": 210.06,
+      "end": 211.66
+    },
+    {
+      "block": 6,
+      "text": "I call my wife and explain what\u2019s happening.",
+      "start": 211.84,
+      "end": 214.4
+    },
+    {
+      "block": 6,
+      "text": "She tells me that Kamil said there\u2019s a lot of drama at camp about it.",
+      "start": 214.58,
+      "end": 218.42
+    },
+    {
+      "block": 6,
+      "text": "If no one finishes on time, then the race is over.",
+      "start": 218.6,
+      "end": 221.8
+    },
+    {
+      "block": 6,
+      "text": "There will be no winner.",
+      "start": 221.98,
+      "end": 223.66
+    },
+    {
+      "block": 6,
+      "text": "As I run back everyone but 1 person passes me by.",
+      "start": 223.84,
+      "end": 227.2
+    },
+    {
+      "block": 6,
+      "text": "Some small arrows were painted on the road but they were easy to miss in the daylight.",
+      "start": 227.38,
+      "end": 231.3
+    },
+    {
+      "block": 7,
+      "text": "As I get closer to the end of the hour I realize I need to do 1 mile in under 8 minutes.",
+      "start": 231.48,
+      "end": 236.44
+    },
+    {
+      "block": 7,
+      "text": "That\u2019s faster than I train but doable.",
+      "start": 236.62,
+      "end": 239.02
+    },
+    {
+      "block": 7,
+      "text": "I do the best I can to make up ground, but I have to walk because I\u2019m exhausted, then I realize I need to run again.",
+      "start": 239.2,
+      "end": 245.36
+    },
+    {
+      "block": 7,
+      "text": "I\u2019m not ready to give up.",
+      "start": 245.54,
+      "end": 247.22
+    },
+    {
+      "block": 7,
+      "text": "It starts raining extremely hard and I can\u2019t see a thing.",
+      "start": 247.4,
+      "end": 250.84
+    },
+    {
+      "block": 7,
+      "text": "I wonder if a car would be able to see me.",
+      "start": 251.02,
+      "end": 253.58
+    },
+    {
+      "block": 7,
+      "text": "I can\u2019t see 1 foot in front of me and there is no shoulder on the road.",
+      "start": 253.76,
+      "end": 257.6
+    },
+    {
+      "block": 7,
+      "text": "I hold my headlamp in my hand and run fast while holding my hand up with the light.",
+      "start": 257.78,
+      "end": 262.18
+    },
+    {
+      "block": 8,
+      "text": "As I get closer to the finish I see runners that were eliminated come into the course screaming. 1 MINUTE LET\u2019S GOOOO, you need to sprint!",
+      "start": 262.36,
+      "end": 270.28
+    },
+    {
+      "block": 8,
+      "text": "I start running as fast as I can.",
+      "start": 270.46,
+      "end": 272.7
+    },
+    {
+      "block": 8,
+      "text": "I have no energy but I do it anyway.",
+      "start": 272.88,
+      "end": 275.36
+    },
+    {
+      "block": 8,
+      "text": "It\u2019s uphill.",
+      "start": 275.54,
+      "end": 277.06
+    },
+    {
+      "block": 8,
+      "text": "A kind eliminated runner runs beside me.",
+      "start": 277.24,
+      "end": 280.04
+    },
+    {
+      "block": 8,
+      "text": "I wonder if I\u2019ll be a few seconds early or a few seconds late.",
+      "start": 280.22,
+      "end": 283.66
+    },
+    {
+      "block": 8,
+      "text": "I hear clapping and cheering, I cross the line as I hear 10-9-8\u2026 These seconds seem to pass faster than a second on a clock passes, 3-2-1 go.",
+      "start": 283.84,
+      "end": 293.44
+    },
+    {
+      "block": 8,
+      "text": "I\u2019m bent over, I can\u2019t breathe.",
+      "start": 293.62,
+      "end": 296.02
+    },
+    {
+      "block": 8,
+      "text": "Kamil is trying to pass me a water bottle, food and supplies, and I see him, but I need to prioritize breathing.",
+      "start": 296.2,
+      "end": 302.6
+    },
+    {
+      "block": 8,
+      "text": "I made it and everyone expects me to drop.",
+      "start": 302.78,
+      "end": 305.42
+    },
+    {
+      "block": 8,
+      "text": "I really should drop but I didn\u2019t come to voluntarily drop.",
+      "start": 305.6,
+      "end": 309.12
+    },
+    {
+      "block": 8,
+      "text": "I decide to get out of the corral and onto the road because otherwise I\u2019m out.",
+      "start": 309.3,
+      "end": 313.14
+    },
+    {
+      "block": 8,
+      "text": "All I was thinking was that I needed to find the energy to get out of the corral, then I\u2019ll figure out what\u2019s next.",
+      "start": 313.32,
+      "end": 318.6
+    },
+    {
+      "block": 8,
+      "text": "Only 1 of the 13 runners were eliminated due to the wrong turn.",
+      "start": 318.78,
+      "end": 322.62
+    },
+    {
+      "block": 8,
+      "text": "It was almost 2, it was almost me.",
+      "start": 322.8,
+      "end": 325.44
+    },
+    {
+      "block": 9,
+      "text": "Worry",
+      "start": 325.62,
+      "end": 326.9
+    },
+    {
+      "block": 10,
+      "text": "1 hour earlier it\u2019s trail loop 11.",
+      "start": 327.08,
+      "end": 329.8
+    },
+    {
+      "block": 10,
+      "text": "I start doubting myself and wonder if I have a couple more trail loops in me.",
+      "start": 329.98,
+      "end": 334.06
+    },
+    {
+      "block": 10,
+      "text": "I was eliminated at Ode to Laz, another backyard ultra, after having stomach issues on the 12th loop.",
+      "start": 334.24,
+      "end": 340.08
+    },
+    {
+      "block": 10,
+      "text": "I\u2019m happy to hear Laz say that this will be your last trail loop.",
+      "start": 340.26,
+      "end": 343.78
+    },
+    {
+      "block": 10,
+      "text": "I am doing well on this loop until the 6km spot.",
+      "start": 343.96,
+      "end": 347.4
+    },
+    {
+      "block": 10,
+      "text": "Having tripped many times around this location, I pay attention to my steps and try to focus.",
+      "start": 347.58,
+      "end": 352.46
+    },
+    {
+      "block": 10,
+      "text": "I trip on a rock which makes my leg spasm and I stumble hard into the bushes.",
+      "start": 352.64,
+      "end": 356.88
+    },
+    {
+      "block": 10,
+      "text": "My abs bulge and pulsate in spasms.",
+      "start": 357.06,
+      "end": 359.78
+    },
+    {
+      "block": 10,
+      "text": "I wonder if this is it.",
+      "start": 359.96,
+      "end": 361.64
+    },
+    {
+      "block": 10,
+      "text": "I\u2019ve injured myself.",
+      "start": 361.82,
+      "end": 363.66
+    },
+    {
+      "block": 10,
+      "text": "I can\u2019t get the stomach spasms under control.",
+      "start": 363.84,
+      "end": 366.56
+    },
+    {
+      "block": 10,
+      "text": "I take a minute and try to get my stomach to stop spasming.",
+      "start": 366.74,
+      "end": 369.86
+    },
+    {
+      "block": 10,
+      "text": "It finally does.",
+      "start": 370.04,
+      "end": 371.8
+    },
+    {
+      "block": 10,
+      "text": "I\u2019m tired but I run.",
+      "start": 371.98,
+      "end": 373.74
+    },
+    {
+      "block": 10,
+      "text": "I finish this yard in 56 minutes.",
+      "start": 373.92,
+      "end": 376.4
+    },
+    {
+      "block": 11,
+      "text": "Strength",
+      "start": 376.58,
+      "end": 377.94
+    },
+    {
+      "block": 12,
+      "text": "Yards 2-9 are great.",
+      "start": 378.12,
+      "end": 380.28
+    },
+    {
+      "block": 12,
+      "text": "I notice my pace starting to slow on loop 9 but otherwise I\u2019m right within the 52-54 min / yard goal I\u2019m shooting for.",
+      "start": 380.46,
+      "end": 388.38
+    },
+    {
+      "block": 12,
+      "text": "Someone right in front tripped on a rock or a root, and pulled something in his leg.",
+      "start": 388.56,
+      "end": 392.72
+    },
+    {
+      "block": 12,
+      "text": "He was strong one minute, and out the next.",
+      "start": 392.9,
+      "end": 395.62
+    },
+    {
+      "block": 12,
+      "text": "It could happen to me if I didn\u2019t focus.",
+      "start": 395.8,
+      "end": 398.2
+    },
+    {
+      "block": 12,
+      "text": "I don\u2019t dare to look at my phone, answer texts or the phone on the trail.",
+      "start": 398.38,
+      "end": 402.38
+    },
+    {
+      "block": 12,
+      "text": "I trip many times and several people dropped due to injuries.",
+      "start": 402.56,
+      "end": 406.16
+    },
+    {
+      "block": 12,
+      "text": "As time progresses I notice I\u2019m staying consistent and others are getting slower than me.",
+      "start": 406.34,
+      "end": 410.98
+    },
+    {
+      "block": 12,
+      "text": "My nutrition is right on target.",
+      "start": 411.16,
+      "end": 413.32
+    },
+    {
+      "block": 12,
+      "text": "I\u2019m shooting for 250cal/h and I have exactly that.",
+      "start": 413.5,
+      "end": 417.5
+    },
+    {
+      "block": 12,
+      "text": "Kamil traveled with me to Tennessee from Ontario Canada to crew me and is doing a great job.",
+      "start": 417.68,
+      "end": 423.12
+    },
+    {
+      "block": 12,
+      "text": "I don\u2019t need ibuprofen, gravol or anything else other than salt pills.",
+      "start": 423.3,
+      "end": 427.7
+    },
+    {
+      "block": 12,
+      "text": "I know I can win this, by the 9th loop, I think I can at least, my confidence is still high.",
+      "start": 427.88,
+      "end": 433.24
+    },
+    {
+      "block": 13,
+      "text": "Naive optimism",
+      "start": 433.42,
+      "end": 435.26
+    },
+    {
+      "block": 14,
+      "text": "Yard 1 goes well.",
+      "start": 435.44,
+      "end": 437.36
+    },
+    {
+      "block": 14,
+      "text": "The trails are beautiful but very technical, at least for me.",
+      "start": 437.54,
+      "end": 441.14
+    },
+    {
+      "block": 14,
+      "text": "I trip near the end of the loop but catch myself before I fall and get a cut on my hand.",
+      "start": 441.32,
+      "end": 445.8
+    },
+    {
+      "block": 14,
+      "text": "It\u2019s not a problem, I\u2019m feeling perfect and strong.",
+      "start": 445.98,
+      "end": 449.26
+    },
+    {
+      "block": 14,
+      "text": "I was only expecting 500\u2019 of elevation per loop, but my watch measures 600\u2019.",
+      "start": 449.44,
+      "end": 454.96
+    },
+    {
+      "block": 14,
+      "text": "But I can do this, 3 of 5 of my weekly training runs consisted of hours of hill repeats with 1100\u2019 per hour.",
+      "start": 455.14,
+      "end": 462.26
+    },
+    {
+      "block": 14,
+      "text": "This race started for me months in advance when my training started, I\u2019ve put in the work, I will do this.",
+      "start": 462.44,
+      "end": 467.96
+    },
+    {
+      "block": 14,
+      "text": "I\u2019ve done it before at other races.",
+      "start": 468.14,
+      "end": 470.38
+    },
+    {
+      "block": 15,
+      "text": "The day before",
+      "start": 470.56,
+      "end": 472.16
+    },
+    {
+      "block": 16,
+      "text": "We arrive on site the day before the race and set up.",
+      "start": 472.34,
+      "end": 475.46
+    },
+    {
+      "block": 16,
+      "text": "We walk the trail so that there\u2019s no surprises for the next day.",
+      "start": 475.64,
+      "end": 479.16
+    },
+    {
+      "block": 16,
+      "text": "I notice the famous V-tree that you run through and take a picture.",
+      "start": 479.34,
+      "end": 482.94
+    },
+    {
+      "block": 16,
+      "text": "I feel better knowing what the course will be like.",
+      "start": 483.12,
+      "end": 485.76
+    },
+    {
+      "block": 17,
+      "text": "I have to say thank you to Kamil for flying out to crew me.",
+      "start": 485.94,
+      "end": 489.3
+    },
+    {
+      "block": 17,
+      "text": "It was a huge ask and he stepped up.",
+      "start": 489.48,
+      "end": 492.12
+    },
+    {
+      "block": 17,
+      "text": "I\u2019m also forever grateful to my wife for letting me travel during these uncertain times to TN, and holding down the fort.",
+      "start": 492.3,
+      "end": 498.86
+    },
+    {
+      "block": 17,
+      "text": "It was a dream of mine to run the Big\u2019s backyard course and to meet Lazarus Lake (Gary), his wife Sandra, and their dogs Big and Little.",
+      "start": 499.04,
+      "end": 506.72
+    },
+    {
+      "block": 17,
+      "text": "Thank you to my family for showing their support and for the words of encouragement.",
+      "start": 506.9,
+      "end": 510.9
+    },
+    {
+      "block": 17,
+      "text": "I had a particularly nice message from my mom the morning of the run that kept me strong - \u201cDad will be running beside you, just as you do for Ronnie\u201d.",
+      "start": 511.08,
+      "end": 518.52
+    },
+    {
+      "block": 17,
+      "text": "I have to say thank you to Casey from weUltra for helping me get into this race and to the weUltra group for all the support and encouragement.",
+      "start": 518.7,
+      "end": 525.66
+    },
+    {
+      "block": 17,
+      "text": "My trainer Matt for the training plan and encouragement.",
+      "start": 525.84,
+      "end": 528.96
+    },
+    {
+      "block": 18,
+      "text": "Final thoughts",
+      "start": 529.14,
+      "end": 530.66
+    },
+    {
+      "block": 19,
+      "text": "I learn more on each of these runs.",
+      "start": 530.84,
+      "end": 533.08
+    },
+    {
+      "block": 19,
+      "text": "Especially the ones I don\u2019t do well on.",
+      "start": 533.26,
+      "end": 535.66
+    },
+    {
+      "block": 19,
+      "text": "I\u2019ve won 2 backyard ultras in the past but the most I\u2019ve accomplished was 31 yards (208km) so far.",
+      "start": 535.84,
+      "end": 543.2
+    },
+    {
+      "block": 19,
+      "text": "The races last as long as the 2nd place person decides.",
+      "start": 543.38,
+      "end": 546.82
+    },
+    {
+      "block": 19,
+      "text": "This time amongst other things I learnt to not follow others, even if it\u2019s everyone.",
+      "start": 547.0,
+      "end": 551.64
+    },
+    {
+      "block": 19,
+      "text": "I learnt to be more prepared for the rain, what happens when you can\u2019t get to your salt pills and much needed stomach medicine, when you can\u2019t even communicate by phone with your crew because it\u2019s too wet.",
+      "start": 551.82,
+      "end": 561.26
+    },
+    {
+      "block": 19,
+      "text": "I feel like I figured out my nutrition well this time, the puking on the last loop was due to the sprinting and not being able to recover.",
+      "start": 561.44,
+      "end": 568.16
+    },
+    {
+      "block": 19,
+      "text": "I didn\u2019t need any ibuprofen or gravel which was a first for me.",
+      "start": 568.34,
+      "end": 571.94
+    },
+    {
+      "block": 20,
+      "text": "I decide to keep trying.",
+      "start": 572.12,
+      "end": 573.96
+    },
+    {
+      "block": 20,
+      "text": "I need to step up my fitness even more.",
+      "start": 574.14,
+      "end": 576.62
+    },
+    {
+      "block": 20,
+      "text": "I realize I\u2019m getting older, but I trust my best days at this are still ahead.",
+      "start": 576.8,
+      "end": 581.04
+    },
+    {
+      "block": 20,
+      "text": "This isn\u2019t easy, a good result or a win is not likely.",
+      "start": 581.22,
+      "end": 584.9
+    },
+    {
+      "block": 20,
+      "text": "Failure is just about inevitable, but that\u2019s why I love it.",
+      "start": 585.08,
+      "end": 588.6
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "post": 138,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "4aefd5309efa7072dc326bd46ac051be5231a03ab704aa70c603a1433d3d145d",
+  "audioSHA256": "b2b032a6fc5eaeb77a94b5c8e6d752d266c9299e2c929cf0e0813c1ede94caea",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "In case you missed it, Harvey Anderson - Mozilla General Counsel, just published a great blog post about what\u2019s going on with Windows on ARM support.",
+      "start": 0.0,
+      "end": 8.4
+    },
+    {
+      "block": 1,
+      "text": "Without competition there is no innovation.",
+      "start": 8.58,
+      "end": 11.22
+    },
+    {
+      "block": 1,
+      "text": "You can read the post here:",
+      "start": 11.4,
+      "end": 13.24
+    },
+    {
+      "block": 2,
+      "text": "Windows on ARM Users Need Browser Choice Too",
+      "start": 13.42,
+      "end": 16.54
+    },
+    {
+      "block": 3,
+      "text": "To be clear, we will still have a Metro browser as previously blogged about on non ARM platforms.",
+      "start": 16.72,
+      "end": 22.64
+    },
+    {
+      "block": 4,
+      "text": "To see why ARM matters, see Asa\u2019s post here: Why Windows Classic on ARM Matters",
+      "start": 22.82,
+      "end": 28.18
+    }
+  ]
+}

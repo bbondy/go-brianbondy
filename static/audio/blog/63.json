@@ -1,0 +1,33 @@
+{
+  "post": 63,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "6b1b5df4e1fa065f7c292dc21cc0f690677d00121b9d3b46f0faef3c611c7efe",
+  "audioSHA256": "52366b241be944ebef9eb64c1a1852cf0d042d7759eaa8e0f906dfaff6e7940d",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "I got a new apple iMac computer today.",
+      "start": 0.0,
+      "end": 2.56
+    },
+    {
+      "block": 0,
+      "text": "My first impressions of it is that it is very cool.",
+      "start": 2.74,
+      "end": 5.7
+    },
+    {
+      "block": 0,
+      "text": "It has a remote control, a built in web cam, built in dvd/cd burner, as well as built in wireless.",
+      "start": 5.88,
+      "end": 12.44
+    },
+    {
+      "block": 0,
+      "text": "It has a ton of software and everything just works out of the box true to the commercials :)",
+      "start": 12.62,
+      "end": 17.1
+    }
+  ]
+}

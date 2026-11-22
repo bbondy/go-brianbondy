@@ -1,0 +1,45 @@
+{
+  "post": 16,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "51b3cd827b1c59546d6aa1cb3b9b438aac0784045d5bd6c46a7b2055286095d1",
+  "audioSHA256": "1a5ef09c92435c0d9463dd5667c7f78bd20df2dc3b59f9a63e2e090b346b592b",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "Every version of windows allowed each application to stop the computer from entering sleep mode.",
+      "start": 0.0,
+      "end": 4.96
+    },
+    {
+      "block": 1,
+      "text": "This is an important function and is required by several applications (for example backup software).",
+      "start": 5.14,
+      "end": 10.9
+    },
+    {
+      "block": 1,
+      "text": "This ability was removed in Windows Vista.",
+      "start": 11.08,
+      "end": 13.96
+    },
+    {
+      "block": 1,
+      "text": "I.e.",
+      "start": 14.14,
+      "end": 16.86
+    },
+    {
+      "block": 1,
+      "text": "Windows Vista (without manual tweaking of a group policy) does not allow an application to veto sleep mode.",
+      "start": 17.04,
+      "end": 23.36
+    },
+    {
+      "block": 2,
+      "text": "This is just another reason why Windows Vista sucks.",
+      "start": 23.54,
+      "end": 26.82
+    }
+  ]
+}

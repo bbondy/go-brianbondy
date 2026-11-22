@@ -1,0 +1,75 @@
+{
+  "post": 31,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "1cd8de3680061a30c587161d8274d5842b9a8c973c8b48434a57b2c9164650e6",
+  "audioSHA256": "e2964c6d8d65b12ea3e047e6cad96677a7d6149ef66b55532f6476821c0c856a",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "If you haven\u2019t heard of iTV, it\u2019s a product that apple will be releasing in the first quarter of 2007.",
+      "start": 0.0,
+      "end": 5.76
+    },
+    {
+      "block": 0,
+      "text": "Not many people realize it, but it\u2019s going to change their lives.",
+      "start": 5.94,
+      "end": 9.46
+    },
+    {
+      "block": 0,
+      "text": "In the future, say goodbye to DVDs and any other type of disc based media.",
+      "start": 9.64,
+      "end": 14.28
+    },
+    {
+      "block": 0,
+      "text": "Say hello to new ways to view video for free such as integration for your TV with youTube.",
+      "start": 14.46,
+      "end": 19.42
+    },
+    {
+      "block": 0,
+      "text": "Say hello to podcasts on your TV from sites like revision 3.",
+      "start": 19.6,
+      "end": 23.44
+    },
+    {
+      "block": 0,
+      "text": "Say goodbye to renting and purchasing movies.",
+      "start": 23.62,
+      "end": 26.34
+    },
+    {
+      "block": 0,
+      "text": "Everything will be downloaded and synced automatically to your iTV box.",
+      "start": 26.52,
+      "end": 30.6
+    },
+    {
+      "block": 1,
+      "text": "iTV will power it all.",
+      "start": 30.78,
+      "end": 32.86
+    },
+    {
+      "block": 1,
+      "text": "It will connect wireless into your home network.",
+      "start": 33.04,
+      "end": 35.84
+    },
+    {
+      "block": 1,
+      "text": "Just about every home that has a TV and a DVD player currently will have one, including you.",
+      "start": 36.02,
+      "end": 41.46
+    },
+    {
+      "block": 1,
+      "text": "The price has been announced already, $299.00 USD.",
+      "start": 41.64,
+      "end": 46.04
+    }
+  ]
+}

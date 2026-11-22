@@ -1,0 +1,1239 @@
+{
+  "post": 100,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "6116b767b7de551521726b1deded4cf0ae0b7d6c270c77fdfa565fc9d3f0a603",
+  "audioSHA256": "5b3e2f8205a9d0f5f15aabdc8cf3a5579f419c934bd9027bc25f889e663172e1",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "This post will answer some very simple questions about how Windows works.",
+      "start": 0.0,
+      "end": 4.0
+    },
+    {
+      "block": 0,
+      "text": "This post is meant to be read by people with a technical background, and at parts it will help if you have a little knowledge about programming in Windows.",
+      "start": 4.18,
+      "end": 11.22
+    },
+    {
+      "block": 1,
+      "text": "If you don\u2019t fully know the answer to any of the questions below, then you should read this post:",
+      "start": 11.4,
+      "end": 16.2
+    },
+    {
+      "block": 2,
+      "text": "Ever wonder what happens when you lock your computer?",
+      "start": 16.38,
+      "end": 19.34
+    },
+    {
+      "block": 2,
+      "text": "What happens to all of the open programs?",
+      "start": 19.52,
+      "end": 22.08
+    },
+    {
+      "block": 2,
+      "text": "How about your task bar?",
+      "start": 22.26,
+      "end": 24.1
+    },
+    {
+      "block": 3,
+      "text": "What is so special about UAC anyway?",
+      "start": 24.28,
+      "end": 27.0
+    },
+    {
+      "block": 3,
+      "text": "How do they lock and dim the whole screen?",
+      "start": 27.18,
+      "end": 29.58
+    },
+    {
+      "block": 3,
+      "text": "Does it really protect me?",
+      "start": 29.76,
+      "end": 31.68
+    },
+    {
+      "block": 4,
+      "text": "Why don\u2019t software key loggers work anymore to capture a locked computer\u2019s password?",
+      "start": 31.86,
+      "end": 36.5
+    },
+    {
+      "block": 5,
+      "text": "What\u2019s so special about screen savers?",
+      "start": 36.68,
+      "end": 39.16
+    },
+    {
+      "block": 5,
+      "text": "How do they work?",
+      "start": 39.34,
+      "end": 40.94
+    },
+    {
+      "block": 6,
+      "text": "How can there be more than one user at a time logged onto the same computer at the same time?",
+      "start": 41.12,
+      "end": 45.92
+    },
+    {
+      "block": 7,
+      "text": "How does Terminal Services or Remote Desktop work?",
+      "start": 46.1,
+      "end": 49.38
+    },
+    {
+      "block": 8,
+      "text": "Why does your remote computer control software probably suck?",
+      "start": 49.56,
+      "end": 53.16
+    },
+    {
+      "block": 9,
+      "text": "What does the \u201cAllow services to interact with desktop\u201d checkbox do on the NT services property page?",
+      "start": 53.34,
+      "end": 58.94
+    },
+    {
+      "block": 10,
+      "text": "Why was Vista perceived to be so bad and Windows 7 so good?",
+      "start": 59.12,
+      "end": 63.2
+    },
+    {
+      "block": 11,
+      "text": "To understand how all of the above works, you need to understand the concept of something called Sessions, Window Stations, and Desktops.",
+      "start": 63.38,
+      "end": 70.9
+    },
+    {
+      "block": 12,
+      "text": "Some of the below may be a little heavy, but it\u2019s worth learning it to see how Windows really works.",
+      "start": 71.08,
+      "end": 75.96
+    },
+    {
+      "block": 13,
+      "text": "A gentle introduction to Sessions:",
+      "start": 76.14,
+      "end": 78.46
+    },
+    {
+      "block": 14,
+      "text": "Each program you have on your computer, when run is considered a process.",
+      "start": 78.64,
+      "end": 82.64
+    },
+    {
+      "block": 14,
+      "text": "A process is a program which is being executed.",
+      "start": 82.82,
+      "end": 85.94
+    },
+    {
+      "block": 14,
+      "text": "Each process is the program code, a collection of threads, and other resources relating to the program.",
+      "start": 86.12,
+      "end": 92.12
+    },
+    {
+      "block": 15,
+      "text": "Each process in Windows belongs to a single user who started that process, and each process also belongs to something called a Session.",
+      "start": 92.3,
+      "end": 99.42
+    },
+    {
+      "block": 15,
+      "text": "Each Session in Windows hosts a collection of processes, windows, Window Stations, Desktops, and several other resources.",
+      "start": 99.6,
+      "end": 107.36
+    },
+    {
+      "block": 15,
+      "text": "Window Stations and Desktops will be covered later in this post.",
+      "start": 107.54,
+      "end": 111.3
+    },
+    {
+      "block": 16,
+      "text": "You can see a list of all of the processes on your computer by going into Task Manager (taskmgr.exe) and clicking on the \u201cProcesses\u201d tab.",
+      "start": 111.48,
+      "end": 119.4
+    },
+    {
+      "block": 16,
+      "text": "In this list you can see the Username of the user who started the process and also the Session that the process belongs to.",
+      "start": 119.58,
+      "end": 125.82
+    },
+    {
+      "block": 16,
+      "text": "By default Windows will not show you the Session each process belongs to but you can easily see it by clicking on the View menu item and then \u201cSelect Columns\u2026\u201d Turn on the option \u201cSession ID\u201d.",
+      "start": 126.0,
+      "end": 136.4
+    },
+    {
+      "block": 17,
+      "text": "Each process belongs to exactly 1 Session and each Session has a Session ID which identifies it.",
+      "start": 136.58,
+      "end": 142.18
+    },
+    {
+      "block": 17,
+      "text": "You cannot change a process\u2019 Session after the process is started.",
+      "start": 142.36,
+      "end": 146.04
+    },
+    {
+      "block": 17,
+      "text": "In Task Manager you will see at least 1 Session if you are using an operating system below Windows Vista and you will see at least 2 Sessions if you are using an operating system of Vista or above.",
+      "start": 146.22,
+      "end": 156.62
+    },
+    {
+      "block": 18,
+      "text": "In Windows you are not limited to that initial number of Sessions though.",
+      "start": 156.8,
+      "end": 160.48
+    },
+    {
+      "block": 18,
+      "text": "There can be many different Sessions, there is a limit that can be reached but we\u2019ll say for the sake of conversation that you can potentially have infinite Sessions.",
+      "start": 160.66,
+      "end": 167.86
+    },
+    {
+      "block": 19,
+      "text": "If you\u2019re using Vista or above, the first Session, Session 0 is where all of the NT services are started.",
+      "start": 168.04,
+      "end": 174.36
+    },
+    {
+      "block": 19,
+      "text": "The second Session above 0 is where the first logged on user\u2019s programs will be started.",
+      "start": 174.54,
+      "end": 179.1
+    },
+    {
+      "block": 20,
+      "text": "More Sessions than what I mentioned will occur anytime you have multiple users logged into the same machine.",
+      "start": 179.28,
+      "end": 184.48
+    },
+    {
+      "block": 20,
+      "text": "You can have multiple users logged into the same machine via Terminal Services, Remote Desktop, or multi user logins onto the same machine via switch-user.",
+      "start": 184.66,
+      "end": 193.46
+    },
+    {
+      "block": 20,
+      "text": "For each additional login operation that you make, a new Session is made.",
+      "start": 193.64,
+      "end": 197.88
+    },
+    {
+      "block": 21,
+      "text": "You can use CreateProcessAsUser to create a process in another Session.",
+      "start": 198.06,
+      "end": 202.22
+    },
+    {
+      "block": 21,
+      "text": "To do this you must use a user token which will contain the associated Session.",
+      "start": 202.4,
+      "end": 207.2
+    },
+    {
+      "block": 21,
+      "text": "To set the Session on the user token you can use the Win32 API SetUserToken with a token information class of TokenSessionId.",
+      "start": 207.38,
+      "end": 214.9
+    },
+    {
+      "block": 22,
+      "text": "So to recap, so far we understand that inside your Windows operating system (OS) you have the following:",
+      "start": 215.08,
+      "end": 221.72
+    },
+    {
+      "block": 23,
+      "text": "Session 0 Process 0.1 Process 0.2 Process 0.3 \u2026 Process 0.N",
+      "start": 221.9,
+      "end": 228.62
+    },
+    {
+      "block": 24,
+      "text": "Session 1 Process 1.1 Process 1.2 Process 1.3 \u2026 Process 1.N",
+      "start": 228.8,
+      "end": 235.44
+    },
+    {
+      "block": 25,
+      "text": "\u2026",
+      "start": 235.62,
+      "end": 236.66
+    },
+    {
+      "block": 26,
+      "text": "Session M Process M.1 Process M.2 Process M.3 \u2026 Process M.N",
+      "start": 236.84,
+      "end": 242.92
+    },
+    {
+      "block": 27,
+      "text": "How Vista changes how Sessions work:",
+      "start": 243.1,
+      "end": 245.66
+    },
+    {
+      "block": 28,
+      "text": "Before Windows Vista, the first logged in user and the NT services shared the first Session which was Session 0.",
+      "start": 245.84,
+      "end": 252.24
+    },
+    {
+      "block": 28,
+      "text": "This Session was also allowed to be interactive.",
+      "start": 252.42,
+      "end": 255.3
+    },
+    {
+      "block": 29,
+      "text": "Windows Vista and above started to put user Sessions separate from NT service Sessions.",
+      "start": 255.48,
+      "end": 260.28
+    },
+    {
+      "block": 29,
+      "text": "It also made sure that Session 0 was not interactive.",
+      "start": 260.46,
+      "end": 263.66
+    },
+    {
+      "block": 30,
+      "text": "These changes with Vista were made for security reasons.",
+      "start": 263.84,
+      "end": 267.28
+    },
+    {
+      "block": 30,
+      "text": "The security reason the change was made, was to ensure that services would be safe from application code.",
+      "start": 267.46,
+      "end": 273.14
+    },
+    {
+      "block": 30,
+      "text": "Why do services need to be protected?",
+      "start": 273.32,
+      "end": 275.8
+    },
+    {
+      "block": 30,
+      "text": "Because services run at an elevated privilege when run as the System account and hence have access to do things a user program shouldn\u2019t be able to control.",
+      "start": 275.98,
+      "end": 283.42
+    },
+    {
+      "block": 30,
+      "text": "More on this later in the section: \u201cHow to circumvent all security in Windows\u201d.",
+      "start": 283.6,
+      "end": 287.84
+    },
+    {
+      "block": 31,
+      "text": "How Sessions worked Pre-Vista with 3 logged on users:",
+      "start": 288.02,
+      "end": 291.3
+    },
+    {
+      "block": 32,
+      "text": "How Sessions worked Post-Vista with 3 logged on users:",
+      "start": 291.48,
+      "end": 294.84
+    },
+    {
+      "block": 33,
+      "text": "The difference of the 2 diagrams being that the first logged on user has his own Session in the Post-Vista diagram.",
+      "start": 295.02,
+      "end": 301.02
+    },
+    {
+      "block": 34,
+      "text": "Window Stations:",
+      "start": 301.2,
+      "end": 302.96
+    },
+    {
+      "block": 35,
+      "text": "Each Session contains a collection of Window Stations, a clipboard, and more.",
+      "start": 303.14,
+      "end": 307.7
+    },
+    {
+      "block": 35,
+      "text": "Each Window station has a name unique to the Session it belongs to.",
+      "start": 307.88,
+      "end": 311.64
+    },
+    {
+      "block": 35,
+      "text": "Meaning within a Session each Window Station is unique.",
+      "start": 311.82,
+      "end": 314.94
+    },
+    {
+      "block": 35,
+      "text": "But across Sessions two Window Stations can share a name but they are completely distinct.",
+      "start": 315.12,
+      "end": 319.84
+    },
+    {
+      "block": 35,
+      "text": "You can think of a Window Station as a security boundary.",
+      "start": 320.02,
+      "end": 323.22
+    },
+    {
+      "block": 35,
+      "text": "Once a Window Station is created, you cannot change the Session that it belongs to.",
+      "start": 323.4,
+      "end": 328.04
+    },
+    {
+      "block": 36,
+      "text": "Each process belongs to a single Window Station but unlike Sessions vs.",
+      "start": 328.22,
+      "end": 332.78
+    },
+    {
+      "block": 36,
+      "text": "Processes, a single process can change its Window Station after startup time.",
+      "start": 332.96,
+      "end": 337.52
+    },
+    {
+      "block": 37,
+      "text": "The following Win32 API can be used to deal with Window Stations: GetProcessWindowStation, SetProcessWindowStation, CreateWindowStation, and OpenWindowStation.",
+      "start": 337.7,
+      "end": 348.5
+    },
+    {
+      "block": 38,
+      "text": "There is one special Window Station called Winsta0 for every session.",
+      "start": 348.68,
+      "end": 353.08
+    },
+    {
+      "block": 38,
+      "text": "WinSta0 is the only Window Station that can display a user interface and receive user input, it uses the keyboard, mouse and display.",
+      "start": 353.26,
+      "end": 361.42
+    },
+    {
+      "block": 38,
+      "text": "Other Window stations cannot display graphical user interfaces nor receive user input.",
+      "start": 361.6,
+      "end": 366.48
+    },
+    {
+      "block": 39,
+      "text": "A process can set a Window Station, to associate itself with, by calling the Win32 API SetProcessWindowStation.",
+      "start": 366.66,
+      "end": 374.42
+    },
+    {
+      "block": 39,
+      "text": "Once a process sets its Window Station it can then access things inside that Window Station such as Desktops, and the clipboard.",
+      "start": 374.6,
+      "end": 381.8
+    },
+    {
+      "block": 39,
+      "text": "Desktops will be discussed later.",
+      "start": 381.98,
+      "end": 384.22
+    },
+    {
+      "block": 40,
+      "text": "Each process actually has a parent process.",
+      "start": 384.4,
+      "end": 387.36
+    },
+    {
+      "block": 40,
+      "text": "When your process gets started, if you aren\u2019t dealing with Window Station code directly it will put you in the same Window Station as your parent process.",
+      "start": 387.54,
+      "end": 395.3
+    },
+    {
+      "block": 40,
+      "text": "A process can create new Window stations with the Win32 API CreateWindowStation",
+      "start": 395.48,
+      "end": 400.92
+    },
+    {
+      "block": 41,
+      "text": "So to recap , so far we understand that inside your Windows OS you have the following:",
+      "start": 401.1,
+      "end": 406.3
+    },
+    {
+      "block": 42,
+      "text": "Session 0 Winsta0 Some Processes Winsta1 Some Processes \u2026 WinstaN Some Processes Session 1 Winsta0 Some Processes Winsta1 Some Processes \u2026 WinstaN Some Processes \u2026 Session M Winsta0 Some Processes Winsta1 Some Processes \u2026 WinstaN Some Processes",
+      "start": 406.48,
+      "end": 423.52
+    },
+    {
+      "block": 43,
+      "text": "Windows Desktops",
+      "start": 423.7,
+      "end": 425.62
+    },
+    {
+      "block": 44,
+      "text": "Each Window Station contains a collection of Desktops.",
+      "start": 425.8,
+      "end": 429.0
+    },
+    {
+      "block": 44,
+      "text": "A Desktop is loaded into kernel memory space and is a logical display surface.",
+      "start": 429.18,
+      "end": 433.98
+    },
+    {
+      "block": 44,
+      "text": "Any GUI object is allocated here.",
+      "start": 434.16,
+      "end": 436.56
+    },
+    {
+      "block": 45,
+      "text": "Each Windows Desktop belongs to a single Session and also a single Window Station.",
+      "start": 436.74,
+      "end": 441.62
+    },
+    {
+      "block": 46,
+      "text": "Only one Desktop at a time can be active (displayed) per Session.",
+      "start": 441.8,
+      "end": 446.2
+    },
+    {
+      "block": 46,
+      "text": "And by definition it must belong to WinSta0.",
+      "start": 446.38,
+      "end": 449.58
+    },
+    {
+      "block": 46,
+      "text": "The active Desktop is called the input Desktop.",
+      "start": 449.76,
+      "end": 452.8
+    },
+    {
+      "block": 46,
+      "text": "One can always get a handle to the active Desktop within ones own Session by calling OpenInputDesktop",
+      "start": 452.98,
+      "end": 458.5
+    },
+    {
+      "block": 47,
+      "text": "WinSta0 has 3 Desktops loaded:",
+      "start": 458.68,
+      "end": 461.56
+    },
+    {
+      "block": 48,
+      "text": "Winlogon (the logon screen)",
+      "start": 461.74,
+      "end": 464.3
+    },
+    {
+      "block": 49,
+      "text": "Default (the user Desktop)",
+      "start": 464.48,
+      "end": 467.04
+    },
+    {
+      "block": 50,
+      "text": "ScreenSaver",
+      "start": 467.22,
+      "end": 468.82
+    },
+    {
+      "block": 51,
+      "text": "There is a 4th Desktop on Vista and higher called the \u201cSecure Desktop\u201d which is used by default in UAC prompts.",
+      "start": 469.0,
+      "end": 475.08
+    },
+    {
+      "block": 52,
+      "text": "When you lock your workstation you perform a Desktop swtich from the Default Desktop to the WinLogon Desktop.",
+      "start": 475.26,
+      "end": 480.86
+    },
+    {
+      "block": 53,
+      "text": "As far as NT services go, each NT service that has credentials specified will create its own Window Station and Desktop.",
+      "start": 481.04,
+      "end": 488.4
+    },
+    {
+      "block": 54,
+      "text": "The following Win32 API can be used to deal with Desktops:",
+      "start": 488.58,
+      "end": 493.14
+    },
+    {
+      "block": 55,
+      "text": "To set a Desktop for a thread you can call SetThreadDesktop",
+      "start": 493.32,
+      "end": 497.0
+    },
+    {
+      "block": 56,
+      "text": "A process can create a new Desktop by calling CreateDesktopEx, when a new Desktop is created it will be assigned into the Window Station associated with the calling process.",
+      "start": 497.18,
+      "end": 506.38
+    },
+    {
+      "block": 57,
+      "text": "When starting a process you can specify which Window Station and Desktop to start it in.",
+      "start": 506.56,
+      "end": 511.44
+    },
+    {
+      "block": 57,
+      "text": "You can do this with the STARTUP info structure and the lpDesktop member.",
+      "start": 511.62,
+      "end": 515.54
+    },
+    {
+      "block": 57,
+      "text": "Typically this is called from a function like CreateProcessAsUser or CreateProcess.",
+      "start": 515.72,
+      "end": 520.76
+    },
+    {
+      "block": 58,
+      "text": "So to recap , so far we understand that inside your Windows OS you have the following:",
+      "start": 520.94,
+      "end": 526.14
+    },
+    {
+      "block": 59,
+      "text": "Session 0 Station Winsta0 Desktop Winlogon Some processes Desktop Default Some processes Desktop Screensaver Some processes Desktop UAC Some processes Some other Desktops Some processes Station Winsta1 Some other Desktops Some processes \u2026 Station WinstaN Some other Desktops Some processes",
+      "start": 526.32,
+      "end": 544.64
+    },
+    {
+      "block": 60,
+      "text": "Session 1 Station Winsta0 Desktop Winlogon Some processes Desktop Default Some processes Desktop Screensaver Some processes Desktop UAC Some processes Some other Desktops Some processes Station Winsta1 Some other Desktops Some processes \u2026 Station WinstaN Some other Desktops Some processes",
+      "start": 544.82,
+      "end": 563.78
+    },
+    {
+      "block": 61,
+      "text": "\u2026",
+      "start": 563.96,
+      "end": 565.0
+    },
+    {
+      "block": 62,
+      "text": "Session M Station Winsta0 Desktop Winlogon Some processes Desktop Default Some processes Desktop Screensaver Some processes Desktop UAC Some processes Some other Desktops Some processes Station Winsta1 Some other Desktops Some processes \u2026 Station WinstaN Some other Desktops Some processes",
+      "start": 565.18,
+      "end": 583.34
+    },
+    {
+      "block": 63,
+      "text": "Mysterious checkbox in the services tab (Optional Read)",
+      "start": 583.52,
+      "end": 587.2
+    },
+    {
+      "block": 64,
+      "text": "There is a little mysterious checkbox that appears in the property page of each of your services called \u201cAllow services to interact with Desktop\u201d.",
+      "start": 587.38,
+      "end": 594.42
+    },
+    {
+      "block": 65,
+      "text": "This checkbox decides that your service will run under the Window Station Winsta0 or under a different Window Station that doesn\u2019t allow user interaction.",
+      "start": 594.6,
+      "end": 602.12
+    },
+    {
+      "block": 65,
+      "text": "This checkbox is not guaranteed to be supported forever, and will probably eventually disapear, but it is supported up to Windows 7 so far.",
+      "start": 602.3,
+      "end": 610.06
+    },
+    {
+      "block": 66,
+      "text": "This checkbox can be turned on for any service via the registry, so this by itself may be a security risk.",
+      "start": 610.24,
+      "end": 616.16
+    },
+    {
+      "block": 66,
+      "text": "So I would think the checkbox will probably be removed.",
+      "start": 616.34,
+      "end": 619.46
+    },
+    {
+      "block": 67,
+      "text": "If this checkbox is ON, then a new Session is created and a new Window Station called Winsta0.",
+      "start": 619.64,
+      "end": 625.48
+    },
+    {
+      "block": 67,
+      "text": "If the service tries to display a GUI, then active user Sessions in front of a GUI will get a notification that there is a GUI on another Desktop trying to be displayed.",
+      "start": 625.66,
+      "end": 634.22
+    },
+    {
+      "block": 67,
+      "text": "You can then click on it to view that GUI.",
+      "start": 634.4,
+      "end": 636.88
+    },
+    {
+      "block": 67,
+      "text": "A user can also chose to be reminded again in 5 minutes time about the GUI notification.",
+      "start": 637.06,
+      "end": 642.42
+    },
+    {
+      "block": 67,
+      "text": "When you view this new Desktop it will usually look like a blank screen except for the service GUI itself.",
+      "start": 642.6,
+      "end": 648.28
+    },
+    {
+      "block": 68,
+      "text": "If this checkbox is OFF, and the service tries to display a GUI, nothing will happen to any visible Desktop.",
+      "start": 648.46,
+      "end": 654.78
+    },
+    {
+      "block": 68,
+      "text": "The service gets started in Session 0.",
+      "start": 654.96,
+      "end": 657.44
+    },
+    {
+      "block": 68,
+      "text": "The GUI calls will succeed but no GUI will ever be shown.",
+      "start": 657.62,
+      "end": 661.22
+    },
+    {
+      "block": 69,
+      "text": "Windows Handles",
+      "start": 661.4,
+      "end": 663.16
+    },
+    {
+      "block": 70,
+      "text": "Windows inside the Windows OS are children of Desktop objects.",
+      "start": 663.34,
+      "end": 667.18
+    },
+    {
+      "block": 71,
+      "text": "A Window is any GUI element and is usually identified by a Windows handle (HWND).",
+      "start": 667.36,
+      "end": 672.88
+    },
+    {
+      "block": 71,
+      "text": "It is important to understand where Windows Handles fit into the whole picture because then you can understand what you can do across Desktops and what you cannot do across Desktops.",
+      "start": 673.06,
+      "end": 681.94
+    },
+    {
+      "block": 72,
+      "text": "Communication across Sessions",
+      "start": 682.12,
+      "end": 684.44
+    },
+    {
+      "block": 73,
+      "text": "Depending on the type of communication, inter-Session communication is possible.",
+      "start": 684.62,
+      "end": 689.1
+    },
+    {
+      "block": 74,
+      "text": "Things like pipes, global events, and sockets allow you to communicate across Sessions.",
+      "start": 689.28,
+      "end": 694.4
+    },
+    {
+      "block": 75,
+      "text": "Things like Windows Messages, and local events do not allow you to communicate across Sessions.",
+      "start": 694.58,
+      "end": 699.78
+    },
+    {
+      "block": 76,
+      "text": "As I mentioned earlier Windows Vista made a gigantic change to how Windows works by starting all of the services inside Session 0.",
+      "start": 699.96,
+      "end": 707.0
+    },
+    {
+      "block": 76,
+      "text": "This meant that a ton of programs which were built as Windows services and used to display a GUI no longer could display that GUI.",
+      "start": 707.18,
+      "end": 713.82
+    },
+    {
+      "block": 77,
+      "text": "The proper way to display a GUI for service code now is to do some kind of inter-Session communication such as a pipe and have the GUI program be a separate program which communicates with your service.",
+      "start": 714.0,
+      "end": 723.84
+    },
+    {
+      "block": 78,
+      "text": "A second way to display a GUI from a service is to simply launch the process within another user\u2019s Session inside Winsta0 and the Default Desktop.",
+      "start": 724.02,
+      "end": 731.7
+    },
+    {
+      "block": 79,
+      "text": "Communication across Desktops",
+      "start": 731.88,
+      "end": 734.36
+    },
+    {
+      "block": 80,
+      "text": "Windows messages are not possible across Desktops.",
+      "start": 734.54,
+      "end": 737.82
+    },
+    {
+      "block": 80,
+      "text": "Windows messages are only possible within the same Desktop.",
+      "start": 738.0,
+      "end": 741.6
+    },
+    {
+      "block": 80,
+      "text": "As confirmed here: Inter-Desktop communication via message passing is not possible.",
+      "start": 741.78,
+      "end": 746.98
+    },
+    {
+      "block": 81,
+      "text": "This means that Windows Hooks which allow you to monitor and get notifications for any message from another process can only be installed at a Desktop Level.",
+      "start": 747.16,
+      "end": 755.48
+    },
+    {
+      "block": 82,
+      "text": "So a key logger for example wouldn\u2019t be allowed to have access to what is typed when a computer is locked in a different Desktop.",
+      "start": 755.66,
+      "end": 761.98
+    },
+    {
+      "block": 83,
+      "text": "After enumerating the Desktops you can enumerate the windows inside each Desktop.",
+      "start": 762.16,
+      "end": 766.72
+    },
+    {
+      "block": 83,
+      "text": "You can use the Win323 API EnumDesktopWindows to enumerate these Desktop windows.",
+      "start": 766.9,
+      "end": 772.74
+    },
+    {
+      "block": 83,
+      "text": "The purpose of me telling you this is that this function takes in a handle to a Desktop and it returns to you a handle to the Windows inside that Desktop.",
+      "start": 772.92,
+      "end": 780.6
+    },
+    {
+      "block": 83,
+      "text": "This reinforces what I\u2019ve been saying about Windows being children of Desktops.",
+      "start": 780.78,
+      "end": 784.94
+    },
+    {
+      "block": 84,
+      "text": "How to circumvent all security in Windows",
+      "start": 785.12,
+      "end": 787.84
+    },
+    {
+      "block": 85,
+      "text": "It is actually possible to do anything you want in Windows in any Session, Window Station, or Desktop.",
+      "start": 788.02,
+      "end": 794.1
+    },
+    {
+      "block": 85,
+      "text": "The solution is to build a service running on your computer running as the Local System Account.",
+      "start": 794.28,
+      "end": 799.0
+    },
+    {
+      "block": 86,
+      "text": "As long as this service is running elevated via a manifest file, it can obtain the token and linked token of any process in any Session, and start a helper program within that same token to do anything it wishes to.",
+      "start": 799.18,
+      "end": 810.14
+    },
+    {
+      "block": 86,
+      "text": "This is probably exactly how Windows Task Manager works.",
+      "start": 810.32,
+      "end": 814.0
+    },
+    {
+      "block": 87,
+      "text": "Tying it all together",
+      "start": 814.18,
+      "end": 816.1
+    },
+    {
+      "block": 88,
+      "text": "Now is the fun part when we can now answer each of the questions in turn:",
+      "start": 816.28,
+      "end": 820.12
+    },
+    {
+      "block": 89,
+      "text": "Ever wonder what happens when you lock your computer?",
+      "start": 820.3,
+      "end": 823.26
+    },
+    {
+      "block": 89,
+      "text": "What happens to all of the open programs?",
+      "start": 823.44,
+      "end": 826.0
+    },
+    {
+      "block": 89,
+      "text": "How about your task bar?",
+      "start": 826.18,
+      "end": 828.02
+    },
+    {
+      "block": 90,
+      "text": "When you lock your computer you are doing a Desktop switch from the Default Desktop to the Winlogon Desktop which are both within the same Window Station WinSta0.",
+      "start": 828.2,
+      "end": 836.68
+    },
+    {
+      "block": 90,
+      "text": "Both Desktops are also within the same Session of course.",
+      "start": 836.86,
+      "end": 840.22
+    },
+    {
+      "block": 91,
+      "text": "This also means that there are many such login screens across Sessions and many different users logged in could each be at their own version of this screen at the same time on the same computer.",
+      "start": 840.4,
+      "end": 849.52
+    },
+    {
+      "block": 92,
+      "text": "What is so special about UAC anyway?",
+      "start": 849.7,
+      "end": 852.42
+    },
+    {
+      "block": 92,
+      "text": "How do they lock and dim the whole screen?",
+      "start": 852.6,
+      "end": 855.0
+    },
+    {
+      "block": 92,
+      "text": "Does it really protect me?",
+      "start": 855.18,
+      "end": 857.1
+    },
+    {
+      "block": 93,
+      "text": "When you get a UAC prompt, by default what happens is you switch from the Default Desktop to the Secure Desktop.",
+      "start": 857.28,
+      "end": 863.2
+    },
+    {
+      "block": 93,
+      "text": "UAC takes a screenshot of your Default Desktop, applies a dim to that image and then displays it behind the UAC window.",
+      "start": 863.38,
+      "end": 870.02
+    },
+    {
+      "block": 93,
+      "text": "The UAC window is part of the Secure Desktop The user can actually set if UAC prompts should run under the current Desktop (less secure) or the Secure Desktop.",
+      "start": 870.2,
+      "end": 879.0
+    },
+    {
+      "block": 94,
+      "text": "Why don\u2019t software key loggers work anymore to capture a locked computer\u2019s password?",
+      "start": 879.18,
+      "end": 883.82
+    },
+    {
+      "block": 95,
+      "text": "I remember as a kid writing a key logger and using it at school.",
+      "start": 884.0,
+      "end": 887.68
+    },
+    {
+      "block": 95,
+      "text": "I was able to see everyone\u2019s login password, then later I could login as them and see all of their files.",
+      "start": 887.86,
+      "end": 893.54
+    },
+    {
+      "block": 95,
+      "text": "Since then multi Session operating systems have been introduced though.",
+      "start": 893.72,
+      "end": 897.32
+    },
+    {
+      "block": 96,
+      "text": "Because Software Keyloggers are based off of Windows Hooks which work with Windows messages.",
+      "start": 897.5,
+      "end": 902.3
+    },
+    {
+      "block": 96,
+      "text": "They get notified for every keystroke that occurs because each keystroke has its own set of Windows Messages (key down, key up, key pressed).",
+      "start": 902.48,
+      "end": 910.88
+    },
+    {
+      "block": 96,
+      "text": "Since the key logger is started on a different Desktop it cannot log a password.",
+      "start": 911.06,
+      "end": 915.54
+    },
+    {
+      "block": 97,
+      "text": "I think it would be possible to build such a KeyLogger which would work across Sessions but I\u2019m not aware of any that exist.",
+      "start": 915.72,
+      "end": 921.72
+    },
+    {
+      "block": 97,
+      "text": "To learn how see the section: \u201cHow to circumvent all security in Windows\u201d",
+      "start": 921.9,
+      "end": 926.06
+    },
+    {
+      "block": 98,
+      "text": "What\u2019s so special about screen savers?",
+      "start": 926.24,
+      "end": 928.72
+    },
+    {
+      "block": 98,
+      "text": "How do they work?",
+      "start": 928.9,
+      "end": 930.5
+    },
+    {
+      "block": 99,
+      "text": "There\u2019s nothing special about a screensaver.",
+      "start": 930.68,
+      "end": 933.24
+    },
+    {
+      "block": 99,
+      "text": "It doesn\u2019t hide any of your GUI elements nor draw on top of them.",
+      "start": 933.42,
+      "end": 936.86
+    },
+    {
+      "block": 99,
+      "text": "It simply does a Desktop switch to the Screensaver Desktop.",
+      "start": 937.04,
+      "end": 940.64
+    },
+    {
+      "block": 99,
+      "text": "Remember, a Desktop is a logical graphical device.",
+      "start": 940.82,
+      "end": 944.42
+    },
+    {
+      "block": 100,
+      "text": "How can there be more than one user at a time logged onto the same computer at the same time?",
+      "start": 944.6,
+      "end": 949.4
+    },
+    {
+      "block": 101,
+      "text": "Easy, each user has its own Session, and each Session contains everything else.",
+      "start": 949.58,
+      "end": 954.38
+    },
+    {
+      "block": 101,
+      "text": "Each person using a Session sees their own Desktop which is part of that Session\u2019s WinSta0 Window Station.",
+      "start": 954.56,
+      "end": 960.4
+    },
+    {
+      "block": 102,
+      "text": "How does Terminal Services or Remote Desktop work?",
+      "start": 960.58,
+      "end": 963.86
+    },
+    {
+      "block": 103,
+      "text": "Terminal Services and Remote Desktop work by either giving you access to an already open Session, or creation a new Session.",
+      "start": 964.04,
+      "end": 970.68
+    },
+    {
+      "block": 103,
+      "text": "Each Session can be in a connected or disconnected state.",
+      "start": 970.86,
+      "end": 974.14
+    },
+    {
+      "block": 104,
+      "text": "Why does your remote computer control software probably suck?",
+      "start": 974.32,
+      "end": 977.92
+    },
+    {
+      "block": 105,
+      "text": "Some remote computer control software (not Terminal Services / Remote Desktop) are not Session aware and they only work with the first Session.",
+      "start": 978.1,
+      "end": 985.7
+    },
+    {
+      "block": 105,
+      "text": "This includes most VNC servers including FogCreek Copilot.",
+      "start": 985.88,
+      "end": 989.88
+    },
+    {
+      "block": 106,
+      "text": "If you have a multi-Session computer you can\u2019t control each Session.",
+      "start": 990.06,
+      "end": 993.9
+    },
+    {
+      "block": 107,
+      "text": "Can a process communicate across different Sessions?",
+      "start": 994.08,
+      "end": 997.12
+    },
+    {
+      "block": 108,
+      "text": "Yes but you need to use the correct communication means.",
+      "start": 997.3,
+      "end": 1000.66
+    },
+    {
+      "block": 109,
+      "text": "Can a process communicate across Desktops with Windows messages?",
+      "start": 1000.84,
+      "end": 1004.68
+    },
+    {
+      "block": 110,
+      "text": "No.",
+      "start": 1004.86,
+      "end": 1006.06
+    },
+    {
+      "block": 111,
+      "text": "Why was Vista perceived to be so bad and Windows 7 so good?",
+      "start": 1006.24,
+      "end": 1010.32
+    },
+    {
+      "block": 112,
+      "text": "Because Windows Vista was the first to implement these changes.",
+      "start": 1010.5,
+      "end": 1013.94
+    },
+    {
+      "block": 112,
+      "text": "Windows Vista therefore was the Operating System to break all of the existing changes.",
+      "start": 1014.12,
+      "end": 1018.92
+    },
+    {
+      "block": 112,
+      "text": "Many software development companies and their products took a lot of time to implement the changes needed to support Session 0 isolation.",
+      "start": 1019.1,
+      "end": 1025.66
+    },
+    {
+      "block": 112,
+      "text": "Most probably still don\u2019t fully understand it.",
+      "start": 1025.84,
+      "end": 1028.56
+    },
+    {
+      "block": 113,
+      "text": "Since some of the changes weren\u2019t made in time, Windows Vista took the hit for looking bad.",
+      "start": 1028.74,
+      "end": 1033.54
+    },
+    {
+      "block": 113,
+      "text": "But of course it was Vista\u2019s fault in the first place for breaking compatibility.",
+      "start": 1033.72,
+      "end": 1037.8
+    },
+    {
+      "block": 114,
+      "text": "I\u2019m not claiming Vista was perfect, it was far from it; however, Vista took more of a hit than it deserved.",
+      "start": 1037.98,
+      "end": 1044.06
+    },
+    {
+      "block": 115,
+      "text": "Further reading",
+      "start": 1044.24,
+      "end": 1045.76
+    },
+    {
+      "block": 116,
+      "text": "For further reading you can read a technical paper on Sessions, Desktops, and Window Stations and also visit the various MSDN articles linked in this article.",
+      "start": 1045.94,
+      "end": 1054.58
+    },
+    {
+      "block": 117,
+      "text": "The genius Raymond Chen from Microsoft also touches on Sessions, Window Stations and Desktops in various articles that he writes.",
+      "start": 1054.76,
+      "end": 1061.96
+    },
+    {
+      "block": 118,
+      "text": "The impact of Session 0 Isolation is a document which Microsoft released for software developers when they released Windows Vista.",
+      "start": 1062.14,
+      "end": 1069.02
+    },
+    {
+      "block": 119,
+      "text": "Exploring handle security in Windows",
+      "start": 1069.2,
+      "end": 1071.76
+    }
+  ]
+}

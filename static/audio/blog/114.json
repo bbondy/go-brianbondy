@@ -1,0 +1,117 @@
+{
+  "post": 114,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "6aa9bc18acf468b6671b1470b29c76c3aa9c5a7478ed5a7acaa9a70f1ec55b90",
+  "audioSHA256": "cd5f2ea8d5910140429f2a2b9fa9c527e3d6d99263b0b207d6e4a3c13ef01095",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "\u2605\u2605\u2605\u2605\u2606 (4 stars out of 5)",
+      "start": 0.0,
+      "end": 3.6
+    },
+    {
+      "block": 1,
+      "text": "I purchased the Programming Google App Engine book by Dan Sanderson because I wanted to learn more about Google App Engine (GAE) on Python.",
+      "start": 3.78,
+      "end": 12.1
+    },
+    {
+      "block": 2,
+      "text": "GAE is a platform and set of services for building web applications.",
+      "start": 12.28,
+      "end": 16.76
+    },
+    {
+      "block": 2,
+      "text": "GAE scales your web application automatically as long as you work within their set of restrictions such as using a non relational datastore.",
+      "start": 16.94,
+      "end": 24.46
+    },
+    {
+      "block": 3,
+      "text": "Although the online GAE doc has great coverage and documentation, I wanted something which could provide a little more depth.",
+      "start": 24.64,
+      "end": 31.2
+    },
+    {
+      "block": 3,
+      "text": "Looking up things as you need them in the GAE docs doesn\u2019t give you a high level global understanding of what\u2019s possible and how to do it.",
+      "start": 31.38,
+      "end": 38.02
+    },
+    {
+      "block": 4,
+      "text": "I am left feeling confident coding for GAE after reading this book.",
+      "start": 38.2,
+      "end": 42.44
+    },
+    {
+      "block": 4,
+      "text": "The author has a great understanding of GAE and does a great job of explaining everything clearly.",
+      "start": 42.62,
+      "end": 48.14
+    },
+    {
+      "block": 4,
+      "text": "I was never bored when reading this book and the examples were great dealing with game avatars.",
+      "start": 48.32,
+      "end": 53.28
+    },
+    {
+      "block": 5,
+      "text": "After reading this book you will be ready to take on a GAE project to solidify the knowledge you learnt.",
+      "start": 53.46,
+      "end": 58.9
+    },
+    {
+      "block": 5,
+      "text": "You will have a great understanding of GAE runtime, datastore, index design, datastore transactions, memcache, queues, scheduled tasks, webapp module, django on GAE, remote API, bulk data operations, incoming/outgoing email, incoming/outgoing XMPP and more.",
+      "start": 59.08,
+      "end": 77.16
+    },
+    {
+      "block": 6,
+      "text": "You will also understand exactly what will never be possible on this platform (such as writing to the filesystem), and what will one day be possible (such as different languages and runtimes).",
+      "start": 77.34,
+      "end": 87.18
+    },
+    {
+      "block": 7,
+      "text": "This book is a quick read, it is 333 pages not including the index, and if you are only interested in Python you will be skipping over about 1\u20443 of the book.",
+      "start": 87.36,
+      "end": 96.64
+    },
+    {
+      "block": 7,
+      "text": "I would have preferred if the book only focused on Python and didn\u2019t even mention Java.",
+      "start": 96.82,
+      "end": 101.22
+    },
+    {
+      "block": 7,
+      "text": "I would have preferred the book to be split into 2; a python version and a Java version.",
+      "start": 101.4,
+      "end": 106.36
+    },
+    {
+      "block": 8,
+      "text": "In the one and a half years since the book was released, and since GAE was released April 7, 2008, there are already several additions to GAE, but everything mentioned in the book is still sound.",
+      "start": 106.54,
+      "end": 117.18
+    },
+    {
+      "block": 8,
+      "text": "The book will give you enough of a foundation of Google App Engine to continue on.",
+      "start": 117.36,
+      "end": 121.84
+    },
+    {
+      "block": 9,
+      "text": "I hope future editions will include coverage on OAuth, Prospective Search, DoS Protection, the django nonrel project, and updated content throughout",
+      "start": 122.02,
+      "end": 130.58
+    }
+  ]
+}

@@ -1,0 +1,189 @@
+{
+  "post": 167,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "c1bea9c0033fe5bc3428e1e845d3c95c67593ea3c5c77609703f67eccc7347df",
+  "audioSHA256": "232f192fe3651f60948a5596dd632d237ae6e408650fab56cfb70bfee4f7bc69",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "Developers at Khan Academy are responsible for shipping new stuff they create to khanacademy.org as it\u2019s ready.",
+      "start": 0.0,
+      "end": 6.16
+    },
+    {
+      "block": 0,
+      "text": "As a whole, the site is deployed several times per day.",
+      "start": 6.34,
+      "end": 9.94
+    },
+    {
+      "block": 0,
+      "text": "Testing deploys of khanacademy.org can take up a lot of time.",
+      "start": 10.12,
+      "end": 14.12
+    },
+    {
+      "block": 1,
+      "text": "We have tons of JavaScript and Python unit tests, but they do not catch various errors that can only happen on the live site, such as Content Security Policy (CSP) errors.",
+      "start": 14.3,
+      "end": 24.62
+    },
+    {
+      "block": 2,
+      "text": "We recently deployed a new testing environment for end to end testing which will result in safer deploys.",
+      "start": 24.8,
+      "end": 30.64
+    },
+    {
+      "block": 2,
+      "text": "End to end testing is not meant to replace manual testing at deploy time completely, but over time, it will reduce the amount of time taken for manual testing.",
+      "start": 30.82,
+      "end": 39.46
+    },
+    {
+      "block": 3,
+      "text": "Which types of errors do the tests catch?",
+      "start": 39.64,
+      "end": 42.28
+    },
+    {
+      "block": 4,
+      "text": "The end to end tests catch things like missing resources on pages, JavaScript errors, and CSP errors.",
+      "start": 42.46,
+      "end": 48.94
+    },
+    {
+      "block": 4,
+      "text": "They do not replace unit tests, and unit tests should be favoured when it\u2019s possible.",
+      "start": 49.12,
+      "end": 53.68
+    },
+    {
+      "block": 5,
+      "text": "Which frameworks are we using?",
+      "start": 53.86,
+      "end": 55.78
+    },
+    {
+      "block": 6,
+      "text": "We chose to implement the end to end testing with CasperJS powered by the SlimerJS engine.",
+      "start": 55.96,
+      "end": 61.32
+    },
+    {
+      "block": 6,
+      "text": "Actually we even have one more abstraction on top of that so that tests are very simple and clean to write.",
+      "start": 61.5,
+      "end": 67.18
+    },
+    {
+      "block": 7,
+      "text": "SlimerJS is similar and mostly compatible with the more known PhantomJS, but SlimerJS is based on Firefox\u2019s Gecko rendering engine instead of WebKit.",
+      "start": 67.36,
+      "end": 76.64
+    },
+    {
+      "block": 7,
+      "text": "At the time of this writing, it\u2019s based on Gecko 33.",
+      "start": 76.82,
+      "end": 80.26
+    },
+    {
+      "block": 7,
+      "text": "CasperJS is a set of higher level APIs and can be configured to use PhantomJS or SlimerJS.",
+      "start": 80.44,
+      "end": 86.6
+    },
+    {
+      "block": 8,
+      "text": "The current version of PhantomJS is based on Webkit and is too far behind to be useful to end to end tests for our site yet.",
+      "start": 86.78,
+      "end": 93.74
+    },
+    {
+      "block": 8,
+      "text": "There\u2019s a newer version of PhantomJS coming, but it\u2019s not ready yet.",
+      "start": 93.92,
+      "end": 98.0
+    },
+    {
+      "block": 8,
+      "text": "We also considered using Selenium to automate browsers to do the testing, but it didn\u2019t meet our objectives for various reasons.",
+      "start": 98.18,
+      "end": 104.82
+    },
+    {
+      "block": 9,
+      "text": "What do the tests do?",
+      "start": 105.0,
+      "end": 106.76
+    },
+    {
+      "block": 10,
+      "text": "They test the actual live site.",
+      "start": 106.94,
+      "end": 109.18
+    },
+    {
+      "block": 10,
+      "text": "They can load a list of pages, run scripts on the pages, and detect errors.",
+      "start": 109.36,
+      "end": 113.92
+    },
+    {
+      "block": 10,
+      "text": "The scripts emulate a user of the site who fills out forms, logs in, clicks things, waits for things, etc.",
+      "start": 114.1,
+      "end": 120.58
+    },
+    {
+      "block": 11,
+      "text": "We also have scripts for creating and saving programs in our CS learning environment, doing challenges, and we\u2019ll even have some for playing videos.",
+      "start": 120.76,
+      "end": 128.04
+    },
+    {
+      "block": 12,
+      "text": "Example script",
+      "start": 128.22,
+      "end": 129.9
+    },
+    {
+      "block": 13,
+      "text": "Here\u2019s an example end-to-end test script that logs in, and tests a couple pages.",
+      "start": 130.08,
+      "end": 134.56
+    },
+    {
+      "block": 13,
+      "text": "It will return an error if there are any JavaScript errors, CSP errors, network errors, or missing resources:",
+      "start": 134.74,
+      "end": 141.54
+    },
+    {
+      "block": 14,
+      "text": "When are tests run?",
+      "start": 141.72,
+      "end": 143.48
+    },
+    {
+      "block": 15,
+      "text": "Developers are currently prompted to run the tests when they do a deploy, but we\u2019ll be moving this to run automatically from Jenkins during the deploy process.",
+      "start": 143.66,
+      "end": 151.42
+    },
+    {
+      "block": 15,
+      "text": "Tests are run both on the staged website version before it is set as the default, and after it is set as the default version.",
+      "start": 151.6,
+      "end": 157.76
+    },
+    {
+      "block": 16,
+      "text": "The output of tests looks like this:",
+      "start": 157.94,
+      "end": 160.34
+    }
+  ]
+}

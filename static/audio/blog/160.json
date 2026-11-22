@@ -1,0 +1,93 @@
+{
+  "post": 160,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "e2db9f092a49edf9a6f9fdd0aa50bd7ca445894c7c158fa93d4b9da6c6a5888e",
+  "audioSHA256": "b4ddd199e58dee76d487badaeba81309886d0303bc335a4f39f3a94404e62763",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "I made one of the hardest decisions of my life, I\u2019ll be leaving Mozilla, a company that I thought I\u2019d be at forever.",
+      "start": 0.0,
+      "end": 5.84
+    },
+    {
+      "block": 0,
+      "text": "Mozilla has amazing people and culture, and is easily the best job I\u2019ve ever had.",
+      "start": 6.02,
+      "end": 10.9
+    },
+    {
+      "block": 1,
+      "text": "I plan to remain a contributor, both on the Code Firefox site, and on Firefox Desktop itself.",
+      "start": 11.08,
+      "end": 16.84
+    },
+    {
+      "block": 2,
+      "text": "I\u2019ll be joining Khan Academy, a like minded, mission oriented, open and non-profit company.",
+      "start": 17.02,
+      "end": 23.1
+    },
+    {
+      "block": 3,
+      "text": "Khan Academy provides a free, world class education, to anyone, anywhere.",
+      "start": 23.28,
+      "end": 28.32
+    },
+    {
+      "block": 4,
+      "text": "I\u2019m leaving because the Khan Academy mission speaks more to me personally.",
+      "start": 28.5,
+      "end": 32.5
+    },
+    {
+      "block": 5,
+      "text": "Along with that mission comes a lot of thoughts I believe in, such as:",
+      "start": 32.68,
+      "end": 36.6
+    },
+    {
+      "block": 6,
+      "text": "Sense of agency: Students should be responsible for their own educational goals.",
+      "start": 36.78,
+      "end": 41.18
+    },
+    {
+      "block": 7,
+      "text": "Mastery based learning: Students should have deep, sound understanding of concepts before progressing to concepts based on those concepts.",
+      "start": 41.36,
+      "end": 48.4
+    },
+    {
+      "block": 8,
+      "text": "Self paced learning: Students should progress at their own pace, as they\u2019ve mastered concepts.",
+      "start": 48.58,
+      "end": 53.54
+    },
+    {
+      "block": 9,
+      "text": "Mentorship: Having peers teach, and having peers learn from each other comes with several amazing benefits.",
+      "start": 53.72,
+      "end": 59.4
+    },
+    {
+      "block": 10,
+      "text": "Interactive: Human connection and tangible experiences are important.",
+      "start": 59.58,
+      "end": 63.9
+    },
+    {
+      "block": 11,
+      "text": "I\u2019ll be joining the Computer Science department at Khan Academy in particular.",
+      "start": 64.08,
+      "end": 68.16
+    },
+    {
+      "block": 11,
+      "text": "I\u2019m extremely excited for this new opportunity and I can\u2019t wait to do amazing things at Khan Academy.",
+      "start": 68.34,
+      "end": 73.78
+    }
+  ]
+}

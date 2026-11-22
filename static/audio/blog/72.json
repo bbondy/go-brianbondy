@@ -1,0 +1,21 @@
+{
+  "post": 72,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "2548697dc61e5193ca1f62c6d98e52b381abc9db54037491ce4f5931842a99af",
+  "audioSHA256": "5bdb6ed1efe6c2d21694a3aa89c69d8833a2a564374c81433dca2643c99b7887",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "Added a page to the Other section that allows you to get your external IP address.",
+      "start": 0.0,
+      "end": 4.0
+    },
+    {
+      "block": 0,
+      "text": "You can access that page here.",
+      "start": 4.18,
+      "end": 6.26
+    }
+  ]
+}

@@ -1,0 +1,681 @@
+{
+  "post": 87,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "21a6890738cd7e75217bfe4975d1439b04dfd4e5afef137bd33d32b535c9a595",
+  "audioSHA256": "42c6041cdc45a4810ef3505c737929eca540dc8c0c9a93a6337fba6237d740b6",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "About 7 years ago my company and I created a program called Remote Task Manager.",
+      "start": 0.0,
+      "end": 5.12
+    },
+    {
+      "block": 0,
+      "text": "It was exactly like the Windows Task Manager, but it had an extra left bar which showed all the computers you wanted to control.",
+      "start": 5.3,
+      "end": 11.78
+    },
+    {
+      "block": 0,
+      "text": "And it had a button for View This Process.",
+      "start": 11.96,
+      "end": 14.44
+    },
+    {
+      "block": 1,
+      "text": "The button made any process magically show up on your screen remotely.",
+      "start": 14.62,
+      "end": 18.54
+    },
+    {
+      "block": 2,
+      "text": "This program didn\u2019t last long though, my company\u2019s focus went to backup software and we shelfed the product at a young age.",
+      "start": 18.72,
+      "end": 25.2
+    },
+    {
+      "block": 2,
+      "text": "This program was built by taking screenshots and sending them from computer to computer and was built with a custom protocol.",
+      "start": 25.38,
+      "end": 31.62
+    },
+    {
+      "block": 3,
+      "text": "This article investigates more proper ways for implementing remote-control-computer software.",
+      "start": 31.8,
+      "end": 36.76
+    },
+    {
+      "block": 4,
+      "text": "An introduction to some terms:",
+      "start": 36.94,
+      "end": 39.1
+    },
+    {
+      "block": 5,
+      "text": "Images on computers can be categorized into 2 groups:",
+      "start": 39.28,
+      "end": 42.8
+    },
+    {
+      "block": 6,
+      "text": "Vector graphics: Graphic that are built from stored instructions.",
+      "start": 42.98,
+      "end": 46.82
+    },
+    {
+      "block": 6,
+      "text": "These stored instructions are used to draw primitives such as points, lines, curves, shapes, polygons.",
+      "start": 47.0,
+      "end": 53.4
+    },
+    {
+      "block": 6,
+      "text": "Examples of vector graphic file formats include: SVG, Adobe Illustrator files.",
+      "start": 53.58,
+      "end": 59.5
+    },
+    {
+      "block": 7,
+      "text": "Raster graphics: Graphic that are built from a grid of pixels and their color values.",
+      "start": 59.68,
+      "end": 64.4
+    },
+    {
+      "block": 7,
+      "text": "Examples include: BMP files, GIF files, JPG files.",
+      "start": 64.58,
+      "end": 69.46
+    },
+    {
+      "block": 8,
+      "text": "Likewise, displays can also be categorized into 2 groups:",
+      "start": 69.64,
+      "end": 73.72
+    },
+    {
+      "block": 9,
+      "text": "Vector graphic displays: Video output display whose source comes from vector graphics.",
+      "start": 73.9,
+      "end": 79.1
+    },
+    {
+      "block": 10,
+      "text": "A framebuffer display: Video output display whose source comes from a memory buffer containing a frame of data.",
+      "start": 79.28,
+      "end": 85.6
+    },
+    {
+      "block": 10,
+      "text": "That is to say it stores a raster graphic.",
+      "start": 85.78,
+      "end": 88.5
+    },
+    {
+      "block": 11,
+      "text": "The VNC protocol works for any framebuffer display.",
+      "start": 88.68,
+      "end": 92.04
+    },
+    {
+      "block": 11,
+      "text": "That is to say it relates to #2s above, but not the #1s above.",
+      "start": 92.22,
+      "end": 96.78
+    },
+    {
+      "block": 11,
+      "text": "That means it applies to just about every operating system whether it is Linux, Solaris, OS X, or Windows.",
+      "start": 96.96,
+      "end": 103.6
+    },
+    {
+      "block": 12,
+      "text": "The remote framebuffer (RFB) protocol is a protocol used for remotely accessing a GUI.",
+      "start": 103.78,
+      "end": 109.46
+    },
+    {
+      "block": 12,
+      "text": "The VNC protocol is built from the RFB protocol.",
+      "start": 109.64,
+      "end": 113.08
+    },
+    {
+      "block": 12,
+      "text": "The RFB protocol, like most (but not all) other protocols can be divided into a client and server.",
+      "start": 113.26,
+      "end": 119.66
+    },
+    {
+      "block": 13,
+      "text": "The RFB Client:",
+      "start": 119.84,
+      "end": 121.84
+    },
+    {
+      "block": 14,
+      "text": "The computer that wants to control the remote computer is called the RFB Client.",
+      "start": 122.02,
+      "end": 126.34
+    },
+    {
+      "block": 14,
+      "text": "Programming an RFB Client is easier relative to programming an RFB server, mostly because the client is stateless.",
+      "start": 126.52,
+      "end": 133.48
+    },
+    {
+      "block": 15,
+      "text": "Having a stateless protocol is an absolute gift from god.",
+      "start": 133.66,
+      "end": 137.26
+    },
+    {
+      "block": 15,
+      "text": "It means that when you disconnect, you can reconnect easily, whether on purpose, or by accident, or by hardware/software failure.",
+      "start": 137.44,
+      "end": 144.88
+    },
+    {
+      "block": 15,
+      "text": "An example of a completely stateless protocol is HTTP.",
+      "start": 145.06,
+      "end": 148.98
+    },
+    {
+      "block": 15,
+      "text": "An example of a completely stateful protocol is FTP.",
+      "start": 149.16,
+      "end": 152.76
+    },
+    {
+      "block": 16,
+      "text": "After setting the frame format that the RFB Client wants, the RFB Client will request updated frames as it wants them from the RFB Server.",
+      "start": 152.94,
+      "end": 160.54
+    },
+    {
+      "block": 16,
+      "text": "For every update the RFB Client obtains, it displays it on the screen.",
+      "start": 160.72,
+      "end": 164.96
+    },
+    {
+      "block": 16,
+      "text": "The RFB Client does not need to request the entire frame each time.",
+      "start": 165.14,
+      "end": 169.46
+    },
+    {
+      "block": 16,
+      "text": "It can request an x,y position and width,height as well.",
+      "start": 169.64,
+      "end": 173.64
+    },
+    {
+      "block": 17,
+      "text": "The RFB Client also sends Input events such as keyboard presses, mouse presses, mouse moves, and more to the RFB Server.",
+      "start": 173.82,
+      "end": 181.82
+    },
+    {
+      "block": 18,
+      "text": "I won\u2019t go into much more details about how things work at the RFB protocol level, but if you\u2019d like to know more please read this document.",
+      "start": 182.0,
+      "end": 189.04
+    },
+    {
+      "block": 19,
+      "text": "The RFB Server:",
+      "start": 189.22,
+      "end": 191.22
+    },
+    {
+      "block": 20,
+      "text": "The computer that actually has the framebuffer that you want to see is called the RFB server.",
+      "start": 191.4,
+      "end": 196.28
+    },
+    {
+      "block": 20,
+      "text": "Programming this is harder relative to the RFB Client because it needs to 1) manage one or more RFB Clients, 2) respond to input events from the RFB Client, and 3) Provide updated frames to the RFB Client.",
+      "start": 196.46,
+      "end": 208.62
+    },
+    {
+      "block": 21,
+      "text": "Several requests can occur from the RFB Client and the server may decide to simply send only one frame update.",
+      "start": 208.8,
+      "end": 214.64
+    },
+    {
+      "block": 22,
+      "text": "The RFB Server needs to only send incremental updates to the RFB Client, unless the RFB Client specifically sets the Incremental value to false.",
+      "start": 214.82,
+      "end": 222.9
+    },
+    {
+      "block": 22,
+      "text": "Typically all requests form the RFB Client will have Incremental set to True.",
+      "start": 223.08,
+      "end": 227.64
+    },
+    {
+      "block": 22,
+      "text": "Except of course for the first request and any first request after a reconnect.",
+      "start": 227.82,
+      "end": 232.22
+    },
+    {
+      "block": 23,
+      "text": "Both the RFB Server and RFB Client can also notify each other about cut text, and the RFB Server can notify the RFB Client to ring a bell if it has one.",
+      "start": 232.4,
+      "end": 241.28
+    },
+    {
+      "block": 24,
+      "text": "TCP hole punching:",
+      "start": 241.46,
+      "end": 243.7
+    },
+    {
+      "block": 25,
+      "text": "One thing that the RFB protocol does not address directly is connecting 2 endpoints that are behind a router/NAT (henceforth referred to as a NAT).",
+      "start": 243.88,
+      "end": 251.88
+    },
+    {
+      "block": 26,
+      "text": "Just about everyone on the internet now days has a NAT.",
+      "start": 252.06,
+      "end": 255.34
+    },
+    {
+      "block": 26,
+      "text": "A NAT connects multiple computers to 1 Internet connection.",
+      "start": 255.52,
+      "end": 258.96
+    },
+    {
+      "block": 26,
+      "text": "That means that each computer behind that NAT has an inside IP address of its own, but they all share the same outside IP address.",
+      "start": 259.14,
+      "end": 266.5
+    },
+    {
+      "block": 27,
+      "text": "The way that the NAT knows which computer to send which data coming in to its IP to, is via a network address translation table.",
+      "start": 266.68,
+      "end": 273.4
+    },
+    {
+      "block": 28,
+      "text": "When a computer behind a NAT initiates a connection to a server and a port, the NAT stores the internal IP and performs the connection for that computer.",
+      "start": 273.58,
+      "end": 281.82
+    },
+    {
+      "block": 28,
+      "text": "Any data coming back from that server then gets routed back to the original computer that initiated the connection.",
+      "start": 282.0,
+      "end": 287.76
+    },
+    {
+      "block": 29,
+      "text": "This works nicely if the computer behind the NAT initiates the connection, but what if an outside computer wants to connect to one of your internal computers, and it wants to initiate the connection?",
+      "start": 287.94,
+      "end": 297.78
+    },
+    {
+      "block": 29,
+      "text": "It\u2019s not possible.",
+      "start": 297.96,
+      "end": 299.64
+    },
+    {
+      "block": 29,
+      "text": "The outside computer knows only about your outside IP and knows nothing about internal IPs of the computers behind that external IP.",
+      "start": 299.82,
+      "end": 307.18
+    },
+    {
+      "block": 30,
+      "text": "The way around this problem, if you have the source code to the programs you want to make the connections between, is known as TCP hole punching.",
+      "start": 307.36,
+      "end": 314.72
+    },
+    {
+      "block": 31,
+      "text": "TCP hole punching means that both computers connect to a known server, and then the communication will continue after that between the 2 computers.",
+      "start": 314.9,
+      "end": 322.66
+    },
+    {
+      "block": 31,
+      "text": "I will not do it justice by explaining it; however, you can read a great article called Peer-to-Peer Communication Across Network Address Translators on the matter by Bryan Ford, Pyda Srisuresh, and Dan Kegel.",
+      "start": 322.84,
+      "end": 334.44
+    },
+    {
+      "block": 32,
+      "text": "Getting across NATs is probably one of the hardest things when doing network programming.",
+      "start": 334.62,
+      "end": 339.1
+    },
+    {
+      "block": 32,
+      "text": "The problem is that just about everyone on the internet now days has a NAT.",
+      "start": 339.28,
+      "end": 343.36
+    },
+    {
+      "block": 32,
+      "text": "This problem is also shared with P2P protocols such as the Gnutella protocol.",
+      "start": 343.54,
+      "end": 348.34
+    },
+    {
+      "block": 32,
+      "text": "Google Talk is another example.",
+      "start": 348.52,
+      "end": 350.68
+    },
+    {
+      "block": 33,
+      "text": "A commonly used library for doing all of this work for you and getting across NATs is STUNT.",
+      "start": 350.86,
+      "end": 356.14
+    },
+    {
+      "block": 33,
+      "text": "STUNT stands for: Simple Traversal of UDP Through NATs and TCP too.",
+      "start": 356.32,
+      "end": 361.28
+    },
+    {
+      "block": 34,
+      "text": "Getting across firewalls:",
+      "start": 361.46,
+      "end": 363.62
+    },
+    {
+      "block": 35,
+      "text": "If possible it is best to put your connection to a port like 443 (HTTPS) or port 80 (HTTP).",
+      "start": 363.8,
+      "end": 371.32
+    },
+    {
+      "block": 35,
+      "text": "Because almost all firewalls will let you have outgoing socket connections on those ports.",
+      "start": 371.5,
+      "end": 375.98
+    },
+    {
+      "block": 36,
+      "text": "Windows specific, sessions and more:",
+      "start": 376.16,
+      "end": 378.88
+    },
+    {
+      "block": 37,
+      "text": "More advanced Windows specific functionality relating to remotely controlling computers has to do with sessions.",
+      "start": 379.06,
+      "end": 384.98
+    },
+    {
+      "block": 38,
+      "text": "In windows you can have 1 or more sessions.",
+      "start": 385.16,
+      "end": 387.8
+    },
+    {
+      "block": 38,
+      "text": "Each session represents one logged on user.",
+      "start": 387.98,
+      "end": 390.78
+    },
+    {
+      "block": 38,
+      "text": "A single user can login multiple times and belong to multiple sessions.",
+      "start": 390.96,
+      "end": 395.36
+    },
+    {
+      "block": 38,
+      "text": "Each session can have one or more Desktop\u2019s.",
+      "start": 395.54,
+      "end": 398.18
+    },
+    {
+      "block": 38,
+      "text": "An example of a Desktop is what you are looking at now, another example is your screensaver.",
+      "start": 398.36,
+      "end": 403.4
+    },
+    {
+      "block": 38,
+      "text": "Both your screensaver and what you are looking at now belong to the same session, but have a different Desktops.",
+      "start": 403.58,
+      "end": 409.26
+    },
+    {
+      "block": 39,
+      "text": "Every application in windows that is started can be started in any session and in any Desktop.",
+      "start": 409.44,
+      "end": 414.4
+    },
+    {
+      "block": 39,
+      "text": "But that Session and Desktop cannot be changed once the application is already started.",
+      "start": 414.58,
+      "end": 419.14
+    },
+    {
+      "block": 39,
+      "text": "For this reason, it is typical to see desktop software of all types that have a core program, plus a viewer.",
+      "start": 419.32,
+      "end": 425.16
+    },
+    {
+      "block": 39,
+      "text": "The core program can be started on any session and in any desktop, it has no GUI.",
+      "start": 425.34,
+      "end": 430.38
+    },
+    {
+      "block": 39,
+      "text": "The viewer can then be started on one or more sessions and desktops and communicates with the Core program and displays a GUI to you.",
+      "start": 430.56,
+      "end": 437.2
+    },
+    {
+      "block": 40,
+      "text": "In Windows Vista and later, Microsoft introduced something called Session 0 isolation.",
+      "start": 437.38,
+      "end": 442.58
+    },
+    {
+      "block": 40,
+      "text": "They discuss its impact in this article aptly entitled Impact of Session 0 Isolation on Services and Drivers in Windows Vista.",
+      "start": 442.76,
+      "end": 450.12
+    },
+    {
+      "block": 40,
+      "text": "Did it ever have an impact\u2026",
+      "start": 450.3,
+      "end": 452.14
+    },
+    {
+      "block": 41,
+      "text": "The Session 0 isolation change broke many programs that were compatible with Windows XP and Windows 2003.",
+      "start": 452.32,
+      "end": 458.72
+    },
+    {
+      "block": 41,
+      "text": "The change created hundreds of thousand of developer hours needed from 3rd party developers.",
+      "start": 458.9,
+      "end": 464.02
+    },
+    {
+      "block": 41,
+      "text": "Suddenly complete programs needed to be restructured to accommodate for Session 0 isolation.",
+      "start": 464.2,
+      "end": 469.4
+    },
+    {
+      "block": 41,
+      "text": "In general this change means that all Windows services now run in Session 0.",
+      "start": 469.58,
+      "end": 474.06
+    },
+    {
+      "block": 41,
+      "text": "Session 0 cannot have any GUI associated with it.",
+      "start": 474.24,
+      "end": 477.28
+    },
+    {
+      "block": 41,
+      "text": "No GUI can be seen across sessions anymore.",
+      "start": 477.46,
+      "end": 480.18
+    },
+    {
+      "block": 41,
+      "text": "And the applications you see now cannot be in the same session as Session 0.",
+      "start": 480.36,
+      "end": 484.76
+    },
+    {
+      "block": 41,
+      "text": "The problems that this causes are far reaching, but for the most part most companies worked around them.",
+      "start": 484.94,
+      "end": 490.06
+    },
+    {
+      "block": 42,
+      "text": "Sessions can be controlled by programmers using the WTS API which is now called the Remote Desktop Services API.",
+      "start": 490.24,
+      "end": 496.88
+    },
+    {
+      "block": 42,
+      "text": "This article focus\u2019 on the RFB Protocol but you can also accomplish Remote Control in Windows by using the RDP Protocol and related API.",
+      "start": 497.06,
+      "end": 505.46
+    },
+    {
+      "block": 43,
+      "text": "If multiple Sessions and Desktops exist, the RFB Server must decide which one to use.",
+      "start": 505.64,
+      "end": 511.16
+    },
+    {
+      "block": 43,
+      "text": "This may or may not be the same as which session and desktop the RFB Server runs from.",
+      "start": 511.34,
+      "end": 516.06
+    },
+    {
+      "block": 44,
+      "text": "Hooking user input:",
+      "start": 516.24,
+      "end": 518.08
+    },
+    {
+      "block": 45,
+      "text": "Another important aspect of remotely controlling computers is called a Hook.",
+      "start": 518.26,
+      "end": 522.5
+    },
+    {
+      "block": 46,
+      "text": "A Hook allows you to get feedback system wide, or per process wide about what events are happening on the system.",
+      "start": 522.68,
+      "end": 528.76
+    },
+    {
+      "block": 46,
+      "text": "A typical Hook that you would install is a keyboard and mouse hook.",
+      "start": 528.94,
+      "end": 532.78
+    },
+    {
+      "block": 46,
+      "text": "These hooks would be installed on the RFB Server so it can better detect changes to send to the RFB Client.",
+      "start": 532.96,
+      "end": 538.56
+    },
+    {
+      "block": 47,
+      "text": "In Windows, Hooks are implemented in a DLL and Windows will load that DLL and notify it of the events of what the hook is registered to do.",
+      "start": 538.74,
+      "end": 546.18
+    },
+    {
+      "block": 48,
+      "text": "Web Versions:",
+      "start": 546.36,
+      "end": 547.96
+    },
+    {
+      "block": 49,
+      "text": "In some software for remotely controlling computers, the Client side is on the web.",
+      "start": 548.14,
+      "end": 552.78
+    },
+    {
+      "block": 49,
+      "text": "This is simply done by HTTP and a lot of AJAX.",
+      "start": 552.96,
+      "end": 556.56
+    },
+    {
+      "block": 49,
+      "text": "The web page itself makes the requests directly to the Server and updates the web browser dynamically with the content of the retrieved framebuffers.",
+      "start": 556.74,
+      "end": 563.78
+    },
+    {
+      "block": 50,
+      "text": "Remote-Control-Computer Software:",
+      "start": 563.96,
+      "end": 566.44
+    },
+    {
+      "block": 51,
+      "text": "There are many VNC client/server implementations.",
+      "start": 566.62,
+      "end": 569.9
+    },
+    {
+      "block": 51,
+      "text": "Most are open source and licensed under the GPL.",
+      "start": 570.08,
+      "end": 573.2
+    },
+    {
+      "block": 52,
+      "text": "There are also VNC client/server implementations that are based on the VNC protocol but don\u2019t follow it exactly.",
+      "start": 573.38,
+      "end": 579.86
+    },
+    {
+      "block": 52,
+      "text": "An example is Fog Creek Copilot.",
+      "start": 580.04,
+      "end": 582.6
+    },
+    {
+      "block": 52,
+      "text": "I go into more detail about the Fog creek Copilot project here.",
+      "start": 582.78,
+      "end": 586.54
+    }
+  ]
+}

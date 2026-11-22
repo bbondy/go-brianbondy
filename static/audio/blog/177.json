@@ -1,0 +1,591 @@
+{
+  "post": 177,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "29a471966125aa5108f1791cfa59cbe66ed5bc3d614a46234cd87077052a0966",
+  "audioSHA256": "4319664da39bcdb746d2693fd73fe2e4d1cdaedc46e3de45c1db6990a5f3e30a",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "Over the past several months, the Brave team has been working with Protocol Labs on adding InterPlanetary File System (IPFS) support in Brave.",
+      "start": 0.0,
+      "end": 8.72
+    },
+    {
+      "block": 0,
+      "text": "This is the first deep integration of its kind and we\u2019re very proud to outline how it works in this post.",
+      "start": 8.9,
+      "end": 14.58
+    },
+    {
+      "block": 1,
+      "text": "IPFS is an exciting technology that can help content creators distribute content without high bandwidth costs, while taking advantage of data deduplication and data replication.",
+      "start": 14.76,
+      "end": 24.68
+    },
+    {
+      "block": 1,
+      "text": "There are performance advantages for loading content over IPFS by leveraging its geographically distributed swarm network.",
+      "start": 24.86,
+      "end": 31.5
+    },
+    {
+      "block": 1,
+      "text": "IPFS is important for blockchain and for self described data integrity.",
+      "start": 31.68,
+      "end": 36.32
+    },
+    {
+      "block": 1,
+      "text": "Previously viewed content can even be accessed offline with IPFS!",
+      "start": 36.5,
+      "end": 40.74
+    },
+    {
+      "block": 1,
+      "text": "The IPFS network gives access to content even if it has been censored by corporations and nation-states, such as for example, parts of Wikipedia.",
+      "start": 40.92,
+      "end": 49.4
+    },
+    {
+      "block": 2,
+      "text": "IPFS support allows Brave desktop users to download content by using a content hash, known as the Content identifier (CID).",
+      "start": 49.58,
+      "end": 57.74
+    },
+    {
+      "block": 2,
+      "text": "Unlike HTTP(S), there is no specified location for the content.",
+      "start": 57.92,
+      "end": 62.8
+    },
+    {
+      "block": 3,
+      "text": "Each node in the IPFS network is a potential host for the content being requested, and if a node doesn\u2019t have the content being requested, the node can retrieve the content from the swarm of peers.",
+      "start": 62.98,
+      "end": 73.3
+    },
+    {
+      "block": 3,
+      "text": "The retrieved content is verified locally, removing the need to trust a third party\u2019s integrity.",
+      "start": 73.48,
+      "end": 78.92
+    },
+    {
+      "block": 4,
+      "text": "HTTP(S) uses Uniform Resource Locators (URLs) to specify the location of content.",
+      "start": 79.1,
+      "end": 86.14
+    },
+    {
+      "block": 4,
+      "text": "This system can be easily censored since the content is hosted in specific locations on behalf of a single entity and it is susceptible to Denial of Service Attacks (DDoS).",
+      "start": 86.32,
+      "end": 96.16
+    },
+    {
+      "block": 4,
+      "text": "IPFS identifies its content by content paths and/or CIDs inside of Uniform Resource Identifier (URIs) but not URLs.",
+      "start": 96.34,
+      "end": 104.74
+    },
+    {
+      "block": 5,
+      "text": "Overview of IPFS in Brave",
+      "start": 104.92,
+      "end": 107.32
+    },
+    {
+      "block": 6,
+      "text": "Here\u2019s an example IPFS URI: ipfs://bafybeiemxf5abjwjbikoz4mc3a3dla6ual3jsgpdr4cjr3oz3evfyavhwq/wiki/Vincent_van_Gogh.html",
+      "start": 107.5,
+      "end": 123.26
+    },
+    {
+      "block": 7,
+      "text": "As of Brave 1.19.x, you can take this address, paste it in the Brave address bar, and load it.",
+      "start": 123.44,
+      "end": 130.08
+    },
+    {
+      "block": 7,
+      "text": "If you\u2019re using Brave, just click the above link!",
+      "start": 130.26,
+      "end": 133.3
+    },
+    {
+      "block": 8,
+      "text": "By default, Brave will load the URI being requested via a public HTTP gateway; however, it will also show an infobar that asks you if you\u2019d like to use a local node to resolve IPFS URIs.",
+      "start": 133.48,
+      "end": 144.6
+    },
+    {
+      "block": 8,
+      "text": "If you choose to use a local node, Brave will automatically download go-ipfs as a component and will route future traffic through this node.",
+      "start": 144.78,
+      "end": 152.06
+    },
+    {
+      "block": 8,
+      "text": "There is no need to manually manage an IPFS node or use an extension.",
+      "start": 152.24,
+      "end": 156.64
+    },
+    {
+      "block": 8,
+      "text": "A user can optionally install the IPFS Companion extension, and it will make a suggestion to use the Brave managed node.",
+      "start": 156.82,
+      "end": 163.62
+    },
+    {
+      "block": 9,
+      "text": "Using a Gateway vs using a local node",
+      "start": 163.8,
+      "end": 166.68
+    },
+    {
+      "block": 10,
+      "text": "Brave allows you to configure what happens when IPFS URIs are encountered.",
+      "start": 166.86,
+      "end": 171.18
+    },
+    {
+      "block": 10,
+      "text": "You can select between:",
+      "start": 171.36,
+      "end": 173.28
+    },
+    {
+      "block": 11,
+      "text": "Using a local node for resolution",
+      "start": 173.46,
+      "end": 175.94
+    },
+    {
+      "block": 12,
+      "text": "Using a gateway of your choice for resolution",
+      "start": 176.12,
+      "end": 178.92
+    },
+    {
+      "block": 13,
+      "text": "Disabling IPFS resolution",
+      "start": 179.1,
+      "end": 181.74
+    },
+    {
+      "block": 14,
+      "text": "When you have IPFS configured to use a local node, it will preserve the scheme (ipfs: or ipns:) in the address bar.",
+      "start": 181.92,
+      "end": 189.52
+    },
+    {
+      "block": 14,
+      "text": "You may want this option because you can always trust your local node to verify the content of CIDs being accessed.",
+      "start": 189.7,
+      "end": 195.54
+    },
+    {
+      "block": 14,
+      "text": "You can also access previously viewed IPFS content offline when using a local node.",
+      "start": 195.72,
+      "end": 200.84
+    },
+    {
+      "block": 14,
+      "text": "A local node also contributes to the strength of the IPFS network.",
+      "start": 201.02,
+      "end": 205.02
+    },
+    {
+      "block": 15,
+      "text": "If you\u2019re using a third party gateway, the address bar will show the redirected URL on the gateway server.",
+      "start": 205.2,
+      "end": 211.04
+    },
+    {
+      "block": 15,
+      "text": "You may want this option if you do not want to load an IPFS node on your local computer.",
+      "start": 211.22,
+      "end": 215.7
+    },
+    {
+      "block": 15,
+      "text": "You may have limited system resources and you just want access to IPFS content.",
+      "start": 215.88,
+      "end": 220.44
+    },
+    {
+      "block": 16,
+      "text": "IPFS privacy and security considerations",
+      "start": 220.62,
+      "end": 223.82
+    },
+    {
+      "block": 17,
+      "text": "IPFS carries different privacy benefits and costs than sites loaded over traditional protocols such as HTTP(S).",
+      "start": 224.0,
+      "end": 231.12
+    },
+    {
+      "block": 17,
+      "text": "Some of these privacy considerations apply regardless of your IPFS configuration.",
+      "start": 231.3,
+      "end": 235.94
+    },
+    {
+      "block": 18,
+      "text": "For example, typically browsers use the origin as a privacy and security boundary, called the same-origin policy (SOP).",
+      "start": 236.12,
+      "end": 243.72
+    },
+    {
+      "block": 18,
+      "text": "When loading sites over IPFS, Brave instead uses the CID as the origin boundary.",
+      "start": 243.9,
+      "end": 249.02
+    },
+    {
+      "block": 18,
+      "text": "Additionally, Brave only allows subresources to be loaded over IPFS when the main page is loaded from IPFS.",
+      "start": 249.2,
+      "end": 255.92
+    },
+    {
+      "block": 18,
+      "text": "A page can set a cookie for its own CID, but not that of another CID.",
+      "start": 256.1,
+      "end": 260.9
+    },
+    {
+      "block": 18,
+      "text": "An IPFS page can contain other IPFS images, stylesheets and iframes from any CID, and can fetch IPFS content within the same CID.",
+      "start": 261.08,
+      "end": 269.56
+    },
+    {
+      "block": 19,
+      "text": "Other IPFS risks and benefits depend on how Brave is configured.",
+      "start": 269.74,
+      "end": 273.82
+    },
+    {
+      "block": 19,
+      "text": "If Brave is configured to use a local IPFS node, when accessing IPFS content, it also makes you a temporary host of that content.",
+      "start": 274.0,
+      "end": 281.84
+    },
+    {
+      "block": 19,
+      "text": "IPFS nodes use libp2p network-layer stack and have a PeerID which can be looked up in a distributed hash table (DHT), and that DHT can be observed by others.",
+      "start": 282.02,
+      "end": 292.18
+    },
+    {
+      "block": 19,
+      "text": "Both requests you make and content you serve are observable by network peers.",
+      "start": 292.36,
+      "end": 296.76
+    },
+    {
+      "block": 19,
+      "text": "On the other hand, if Brave is configured to use a public IPFS gateway, the privacy risks are different.",
+      "start": 296.94,
+      "end": 302.94
+    },
+    {
+      "block": 19,
+      "text": "For example, that gateway can see the content you\u2019re asking it to load through IPFS requests.",
+      "start": 303.12,
+      "end": 308.32
+    },
+    {
+      "block": 19,
+      "text": "The gateway could potentially also lie about the content it is serving you.",
+      "start": 308.5,
+      "end": 312.58
+    },
+    {
+      "block": 19,
+      "text": "In the future, Brave plans to verify content retrieved through gateways by using its CID.",
+      "start": 312.76,
+      "end": 318.12
+    },
+    {
+      "block": 20,
+      "text": "We do not allow IPFS URIs to be resolved in private windows and Tor windows.",
+      "start": 318.3,
+      "end": 323.34
+    },
+    {
+      "block": 20,
+      "text": "The go-ipfs component manages just one store of data and we configure it to run garbage collection every hour if the cache is at 90% of the storage max (1GB).",
+      "start": 323.52,
+      "end": 332.8
+    },
+    {
+      "block": 20,
+      "text": "When a user clears their browser data for cached images and files, we also trigger garbage collection on the stored IPFS content which go-ipfs manages.",
+      "start": 332.98,
+      "end": 341.38
+    },
+    {
+      "block": 20,
+      "text": "This deletes all IPFS content except for pinned content.",
+      "start": 341.56,
+      "end": 345.48
+    },
+    {
+      "block": 20,
+      "text": "We may decide to allow IPFS in private windows in the future by keeping a separate configuration and cache that gets automatically cleared when the session ends.",
+      "start": 345.66,
+      "end": 353.66
+    },
+    {
+      "block": 21,
+      "text": "You can read more about privacy considerations here: https://support.brave.com/hc/en-us/articles/360051406452-How-does-IPFS-Impact-my-Privacy-",
+      "start": 353.84,
+      "end": 372.4
+    },
+    {
+      "block": 22,
+      "text": "IPFS in relation to blockchains",
+      "start": 372.58,
+      "end": 375.22
+    },
+    {
+      "block": 23,
+      "text": "IPFS and other decentralized protocols are important for blockchains and smart contracts that run in global decentralized networks, such as Ethereum.",
+      "start": 375.4,
+      "end": 383.56
+    },
+    {
+      "block": 24,
+      "text": "What happens if you want to have a smart contract that addresses content?",
+      "start": 383.74,
+      "end": 387.66
+    },
+    {
+      "block": 24,
+      "text": "You wouldn\u2019t want to use a URL because the location of the content could change or become unavailable, and the smart contract is immutable.",
+      "start": 387.84,
+      "end": 394.8
+    },
+    {
+      "block": 24,
+      "text": "You could use a Uniform Resource Identifier (URI) though such as ones used to identify content in IPFS.",
+      "start": 394.98,
+      "end": 401.46
+    },
+    {
+      "block": 25,
+      "text": "Storing content on Ethereum would be expensive, but storing a hash (CID) is feasible.",
+      "start": 401.64,
+      "end": 407.24
+    },
+    {
+      "block": 25,
+      "text": "The content of your data goes on the IPFS network, and the hash is stored in the smart contract.",
+      "start": 407.42,
+      "end": 412.7
+    },
+    {
+      "block": 25,
+      "text": "That hash can be used to access the content from any IPFS node.",
+      "start": 412.88,
+      "end": 416.88
+    },
+    {
+      "block": 26,
+      "text": "Dapps can be served from IPFS as well and they can use web3 to talk to Ethereum.",
+      "start": 417.06,
+      "end": 422.26
+    },
+    {
+      "block": 26,
+      "text": "This enables users to have a fully decentralized browsing experience.",
+      "start": 422.44,
+      "end": 426.52
+    },
+    {
+      "block": 27,
+      "text": "Implementation details",
+      "start": 426.7,
+      "end": 428.78
+    },
+    {
+      "block": 28,
+      "text": "System administrators can disable the functionality completely using an admin policy.",
+      "start": 428.96,
+      "end": 433.76
+    },
+    {
+      "block": 28,
+      "text": "There\u2019s also a global setting that can be used in brave://flags.",
+      "start": 433.94,
+      "end": 437.54
+    },
+    {
+      "block": 29,
+      "text": "The go-ipfs binary is downloaded and kept up to date by Brave if a local node is enabled.",
+      "start": 437.72,
+      "end": 443.16
+    },
+    {
+      "block": 29,
+      "text": "It uses the same update mechanism as extensions.",
+      "start": 443.34,
+      "end": 446.54
+    },
+    {
+      "block": 30,
+      "text": "Brave\u2019s IPFS support has been designed to minimize its effect on system resources.",
+      "start": 446.72,
+      "end": 451.76
+    },
+    {
+      "block": 30,
+      "text": "If Brave has been configured to use a local IPFS node, that node will be lazily loaded only when the first IPFS URI is accessed.",
+      "start": 451.94,
+      "end": 459.7
+    },
+    {
+      "block": 30,
+      "text": "If Brave has been configured to use the public gateway, the IPFS node is never loaded.",
+      "start": 459.88,
+      "end": 465.16
+    },
+    {
+      "block": 31,
+      "text": "Users can troubleshoot IPFS by navigating to an internal page: brave://ipfs.",
+      "start": 465.34,
+      "end": 471.02
+    },
+    {
+      "block": 31,
+      "text": "This also shows users the gateway, API, and swarm ports.",
+      "start": 471.2,
+      "end": 475.6
+    },
+    {
+      "block": 31,
+      "text": "Users can also talk to the Brave managed instance using go-ipfs command line and by specifying an argument for the \u2013api= parameter.",
+      "start": 475.78,
+      "end": 483.78
+    },
+    {
+      "block": 32,
+      "text": "The configuration directory for the Brave managed go-ipfs node can be found in the browser\u2019s profile directory in a subfolder named brave_ipfs.",
+      "start": 483.96,
+      "end": 492.28
+    },
+    {
+      "block": 32,
+      "text": "You can find your profile directory listed here: brave://version/",
+      "start": 492.46,
+      "end": 496.14
+    },
+    {
+      "block": 33,
+      "text": "Future work",
+      "start": 496.32,
+      "end": 497.84
+    },
+    {
+      "block": 34,
+      "text": "The work described above is just the start.",
+      "start": 498.02,
+      "end": 500.66
+    },
+    {
+      "block": 34,
+      "text": "We\u2019re actively working on more IPFS improvements, including:",
+      "start": 500.84,
+      "end": 504.6
+    },
+    {
+      "block": 35,
+      "text": "Support in our mobile browsers, Android is likely to come first.",
+      "start": 504.78,
+      "end": 508.78
+    },
+    {
+      "block": 36,
+      "text": "DNSLink which allows publishers to use DNS TXT records which point to an IPFS path.",
+      "start": 508.96,
+      "end": 515.12
+    },
+    {
+      "block": 36,
+      "text": "Brave specific implementation details",
+      "start": 515.3,
+      "end": 518.18
+    },
+    {
+      "block": 37,
+      "text": "Context menus for things like pinning content",
+      "start": 518.36,
+      "end": 521.4
+    },
+    {
+      "block": 38,
+      "text": "Website publishing",
+      "start": 521.58,
+      "end": 523.42
+    },
+    {
+      "block": 39,
+      "text": "More browser level UI",
+      "start": 523.6,
+      "end": 525.84
+    },
+    {
+      "block": 40,
+      "text": "Tor transport",
+      "start": 526.02,
+      "end": 527.7
+    },
+    {
+      "block": 41,
+      "text": "and much more\u2026",
+      "start": 527.88,
+      "end": 529.4
+    },
+    {
+      "block": 42,
+      "text": "Reporting issues and learning more",
+      "start": 529.58,
+      "end": 531.82
+    },
+    {
+      "block": 43,
+      "text": "You can read more about the implementation of IPFS in Brave from its spec here: https://github.com/brave/brave-browser/issues/10220",
+      "start": 532.0,
+      "end": 544.72
+    },
+    {
+      "block": 44,
+      "text": "Future work is defined and managed here: https://github.com/brave/brave-browser/projects/32",
+      "start": 544.9,
+      "end": 555.06
+    },
+    {
+      "block": 45,
+      "text": "We\u2019d love to hear suggestions on how we can improve IPFS support in Brave.",
+      "start": 555.24,
+      "end": 559.48
+    },
+    {
+      "block": 45,
+      "text": "Issues can be posted here:",
+      "start": 559.66,
+      "end": 561.58
+    },
+    {
+      "block": 46,
+      "text": "https://github.com/brave/brave-browser/issues/new?assignees=&labels=OS%2FDesktop&template=desktop.md&title=",
+      "start": 561.76,
+      "end": 573.76
+    }
+  ]
+}

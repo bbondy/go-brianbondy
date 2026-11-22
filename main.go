@@ -6,6 +6,7 @@ import (
 	"log"
 	"net/http"
 	"net/url"
+	"os"
 	"reflect"
 	"strconv"
 	"strings"
@@ -18,6 +19,9 @@ import (
 
 func main() {
 	initializeBlogPosts()
+	if err := loadBlogAudioManifest(); err != nil {
+		log.Fatal(err)
+	}
 	if err := primeSiteData(); err != nil {
 		log.Fatal(err)
 	}
@@ -26,7 +30,14 @@ func main() {
 	}
 	router := mux.NewRouter()
 	initializeRoutes(router)
-	log.Fatal(http.ListenAndServe(":8080", router))
+	log.Fatal(http.ListenAndServe(":"+listenPort(), router))
+}
+
+func listenPort() string {
+	if port := os.Getenv("PORT"); port != "" {
+		return port
+	}
+	return "8080"
 }
 
 func formatFullDate(dateStr string) string {

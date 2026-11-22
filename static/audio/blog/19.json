@@ -1,0 +1,513 @@
+{
+  "post": 19,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "90a7c61a956426ba00f2c45c1d08d48986264a563c617100b0ee41fb329c6f95",
+  "audioSHA256": "680ad46531aabd1e5ba0b1b38715d7eebb9eacb38902274a67567b1bc712689b",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "I wanted a high performance laptop that could run both Mac OSX and Windows.",
+      "start": 0.0,
+      "end": 4.4
+    },
+    {
+      "block": 0,
+      "text": "I ordered the 17 inch MacBook Pro 2.33 GHz 2GB RAM Dual Core laptop.",
+      "start": 4.58,
+      "end": 11.3
+    },
+    {
+      "block": 0,
+      "text": "This post will discuss my experience with the performance of the laptop, my disassembly of the laptop, my experience with apple phone support, my visit to the apple store, my experience with replacement parts and my overall impressions of the MacBook Pro.",
+      "start": 11.48,
+      "end": 24.6
+    },
+    {
+      "block": 1,
+      "text": "2 weeks ago I received my MacBook Pro directly from apple.com.",
+      "start": 24.78,
+      "end": 29.1
+    },
+    {
+      "block": 1,
+      "text": "I took it out of the great looking box and tried to turn it on, but there was no response.",
+      "start": 29.28,
+      "end": 33.76
+    },
+    {
+      "block": 1,
+      "text": "I figured the battery was dead, so i plugged the laptop to the wall and pressed the power button.",
+      "start": 33.94,
+      "end": 38.98
+    },
+    {
+      "block": 1,
+      "text": "Again no response, so I held down the power button, I noticed that the power button was loose.",
+      "start": 39.16,
+      "end": 44.36
+    },
+    {
+      "block": 2,
+      "text": "Eventually I got the computer to turn on.",
+      "start": 44.54,
+      "end": 47.1
+    },
+    {
+      "block": 2,
+      "text": "After working for a couple hours I figured the battery would be charged enough.",
+      "start": 47.28,
+      "end": 51.28
+    },
+    {
+      "block": 2,
+      "text": "The power plug is magnetic so I really wanted to try popping it out as I\u2019ve seen so many times in their commercials.",
+      "start": 51.46,
+      "end": 57.14
+    },
+    {
+      "block": 2,
+      "text": "Once I pulled the plug, the laptop turned off right away.",
+      "start": 57.32,
+      "end": 60.84
+    },
+    {
+      "block": 2,
+      "text": "I plugged it back in, turned it on again and watched it boot back into OSX.",
+      "start": 61.02,
+      "end": 65.42
+    },
+    {
+      "block": 2,
+      "text": "I checked the power management settings and everything was OK.",
+      "start": 65.6,
+      "end": 68.88
+    },
+    {
+      "block": 2,
+      "text": "At this point I figured I was doing something wrong.",
+      "start": 69.06,
+      "end": 71.78
+    },
+    {
+      "block": 3,
+      "text": "Every MacBook Pro battery has a little button and 5 LEDs next to it.",
+      "start": 71.96,
+      "end": 75.88
+    },
+    {
+      "block": 3,
+      "text": "You press the button to see how charged your battery is.",
+      "start": 76.06,
+      "end": 79.02
+    },
+    {
+      "block": 3,
+      "text": "It\u2019s a very nice feature that allows you to see how much battery power you have before turning on your laptop.",
+      "start": 79.2,
+      "end": 84.56
+    },
+    {
+      "block": 3,
+      "text": "The next day, I noticed that my battery was fully charged.",
+      "start": 84.74,
+      "end": 88.42
+    },
+    {
+      "block": 3,
+      "text": "I again pulled the plug and realized that it turned off the computer.",
+      "start": 88.6,
+      "end": 92.12
+    },
+    {
+      "block": 3,
+      "text": "I figured I had a faulty battery and looked on the net for anyone with a similar problem.",
+      "start": 92.3,
+      "end": 96.7
+    },
+    {
+      "block": 3,
+      "text": "I found a couple forums that described the issue.",
+      "start": 96.88,
+      "end": 99.68
+    },
+    {
+      "block": 3,
+      "text": "From this forum I found the apple battery exchange program, but noticed that my serial number wasn\u2019t in their list of acceptable serial numbers for an exchange.",
+      "start": 99.86,
+      "end": 107.94
+    },
+    {
+      "block": 4,
+      "text": "I called support and found the customer support rep to be very helpful.",
+      "start": 108.12,
+      "end": 111.96
+    },
+    {
+      "block": 4,
+      "text": "They had me try 5 or 6 different things and then they put me on hold as they called a manager.",
+      "start": 112.14,
+      "end": 117.18
+    },
+    {
+      "block": 4,
+      "text": "A couple minutes later the support tech was back and told me that I did indeed have a faulty battery.",
+      "start": 117.36,
+      "end": 122.4
+    },
+    {
+      "block": 4,
+      "text": "He asked me if I had purchased the Apple One Care when I purchased my laptop.",
+      "start": 122.58,
+      "end": 126.66
+    },
+    {
+      "block": 4,
+      "text": "I informed him that I did.",
+      "start": 126.84,
+      "end": 128.76
+    },
+    {
+      "block": 4,
+      "text": "He asked for my credit card number in case I didn\u2019t return the faulty battery after the replacement battery arrived.",
+      "start": 128.94,
+      "end": 134.46
+    },
+    {
+      "block": 4,
+      "text": "I happily provided it.",
+      "start": 134.64,
+      "end": 136.64
+    },
+    {
+      "block": 5,
+      "text": "There are a couple important parts of the support call that I left out.",
+      "start": 136.82,
+      "end": 140.42
+    },
+    {
+      "block": 6,
+      "text": "The Apple One Care didn\u2019t arrive at my house yet, and they didn\u2019t have a problem helping me.",
+      "start": 140.6,
+      "end": 145.32
+    },
+    {
+      "block": 7,
+      "text": "The laptop wasn\u2019t in my name, my business partner ordered the laptop online.",
+      "start": 145.5,
+      "end": 150.14
+    },
+    {
+      "block": 8,
+      "text": "On both issues, they understood and did NOT give me a hard time.",
+      "start": 150.32,
+      "end": 154.32
+    },
+    {
+      "block": 8,
+      "text": "They could have used either one of these as an excuse to not help me.",
+      "start": 154.5,
+      "end": 158.1
+    },
+    {
+      "block": 9,
+      "text": "They informed me that my battery would be at my house in 5-7 business days.",
+      "start": 158.28,
+      "end": 162.76
+    },
+    {
+      "block": 9,
+      "text": "I asked them if they could ship it express because I had a trip to San Francisco in a few days.",
+      "start": 162.94,
+      "end": 167.58
+    },
+    {
+      "block": 9,
+      "text": "He said that it was not possible for replacement parts even if I were to pay for the extra shipping cost.",
+      "start": 167.76,
+      "end": 173.04
+    },
+    {
+      "block": 9,
+      "text": "On the second business day my replacement battery arrived.",
+      "start": 173.22,
+      "end": 176.74
+    },
+    {
+      "block": 9,
+      "text": "I was very happy because it arrived within a couple days of my trip.",
+      "start": 176.92,
+      "end": 180.6
+    },
+    {
+      "block": 10,
+      "text": "The replacement battery fixed my problem.",
+      "start": 180.78,
+      "end": 183.34
+    },
+    {
+      "block": 10,
+      "text": "But another problem started to occur.",
+      "start": 183.52,
+      "end": 185.84
+    },
+    {
+      "block": 10,
+      "text": "The loose power button that I mentioned at the start of this posting started to move around and it became harder and harder to turn on the laptop.",
+      "start": 186.02,
+      "end": 192.74
+    },
+    {
+      "block": 10,
+      "text": "I didn\u2019t have time to deal with it yet so I went on the trip to San Fran.",
+      "start": 192.92,
+      "end": 196.6
+    },
+    {
+      "block": 11,
+      "text": "When I arrived there I realized that there was an Apple store only 5 minutes from my Hotel.",
+      "start": 196.78,
+      "end": 201.9
+    },
+    {
+      "block": 11,
+      "text": "I went in and asked a rep at the \u2018genius bar\u2019 if he could help.",
+      "start": 202.08,
+      "end": 205.28
+    },
+    {
+      "block": 11,
+      "text": "The genius bar is a big desk with several tech reps that can help you with any and every problem you have.",
+      "start": 205.46,
+      "end": 210.82
+    },
+    {
+      "block": 11,
+      "text": "He informed me that he would help me, but for future reference, I had to make an appointment to get help.",
+      "start": 211.0,
+      "end": 216.2
+    },
+    {
+      "block": 11,
+      "text": "He told me it would take 7 business days to fix the power button.",
+      "start": 216.38,
+      "end": 219.98
+    },
+    {
+      "block": 11,
+      "text": "He would have to replace the whole front panel.",
+      "start": 220.16,
+      "end": 222.72
+    },
+    {
+      "block": 12,
+      "text": "The apple store, by the way\u2026 was amazing.",
+      "start": 222.9,
+      "end": 226.02
+    },
+    {
+      "block": 12,
+      "text": "It was glass, 2 floors with translucent steps and all computer models and iPods were laid out with a lot of space.",
+      "start": 226.2,
+      "end": 232.76
+    },
+    {
+      "block": 12,
+      "text": "You were free to play with anything and everything.",
+      "start": 232.94,
+      "end": 235.58
+    },
+    {
+      "block": 12,
+      "text": "Upstairs they had their famous commercials playing from a projector.",
+      "start": 235.76,
+      "end": 239.2
+    },
+    {
+      "block": 12,
+      "text": "They had a few rows of chairs and they held tutorials on Mac OSX software every day.",
+      "start": 239.38,
+      "end": 244.42
+    },
+    {
+      "block": 13,
+      "text": "My trip to San Fran was only a few days, so I couldn\u2019t leave it with them for 7 days.",
+      "start": 244.6,
+      "end": 249.32
+    },
+    {
+      "block": 13,
+      "text": "I asked the genius bar tech rep if he could do the repair by the next day and he said that it wasn\u2019t possible.",
+      "start": 249.5,
+      "end": 255.02
+    },
+    {
+      "block": 13,
+      "text": "He mentioned that he saw this problem before and that it was a missing spring in my power button.",
+      "start": 255.2,
+      "end": 259.84
+    },
+    {
+      "block": 13,
+      "text": "So he wrote me up a case number and told me all I\u2019d have to do would be to call apple and reference the case number.",
+      "start": 260.02,
+      "end": 265.46
+    },
+    {
+      "block": 13,
+      "text": "He also moved the laptop out of my business partners name and into my name.",
+      "start": 265.64,
+      "end": 269.8
+    },
+    {
+      "block": 14,
+      "text": "After arriving home I couldn\u2019t bring myself to return the MacBook Pro for what would probably be another 2 or 3 weeks while apple looked at it.",
+      "start": 269.98,
+      "end": 277.42
+    },
+    {
+      "block": 14,
+      "text": "It might even be longer because of the holidays.",
+      "start": 277.6,
+      "end": 280.32
+    },
+    {
+      "block": 14,
+      "text": "I decided to take the chance and take apart my MacBook Pro.",
+      "start": 280.5,
+      "end": 283.78
+    },
+    {
+      "block": 14,
+      "text": "Knowing that it was very possible to mess it up and void the warranty, I still thought I\u2019d take the chance.",
+      "start": 283.96,
+      "end": 289.32
+    },
+    {
+      "block": 15,
+      "text": "Disassembling the laptop was pretty hard.",
+      "start": 289.5,
+      "end": 292.06
+    },
+    {
+      "block": 15,
+      "text": "Figuring out how to get the front panel off took me about an hour.",
+      "start": 292.24,
+      "end": 295.68
+    },
+    {
+      "block": 15,
+      "text": "Once I got the front panel open I had to figure out how to put the power button together properly.",
+      "start": 295.86,
+      "end": 300.9
+    },
+    {
+      "block": 15,
+      "text": "I was crossing my fingers that the 5 pieces that make up the power button was all I needed.",
+      "start": 301.08,
+      "end": 305.8
+    },
+    {
+      "block": 15,
+      "text": "After about 2 hours of playing with it I finally figured out how to get the power button working.",
+      "start": 305.98,
+      "end": 311.02
+    },
+    {
+      "block": 15,
+      "text": "It had nothing to do with a spring like the apple tech at the apple store mentioned.",
+      "start": 311.2,
+      "end": 315.2
+    },
+    {
+      "block": 15,
+      "text": "I don\u2019t think he was educated at all about the issue.",
+      "start": 315.38,
+      "end": 318.26
+    },
+    {
+      "block": 15,
+      "text": "If anything his suggestion cost me a lot of extra time because I was trying to rig the power button so it would touch a sensor on the main board.",
+      "start": 318.44,
+      "end": 325.4
+    },
+    {
+      "block": 15,
+      "text": "There was no spring and there is no spring involved in the power button.",
+      "start": 325.58,
+      "end": 329.26
+    },
+    {
+      "block": 16,
+      "text": "So now I finally have a fully working MacBook Pro.",
+      "start": 329.44,
+      "end": 332.64
+    },
+    {
+      "block": 16,
+      "text": "I\u2019ve been using it for about 2 weeks now and the performance is nothing short of amazing.",
+      "start": 332.82,
+      "end": 337.38
+    },
+    {
+      "block": 16,
+      "text": "I love the glossy display, I love the speed and I love the performance.",
+      "start": 337.56,
+      "end": 341.8
+    },
+    {
+      "block": 16,
+      "text": "I\u2019m overall very pleased with apple and their support, although the apple store techs at the genius booth didn\u2019t turn out to be of any help.",
+      "start": 341.98,
+      "end": 348.78
+    },
+    {
+      "block": 17,
+      "text": "As for working with the actual laptop, I love the way you can scroll left <-> right by dragging your index and middle finger from left to right.",
+      "start": 348.96,
+      "end": 356.48
+    },
+    {
+      "block": 17,
+      "text": "Ditto for scrolling top <-> bottom.",
+      "start": 356.66,
+      "end": 359.38
+    },
+    {
+      "block": 17,
+      "text": "I like that there is a single button and that you can right click by placing your index and middle finger on the pad and pressing the button.",
+      "start": 359.56,
+      "end": 365.8
+    },
+    {
+      "block": 17,
+      "text": "The build in speakers are very loud and clear.",
+      "start": 365.98,
+      "end": 368.78
+    },
+    {
+      "block": 17,
+      "text": "The symmetry in the laptop and the silver finish is beautiful.",
+      "start": 368.96,
+      "end": 372.4
+    },
+    {
+      "block": 18,
+      "text": "The end result is that I\u2019m extremely satisfied with apple support, I\u2019m extremely satisfied with the performance of the laptop, I\u2019m a little disappointed that I had a laptop with a bad battery and a broken power button.",
+      "start": 372.58,
+      "end": 383.86
+    },
+    {
+      "block": 18,
+      "text": "And I believe that in the future I\u2019ll only buy apple hardware.",
+      "start": 384.04,
+      "end": 387.48
+    },
+    {
+      "block": 18,
+      "text": "That has to say a lot, that even after all the problems above I still would only buy apple.",
+      "start": 387.66,
+      "end": 392.54
+    }
+  ]
+}

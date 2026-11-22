@@ -1,0 +1,111 @@
+{
+  "post": 116,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "d220fbce9653b1d8fb029d226279d9365b99986ca856e55ba7675dd8f7517d5a",
+  "audioSHA256": "75d62080f3bb33f5e933d6fa94c6f1b8da5f6bf900d548e6559aaa733c30e384",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "I refreshed my lists of social networking accounts (Twitter, LinkedIn, and Facebook) for StackExchange users.",
+      "start": 0.0,
+      "end": 6.96
+    },
+    {
+      "block": 0,
+      "text": "The lists are sorted by reputation and updated for the April 2011 data dump.",
+      "start": 7.14,
+      "end": 11.7
+    },
+    {
+      "block": 1,
+      "text": "The data dumps surface every 2 months, so I will update the lists on my site around the same frequency.",
+      "start": 11.88,
+      "end": 17.32
+    },
+    {
+      "block": 2,
+      "text": "This month 7 new sites appeared since they came out of the StackExchange beta:",
+      "start": 17.5,
+      "end": 21.58
+    },
+    {
+      "block": 3,
+      "text": "Android",
+      "start": 21.76,
+      "end": 23.12
+    },
+    {
+      "block": 4,
+      "text": "Apple",
+      "start": 23.3,
+      "end": 24.5
+    },
+    {
+      "block": 5,
+      "text": "Do It Yourself",
+      "start": 24.68,
+      "end": 26.36
+    },
+    {
+      "block": 6,
+      "text": "Electronics",
+      "start": 26.54,
+      "end": 28.06
+    },
+    {
+      "block": 7,
+      "text": "Geographic Information Systems",
+      "start": 28.24,
+      "end": 30.8
+    },
+    {
+      "block": 8,
+      "text": "Unix",
+      "start": 30.98,
+      "end": 32.34
+    },
+    {
+      "block": 9,
+      "text": "Wordpress",
+      "start": 32.52,
+      "end": 33.96
+    },
+    {
+      "block": 10,
+      "text": "You can view all of the links for each list on this section of my site.",
+      "start": 34.14,
+      "end": 37.74
+    },
+    {
+      "block": 11,
+      "text": "For the first time there are over 20 StackExchange sites, and so I ran into a problem of Twitter only allowing you to host 20 lists.",
+      "start": 37.92,
+      "end": 44.88
+    },
+    {
+      "block": 11,
+      "text": "For each site I use an automatically maintained list of the top 500 users.",
+      "start": 45.06,
+      "end": 49.46
+    },
+    {
+      "block": 12,
+      "text": "I tried to contact Twitter support to raise my limit of 20 lists but they could not help.",
+      "start": 49.64,
+      "end": 54.6
+    },
+    {
+      "block": 12,
+      "text": "I ended up getting my 2 sons to host the lists, so I have all automatic lists up and room for another 36 StackExchange sites.",
+      "start": 54.78,
+      "end": 61.9
+    },
+    {
+      "block": 12,
+      "text": "Thanks @linkbondy and @ronniebondy.",
+      "start": 62.08,
+      "end": 64.64
+    }
+  ]
+}

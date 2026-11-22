@@ -1,0 +1,15 @@
+{
+  "post": 27,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "f63accdacdc73e21549f827de4e683567524bfeefe2aba63ec127b8e7a0260e6",
+  "audioSHA256": "108901f7e38517cefd1a32a3ad2377782d6c3d9da912232910827c0567021a37",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "This kid uses echo location to find out where he is.",
+      "start": 0.0,
+      "end": 3.36
+    }
+  ]
+}

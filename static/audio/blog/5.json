@@ -1,0 +1,195 @@
+{
+  "post": 5,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "fc4446720892b64f114da6e3243aa294433f27a94d192dbcc7d1581b99b5ba95",
+  "audioSHA256": "e615fd43144d49f4dac6c5e88e4c322afec82e2f5e6b3741c97bd9800af5d6e3",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "Compilation in C/C++ is a very big operation due to C/C++\u2019s complex grammar.",
+      "start": 0.0,
+      "end": 6.16
+    },
+    {
+      "block": 0,
+      "text": "Source files typically residing in .cpp are always only compiled one time; however, header files typically residing in .h files are compiled once per compiler execution.",
+      "start": 6.34,
+      "end": 17.54
+    },
+    {
+      "block": 0,
+      "text": "Each header file needs to be recompiled because there could be different effects made from the preprocessor.",
+      "start": 17.72,
+      "end": 22.68
+    },
+    {
+      "block": 1,
+      "text": "Since an individual header file is often compiled many times, header compilation as a whole can make up a large part of your total C/C++ compilation time.",
+      "start": 22.86,
+      "end": 31.66
+    },
+    {
+      "block": 2,
+      "text": "Two of ways you can do to reduce this portion of compilation time is:",
+      "start": 31.84,
+      "end": 35.68
+    },
+    {
+      "block": 3,
+      "text": "Forward declarations",
+      "start": 35.86,
+      "end": 37.78
+    },
+    {
+      "block": 4,
+      "text": "Precompiled headers",
+      "start": 37.96,
+      "end": 39.8
+    },
+    {
+      "block": 5,
+      "text": "Forward declarations",
+      "start": 39.98,
+      "end": 41.9
+    },
+    {
+      "block": 6,
+      "text": "Extensively using forward declarations at all times will give you the biggest performance in compilation time.",
+      "start": 42.08,
+      "end": 47.84
+    },
+    {
+      "block": 7,
+      "text": "Forward declaration means to declare something without defining it in a header file.",
+      "start": 48.02,
+      "end": 52.42
+    },
+    {
+      "block": 7,
+      "text": "Include the header file instead in the source file where it will be compiled and parsed only once.",
+      "start": 52.6,
+      "end": 57.32
+    },
+    {
+      "block": 8,
+      "text": "c.h:",
+      "start": 57.5,
+      "end": 59.1
+    },
+    {
+      "block": 9,
+      "text": "d.h:",
+      "start": 59.28,
+      "end": 60.96
+    },
+    {
+      "block": 10,
+      "text": "Notice that d.h does not include c.h even though it uses a class declared in c.h",
+      "start": 61.14,
+      "end": 66.9
+    },
+    {
+      "block": 11,
+      "text": "main.cpp:",
+      "start": 67.08,
+      "end": 69.08
+    },
+    {
+      "block": 12,
+      "text": "In main.cpp it is important that you include c.h before d.h; otherwise, the compiler will complain about C being an undefined type.",
+      "start": 69.26,
+      "end": 77.5
+    },
+    {
+      "block": 13,
+      "text": "Note you can also perform forward declarations with template types:",
+      "start": 77.68,
+      "end": 81.28
+    },
+    {
+      "block": 14,
+      "text": "Precompiled headers",
+      "start": 81.46,
+      "end": 83.3
+    },
+    {
+      "block": 15,
+      "text": "Precompiled headers allow you to speed up compile time when compiling C++ source code.",
+      "start": 83.48,
+      "end": 88.84
+    },
+    {
+      "block": 15,
+      "text": "You typically put anything in a precompiled header that doesn\u2019t change often or ever such as the standard library includes or boost includes.",
+      "start": 89.02,
+      "end": 95.98
+    },
+    {
+      "block": 16,
+      "text": "Precompiled headers are available for most C++ compilers including GCC and Visual C++.",
+      "start": 96.16,
+      "end": 102.48
+    },
+    {
+      "block": 16,
+      "text": "Both of those implementations are similar.",
+      "start": 102.66,
+      "end": 105.22
+    },
+    {
+      "block": 17,
+      "text": "Only 1 precompiled header can be included per compilation, so therefore at a minimum per file.",
+      "start": 105.4,
+      "end": 110.76
+    },
+    {
+      "block": 17,
+      "text": "But in a single project you can have several different precompiled headers.",
+      "start": 110.94,
+      "end": 114.7
+    },
+    {
+      "block": 18,
+      "text": "In Visual C++ the compiled headers have an extension of .pch and in GCC they have an extension of .gch.",
+      "start": 114.88,
+      "end": 122.48
+    },
+    {
+      "block": 19,
+      "text": "In GCC you compile headers just like any other file but you put the output inside a file with a suffix of .gch.",
+      "start": 122.66,
+      "end": 129.78
+    },
+    {
+      "block": 20,
+      "text": "So for example if you precompile stdafx.h you will have a precompiled header that will be automatically searched for called stdafx.h.gch anytime you include stdafx.h",
+      "start": 129.96,
+      "end": 141.88
+    },
+    {
+      "block": 21,
+      "text": "stdafx.h:",
+      "start": 142.06,
+      "end": 144.14
+    },
+    {
+      "block": 22,
+      "text": "a.cpp:",
+      "start": 144.32,
+      "end": 146.32
+    },
+    {
+      "block": 23,
+      "text": "Then compile as:",
+      "start": 146.5,
+      "end": 148.5
+    },
+    {
+      "block": 24,
+      "text": "Your compilation will work even if you remove stdafx.h after step 1.",
+      "start": 148.68,
+      "end": 153.88
+    }
+  ]
+}

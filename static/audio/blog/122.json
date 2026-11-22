@@ -1,0 +1,105 @@
+{
+  "post": 122,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "efc5563116c15d73834e76f4d5145c7cb8431d17440d436beb6cbd6edfc113be",
+  "audioSHA256": "c7f047a591d9694362bcc507c218308c2a2859d8da351a4085252ca8fefd9616",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "\u2605\u2605\u2605\u2605\u2605 (5 stars out of 5)",
+      "start": 0.0,
+      "end": 3.04
+    },
+    {
+      "block": 1,
+      "text": "When I previously thought about CSS I would only think about:",
+      "start": 3.22,
+      "end": 6.74
+    },
+    {
+      "block": 2,
+      "text": "selectors, or selector hierarchies, and",
+      "start": 6.92,
+      "end": 10.04
+    },
+    {
+      "block": 3,
+      "text": "properties related to those selectors",
+      "start": 10.22,
+      "end": 12.54
+    },
+    {
+      "block": 4,
+      "text": "Although both are covered in detail in this book, the book really helped me discover things I had no idea I didn\u2019t know about CSS.",
+      "start": 12.72,
+      "end": 19.2
+    },
+    {
+      "block": 4,
+      "text": "The book does a great job of not explaining fundamentals of CSS and focuses instead on what\u2019s new in CSS3.",
+      "start": 19.38,
+      "end": 25.7
+    },
+    {
+      "block": 5,
+      "text": "Media queries in particular was great to know about for making your website capable on mobile devices.",
+      "start": 25.88,
+      "end": 31.24
+    },
+    {
+      "block": 5,
+      "text": "After reading its chapter I immediately implemented media queries on my blog.",
+      "start": 31.42,
+      "end": 35.66
+    },
+    {
+      "block": 6,
+      "text": "I really liked how this book was organized, the first part deals with the CSS3 features that are already implemented in major browsers, followed by the parts which are partially implemented, and finally the things which are not yet implemented or agreed upon and are likely to change.",
+      "start": 35.84,
+      "end": 49.2
+    },
+    {
+      "block": 6,
+      "text": "Every chapter ends with each major browser and the support it has for the features discussed in the chapter.",
+      "start": 49.38,
+      "end": 54.58
+    },
+    {
+      "block": 7,
+      "text": "Other features like opacity, RGBA & HSL & HSLA colors, drop shadows, rounded corners, and much more were great to know about.",
+      "start": 54.76,
+      "end": 63.8
+    },
+    {
+      "block": 8,
+      "text": "Several tips are provided for working with older browsers in a sane manner throughout the book for just about each section.",
+      "start": 63.98,
+      "end": 69.66
+    },
+    {
+      "block": 9,
+      "text": "My only criticism in this book is that it would have been ideal to know not what is expected in IE9 but what is actually in IE9.",
+      "start": 69.84,
+      "end": 76.88
+    },
+    {
+      "block": 9,
+      "text": "IE9 was released March 14th,2011 this book was released in April, 2011.",
+      "start": 77.06,
+      "end": 83.06
+    },
+    {
+      "block": 9,
+      "text": "I can understand though that this would have delayed the release of the book.",
+      "start": 83.24,
+      "end": 86.6
+    },
+    {
+      "block": 10,
+      "text": "Update: The author Peter Gasston has up-to-date information on the website which supports the book.",
+      "start": 86.78,
+      "end": 92.22
+    }
+  ]
+}

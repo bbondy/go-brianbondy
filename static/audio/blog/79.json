@@ -1,0 +1,135 @@
+{
+  "post": 79,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "51bf90ce701117a4c61aac040206c67539d307edf68eefa5a672d7d7438d358e",
+  "audioSHA256": "eb1a27e804728d20017371fe42f43766219a4e2201f8027566d712abcf7323ac",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "Several months ago I decided that this website needed a revamping.",
+      "start": 0.0,
+      "end": 3.84
+    },
+    {
+      "block": 1,
+      "text": "The work since that thought is finally being released today.",
+      "start": 4.02,
+      "end": 7.06
+    },
+    {
+      "block": 1,
+      "text": "The work on the site is still slowly in progress, but I feel that enough of the site is done to be better than the last site.",
+      "start": 7.24,
+      "end": 13.4
+    },
+    {
+      "block": 2,
+      "text": "Some stats on the new site:",
+      "start": 13.58,
+      "end": 15.5
+    },
+    {
+      "block": 3,
+      "text": "Was developed on my mac",
+      "start": 15.68,
+      "end": 17.52
+    },
+    {
+      "block": 4,
+      "text": "Was written using vi for all editing",
+      "start": 17.7,
+      "end": 20.02
+    },
+    {
+      "block": 5,
+      "text": "Was built using Django 1.1",
+      "start": 20.2,
+      "end": 22.92
+    },
+    {
+      "block": 6,
+      "text": "Is running with Python 2.6",
+      "start": 23.1,
+      "end": 25.58
+    },
+    {
+      "block": 7,
+      "text": "Is served through IIS with PyISAPIe. (PyISAPIe is a great project created by Phillip Sitbon which brings Django to IIS.)",
+      "start": 25.76,
+      "end": 32.72
+    },
+    {
+      "block": 8,
+      "text": "JQuery was used for a couple of post page served alterations",
+      "start": 32.9,
+      "end": 36.66
+    },
+    {
+      "block": 9,
+      "text": "The database is built using SQLite",
+      "start": 36.84,
+      "end": 39.48
+    },
+    {
+      "block": 10,
+      "text": "The blog posts with code samples are made with Google\u2019s code prettify",
+      "start": 39.66,
+      "end": 43.5
+    },
+    {
+      "block": 11,
+      "text": "All blog posts are rendered using Django Markdown (which makes for easy posting of great content)",
+      "start": 43.68,
+      "end": 49.36
+    },
+    {
+      "block": 12,
+      "text": "Markdown is a hassle free, easy to use markup language that allows you to easily post links, post images, and format great blog posts with little work.",
+      "start": 49.54,
+      "end": 58.02
+    },
+    {
+      "block": 13,
+      "text": "The old site was built in ASP .NET beta, and slowly upgraded over time to newer versions.",
+      "start": 58.2,
+      "end": 63.8
+    },
+    {
+      "block": 13,
+      "text": "Overall for me, coding in Django is a much better and funner experience than coding in ASP .NET ever was.",
+      "start": 63.98,
+      "end": 70.54
+    },
+    {
+      "block": 14,
+      "text": "Before deciding on Django for the new site, I also had an attempt at Ruby on Rails.",
+      "start": 70.72,
+      "end": 75.36
+    },
+    {
+      "block": 14,
+      "text": "I wasn\u2019t a fan from the start, the language was simply too different from what I am used to and know.",
+      "start": 75.54,
+      "end": 80.66
+    },
+    {
+      "block": 15,
+      "text": "I like the new design a lot better than the old one.",
+      "start": 80.84,
+      "end": 83.72
+    },
+    {
+      "block": 15,
+      "text": "I hired Bradd Bezaire to do this design over 2 years ago in August of 2007.",
+      "start": 83.9,
+      "end": 88.86
+    },
+    {
+      "block": 15,
+      "text": "This design sat in my inbox since then because I\u2019ve been extremely busy, but I\u2019m glad his work didn\u2019t go to waste after all.",
+      "start": 89.04,
+      "end": 95.44
+    }
+  ]
+}

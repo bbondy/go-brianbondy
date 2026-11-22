@@ -1,0 +1,237 @@
+{
+  "post": 82,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "25d73222dacc356b474a2ab24add013820ba411c8fe22fcf12182fa656586580",
+  "audioSHA256": "f56c1c1f83e4255b2603fec1f0f217033d8a43d0f2f84bcec57e2368c7781e5a",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "I just purchased a new 64-Bit AMD computer and installed Windows 64-Bit AMD for the first time.",
+      "start": 0.0,
+      "end": 6.48
+    },
+    {
+      "block": 1,
+      "text": "Here\u2019s a short rundown on what I found out during my first night of using it.",
+      "start": 6.66,
+      "end": 10.42
+    },
+    {
+      "block": 2,
+      "text": "There are 2 main types of 64-bit processors, IA64 and x64, and they run different versions of windows 64-bit.",
+      "start": 10.6,
+      "end": 18.68
+    },
+    {
+      "block": 2,
+      "text": "That means that every driver built for Windows 64-Bit needs to be compiled twice.",
+      "start": 18.86,
+      "end": 24.06
+    },
+    {
+      "block": 3,
+      "text": "The IA64 processor was called the Itanium.",
+      "start": 24.24,
+      "end": 27.6
+    },
+    {
+      "block": 3,
+      "text": "It was a huge flop because of problems with the way they did the caching.",
+      "start": 27.78,
+      "end": 31.62
+    },
+    {
+      "block": 3,
+      "text": "It was replaced with the Itanium 2, which has a better design for cache.",
+      "start": 31.8,
+      "end": 36.2
+    },
+    {
+      "block": 3,
+      "text": "Itanium 2 does not mean dual processors, but instead it means the 2nd design of Itanium (version 2).",
+      "start": 36.38,
+      "end": 43.02
+    },
+    {
+      "block": 3,
+      "text": "It is referred to the Itanium 2 CPU.",
+      "start": 43.2,
+      "end": 46.0
+    },
+    {
+      "block": 3,
+      "text": "It is now referred to as IA64 only.",
+      "start": 46.18,
+      "end": 49.54
+    },
+    {
+      "block": 4,
+      "text": "With x64 you can install both Windows 32 bit or Windows 64 bit.",
+      "start": 49.72,
+      "end": 54.92
+    },
+    {
+      "block": 4,
+      "text": "With IA64 you can only install the IA64 Windows.",
+      "start": 55.1,
+      "end": 59.5
+    },
+    {
+      "block": 4,
+      "text": "You can run 32-bit apps on all variants.",
+      "start": 59.68,
+      "end": 62.56
+    },
+    {
+      "block": 4,
+      "text": "For the 64-bit Windows versions you can run the applications through an emulator that works transparently called Windows 32 on Windows 64 (WOW64)",
+      "start": 62.74,
+      "end": 72.5
+    },
+    {
+      "block": 5,
+      "text": "The same does not hold for 32-bit drivers though.",
+      "start": 72.68,
+      "end": 75.88
+    },
+    {
+      "block": 5,
+      "text": "WOW64 is only for user mode applications.",
+      "start": 76.06,
+      "end": 80.38
+    },
+    {
+      "block": 6,
+      "text": "On 64-bit machines there are actually 2 different registries.",
+      "start": 80.56,
+      "end": 84.24
+    },
+    {
+      "block": 6,
+      "text": "A 32-bit registry and a 64-bit registry.",
+      "start": 84.42,
+      "end": 87.94
+    },
+    {
+      "block": 6,
+      "text": "They are treated as different registries by 32-bit and 64-bit applications but the 32-bit registry is just a subkey for the 64-bit registry.",
+      "start": 88.12,
+      "end": 97.08
+    },
+    {
+      "block": 6,
+      "text": "Windows will automatically route an application to the proper registry depending on if it\u2019s 32-bit or 64-bit.",
+      "start": 97.26,
+      "end": 103.58
+    },
+    {
+      "block": 7,
+      "text": "Because of WOW64, any application that was compiled before on a 32-bit machine, will still work in 64-bit Windows.",
+      "start": 103.76,
+      "end": 112.4
+    },
+    {
+      "block": 7,
+      "text": "This isn\u2019t because it supports it direclty, but because windows is using WOW64 to translate the 32-bit calls to 64-bit ones.",
+      "start": 112.58,
+      "end": 121.54
+    },
+    {
+      "block": 7,
+      "text": "If however a program depends on a driver, or if it integrates with the windows shell, then that program will no longer work.",
+      "start": 121.72,
+      "end": 128.44
+    },
+    {
+      "block": 7,
+      "text": "I believe IPC is also translated on the fly by WOW64.",
+      "start": 128.62,
+      "end": 133.34
+    },
+    {
+      "block": 8,
+      "text": "Some other useful information.",
+      "start": 133.52,
+      "end": 135.76
+    },
+    {
+      "block": 9,
+      "text": "These 2 directories are both for 64-bit applications/drivers only.",
+      "start": 135.94,
+      "end": 140.42
+    },
+    {
+      "block": 9,
+      "text": "Pretty great naming! :), but I\u2019m sure it will save many headaches for inf file authors.",
+      "start": 140.6,
+      "end": 145.0
+    },
+    {
+      "block": 10,
+      "text": "C:\\Windows\\System32\\",
+      "start": 145.18,
+      "end": 148.14
+    },
+    {
+      "block": 11,
+      "text": "C:\\Program Files\\",
+      "start": 148.32,
+      "end": 150.4
+    },
+    {
+      "block": 12,
+      "text": "These 2 directories are for 32-bit apps and drivers only, they use 32-bit emulation",
+      "start": 150.58,
+      "end": 156.42
+    },
+    {
+      "block": 13,
+      "text": "C:\\Windows\\SysWOW64\\",
+      "start": 156.6,
+      "end": 160.76
+    },
+    {
+      "block": 14,
+      "text": "C:\\Program Files (x86)\\",
+      "start": 160.94,
+      "end": 164.06
+    },
+    {
+      "block": 15,
+      "text": "So developing for 64-bit machines can get a little tricky if you actually want it to run as a 64-bit program.",
+      "start": 164.24,
+      "end": 170.4
+    },
+    {
+      "block": 15,
+      "text": "If it\u2019s running as a 32-bit program, then your ints will still be 4 bytes, and everything else you hold true will also still hold.",
+      "start": 170.58,
+      "end": 177.7
+    },
+    {
+      "block": 16,
+      "text": "Right now, when I want to make a 64-bit program, I use a makefile instead of using Visual Studio directly.",
+      "start": 177.88,
+      "end": 184.12
+    },
+    {
+      "block": 16,
+      "text": "You can use different NSIS .exes to generate the different installers.",
+      "start": 184.3,
+      "end": 188.3
+    },
+    {
+      "block": 16,
+      "text": "I suggest to build each project with 3 different versions of NSIS.",
+      "start": 188.48,
+      "end": 192.48
+    },
+    {
+      "block": 16,
+      "text": "Then if you want to, you can build a 32-bit installer wrapper that combines each of your installers.",
+      "start": 192.66,
+      "end": 198.1
+    }
+  ]
+}

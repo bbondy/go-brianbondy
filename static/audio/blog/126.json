@@ -1,0 +1,75 @@
+{
+  "post": 126,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "e9a08c867366d910f63803225ec59c3f9f3e96fe8d0f82514bcc03fffc29f8f2",
+  "audioSHA256": "9b2a955dae2f95d89f3f9f13a9db11cbe19370644cd0417df4db2bc78cab182d",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "Introducing:",
+      "start": 0.0,
+      "end": 1.52
+    },
+    {
+      "block": 1,
+      "text": "The Mozilla Platform Development Cheat Sheet.",
+      "start": 1.7,
+      "end": 4.42
+    },
+    {
+      "block": 2,
+      "text": "Working on Firefox can be daunting when you first start as a developer.",
+      "start": 4.6,
+      "end": 8.36
+    },
+    {
+      "block": 3,
+      "text": "There is an amazing amount of Mozilla specific technology you need to learn; in addition you may not have had the opportunity to work with things like mercurial patch queues (MQ).",
+      "start": 8.54,
+      "end": 18.06
+    },
+    {
+      "block": 4,
+      "text": "On one hand: Mozilla has a massive collection of awesome Mozilla development specific documentation on the Mozilla Developer Network (MDN).",
+      "start": 18.24,
+      "end": 26.24
+    },
+    {
+      "block": 5,
+      "text": "On the other hand: There is a massive collection of documentation that you have to keep looking up.",
+      "start": 26.42,
+      "end": 31.46
+    },
+    {
+      "block": 6,
+      "text": "When I started as a platform developer at Mozilla 3 months ago, I started making a cheat sheet of common information I would have to frequently look up.",
+      "start": 31.64,
+      "end": 39.16
+    },
+    {
+      "block": 6,
+      "text": "I will continue to update this page as I continue to learn every day at Mozilla.",
+      "start": 39.34,
+      "end": 43.82
+    },
+    {
+      "block": 7,
+      "text": "I highly encourage anyone looking to contribute to an open source project to look into contributing to Mozilla.",
+      "start": 44.0,
+      "end": 49.84
+    },
+    {
+      "block": 8,
+      "text": "Not only will you be helping an open source non-profit organization, but you will also connect with extremely smart peers, have extra resume flair, and learn a ton.",
+      "start": 50.02,
+      "end": 58.98
+    },
+    {
+      "block": 8,
+      "text": "The experience of contributing (or working) for Mozilla will forever change you as a developer.",
+      "start": 59.16,
+      "end": 64.6
+    }
+  ]
+}

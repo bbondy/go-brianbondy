@@ -1,0 +1,21 @@
+{
+  "post": 58,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "520b04a5257bddcb065ba83377f7de4e5041a35d5b3cb7695cb32f96e0e4b5ba",
+  "audioSHA256": "6b68deba665f80bdc221f4c2be0536892df17d8f55325073ff4b8bcf222058f4",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "After doing some package installs, and seeing how great Ubuntu is with upgrading and installing new software, I\u2019ll never go back to Fedora.",
+      "start": 0.0,
+      "end": 7.36
+    },
+    {
+      "block": 0,
+      "text": "Being based off of debian is awesome.",
+      "start": 7.54,
+      "end": 10.02
+    }
+  ]
+}

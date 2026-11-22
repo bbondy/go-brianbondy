@@ -1,0 +1,1299 @@
+{
+  "post": 174,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "4fad4adcd0894cacf997bc756cb6f6a97d3b057bdc1b0dd0e38a4dd039f1907d",
+  "audioSHA256": "4bdd2d3f6e5d0c39a353354a8f7f6f854a6b41743862ec69a49b8b9bf3e5ed89",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "Over the past 4 \u00bd years I\u2019ve been helping to build a \u201cbig\u201d new startup named Brave.",
+      "start": 0.0,
+      "end": 5.12
+    },
+    {
+      "block": 1,
+      "text": "It\u2019s been a wild ride, far exceeding anything I could have imagined.",
+      "start": 5.3,
+      "end": 9.14
+    },
+    {
+      "block": 2,
+      "text": "The company has grown from a team of 2, to over 100 passionate mission-driven teammates.",
+      "start": 9.32,
+      "end": 15.0
+    },
+    {
+      "block": 2,
+      "text": "Our user base has grown to 8.7 million monthly active users.",
+      "start": 15.18,
+      "end": 19.5
+    },
+    {
+      "block": 2,
+      "text": "Our users help support over 300,000 registered content creators via micropayments.",
+      "start": 19.68,
+      "end": 25.04
+    },
+    {
+      "block": 2,
+      "text": "And our community is growing and thriving more every day.",
+      "start": 25.22,
+      "end": 28.5
+    },
+    {
+      "block": 3,
+      "text": "Brave 2019 company event:",
+      "start": 28.68,
+      "end": 31.32
+    },
+    {
+      "block": 4,
+      "text": "Today we\u2019re celebrating the release of Brave 1.0, and I couldn\u2019t be happier to be a part of it.",
+      "start": 31.5,
+      "end": 36.86
+    },
+    {
+      "block": 5,
+      "text": "Here\u2019s a story of how Brave came to be, told from the perspective of one of its co-founders.",
+      "start": 37.04,
+      "end": 41.76
+    },
+    {
+      "block": 6,
+      "text": "October 2013 - At the Mozilla Summit",
+      "start": 41.94,
+      "end": 45.14
+    },
+    {
+      "block": 7,
+      "text": "I was employed at Mozilla at the time attending a yearly Mozilla Summit event.",
+      "start": 45.32,
+      "end": 49.64
+    },
+    {
+      "block": 7,
+      "text": "A Mozilla Summit is a get-together where 1,600 employees, contractors, and community leaders gather to discuss, make plans, and hack on Mozilla products like Firefox.",
+      "start": 49.82,
+      "end": 60.86
+    },
+    {
+      "block": 8,
+      "text": "Within days, I would have my first interview for a new job with Khan Academy.",
+      "start": 61.04,
+      "end": 65.44
+    },
+    {
+      "block": 8,
+      "text": "I felt held back at Mozilla and I wanted to go into full gear mode.",
+      "start": 65.62,
+      "end": 69.46
+    },
+    {
+      "block": 8,
+      "text": "I\u2019ve always found motivation in mission-driven companies, so going from a non-profit company like Mozilla to Khan Academy made sense.",
+      "start": 69.64,
+      "end": 76.92
+    },
+    {
+      "block": 8,
+      "text": "If I wasn\u2019t offered a position with my first choice Khan Academy, then I\u2019d find somewhere else to go.",
+      "start": 77.1,
+      "end": 82.46
+    },
+    {
+      "block": 8,
+      "text": "My mind was made up.",
+      "start": 82.64,
+      "end": 84.32
+    },
+    {
+      "block": 9,
+      "text": "Before I left Mozilla though, and on the final night of the summit, I wanted to get a picture with the creator of JavaScript and co-founder of Mozilla, Brendan Eich.",
+      "start": 84.5,
+      "end": 92.66
+    },
+    {
+      "block": 10,
+      "text": "I told myself that this would be the last time I would see, let alone be able to get a picture of myself with Brendan.",
+      "start": 92.84,
+      "end": 98.92
+    },
+    {
+      "block": 11,
+      "text": "It took me all night to gather up the courage to ask for a picture, but I finally did it.",
+      "start": 99.1,
+      "end": 103.98
+    },
+    {
+      "block": 12,
+      "text": "I ended up getting the job at Khan Academy, leveraging a coding video tutorial site I had created named Code Firefox, and crushing the take home project they\u2019d given.",
+      "start": 104.16,
+      "end": 113.12
+    },
+    {
+      "block": 12,
+      "text": "Phewf!",
+      "start": 113.3,
+      "end": 114.66
+    },
+    {
+      "block": 12,
+      "text": "Good thing I got that picture.",
+      "start": 114.84,
+      "end": 116.84
+    },
+    {
+      "block": 13,
+      "text": "August 2014 - Surprising first contact",
+      "start": 117.02,
+      "end": 120.46
+    },
+    {
+      "block": 14,
+      "text": "Nearly a year later, I was on my laptop sitting in bed.",
+      "start": 120.64,
+      "end": 124.16
+    },
+    {
+      "block": 14,
+      "text": "I turned to my wife and said: \u201cWow!",
+      "start": 124.34,
+      "end": 126.98
+    },
+    {
+      "block": 14,
+      "text": "The creator of JavaScript just asked me to direct-message (DM) him.\u201d",
+      "start": 127.16,
+      "end": 131.72
+    },
+    {
+      "block": 15,
+      "text": "My wife said: \u201cHe probably wants to offer you a job.\u201d",
+      "start": 131.9,
+      "end": 135.18
+    },
+    {
+      "block": 16,
+      "text": "\u201cI don\u2019t think so,\u201d I said, and \u201cI\u2019m happy at Khan Academy anyway.\u201d",
+      "start": 135.36,
+      "end": 139.52
+    },
+    {
+      "block": 17,
+      "text": "I couldn\u2019t DM him of course, because he wasn\u2019t following me on Twitter at the time and his private DMs weren\u2019t open.",
+      "start": 139.7,
+      "end": 145.54
+    },
+    {
+      "block": 18,
+      "text": "I did have his personal email though, and so I started what would be a life-changing email thread.",
+      "start": 145.72,
+      "end": 150.84
+    },
+    {
+      "block": 19,
+      "text": "Defining what Brave would be and how it would work",
+      "start": 151.02,
+      "end": 153.9
+    },
+    {
+      "block": 20,
+      "text": "Brendan sent me an initial pitch deck for the idea of a company that would eventually be known as Brave.",
+      "start": 154.08,
+      "end": 159.04
+    },
+    {
+      "block": 20,
+      "text": "It wasn\u2019t called Brave at that point, but the basic ideas haven\u2019t changed.",
+      "start": 159.22,
+      "end": 163.62
+    },
+    {
+      "block": 21,
+      "text": "Stop allowing users to be tracked, users should own their own data.",
+      "start": 163.8,
+      "end": 167.72
+    },
+    {
+      "block": 22,
+      "text": "Speed up page load time and reduce bandwidth by blocking bad things.",
+      "start": 167.9,
+      "end": 171.98
+    },
+    {
+      "block": 23,
+      "text": "Allow publishers to get paid via cryptocurrency replacing lost revenue from the blocking.",
+      "start": 172.16,
+      "end": 176.88
+    },
+    {
+      "block": 24,
+      "text": "Allow users to get paid via cryptocurrency micropayments for their attention on privacy preserving ads.",
+      "start": 177.06,
+      "end": 182.66
+    },
+    {
+      "block": 25,
+      "text": "Why me?",
+      "start": 182.84,
+      "end": 184.2
+    },
+    {
+      "block": 26,
+      "text": "A lot of people like to ask why Brendan contacted me above all people.",
+      "start": 184.38,
+      "end": 188.22
+    },
+    {
+      "block": 26,
+      "text": "He\u2019s probably one of the most developer-connected people on the planet.",
+      "start": 188.4,
+      "end": 191.92
+    },
+    {
+      "block": 27,
+      "text": "The answer in short was that I had made it on a spreadsheet of top talent that he maintained.",
+      "start": 192.1,
+      "end": 196.74
+    },
+    {
+      "block": 27,
+      "text": "He didn\u2019t originally contact me to be a co-founder, he contacted me to be a contractor because he needed top Windows talent.",
+      "start": 196.92,
+      "end": 203.4
+    },
+    {
+      "block": 27,
+      "text": "I\u2019m sure he contacted several other people as well.",
+      "start": 203.58,
+      "end": 206.54
+    },
+    {
+      "block": 28,
+      "text": "During the next 4 months of discussion, we fleshed out details of what we would build.",
+      "start": 206.72,
+      "end": 211.36
+    },
+    {
+      "block": 28,
+      "text": "From my previous startup experience and from creating a new browser from scratch, Firefox - Windows style enabled Metro browser.",
+      "start": 211.54,
+      "end": 219.3
+    },
+    {
+      "block": 28,
+      "text": "I knew exactly how a new browser could be built.",
+      "start": 219.48,
+      "end": 222.44
+    },
+    {
+      "block": 28,
+      "text": "I knew how installers would work, how updates would work, how signing worked, how much things would cost, how long things would take, I had the answer to various other \u201chow\u201d questions as well.",
+      "start": 222.62,
+      "end": 232.22
+    },
+    {
+      "block": 29,
+      "text": "During this discussion, something changed.",
+      "start": 232.4,
+      "end": 235.2
+    },
+    {
+      "block": 29,
+      "text": "I went from being considered as a contractor with Windows talent, to being offered to be a co-founder in the company that was about to start.",
+      "start": 235.38,
+      "end": 242.1
+    },
+    {
+      "block": 30,
+      "text": "May 2015 - Starting work",
+      "start": 242.28,
+      "end": 245.0
+    },
+    {
+      "block": 31,
+      "text": "It took another few months to get initial funding, but in May 2015 we started this ambitious project.",
+      "start": 245.18,
+      "end": 251.1
+    },
+    {
+      "block": 32,
+      "text": "I quit Khan Academy, and on my last day there, Sal Khan joked that when I made it big, I should not forget about Khan Academy and to give them a donation.",
+      "start": 251.28,
+      "end": 259.36
+    },
+    {
+      "block": 32,
+      "text": "I didn\u2019t say it at the time, but I was thinking that I\u2019d not only give a donation, but I\u2019d help enable thousands of others to do the same.",
+      "start": 259.54,
+      "end": 266.18
+    },
+    {
+      "block": 33,
+      "text": "The company was in \u201cstealth\u201d mode at the time, it was OK to say that I was working on a new startup, but we didn\u2019t share Brendan\u2019s involvement to avoid attracting media attention until we were ready.",
+      "start": 266.36,
+      "end": 275.56
+    },
+    {
+      "block": 33,
+      "text": "It was hard to keep it a secret, what if Brave never launched?",
+      "start": 275.74,
+      "end": 279.5
+    },
+    {
+      "block": 33,
+      "text": "I\u2019d have quit my dream job and risked everything I had going for me and my family, and no one might ever know that I co-founded this company with Brendan Eich.",
+      "start": 279.68,
+      "end": 287.52
+    },
+    {
+      "block": 33,
+      "text": "I knew we\u2019d have to make it work, but I also knew we couldn\u2019t do it alone.",
+      "start": 287.7,
+      "end": 291.7
+    },
+    {
+      "block": 34,
+      "text": "Our initial plan was very ambitious:",
+      "start": 291.88,
+      "end": 294.36
+    },
+    {
+      "block": 35,
+      "text": "We\u2019d build:",
+      "start": 294.54,
+      "end": 295.98
+    },
+    {
+      "block": 36,
+      "text": "Desktop browsers for Windows, macOS, Linux",
+      "start": 296.16,
+      "end": 299.84
+    },
+    {
+      "block": 37,
+      "text": "iOS browser",
+      "start": 300.02,
+      "end": 301.7
+    },
+    {
+      "block": 38,
+      "text": "Android browser",
+      "start": 301.88,
+      "end": 303.64
+    },
+    {
+      "block": 39,
+      "text": "Micro-payments for user private ads",
+      "start": 303.82,
+      "end": 306.38
+    },
+    {
+      "block": 40,
+      "text": "Built-in tracking protection",
+      "start": 306.56,
+      "end": 308.8
+    },
+    {
+      "block": 41,
+      "text": "Ad-block",
+      "start": 308.98,
+      "end": 310.34
+    },
+    {
+      "block": 42,
+      "text": "HTTPS everywhere",
+      "start": 310.52,
+      "end": 313.0
+    },
+    {
+      "block": 43,
+      "text": "Tor private tabs",
+      "start": 313.18,
+      "end": 315.02
+    },
+    {
+      "block": 44,
+      "text": "Greasemonkey type functionality.",
+      "start": 315.2,
+      "end": 317.6
+    },
+    {
+      "block": 45,
+      "text": "Extensions for other browsers (The only one we didn\u2019t end up building)",
+      "start": 317.78,
+      "end": 321.62
+    },
+    {
+      "block": 46,
+      "text": "And more\u2026",
+      "start": 321.8,
+      "end": 323.08
+    },
+    {
+      "block": 47,
+      "text": "Thanks to Brendan being who he is, hiring was never a problem.",
+      "start": 323.26,
+      "end": 326.94
+    },
+    {
+      "block": 47,
+      "text": "It still isn\u2019t.",
+      "start": 327.12,
+      "end": 328.72
+    },
+    {
+      "block": 47,
+      "text": "We quickly hired top talent including Yan Zhu, Brad Richter, and Marshall Rose.",
+      "start": 328.9,
+      "end": 333.94
+    },
+    {
+      "block": 47,
+      "text": "We built up a great set of top advisors and attracted some great talent via open-source contributions.",
+      "start": 334.12,
+      "end": 339.88
+    },
+    {
+      "block": 48,
+      "text": "Picking a company name",
+      "start": 340.06,
+      "end": 341.98
+    },
+    {
+      "block": 49,
+      "text": "We had a placeholder name for the company: \u201cHyperWeb Labs\u201d.",
+      "start": 342.16,
+      "end": 345.84
+    },
+    {
+      "block": 50,
+      "text": "Brave was one of the first names we considered.",
+      "start": 346.02,
+      "end": 348.82
+    },
+    {
+      "block": 50,
+      "text": "But we also considered others:",
+      "start": 349.0,
+      "end": 351.08
+    },
+    {
+      "block": 51,
+      "text": "Gladiator",
+      "start": 351.26,
+      "end": 352.7
+    },
+    {
+      "block": 52,
+      "text": "Dynamo",
+      "start": 352.88,
+      "end": 354.24
+    },
+    {
+      "block": 53,
+      "text": "Superware?",
+      "start": 354.42,
+      "end": 355.86
+    },
+    {
+      "block": 54,
+      "text": "Uh, no.",
+      "start": 356.04,
+      "end": 357.56
+    },
+    {
+      "block": 55,
+      "text": "An advisor proposed Brownie, but I just couldn\u2019t picture that going over well in a taskbar.",
+      "start": 357.74,
+      "end": 362.7
+    },
+    {
+      "block": 56,
+      "text": "Brave was the most promising option, but we thought it might have some problems:",
+      "start": 362.88,
+      "end": 367.28
+    },
+    {
+      "block": 57,
+      "text": "Might be viewed as a bit cheesy if taken too seriously",
+      "start": 367.46,
+      "end": 370.74
+    },
+    {
+      "block": 58,
+      "text": "Boastful",
+      "start": 370.92,
+      "end": 372.28
+    },
+    {
+      "block": 59,
+      "text": "Might not be evocative of imagery / logo (Firefox was hard to beat there)",
+      "start": 372.46,
+      "end": 377.42
+    },
+    {
+      "block": 60,
+      "text": "May not translate well",
+      "start": 377.6,
+      "end": 379.68
+    },
+    {
+      "block": 61,
+      "text": "Despite these potential problems though, we couldn\u2019t come up with anything else we liked better.",
+      "start": 379.86,
+      "end": 384.5
+    },
+    {
+      "block": 61,
+      "text": "We decided to go with it.",
+      "start": 384.68,
+      "end": 386.52
+    },
+    {
+      "block": 61,
+      "text": "We did almost use \u201cZura\u201d though, which is Sanskrit for Brave.",
+      "start": 386.7,
+      "end": 390.38
+    },
+    {
+      "block": 61,
+      "text": "We\u2019d have used this name if we couldn\u2019t register the company name or a domain for Brave.",
+      "start": 390.56,
+      "end": 395.2
+    },
+    {
+      "block": 62,
+      "text": "Obtaining brave.com",
+      "start": 395.38,
+      "end": 397.7
+    },
+    {
+      "block": 63,
+      "text": "Having the name locked in, we registered brave.io which was available for a fairly low price.",
+      "start": 397.88,
+      "end": 403.72
+    },
+    {
+      "block": 63,
+      "text": "We really wanted brave.com, but it had been in use for 17 years by a \u201cnuclear polka\u201d band founded in 1979 named Brave Combo.",
+      "start": 403.9,
+      "end": 411.74
+    },
+    {
+      "block": 64,
+      "text": "I decided what the heck, I\u2019d cold email Brave Combo anyway.",
+      "start": 411.92,
+      "end": 415.92
+    },
+    {
+      "block": 65,
+      "text": "brave.com was being used and redirected to brave.com/bo.",
+      "start": 416.1,
+      "end": 420.98
+    },
+    {
+      "block": 65,
+      "text": "So as leverage, before I contacted them, I decided to order bravecombo.com first which was available.",
+      "start": 421.16,
+      "end": 427.72
+    },
+    {
+      "block": 65,
+      "text": "I reasoned that brave.com/bo isn\u2019t much different from bravecombo.com.",
+      "start": 427.9,
+      "end": 432.94
+    },
+    {
+      "block": 66,
+      "text": "I asked if they\u2019d consider selling brave.com in exchange for bravecombo.com and a fair price.",
+      "start": 433.12,
+      "end": 438.88
+    },
+    {
+      "block": 66,
+      "text": "They gave a range, and after some months of convincing, we agreed on a price in that range.",
+      "start": 439.06,
+      "end": 444.18
+    },
+    {
+      "block": 66,
+      "text": "We\u2019d pay half up front, and the other half 6 months later.",
+      "start": 444.36,
+      "end": 447.8
+    },
+    {
+      "block": 67,
+      "text": "As a side note, Brave Combo appeared on the Simpsons and music from Brave Combo was featured on Futurama.",
+      "start": 447.98,
+      "end": 453.74
+    },
+    {
+      "block": 68,
+      "text": "Getting a logo",
+      "start": 453.92,
+      "end": 455.6
+    },
+    {
+      "block": 69,
+      "text": "We had 3 attempts for our logo.",
+      "start": 455.78,
+      "end": 458.18
+    },
+    {
+      "block": 70,
+      "text": "The first one was from an independent contractor.",
+      "start": 458.36,
+      "end": 461.16
+    },
+    {
+      "block": 70,
+      "text": "Here are the initial bar napkin sketches:",
+      "start": 461.34,
+      "end": 463.98
+    },
+    {
+      "block": 71,
+      "text": "We decided right there, that obviously the right direction was\u2026 the lightning bolt icon.",
+      "start": 464.16,
+      "end": 469.36
+    },
+    {
+      "block": 72,
+      "text": "But after it was rendered and rasterized, we decided to go back and pick a different direction.",
+      "start": 469.54,
+      "end": 474.42
+    },
+    {
+      "block": 73,
+      "text": "Our next step was to launch a crowdspring contest with a description asking for something that invoked a lion in imagery.",
+      "start": 474.6,
+      "end": 480.92
+    },
+    {
+      "block": 74,
+      "text": "We kept making tweaks to it but we were never happy with it.",
+      "start": 481.1,
+      "end": 484.62
+    },
+    {
+      "block": 75,
+      "text": "When Brad started working at Brave, we assigned the logo to him.",
+      "start": 484.8,
+      "end": 488.56
+    },
+    {
+      "block": 75,
+      "text": "He knocked it out of the park and we loved what he came up with.",
+      "start": 488.74,
+      "end": 491.94
+    },
+    {
+      "block": 76,
+      "text": "Which was later revised to:",
+      "start": 492.12,
+      "end": 494.12
+    },
+    {
+      "block": 77,
+      "text": "Bonus: I picked up one of the runner-up submission icons as my website logo.",
+      "start": 494.3,
+      "end": 499.1
+    },
+    {
+      "block": 78,
+      "text": "First attempt at a desktop browser",
+      "start": 499.28,
+      "end": 501.68
+    },
+    {
+      "block": 79,
+      "text": "The first code commit for our desktop browser was on May 10, 2015.",
+      "start": 501.86,
+      "end": 506.66
+    },
+    {
+      "block": 80,
+      "text": "The code was based on Graphene, a multi-process/sandboxed web app framework built on the Gecko rendering engine, which was basically Firefox OS for Desktop.",
+      "start": 506.84,
+      "end": 515.64
+    },
+    {
+      "block": 80,
+      "text": "A new browser was also using Graphene at Mozilla at the time, named Firefox.html.",
+      "start": 515.82,
+      "end": 521.9
+    },
+    {
+      "block": 81,
+      "text": "Firefox.html by Paul Rouget looked at the time to be the future of Firefox, with HTML to replace the user interface markup language that is still in use today, XUL.",
+      "start": 522.08,
+      "end": 532.16
+    },
+    {
+      "block": 81,
+      "text": "The Firefox.html project was announced Dec 6, 2014, and had a name change to browser.html, but never actually launched.",
+      "start": 532.34,
+      "end": 541.78
+    },
+    {
+      "block": 82,
+      "text": "We built the UI for Brave from scratch using React and Redux: the original thinking was that we wanted more speed iterating on UI innovations.",
+      "start": 541.96,
+      "end": 549.48
+    },
+    {
+      "block": 82,
+      "text": "The Brave prototype found ad slots dynamically, and since we had no ad inventory at the time, comically we used a service which provided pictures of bearded men.",
+      "start": 549.66,
+      "end": 558.54
+    },
+    {
+      "block": 83,
+      "text": "As you can see, the design of the browser was pre-Brad.",
+      "start": 558.72,
+      "end": 562.24
+    },
+    {
+      "block": 83,
+      "text": "It was done by developers that sorely needed design help.",
+      "start": 562.42,
+      "end": 565.86
+    },
+    {
+      "block": 84,
+      "text": "637 code commits later, we stopped short and never released this first browser; the last commit was December 12, 2015.",
+      "start": 566.04,
+      "end": 573.96
+    },
+    {
+      "block": 84,
+      "text": "We realized we were still months away from building out basic platform support for things like menus, drop down lists, and other problems that Graphene had.",
+      "start": 574.14,
+      "end": 582.54
+    },
+    {
+      "block": 85,
+      "text": "At this point, the company was still in stealth mode and the pressure was on for us to release something soon.",
+      "start": 582.72,
+      "end": 588.24
+    },
+    {
+      "block": 86,
+      "text": "First attempt at mobile browsers",
+      "start": 588.42,
+      "end": 590.66
+    },
+    {
+      "block": 87,
+      "text": "The first attempt at an iOS browser was based on React Native.",
+      "start": 590.84,
+      "end": 594.6
+    },
+    {
+      "block": 87,
+      "text": "It was the hot new thing, and it was just released January 2015 at React conf.",
+      "start": 594.78,
+      "end": 599.9
+    },
+    {
+      "block": 87,
+      "text": "The first commit on the iOS browser was on June 28, 2015 and after 116 commits, we decided that the technology hadn\u2019t matured enough for us yet.",
+      "start": 600.08,
+      "end": 609.68
+    },
+    {
+      "block": 88,
+      "text": "Since we were busy building 2 different browsers at the same time, and we had a staff of only a few, we didn\u2019t have time to start an Android browser.",
+      "start": 609.86,
+      "end": 617.54
+    },
+    {
+      "block": 89,
+      "text": "However, we used and liked a browser that was on the market, created by an independent developer named Chris Lacey.",
+      "start": 617.72,
+      "end": 623.88
+    },
+    {
+      "block": 89,
+      "text": "The browser was called Link Bubble.",
+      "start": 624.06,
+      "end": 626.3
+    },
+    {
+      "block": 90,
+      "text": "After a lot of discussion and planning we flew Chris from Australia to San Francisco and agreed to acquire Link Bubble in August 2015.",
+      "start": 626.48,
+      "end": 634.0
+    },
+    {
+      "block": 90,
+      "text": "We made it free 22 days later.",
+      "start": 634.18,
+      "end": 636.5
+    },
+    {
+      "block": 91,
+      "text": "The basic idea of Link Bubble was pretty good.",
+      "start": 636.68,
+      "end": 639.56
+    },
+    {
+      "block": 91,
+      "text": "If you\u2019re reading an email and there\u2019s a link you want to read, then tap the link, keep reading the email, let it load in the background in a bubble, then tap the bubble to bring up the page later.",
+      "start": 639.74,
+      "end": 649.1
+    },
+    {
+      "block": 91,
+      "text": "There\u2019s no need to context switch to a new app with a loading page.",
+      "start": 649.28,
+      "end": 653.12
+    },
+    {
+      "block": 92,
+      "text": "Supporting a webview from a background service was something that worked on Android, but it wasn\u2019t officially supported.",
+      "start": 653.3,
+      "end": 659.14
+    },
+    {
+      "block": 92,
+      "text": "There would be a number of bugs that we couldn\u2019t fix due to them being outside of our code base, and it had a number of limitations, like you couldn\u2019t select text for copy and paste.",
+      "start": 659.32,
+      "end": 668.28
+    },
+    {
+      "block": 92,
+      "text": "It also became clear from Google statements that there was significant risk that Android would not allow background services to draw on top of other apps for security reasons in the future.",
+      "start": 668.46,
+      "end": 677.42
+    },
+    {
+      "block": 92,
+      "text": "We wanted a full browser, and Link Bubble would never be able to mature beyond a link reader.",
+      "start": 677.6,
+      "end": 682.56
+    },
+    {
+      "block": 93,
+      "text": "Link Bubble was the company\u2019s first product that we shipped.",
+      "start": 682.74,
+      "end": 685.86
+    },
+    {
+      "block": 93,
+      "text": "It gave us valuable Android experience and a user base, many of whom stuck with us.",
+      "start": 686.04,
+      "end": 691.16
+    },
+    {
+      "block": 94,
+      "text": "Starting over and shipping revision 2 of everything",
+      "start": 691.34,
+      "end": 694.3
+    },
+    {
+      "block": 95,
+      "text": "On the desktop side, we were in a bad spot.",
+      "start": 694.48,
+      "end": 697.52
+    },
+    {
+      "block": 95,
+      "text": "We were 90% there, but with missing platform support that would take us months to build.",
+      "start": 697.7,
+      "end": 702.82
+    },
+    {
+      "block": 95,
+      "text": "As a startup, we had limited funding and we were 7 months in.",
+      "start": 703.0,
+      "end": 706.84
+    },
+    {
+      "block": 95,
+      "text": "We had gathered several JS-heavy developers as our initial staff.",
+      "start": 707.02,
+      "end": 710.94
+    },
+    {
+      "block": 95,
+      "text": "We had a desktop browser that was built with HTML + JS.",
+      "start": 711.12,
+      "end": 715.2
+    },
+    {
+      "block": 95,
+      "text": "The framework the browser was based on was months away from being mature enough, but there was another framework from GitHub named Electron.",
+      "start": 715.38,
+      "end": 722.26
+    },
+    {
+      "block": 96,
+      "text": "At the time, it wasn\u2019t known that Electron wasn\u2019t designed for building browsers, although it would later be clarified.",
+      "start": 722.44,
+      "end": 728.36
+    },
+    {
+      "block": 97,
+      "text": "We knew we needed to ship, we knew Electron filled the gaps that Graphene was missing, and we knew we could port what we had to Electron.",
+      "start": 728.54,
+      "end": 735.26
+    },
+    {
+      "block": 97,
+      "text": "We considered switching to Chromium at this time, but we\u2019d have likely run out of funding and never shipped if we had tried.",
+      "start": 735.44,
+      "end": 741.68
+    },
+    {
+      "block": 97,
+      "text": "We forked Electron into a project named Muon which was more secure by turning on sandboxing and removing Node from the renderer processes.",
+      "start": 741.86,
+      "end": 749.06
+    },
+    {
+      "block": 97,
+      "text": "We added extension support and made various other changes as well.",
+      "start": 749.24,
+      "end": 753.0
+    },
+    {
+      "block": 98,
+      "text": "It took only 1 month and 5 days, and we were able to fill the gaps we were missing and ship the browser code base that started on Graphene with Muon.",
+      "start": 753.18,
+      "end": 760.62
+    },
+    {
+      "block": 98,
+      "text": "We had a beta-quality desktop browser, and while it didn\u2019t even have bookmarks yet, on January 20th 2016, Brave went out of stealth mode and we shared our plans with the world.",
+      "start": 760.8,
+      "end": 770.32
+    },
+    {
+      "block": 99,
+      "text": "The second iteration of our iOS browser was based on Firefox iOS.",
+      "start": 770.5,
+      "end": 774.98
+    },
+    {
+      "block": 99,
+      "text": "Firefox iOS used WKWebView but we couldn\u2019t achieve the blocking we wanted with it, so we switched it to the older Apple-supported embeddable WebKit engine, UIWebView.",
+      "start": 775.16,
+      "end": 784.36
+    },
+    {
+      "block": 99,
+      "text": "This gave us the APIs we needed for Brave Shields.",
+      "start": 784.54,
+      "end": 787.82
+    },
+    {
+      "block": 99,
+      "text": "A month later, in February 19, 2016, we shipped our first iOS browser.",
+      "start": 788.0,
+      "end": 793.6
+    },
+    {
+      "block": 100,
+      "text": "On Android, we already had something released but we needed something more robust.",
+      "start": 793.78,
+      "end": 798.34
+    },
+    {
+      "block": 100,
+      "text": "We weren\u2019t in as much of a hurry but we knew a change was needed.",
+      "start": 798.52,
+      "end": 801.8
+    },
+    {
+      "block": 100,
+      "text": "On July 13, 2016 we settled on using Chromium, and in an unbelievable feat of engineering, 3 months later a star developer of ours named Serg had the first release ready and shipped.",
+      "start": 801.98,
+      "end": 813.1
+    },
+    {
+      "block": 100,
+      "text": "Our Android browser user growth was amazing, so it didn\u2019t take long to get orders of magnitude more users than Link Bubble.",
+      "start": 813.28,
+      "end": 819.76
+    },
+    {
+      "block": 100,
+      "text": "We had made the right call.",
+      "start": 819.94,
+      "end": 821.78
+    },
+    {
+      "block": 101,
+      "text": "Getting it right with revision 3 of everything",
+      "start": 821.96,
+      "end": 824.6
+    },
+    {
+      "block": 102,
+      "text": "At this point we had created the 3 browser code bases for Android, iOS and Desktop 2 times.",
+      "start": 824.78,
+      "end": 831.02
+    },
+    {
+      "block": 102,
+      "text": "We had 1 more iteration in store for us.",
+      "start": 831.2,
+      "end": 833.92
+    },
+    {
+      "block": 103,
+      "text": "On desktop we realized that because of the way Electron was built, it took us a long time to ship updates every time Chromium did a major upgrade.",
+      "start": 834.1,
+      "end": 841.7
+    },
+    {
+      "block": 103,
+      "text": "It took us 2 full time developers the entire 6 weeks of time for every Chromium upgrade.",
+      "start": 841.88,
+      "end": 847.0
+    },
+    {
+      "block": 103,
+      "text": "And each time we did, a lot of things were broken.",
+      "start": 847.18,
+      "end": 850.14
+    },
+    {
+      "block": 103,
+      "text": "Electron forked a number of files from their chromium.org versions and these forked files quickly would get out of date, leading to serious problems as Chromium progressed.",
+      "start": 850.32,
+      "end": 859.6
+    },
+    {
+      "block": 104,
+      "text": "Our extension support was also lacking at the time.",
+      "start": 859.78,
+      "end": 862.82
+    },
+    {
+      "block": 104,
+      "text": "It took a lot of effort to support more chromium extension APIs, and they\u2019d frequently break due to the Electron forked files.",
+      "start": 863.0,
+      "end": 869.72
+    },
+    {
+      "block": 104,
+      "text": "We supported a set of fewer than ten extensions, but the long tail of extensions is vitally important for growth to millions of users.",
+      "start": 869.9,
+      "end": 877.18
+    },
+    {
+      "block": 105,
+      "text": "We had great success with our Android browser, so we started a new fork of Chromium built in a robust way that would be easier to rebase on top of major Chromium upgrades.",
+      "start": 877.36,
+      "end": 885.84
+    },
+    {
+      "block": 105,
+      "text": "We named this project Brave Core (we nearly called it Brave Heart until someone pointed out that it sounded like the 1995 film Braveheart).",
+      "start": 886.02,
+      "end": 894.1
+    },
+    {
+      "block": 106,
+      "text": "Brave Core gave us full extension support, we could do Chromium upgrades very quickly, we\u2019d improve our code sharing with Android, and things would be near bug-free.",
+      "start": 894.28,
+      "end": 903.16
+    },
+    {
+      "block": 106,
+      "text": "We\u2019d see massive user growth once we were on Brave Core.",
+      "start": 903.34,
+      "end": 906.46
+    },
+    {
+      "block": 106,
+      "text": "We went from a browser that everyone thought they should use but didn\u2019t always stick with or make their default instead of Chrome, to a browser that almost all users want to use all the time.",
+      "start": 906.64,
+      "end": 915.68
+    },
+    {
+      "block": 106,
+      "text": "Retention rates improved dramatically and user growth skyrocketed.",
+      "start": 915.86,
+      "end": 919.86
+    },
+    {
+      "block": 107,
+      "text": "On iOS, we\u2019d later reverse the decision to use UIWebView due mostly to web compatibility and crash bugs outside of our stack that we couldn\u2019t fix and which Apple was not likely to fix.",
+      "start": 920.04,
+      "end": 929.8
+    },
+    {
+      "block": 107,
+      "text": "We re-forked Firefox iOS, re-added our features, and found new and creative ways to do the blocking and protection required by Brave Shields.",
+      "start": 929.98,
+      "end": 937.82
+    },
+    {
+      "block": 108,
+      "text": "Android is currently nearing completion of its revision 3 rewrite, a move to the same Brave Core codebase used on desktop and mentioned above.",
+      "start": 938.0,
+      "end": 945.44
+    },
+    {
+      "block": 108,
+      "text": "It\u2019ll simply be a 4th supported platform (Windows, macOS, Linux, Android) on the same code-base.",
+      "start": 945.62,
+      "end": 952.82
+    },
+    {
+      "block": 109,
+      "text": "Basic Attention Token",
+      "start": 953.0,
+      "end": 955.08
+    },
+    {
+      "block": 110,
+      "text": "We added tipping support first with Bitcoin and later with an ERC-20 token named Basic Attention Token (BAT).",
+      "start": 955.26,
+      "end": 962.06
+    },
+    {
+      "block": 110,
+      "text": "We created BAT largely with the help of a developer named Scott, as well as Marshall, on May 31, 2017.",
+      "start": 962.24,
+      "end": 969.12
+    },
+    {
+      "block": 110,
+      "text": "We raised 36 million dollars in under 30 seconds by selling 1B of 1.5B tokens.",
+      "start": 969.3,
+      "end": 975.06
+    },
+    {
+      "block": 111,
+      "text": "The sale ended so fast that even though I tried, I wasn\u2019t even able to buy some BAT.",
+      "start": 975.24,
+      "end": 979.96
+    },
+    {
+      "block": 111,
+      "text": "I remember refreshing a page to see what the current Ethereum block number was, and before the page was done loading, there was a message on Slack that said: \u201cIt\u2019s done.\u201d",
+      "start": 980.14,
+      "end": 988.78
+    },
+    {
+      "block": 112,
+      "text": "The basic idea behind BAT is: - Users\u2019 attention gets valued at 0 today, in fact users pay part of their dataplan or ISP bill to download trackers and ads, whereas we believe that users should be paid for their attention.",
+      "start": 988.96,
+      "end": 1001.52
+    },
+    {
+      "block": 112,
+      "text": "They shouldn\u2019t need to give up their privacy either like they do in today\u2019s ad-tech. - Publishers are losing revenue and the big ad players are taking most of it.",
+      "start": 1001.7,
+      "end": 1009.7
+    },
+    {
+      "block": 112,
+      "text": "Publishers should get a bigger cut. - Ad buyers are getting poor targeting and spending fruitlessly to combat ad-fraud.",
+      "start": 1009.88,
+      "end": 1016.04
+    },
+    {
+      "block": 112,
+      "text": "They should get a better deal. - Users should be able to tip on demand, in a recurring fashion, and via anonymous automatic contributions based on their browsing, without anyone including Brave seeing their browsing history or tracking them.",
+      "start": 1016.22,
+      "end": 1028.3
+    },
+    {
+      "block": 113,
+      "text": "From this BAT utility token sale, Brave had access to a user growth pool of funds which would be used to incentivize more users to use Brave and to support content creators.",
+      "start": 1028.48,
+      "end": 1037.44
+    },
+    {
+      "block": 114,
+      "text": "Realizing our vision",
+      "start": 1037.62,
+      "end": 1039.54
+    },
+    {
+      "block": 115,
+      "text": "User private ads first appeared in part thanks to work done by developers Terry and Amir on April 24, 2019 in Desktop.",
+      "start": 1039.72,
+      "end": 1047.64
+    },
+    {
+      "block": 115,
+      "text": "Luke Mulks drove early ad deals and did an amazing job by himself before we hired a sales team.",
+      "start": 1047.82,
+      "end": 1053.18
+    },
+    {
+      "block": 115,
+      "text": "Android followed, and today iOS support is also here.",
+      "start": 1053.36,
+      "end": 1057.2
+    },
+    {
+      "block": 116,
+      "text": "Seeing things work end to end was amazing.",
+      "start": 1057.38,
+      "end": 1060.1
+    },
+    {
+      "block": 116,
+      "text": "User attention is valued, publishers are being paid, and ad vendors get the targeting they need but without tracking users.",
+      "start": 1060.28,
+      "end": 1067.0
+    },
+    {
+      "block": 117,
+      "text": "As a company, we all feel happy and proud of what we created.",
+      "start": 1067.18,
+      "end": 1071.02
+    },
+    {
+      "block": 118,
+      "text": "Beyond",
+      "start": 1071.2,
+      "end": 1072.56
+    },
+    {
+      "block": 119,
+      "text": "Brave features many cool new firsts with Tor tabs, WebTorrent support, our Ethereum Remote Client MetaMask fork with Dapp detection, our blazing fast rust-based ad-block library, IPFS support via an embedded node and more.",
+      "start": 1072.74,
+      "end": 1085.78
+    },
+    {
+      "block": 120,
+      "text": "Brave 1.0 is here thanks to the grit and hard work of hundreds of people and thousands of community members.",
+      "start": 1085.96,
+      "end": 1092.28
+    },
+    {
+      "block": 121,
+      "text": "There\u2019s never been a better time to download Brave.",
+      "start": 1092.46,
+      "end": 1095.34
+    },
+    {
+      "block": 122,
+      "text": "Brave was founded to give users back the privacy and respect that they deserve.",
+      "start": 1095.52,
+      "end": 1099.76
+    },
+    {
+      "block": 122,
+      "text": "Help us prove there\u2019s a better way to browse the Internet that puts users first and supports content creators.",
+      "start": 1099.94,
+      "end": 1105.46
+    },
+    {
+      "block": 122,
+      "text": "Get excited, enjoy the journey, we\u2019re just getting started.",
+      "start": 1105.64,
+      "end": 1109.48
+    }
+  ]
+}

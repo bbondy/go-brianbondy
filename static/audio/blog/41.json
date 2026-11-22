@@ -1,0 +1,15 @@
+{
+  "post": 41,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "706b6b90bce0b28d066fb4c56cedd8f85b0d075f132adf6532d44782dbe95359",
+  "audioSHA256": "f48ff99b250eb883ffa6366228873a2c3a8328f452752d82aa0ca7d166ae801e",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "The X Prize Foundation is partnering with a wealthy geologist (Canadian woohoo) to offer a $10 million prize to any team that can completely decode the genes of 100 people in 10 days.",
+      "start": 0.0,
+      "end": 10.56
+    }
+  ]
+}

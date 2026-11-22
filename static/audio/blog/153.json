@@ -1,0 +1,447 @@
+{
+  "post": 153,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "838f4c8869aad1ad1f088a7b1b0d060125bf428ab88e7f169faa207512679aae",
+  "audioSHA256": "2760159bf46fda29dfdc6c1313e808706a5d4abd02bf5630146368b59777ccb9",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "As per this Future of Firefox announcement, we have a work-in-progress, Metro Firefox preview!",
+      "start": 0.0,
+      "end": 5.76
+    },
+    {
+      "block": 1,
+      "text": "This preview will give you a glimpse of what Firefox on Metro will be like, but it is not meant to be complete.",
+      "start": 5.94,
+      "end": 11.78
+    },
+    {
+      "block": 1,
+      "text": "Several incomplete features will exist, which is normal at this point in development.",
+      "start": 11.96,
+      "end": 16.36
+    },
+    {
+      "block": 2,
+      "text": "The preview is meant to be installed on Windows 8 RTM and later.",
+      "start": 16.54,
+      "end": 20.46
+    },
+    {
+      "block": 2,
+      "text": "It is built with PGO optimizations turned off, so it will be slightly slower than the default installs.",
+      "start": 20.64,
+      "end": 26.48
+    },
+    {
+      "block": 2,
+      "text": "PGO will be turned on at some point in a future update.",
+      "start": 26.66,
+      "end": 30.18
+    },
+    {
+      "block": 3,
+      "text": "Builds are available in the Firefox Windows 8 wiki.",
+      "start": 30.36,
+      "end": 33.8
+    },
+    {
+      "block": 3,
+      "text": "Please feel free to file feature requests and post bug reports.",
+      "start": 33.98,
+      "end": 37.66
+    },
+    {
+      "block": 4,
+      "text": "The Metro Firefox Preview has nightly updates enabled",
+      "start": 37.84,
+      "end": 41.28
+    },
+    {
+      "block": 5,
+      "text": "The Firefox Metro preview will have updates enabled on its own channel.",
+      "start": 41.46,
+      "end": 45.54
+    },
+    {
+      "block": 5,
+      "text": "That means that from here on out, you can keep up to date on what we\u2019re up to with the Metro browser by actually trying it.",
+      "start": 45.72,
+      "end": 51.96
+    },
+    {
+      "block": 6,
+      "text": "Desktop Firefox is responsible for applying the updates for both the Desktop and Metro front ends currently.",
+      "start": 52.14,
+      "end": 58.06
+    },
+    {
+      "block": 6,
+      "text": "You may encounter an update error where updates will fail to apply if both of your Desktop and Metro browsers are open at the same time.",
+      "start": 58.24,
+      "end": 64.72
+    },
+    {
+      "block": 6,
+      "text": "This will be resolved at some point in a future update.",
+      "start": 64.9,
+      "end": 67.94
+    },
+    {
+      "block": 7,
+      "text": "Some features to look for in the Metro Firefox Preview",
+      "start": 68.12,
+      "end": 71.32
+    },
+    {
+      "block": 8,
+      "text": "This preview will also include the following highlights:",
+      "start": 71.5,
+      "end": 74.54
+    },
+    {
+      "block": 9,
+      "text": "Metro browser registration capable installer",
+      "start": 74.72,
+      "end": 77.68
+    },
+    {
+      "block": 10,
+      "text": "Zip builds which do registration upon setting default browser from within Firefox",
+      "start": 77.86,
+      "end": 82.58
+    },
+    {
+      "block": 11,
+      "text": "Updates enabled",
+      "start": 82.76,
+      "end": 84.44
+    },
+    {
+      "block": 12,
+      "text": "New navigation URL bar inspired by the australis theme",
+      "start": 84.62,
+      "end": 88.38
+    },
+    {
+      "block": 13,
+      "text": "New tab bar with tab previews (double swipe from the top edge or bottom edge to expose the tab previews)",
+      "start": 88.56,
+      "end": 94.72
+    },
+    {
+      "block": 14,
+      "text": "Alternate tab bar with always visible tabs",
+      "start": 94.9,
+      "end": 97.86
+    },
+    {
+      "block": 15,
+      "text": "Auto complete screen with tile suggestions as you type",
+      "start": 98.04,
+      "end": 101.48
+    },
+    {
+      "block": 16,
+      "text": "New touch optimized start screen with tiles",
+      "start": 101.66,
+      "end": 104.46
+    },
+    {
+      "block": 17,
+      "text": "Windows 8 App bar with common functionality",
+      "start": 104.64,
+      "end": 107.6
+    },
+    {
+      "block": 18,
+      "text": "Changes to the default theme to fit into Metro",
+      "start": 107.78,
+      "end": 110.74
+    },
+    {
+      "block": 19,
+      "text": "Various new touch capabilities",
+      "start": 110.92,
+      "end": 113.4
+    },
+    {
+      "block": 20,
+      "text": "Various keyboard shortcuts",
+      "start": 113.58,
+      "end": 115.9
+    },
+    {
+      "block": 21,
+      "text": "On screen keyboard handling",
+      "start": 116.08,
+      "end": 118.32
+    },
+    {
+      "block": 22,
+      "text": "Gesture support",
+      "start": 118.5,
+      "end": 120.26
+    },
+    {
+      "block": 23,
+      "text": "In-page text selection",
+      "start": 120.44,
+      "end": 122.52
+    },
+    {
+      "block": 24,
+      "text": "Crash reporting",
+      "start": 122.7,
+      "end": 124.38
+    },
+    {
+      "block": 25,
+      "text": "Telemetry support",
+      "start": 124.56,
+      "end": 126.4
+    },
+    {
+      "block": 26,
+      "text": "Context sensitive default handling, if in Metro stay in Metro for link clicks",
+      "start": 126.58,
+      "end": 131.38
+    },
+    {
+      "block": 27,
+      "text": "Sync support with browser through remote Firefox sync (Set it up through settings)",
+      "start": 131.56,
+      "end": 136.12
+    },
+    {
+      "block": 28,
+      "text": "Support for the share data contract to share the current page with another Metro application",
+      "start": 136.3,
+      "end": 141.02
+    },
+    {
+      "block": 29,
+      "text": "Support for the search contract to search inside Firefox whether or not Firefox is already open",
+      "start": 141.2,
+      "end": 146.4
+    },
+    {
+      "block": 30,
+      "text": "Support for the settings contract accessible via the settings charm",
+      "start": 146.58,
+      "end": 150.26
+    },
+    {
+      "block": 31,
+      "text": "Support for snap and filled states, to use Firefox and another Metro application at the same time",
+      "start": 150.44,
+      "end": 156.04
+    },
+    {
+      "block": 32,
+      "text": "Metro open and save file picker support",
+      "start": 156.22,
+      "end": 158.94
+    },
+    {
+      "block": 33,
+      "text": "Support for secondary tiles (pinned websites to your start screen)",
+      "start": 159.12,
+      "end": 163.12
+    },
+    {
+      "block": 34,
+      "text": "View current page on desktop functionality",
+      "start": 163.3,
+      "end": 166.1
+    },
+    {
+      "block": 35,
+      "text": "Support for pdfjs: In content PDF viewer built in JavaScript",
+      "start": 166.28,
+      "end": 170.84
+    },
+    {
+      "block": 36,
+      "text": "Spell checking enabled",
+      "start": 171.02,
+      "end": 172.94
+    },
+    {
+      "block": 37,
+      "text": "And a lot more",
+      "start": 173.12,
+      "end": 174.64
+    },
+    {
+      "block": 38,
+      "text": "Reminder on defaults handling",
+      "start": 174.82,
+      "end": 177.06
+    },
+    {
+      "block": 39,
+      "text": "Metro browsers can only be used in Windows 8 if the browser is set as your default.",
+      "start": 177.24,
+      "end": 182.36
+    },
+    {
+      "block": 39,
+      "text": "So if you want to keep this preview installed and get updates, you\u2019ll need to keep it as the default.",
+      "start": 182.54,
+      "end": 187.5
+    },
+    {
+      "block": 40,
+      "text": "To set the default browser, simply open Desktop Firefox options, go to the advanced -> General tab, and click on the \u201cMake Firefox the default browser\u201d button.",
+      "start": 187.68,
+      "end": 196.56
+    },
+    {
+      "block": 40,
+      "text": "This will launch Control Panel, you will need to select the browser from the list and set all defaults.",
+      "start": 196.74,
+      "end": 201.94
+    },
+    {
+      "block": 41,
+      "text": "Things not yet implemented or disabled",
+      "start": 202.12,
+      "end": 204.6
+    },
+    {
+      "block": 42,
+      "text": "Although we have plans for Flash support, the preview currently has it disabled.",
+      "start": 204.78,
+      "end": 209.18
+    },
+    {
+      "block": 42,
+      "text": "You can add support for windowless plugins by setting plugin.disable to false in about:config.",
+      "start": 209.36,
+      "end": 214.64
+    },
+    {
+      "block": 43,
+      "text": "As previously mentioned, for the Metro environment only, even in the initial release, we will not have add-ons enabled.",
+      "start": 214.82,
+      "end": 221.46
+    },
+    {
+      "block": 43,
+      "text": "We will eventually add support for add-ons through the add-on SDK.",
+      "start": 221.64,
+      "end": 225.4
+    },
+    {
+      "block": 44,
+      "text": "Panning and zooming support is currently disabled.",
+      "start": 225.58,
+      "end": 228.46
+    },
+    {
+      "block": 44,
+      "text": "Scrolling with the mouse wheel is broken at the moment as well.",
+      "start": 228.64,
+      "end": 231.92
+    },
+    {
+      "block": 44,
+      "text": "Scrolling with the mouse wheel was fixed on the Nightly update the day after the initial preview.",
+      "start": 232.1,
+      "end": 236.74
+    },
+    {
+      "block": 44,
+      "text": "You will have to use your keyboard for scrolling, or use touch.",
+      "start": 236.92,
+      "end": 240.6
+    },
+    {
+      "block": 44,
+      "text": "Minimum system requirements are the same as Windows 8 except that DirectX 9 is not supported yet.",
+      "start": 240.78,
+      "end": 246.62
+    },
+    {
+      "block": 45,
+      "text": "Sources",
+      "start": 246.8,
+      "end": 248.16
+    },
+    {
+      "block": 46,
+      "text": "Future of Firefox Releases",
+      "start": 248.34,
+      "end": 250.74
+    },
+    {
+      "block": 47,
+      "text": "Video Sketching Firefox Metro Start Page",
+      "start": 250.92,
+      "end": 253.88
+    },
+    {
+      "block": 48,
+      "text": "Jonathan Wilde\u2019s intern presentation",
+      "start": 254.06,
+      "end": 256.7
+    },
+    {
+      "block": 49,
+      "text": "Metro Preview tile icon",
+      "start": 256.88,
+      "end": 259.28
+    },
+    {
+      "block": 50,
+      "text": "Related Posts",
+      "start": 259.46,
+      "end": 261.22
+    },
+    {
+      "block": 51,
+      "text": "Firefox Metro development begins, status update 1",
+      "start": 261.4,
+      "end": 265.32
+    },
+    {
+      "block": 52,
+      "text": "Firefox Metro development heating up, status update 2",
+      "start": 265.5,
+      "end": 269.42
+    },
+    {
+      "block": 53,
+      "text": "A working Firefox Windows 8 Metro prototype, status update 3",
+      "start": 269.6,
+      "end": 274.4
+    },
+    {
+      "block": 54,
+      "text": "The latest on Firefox for Windows 8 Metro, status update 4",
+      "start": 274.58,
+      "end": 279.14
+    },
+    {
+      "block": 55,
+      "text": "Firefox for Windows 8 Metro, status update 5",
+      "start": 279.32,
+      "end": 283.16
+    },
+    {
+      "block": 56,
+      "text": "Firefox for Windows 8 Metro - Front end updates, crash reporting, pdfs, and more, status update 6",
+      "start": 283.34,
+      "end": 291.42
+    },
+    {
+      "block": 57,
+      "text": "Preparing for the Firefox for Windows 8 Metro preview, status update 7",
+      "start": 291.6,
+      "end": 296.88
+    }
+  ]
+}

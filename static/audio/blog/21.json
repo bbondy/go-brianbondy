@@ -1,0 +1,159 @@
+{
+  "post": 21,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "dbabcde31f715c9e874115d0878eebb2120197a68b075fbfcb4d4b7275053784",
+  "audioSHA256": "27a73e60022389a102001720c3382d345e3b259b2dd5014a7cfa05f1eda68c35",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "I was going to write about when people started to hate Microsoft, but I came across something more interesting\u2026 the supposed reason why people hate Microsoft.",
+      "start": 0.0,
+      "end": 7.6
+    },
+    {
+      "block": 1,
+      "text": "Many people say that one of the main reasons people don\u2019t like Microsoft is because of the size of their dominance.",
+      "start": 7.78,
+      "end": 13.22
+    },
+    {
+      "block": 1,
+      "text": "\u201cPeople simply don?t like big monopolies\u201d.",
+      "start": 13.4,
+      "end": 16.76
+    },
+    {
+      "block": 1,
+      "text": "On the contrary though, Apple\u2019s iPod owns a huge amount of market share for digital audio and video players, yet they are still absolutely loved by almost all.",
+      "start": 16.94,
+      "end": 25.42
+    },
+    {
+      "block": 1,
+      "text": "Many people find it exciting that they are so big.",
+      "start": 25.6,
+      "end": 28.56
+    },
+    {
+      "block": 2,
+      "text": "I believe that it\u2019s because of perfection.",
+      "start": 28.74,
+      "end": 31.06
+    },
+    {
+      "block": 2,
+      "text": "Microsoft can\u2019t be bothered with perfection.",
+      "start": 31.24,
+      "end": 33.88
+    },
+    {
+      "block": 2,
+      "text": "Instead they focus on copying the latest features, and getting something out the door.",
+      "start": 34.06,
+      "end": 38.62
+    },
+    {
+      "block": 2,
+      "text": "The focus on simplicity and elegance, is simply not there.",
+      "start": 38.8,
+      "end": 42.56
+    },
+    {
+      "block": 2,
+      "text": "With Apple the ease of use is there, the perfection is there, the focus on usability is there.",
+      "start": 42.74,
+      "end": 48.34
+    },
+    {
+      "block": 2,
+      "text": "I don\u2019t believe the people who work at Microsoft want to build the best thing possible.",
+      "start": 48.52,
+      "end": 52.76
+    },
+    {
+      "block": 2,
+      "text": "I don\u2019t believe they are inspired to do so.",
+      "start": 52.94,
+      "end": 55.5
+    },
+    {
+      "block": 2,
+      "text": "I don\u2019t believe they have the drive to.",
+      "start": 55.68,
+      "end": 57.92
+    },
+    {
+      "block": 2,
+      "text": "I believe that the employees want to get their job done, and that\u2019s it.",
+      "start": 58.1,
+      "end": 61.86
+    },
+    {
+      "block": 2,
+      "text": "At companies like Apple or Google, the employee\u2019s goal is to create something great, something perfect, something that has a great ease of use.",
+      "start": 62.04,
+      "end": 69.56
+    },
+    {
+      "block": 2,
+      "text": "And that\u2019s why we love them.",
+      "start": 69.74,
+      "end": 71.5
+    },
+    {
+      "block": 3,
+      "text": "One example that comes to mind: When Microsoft launched their Live search, it was supposed to be a Google killer :)\u2026 you couldn\u2019t middle click on links to open them in a new tab.",
+      "start": 71.68,
+      "end": 80.56
+    },
+    {
+      "block": 3,
+      "text": "Did Microsoft not care that just about every Firefox user uses this in their everyday use?",
+      "start": 80.74,
+      "end": 85.7
+    },
+    {
+      "block": 3,
+      "text": "The quality is just never there with Microsoft.",
+      "start": 85.88,
+      "end": 88.84
+    },
+    {
+      "block": 3,
+      "text": "It took them years to realize that tabs give a superior ease of use and that people that browse everyday can save a considerable amount of time by using Firefox.",
+      "start": 89.02,
+      "end": 97.42
+    },
+    {
+      "block": 3,
+      "text": "Microsoft\u2019s lack of simplicity and usability is why I personally don\u2019t like Microsoft.",
+      "start": 97.6,
+      "end": 102.64
+    },
+    {
+      "block": 3,
+      "text": "They don\u2019t try to make things usable.",
+      "start": 102.82,
+      "end": 105.06
+    },
+    {
+      "block": 3,
+      "text": "They try to make them for idiots.",
+      "start": 105.24,
+      "end": 107.32
+    },
+    {
+      "block": 4,
+      "text": "One final reason that could have a lot of effect is that Apple doesn\u2019t disclose what it is releasing and when they are releasing it until it is ready (most of the time).",
+      "start": 107.5,
+      "end": 115.66
+    },
+    {
+      "block": 4,
+      "text": "Microsoft always disappoints all of their customer base.",
+      "start": 115.84,
+      "end": 119.12
+    }
+  ]
+}

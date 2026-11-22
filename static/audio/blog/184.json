@@ -1,0 +1,549 @@
+{
+  "post": 184,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "b8d7598cd2a272e10fcc1395d09b211647830d493e0d8a2ebd1181dc1650832a",
+  "audioSHA256": "cf1686432613884642236bacbac1cb6edb6f4ea02cf995ae7946f38fa7944941",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "In August 2023, Brave released Leo, Brave\u2019s native AI assistant, on its Nightly channel.",
+      "start": 0.0,
+      "end": 6.08
+    },
+    {
+      "block": 0,
+      "text": "Since then we\u2019ve incorporated a lot of user feedback, and made numerous improvements to the feature.",
+      "start": 6.26,
+      "end": 11.3
+    },
+    {
+      "block": 0,
+      "text": "There are more changes on the way, and soon we will launch Leo on our full release channel, making it available to our 60 million users.",
+      "start": 11.48,
+      "end": 18.6
+    },
+    {
+      "block": 1,
+      "text": "We thought now would be a great time to share more about how Brave is thinking about Leo, and the future AI integrations within the browser.",
+      "start": 18.78,
+      "end": 26.06
+    },
+    {
+      "block": 2,
+      "text": "Background: Brave as a user agent",
+      "start": 26.24,
+      "end": 29.04
+    },
+    {
+      "block": 3,
+      "text": "Brave has always been a user agent.",
+      "start": 29.22,
+      "end": 31.7
+    },
+    {
+      "block": 3,
+      "text": "A user agent is a client application that gives users better control of the content they access on the Internet, without conflicts of interest between server operators \u2013 including third parties \u2013 and the user.",
+      "start": 31.88,
+      "end": 42.44
+    },
+    {
+      "block": 3,
+      "text": "Leo takes this concept one step further, moving beyond the limited stance of browsing content in the way the author or creator intended.",
+      "start": 42.62,
+      "end": 49.66
+    },
+    {
+      "block": 3,
+      "text": "With Leo, you\u2019re not passively consuming web pages and videos, rather you\u2019re actively exploring content: asking tangential questions, seeking clarifications, exploring diverse viewpoints, and overall tailoring the Web to your preferences.",
+      "start": 49.84,
+      "end": 63.2
+    },
+    {
+      "block": 4,
+      "text": "Leo \u201cunderstands\u201d the current page you\u2019re visiting.",
+      "start": 63.38,
+      "end": 66.1
+    },
+    {
+      "block": 4,
+      "text": "It\u2019s the next best thing to talking directly with the author.",
+      "start": 66.28,
+      "end": 69.4
+    },
+    {
+      "block": 4,
+      "text": "In fact, in many ways it\u2019s better, as Leo can independently analyze and reason about pages, free of the author\u2019s or creator\u2019s biases.",
+      "start": 69.58,
+      "end": 77.18
+    },
+    {
+      "block": 5,
+      "text": "To be clear, Brave isn\u2019t trying to create the world\u2019s leading Large Language Model (LLM) from scratch.",
+      "start": 77.36,
+      "end": 83.44
+    },
+    {
+      "block": 5,
+      "text": "Instead, our goal is to link users with top LLMs and harness them in innovative and where feasible, privacy preserving ways.",
+      "start": 83.62,
+      "end": 90.98
+    },
+    {
+      "block": 5,
+      "text": "Our goal is to open novel, convenient, and private use cases that are often possible only in the context of a particular user\u2019s browsing session.",
+      "start": 91.16,
+      "end": 99.08
+    },
+    {
+      "block": 6,
+      "text": "As with all Brave products, Leo adheres to Brave\u2019s core values and is built with privacy by design.",
+      "start": 99.26,
+      "end": 105.18
+    },
+    {
+      "block": 6,
+      "text": "User inputs are always submitted anonymously through a reverse-proxy to our inference infrastructure, giving users an AI experience with unparalleled privacy.",
+      "start": 105.36,
+      "end": 113.6
+    },
+    {
+      "block": 6,
+      "text": "Also, conversations are discarded immediately after the reply is generated and are not persisted on Brave\u2019s servers.",
+      "start": 113.78,
+      "end": 120.26
+    },
+    {
+      "block": 6,
+      "text": "As we expand Leo\u2019s development, we will continue to integrate privacy into its features and to innovate with new approaches to give our users the privacy they expect.",
+      "start": 120.44,
+      "end": 128.84
+    },
+    {
+      "block": 7,
+      "text": "General release channel availability: cost and viability",
+      "start": 129.02,
+      "end": 132.86
+    },
+    {
+      "block": 8,
+      "text": "The first step to opening this amazing feature to our general release channel is to make sure the cost is viable for Brave to offer to its full user base.",
+      "start": 133.04,
+      "end": 140.8
+    },
+    {
+      "block": 8,
+      "text": "With more than 60 million users worldwide, the cost of running Leo as-is on our general release channel would be prohibitive without a paid option.",
+      "start": 140.98,
+      "end": 148.58
+    },
+    {
+      "block": 8,
+      "text": "For this reason, we\u2019ll soon be offering a premium version of Leo.",
+      "start": 148.76,
+      "end": 152.68
+    },
+    {
+      "block": 8,
+      "text": "Alongside the free version of this feature, the premium version will cover the costs of hosting our premium models, and for paying the API access for other premium model choices.",
+      "start": 152.86,
+      "end": 162.22
+    },
+    {
+      "block": 9,
+      "text": "This next update to Leo will include: A seamless onboarding experience for the premium upgrade, including the ability to pay for premium access with BAT.",
+      "start": 162.4,
+      "end": 170.64
+    },
+    {
+      "block": 9,
+      "text": "The ability to select different models directly in the main Leo interface.",
+      "start": 170.82,
+      "end": 174.98
+    },
+    {
+      "block": 9,
+      "text": "The addition of integration points from other parts of the browser into Leo.",
+      "start": 175.16,
+      "end": 179.16
+    },
+    {
+      "block": 9,
+      "text": "Access to better models such as Llama 2 70B, and Claude Instant (by Anthropic).",
+      "start": 179.34,
+      "end": 184.7
+    },
+    {
+      "block": 10,
+      "text": "Here\u2019s a table that summarizes the free / premium options:",
+      "start": 184.88,
+      "end": 188.56
+    },
+    {
+      "block": 11,
+      "text": "We\u2019re targeting mid to late Q4 for the Leo release.",
+      "start": 188.74,
+      "end": 192.1
+    },
+    {
+      "block": 12,
+      "text": "Mobile parity",
+      "start": 192.28,
+      "end": 193.96
+    },
+    {
+      "block": 13,
+      "text": "Mobile parity will most likely follow shortly after the desktop release.",
+      "start": 194.14,
+      "end": 198.3
+    },
+    {
+      "block": 14,
+      "text": "The focus of the mobile release will be to make sure everything from the desktop release works on Android and iOS.",
+      "start": 198.48,
+      "end": 204.24
+    },
+    {
+      "block": 15,
+      "text": "Roadmap",
+      "start": 204.42,
+      "end": 205.86
+    },
+    {
+      "block": 16,
+      "text": "Major enhancements and features for Leo are described and grouped into categories below.",
+      "start": 206.04,
+      "end": 210.84
+    },
+    {
+      "block": 16,
+      "text": "Some of these features will be available with the first release, and others will roll out during each of our browser updates.",
+      "start": 211.02,
+      "end": 217.02
+    },
+    {
+      "block": 17,
+      "text": "Local persistence of conversations, and full-page interactions",
+      "start": 217.2,
+      "end": 221.2
+    },
+    {
+      "block": 18,
+      "text": "Ability to store and reference past conversations locally on your device, and continue these conversations at a later date.",
+      "start": 221.38,
+      "end": 227.94
+    },
+    {
+      "block": 19,
+      "text": "Ability to sync these conversations across devices using Brave Sync.",
+      "start": 228.12,
+      "end": 232.36
+    },
+    {
+      "block": 20,
+      "text": "Full-page interactive UI via a URL like brave://chat (or brave://leo).",
+      "start": 232.54,
+      "end": 237.5
+    },
+    {
+      "block": 21,
+      "text": "Better answers",
+      "start": 237.68,
+      "end": 239.28
+    },
+    {
+      "block": 22,
+      "text": "Provide Brave Search results to the model for up-to-date information.",
+      "start": 239.46,
+      "end": 243.22
+    },
+    {
+      "block": 23,
+      "text": "Provide Brave Q&A and Brave Support to the model for user questions.",
+      "start": 243.4,
+      "end": 247.48
+    },
+    {
+      "block": 24,
+      "text": "Provide Brave News results to the model for help answering user questions.",
+      "start": 247.66,
+      "end": 251.82
+    },
+    {
+      "block": 25,
+      "text": "Provide cryptocurrency context to the model for help answering Web3-related questions.",
+      "start": 252.0,
+      "end": 257.44
+    },
+    {
+      "block": 26,
+      "text": "Provide a generalized extension framework, or adopt an existing form of extensions such as ChatGPT plugins.",
+      "start": 257.62,
+      "end": 264.18
+    },
+    {
+      "block": 27,
+      "text": "Richer output",
+      "start": 264.36,
+      "end": 265.96
+    },
+    {
+      "block": 28,
+      "text": "Image generation as part of Leo\u2019s possible outputs.",
+      "start": 266.14,
+      "end": 269.42
+    },
+    {
+      "block": 29,
+      "text": "Ability to highlight text within a page that\u2019s currently being viewed to support Leo\u2019s claims.",
+      "start": 269.6,
+      "end": 274.72
+    },
+    {
+      "block": 30,
+      "text": "Ability for Leo to take actions on a user\u2019s behalf (for example, for Leo to start a Web search, change the current page to dark mode, or change a browser setting).",
+      "start": 274.9,
+      "end": 284.02
+    },
+    {
+      "block": 31,
+      "text": "Entity highlighting of response text to link to Brave Search (for example, if an output talked about Brave, it may highlight Brave and make it a Brave Search query).",
+      "start": 284.2,
+      "end": 293.16
+    },
+    {
+      "block": 32,
+      "text": "Model expansions",
+      "start": 293.34,
+      "end": 295.18
+    },
+    {
+      "block": 33,
+      "text": "Continually add access to the latest-and-greatest models.",
+      "start": 295.36,
+      "end": 298.64
+    },
+    {
+      "block": 34,
+      "text": "Expand commercial relationships to offer more model choices for premium users.",
+      "start": 298.82,
+      "end": 303.3
+    },
+    {
+      "block": 35,
+      "text": "Larger context sizes.",
+      "start": 303.48,
+      "end": 305.64
+    },
+    {
+      "block": 36,
+      "text": "Better language support",
+      "start": 305.82,
+      "end": 307.82
+    },
+    {
+      "block": 37,
+      "text": "Today, if Leo is prompted in another language, it can already answer in that language (such as French and Spanish).",
+      "start": 308.0,
+      "end": 314.48
+    },
+    {
+      "block": 37,
+      "text": "However, not all languages are covered, and a page\u2019s context, when used, will likely determine the response language.",
+      "start": 314.66,
+      "end": 321.62
+    },
+    {
+      "block": 37,
+      "text": "We\u2019d like to add better handling for languages, and overall to expand the number of languages, and the quality of the output of those languages, by adding better international models.",
+      "start": 321.8,
+      "end": 330.84
+    },
+    {
+      "block": 38,
+      "text": "Chat interface and customization",
+      "start": 331.02,
+      "end": 333.5
+    },
+    {
+      "block": 39,
+      "text": "At the time of writing, context for Leo interactions can derive either from the entire page, or it can work with no context at all.",
+      "start": 333.68,
+      "end": 340.96
+    },
+    {
+      "block": 39,
+      "text": "In the future, we\u2019d like to make this better via context menus, allowing users to select a specific part of a page to supply the model its interaction context.",
+      "start": 341.14,
+      "end": 349.62
+    },
+    {
+      "block": 40,
+      "text": "We\u2019d like to offer access to Leo via omnibox (address bar) suggestions, a new tab card, and more.",
+      "start": 349.8,
+      "end": 356.28
+    },
+    {
+      "block": 41,
+      "text": "A CodeLlama integration into developer tools and in the sidebar, with optional injection into the current page context.",
+      "start": 356.46,
+      "end": 363.02
+    },
+    {
+      "block": 42,
+      "text": "Model personalization and personification",
+      "start": 363.2,
+      "end": 366.16
+    },
+    {
+      "block": 43,
+      "text": "Customize Leo\u2019s tone and summary styles for personalized interactions.",
+      "start": 366.34,
+      "end": 370.5
+    },
+    {
+      "block": 44,
+      "text": "User-defined boundaries, mood, and context awareness.",
+      "start": 370.68,
+      "end": 374.52
+    },
+    {
+      "block": 45,
+      "text": "Content consumption",
+      "start": 374.7,
+      "end": 376.54
+    },
+    {
+      "block": 46,
+      "text": "PDF summarization: the ability to interface with not only web pages and videos, but also with PDF documents.",
+      "start": 376.72,
+      "end": 383.92
+    },
+    {
+      "block": 47,
+      "text": "Using accessibility and other information available to help models understand web pages better.",
+      "start": 384.1,
+      "end": 389.3
+    },
+    {
+      "block": 48,
+      "text": "Image understanding via drag and drop.",
+      "start": 389.48,
+      "end": 392.28
+    },
+    {
+      "block": 49,
+      "text": "Writing tools",
+      "start": 392.46,
+      "end": 394.06
+    },
+    {
+      "block": 50,
+      "text": "Tools for filling in editable fields on web pages (such as formatting and generating text).",
+      "start": 394.24,
+      "end": 399.44
+    },
+    {
+      "block": 51,
+      "text": "Grammar, spelling, and other suggestions.",
+      "start": 399.62,
+      "end": 402.58
+    },
+    {
+      "block": 52,
+      "text": "Content suggestions, and content auto-completion.",
+      "start": 402.76,
+      "end": 406.12
+    },
+    {
+      "block": 53,
+      "text": "Local model support",
+      "start": 406.3,
+      "end": 408.22
+    },
+    {
+      "block": 54,
+      "text": "We\u2019d like to offer locally running models, and even allow users to configure their own models.",
+      "start": 408.4,
+      "end": 413.52
+    },
+    {
+      "block": 54,
+      "text": "Doing so would open more possibilities for assisting users with their local, private Brave data (for example, making a better suggestion bar or autocomplete suggestions).",
+      "start": 413.7,
+      "end": 423.22
+    },
+    {
+      "block": 55,
+      "text": "Brave Ads & Brave Rewards integration",
+      "start": 423.4,
+      "end": 426.28
+    },
+    {
+      "block": 56,
+      "text": "We may offer a privacy-preserving ad-supported option for those users who don\u2019t want to buy a premium subscription, but still want premium features.",
+      "start": 426.46,
+      "end": 434.06
+    },
+    {
+      "block": 57,
+      "text": "Thinking beyond display ads, we\u2019d like the model to help users make purchasing decisions, via context such as detailed product information; this could entail an ad catalog and all knowledge about the products behind those ads, but not advertise or give you phony or biased information (for example, if you were trying to buy a TV, Leo could tell you it knows of a less expensive TV, or one that offers features not available in the TV you\u2019re currently asking about).",
+      "start": 434.24,
+      "end": 457.84
+    },
+    {
+      "block": 58,
+      "text": "We\u2019d like to investigate how to tie this recommendation engine to Brave Rewards.",
+      "start": 458.02,
+      "end": 462.34
+    },
+    {
+      "block": 59,
+      "text": "In these shopping scenarios, the model would always genuinely act first as the user\u2019s agent.",
+      "start": 462.52,
+      "end": 467.72
+    },
+    {
+      "block": 59,
+      "text": "For instance, it might respond that a TV you were viewing had a better price elsewhere than in an online ad you may have seen.",
+      "start": 467.9,
+      "end": 474.14
+    },
+    {
+      "block": 60,
+      "text": "With Leo by their side, users can interact with the Web in groundbreaking new ways.",
+      "start": 474.32,
+      "end": 479.04
+    },
+    {
+      "block": 60,
+      "text": "The future of Leo outlined in this roadmap is exciting to us.",
+      "start": 479.22,
+      "end": 482.98
+    },
+    {
+      "block": 60,
+      "text": "Unlike other AI assistants, Leo is not a simple chat interface.",
+      "start": 483.16,
+      "end": 487.24
+    },
+    {
+      "block": 60,
+      "text": "Leo is a companion for helping you make sense of the Web as you browse, while preserving your privacy and helping you stay in charge of your experience.",
+      "start": 487.42,
+      "end": 494.7
+    },
+    {
+      "block": 61,
+      "text": "We genuinely value insights from our community.",
+      "start": 494.88,
+      "end": 497.84
+    },
+    {
+      "block": 61,
+      "text": "For any thoughts or feedback, connect with us on our community question and answer site.",
+      "start": 498.02,
+      "end": 502.74
+    }
+  ]
+}

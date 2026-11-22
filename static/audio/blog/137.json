@@ -1,0 +1,45 @@
+{
+  "post": 137,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "3134154cd073e7a22cf7798d3a7fd29aa63426f71ece621b7fb14e6a668a9f4f",
+  "audioSHA256": "96b090fbe9253d0e606820d5405e0e003f3329f6609bab619864ddcb39b6ee64",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "Every year the Firefox team gets together for a week of working together.",
+      "start": 0.0,
+      "end": 3.92
+    },
+    {
+      "block": 0,
+      "text": "Last week I attended the 2012 Firefox work week in Toronto.",
+      "start": 4.1,
+      "end": 8.26
+    },
+    {
+      "block": 0,
+      "text": "As part of the work week a number of people did a talk on various awesome topics.",
+      "start": 8.44,
+      "end": 12.68
+    },
+    {
+      "block": 1,
+      "text": "Here is a talk I did on Windows 8 and Firefox:",
+      "start": 12.86,
+      "end": 15.82
+    },
+    {
+      "block": 2,
+      "text": "The slides for the talk can be found here.",
+      "start": 16.0,
+      "end": 18.48
+    },
+    {
+      "block": 2,
+      "text": "The slides were built in HTML5 from this slides sample at html5rocks.com.",
+      "start": 18.66,
+      "end": 24.26
+    }
+  ]
+}

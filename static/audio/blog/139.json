@@ -1,0 +1,27 @@
+{
+  "post": 139,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "635e410978539c57b9a3f993320d732ab77acb881f577a7e9e4d4334603adf08",
+  "audioSHA256": "b1baa473e85232f5357e1f32e9f0658a3b0e7658e78f73999e8466f915ef0032",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "Wondering what the Windows 8 Metro UI will look and feel like?",
+      "start": 0.0,
+      "end": 3.52
+    },
+    {
+      "block": 0,
+      "text": "See the great work of Stephen Horlander and Yuan Wang here:",
+      "start": 3.7,
+      "end": 7.14
+    },
+    {
+      "block": 1,
+      "text": "Video Sketching Firefox Metro Start Page",
+      "start": 7.32,
+      "end": 10.28
+    }
+  ]
+}

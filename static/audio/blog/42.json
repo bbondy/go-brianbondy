@@ -1,0 +1,39 @@
+{
+  "post": 42,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "b4a740409276c26d006d44c152d14edf873f30c637988d1fd8b5c92b27195b70",
+  "audioSHA256": "01e6344ab96202a52106481064c58b65f30fa88681ffa9838f12bf0a6c50f247",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "If you\u2019ve ever used it before, you know that it wants to run at startup.",
+      "start": 0.0,
+      "end": 3.92
+    },
+    {
+      "block": 0,
+      "text": "If you specify in the settings not to run at startup, then one day you decide you want to use it, you start it, and it will automatically add itself to startup again when you try to close it.",
+      "start": 4.1,
+      "end": 13.22
+    },
+    {
+      "block": 0,
+      "text": "This is annoying.",
+      "start": 13.4,
+      "end": 15.16
+    },
+    {
+      "block": 0,
+      "text": "If you specify once that you don\u2019t want something to run at startup, that should be enough.",
+      "start": 15.34,
+      "end": 19.9
+    },
+    {
+      "block": 0,
+      "text": "Google please fix this.",
+      "start": 20.08,
+      "end": 22.16
+    }
+  ]
+}

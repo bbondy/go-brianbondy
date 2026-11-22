@@ -1,0 +1,33 @@
+{
+  "post": 34,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "b8d2a07eb16399855dafb2602aa8d21ca0e86fb9d0e1903ccc5a4ad816eb2f5e",
+  "audioSHA256": "eb4c5fff346606bdfd73d5ed0b5f1b87fa331c2bf81780155819943a7832c2aa",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "IE 7 is finally out to the public and out of beta.",
+      "start": 0.0,
+      "end": 3.28
+    },
+    {
+      "block": 0,
+      "text": "I wonder if it will effect firefox\u2019s market share, or the rate of increase of firefox\u2019s market share.",
+      "start": 3.46,
+      "end": 9.06
+    },
+    {
+      "block": 0,
+      "text": "If i had to bet i would say that it will slightly slow the rate of increate of firefox\u2019s market share.",
+      "start": 9.24,
+      "end": 14.2
+    },
+    {
+      "block": 0,
+      "text": "So my guess is that firefox will continue to gain market share.",
+      "start": 14.38,
+      "end": 18.06
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "post": 2,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "0594df4dbdf06db249e85f36283787db1a054488188f6f7478f47652319ee57c",
+  "audioSHA256": "e8fedae03f70db1776de2c350a4490d356b980710f87dc97be9d1e8f5198abae",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "February 5th 2009 my twin boys were born.",
+      "start": 0.0,
+      "end": 3.84
+    },
+    {
+      "block": 1,
+      "text": "Ronald Brian Bondy was born at 4:34pm and weighed 5 pounds 11 ounces.",
+      "start": 4.02,
+      "end": 9.54
+    },
+    {
+      "block": 1,
+      "text": "Lincoln Edward Bondy was born at 4:35pm and weighed 5 pounds 10 ounces.",
+      "start": 9.72,
+      "end": 14.76
+    },
+    {
+      "block": 2,
+      "text": "Both boys are home now and are both doing well.",
+      "start": 14.94,
+      "end": 17.9
+    },
+    {
+      "block": 2,
+      "text": "Ronnie has gained almost 2 pounds from his birth weight and Link has gained over 1 pound since his birth weight.",
+      "start": 18.08,
+      "end": 23.68
+    },
+    {
+      "block": 3,
+      "text": "Myself I\u2019m as proud as ever and love them to pieces.",
+      "start": 23.86,
+      "end": 27.06
+    }
+  ]
+}

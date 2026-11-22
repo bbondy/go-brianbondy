@@ -1,0 +1,27 @@
+{
+  "post": 49,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "2b9fb96a616d4d5e5394bb519b4edcf6a73d5ed0024f32ce1442abf7f9d8b897",
+  "audioSHA256": "f4cb730e08f4fda03ebba8403b1697f0b06610c46ed94233de002545b7fbad06",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "I purchased this book for learning more about compression and information retriaval.",
+      "start": 0.0,
+      "end": 4.16
+    },
+    {
+      "block": 0,
+      "text": "So far it\u2019s very good.",
+      "start": 4.34,
+      "end": 6.26
+    },
+    {
+      "block": 0,
+      "text": "The second chapter has a very good coverage of text compression.",
+      "start": 6.44,
+      "end": 9.96
+    }
+  ]
+}

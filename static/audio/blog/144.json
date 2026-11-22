@@ -1,0 +1,261 @@
+{
+  "post": 144,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "7d9cd3d28bf9be7c026d93b386b97ed9ad87355c5c55b57e6ba791f5bba3e840",
+  "audioSHA256": "63a6cf8f7873a623fec1cb523700a5aa499a84b914857d7a9103d5e5e0b5d5a7",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "About a year and a half ago, Priya Patel reached out to me and offered me a position as a contractor.",
+      "start": 0.0,
+      "end": 5.6
+    },
+    {
+      "block": 0,
+      "text": "I eventually accepted and started work on July 6th 2011 under Benjamin Smedberg.",
+      "start": 5.78,
+      "end": 11.06
+    },
+    {
+      "block": 1,
+      "text": "I put my heart and soul into it, and a couple months later I was offered a full time position.",
+      "start": 11.24,
+      "end": 16.2
+    },
+    {
+      "block": 1,
+      "text": "I started working as an employee under Robert Strong as my manager.",
+      "start": 16.38,
+      "end": 20.38
+    },
+    {
+      "block": 2,
+      "text": "Early concerns:",
+      "start": 20.56,
+      "end": 22.24
+    },
+    {
+      "block": 3,
+      "text": "I was initially offered a position as a contractor for a 3 month term and no guarantee of anything past that.",
+      "start": 22.42,
+      "end": 28.74
+    },
+    {
+      "block": 3,
+      "text": "I was coming from a salaried position with benefits, and since I had twin 2 year old boys, this scared the !#$#!% out of me.",
+      "start": 28.92,
+      "end": 36.76
+    },
+    {
+      "block": 3,
+      "text": "I knew the personal growth opportunities at Mozilla exceed those at my current position though, so I decided to take a chance.",
+      "start": 36.94,
+      "end": 43.42
+    },
+    {
+      "block": 4,
+      "text": "Retrospection:",
+      "start": 43.6,
+      "end": 45.2
+    },
+    {
+      "block": 5,
+      "text": "I\u2019m happy to say that when looking back, I\u2019m glad I took the risk, and consider it to be one of the best decisions I\u2019ve ever made.",
+      "start": 45.38,
+      "end": 51.86
+    },
+    {
+      "block": 5,
+      "text": "I\u2019ve had an amazing year.",
+      "start": 52.04,
+      "end": 53.96
+    },
+    {
+      "block": 6,
+      "text": "Mozilla\u2019s values and principles are aligned with my own.",
+      "start": 54.14,
+      "end": 57.58
+    },
+    {
+      "block": 6,
+      "text": "They allow me to be open about what I work on.",
+      "start": 57.76,
+      "end": 60.48
+    },
+    {
+      "block": 6,
+      "text": "Hundreds of millions of people get to see my work, and I feel like I am not constrained in any way.",
+      "start": 60.66,
+      "end": 65.78
+    },
+    {
+      "block": 7,
+      "text": "The people I work with are awesome, each in their own way, and I have an implicit trust in each of their abilities.",
+      "start": 65.96,
+      "end": 71.72
+    },
+    {
+      "block": 7,
+      "text": "QA, support, other developers, project managers, product managers\u2026 they\u2019ve all taught me so much over the past year.",
+      "start": 71.9,
+      "end": 79.66
+    },
+    {
+      "block": 8,
+      "text": "What I\u2019ve completed over the past year:",
+      "start": 79.84,
+      "end": 82.16
+    },
+    {
+      "block": 9,
+      "text": "Over the past year, not including any of the completed Windows 8 Metro work, I\u2019ve pushed over 215 patches across over 170 resolved/fixed bugs.",
+      "start": 82.34,
+      "end": 91.7
+    },
+    {
+      "block": 10,
+      "text": "I\u2019ve also filed 200 bugs that need to be, or have been done.",
+      "start": 91.88,
+      "end": 95.96
+    },
+    {
+      "block": 11,
+      "text": "I\u2019m a module peer for Firefox, Toolkit, ImageLib, and Widget|Win32.",
+      "start": 96.14,
+      "end": 101.58
+    },
+    {
+      "block": 11,
+      "text": "I\u2019ve done a ton of reviews and mentored several bugs.",
+      "start": 101.76,
+      "end": 104.88
+    },
+    {
+      "block": 11,
+      "text": "I\u2019m also a member of the coding stewards group.",
+      "start": 105.06,
+      "end": 107.86
+    },
+    {
+      "block": 12,
+      "text": "Here\u2019s a list of some of the larger things I\u2019ve completed over the past year:",
+      "start": 108.04,
+      "end": 111.8
+    },
+    {
+      "block": 13,
+      "text": "A ton of Windows 8 Metro work Initial ground work along with Jim Mathies Graphics code integration Metro file picker Metro contracts Dozens of other tasks",
+      "start": 111.98,
+      "end": 120.86
+    },
+    {
+      "block": 14,
+      "text": "Updater work: Silent updates - Mozilla Maintenance Service Security enhancement to the updater process, with and without the service.",
+      "start": 121.04,
+      "end": 128.56
+    },
+    {
+      "block": 15,
+      "text": "Startup performance tasks under the Snappy project.",
+      "start": 128.74,
+      "end": 132.02
+    },
+    {
+      "block": 16,
+      "text": "Dozens of platform integration tasks to better integrate with Windows",
+      "start": 132.2,
+      "end": 136.28
+    },
+    {
+      "block": 17,
+      "text": "Jump list icons generated from favicons",
+      "start": 136.46,
+      "end": 139.34
+    },
+    {
+      "block": 18,
+      "text": "ImageLib work: BMP encoder ICO encoder Adding Vista style PNG ICO support.",
+      "start": 139.52,
+      "end": 145.68
+    },
+    {
+      "block": 18,
+      "text": "Refactoring of ICO decoder to use the BMP decoder inside of it removing the duplicated code.",
+      "start": 145.86,
+      "end": 151.54
+    },
+    {
+      "block": 18,
+      "text": "Adding hundreds of reftests",
+      "start": 151.72,
+      "end": 153.88
+    },
+    {
+      "block": 19,
+      "text": "Adding a dozen different telemetry histograms",
+      "start": 154.06,
+      "end": 156.78
+    },
+    {
+      "block": 20,
+      "text": "Firefox enhancements",
+      "start": 156.96,
+      "end": 159.04
+    },
+    {
+      "block": 21,
+      "text": "Lots of crash fixes, memory leak fixes, and intermittent failure fixes",
+      "start": 159.22,
+      "end": 163.94
+    },
+    {
+      "block": 22,
+      "text": "The Mozilla development cheatsheet",
+      "start": 164.12,
+      "end": 166.44
+    },
+    {
+      "block": 23,
+      "text": "Windows 8 Lightning talk",
+      "start": 166.62,
+      "end": 168.86
+    },
+    {
+      "block": 24,
+      "text": "Where I\u2019d like to go from here:",
+      "start": 169.04,
+      "end": 170.88
+    },
+    {
+      "block": 25,
+      "text": "As part of the coding stewards program, I\u2019m starting work on a project to bring videos for code contributors.",
+      "start": 171.06,
+      "end": 176.74
+    },
+    {
+      "block": 25,
+      "text": "The plan is to have short 5-10 minute videos that each cover a single topic.",
+      "start": 176.92,
+      "end": 181.4
+    },
+    {
+      "block": 25,
+      "text": "This would be similar to Khan Academy videos in the 1 video per concept way, but will be more like a tutorial and will be focused on contributing to Mozilla.",
+      "start": 181.58,
+      "end": 189.5
+    },
+    {
+      "block": 26,
+      "text": "In my past job I managed a team of developers and I expressed interest in doing this at Mozilla.",
+      "start": 189.68,
+      "end": 194.96
+    },
+    {
+      "block": 27,
+      "text": "Lastly I want to continue doing what I\u2019m already doing, I love making a difference and getting things done.",
+      "start": 195.14,
+      "end": 200.66
+    }
+  ]
+}

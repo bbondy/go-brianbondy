@@ -1,0 +1,15 @@
+{
+  "post": 30,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "b36b931056024cf796e9a0a2ebc645f2a88941560cfb791acef918e9a9531254",
+  "audioSHA256": "1867aa975c34f492f087a4265c3a8f4a5adcc33199489cf08ba6794d4d1ffc26",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "See the 2005 commencement speech at Stanford by Steve Jobs.",
+      "start": 0.0,
+      "end": 4.08
+    }
+  ]
+}

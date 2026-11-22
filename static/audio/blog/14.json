@@ -1,0 +1,57 @@
+{
+  "post": 14,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "3114438b5b898c66337a215043e039f0ca46d4eb38213658890fd3d4dbbe6d88",
+  "audioSHA256": "061b2189bb285d417fa794bfc7d6a3d7c20e3f9282afdffc82d328b345515b77",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "In all operating systems that I\u2019ve seen the file copy dialog sucks.",
+      "start": 0.0,
+      "end": 3.92
+    },
+    {
+      "block": 0,
+      "text": "Why is this simple dialog that is used by everyone everyday so hard to come up with a good design?",
+      "start": 4.1,
+      "end": 9.06
+    },
+    {
+      "block": 1,
+      "text": "Mac is better than all versions of windows, but it still isn\u2019t ideal.",
+      "start": 9.24,
+      "end": 13.24
+    },
+    {
+      "block": 1,
+      "text": "Windows fails to give you a do not replace apply to all option.",
+      "start": 13.42,
+      "end": 16.94
+    },
+    {
+      "block": 2,
+      "text": "It would be nice to see a list of some sort detailing all of the status\u2019 of each file that was copied.",
+      "start": 17.12,
+      "end": 21.92
+    },
+    {
+      "block": 2,
+      "text": "It would be even nicer to be able to select this list and copy it into the clipboard.",
+      "start": 22.1,
+      "end": 26.42
+    },
+    {
+      "block": 3,
+      "text": "The main problem with windows is if a single file fails to copy, the entire copy operation is aborted.",
+      "start": 26.6,
+      "end": 32.52
+    },
+    {
+      "block": 4,
+      "text": "I could go on with several more points, but it just comes down to the developers lack of caring for the operating systems they develop.",
+      "start": 32.7,
+      "end": 39.18
+    }
+  ]
+}

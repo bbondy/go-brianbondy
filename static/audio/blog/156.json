@@ -1,0 +1,171 @@
+{
+  "post": 156,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "3388d227aa61713e639ee3894b3dbb61ee38c0d4a5a06847179b0d5f87c19d24",
+  "audioSHA256": "62afc35f4ce6c07aec1e217992822923aabb584e6e35d854759834070629e112",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "I\u2019d like to introduce a new site I\u2019m working on named Code Firefox.",
+      "start": 0.0,
+      "end": 4.0
+    },
+    {
+      "block": 1,
+      "text": "Elevator pitch",
+      "start": 4.18,
+      "end": 5.86
+    },
+    {
+      "block": 2,
+      "text": "Becoming a Mozilla contributor can be intimidating.",
+      "start": 6.04,
+      "end": 9.08
+    },
+    {
+      "block": 2,
+      "text": "There\u2019s a lot of information to consume, and that information can be dispersed in a variety of different places.",
+      "start": 9.26,
+      "end": 14.94
+    },
+    {
+      "block": 2,
+      "text": "This site aim to outline the process of becoming a Mozilla contributor, from the start, with gentle, short, consumable 2-10 minute videos.",
+      "start": 15.12,
+      "end": 23.44
+    },
+    {
+      "block": 3,
+      "text": "A long time coming",
+      "start": 23.62,
+      "end": 25.54
+    },
+    {
+      "block": 4,
+      "text": "In July 2012 I blogged about my first year at Mozilla, and where I\u2019d like to go in the future.",
+      "start": 25.72,
+      "end": 30.92
+    },
+    {
+      "block": 5,
+      "text": "I\u2019m starting work on a project to bring videos for code contributors.",
+      "start": 31.1,
+      "end": 34.86
+    },
+    {
+      "block": 5,
+      "text": "The plan is to have short 5-10 minute videos that each cover a single topic.",
+      "start": 35.04,
+      "end": 39.52
+    },
+    {
+      "block": 5,
+      "text": "This would be similar to Khan Academy videos in the 1 video per concept way, but will be more like a tutorial and will be focused on contributing to Mozilla.",
+      "start": 39.7,
+      "end": 47.62
+    },
+    {
+      "block": 6,
+      "text": "It took me a while to actually start on that goal, partly because I kept making excuses for why it wasn\u2019t a good time to start yet.",
+      "start": 47.8,
+      "end": 54.28
+    },
+    {
+      "block": 7,
+      "text": "Maybe I was just scared of presenting something in a way that wasn\u2019t the best way.",
+      "start": 54.46,
+      "end": 58.38
+    },
+    {
+      "block": 7,
+      "text": "But when it comes down to it, I know a lot of people can benefit from the content of the videos I\u2019m creating.",
+      "start": 58.56,
+      "end": 63.92
+    },
+    {
+      "block": 7,
+      "text": "And because of that, I\u2019m no longer afraid to be corrected.",
+      "start": 64.1,
+      "end": 67.54
+    },
+    {
+      "block": 8,
+      "text": "A couple month ago, sitting in the airport coming home from the Mozilla 2013 Summit, I registered codefirefox.com.",
+      "start": 67.72,
+      "end": 74.76
+    },
+    {
+      "block": 8,
+      "text": "I also created a github project and started coding the site that would be used for those videos.",
+      "start": 74.94,
+      "end": 80.14
+    },
+    {
+      "block": 9,
+      "text": "The future of Code Firefox",
+      "start": 80.32,
+      "end": 82.48
+    },
+    {
+      "block": 10,
+      "text": "Code Firefox aims to focus on Desktop Firefox videos from the ground up.",
+      "start": 82.66,
+      "end": 87.22
+    },
+    {
+      "block": 10,
+      "text": "I\u2019d love to also do videos on Firefox for Android, Firefox for Windows 8 style UI, and especially for Firefox OS.",
+      "start": 87.4,
+      "end": 95.16
+    },
+    {
+      "block": 11,
+      "text": "I\u2019d like to eventually get to a place where the videos can be used for onramping new hires, and perhaps also used by some schools as the basis of a class.",
+      "start": 95.34,
+      "end": 103.1
+    },
+    {
+      "block": 12,
+      "text": "Status and focus",
+      "start": 103.28,
+      "end": 105.12
+    },
+    {
+      "block": 13,
+      "text": "Since I began posting videos, I\u2019ve been posting an average of over 1 video per day, I\u2019m close to 20 videos so far.",
+      "start": 105.3,
+      "end": 111.94
+    },
+    {
+      "block": 14,
+      "text": "These videos are not focused on perfection, partly because I\u2019m far from it, and partly because I have so much content to go out, that there is more of a benefit to do new videos instead of focusing on old ones.",
+      "start": 112.12,
+      "end": 122.6
+    },
+    {
+      "block": 15,
+      "text": "One statistic I found interesting is that the average visit duration on my blog is under 1 minute; whereas, the average visit duration of the Code Firefox site is over 5 minutes.",
+      "start": 122.78,
+      "end": 132.22
+    },
+    {
+      "block": 16,
+      "text": "The process",
+      "start": 132.4,
+      "end": 134.0
+    },
+    {
+      "block": 17,
+      "text": "I\u2019m using ScreenFlow on OS X to make the videos in a Windows 8 VMware Fusion VM, and a Blue Yeti microphone.",
+      "start": 134.18,
+      "end": 140.74
+    },
+    {
+      "block": 18,
+      "text": "As each video is posted, I post a message about it on this twitter account.",
+      "start": 140.92,
+      "end": 145.08
+    }
+  ]
+}

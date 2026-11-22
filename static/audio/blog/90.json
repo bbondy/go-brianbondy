@@ -1,0 +1,183 @@
+{
+  "post": 90,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "836c9f45b4f3529a85087824a8c7a7972f3438fa5ea6aded5363797b90d4809f",
+  "audioSHA256": "602eecaa14827493322900d1f67aa5b927ba8db60f774d6ebe1da82e7627de35",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "I\u2019ve long known about the rope data structure, but it hasn\u2019t dawned on me until now in what cases you\u2019d actually want to use it.",
+      "start": 0.0,
+      "end": 6.24
+    },
+    {
+      "block": 0,
+      "text": "I also didn\u2019t take the time to see how a rope was actually implemented until I looked it up tonight.",
+      "start": 6.42,
+      "end": 11.22
+    },
+    {
+      "block": 1,
+      "text": "Here\u2019s an explanation:",
+      "start": 11.4,
+      "end": 13.24
+    },
+    {
+      "block": 2,
+      "text": "The problem with a string data structure is that it\u2019s very hard to do insertions into the middle of the string.",
+      "start": 13.42,
+      "end": 18.7
+    },
+    {
+      "block": 2,
+      "text": "This means that if you are continually inserting text into the middle of your string, then you will need to re-allocate your buffer a lot of times.",
+      "start": 18.88,
+      "end": 25.76
+    },
+    {
+      "block": 3,
+      "text": "Also to append 2 strings you are forced into copying the 2nd string into the first string\u2019s buffer.",
+      "start": 25.94,
+      "end": 31.22
+    },
+    {
+      "block": 3,
+      "text": "Assuming the first string\u2019s buffer is large enough.",
+      "start": 31.4,
+      "end": 34.28
+    },
+    {
+      "block": 3,
+      "text": "If the buffer is not large enough, then the first string will need to re-allocate and copy.",
+      "start": 34.46,
+      "end": 39.26
+    },
+    {
+      "block": 4,
+      "text": "If you have a really really large string, let\u2019s say 1GB worth of string data, then a simple insertion of a couple words means you need to move the rest of the characters over and then null terminate.",
+      "start": 39.44,
+      "end": 49.52
+    },
+    {
+      "block": 4,
+      "text": "This is an O(N) operation, which means you have to process 1GB worth of data even for any insertion into a 1GB string.",
+      "start": 49.7,
+      "end": 57.54
+    },
+    {
+      "block": 5,
+      "text": "A rope is a special case of a binary tree data structure where each leaf node holds a substring (or an array of characters).",
+      "start": 57.72,
+      "end": 64.6
+    },
+    {
+      "block": 5,
+      "text": "Nodes that are not leaf nodes do not hold an array of characters.",
+      "start": 64.78,
+      "end": 68.38
+    },
+    {
+      "block": 6,
+      "text": "A left child that is a leaf is the left part of a string.",
+      "start": 68.56,
+      "end": 71.92
+    },
+    {
+      "block": 6,
+      "text": "A right child that is a leaf node is the right part of the string.",
+      "start": 72.1,
+      "end": 75.78
+    },
+    {
+      "block": 6,
+      "text": "To get the whole string you process the left child then the right child.",
+      "start": 75.96,
+      "end": 79.96
+    },
+    {
+      "block": 7,
+      "text": "You can concatenate 2 ropes easily by creating a common root node and joining them together.",
+      "start": 80.14,
+      "end": 85.34
+    },
+    {
+      "block": 8,
+      "text": "Example:",
+      "start": 85.52,
+      "end": 86.88
+    },
+    {
+      "block": 9,
+      "text": "I want to append \u201c World\u201d so first I create a new rope with a single RootNode\u2026.",
+      "start": 87.06,
+      "end": 91.06
+    },
+    {
+      "block": 10,
+      "text": "Then I combine both of those ropes:",
+      "start": 91.24,
+      "end": 93.64
+    },
+    {
+      "block": 11,
+      "text": "Now if we want to make an insertion into the middle of the stirng: \u201cHello Great World\u201d we simply made a new node and join the leaf node \u201cHello\u201d with this new node \u201c Great\u201d.",
+      "start": 93.82,
+      "end": 101.82
+    },
+    {
+      "block": 12,
+      "text": "To get the full string you simply process the tree from the root node, following the left subtree first.",
+      "start": 102.0,
+      "end": 107.6
+    },
+    {
+      "block": 13,
+      "text": "Appending becomes an O(1) operation.",
+      "start": 107.78,
+      "end": 110.9
+    },
+    {
+      "block": 13,
+      "text": "Indexing becomes O(logn), and printing everything is just as efficient, other than the rope having a constant factor overhead.",
+      "start": 111.08,
+      "end": 118.28
+    },
+    {
+      "block": 14,
+      "text": "If you are implementing your own rope data structure from scratch you can actually take advantage of the non leaf nodes.",
+      "start": 118.46,
+      "end": 124.46
+    },
+    {
+      "block": 14,
+      "text": "They can be used for any type of hierarchical data that would apply to all of its children.",
+      "start": 124.64,
+      "end": 129.04
+    },
+    {
+      "block": 14,
+      "text": "For example, perhaps special formatting.",
+      "start": 129.22,
+      "end": 132.1
+    },
+    {
+      "block": 14,
+      "text": "Getting a whole item\u2019s format would simply involve getting the parent of the nodes all the way up to the root.",
+      "start": 132.28,
+      "end": 137.56
+    },
+    {
+      "block": 15,
+      "text": "You could also do things like make each leaf node a single word.",
+      "start": 137.74,
+      "end": 141.34
+    },
+    {
+      "block": 15,
+      "text": "Then you could implement a spell check pretty easily without having to process each node to find the distinct words in each node.",
+      "start": 141.52,
+      "end": 147.68
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "post": 66,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "5bfdbc2c61472207f68ab114bb39b14b89c34ba033d735da7ea39582a25b725d",
+  "audioSHA256": "070191b5cbc2a8865a486e4314e20560d53fe346d023c9b278bad49aa03e41e9",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "Long URL paths that you want to send to people via email often aren\u2019t clickable because email clients will insert line breaks in the middle of the URL.",
+      "start": 0.0,
+      "end": 7.44
+    },
+    {
+      "block": 0,
+      "text": "I created a page that will allow you to turn a long url into a small URL.",
+      "start": 7.62,
+      "end": 11.86
+    },
+    {
+      "block": 0,
+      "text": "You can access it here",
+      "start": 12.04,
+      "end": 13.72
+    }
+  ]
+}

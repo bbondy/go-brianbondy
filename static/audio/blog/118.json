@@ -1,0 +1,183 @@
+{
+  "post": 118,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "673efc195d73a7cad0952eb984d69bda83544c8c3d25eb3d72abe6ac3d04c45c",
+  "audioSHA256": "b42f565cd127815472a4b7d4f200ef18e05f713b0ed77fad7e8d438a2d48d093",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "On July 6th, I will be going through a major change in my life: I\u2019ll be leaving the company I co-founded and worked at for nearly a decade, and will be starting at Mozilla as a contractor.",
+      "start": 0.0,
+      "end": 9.52
+    },
+    {
+      "block": 1,
+      "text": "I\u2019m confident that the company I co-founded will continue to prosper under its new parent company, and I will be excited to hear about the company\u2019s success over time.",
+      "start": 9.7,
+      "end": 17.78
+    },
+    {
+      "block": 2,
+      "text": "I\u2019ll leave behind many great memories, exciting projects, and extremely intelligent co-workers.",
+      "start": 17.96,
+      "end": 23.48
+    },
+    {
+      "block": 3,
+      "text": "A few months ago, I was approached by a Mozilla technical recruiter and after careful consideration actually turned down the offer for contract work.",
+      "start": 23.66,
+      "end": 31.42
+    },
+    {
+      "block": 3,
+      "text": "For several months, I was torn on whether to stay at my current comfy job, or to step out of my comfort zone, and do what I\u2019ve always wanted to do.",
+      "start": 31.6,
+      "end": 39.12
+    },
+    {
+      "block": 4,
+      "text": "Several months later, reading John Resig\u2019s (creator of jQuery) advice, I reconsidered and took the job.",
+      "start": 39.3,
+      "end": 46.1
+    },
+    {
+      "block": 5,
+      "text": "It\u2019s been an incredible experience working with everyone at Mozilla.",
+      "start": 46.28,
+      "end": 49.88
+    },
+    {
+      "block": 5,
+      "text": "The company is easily one of the most developer-friendly organizations I can imagine, with some of the smartest coders in the world.",
+      "start": 50.06,
+      "end": 56.62
+    },
+    {
+      "block": 5,
+      "text": "Mozilla is hiring across the board \u2013 I strongly encourage you to apply if you\u2019re looking for one of the best jobs you\u2019ve ever had.",
+      "start": 56.8,
+      "end": 63.04
+    },
+    {
+      "block": 6,
+      "text": "I\u2019ll be working as a contractor at Mozilla with the title of Platform Engineer.",
+      "start": 63.22,
+      "end": 67.38
+    },
+    {
+      "block": 6,
+      "text": "I\u2019ll be working on Firefox and Core components which includes working with XPCOM, XUL, XBL, JavaScript, CSS, Python, and C++.",
+      "start": 67.56,
+      "end": 77.88
+    },
+    {
+      "block": 6,
+      "text": "I feel very privileged to be working on such an exciting project.",
+      "start": 78.06,
+      "end": 81.82
+    },
+    {
+      "block": 7,
+      "text": "Why I chose Mozilla",
+      "start": 82.0,
+      "end": 83.92
+    },
+    {
+      "block": 8,
+      "text": "A few reasons why I chose Mozilla:",
+      "start": 84.1,
+      "end": 86.66
+    },
+    {
+      "block": 9,
+      "text": "Much of the web\u2019s technology and innovation was developed at least in part by Mozilla.",
+      "start": 86.84,
+      "end": 91.48
+    },
+    {
+      "block": 10,
+      "text": "The Internet wouldn\u2019t be what it is today without Mozilla.",
+      "start": 91.66,
+      "end": 94.7
+    },
+    {
+      "block": 11,
+      "text": "They are a relatively small and open source organization; your work will be seen.",
+      "start": 94.88,
+      "end": 99.6
+    },
+    {
+      "block": 12,
+      "text": "They support openness and stand behind their beliefs to deliver a free and open web.",
+      "start": 99.78,
+      "end": 104.26
+    },
+    {
+      "block": 13,
+      "text": "Some of the smartest people in the world work there, my old company also had this, but the other people had similar backgrounds to me.",
+      "start": 104.44,
+      "end": 111.16
+    },
+    {
+      "block": 14,
+      "text": "Firefox has a significant market share and is used by millions of people around the world.",
+      "start": 111.34,
+      "end": 116.22
+    },
+    {
+      "block": 15,
+      "text": "Mozilla has a thriving extremely intelligent community behind it.",
+      "start": 116.4,
+      "end": 120.4
+    },
+    {
+      "block": 16,
+      "text": "They are not forcing me to move and they embrace a distributed team.",
+      "start": 120.58,
+      "end": 124.26
+    },
+    {
+      "block": 17,
+      "text": "They do what is right, and not what makes the most money.",
+      "start": 124.44,
+      "end": 127.56
+    },
+    {
+      "block": 18,
+      "text": "I get to be part of something larger than myself.",
+      "start": 127.74,
+      "end": 130.46
+    },
+    {
+      "block": 19,
+      "text": "Mozilla is one of the coolest places and code bases I could ever have the privilege to work on and contribute to.",
+      "start": 130.64,
+      "end": 136.48
+    },
+    {
+      "block": 20,
+      "text": "Mozilla is accelerating their release cycle as well which is exciting in itself.",
+      "start": 136.66,
+      "end": 141.38
+    },
+    {
+      "block": 20,
+      "text": "Firefox 4 was released in early 2011, and they plan to also release versions 5, 6 and 7 in 2011.",
+      "start": 141.56,
+      "end": 148.36
+    },
+    {
+      "block": 21,
+      "text": "If you are a developer interested in contributing to Mozilla related technologies, a good place to start is the Developer Guide.",
+      "start": 148.54,
+      "end": 155.18
+    },
+    {
+      "block": 21,
+      "text": "If you\u2019d like to find out more about pursuing a career at Mozilla, read here.",
+      "start": 155.36,
+      "end": 159.52
+    }
+  ]
+}

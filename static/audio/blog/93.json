@@ -1,0 +1,183 @@
+{
+  "post": 93,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "f8fe1b4a0d4c2d1d539fefaf32d30390e9cf0ad96d892c20487c3a9d57dca8f2",
+  "audioSHA256": "fb77d6e9cc4b2c7528f6669309758d4de0f9596ed2c91590d46aec33778a6fa7",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "Forward declaring things in C++ is very useful because it dramatically speeds up compilation time.",
+      "start": 0.0,
+      "end": 5.84
+    },
+    {
+      "block": 0,
+      "text": "You can forward declare several things in C++ including: struct, class, function, etc\u2026",
+      "start": 6.02,
+      "end": 12.34
+    },
+    {
+      "block": 1,
+      "text": "But can you forward declare an enum in C++?",
+      "start": 12.52,
+      "end": 15.96
+    },
+    {
+      "block": 2,
+      "text": "No you can\u2019t.",
+      "start": 16.14,
+      "end": 17.74
+    },
+    {
+      "block": 3,
+      "text": "But why not allow it?",
+      "start": 17.92,
+      "end": 19.6
+    },
+    {
+      "block": 3,
+      "text": "If it were allowed you could define your enum type in your header file, and your enum values in your source file.",
+      "start": 19.78,
+      "end": 25.62
+    },
+    {
+      "block": 3,
+      "text": "Sounds like it should be allowed right?",
+      "start": 25.8,
+      "end": 27.88
+    },
+    {
+      "block": 4,
+      "text": "Wrong.",
+      "start": 28.06,
+      "end": 29.26
+    },
+    {
+      "block": 5,
+      "text": "In C++ there is no default type for enum like there is in C# (int).",
+      "start": 29.44,
+      "end": 34.24
+    },
+    {
+      "block": 5,
+      "text": "In C++ your enum type will be determined by the compiler to be any type that will fit the range of values you have for your enum.",
+      "start": 34.42,
+      "end": 40.98
+    },
+    {
+      "block": 6,
+      "text": "What does that mean?",
+      "start": 41.16,
+      "end": 42.92
+    },
+    {
+      "block": 7,
+      "text": "It means that your enum\u2019s underlying type cannot be fully determined until you have all of the values of the enum defined.",
+      "start": 43.1,
+      "end": 49.26
+    },
+    {
+      "block": 7,
+      "text": "Which mans you cannot separate the declaration and definition of your enum.",
+      "start": 49.44,
+      "end": 53.44
+    },
+    {
+      "block": 7,
+      "text": "And therefore you cannot forward declare an enum in C++.",
+      "start": 53.62,
+      "end": 57.62
+    },
+    {
+      "block": 8,
+      "text": "The ISO C++ standard S7.2.5:",
+      "start": 57.8,
+      "end": 61.56
+    },
+    {
+      "block": 9,
+      "text": "The underlying type of an enumeration is an integral type that can represent all the enumerator values defined in the enumeration.",
+      "start": 61.74,
+      "end": 68.06
+    },
+    {
+      "block": 9,
+      "text": "It is implementation-defined which integral type is used as the underlying type for an enumeration except that the underlying type shall not be larger than int unless the value of an enumerator cannot fit in an int or unsigned int.",
+      "start": 68.24,
+      "end": 79.44
+    },
+    {
+      "block": 9,
+      "text": "If the enumerator-list is empty, the underlying type is as if the enumeration had a single enumerator with value 0.",
+      "start": 79.62,
+      "end": 86.42
+    },
+    {
+      "block": 9,
+      "text": "The value of sizeof() applied to an enumeration type, an object of enumeration type, or an enumerator, is the value of sizeof() applied to the underlying type.",
+      "start": 86.6,
+      "end": 95.88
+    },
+    {
+      "block": 10,
+      "text": "You can determine the size of an enumerated type in C++ by using the sizeof operator.",
+      "start": 96.06,
+      "end": 101.18
+    },
+    {
+      "block": 10,
+      "text": "The size of the enumerated type is the size of its underlying type.",
+      "start": 101.36,
+      "end": 105.04
+    },
+    {
+      "block": 10,
+      "text": "In this way you can guess which type your compiler is using for your enum.",
+      "start": 105.22,
+      "end": 109.06
+    },
+    {
+      "block": 11,
+      "text": "What if you specify the type of your enum explicitly like this:",
+      "start": 109.24,
+      "end": 112.84
+    },
+    {
+      "block": 12,
+      "text": "Can you then forward declare your enum?",
+      "start": 113.02,
+      "end": 115.34
+    },
+    {
+      "block": 13,
+      "text": "No.",
+      "start": 115.52,
+      "end": 116.72
+    },
+    {
+      "block": 13,
+      "text": "But why not?",
+      "start": 116.9,
+      "end": 118.42
+    },
+    {
+      "block": 14,
+      "text": "Specifying the type of an enum is not actually part of the current C++ standard.",
+      "start": 118.6,
+      "end": 123.4
+    },
+    {
+      "block": 14,
+      "text": "It is a VC++ extension.",
+      "start": 123.58,
+      "end": 126.14
+    },
+    {
+      "block": 14,
+      "text": "It will be part of C++0x though.",
+      "start": 126.32,
+      "end": 129.36
+    }
+  ]
+}

@@ -1,0 +1,147 @@
+{
+  "post": 170,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "75d85a12b6d7f27c54735800eef83ff32f2d7d92fa3e16e4f28c0706015d97b5",
+  "audioSHA256": "f6a186c46df422ba6705b60ed0a6b00e773c08a2bda7ec556e35c51d04f208bf",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "Today is my last day at Khan Academy (KA).",
+      "start": 0.0,
+      "end": 3.12
+    },
+    {
+      "block": 0,
+      "text": "At just over a year, it was much less time than I\u2019d like to have spent at KA.",
+      "start": 3.3,
+      "end": 7.62
+    },
+    {
+      "block": 0,
+      "text": "In the end though, I feel like it\u2019s not the amount of time that you spend at a company that matters, but the impact that you made.",
+      "start": 7.8,
+      "end": 14.2
+    },
+    {
+      "block": 1,
+      "text": "I don\u2019t regret one second of my time here, nor do I regret the decision to go to KA.",
+      "start": 14.38,
+      "end": 19.34
+    },
+    {
+      "block": 2,
+      "text": "Over the past year I\u2019ve had the chance to work with some amazing people.",
+      "start": 19.52,
+      "end": 23.44
+    },
+    {
+      "block": 2,
+      "text": "Coming in, I was primarily a C++ developer with some JS and Python experience.",
+      "start": 23.62,
+      "end": 29.06
+    },
+    {
+      "block": 2,
+      "text": "Thanks to KA, today I think I\u2019m just as strong in JS, and Python now.",
+      "start": 29.24,
+      "end": 33.88
+    },
+    {
+      "block": 3,
+      "text": "Some of the impactful moments I had during the year includes:",
+      "start": 34.06,
+      "end": 37.34
+    },
+    {
+      "block": 4,
+      "text": "As a hackweek project, created an environment for learning SQL which Pamela Fox has now created a full course for.",
+      "start": 37.52,
+      "end": 44.32
+    },
+    {
+      "block": 5,
+      "text": "Was a large part of making KA\u2019s CS environment not JS specific but able to handle multiple languages.",
+      "start": 44.5,
+      "end": 50.98
+    },
+    {
+      "block": 6,
+      "text": "Co-authord an environment for learning HTML and CSS with John Resig, Pamela Fox, and Alex Rodrigues.",
+      "start": 51.16,
+      "end": 58.04
+    },
+    {
+      "block": 7,
+      "text": "Along with Colin Fuller, lead the development of LearnStorm - A very successful Google funded Bay Area math competition.",
+      "start": 58.22,
+      "end": 65.18
+    },
+    {
+      "block": 8,
+      "text": "Lead development for a peer evaluations environment (code review feature) for Khan Academy CS users.",
+      "start": 65.36,
+      "end": 71.92
+    },
+    {
+      "block": 9,
+      "text": "As a 3 day hackathon project, created an autosuggest code editor feature for programs on KA\u2019s CS platform.",
+      "start": 72.1,
+      "end": 78.9
+    },
+    {
+      "block": 10,
+      "text": "Suggested and implemented an automated end-to-end testing framework in under 2 weeks which is used during each deploy today.",
+      "start": 79.08,
+      "end": 85.64
+    },
+    {
+      "block": 11,
+      "text": "Sole primary developer for a 5 out of 5 star Firefox OS Khan Academy app as a side project which is still ongoing.",
+      "start": 85.82,
+      "end": 93.1
+    },
+    {
+      "block": 12,
+      "text": "Was the developer lead for a team to work on various tasks to improve user satisfaction.",
+      "start": 93.28,
+      "end": 98.32
+    },
+    {
+      "block": 13,
+      "text": "Totalling around 700 code commits, implemented various other general fixes, SEO fixes, discussion fixes, GAE integration, and privacy work.",
+      "start": 98.5,
+      "end": 107.94
+    },
+    {
+      "block": 14,
+      "text": "What will I be doing?",
+      "start": 108.12,
+      "end": 109.64
+    },
+    {
+      "block": 14,
+      "text": "I\u2019ll be working my butt off pursuing a startup that I\u2019m co-founding.",
+      "start": 109.82,
+      "end": 113.42
+    },
+    {
+      "block": 15,
+      "text": "Thank you Khan Academy for an amazing experience.",
+      "start": 113.6,
+      "end": 116.8
+    },
+    {
+      "block": 15,
+      "text": "If anyone is thinking of joining KA, I\u2019d highly encourage it.",
+      "start": 116.98,
+      "end": 120.9
+    },
+    {
+      "block": 15,
+      "text": "It\u2019s easily one of the most developer friendly, culturally perfect, fun, intrinsically motivating, and open place to work.",
+      "start": 121.08,
+      "end": 128.44
+    }
+  ]
+}

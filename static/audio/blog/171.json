@@ -1,0 +1,249 @@
+{
+  "post": 171,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "1a6c611f5e60936a856833181a671566df73f2dcde6102b79e41f10511d8d8c6",
+  "audioSHA256": "6d96b3e104354517c5f87365badf068adc036734f38f23e8f8f577b08fe32277",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "My company and I are excited to announce that the Android based Link Bubble web browser has gone fully free.",
+      "start": 0.0,
+      "end": 5.44
+    },
+    {
+      "block": 1,
+      "text": "Link Bubble makes the Android mobile web more efficient.",
+      "start": 5.62,
+      "end": 8.9
+    },
+    {
+      "block": 1,
+      "text": "When you click on a link in any app, Link Bubble loads that webpage in the background and presents it in a floating bubble, leaving you free to continue using your current app.",
+      "start": 9.08,
+      "end": 17.56
+    },
+    {
+      "block": 1,
+      "text": "Unique amongst Android web browsers, it saves precious time normally spent watching pages load.",
+      "start": 17.74,
+      "end": 23.1
+    },
+    {
+      "block": 1,
+      "text": "You can get a good idea of what Link Bubble\u2019s all about from this video.",
+      "start": 23.28,
+      "end": 26.88
+    },
+    {
+      "block": 2,
+      "text": "You can download Link Bubble on the Google play store today.",
+      "start": 27.06,
+      "end": 30.26
+    },
+    {
+      "block": 3,
+      "text": "Link Bubble going free means that all users of Link Bubble can now update and get:",
+      "start": 30.44,
+      "end": 35.08
+    },
+    {
+      "block": 4,
+      "text": "An infinite number of bubbles (tabs)",
+      "start": 35.26,
+      "end": 37.98
+    },
+    {
+      "block": 5,
+      "text": "Themes base on website color",
+      "start": 38.16,
+      "end": 40.4
+    },
+    {
+      "block": 6,
+      "text": "Article mode",
+      "start": 40.58,
+      "end": 42.18
+    },
+    {
+      "block": 7,
+      "text": "Article mode for Android wear",
+      "start": 42.36,
+      "end": 44.68
+    },
+    {
+      "block": 8,
+      "text": "Acquiring Link Bubble",
+      "start": 44.86,
+      "end": 46.78
+    },
+    {
+      "block": 9,
+      "text": "At the start of August, my startup acquired Link Bubble from an innovative independent developer named Chris Lacy.",
+      "start": 46.96,
+      "end": 53.12
+    },
+    {
+      "block": 9,
+      "text": "Together we worked with Chris on the 1.5.0 release, and then continued to do releases at a weekly cadence.",
+      "start": 53.3,
+      "end": 59.54
+    },
+    {
+      "block": 10,
+      "text": "We\u2019re currently doing business as Link Bubble.",
+      "start": 59.72,
+      "end": 62.36
+    },
+    {
+      "block": 11,
+      "text": "Since we acquired",
+      "start": 62.54,
+      "end": 64.22
+    },
+    {
+      "block": 12,
+      "text": "Some of the new features since we acquired Link Bubble that were released include:",
+      "start": 64.4,
+      "end": 68.24
+    },
+    {
+      "block": 13,
+      "text": "Material design overhaul",
+      "start": 68.42,
+      "end": 70.66
+    },
+    {
+      "block": 14,
+      "text": "Colored toolbars",
+      "start": 70.84,
+      "end": 72.6
+    },
+    {
+      "block": 15,
+      "text": "Custom domain redirects",
+      "start": 72.78,
+      "end": 75.02
+    },
+    {
+      "block": 16,
+      "text": "Support for HTML drop down elements",
+      "start": 75.2,
+      "end": 77.84
+    },
+    {
+      "block": 17,
+      "text": "Support for HTML file pickers",
+      "start": 78.02,
+      "end": 80.5
+    },
+    {
+      "block": 18,
+      "text": "Request desktop site option",
+      "start": 80.68,
+      "end": 83.0
+    },
+    {
+      "block": 19,
+      "text": "Auto reconnect when offline support",
+      "start": 83.18,
+      "end": 85.74
+    },
+    {
+      "block": 20,
+      "text": "Various improvements for reading mode",
+      "start": 85.92,
+      "end": 88.32
+    },
+    {
+      "block": 21,
+      "text": "Various crash fixes",
+      "start": 88.5,
+      "end": 90.66
+    },
+    {
+      "block": 22,
+      "text": "Many more new languages and translations",
+      "start": 90.84,
+      "end": 93.48
+    },
+    {
+      "block": 23,
+      "text": "Future plans",
+      "start": 93.66,
+      "end": 95.34
+    },
+    {
+      "block": 24,
+      "text": "We\u2019re excited to be able to put more resources into Link Bubble and we have a lot of great additions planned.",
+      "start": 95.52,
+      "end": 100.96
+    },
+    {
+      "block": 24,
+      "text": "Our immediate focus is towards better performance, bug fixes, and customer satisfaction/support.",
+      "start": 101.14,
+      "end": 106.9
+    },
+    {
+      "block": 24,
+      "text": "Next, we will work on additional web browsing and navigation features.",
+      "start": 107.08,
+      "end": 111.32
+    },
+    {
+      "block": 25,
+      "text": "Please follow @Link_Bubble for future updates.",
+      "start": 111.5,
+      "end": 114.86
+    },
+    {
+      "block": 26,
+      "text": "Users with Link Bubble Pro",
+      "start": 115.04,
+      "end": 117.12
+    },
+    {
+      "block": 27,
+      "text": "Users of Link Bubble Pro can uninstall the Pro version and simply update the existing Link Bubble application which is also installed.",
+      "start": 117.3,
+      "end": 124.58
+    },
+    {
+      "block": 28,
+      "text": "For the next month we\u2019re also offering a refund to recent Pro orders.",
+      "start": 124.76,
+      "end": 128.6
+    },
+    {
+      "block": 28,
+      "text": "If you\u2019ve purchased the Pro version since the product was acquired on August 4th 2015, we\u2019d be happy to refund your order.",
+      "start": 128.78,
+      "end": 135.42
+    },
+    {
+      "block": 28,
+      "text": "Simply contact support@linkbubble.com with your transaction ID.",
+      "start": 135.6,
+      "end": 139.92
+    },
+    {
+      "block": 29,
+      "text": "Unfortunately we aren\u2019t able to refund purchases prior to the acquisition due to lack of prior purchase data.",
+      "start": 140.1,
+      "end": 145.86
+    },
+    {
+      "block": 29,
+      "text": "If your purchase falls before that time-frame, look on the bright side!",
+      "start": 146.04,
+      "end": 149.88
+    },
+    {
+      "block": 29,
+      "text": "You\u2019ll get everything you paid for plus a renewed focus on making Link Bubble the best that it can be.",
+      "start": 150.06,
+      "end": 155.02
+    }
+  ]
+}

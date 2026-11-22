@@ -1,0 +1,63 @@
+{
+  "post": 99,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "8cc77e2c04c8ce31759e53759121ad96a8e9817de2da5a1cb2361e4fa2602249",
+  "audioSHA256": "d5251a20386021937b67c652554c39417c6b32e3a588bd68d6740b10f38e9e25",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "I decided to try to stop spam without CAPTCHA.",
+      "start": 0.0,
+      "end": 2.88
+    },
+    {
+      "block": 0,
+      "text": "I\u2019m using a service called Akismet.",
+      "start": 3.06,
+      "end": 5.54
+    },
+    {
+      "block": 0,
+      "text": "It is free for personal blog use.",
+      "start": 5.72,
+      "end": 8.2
+    },
+    {
+      "block": 1,
+      "text": "Akismet was originally developed for integration with WordPress.",
+      "start": 8.38,
+      "end": 11.98
+    },
+    {
+      "block": 1,
+      "text": "You can now use it\u2019s public API anywhere though.",
+      "start": 12.16,
+      "end": 15.04
+    },
+    {
+      "block": 1,
+      "text": "I\u2019m using it via the Django comment framework.",
+      "start": 15.22,
+      "end": 17.94
+    },
+    {
+      "block": 2,
+      "text": "For commercial use it\u2019s anywhere from \\(50 / month up to \\)1,000 / month depending on the frequency of usage.",
+      "start": 18.12,
+      "end": 25.0
+    },
+    {
+      "block": 3,
+      "text": "I also setup email notifications for myself so I get emailed whenever a new comment gets posted.",
+      "start": 25.18,
+      "end": 30.86
+    },
+    {
+      "block": 4,
+      "text": "For the news item I also set rel=\"nofollow\" so any link posted won\u2019t count for search engine optimization (SEO).",
+      "start": 31.04,
+      "end": 37.84
+    }
+  ]
+}

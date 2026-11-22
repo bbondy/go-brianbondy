@@ -1,0 +1,189 @@
+{
+  "post": 105,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "7998066eea7ef90201e704b37bd908411fefe0b765a0b264ebebadebf163bdcc",
+  "audioSHA256": "0f280bfc4b03242f21c4a5211a90168d716e0cd4f5ea33a6a544360940075e48",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "Wondering who to follow on twitter to keep up to date on technology?",
+      "start": 0.0,
+      "end": 3.6
+    },
+    {
+      "block": 1,
+      "text": "I mined the latest StackOverflow (SO) data dump for all users with twitter accounts, then calculated each user\u2019s top tags based on most votes, and finally sorted the lists by user reputation.",
+      "start": 3.78,
+      "end": 14.34
+    },
+    {
+      "block": 2,
+      "text": "The end result is that you can now easily stay connected with the people in your Stack Exchange community.",
+      "start": 14.52,
+      "end": 19.64
+    },
+    {
+      "block": 3,
+      "text": "Here is a screenshot of what the SO list looks like, containing over 2300 Twitter accounts:",
+      "start": 19.82,
+      "end": 25.58
+    },
+    {
+      "block": 4,
+      "text": "If you\u2019d like to have your account listed in the directories, simply make sure your twitter account is linked somewhere in your profile, and I\u2019ll update these lists again on a future data dump.",
+      "start": 25.76,
+      "end": 34.24
+    },
+    {
+      "block": 5,
+      "text": "I also mined the available Stack Exchange data dumps and extracted those twitter accounts as well.",
+      "start": 34.42,
+      "end": 39.62
+    },
+    {
+      "block": 6,
+      "text": "You can view the lists here:",
+      "start": 39.8,
+      "end": 41.72
+    },
+    {
+      "block": 7,
+      "text": "StackOverflow",
+      "start": 41.9,
+      "end": 43.58
+    },
+    {
+      "block": 8,
+      "text": "ServerFault",
+      "start": 43.76,
+      "end": 45.28
+    },
+    {
+      "block": 9,
+      "text": "SuperUser",
+      "start": 45.46,
+      "end": 46.98
+    },
+    {
+      "block": 10,
+      "text": "Game Development",
+      "start": 47.16,
+      "end": 48.84
+    },
+    {
+      "block": 11,
+      "text": "Webmasters",
+      "start": 49.02,
+      "end": 50.62
+    },
+    {
+      "block": 12,
+      "text": "Web Applications",
+      "start": 50.8,
+      "end": 52.64
+    },
+    {
+      "block": 13,
+      "text": "Ubuntu",
+      "start": 52.82,
+      "end": 54.42
+    },
+    {
+      "block": 14,
+      "text": "Statistical Analysis",
+      "start": 54.6,
+      "end": 56.68
+    },
+    {
+      "block": 15,
+      "text": "StackApps",
+      "start": 56.86,
+      "end": 58.3
+    },
+    {
+      "block": 16,
+      "text": "Photography",
+      "start": 58.48,
+      "end": 60.0
+    },
+    {
+      "block": 17,
+      "text": "Mathematics",
+      "start": 60.18,
+      "end": 61.78
+    },
+    {
+      "block": 18,
+      "text": "Cooking",
+      "start": 61.96,
+      "end": 63.16
+    },
+    {
+      "block": 19,
+      "text": "Gaming",
+      "start": 63.34,
+      "end": 64.62
+    },
+    {
+      "block": 20,
+      "text": "Updates:",
+      "start": 64.8,
+      "end": 66.24
+    },
+    {
+      "block": 21,
+      "text": "Created real twitter lists which are self updating via the Twitter API.",
+      "start": 66.42,
+      "end": 70.5
+    },
+    {
+      "block": 21,
+      "text": "You can access these twitter lists from the lists linked above.",
+      "start": 70.68,
+      "end": 73.96
+    },
+    {
+      "block": 21,
+      "text": "Note: Twitter has a limit of 500 users per list so I include only the top 500 users.",
+      "start": 74.14,
+      "end": 80.14
+    },
+    {
+      "block": 22,
+      "text": "Removed some meta tags for the \u201cKnown By\u201d list such as \u201cmistakes\u201d so that I don\u2019t show anyone as being known for mistakes :)",
+      "start": 80.32,
+      "end": 86.08
+    },
+    {
+      "block": 23,
+      "text": "Fixed a bug with non StackOverflow sites linking to the StackOverflow user pages.",
+      "start": 86.26,
+      "end": 90.98
+    },
+    {
+      "block": 24,
+      "text": "Added better parsing to find twitter URLs",
+      "start": 91.16,
+      "end": 93.96
+    },
+    {
+      "block": 25,
+      "text": "Added filtering of bad twitter URLs",
+      "start": 94.14,
+      "end": 96.7
+    },
+    {
+      "block": 26,
+      "text": "Removed invalid twitter accounts that don\u2019t actually exist anymore",
+      "start": 96.88,
+      "end": 100.48
+    },
+    {
+      "block": 27,
+      "text": "Added followers count, following count, last tweet date, and twitter description",
+      "start": 100.66,
+      "end": 105.62
+    }
+  ]
+}

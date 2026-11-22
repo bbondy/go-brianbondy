@@ -1,0 +1,579 @@
+{
+  "post": 185,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "65350c08bef092bf11c4ecb9591bbe5c1c2fd5af2bb822c5eb13521fadc080bf",
+  "audioSHA256": "28a21f75198537e9e90f5003036d097412fe0db804b2cff29a69ac22b8e23b03",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "For the second time, I stood at the starting line of Little Dog\u2019s Backyard Ultra, my heart racing with adrenaline.",
+      "start": 0.0,
+      "end": 5.92
+    },
+    {
+      "block": 0,
+      "text": "Memories of my last race started to flood back and I wondered if I could do any better than the last time.",
+      "start": 6.1,
+      "end": 11.14
+    },
+    {
+      "block": 1,
+      "text": "Serg, a friend and colleague, crewed for me.",
+      "start": 11.32,
+      "end": 14.52
+    },
+    {
+      "block": 1,
+      "text": "We covered a 967km drive post-work on Thursday, reaching our destination by Friday afternoon to set up camp.",
+      "start": 14.7,
+      "end": 22.46
+    },
+    {
+      "block": 1,
+      "text": "The advantage of driving?",
+      "start": 22.64,
+      "end": 24.64
+    },
+    {
+      "block": 1,
+      "text": "I had all my gear at my fingertips.",
+      "start": 24.82,
+      "end": 27.14
+    },
+    {
+      "block": 1,
+      "text": "Given the convenience, I\u2019d choose to drive again.",
+      "start": 27.32,
+      "end": 30.36
+    },
+    {
+      "block": 2,
+      "text": "After setting up camp, we walked through the course.",
+      "start": 30.54,
+      "end": 33.5
+    },
+    {
+      "block": 2,
+      "text": "We encountered numerous spider webs on the course.",
+      "start": 33.68,
+      "end": 36.72
+    },
+    {
+      "block": 2,
+      "text": "I made a mental note to NOT be first on the first trail loop on the mornings of the race to avoid the fresh spider webs.",
+      "start": 36.9,
+      "end": 42.82
+    },
+    {
+      "block": 3,
+      "text": "The goal of doing this race was to get some more experience on the world championship course.",
+      "start": 43.0,
+      "end": 47.64
+    },
+    {
+      "block": 3,
+      "text": "The world championship, Big Dog\u2019s Backyard Ultra Individual Championship, occurs biennially.",
+      "start": 47.82,
+      "end": 53.34
+    },
+    {
+      "block": 4,
+      "text": "Little Dog\u2019s is the less hyped up grassroots version of the event and it happens 3 weeks before Big Dog\u2019s on the same course.",
+      "start": 53.52,
+      "end": 60.0
+    },
+    {
+      "block": 4,
+      "text": "The winner of each country for Big Dog\u2019s Backyard Ultra National championship in 2022, and some people with the highest loop counts in the world get invitations for Big Dog\u2019s.",
+      "start": 60.18,
+      "end": 69.46
+    },
+    {
+      "block": 4,
+      "text": "I would like to get good at that course so that when I make it to the individual world championships one day, I\u2019ll be ready.",
+      "start": 69.64,
+      "end": 75.32
+    },
+    {
+      "block": 5,
+      "text": "The race started at 7:00AM on Saturday with ~60 people.",
+      "start": 75.5,
+      "end": 79.42
+    },
+    {
+      "block": 6,
+      "text": "My planning for this Backyard was a bit different from previous backyard ultra races.",
+      "start": 79.6,
+      "end": 84.08
+    },
+    {
+      "block": 6,
+      "text": "My goal this time was for sustainability and repeatability.",
+      "start": 84.26,
+      "end": 87.7
+    },
+    {
+      "block": 6,
+      "text": "In past races I detoxed from caffeine a couple weeks before the race, and tried to delay the amount of time as much as possible before I had my first intake of caffeine.",
+      "start": 87.88,
+      "end": 96.28
+    },
+    {
+      "block": 6,
+      "text": "This time I didn\u2019t detox and made some calculations based on the half life of caffeine to make sure the caffeine in my system would be near 0 by midnight.",
+      "start": 96.46,
+      "end": 103.9
+    },
+    {
+      "block": 6,
+      "text": "This was a much better strategy, I was set up for a repeatable pattern instead of ramping up to last as long as I could and setting myself to blow up at some point.",
+      "start": 104.08,
+      "end": 112.08
+    },
+    {
+      "block": 7,
+      "text": "My preparation for the race was mostly smooth.",
+      "start": 112.26,
+      "end": 115.14
+    },
+    {
+      "block": 7,
+      "text": "I achieved personal bests in all distances, ranging from 5km to the 50km.",
+      "start": 115.32,
+      "end": 120.76
+    },
+    {
+      "block": 7,
+      "text": "While I did take some time off for vacation, which interrupted my training regimen, it was great to enjoy some family time.",
+      "start": 120.94,
+      "end": 127.34
+    },
+    {
+      "block": 7,
+      "text": "The kids returning to three different schools after summer vacation made my morning routines a bit difficult.",
+      "start": 127.52,
+      "end": 132.8
+    },
+    {
+      "block": 7,
+      "text": "Fortunately, my incredible wife has always been supportive of my aspirations.",
+      "start": 132.98,
+      "end": 137.62
+    },
+    {
+      "block": 7,
+      "text": "She allowed me to train on many school mornings before I headed to work.",
+      "start": 137.8,
+      "end": 141.48
+    },
+    {
+      "block": 8,
+      "text": "The race\u2019s day loops were demanding due to the technical trails filled with twists, rocks, and roots.",
+      "start": 141.66,
+      "end": 147.1
+    },
+    {
+      "block": 8,
+      "text": "Autumn leaves blanketed the path, but obscured the ground, turning every step into a guessing game for hidden obstacles.",
+      "start": 147.28,
+      "end": 153.76
+    },
+    {
+      "block": 8,
+      "text": "Stubbed toes and tripping hazards were common.",
+      "start": 153.94,
+      "end": 156.66
+    },
+    {
+      "block": 8,
+      "text": "The course\u2019s elevation was notably high for this kind of format.",
+      "start": 156.84,
+      "end": 160.44
+    },
+    {
+      "block": 9,
+      "text": "While I was deep into the race, my wife called in a concerned tone around the 9th hour: \u201cAre you OK?!\u201d I replied, puzzled, \u201cYes\u2026 why?\u201d It appeared someone mistakenly marked me as DNF (Did Not Finish).",
+      "start": 160.62,
+      "end": 173.42
+    },
+    {
+      "block": 9,
+      "text": "After completing the loop, I approached the timing desk.",
+      "start": 173.6,
+      "end": 177.04
+    },
+    {
+      "block": 9,
+      "text": "They acknowledged the error, promptly corrected it, and apologized.",
+      "start": 177.22,
+      "end": 181.38
+    },
+    {
+      "block": 9,
+      "text": "Additionally, there were two instances where my time was recorded as over 59 minutes, a red flag for potential elimination.",
+      "start": 181.56,
+      "end": 188.76
+    },
+    {
+      "block": 9,
+      "text": "Though I consistently finished the loops well within the time, my bib wasn\u2019t picked up by the tracker, possibly due to its sideways placement.",
+      "start": 188.94,
+      "end": 196.38
+    },
+    {
+      "block": 9,
+      "text": "Next time, I\u2019ll ensure my bib directly faces the tracker.",
+      "start": 196.56,
+      "end": 200.24
+    },
+    {
+      "block": 10,
+      "text": "The night before the race, I enjoyed a surprisingly good sleep, a first for me pre-race.",
+      "start": 200.42,
+      "end": 205.62
+    },
+    {
+      "block": 10,
+      "text": "Although I woke up a few times, I managed to drift back to sleep easily.",
+      "start": 205.8,
+      "end": 209.88
+    },
+    {
+      "block": 10,
+      "text": "The 1.5 melatonin gummies I took seemed to do the trick.",
+      "start": 210.06,
+      "end": 213.58
+    },
+    {
+      "block": 11,
+      "text": "In terms of nutrition, I believe I consumed too few calories.",
+      "start": 213.76,
+      "end": 217.6
+    },
+    {
+      "block": 11,
+      "text": "I overlooked many nutritious items we had bought, which got buried amidst other supplies.",
+      "start": 217.78,
+      "end": 222.58
+    },
+    {
+      "block": 11,
+      "text": "For the next race, I\u2019ll prepare a written menu, allowing my crew to suggest meal options.",
+      "start": 222.76,
+      "end": 227.88
+    },
+    {
+      "block": 11,
+      "text": "While I had packed chocolate bars, they melted in the heat.",
+      "start": 228.06,
+      "end": 231.5
+    },
+    {
+      "block": 11,
+      "text": "Next time, I\u2019ll store them in the cooler and also pack alternative sugary treats for when I need an energy boost.",
+      "start": 231.68,
+      "end": 237.6
+    },
+    {
+      "block": 12,
+      "text": "I mistakenly purchased almond milk with ten times the usual protein content for my milkshake, only realizing this after the race.",
+      "start": 237.78,
+      "end": 244.82
+    },
+    {
+      "block": 12,
+      "text": "After consuming the milkshake, I felt a noticeable drop in my performance during the subsequent loop.",
+      "start": 245.0,
+      "end": 250.2
+    },
+    {
+      "block": 12,
+      "text": "Carbohydrates, being quicker to digest, are typically more suitable for such races, while excessive protein can sometimes cause digestive discomfort.",
+      "start": 250.38,
+      "end": 258.62
+    },
+    {
+      "block": 12,
+      "text": "Fortunately, aside from this hiccup, there were no lasting adverse effects, and I decided to forgo any more milkshakes for the remainder of the race.",
+      "start": 258.8,
+      "end": 266.48
+    },
+    {
+      "block": 13,
+      "text": "During tough moments, I played an audio recording.",
+      "start": 266.66,
+      "end": 269.7
+    },
+    {
+      "block": 13,
+      "text": "It was my voice, listing dozens of reasons and core beliefs for why I do these races.",
+      "start": 269.88,
+      "end": 274.92
+    },
+    {
+      "block": 13,
+      "text": "I also practiced Cognitive Behavioral Therapy (CBT) which suggests that when negative thoughts come up, you should test them against all of your core beliefs to test their validity.",
+      "start": 275.1,
+      "end": 284.78
+    },
+    {
+      "block": 14,
+      "text": "I taped my feet before this event instead of using some kind of lubricant on them.",
+      "start": 284.96,
+      "end": 289.36
+    },
+    {
+      "block": 14,
+      "text": "I think this worked very well and I\u2019ll do this in future races as well.",
+      "start": 289.54,
+      "end": 293.62
+    },
+    {
+      "block": 14,
+      "text": "I did have 1 tiny blister that I didn\u2019t notice during the race when I took the tape off.",
+      "start": 293.8,
+      "end": 298.44
+    },
+    {
+      "block": 14,
+      "text": "I could have done 2 layers though and I think it would have been perfect.",
+      "start": 298.62,
+      "end": 302.22
+    },
+    {
+      "block": 15,
+      "text": "The night loops are on a different course, on the road.",
+      "start": 302.4,
+      "end": 305.36
+    },
+    {
+      "block": 15,
+      "text": "I found these easy and came in with 10-13 minutes of rest time for every loop.",
+      "start": 305.54,
+      "end": 309.94
+    },
+    {
+      "block": 15,
+      "text": "I used most of these loops to get a little sleep.",
+      "start": 310.12,
+      "end": 312.76
+    },
+    {
+      "block": 15,
+      "text": "This was the first backyard ultra where I was able to sleep.",
+      "start": 312.94,
+      "end": 316.38
+    },
+    {
+      "block": 15,
+      "text": "I\u2019m sure this was thanks to the near 0 caffeine in my system.",
+      "start": 316.56,
+      "end": 320.08
+    },
+    {
+      "block": 16,
+      "text": "I had trouble staying awake for the 2am and 3am loop.",
+      "start": 320.26,
+      "end": 323.7
+    },
+    {
+      "block": 16,
+      "text": "Previous backyard races had me struggling during these same hours.",
+      "start": 323.88,
+      "end": 327.64
+    },
+    {
+      "block": 16,
+      "text": "It was admittedly a struggle but not something that I would have quit over.",
+      "start": 327.82,
+      "end": 331.42
+    },
+    {
+      "block": 16,
+      "text": "I was extremely happy to see the sunrise starting and I played Circle Of Life from the Lion King to celebrate.",
+      "start": 331.6,
+      "end": 337.44
+    },
+    {
+      "block": 17,
+      "text": "The second day was a struggle.",
+      "start": 337.62,
+      "end": 339.62
+    },
+    {
+      "block": 17,
+      "text": "My time to get in was 56 minutes, giving me only 4 minutes of rest.",
+      "start": 339.8,
+      "end": 344.12
+    },
+    {
+      "block": 17,
+      "text": "I maintained that pace despite trying to go faster the next 2 loops, and on the 4th 2nd day loop I came in just after the 3 whistles that signify only 3 minutes to start the next loop.",
+      "start": 344.3,
+      "end": 353.58
+    },
+    {
+      "block": 18,
+      "text": "The heat was significant and I used ice to help keep my body cool.",
+      "start": 353.76,
+      "end": 357.52
+    },
+    {
+      "block": 18,
+      "text": "This did result in my clothes being very wet over time, which led to chafing, but nothing uncontrollable.",
+      "start": 357.7,
+      "end": 363.62
+    },
+    {
+      "block": 18,
+      "text": "Sauna heat training helped cope with the heat.",
+      "start": 363.8,
+      "end": 366.44
+    },
+    {
+      "block": 18,
+      "text": "It was the first time during one of these hot races that I didn\u2019t feel like I overheated during the race.",
+      "start": 366.62,
+      "end": 371.66
+    },
+    {
+      "block": 19,
+      "text": "On my last loop I went out exhausted and with little energy.",
+      "start": 371.84,
+      "end": 375.2
+    },
+    {
+      "block": 19,
+      "text": "My pace started to climb up and got past the under 9:00min/km requirement.",
+      "start": 375.38,
+      "end": 380.18
+    },
+    {
+      "block": 19,
+      "text": "I tried to make up time but simply couldn\u2019t.",
+      "start": 380.36,
+      "end": 382.92
+    },
+    {
+      "block": 19,
+      "text": "My body either didn\u2019t have the energy or was worn out.",
+      "start": 383.1,
+      "end": 386.3
+    },
+    {
+      "block": 19,
+      "text": "If I had to give a reason I\u2019d say that I should have either eaten more or that I simply wasn\u2019t strong enough.",
+      "start": 386.48,
+      "end": 391.44
+    },
+    {
+      "block": 19,
+      "text": "I need more strength training as there\u2019s no places close to my home to train on trails like that.",
+      "start": 391.62,
+      "end": 396.42
+    },
+    {
+      "block": 20,
+      "text": "I didn\u2019t quit on the 29th loop, but I was just too slow.",
+      "start": 396.6,
+      "end": 400.28
+    },
+    {
+      "block": 20,
+      "text": "Mentally I felt strong and nothing was so painful that I couldn\u2019t cope with it.",
+      "start": 400.46,
+      "end": 404.54
+    },
+    {
+      "block": 20,
+      "text": "On a different course, I think the outcome would have been very different.",
+      "start": 404.72,
+      "end": 408.4
+    },
+    {
+      "block": 21,
+      "text": "I made it to 3rd place.",
+      "start": 408.58,
+      "end": 410.42
+    },
+    {
+      "block": 21,
+      "text": "My friend Justin who drove up the night before and shared my tent and crew was the winner.",
+      "start": 410.6,
+      "end": 415.0
+    },
+    {
+      "block": 21,
+      "text": "He did amazing and was still strong at the end.",
+      "start": 415.18,
+      "end": 417.9
+    },
+    {
+      "block": 21,
+      "text": "However, as he gets older, I\u2019ll get stronger \ud83d\ude1b.",
+      "start": 418.08,
+      "end": 421.28
+    },
+    {
+      "block": 22,
+      "text": "I collected a nice souvenir.",
+      "start": 421.46,
+      "end": 423.54
+    },
+    {
+      "block": 22,
+      "text": "I had Laz sign my jersey from last year\u2019s national championship race.",
+      "start": 423.72,
+      "end": 427.64
+    },
+    {
+      "block": 23,
+      "text": "Every race teaches me something, this one taught me that I simply wasn\u2019t good enough to win yet.",
+      "start": 427.82,
+      "end": 432.62
+    },
+    {
+      "block": 23,
+      "text": "And that\u2019s OK.",
+      "start": 432.8,
+      "end": 434.4
+    },
+    {
+      "block": 23,
+      "text": "Nothing went wrong, nothing \u201chappened\u201d to me.",
+      "start": 434.58,
+      "end": 437.38
+    },
+    {
+      "block": 23,
+      "text": "I\u2019ll be working on my core and strength on top of my running.",
+      "start": 437.56,
+      "end": 440.68
+    },
+    {
+      "block": 23,
+      "text": "I\u2019m certain I\u2019ll do this course again.",
+      "start": 440.86,
+      "end": 443.02
+    },
+    {
+      "block": 23,
+      "text": "If not at Big\u2019s, then at least at Little\u2019s.",
+      "start": 443.2,
+      "end": 446.0
+    },
+    {
+      "block": 23,
+      "text": "But my focus and dreams of one day getting to Big\u2019s Individual Championships remain unchanged.",
+      "start": 446.18,
+      "end": 451.3
+    },
+    {
+      "block": 24,
+      "text": "Thank you Gary (Laz) and Sandra for putting on an excellent race that gives access to the Big\u2019s course to people like me.",
+      "start": 451.48,
+      "end": 457.32
+    }
+  ]
+}

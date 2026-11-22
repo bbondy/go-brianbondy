@@ -1,0 +1,33 @@
+{
+  "post": 9,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "4d0769a9141922ac644cbc74ef24c00b09924e240ad272cc301a45f7a5c90a08",
+  "audioSHA256": "cabb39d008b215c2f544fa5a8a27d3a37188d5fa16c81b1e65cb2d996b540874",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "What ever you do, do not submit your email to them.",
+      "start": 0.0,
+      "end": 3.28
+    },
+    {
+      "block": 0,
+      "text": "After several phone calls, they assured me that my email would be removed, but it never has.",
+      "start": 3.46,
+      "end": 8.58
+    },
+    {
+      "block": 1,
+      "text": "They continue to send unwanted SPAM.",
+      "start": 8.76,
+      "end": 11.32
+    },
+    {
+      "block": 1,
+      "text": "Companies like this should be pelted with rocks.",
+      "start": 11.5,
+      "end": 14.14
+    }
+  ]
+}

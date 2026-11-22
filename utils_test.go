@@ -79,6 +79,16 @@ func TestDirectToHttps(t *testing.T) {
 	}
 }
 
+func TestDirectToHttpsWithCustomLocalPort(t *testing.T) {
+	t.Setenv("PORT", "8081")
+	req := httptest.NewRequest(http.MethodGet, "http://localhost:8081/blog/186/unwavering-dedication", nil)
+	w := httptest.NewRecorder()
+	directToHttps(w, req, func(http.ResponseWriter, *http.Request) {})
+	if w.Code != http.StatusOK {
+		t.Fatalf("expected local request to pass through, got %d", w.Code)
+	}
+}
+
 func TestCanonicalURL(t *testing.T) {
 	if got := canonicalURL(&data.SimpleMarkdownPage{MarkdownSlug: "about.markdown"}); got != "https://brianbondy.com/about" {
 		t.Errorf("canonicalURL() = %q, want about URL", got)

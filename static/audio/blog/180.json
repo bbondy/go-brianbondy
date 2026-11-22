@@ -1,0 +1,261 @@
+{
+  "post": 180,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "7f17cc30b9eec5ec16a32a11c7f99514724f2f3efe684ca0d419196d198c2f02",
+  "audioSHA256": "cced30cd891dc800e95306d6ead1cd2575df44b67eccab3fec6919d60af43679",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "This Saturday I took part in my favorite run of the year, a 103 mile run around Windsor-Essex county named the First Annual weUltra Run (FAwR).",
+      "start": 0.0,
+      "end": 8.64
+    },
+    {
+      "block": 0,
+      "text": "This weUltra event can be done in 1 chunk or across a couple weeks, known as a multi-chunk finish.",
+      "start": 8.82,
+      "end": 14.66
+    },
+    {
+      "block": 0,
+      "text": "It was my 4th year doing the FAwR and 21h 47min later, my 4th one-chunk finish.",
+      "start": 14.84,
+      "end": 20.68
+    },
+    {
+      "block": 1,
+      "text": "The FAwR will take everything from you.",
+      "start": 20.86,
+      "end": 23.26
+    },
+    {
+      "block": 1,
+      "text": "It allows defeat, but it borrows your soul and swallows your overconfidence.",
+      "start": 23.44,
+      "end": 27.84
+    },
+    {
+      "block": 2,
+      "text": "In this social media era, with supportive friends and family, I need the FAwR every year to keep me humble.",
+      "start": 28.02,
+      "end": 34.02
+    },
+    {
+      "block": 2,
+      "text": "Overconfidence evolves into arrogance if not kept in check.",
+      "start": 34.2,
+      "end": 37.8
+    },
+    {
+      "block": 2,
+      "text": "FAwR empties your overconfidence and fills your heart.",
+      "start": 37.98,
+      "end": 41.1
+    },
+    {
+      "block": 3,
+      "text": "Being my 4th time doing the FAwR, I was sure I could finish in under 20h this year.",
+      "start": 41.28,
+      "end": 46.24
+    },
+    {
+      "block": 3,
+      "text": "The weather was good this year, and my training has been going well.",
+      "start": 46.42,
+      "end": 50.02
+    },
+    {
+      "block": 3,
+      "text": "For the last 3 years I thought I could accomplish it.",
+      "start": 50.2,
+      "end": 53.08
+    },
+    {
+      "block": 4,
+      "text": "The seed of humbleness made its appearance around mile 50 and was fully visible by mile 60.",
+      "start": 53.26,
+      "end": 58.86
+    },
+    {
+      "block": 4,
+      "text": "By mile 70 my confidence was gone and all I had left was callused grit to get me through to the finish.",
+      "start": 59.04,
+      "end": 64.48
+    },
+    {
+      "block": 4,
+      "text": "The average pace that I was slowly working down started to become unmoveable, and then went in the wrong direction.",
+      "start": 64.66,
+      "end": 70.42
+    },
+    {
+      "block": 5,
+      "text": "The FAwR starts and ends by touching the Beaver.",
+      "start": 70.6,
+      "end": 73.48
+    },
+    {
+      "block": 6,
+      "text": "The first 48km from the start to my mother\u2019s house was done with my son Ronnie.",
+      "start": 73.66,
+      "end": 78.3
+    },
+    {
+      "block": 6,
+      "text": "Ronnie is an amazing athlete with massive potential and the spirit and drive to see those goals through.",
+      "start": 78.48,
+      "end": 83.84
+    },
+    {
+      "block": 6,
+      "text": "He had hoped to do a 50mi first chunk of the FAwR earlier in the year, but due to some knee pain we slowed, and then stopped his training a month ago to heal up.",
+      "start": 84.02,
+      "end": 92.26
+    },
+    {
+      "block": 6,
+      "text": "He was fully healed for the FAwR but we re-adjusted his 1st chunk goal.",
+      "start": 92.44,
+      "end": 96.44
+    },
+    {
+      "block": 6,
+      "text": "He still wants to hit the 50mi goal later in the year.",
+      "start": 96.62,
+      "end": 99.82
+    },
+    {
+      "block": 6,
+      "text": "He did great and made his adjusted goal.",
+      "start": 100.0,
+      "end": 102.48
+    },
+    {
+      "block": 7,
+      "text": "One funny occurrence this year was that a bird randomly slammed into my foot and then died.",
+      "start": 102.66,
+      "end": 107.7
+    },
+    {
+      "block": 7,
+      "text": "It felt pretty hard, I thought at first a squirrel or another animal had jumped at my foot.",
+      "start": 107.88,
+      "end": 112.6
+    },
+    {
+      "block": 7,
+      "text": "I jokingly asked if it was a bad omen.",
+      "start": 112.78,
+      "end": 115.34
+    },
+    {
+      "block": 7,
+      "text": "Another FAwR runner Juraj had the best theory for this.",
+      "start": 115.52,
+      "end": 118.88
+    },
+    {
+      "block": 7,
+      "text": "A car probably hit the bird and it bounced off of the car windshield and hit my shoe.",
+      "start": 119.06,
+      "end": 123.46
+    },
+    {
+      "block": 7,
+      "text": "A couple of runners behind me got a photo of the bird.",
+      "start": 123.64,
+      "end": 126.76
+    },
+    {
+      "block": 7,
+      "text": "Thank you Brandi and Juraj for that shot because no one would believe me otherwise!",
+      "start": 126.94,
+      "end": 131.26
+    },
+    {
+      "block": 7,
+      "text": "Uncommon events happen all the time.",
+      "start": 131.44,
+      "end": 133.92
+    },
+    {
+      "block": 8,
+      "text": "The FAwR is so much fun because the community comes together for the runners on the course.",
+      "start": 134.1,
+      "end": 138.58
+    },
+    {
+      "block": 8,
+      "text": "They make the impossible possible.",
+      "start": 138.76,
+      "end": 141.0
+    },
+    {
+      "block": 8,
+      "text": "My wife dropped off 3 bags throughout the day.",
+      "start": 141.18,
+      "end": 143.98
+    },
+    {
+      "block": 8,
+      "text": "My mom and step father Ed stopped a bunch of times to help throughout the day as well.",
+      "start": 144.16,
+      "end": 148.4
+    },
+    {
+      "block": 8,
+      "text": "My sister and her family stopped as well.",
+      "start": 148.58,
+      "end": 151.14
+    },
+    {
+      "block": 8,
+      "text": "My Uncle Gerry, Aunt Ruth, Steve, and Virginia cheered us on.",
+      "start": 151.32,
+      "end": 155.64
+    },
+    {
+      "block": 8,
+      "text": "A family friend Sharyn and so many others also saw Ronnie on the route and cheered him on.",
+      "start": 155.82,
+      "end": 160.86
+    },
+    {
+      "block": 8,
+      "text": "Lots of road angels were there to help others.",
+      "start": 161.04,
+      "end": 163.76
+    },
+    {
+      "block": 9,
+      "text": "The last 23km was done with my friend Serg.",
+      "start": 163.94,
+      "end": 167.3
+    },
+    {
+      "block": 9,
+      "text": "He kept me awake and as strong as I could be to the finish.",
+      "start": 167.48,
+      "end": 170.52
+    },
+    {
+      "block": 10,
+      "text": "The best part about finishing the FAwR early is that you can go back out there later and help the remaining runners.",
+      "start": 170.7,
+      "end": 176.14
+    },
+    {
+      "block": 10,
+      "text": "I try to do this every year, it\u2019s so inspiring to see the level of grit in everyone pushing past their goals.",
+      "start": 176.32,
+      "end": 182.24
+    },
+    {
+      "block": 10,
+      "text": "This little meaningless event, has so much packed meaning to each one of us.",
+      "start": 182.42,
+      "end": 186.58
+    }
+  ]
+}

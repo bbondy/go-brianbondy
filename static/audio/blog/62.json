@@ -1,0 +1,63 @@
+{
+  "post": 62,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "74815619a415fc814f4a15f9ef4def3762e23aa765bc202b7c50fcacd95a583d",
+  "audioSHA256": "16137f74743fb7c1ba89e1ec215bc67956dbde2f7b691abbf1fa0b42e80edcc8",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "I\u2019ve been reading a lot about hole punching.",
+      "start": 0.0,
+      "end": 2.4
+    },
+    {
+      "block": 0,
+      "text": "With hole punching, you can get past routers and allow peer to peer communication.",
+      "start": 2.58,
+      "end": 7.22
+    },
+    {
+      "block": 0,
+      "text": "The problem is that you can always connect to an outside host, but when an outside host is trying to connect to you, your router doesn\u2019t know who to forward the communication to.",
+      "start": 7.4,
+      "end": 16.2
+    },
+    {
+      "block": 0,
+      "text": "This is because all computers on your LAN have the same outside WAN IP.",
+      "start": 16.38,
+      "end": 20.54
+    },
+    {
+      "block": 0,
+      "text": "In general, you bind multiple sockets to the same local IP and port.",
+      "start": 20.72,
+      "end": 25.04
+    },
+    {
+      "block": 0,
+      "text": "With one of the sockets you connect to a public server, known as a rendezvous server, your router then makes a hole for your local address and port.",
+      "start": 25.22,
+      "end": 32.66
+    },
+    {
+      "block": 0,
+      "text": "You then use that same local address and port to connect to the LAN IP and WAN IP of the peer you are trying to connect to.",
+      "start": 32.84,
+      "end": 39.32
+    },
+    {
+      "block": 0,
+      "text": "With the same code you can even build a portable library that works on all OS\u2019s.",
+      "start": 39.5,
+      "end": 43.82
+    },
+    {
+      "block": 0,
+      "text": "Very cool! :)",
+      "start": 44.0,
+      "end": 45.52
+    }
+  ]
+}

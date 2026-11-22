@@ -1,0 +1,39 @@
+{
+  "post": 173,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "27853bb86796b8ddd3e925206233c58640417b76a61aac777e5ad8a242796af9",
+  "audioSHA256": "2e331c8991ebe2938c289cc96fdd9b81b90afa7696f2395b1d29a41ccd860ebb",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "On October 07, 2016 I\u2019ll be shutting down Code Firefox.",
+      "start": 0.0,
+      "end": 5.04
+    },
+    {
+      "block": 1,
+      "text": "With over 100k unique visits and over 30k full video views, it helped hundreds of Mozillians and Mozilla employees get ramped up for hacking on Firefox.",
+      "start": 5.22,
+      "end": 14.02
+    },
+    {
+      "block": 1,
+      "text": "It was from the start a personal side project and wasn\u2019t funded or sponsored in any way.",
+      "start": 14.2,
+      "end": 18.76
+    },
+    {
+      "block": 2,
+      "text": "It isn\u2019t being shutdown because of a conflict of interest with Brave, but instead because over time the content naturally becomes more obsolete as better development methods surface.",
+      "start": 18.94,
+      "end": 28.14
+    },
+    {
+      "block": 3,
+      "text": "I\u2019m happy with what it is and the purpose it had, but shutting it down is the responsible thing to do.",
+      "start": 28.32,
+      "end": 33.28
+    }
+  ]
+}

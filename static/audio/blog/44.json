@@ -1,0 +1,21 @@
+{
+  "post": 44,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "88ba65d727cf98bc5a14ab040f5bff1b715fcb470e219083babd15e5654a57dc",
+  "audioSHA256": "6009672ed714e4b3b7506d23291431d0658e4ff051fa77573e4b13955f0cfe02",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "Teach Yourself Piano is a great local (to Windsor Ontario Canada) band.",
+      "start": 0.0,
+      "end": 4.96
+    },
+    {
+      "block": 0,
+      "text": "I head them at Chapters book store a few days ago, and now listen to their music daily.",
+      "start": 5.14,
+      "end": 9.94
+    }
+  ]
+}

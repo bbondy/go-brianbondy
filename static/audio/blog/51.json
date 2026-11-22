@@ -1,0 +1,333 @@
+{
+  "post": 51,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "6e9f9cbb3ffcc1591ed14c40d4f2604cb2fcd63770222ec111d6acc2c704be5f",
+  "audioSHA256": "bec10be013bf5962f3aa62f6924c1985bec029024ee52693fe3a16fd6b7590c9",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "I\u2019m going to start studying compression a lot more (yes inspired by the Hutter prize) so that I can hopefully be the first to win the competition.",
+      "start": 0.0,
+      "end": 7.12
+    },
+    {
+      "block": 0,
+      "text": "The prize money isn\u2019t really important as I believe it will only work out to about 1-3 thousand euros.",
+      "start": 7.3,
+      "end": 12.66
+    },
+    {
+      "block": 0,
+      "text": "I\u2019ve always had an interest in compression, so this just gives me a reason to study it more, and a distinct goal to follow.",
+      "start": 12.84,
+      "end": 19.32
+    },
+    {
+      "block": 0,
+      "text": "I have a lot of catching up to do in the lossless data compression field, so this is more of a long term goal.",
+      "start": 19.5,
+      "end": 24.94
+    },
+    {
+      "block": 1,
+      "text": "Lossless data compression",
+      "start": 25.12,
+      "end": 27.2
+    },
+    {
+      "block": 2,
+      "text": "Lossless data compression allows the exact reconstruction of data from its compressed source.",
+      "start": 27.38,
+      "end": 32.34
+    },
+    {
+      "block": 2,
+      "text": "Lossless data compression is used in many areas such as zip and gzip arbitrary data.",
+      "start": 32.52,
+      "end": 37.56
+    },
+    {
+      "block": 3,
+      "text": "Lossy data compression",
+      "start": 37.74,
+      "end": 39.74
+    },
+    {
+      "block": 4,
+      "text": "Lossy data compression typically performs better than lossless data compression; however, it does not reconstruct an exact representation of the data.",
+      "start": 39.92,
+      "end": 48.08
+    },
+    {
+      "block": 4,
+      "text": "Some places where lossy data compression is useful is in images, video, and music.",
+      "start": 48.26,
+      "end": 53.54
+    },
+    {
+      "block": 5,
+      "text": "Burrows-Wheeler Transform (BWT)",
+      "start": 53.72,
+      "end": 56.92
+    },
+    {
+      "block": 6,
+      "text": "Burrows-Wheeler transform is not actually a data compression algorithm, but it instead is a data transformation algorithm.",
+      "start": 57.1,
+      "end": 63.9
+    },
+    {
+      "block": 6,
+      "text": "The algorithm will transfer your input data to a format that is much easier for other compression algorithms to take advantage of.",
+      "start": 64.08,
+      "end": 70.72
+    },
+    {
+      "block": 7,
+      "text": "It does this by re-arranging the data so that duplicate parts appear in a row.",
+      "start": 70.9,
+      "end": 75.3
+    },
+    {
+      "block": 7,
+      "text": "For example you will have many \u2019T\u2019 character\u2019s in a row instead of spread all over the place.",
+      "start": 75.48,
+      "end": 79.72
+    },
+    {
+      "block": 8,
+      "text": "Huffman compression",
+      "start": 79.9,
+      "end": 81.66
+    },
+    {
+      "block": 9,
+      "text": "Huffman coding is a mapping of a set of \u2018symbols\u2019 to a set of \u2018series of bits\u2019.",
+      "start": 81.84,
+      "end": 86.0
+    },
+    {
+      "block": 9,
+      "text": "Each symbol corresponds to a variable length series of bits.",
+      "start": 86.18,
+      "end": 89.78
+    },
+    {
+      "block": 10,
+      "text": "The more common symbols are represented with less bits, and the least common symbols are represented with more bits.",
+      "start": 89.96,
+      "end": 95.96
+    },
+    {
+      "block": 11,
+      "text": "There is no algorithm which produces better results than Huffman coding, where each symbol has a binary representation.",
+      "start": 96.14,
+      "end": 102.62
+    },
+    {
+      "block": 11,
+      "text": "That is it is, it will always lead to optimal compression.",
+      "start": 102.8,
+      "end": 106.48
+    },
+    {
+      "block": 12,
+      "text": "However, Huffman coding is not the best compression method since it does not take advantage of the relation between symbols.",
+      "start": 106.66,
+      "end": 112.82
+    },
+    {
+      "block": 13,
+      "text": "Example: An \u2018h\u2019 follows a \u2019T\u2019 very often in the english language, and Huffman coding will not take that into consideration.",
+      "start": 113.0,
+      "end": 119.64
+    },
+    {
+      "block": 14,
+      "text": "Huffman codes",
+      "start": 119.82,
+      "end": 121.42
+    },
+    {
+      "block": 15,
+      "text": "Each Huffman code is prefix free.",
+      "start": 121.6,
+      "end": 124.08
+    },
+    {
+      "block": 15,
+      "text": "Meaning no binary code is a prefix of any other binary code.",
+      "start": 124.26,
+      "end": 128.18
+    },
+    {
+      "block": 15,
+      "text": "If it was you wouldn\u2019t know on the decoding phase which symbol to pick, the prefix of one code which itself a symbol or to keep reading to get another symbol.",
+      "start": 128.36,
+      "end": 136.28
+    },
+    {
+      "block": 16,
+      "text": "Huffman trees",
+      "start": 136.46,
+      "end": 138.14
+    },
+    {
+      "block": 17,
+      "text": "The binary representations for each symbol is made by using a binary tree.",
+      "start": 138.32,
+      "end": 142.64
+    },
+    {
+      "block": 17,
+      "text": "Each symbol is first stored as its own distinct leaf node.",
+      "start": 142.82,
+      "end": 146.5
+    },
+    {
+      "block": 17,
+      "text": "Each of these nodes also stores the frequency of the symbol.",
+      "start": 146.68,
+      "end": 150.12
+    },
+    {
+      "block": 17,
+      "text": "Since even a single node is considered a tree, each of these nodes are considered their own tree.",
+      "start": 150.3,
+      "end": 155.66
+    },
+    {
+      "block": 18,
+      "text": "From here you simply continuously pick the 2 trees with smallest frequency and combine them into a new tree with a new parent node.",
+      "start": 155.84,
+      "end": 162.64
+    },
+    {
+      "block": 18,
+      "text": "The new parent node gets the frequency of both of its children added.",
+      "start": 162.82,
+      "end": 166.66
+    },
+    {
+      "block": 18,
+      "text": "This sequence is continued until you have no more trees to merge.",
+      "start": 166.84,
+      "end": 170.6
+    },
+    {
+      "block": 18,
+      "text": "The frequency of a tree is defined to be the frequency of its root node.",
+      "start": 170.78,
+      "end": 174.86
+    },
+    {
+      "block": 19,
+      "text": "You now have a single tree with each leaf node being an original symbol.",
+      "start": 175.04,
+      "end": 178.88
+    },
+    {
+      "block": 19,
+      "text": "This tree is called a Huffman tree.",
+      "start": 179.06,
+      "end": 181.38
+    },
+    {
+      "block": 19,
+      "text": "Creating this tree can be done in O(nlogn) by using a priority queue.",
+      "start": 181.56,
+      "end": 185.96
+    },
+    {
+      "block": 20,
+      "text": "Getting the code from a Huffman tree",
+      "start": 186.14,
+      "end": 188.46
+    },
+    {
+      "block": 21,
+      "text": "To obtain a code for any symbol you simply start at the root node and follow down the path to the leaf node.",
+      "start": 188.64,
+      "end": 194.4
+    },
+    {
+      "block": 21,
+      "text": "For each left arc you follow you add a 0 to the end of your code, for each right arc that you follow you add a 1 to the end of your code.",
+      "start": 194.58,
+      "end": 201.46
+    },
+    {
+      "block": 22,
+      "text": "Since each symbol is a leaf node you are guaranteed that no symbol will be a prefix of any other symbol.",
+      "start": 201.64,
+      "end": 207.08
+    },
+    {
+      "block": 23,
+      "text": "Combining compression methods",
+      "start": 207.26,
+      "end": 209.5
+    },
+    {
+      "block": 24,
+      "text": "Since Huffman encoding keeps the ordering for symbols to series of bits, other kinds of compression can usually be applied after Huffman coding.",
+      "start": 209.68,
+      "end": 217.04
+    },
+    {
+      "block": 24,
+      "text": "For example a compression algorithm that takes into consideration cross boundary symbols will still be useful.",
+      "start": 217.22,
+      "end": 223.06
+    },
+    {
+      "block": 25,
+      "text": "Adaptive Huffman compression",
+      "start": 223.24,
+      "end": 225.48
+    },
+    {
+      "block": 26,
+      "text": "Adaptive Huffman coding discovers the frequency of symbols as it processes the algorithm.",
+      "start": 225.66,
+      "end": 230.78
+    },
+    {
+      "block": 27,
+      "text": "Prediction by partial matching",
+      "start": 230.96,
+      "end": 233.2
+    },
+    {
+      "block": 28,
+      "text": "What is PPM?",
+      "start": 233.38,
+      "end": 235.14
+    },
+    {
+      "block": 29,
+      "text": "PPM uses the last n symbols of source data to predict the next symbol in the stream.",
+      "start": 235.32,
+      "end": 240.12
+    },
+    {
+      "block": 29,
+      "text": "Like adaptive Huffman compression, PPM is an adaptive algorithm which gains information about the source data as it encodes.",
+      "start": 240.3,
+      "end": 247.58
+    },
+    {
+      "block": 30,
+      "text": "All implementation details of PPM are not constant",
+      "start": 247.76,
+      "end": 251.36
+    },
+    {
+      "block": 31,
+      "text": "Newer versions of PPM with extra optimizations are known as the PAQ series of data compression algorithms.",
+      "start": 251.54,
+      "end": 257.94
+    }
+  ]
+}

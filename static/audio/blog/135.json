@@ -1,0 +1,213 @@
+{
+  "post": 135,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "8208012b926bc8f81d1379c3ba0472f67e77ce2f8f05677bf7eeda90e9497840",
+  "audioSHA256": "5149a1554022c496cd29d794e4355a0156a274ef082e13c5e46ca1e23b804741",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "The Firefox Roadmap lists a 2012 Q2 goal of providing a working Firefox prototype on Metro.",
+      "start": 0.0,
+      "end": 6.0
+    },
+    {
+      "block": 1,
+      "text": "As of last week, we have a working browser in Metro.",
+      "start": 6.18,
+      "end": 9.54
+    },
+    {
+      "block": 1,
+      "text": "It currently looks and feels the same as the Android browser.",
+      "start": 9.72,
+      "end": 13.08
+    },
+    {
+      "block": 1,
+      "text": "You can navigate the web, create tabs, bookmark pages, build history, retain cache, adjust preferences, and more.",
+      "start": 13.26,
+      "end": 21.02
+    },
+    {
+      "block": 2,
+      "text": "I don\u2019t consider that 2012 Q2 goal met yet, we still have some open design questions, and a ton of platform integration work to do.",
+      "start": 21.2,
+      "end": 28.88
+    },
+    {
+      "block": 3,
+      "text": "Our prototype in its current form is based on the Fennec XUL code.",
+      "start": 29.06,
+      "end": 33.06
+    },
+    {
+      "block": 3,
+      "text": "We used to use Fennec XUL on Android, but changed to a Native UI on Android for startup performance reasons.",
+      "start": 33.24,
+      "end": 39.72
+    },
+    {
+      "block": 3,
+      "text": "We haven\u2019t seen the same types of startup performance problems we\u2019ve had on Android yet, even on VMs.",
+      "start": 39.9,
+      "end": 45.42
+    },
+    {
+      "block": 4,
+      "text": "We\u2019re currently writing up a proposal on how we should proceed with the Metro work and we will post it on dev.planning.",
+      "start": 45.6,
+      "end": 51.6
+    },
+    {
+      "block": 4,
+      "text": "If we are able to keep using Fennec XUL we\u2019ll be ahead of schedule, but I anticipate some serious discussions once that is posted.",
+      "start": 51.78,
+      "end": 59.22
+    },
+    {
+      "block": 5,
+      "text": "Since our prototype is based on Fennec we have a multi-process capable browser for free.",
+      "start": 59.4,
+      "end": 64.36
+    },
+    {
+      "block": 5,
+      "text": "Currently there is only one content process, but I believe the longer term plans are to increase that.",
+      "start": 64.54,
+      "end": 70.06
+    },
+    {
+      "block": 6,
+      "text": "Jim put together an installer this week as well so that UX can get hands on with Firefox on Metro and provide design feedback and guidance.",
+      "start": 70.24,
+      "end": 78.08
+    },
+    {
+      "block": 7,
+      "text": "Platform integration",
+      "start": 78.26,
+      "end": 80.26
+    },
+    {
+      "block": 8,
+      "text": "As of this week, we have a lot of Metro platform integration working.",
+      "start": 80.44,
+      "end": 84.52
+    },
+    {
+      "block": 9,
+      "text": "We have Metro snap working, you can snap another Metro app to the right or left of Firefox and continue browsing.",
+      "start": 84.7,
+      "end": 91.18
+    },
+    {
+      "block": 10,
+      "text": "We also have HTML file input controls tied up to the Metro file picker.",
+      "start": 91.36,
+      "end": 96.08
+    },
+    {
+      "block": 10,
+      "text": "We\u2019ve implemented support for opening a file, opening multiple files, and saving files in Metro.",
+      "start": 96.26,
+      "end": 101.86
+    },
+    {
+      "block": 10,
+      "text": "Unlike a normal sandboxed Metro application, the user can select any file from the computer.",
+      "start": 102.04,
+      "end": 107.32
+    },
+    {
+      "block": 10,
+      "text": "The picker also allows you to select files shared by other applications.",
+      "start": 107.5,
+      "end": 111.5
+    },
+    {
+      "block": 11,
+      "text": "We also implemented the Windows 8 search contract, you can use the Search Charm from any screen on Windows 8.",
+      "start": 111.68,
+      "end": 117.6
+    },
+    {
+      "block": 11,
+      "text": "If you enter a URL, it will be loaded.",
+      "start": 117.78,
+      "end": 120.5
+    },
+    {
+      "block": 11,
+      "text": "If you enter anything else, it will be searched in your default search engine.",
+      "start": 120.68,
+      "end": 124.6
+    },
+    {
+      "block": 12,
+      "text": "We also implemented the Windows 8 share contract, you can use the Share Charm from any Firefox page to share that page to another application.",
+      "start": 124.78,
+      "end": 132.06
+    },
+    {
+      "block": 12,
+      "text": "Once you select the Share Charm it will list the applications you can share to, for example: Mail, Twitter, or Facebook.",
+      "start": 132.24,
+      "end": 139.2
+    },
+    {
+      "block": 13,
+      "text": "Why Windows 8 Metro support is really important",
+      "start": 139.38,
+      "end": 142.66
+    },
+    {
+      "block": 14,
+      "text": "If a browser is awesome on Metro, the only way to use this awesome browser in Metro is for it to become the default.",
+      "start": 142.84,
+      "end": 149.08
+    },
+    {
+      "block": 14,
+      "text": "If a browser is default on Metro, it will also be default on the Desktop.",
+      "start": 149.26,
+      "end": 153.74
+    },
+    {
+      "block": 15,
+      "text": "If a browser does not support Metro, it is seriously at risk of losing the default browser status, and therefore significant market share.",
+      "start": 153.92,
+      "end": 161.6
+    },
+    {
+      "block": 15,
+      "text": "A browser without support for Metro, if default, would be taking away a Metro browser completely from the user\u2019s computer.",
+      "start": 161.78,
+      "end": 168.66
+    },
+    {
+      "block": 16,
+      "text": "Even if a user spends most of their time in the Desktop interface, having a really good Metro browser may be enough for the user to change their default browser.",
+      "start": 168.84,
+      "end": 176.68
+    },
+    {
+      "block": 16,
+      "text": "A browser with great Metro support can gain significant browser market share for this reason.",
+      "start": 176.86,
+      "end": 181.74
+    },
+    {
+      "block": 17,
+      "text": "It is extremely important that we deliver an awesome Firefox experience on Metro, one that is tightly integrated with the platform, fast, and feature rich.",
+      "start": 181.92,
+      "end": 190.72
+    },
+    {
+      "block": 17,
+      "text": "Windows is by far the platform with the most users and which has the biggest effect on market share.",
+      "start": 190.9,
+      "end": 196.02
+    }
+  ]
+}

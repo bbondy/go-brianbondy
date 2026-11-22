@@ -1,0 +1,21 @@
+{
+  "post": 52,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "f3b59a55da498e1d067c5f940dbc77eb75aa9516de92c3ef73ae7c13a008c224",
+  "audioSHA256": "9e4ef635ca7c718c4da0a986d407570352bfe26959a88173b2d1d2129df38b66",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "There is a new contest relating to compression here.",
+      "start": 0.0,
+      "end": 3.12
+    },
+    {
+      "block": 0,
+      "text": "All you have to do is beat the previous record and you can win up to 50,000 Euro.",
+      "start": 3.3,
+      "end": 7.7
+    }
+  ]
+}

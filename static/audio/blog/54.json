@@ -1,0 +1,51 @@
+{
+  "post": 54,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "495b501c38ee4a919f9f0d41a2de5e4038d393d449f870e35f94c24803219f1a",
+  "audioSHA256": "bfcd8008b98fe733db1dbe9b56e575c8a1aff5877a4ff14008feea054f91e4f4",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "URL redirecting via this page is temporarily disabled because of this email I received from abuse@myspace.com with a CC to abuse@godaddy.com.",
+      "start": 0.0,
+      "end": 9.36
+    },
+    {
+      "block": 0,
+      "text": "So much for trying to provide an innocent good service to users for free with no ads:",
+      "start": 9.54,
+      "end": 14.18
+    },
+    {
+      "block": 1,
+      "text": "BrianBondy.com is hosting numerous files being used to redirect users to third party affiliate sites for commercial gain.",
+      "start": 14.36,
+      "end": 21.48
+    },
+    {
+      "block": 2,
+      "text": "The user accounts posting the redirects were compromised through illegal means.",
+      "start": 21.66,
+      "end": 25.82
+    },
+    {
+      "block": 2,
+      "text": "Immediately remove the redirects on your webserver, and desist in any continued use and abuse of the MySpace.com site and userbase.",
+      "start": 26.0,
+      "end": 33.52
+    },
+    {
+      "block": 3,
+      "text": "MySpace.com can and will take legal action against BrianBondy.com for it\u2019s involvement in these illegal activities.",
+      "start": 33.7,
+      "end": 39.94
+    },
+    {
+      "block": 4,
+      "text": "MySpace.com",
+      "start": 40.12,
+      "end": 42.12
+    }
+  ]
+}

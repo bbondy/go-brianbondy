@@ -1,0 +1,285 @@
+{
+  "post": 133,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "ebbb092ada6029e3d9b3fa099b7165a5726ed20e2c308736e328d42b81c5847d",
+  "audioSHA256": "1e1ace20da409d6947edec161228b94953969d5c9f088aa60ccfb0c1da9a5548",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "I will answer some commonly asked questions relating to the series of tasks that make up the silent update project in this post.",
+      "start": 0.0,
+      "end": 6.48
+    },
+    {
+      "block": 1,
+      "text": "Will silent updates first land in Firefox 13?",
+      "start": 6.66,
+      "end": 9.94
+    },
+    {
+      "block": 2,
+      "text": "No, the silent updates work is a series of tasks, and some of it has already landed.",
+      "start": 10.12,
+      "end": 15.08
+    },
+    {
+      "block": 3,
+      "text": "Three of the biggest pieces of work in this new series of tasks are:",
+      "start": 15.26,
+      "end": 18.86
+    },
+    {
+      "block": 4,
+      "text": "Add-ons default to compatible.",
+      "start": 19.04,
+      "end": 21.52
+    },
+    {
+      "block": 5,
+      "text": "The Mozilla Maintenance Service, which gives truly silent updates on Windows.",
+      "start": 21.7,
+      "end": 25.94
+    },
+    {
+      "block": 6,
+      "text": "Background updates, which applies updates in the background while Firefox is running on all platforms.",
+      "start": 26.12,
+      "end": 31.72
+    },
+    {
+      "block": 7,
+      "text": "Add-ons default to compatible landed in Firefox 10.",
+      "start": 31.9,
+      "end": 35.42
+    },
+    {
+      "block": 8,
+      "text": "The Mozilla Maintenance Service fixes the problem of updates not being truly silent on Vista and above due to UAC prompts.",
+      "start": 35.6,
+      "end": 42.32
+    },
+    {
+      "block": 8,
+      "text": "Silent updates will occur without this UAC prompt as of Firefox 12.",
+      "start": 42.5,
+      "end": 46.9
+    },
+    {
+      "block": 9,
+      "text": "Firefox 15 will have background updates.",
+      "start": 47.08,
+      "end": 50.12
+    },
+    {
+      "block": 10,
+      "text": "Are background updates the same as silent updates?",
+      "start": 50.3,
+      "end": 53.34
+    },
+    {
+      "block": 11,
+      "text": "No, background updates is a task that makes silent updates better, it is a component of the silent update project.",
+      "start": 53.52,
+      "end": 60.0
+    },
+    {
+      "block": 12,
+      "text": "In Firefox 12, updates will be silent, but they will still be applied at startup.",
+      "start": 60.18,
+      "end": 65.14
+    },
+    {
+      "block": 12,
+      "text": "Meaning when there is an update, it will take slightly longer to startup.",
+      "start": 65.32,
+      "end": 69.16
+    },
+    {
+      "block": 13,
+      "text": "In Firefox 15, updates will be applied in the background while Firefox is running.",
+      "start": 69.34,
+      "end": 74.22
+    },
+    {
+      "block": 13,
+      "text": "Meaning when there is an update, it will take about the same amount of time to startup as normal.",
+      "start": 74.4,
+      "end": 79.12
+    },
+    {
+      "block": 14,
+      "text": "Will Firefox force me into silent updates?",
+      "start": 79.3,
+      "end": 82.26
+    },
+    {
+      "block": 15,
+      "text": "No, you have always been able to configure how you get updates.",
+      "start": 82.44,
+      "end": 85.96
+    },
+    {
+      "block": 16,
+      "text": "Simply go to: Options -> Advanced -> Update.",
+      "start": 86.14,
+      "end": 89.18
+    },
+    {
+      "block": 17,
+      "text": "These options are not changing, in fact you will have more control over how your Firefox updates as of Firefox 12.",
+      "start": 89.36,
+      "end": 95.44
+    },
+    {
+      "block": 18,
+      "text": "You can choose to:",
+      "start": 95.62,
+      "end": 97.3
+    },
+    {
+      "block": 19,
+      "text": "Automatically download and install updates",
+      "start": 97.48,
+      "end": 100.44
+    },
+    {
+      "block": 20,
+      "text": "Check for updates but don\u2019t install them without permission",
+      "start": 100.62,
+      "end": 103.74
+    },
+    {
+      "block": 21,
+      "text": "Don\u2019t check for updates",
+      "start": 103.92,
+      "end": 105.92
+    },
+    {
+      "block": 22,
+      "text": "Furthermore, you can specify whether or not to use the Mozilla Maintenance Service to apply the update.",
+      "start": 106.1,
+      "end": 111.46
+    },
+    {
+      "block": 22,
+      "text": "If checked on, you will not have a UAC prompt.",
+      "start": 111.64,
+      "end": 114.76
+    },
+    {
+      "block": 23,
+      "text": "If I uninstall the Mozilla Maintenance Service will the next update just reinstall it?",
+      "start": 114.94,
+      "end": 119.42
+    },
+    {
+      "block": 24,
+      "text": "No, the Mozilla Maintenance Service will only be installed once.",
+      "start": 119.6,
+      "end": 123.36
+    },
+    {
+      "block": 24,
+      "text": "If you uninstall the service after that, it will never be installed via an update again.",
+      "start": 123.54,
+      "end": 128.26
+    },
+    {
+      "block": 25,
+      "text": "Will Firefox silently install other things than updates?",
+      "start": 128.44,
+      "end": 131.8
+    },
+    {
+      "block": 26,
+      "text": "No, the only things that will be silently installed, if the silent update option is on, are Firefox updates.",
+      "start": 131.98,
+      "end": 138.22
+    },
+    {
+      "block": 26,
+      "text": "The updates cannot be tampered with, if they are, they will not be installed.",
+      "start": 138.4,
+      "end": 142.88
+    },
+    {
+      "block": 27,
+      "text": "Will the Mozilla Maintenance Service slow down my computer?",
+      "start": 143.06,
+      "end": 146.42
+    },
+    {
+      "block": 28,
+      "text": "No, the Mozilla Maintenance Service will take up a small amount of disk space and only be run during an update.",
+      "start": 146.6,
+      "end": 152.68
+    },
+    {
+      "block": 28,
+      "text": "If an update is not in the middle of being applied, the service will not be running and will have absolutely no effect on the performance of Firefox and your machine.",
+      "start": 152.86,
+      "end": 160.7
+    },
+    {
+      "block": 29,
+      "text": "Will the Mozilla Maintenance Service make updating less secure?",
+      "start": 160.88,
+      "end": 164.4
+    },
+    {
+      "block": 30,
+      "text": "No, we have worked closely with the security team to ensure this feature was delivered securely.",
+      "start": 164.58,
+      "end": 169.54
+    },
+    {
+      "block": 30,
+      "text": "Firefox will only apply updates issued by Mozilla designed specifically for Firefox.",
+      "start": 169.72,
+      "end": 174.76
+    },
+    {
+      "block": 31,
+      "text": "Is updating more often less secure?",
+      "start": 174.94,
+      "end": 177.5
+    },
+    {
+      "block": 32,
+      "text": "No, if you are not updating your browser, then you do not have the most recent security fixes.",
+      "start": 177.68,
+      "end": 182.88
+    },
+    {
+      "block": 32,
+      "text": "These are the most dangerous security problems because they are well known and can be exploited.",
+      "start": 183.06,
+      "end": 188.02
+    },
+    {
+      "block": 33,
+      "text": "Will I see the effects of the silent update service in Firefox 12?",
+      "start": 188.2,
+      "end": 192.04
+    },
+    {
+      "block": 34,
+      "text": "No, although the Mozilla Maintenance Service will first be installed in Firefox 12, users will not experience the benefits of the service until the first update after Firefox 12.",
+      "start": 192.22,
+      "end": 201.74
+    },
+    {
+      "block": 35,
+      "text": "The update that installs Firefox 12 will install the service, and so the service itself can\u2019t be used to install that update.",
+      "start": 201.92,
+      "end": 208.56
+    },
+    {
+      "block": 36,
+      "text": "The next update after Firefox 12 may be Firefox 13 or may be a minor update after Firefox 12.",
+      "start": 208.74,
+      "end": 215.22
+    }
+  ]
+}

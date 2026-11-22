@@ -1,0 +1,75 @@
+{
+  "post": 32,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "7c54c4ff0c092766fead1563a6578104809d569ca9916d2a259eced8b4c1a81d",
+  "audioSHA256": "fe4329b7ac398c8f15642fed3d8928e6a5f30239e82f19f4354948fc43439dff",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "Probably the most impressive guy on the planet\u2026",
+      "start": 0.0,
+      "end": 2.64
+    },
+    {
+      "block": 1,
+      "text": "Steve Jobs was booted out of apple by the board in 1985.",
+      "start": 2.82,
+      "end": 6.58
+    },
+    {
+      "block": 2,
+      "text": "In 1986 he bought \u201cThe graphics group\u201d which he renamed to Pixar.",
+      "start": 6.76,
+      "end": 11.0
+    },
+    {
+      "block": 2,
+      "text": "He purchased it for 5 million.",
+      "start": 11.18,
+      "end": 13.34
+    },
+    {
+      "block": 3,
+      "text": "After leaving apple he also founded NeXT.",
+      "start": 13.52,
+      "end": 16.48
+    },
+    {
+      "block": 4,
+      "text": "The internet was CREATED by Tim Berners Lee on the NeXT operating system.",
+      "start": 16.66,
+      "end": 21.06
+    },
+    {
+      "block": 5,
+      "text": "In 1996 apple bought NeXT and used it as the basis of their OS X operating system.",
+      "start": 21.24,
+      "end": 26.76
+    },
+    {
+      "block": 5,
+      "text": "They bought it for 402 million.",
+      "start": 26.94,
+      "end": 29.42
+    },
+    {
+      "block": 6,
+      "text": "In 1997 Steve started work as interim CEO back at apple.",
+      "start": 29.6,
+      "end": 34.0
+    },
+    {
+      "block": 7,
+      "text": "In 2000 he dropped the title interim and became CEO.",
+      "start": 34.18,
+      "end": 38.02
+    },
+    {
+      "block": 8,
+      "text": "In 2006 Disney purchased pixar for 7.4 billion.",
+      "start": 38.2,
+      "end": 42.52
+    }
+  ]
+}

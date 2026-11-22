@@ -1,0 +1,63 @@
+{
+  "post": 98,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "bd2b6b7d7afa6e4d36925e9033162188a662c07372212942040295519bd80e1f",
+  "audioSHA256": "1b386530b78f380c03dac9b1f3e206e518a3113f53de1e22929e30c208aca5fa",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "I added tags support for my blog posts via using the Django tagging library.",
+      "start": 0.0,
+      "end": 4.56
+    },
+    {
+      "block": 0,
+      "text": "As you can see each blog post now has any number of tags associated with them.",
+      "start": 4.74,
+      "end": 9.14
+    },
+    {
+      "block": 1,
+      "text": "Overall Django tagging works a lot like Django comments in that you can attach tags to any model in your project.",
+      "start": 9.32,
+      "end": 15.4
+    },
+    {
+      "block": 2,
+      "text": "To implement Django tagging inside my site, I did need to make a slight model change to have a tags field in my blog news item table.",
+      "start": 15.58,
+      "end": 22.54
+    },
+    {
+      "block": 2,
+      "text": "Apparently this field is only used for caching and so that it shows up in the Django administration.",
+      "start": 22.72,
+      "end": 27.76
+    },
+    {
+      "block": 2,
+      "text": "When you modify your model in Django administration a new text field appears labeled Tags that you can enter in space separated tags for your model.",
+      "start": 27.94,
+      "end": 35.78
+    },
+    {
+      "block": 3,
+      "text": "I made each tag into a link which bring you to all posts on the site about the specified tag.",
+      "start": 35.96,
+      "end": 40.68
+    },
+    {
+      "block": 3,
+      "text": "Also you can find a Tags link on the right hand bar which displays the list of tags in use and how many posts each tag has.",
+      "start": 40.86,
+      "end": 47.26
+    },
+    {
+      "block": 4,
+      "text": "The Django tagging framework has many other features which I didn\u2019t use, but from what I used it\u2019s a great and very easy to use library.",
+      "start": 47.44,
+      "end": 54.24
+    }
+  ]
+}

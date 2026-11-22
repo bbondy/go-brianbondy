@@ -1,0 +1,15 @@
+{
+  "post": 47,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "db2c850902f0d8a52faffaa631e5e57ba09c7e0a1a8cac50ac0a612f6fb3493c",
+  "audioSHA256": "599c2623cb3cac383b336ac399cba911ccd8b37b575c13fcd6769200749ef45b",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "You can get them here",
+      "start": 0.0,
+      "end": 1.6
+    }
+  ]
+}

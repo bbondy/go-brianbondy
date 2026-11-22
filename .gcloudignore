@@ -23,3 +23,9 @@
 *.test
 # Output of the go coverage tool, specifically when used with LiteIDE
 *.out
+
+# MP3s are served from the dedicated Cloud Storage bucket.
+static/audio/blog/*.mp3
+
+# Generated speech chunks and helper binary are local build cache.
+.cache/blog-audio/

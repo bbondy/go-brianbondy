@@ -1,0 +1,33 @@
+{
+  "post": 38,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "883f823bbd08e0fdc610a8e63de6487296fd1ccf8d3b7462015181954ca5161e",
+  "audioSHA256": "a74b79293be4efc20ffe49778ffea05f018e72f2a96c60f02b7ec9110a32da89",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "From this commercial the Nintendo powerglove looks even cooler than the Wii remote.",
+      "start": 0.0,
+      "end": 4.48
+    },
+    {
+      "block": 1,
+      "text": "I hope Wii turns out to be a bigger hit than the power glove :) I bought the power glove and used it at most twice.",
+      "start": 4.66,
+      "end": 10.5
+    },
+    {
+      "block": 2,
+      "text": "Everyone talks about how innovative Nintendo has become for going in a different direction from PS3 and XBox; however, this type of thing has always been Nintendo\u2019s focus.",
+      "start": 10.68,
+      "end": 20.2
+    },
+    {
+      "block": 2,
+      "text": "From the power pad, the NES ROB robot, Nintendo duck hunt gun, Nintendo gamecube bongos, DDR mat, \u2026 Some of them were huge hits, others not so much, but it\u2019s the reason I love Nintendo so much.",
+      "start": 20.38,
+      "end": 33.26
+    }
+  ]
+}

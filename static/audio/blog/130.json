@@ -1,0 +1,297 @@
+{
+  "post": 130,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "6ea8f71c700696f79e22ff936d78b8d6883fc90876698b59c442570d085da6c8",
+  "audioSHA256": "fb154dd433c1d628b0c56f927c978b1125d9ccbc061064cc86ddcb00498aca10",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "This post is a continuation of the Windows 8 status update first started on this blog post.",
+      "start": 0.0,
+      "end": 5.04
+    },
+    {
+      "block": 1,
+      "text": "We\u2019re now past the hardly documented parts of development we were fighting with last week, and things are really starting to heat up.",
+      "start": 5.22,
+      "end": 11.46
+    },
+    {
+      "block": 1,
+      "text": "From here, most WinRT development topics should be nicely documented because they are now similar to any work done in a C++ Metro application.",
+      "start": 11.64,
+      "end": 19.8
+    },
+    {
+      "block": 2,
+      "text": "We\u2019re keeping organized via an etherpad similar to how the snappy project stays connected.",
+      "start": 19.98,
+      "end": 24.94
+    },
+    {
+      "block": 2,
+      "text": "Please ping someone on #windev on IRC if you\u2019d like the URL.",
+      "start": 25.12,
+      "end": 28.88
+    },
+    {
+      "block": 3,
+      "text": "Languages we\u2019ll be programming in",
+      "start": 29.06,
+      "end": 31.22
+    },
+    {
+      "block": 4,
+      "text": "We\u2019re moving ahead with C++/CX and dropping down into WRL when needed.",
+      "start": 31.4,
+      "end": 36.12
+    },
+    {
+      "block": 4,
+      "text": "It is still possible that we will one day port the C++/CX parts to only WRL.",
+      "start": 36.3,
+      "end": 41.58
+    },
+    {
+      "block": 5,
+      "text": "In the end though, with C++/CX you get native code, code that is 10x less the size, and code that is less prone to leaks.",
+      "start": 41.76,
+      "end": 49.52
+    },
+    {
+      "block": 5,
+      "text": "Less code means less to maintain and faster innovation.",
+      "start": 49.7,
+      "end": 53.06
+    },
+    {
+      "block": 5,
+      "text": "C++/CX is also documented and supported a lot better than WRL.",
+      "start": 53.24,
+      "end": 58.04
+    },
+    {
+      "block": 6,
+      "text": "We have a XAML window and we use DirectX to paint to it taking up the entire area of the screen.",
+      "start": 58.22,
+      "end": 63.82
+    },
+    {
+      "block": 7,
+      "text": "Development milestones",
+      "start": 64.0,
+      "end": 66.0
+    },
+    {
+      "block": 8,
+      "text": "This week Jim Mathies was a rock star and made significant progress in many areas:",
+      "start": 66.18,
+      "end": 70.98
+    },
+    {
+      "block": 9,
+      "text": "He added in the build config needed to build Fennec or Firefox as a Metro application.",
+      "start": 71.16,
+      "end": 76.04
+    },
+    {
+      "block": 10,
+      "text": "He started work on a new widget layer.",
+      "start": 76.22,
+      "end": 78.54
+    },
+    {
+      "block": 11,
+      "text": "He also got events working.",
+      "start": 78.72,
+      "end": 80.72
+    },
+    {
+      "block": 11,
+      "text": "Getting events working was hard because the UI thread is not the main thread.",
+      "start": 80.9,
+      "end": 85.06
+    },
+    {
+      "block": 12,
+      "text": "This week I spent some of my time finishing an old project and the rest on Windows 8 work:",
+      "start": 85.24,
+      "end": 90.12
+    },
+    {
+      "block": 13,
+      "text": "I hooked up the WinRT window to our graphics code (WinRT to Thebes).",
+      "start": 90.3,
+      "end": 94.62
+    },
+    {
+      "block": 13,
+      "text": "Metro does not give us easy and reliable access to an HWND and instead has a CoreWindow, so extra new code was needed inside the graphics module.",
+      "start": 94.8,
+      "end": 103.2
+    },
+    {
+      "block": 13,
+      "text": "In particular I added most of this new code in gfx/thebes and in gfx/cairo.",
+      "start": 103.38,
+      "end": 108.82
+    },
+    {
+      "block": 13,
+      "text": "We don\u2019t have support for the Azure back end yet.",
+      "start": 109.0,
+      "end": 111.88
+    },
+    {
+      "block": 13,
+      "text": "The new code added in the graphics modules does not use C++/CX.",
+      "start": 112.06,
+      "end": 116.62
+    },
+    {
+      "block": 14,
+      "text": "I also implemented support for Metro snap in regards to our rendering code.",
+      "start": 116.8,
+      "end": 121.04
+    },
+    {
+      "block": 14,
+      "text": "This means you can have a metro application beside our browser when in Metro mode.",
+      "start": 121.22,
+      "end": 125.54
+    },
+    {
+      "block": 15,
+      "text": "Firefox on Metro will not simply be Firefox desktop copied into the Metro environment, we are embracing the framework instead of fighting it.",
+      "start": 125.72,
+      "end": 133.32
+    },
+    {
+      "block": 16,
+      "text": "How to get the development environment setup yourself",
+      "start": 133.5,
+      "end": 136.54
+    },
+    {
+      "block": 17,
+      "text": "The code for this project is happening in the elm branch, you can see the changelog and checkout the project using hg here.",
+      "start": 136.72,
+      "end": 143.28
+    },
+    {
+      "block": 17,
+      "text": "The metro subfolder contains our research but most of the new code is going in widget/windows/winrt.",
+      "start": 143.46,
+      "end": 148.58
+    },
+    {
+      "block": 18,
+      "text": "We\u2019re currently compiling and working with a fennec mozconfig setup with the following options added:",
+      "start": 148.76,
+      "end": 153.88
+    },
+    {
+      "block": 19,
+      "text": "The option --enable-win8metro adds in the -ZW flag in the widget/windows/winrt module only, which makes it so C++/CX code is allowed.",
+      "start": 154.06,
+      "end": 162.94
+    },
+    {
+      "block": 19,
+      "text": "This LIBPATH environment variable must also exist.",
+      "start": 163.12,
+      "end": 166.48
+    },
+    {
+      "block": 20,
+      "text": "UX milestones",
+      "start": 166.66,
+      "end": 168.58
+    },
+    {
+      "block": 21,
+      "text": "Stephen Horlander started work on the Metro splashscreen and tile.",
+      "start": 168.76,
+      "end": 172.76
+    },
+    {
+      "block": 21,
+      "text": "You can see some experimentation on the tile and splashscreen here.",
+      "start": 172.94,
+      "end": 176.54
+    },
+    {
+      "block": 22,
+      "text": "I added these resources into the elm repository, it\u2019s definitely more exciting to develop when you click on a meaningful tile and see a cool splashscreen.",
+      "start": 176.72,
+      "end": 184.96
+    },
+    {
+      "block": 23,
+      "text": "New contributors",
+      "start": 185.14,
+      "end": 186.82
+    },
+    {
+      "block": 24,
+      "text": "Several developers have expressed interest in helping the project including Tim Abraldes, Wes Johnston, David Woolbright, Burak Yigit Kaya, and Berker Peksag.",
+      "start": 187.0,
+      "end": 196.6
+    },
+    {
+      "block": 24,
+      "text": "I\u2019m excited to have more hands on the project in the coming weeks.",
+      "start": 196.78,
+      "end": 200.22
+    },
+    {
+      "block": 25,
+      "text": "Next development steps",
+      "start": 200.4,
+      "end": 202.4
+    },
+    {
+      "block": 26,
+      "text": "Now that we have event handling and thebes hooked up, we should be pretty close to getting something resembling a browser.",
+      "start": 202.58,
+      "end": 208.26
+    },
+    {
+      "block": 26,
+      "text": "We\u2019re still very early in development but we\u2019re making great progress.",
+      "start": 208.44,
+      "end": 212.52
+    },
+    {
+      "block": 27,
+      "text": "Meetings",
+      "start": 212.7,
+      "end": 214.06
+    },
+    {
+      "block": 28,
+      "text": "We didn\u2019t have a meeting this week because we were actively keeping each other up to date on #windev on IRC.",
+      "start": 214.24,
+      "end": 219.76
+    },
+    {
+      "block": 29,
+      "text": "Next update",
+      "start": 219.94,
+      "end": 221.46
+    },
+    {
+      "block": 30,
+      "text": "I\u2019ll be away next week so probably won\u2019t write another update for a couple weeks.",
+      "start": 221.64,
+      "end": 225.56
+    },
+    {
+      "block": 30,
+      "text": "Feel free to email me if you\u2019d like to get involved.",
+      "start": 225.74,
+      "end": 228.62
+    }
+  ]
+}

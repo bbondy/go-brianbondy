@@ -1,0 +1,327 @@
+{
+  "post": 125,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "9019bd9b56033305ad1e022be21aa6f1834d79b0c878d767454d3ea5ece9c3ee",
+  "audioSHA256": "7938b2aa244a4bcf7ff2df8441874f333c270aaf23087afc4bf305a51b812007",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "Mozilla\u2019s rapid release process allows us to deliver features, speed optimizations, memory reductions, and much more\u2026 faster.",
+      "start": 0.0,
+      "end": 8.32
+    },
+    {
+      "block": 0,
+      "text": "Keeping up to date fast is an essential need for the ever changing web.",
+      "start": 8.5,
+      "end": 12.5
+    },
+    {
+      "block": 1,
+      "text": "There is a new release of Firefox every 6 weeks instead of every year.",
+      "start": 12.68,
+      "end": 16.84
+    },
+    {
+      "block": 1,
+      "text": "Even with this shortened release cycle, these releases still include major enhancements.",
+      "start": 17.02,
+      "end": 21.66
+    },
+    {
+      "block": 1,
+      "text": "These faster updates are possible because Mozilla is growing significantly, and the community of Mozillians at large is growing month over month.",
+      "start": 21.84,
+      "end": 29.36
+    },
+    {
+      "block": 2,
+      "text": "The rapid release process has some very positive side effects, like delivering new web technologies faster, and attracting world class developers who like to see their code ship fast.",
+      "start": 29.54,
+      "end": 39.22
+    },
+    {
+      "block": 2,
+      "text": "But rapid releases also have some negative side effects.",
+      "start": 39.4,
+      "end": 42.68
+    },
+    {
+      "block": 3,
+      "text": "One of the negative side effects is that minor annoyances with software updates suddenly become much more noticeable.",
+      "start": 42.86,
+      "end": 49.1
+    },
+    {
+      "block": 3,
+      "text": "Most users don\u2019t want to think about software updates nor version numbers and now they are being forced to do so every six weeks.",
+      "start": 49.28,
+      "end": 55.36
+    },
+    {
+      "block": 4,
+      "text": "One such minor annoyance is User Account Control (UAC):",
+      "start": 55.54,
+      "end": 59.46
+    },
+    {
+      "block": 5,
+      "text": "Starting with Windows Vista Microsoft introduced UAC, and with it users across the world see this familiar dialog when doing any operation that requires administrative access:",
+      "start": 59.64,
+      "end": 69.0
+    },
+    {
+      "block": 6,
+      "text": "UAC in particular makes every process run with limited permissions, and if you want to do something like write into Program Files, then the user has to give permissions to the application to do this.",
+      "start": 69.18,
+      "end": 79.42
+    },
+    {
+      "block": 6,
+      "text": "This makes things like automated software updates hard to do without user interaction.",
+      "start": 79.6,
+      "end": 84.08
+    },
+    {
+      "block": 6,
+      "text": "If we don\u2019t have access to write into Program Files to perform an update, then we have to ask for elevated permissions.",
+      "start": 84.26,
+      "end": 90.18
+    },
+    {
+      "block": 6,
+      "text": "We ask for elevated permissions today when applying updates.",
+      "start": 90.36,
+      "end": 93.72
+    },
+    {
+      "block": 7,
+      "text": "If a user with administrative access gives permissions to Firefox one time via a UAC prompt, and that user has automatic updates on, then there is no reason we should continue to ask them to elevate the permissions each and every time we want to apply an update.",
+      "start": 93.9,
+      "end": 106.7
+    },
+    {
+      "block": 7,
+      "text": "The user has already explicitly given permission to do it.",
+      "start": 106.88,
+      "end": 110.24
+    },
+    {
+      "block": 8,
+      "text": "If this worries you, just remember that you can change your mind at any time by configuring silent updates on the Options > Advanced > Update tab.",
+      "start": 110.42,
+      "end": 118.74
+    },
+    {
+      "block": 9,
+      "text": "The feature page for this task is located here: Remove requirement for the Windows UAC dialog when applying an update.",
+      "start": 118.92,
+      "end": 125.56
+    },
+    {
+      "block": 9,
+      "text": "I am the lead developer on this UAC task and the estimated target is the first quarter of 2012.",
+      "start": 125.74,
+      "end": 131.5
+    },
+    {
+      "block": 10,
+      "text": "What\u2019s being done to solve the UAC annoyance:",
+      "start": 131.68,
+      "end": 134.48
+    },
+    {
+      "block": 11,
+      "text": "There are several ways to tackle this issue.",
+      "start": 134.66,
+      "end": 137.22
+    },
+    {
+      "block": 11,
+      "text": "For example, some browsers that offer silent software updates will install into the user\u2019s application data folder and hence do not have this problem.",
+      "start": 137.4,
+      "end": 145.0
+    },
+    {
+      "block": 11,
+      "text": "We could do the same, but we chose not to because it can be an administrative headache for some people who manage updates themselves and have to maintain an installation for every user.",
+      "start": 145.18,
+      "end": 154.22
+    },
+    {
+      "block": 12,
+      "text": "We are currently experimenting with a Windows service approach.",
+      "start": 154.4,
+      "end": 157.92
+    },
+    {
+      "block": 13,
+      "text": "This means that an optional component will be installed that automates the software update process better without giving UAC prompts.",
+      "start": 158.1,
+      "end": 164.9
+    },
+    {
+      "block": 14,
+      "text": "Only one Firefox service:",
+      "start": 165.08,
+      "end": 167.4
+    },
+    {
+      "block": 15,
+      "text": "There are four different Firefox development channels you can use.",
+      "start": 167.58,
+      "end": 171.02
+    },
+    {
+      "block": 15,
+      "text": "At any time there is a Firefox Release channel, Beta channel, Aurora channel, and Nightly builds channel.",
+      "start": 171.2,
+      "end": 177.36
+    },
+    {
+      "block": 15,
+      "text": "These channels give you access to Firefox releases at different stages of the development cycle.",
+      "start": 177.54,
+      "end": 182.5
+    },
+    {
+      "block": 16,
+      "text": "A user can have multiple installations across channels, but only one Firefox service will exist in Windows Services.",
+      "start": 182.68,
+      "end": 189.24
+    },
+    {
+      "block": 17,
+      "text": "Firefox service as an optional component:",
+      "start": 189.42,
+      "end": 192.14
+    },
+    {
+      "block": 18,
+      "text": "The Firefox service will be an optional component.",
+      "start": 192.32,
+      "end": 195.28
+    },
+    {
+      "block": 18,
+      "text": "It doesn\u2019t need to be installed, and if it is stopped or disabled, updates will work as they did before in every other recent Firefox release.",
+      "start": 195.46,
+      "end": 202.58
+    },
+    {
+      "block": 19,
+      "text": "A user can also uninstall the Firefox service at any time.",
+      "start": 202.76,
+      "end": 206.68
+    },
+    {
+      "block": 19,
+      "text": "Updates will continue to occur using the old method.",
+      "start": 206.86,
+      "end": 209.9
+    },
+    {
+      "block": 20,
+      "text": "Other uses of the Firefox service:",
+      "start": 210.08,
+      "end": 212.48
+    },
+    {
+      "block": 21,
+      "text": "Having a Windows service installed means that we can investigate other integration and maintenance points.",
+      "start": 212.66,
+      "end": 218.02
+    },
+    {
+      "block": 21,
+      "text": "The possibilities are very exciting.",
+      "start": 218.2,
+      "end": 220.68
+    },
+    {
+      "block": 22,
+      "text": "The Windows service may be used later on for a wider selection of maintenance related things including faster browser startup via prefetching, but initially will be only for software updates.",
+      "start": 220.86,
+      "end": 230.46
+    },
+    {
+      "block": 23,
+      "text": "High level overview of other new Silent update features",
+      "start": 230.64,
+      "end": 233.92
+    },
+    {
+      "block": 24,
+      "text": "Above I mostly talked about silent updates on Windows, but there are other update issues being addressed in several new features across all platforms.",
+      "start": 234.1,
+      "end": 241.54
+    },
+    {
+      "block": 24,
+      "text": "This section was originally written by Robert Strong with help from Chris Lee, and Lawrence Mandel and describes these features.",
+      "start": 241.72,
+      "end": 248.28
+    },
+    {
+      "block": 25,
+      "text": "All of the silent update work can be tracked on the wiki.",
+      "start": 248.46,
+      "end": 251.42
+    },
+    {
+      "block": 26,
+      "text": "Other Mozilla products:",
+      "start": 251.6,
+      "end": 253.68
+    },
+    {
+      "block": 27,
+      "text": "Other Mozilla products may use the service described above.",
+      "start": 253.86,
+      "end": 257.46
+    },
+    {
+      "block": 27,
+      "text": "We currently plan to have only one Windows service across all products.",
+      "start": 257.64,
+      "end": 261.64
+    },
+    {
+      "block": 27,
+      "text": "All supported architectures are also planned to share the same Windows service.",
+      "start": 261.82,
+      "end": 265.9
+    },
+    {
+      "block": 28,
+      "text": "Every feature described in this post either applies to or can be done for other Mozilla based applications such as SeaMonkey, Thunderbird, and SongBird.",
+      "start": 266.08,
+      "end": 274.4
+    },
+    {
+      "block": 29,
+      "text": "Platform Integration team:",
+      "start": 274.58,
+      "end": 276.82
+    },
+    {
+      "block": 30,
+      "text": "Mozilla started a new Platform Integration team which focuses on issues which need Operating System specific solutions.",
+      "start": 277.0,
+      "end": 283.56
+    },
+    {
+      "block": 31,
+      "text": "I am a member of this new team led by Robert Strong.",
+      "start": 283.74,
+      "end": 287.1
+    },
+    {
+      "block": 31,
+      "text": "Some of the tasks being worked on by this team are described above.",
+      "start": 287.28,
+      "end": 290.96
+    }
+  ]
+}

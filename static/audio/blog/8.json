@@ -1,0 +1,93 @@
+{
+  "post": 8,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "8af0772a97f8c37d863e2bfec2811c1074ab1dfdf4f1e2da906548b8dbc3c455",
+  "audioSHA256": "1e4add93aeabd079061be484011792970039d7780d7735c4cb2474ffb816d7a5",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "Everyone states that putting 2 companies together who are not leading will not take over the leader Google.",
+      "start": 0.0,
+      "end": 5.2
+    },
+    {
+      "block": 1,
+      "text": "This is true, but only for search.",
+      "start": 5.38,
+      "end": 8.02
+    },
+    {
+      "block": 1,
+      "text": "Yahoo is a great company with a huge community that reaches much further than search.",
+      "start": 8.2,
+      "end": 12.68
+    },
+    {
+      "block": 1,
+      "text": "In many ways Yahoo beats Google, just not in search.",
+      "start": 12.86,
+      "end": 16.3
+    },
+    {
+      "block": 2,
+      "text": "Most advertising money is spent on search.",
+      "start": 16.48,
+      "end": 19.12
+    },
+    {
+      "block": 2,
+      "text": "Even if Microsoft-Yahoo doesn\u2019t have the majority share of search, it doesn\u2019t matter.",
+      "start": 19.3,
+      "end": 23.78
+    },
+    {
+      "block": 2,
+      "text": "Aggregating both portals into the same advertising service, will simplify advertiser\u2019s management of their budget.",
+      "start": 23.96,
+      "end": 30.04
+    },
+    {
+      "block": 2,
+      "text": "It will also be a bigger market share, and so people will take more interest in advertising on Microsoft-Yahoo.",
+      "start": 30.22,
+      "end": 36.22
+    },
+    {
+      "block": 3,
+      "text": "There exists a subset of users who advertise with Microsoft but not Yahoo.",
+      "start": 36.4,
+      "end": 41.04
+    },
+    {
+      "block": 3,
+      "text": "Likewise, there exists a subset of users who advertise with Yahoo, but not Microsoft.",
+      "start": 41.22,
+      "end": 46.74
+    },
+    {
+      "block": 3,
+      "text": "Putting Microsoft-Yahoo together will expand on both of these subsets of people, by broadening their advertising base.",
+      "start": 46.92,
+      "end": 53.08
+    },
+    {
+      "block": 4,
+      "text": "It is a great move by Microsoft in my opinion.",
+      "start": 53.26,
+      "end": 56.22
+    },
+    {
+      "block": 4,
+      "text": "That is, just as long as they can properly integrate the parts of the company that should be integrated.",
+      "start": 56.4,
+      "end": 61.68
+    },
+    {
+      "block": 4,
+      "text": "For now, phase 1, this should only be the advertising portal.",
+      "start": 61.86,
+      "end": 65.7
+    }
+  ]
+}

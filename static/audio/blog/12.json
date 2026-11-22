@@ -1,0 +1,15 @@
+{
+  "post": 12,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "31917b216786a69afe124e17f9d8748e86768016bb23438049e8d627992f8313",
+  "audioSHA256": "d2e5395fc938335f10f0c1d59c38bf9ac92a2322528f85b266f0fb9c6c263b8c",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "7 part interview with Steve Jobs and Bill Gates",
+      "start": 0.0,
+      "end": 3.2
+    }
+  ]
+}

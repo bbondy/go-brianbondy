@@ -1,0 +1,141 @@
+{
+  "post": 150,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "c3e3d9b0b3e1fd7de04458089ec500c4d6f98734866a203f6b9a0070ce7ea706",
+  "audioSHA256": "1b740e74d4df6c2257cb5b980b8949b24e0b330ce64701c9d7daa28c262f7978",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "Work on the Metro style enabled desktop browser has progressed steadily and things are looking really good.",
+      "start": 0.0,
+      "end": 5.36
+    },
+    {
+      "block": 1,
+      "text": "We have a Q3 goal of delivering a Metro preview.",
+      "start": 5.54,
+      "end": 8.82
+    },
+    {
+      "block": 1,
+      "text": "This preview will include primary browser UI for navigation and tabs, and will be delivered as a combined classic + metro browser.",
+      "start": 9.0,
+      "end": 16.36
+    },
+    {
+      "block": 1,
+      "text": "I believe there is a Q4 goal for a beta release as well.",
+      "start": 16.54,
+      "end": 20.06
+    },
+    {
+      "block": 2,
+      "text": "We made significant progress since the last update, but there is still a lot to do.",
+      "start": 20.24,
+      "end": 24.8
+    },
+    {
+      "block": 3,
+      "text": "In particular we got the following working:",
+      "start": 24.98,
+      "end": 27.54
+    },
+    {
+      "block": 4,
+      "text": "Crash reporting",
+      "start": 27.72,
+      "end": 29.4
+    },
+    {
+      "block": 5,
+      "text": "pdfjs (Built in PDF viewer without the need for a plugin)",
+      "start": 29.58,
+      "end": 33.74
+    },
+    {
+      "block": 6,
+      "text": "Windowless Flash, although full screen flash doesn\u2019t work yet",
+      "start": 33.92,
+      "end": 37.68
+    },
+    {
+      "block": 7,
+      "text": "Some accessibility hooks",
+      "start": 37.86,
+      "end": 39.94
+    },
+    {
+      "block": 8,
+      "text": "Front end event refactoring to be faster and to treat mouse input normally and distinct from touch input",
+      "start": 40.12,
+      "end": 45.64
+    },
+    {
+      "block": 9,
+      "text": "File pickers updated to be asynchronous on all platforms because it was needed for WinRT",
+      "start": 45.82,
+      "end": 50.7
+    },
+    {
+      "block": 10,
+      "text": "Front end awesomescreen work was done with results coming up as you type in the urlbar.",
+      "start": 50.88,
+      "end": 55.28
+    },
+    {
+      "block": 11,
+      "text": "While in metro, we also have the \u2018view this page on desktop\u2019 functionality working",
+      "start": 55.46,
+      "end": 60.18
+    },
+    {
+      "block": 12,
+      "text": "Various keyboard shortcuts added",
+      "start": 60.36,
+      "end": 63.0
+    },
+    {
+      "block": 13,
+      "text": "Various other fixes and refactoring",
+      "start": 63.18,
+      "end": 65.74
+    },
+    {
+      "block": 14,
+      "text": "Add-ons will not be part of the initial release, but we will eventually be supporting Add-ons via the Add-on SDK.",
+      "start": 65.92,
+      "end": 72.0
+    },
+    {
+      "block": 14,
+      "text": "These initial limitations are only when in the Metro version of the browser on Windows 8.",
+      "start": 72.18,
+      "end": 76.74
+    },
+    {
+      "block": 15,
+      "text": "We\u2019ll have some kind of sync functionality to sync data between your Metro interface and your desktop interface.",
+      "start": 76.92,
+      "end": 82.84
+    },
+    {
+      "block": 15,
+      "text": "We\u2019re hoping for a local, no setup sync functionality, but at worst it will be done through the current sync functionality.",
+      "start": 83.02,
+      "end": 89.1
+    },
+    {
+      "block": 16,
+      "text": "We haven\u2019t merged to mozilla-central yet, which is where Nightly builds will show up.",
+      "start": 89.28,
+      "end": 93.92
+    },
+    {
+      "block": 16,
+      "text": "This is mainly because we\u2019re waiting on bug 755724 to be complete, which is to split platform and app resources up so that they can be loaded individually.",
+      "start": 94.1,
+      "end": 103.94
+    }
+  ]
+}

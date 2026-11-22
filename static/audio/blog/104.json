@@ -1,0 +1,645 @@
+{
+  "post": 104,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "3aa988b4d07c8f02db1e3d706a30d607eb82990a652d2fe0c1b1038596bf3dee",
+  "audioSHA256": "dbbf7ed2403ee4153c05a2c63309e78c36acf4b7f4b8a2c6d723ebc63aac6246",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "Update December 11, 2011: StackOverflow recently implemented removing nofollow links on high rated posts.",
+      "start": 0.0,
+      "end": 6.8
+    },
+    {
+      "block": 0,
+      "text": "It is very strict, but it\u2019s a start.",
+      "start": 6.98,
+      "end": 9.62
+    },
+    {
+      "block": 1,
+      "text": "Update November 12, 2012: I don\u2019t know how many answers have nofollow removed, but I think it\u2019s a very, very, very small number.",
+      "start": 9.8,
+      "end": 17.64
+    },
+    {
+      "block": 1,
+      "text": "I\u2019d bet much less than 0.1%.",
+      "start": 17.82,
+      "end": 20.86
+    },
+    {
+      "block": 2,
+      "text": "For example see this accepted answer with 74 upvotes from a user with almost 100k reputation.",
+      "start": 21.04,
+      "end": 26.96
+    },
+    {
+      "block": 2,
+      "text": "The links are to MSDN (which is probably not spam by definition) and to a quoted source on techbubbles.com.",
+      "start": 27.14,
+      "end": 33.78
+    },
+    {
+      "block": 3,
+      "text": "I personally chose to stop answering questions in the same capacity as I used to for the reasons outlined in this post.",
+      "start": 33.96,
+      "end": 39.96
+    },
+    {
+      "block": 4,
+      "text": "Update November 16, 2012: The link mentioned on November 12th was fixed by StackOverflow\u2019s Kevin Montrose.",
+      "start": 40.14,
+      "end": 46.94
+    },
+    {
+      "block": 4,
+      "text": "I\u2019m not sure if this had a wide effect on less strict nofollow removal, or if it was special cased to remove the nofollow.",
+      "start": 47.12,
+      "end": 53.12
+    },
+    {
+      "block": 5,
+      "text": "Everyone with any exposure to HTML knows what a link element looks like:",
+      "start": 53.3,
+      "end": 57.62
+    },
+    {
+      "block": 6,
+      "text": "This is a link called My Website with a link target of https://brianbondy.com.",
+      "start": 57.8,
+      "end": 64.92
+    },
+    {
+      "block": 6,
+      "text": "Links like this can be easily marked up with a rel attribute to add extra information about the link.",
+      "start": 65.1,
+      "end": 70.06
+    },
+    {
+      "block": 6,
+      "text": "One particular usage of the rel attribute is rel=\"nofollow\".",
+      "start": 70.24,
+      "end": 74.24
+    },
+    {
+      "block": 7,
+      "text": "The rel=nofollow attribute and value is used to inform a search engine that the link\u2019s target should not benefit in ranking from search engines.",
+      "start": 74.42,
+      "end": 81.38
+    },
+    {
+      "block": 8,
+      "text": "What problem is nofollow supposed to solve?",
+      "start": 81.56,
+      "end": 84.2
+    },
+    {
+      "block": 9,
+      "text": "nofollow was supposed to allow search engines to detect links on a page which could be subject to spam.",
+      "start": 84.38,
+      "end": 89.66
+    },
+    {
+      "block": 10,
+      "text": "A perfect example of where this is useful would be on a blog site where comments are allowed.",
+      "start": 89.84,
+      "end": 94.72
+    },
+    {
+      "block": 11,
+      "text": "The nofollow convention was created because in theory, if you take away the PageRank benefit from a link\u2019s target, spammers should feel discouraged from spamming their links on random blogs.",
+      "start": 94.9,
+      "end": 104.34
+    },
+    {
+      "block": 12,
+      "text": "Who came up with the nofollow convention and who follows it?",
+      "start": 104.52,
+      "end": 107.8
+    },
+    {
+      "block": 13,
+      "text": "Members of Google originally came up with nofollow mainly for blogger.com in 2005.",
+      "start": 107.98,
+      "end": 113.34
+    },
+    {
+      "block": 13,
+      "text": "This convention of not affecting page rank of the target was adopted by Google in 2005 and later by Yahoo and Bing as well.",
+      "start": 113.52,
+      "end": 120.88
+    },
+    {
+      "block": 14,
+      "text": "Each search engine has its own interpretation of nofollow but in general they all agree that PageRank should not be attributed to the link\u2019s target.",
+      "start": 121.06,
+      "end": 128.66
+    },
+    {
+      "block": 15,
+      "text": "Does nofollow work?",
+      "start": 128.84,
+      "end": 130.76
+    },
+    {
+      "block": 16,
+      "text": "nofollow doesn\u2019t solve the problem it was intended to solve.",
+      "start": 130.94,
+      "end": 134.22
+    },
+    {
+      "block": 17,
+      "text": "Spammers still want direct clicks into their site, and they have no guarantee that search engines will actually do like they say and ignore the links, so spamming is still useful to the spammers.",
+      "start": 134.4,
+      "end": 143.68
+    },
+    {
+      "block": 17,
+      "text": "Spammers also know that on many sites the content of the site is duplicated on other domains, sometimes these duplicated sites do not use the nofollow convention.",
+      "start": 143.86,
+      "end": 152.66
+    },
+    {
+      "block": 18,
+      "text": "Repurposing nofollow",
+      "start": 152.84,
+      "end": 154.92
+    },
+    {
+      "block": 19,
+      "text": "nofollow has since its original inception tried to be repurposed to be used for paid advertising links.",
+      "start": 155.1,
+      "end": 160.38
+    },
+    {
+      "block": 19,
+      "text": "However this affects an entire market of people who pay for links so that they get the benefit of SEO.",
+      "start": 160.56,
+      "end": 165.76
+    },
+    {
+      "block": 20,
+      "text": "Internally to a site, for links inside that site nofollow has been used to indicate pages that aren\u2019t as important as other pages such as the privacy policy page.",
+      "start": 165.94,
+      "end": 174.34
+    },
+    {
+      "block": 21,
+      "text": "What is nofollow abuse?",
+      "start": 174.52,
+      "end": 176.6
+    },
+    {
+      "block": 22,
+      "text": "nofollow abuse is when a site uses nofollow not to indicate potential spam, but instead for its own selfish benefit.",
+      "start": 176.78,
+      "end": 183.34
+    },
+    {
+      "block": 23,
+      "text": "In particular, if a site marks a link as nofollow when credit is due to the attributed source, and the site knows the link is not spam, then you have nofollow abuse.",
+      "start": 183.52,
+      "end": 192.16
+    },
+    {
+      "block": 24,
+      "text": "Does abusing nofollow hurt the Internet?",
+      "start": 192.34,
+      "end": 194.98
+    },
+    {
+      "block": 25,
+      "text": "Yes.",
+      "start": 195.16,
+      "end": 196.36
+    },
+    {
+      "block": 26,
+      "text": "Abusing nofollow means that the sites that should get credit for good content no longer are getting credit for good content.",
+      "start": 196.54,
+      "end": 202.46
+    },
+    {
+      "block": 26,
+      "text": "This will in turn mean that you will receive search results that aren\u2019t the best possible ones.",
+      "start": 202.64,
+      "end": 207.04
+    },
+    {
+      "block": 27,
+      "text": "Why do sites abuse nofollow?",
+      "start": 207.22,
+      "end": 209.46
+    },
+    {
+      "block": 28,
+      "text": "The problem is that many sites want to be the highest rated site on searches from search engines.",
+      "start": 209.64,
+      "end": 214.44
+    },
+    {
+      "block": 28,
+      "text": "When the abusing site refers to sources, they will always mark the links to other sources with nofollow.",
+      "start": 214.62,
+      "end": 220.06
+    },
+    {
+      "block": 28,
+      "text": "That way the abusing sites will have a better chance of coming up in searches before the people they are quoting and referring to.",
+      "start": 220.24,
+      "end": 226.08
+    },
+    {
+      "block": 29,
+      "text": "Sites do this for selfish benefit and also because they believe their site has the best content available on the Internet.",
+      "start": 226.26,
+      "end": 232.34
+    },
+    {
+      "block": 29,
+      "text": "If it is the best content on the Internet though they shouldn\u2019t need to do dirty tricks with nofollow.",
+      "start": 232.52,
+      "end": 237.32
+    },
+    {
+      "block": 30,
+      "text": "Who abuses nofollow?",
+      "start": 237.5,
+      "end": 239.5
+    },
+    {
+      "block": 31,
+      "text": "Many major players do, and many major players do not.",
+      "start": 239.68,
+      "end": 243.28
+    },
+    {
+      "block": 32,
+      "text": "Particularly responsible are those sites with a reputation system in place.",
+      "start": 243.46,
+      "end": 247.54
+    },
+    {
+      "block": 32,
+      "text": "The site in particular that I want to talk about is stackoverflow.com.",
+      "start": 247.72,
+      "end": 252.04
+    },
+    {
+      "block": 33,
+      "text": "StackOverflow is a site for programming Q&A and is also the same framework used by many other Q&A sites on a variety of other subjects called StackExchange.",
+      "start": 252.22,
+      "end": 260.94
+    },
+    {
+      "block": 34,
+      "text": "StackOverflow and the entire StackExchange network are some of the biggest abusers of nofollow.",
+      "start": 261.12,
+      "end": 266.48
+    },
+    {
+      "block": 35,
+      "text": "One of the co-founders and lead developers Jeff Atwood has stated:",
+      "start": 266.66,
+      "end": 270.5
+    },
+    {
+      "block": 36,
+      "text": "You get a followed link in the \u201cwebsite\u201d field of your user profile at 2000 reputation.",
+      "start": 270.68,
+      "end": 275.64
+    },
+    {
+      "block": 36,
+      "text": "Beyond that, everything outside the network is nofollowed as a simple matter of standard policy.",
+      "start": 275.82,
+      "end": 281.1
+    },
+    {
+      "block": 36,
+      "text": "Exactly like, and for all the same reasons as, Wikipedia.",
+      "start": 281.28,
+      "end": 285.28
+    },
+    {
+      "block": 37,
+      "text": "The heart of the abuse though doesn\u2019t come from attributing user pages with a bonus link to their website.",
+      "start": 285.46,
+      "end": 290.58
+    },
+    {
+      "block": 38,
+      "text": "The abuse comes into play when questions and answers link to references that their answers are based on.",
+      "start": 290.76,
+      "end": 295.96
+    },
+    {
+      "block": 38,
+      "text": "Links highlighted in orange indicate nofollow abuse.",
+      "start": 296.14,
+      "end": 299.34
+    },
+    {
+      "block": 39,
+      "text": "In Jeff\u2019s quote above, he doesn\u2019t address the fact that Wikipedia and Stackoverflow are very different sites.",
+      "start": 299.52,
+      "end": 305.44
+    },
+    {
+      "block": 40,
+      "text": "Wikipedia organizes it\u2019s content by topic only.",
+      "start": 305.62,
+      "end": 308.98
+    },
+    {
+      "block": 40,
+      "text": "Stackoverflow organizes it\u2019s content first by topic, and then by author.",
+      "start": 309.16,
+      "end": 313.8
+    },
+    {
+      "block": 40,
+      "text": "And each author has a reputation which could be used to determine if their answer is trustworthy.",
+      "start": 313.98,
+      "end": 318.78
+    },
+    {
+      "block": 40,
+      "text": "Each answer also gets up-votes which could be used to determine if the answer is trustworthy.",
+      "start": 318.96,
+      "end": 323.76
+    },
+    {
+      "block": 40,
+      "text": "Each open question is also not a closed question which counts as well.",
+      "start": 323.94,
+      "end": 327.94
+    },
+    {
+      "block": 41,
+      "text": "Wikipedia adds nofollow to all of their external links, but this does not make them right.",
+      "start": 328.12,
+      "end": 333.0
+    },
+    {
+      "block": 41,
+      "text": "They are almost as guilty as Stackoverflow.",
+      "start": 333.18,
+      "end": 335.98
+    },
+    {
+      "block": 41,
+      "text": "Stackoverflow is even more guilty because they have a reputation system in place and they know that the users with enough reputation will not spam their site.",
+      "start": 336.16,
+      "end": 344.0
+    },
+    {
+      "block": 42,
+      "text": "Stackoverflow does not want to compete with other sites over Google ranking positions, this is because over 87% of their incoming traffic comes from Google searches as of December 15th, 2010.",
+      "start": 344.18,
+      "end": 354.9
+    },
+    {
+      "block": 43,
+      "text": "More on Stackoverflow nofollow abuse",
+      "start": 355.08,
+      "end": 357.8
+    },
+    {
+      "block": 44,
+      "text": "Jon Skeet, the #1 user on Stackoverflow has 250k reputation, he is immune to many things; however, the links he posts have nofollow.",
+      "start": 357.98,
+      "end": 367.34
+    },
+    {
+      "block": 44,
+      "text": "You can see this on his about page, on his questions, on his answers, and on his comments.",
+      "start": 367.52,
+      "end": 372.72
+    },
+    {
+      "block": 45,
+      "text": "Even answers which are highly voted up still use nofollow.",
+      "start": 372.9,
+      "end": 376.34
+    },
+    {
+      "block": 45,
+      "text": "The issue has been brought up on meta Stackoverflow many times in hopes of solving the abuse but it was declined each time:",
+      "start": 376.52,
+      "end": 383.16
+    },
+    {
+      "block": 46,
+      "text": "nofollow Users with 3000+ reputation?",
+      "start": 383.34,
+      "end": 386.54
+    },
+    {
+      "block": 46,
+      "text": "Status Declined! nofollow Questions of a certain age?",
+      "start": 386.72,
+      "end": 390.48
+    },
+    {
+      "block": 46,
+      "text": "Status Declined!",
+      "start": 390.66,
+      "end": 392.5
+    },
+    {
+      "block": 47,
+      "text": "However within 1 hour of a meta post about a bug with nofollow not being added Status Completed!",
+      "start": 392.68,
+      "end": 398.12
+    },
+    {
+      "block": 48,
+      "text": "Sponsored tags on Stackoverflow have nofollow, this was mentioned above as to Google trying to repurpose nofollow.",
+      "start": 398.3,
+      "end": 405.02
+    },
+    {
+      "block": 49,
+      "text": "The problem is made worse in that all StackExchange sites behave in the same way.",
+      "start": 405.2,
+      "end": 409.52
+    },
+    {
+      "block": 49,
+      "text": "And also if you reference Stackoverflow from a StackExchange network they will actually remove the nofollow!",
+      "start": 409.7,
+      "end": 415.78
+    },
+    {
+      "block": 50,
+      "text": "Stackoverflow is a nofollow Hypocrite",
+      "start": 415.96,
+      "end": 418.76
+    },
+    {
+      "block": 51,
+      "text": "On this post entitled Attribution Required Jeff Atwood explains how the content that their community creates, if used, must be linked without nofollow:",
+      "start": 418.94,
+      "end": 427.34
+    },
+    {
+      "block": 52,
+      "text": "By \u201cdirectly\u201d, I mean each hyperlink must point directly to our domain, and not use a tinyurl or any other form of obfuscation or redirection.",
+      "start": 427.52,
+      "end": 435.44
+    },
+    {
+      "block": 52,
+      "text": "Furthermore, the links must not be nofollowed.",
+      "start": 435.62,
+      "end": 438.66
+    },
+    {
+      "block": 53,
+      "text": "This stance is good, it protects the content of the well deserved writers of Stackoverflow such as myself.",
+      "start": 438.84,
+      "end": 444.76
+    },
+    {
+      "block": 53,
+      "text": "I am within the top 50 users and hence have spent a lot of my time writing great answers.",
+      "start": 444.94,
+      "end": 449.82
+    },
+    {
+      "block": 53,
+      "text": "But these answers are not 100% of my own creation, they often build upon other people and other answers from other sites.",
+      "start": 450.0,
+      "end": 456.64
+    },
+    {
+      "block": 53,
+      "text": "It\u2019s simply wrong that these other sites are not attributed page rank when I link to them.",
+      "start": 456.82,
+      "end": 461.3
+    },
+    {
+      "block": 54,
+      "text": "When Stackoverflow builds their answers upon other great articles, they fully abuse nofollow.",
+      "start": 461.48,
+      "end": 466.76
+    },
+    {
+      "block": 54,
+      "text": "Even when an answer is a complete copy of another page with a reference link.",
+      "start": 466.94,
+      "end": 471.02
+    },
+    {
+      "block": 54,
+      "text": "The link will be nofollow.",
+      "start": 471.2,
+      "end": 473.12
+    },
+    {
+      "block": 55,
+      "text": "However when Stackoverflow benefits from not using nofollow they make sure that you don\u2019t abuse nofollow.",
+      "start": 473.3,
+      "end": 478.74
+    },
+    {
+      "block": 55,
+      "text": "Stackoverflow will always strip nofollow if the link you post is on the Stackoverflow domain or StackExchange network, but it will not strip it for any other attributed site.",
+      "start": 478.92,
+      "end": 487.48
+    },
+    {
+      "block": 56,
+      "text": "Another place where they link back to their site is via the StackExchange flair which they want people to include on their websites.",
+      "start": 487.66,
+      "end": 494.06
+    },
+    {
+      "block": 56,
+      "text": "These links of course do not contain a nofllow.",
+      "start": 494.24,
+      "end": 497.12
+    },
+    {
+      "block": 57,
+      "text": "Stackoverflow has always prided themselves as being less evil than experts-exchange.com.",
+      "start": 497.3,
+      "end": 502.98
+    },
+    {
+      "block": 57,
+      "text": "And in many ways they are less evil.",
+      "start": 503.16,
+      "end": 505.4
+    },
+    {
+      "block": 57,
+      "text": "But one area where this is not true is that nofollow is not used on all links in experts-exchange..",
+      "start": 505.58,
+      "end": 511.1
+    },
+    {
+      "block": 58,
+      "text": "Do all sites abuse nofollow?",
+      "start": 511.28,
+      "end": 513.52
+    },
+    {
+      "block": 59,
+      "text": "No.",
+      "start": 513.7,
+      "end": 514.9
+    },
+    {
+      "block": 60,
+      "text": "Slashdot is an example of a website which does not abuse nofollow.",
+      "start": 515.08,
+      "end": 519.16
+    },
+    {
+      "block": 61,
+      "text": "It is a site which Stackoverflow should look to for inspiration in this respect.",
+      "start": 519.34,
+      "end": 523.58
+    },
+    {
+      "block": 62,
+      "text": "Slashdot has per user karma and they will selectively remove nofollow from trusted sources.",
+      "start": 523.76,
+      "end": 528.8
+    },
+    {
+      "block": 62,
+      "text": "I verified this for both their comments and their article posts.",
+      "start": 528.98,
+      "end": 532.58
+    },
+    {
+      "block": 63,
+      "text": "How can we solve this problem?",
+      "start": 532.76,
+      "end": 534.76
+    },
+    {
+      "block": 64,
+      "text": "One thing we can do is raise awareness of nofollow abuse.",
+      "start": 534.94,
+      "end": 538.38
+    },
+    {
+      "block": 64,
+      "text": "That way the offending sites may eventually get the point of not abusing nofollow.",
+      "start": 538.56,
+      "end": 542.88
+    },
+    {
+      "block": 65,
+      "text": "I would hope that search engines will be powerful enough to not only ignore nofollow from abusing sites, but even punish these sites for trying to abuse the convention.",
+      "start": 543.06,
+      "end": 551.46
+    }
+  ]
+}

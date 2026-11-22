@@ -1,0 +1,333 @@
+{
+  "post": 127,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "d8d694a5101a15dcf54470e97f5d68f244c5a75c7775cc210e444cd954c429c3",
+  "audioSHA256": "46921b0a6db125ffebb1e5b3e31ae4a00cf3dd1a9b1cf6ca05263f149c6439c7",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "Snappy is a project that aims to improve is improving Firefox responsiveness.",
+      "start": 0.0,
+      "end": 4.72
+    },
+    {
+      "block": 0,
+      "text": "As part of this project I\u2019ve been working on Firefox startup optimizations.",
+      "start": 4.9,
+      "end": 9.06
+    },
+    {
+      "block": 1,
+      "text": "You can spend days, months, or even years trying to optimize code, but if you don\u2019t understand where to optimize, you won\u2019t be making a difference.",
+      "start": 9.24,
+      "end": 17.16
+    },
+    {
+      "block": 1,
+      "text": "Likewise, searching for an optimizations in a competitor\u2019s product is usually not the best way to get results.",
+      "start": 17.34,
+      "end": 23.18
+    },
+    {
+      "block": 2,
+      "text": "It\u2019s nearly impossible to optimize code by guessing what is slow, you need to profile the code to understand the problems.",
+      "start": 23.36,
+      "end": 30.16
+    },
+    {
+      "block": 2,
+      "text": "Once you understand the problems you can then fix them, and then finally test to make sure they are fixed.",
+      "start": 30.34,
+      "end": 35.62
+    },
+    {
+      "block": 3,
+      "text": "Here are some initial Firefox startup optimizations I\u2019ve done with some lite profiling on Windows over the period of a few days:",
+      "start": 35.8,
+      "end": 42.36
+    },
+    {
+      "block": 4,
+      "text": "bug 724177 - 30-50ms (5%) Firefox startup speed optimization on Windows in nsLocalFileWin",
+      "start": 42.54,
+      "end": 51.9
+    },
+    {
+      "block": 5,
+      "text": "bug 724256 - Optimize move file calls on Windows, saving about 2ms per call (1 call on startup)",
+      "start": 52.08,
+      "end": 61.2
+    },
+    {
+      "block": 6,
+      "text": "bug 722225 - Firefox startup speed by ~5% (-70ms) on Windows by optimizing D3D10CreateDevice1",
+      "start": 61.38,
+      "end": 72.98
+    },
+    {
+      "block": 7,
+      "text": "bug 722315 - Firefox startup speed by by ~5% (-76ms) on Windows by lazy loading CLSID_DragDropHelper",
+      "start": 73.16,
+      "end": 84.44
+    },
+    {
+      "block": 8,
+      "text": "bug 724203 - Optimize nsLocalFile::IsDirectory on Windows by 50% giving 5ms startup improvement",
+      "start": 84.62,
+      "end": 93.66
+    },
+    {
+      "block": 9,
+      "text": "bug 724207 - Save 15-20ms on startup from unused file attributes fetch when opening files",
+      "start": 93.84,
+      "end": 102.0
+    },
+    {
+      "block": 10,
+      "text": "bug 692255 - Find a way to get rid of prefetch files on Windows for faster startup",
+      "start": 102.18,
+      "end": 108.9
+    },
+    {
+      "block": 11,
+      "text": "bug 725444 - 10-15ms main thread startup optimization in Windows AudioSession",
+      "start": 109.08,
+      "end": 116.52
+    },
+    {
+      "block": 12,
+      "text": "I plan to keep doing more startup optimizations for a while in between silent update work.",
+      "start": 116.7,
+      "end": 121.66
+    },
+    {
+      "block": 13,
+      "text": "So how are optimizations found?",
+      "start": 121.84,
+      "end": 124.16
+    },
+    {
+      "block": 13,
+      "text": "There are many ways, the first I will talk about is Xperf.",
+      "start": 124.34,
+      "end": 128.1
+    },
+    {
+      "block": 14,
+      "text": "Xperf",
+      "start": 128.28,
+      "end": 129.72
+    },
+    {
+      "block": 15,
+      "text": "One way to identify optimization bottlenecks on Windows is to use Xperf.",
+      "start": 129.9,
+      "end": 134.38
+    },
+    {
+      "block": 15,
+      "text": "Xperf is a great way to find both IO bottlenecks and CPU usage bottlenecks.",
+      "start": 134.56,
+      "end": 139.44
+    },
+    {
+      "block": 16,
+      "text": "It can tell you which files use the most IO, what the IO patterns are, which functions take the most time, and allow you to group based on different criteria to view the data in different ways.",
+      "start": 139.62,
+      "end": 149.22
+    },
+    {
+      "block": 16,
+      "text": "It is the tool that made Windows 7 so much faster than Windows Vista.",
+      "start": 149.4,
+      "end": 153.72
+    },
+    {
+      "block": 16,
+      "text": "It actually does a ton more than that but I won\u2019t focus on it in the context of this blog post.",
+      "start": 153.9,
+      "end": 159.26
+    },
+    {
+      "block": 17,
+      "text": "Built in Mozilla profiler",
+      "start": 159.44,
+      "end": 161.68
+    },
+    {
+      "block": 18,
+      "text": "Another way to find optimizations is to use Benoit\u2019s profiler (SPS).",
+      "start": 161.86,
+      "end": 166.58
+    },
+    {
+      "block": 18,
+      "text": "Currently it works well on Mac, and Windows is nearly completed.",
+      "start": 166.76,
+      "end": 170.6
+    },
+    {
+      "block": 19,
+      "text": "I\u2019m very excited to start using it on Windows.",
+      "start": 170.78,
+      "end": 173.66
+    },
+    {
+      "block": 19,
+      "text": "It far surpasses the tools I\u2019ve been using to find the bugs and fixes above.",
+      "start": 173.84,
+      "end": 178.16
+    },
+    {
+      "block": 20,
+      "text": "Custom profiler",
+      "start": 178.34,
+      "end": 180.1
+    },
+    {
+      "block": 21,
+      "text": "I haven\u2019t seen how the Mozilla built-in profiler is implemented, but I suspect that this custom profiler is a simplified version of the Mozilla profiler\u2019s Pseudostack mode.",
+      "start": 180.28,
+      "end": 188.84
+    },
+    {
+      "block": 22,
+      "text": "I was able to find all of the above optimizations (with the exception of the prefetch task) with a tiny class with a couple of wrapper macros.",
+      "start": 189.02,
+      "end": 196.54
+    },
+    {
+      "block": 23,
+      "text": "Basically the class is an RAII class built around the Win32 API QueryPerformanceCounter and QueryPerformanceFrequency.",
+      "start": 196.72,
+      "end": 203.68
+    },
+    {
+      "block": 23,
+      "text": "These functions allow you to get very detailed timing results.",
+      "start": 203.86,
+      "end": 207.54
+    },
+    {
+      "block": 24,
+      "text": "For any function you want to profile you simply add the PROFILE_FUNCTION() macro to the start of the function.",
+      "start": 207.72,
+      "end": 213.8
+    },
+    {
+      "block": 24,
+      "text": "I usually start by adding this to each non-trivial function in a file.",
+      "start": 213.98,
+      "end": 217.82
+    },
+    {
+      "block": 25,
+      "text": "Once you\u2019ve found a function that takes a non trivial amount of time you can start to dig deeper into other functions inside of the function until you find the root cause.",
+      "start": 218.0,
+      "end": 225.76
+    },
+    {
+      "block": 26,
+      "text": "But sometimes a function has a lot of code and you aren\u2019t sure what the slow part of the function is.",
+      "start": 225.94,
+      "end": 230.9
+    },
+    {
+      "block": 26,
+      "text": "For this I use a second macro PROFILE_STR(\u201cFunctionName:N\u201d) where N is a number I increment evenly spaced out.",
+      "start": 231.08,
+      "end": 238.12
+    },
+    {
+      "block": 26,
+      "text": "The string can be anything, I just use that normally.",
+      "start": 238.3,
+      "end": 241.5
+    },
+    {
+      "block": 27,
+      "text": "These macros just create an object.",
+      "start": 241.68,
+      "end": 244.16
+    },
+    {
+      "block": 27,
+      "text": "The constructor of the object stores the start time, the destructor of the object gets the end time.",
+      "start": 244.34,
+      "end": 249.78
+    },
+    {
+      "block": 28,
+      "text": "The destructor also uses the function name or string as a lookup in a global map that keeps track of the number of hits, the maximum length of time, the minimum length of time, and the average length of time for each function/string.",
+      "start": 249.96,
+      "end": 261.4
+    },
+    {
+      "block": 29,
+      "text": "There is a third macro I was using to dump the results to a file at particular events I wanted to focus on, like first paint, or when the session is restored.",
+      "start": 261.58,
+      "end": 270.38
+    },
+    {
+      "block": 30,
+      "text": "One thing you have to look out for with this method is if you happen to put the calls in a recursive function.",
+      "start": 270.56,
+      "end": 276.0
+    },
+    {
+      "block": 30,
+      "text": "In that case it will appear to be a bigger bottleneck because the first call will include the full length of time of all calls that contain it.",
+      "start": 276.18,
+      "end": 282.58
+    },
+    {
+      "block": 30,
+      "text": "All of the inner calls will add onto that.",
+      "start": 282.76,
+      "end": 285.16
+    },
+    {
+      "block": 31,
+      "text": "The output of this function is made when the third macro to dump the results is called.",
+      "start": 285.34,
+      "end": 289.82
+    },
+    {
+      "block": 31,
+      "text": "It dumps the results to a simple formatted .txt file:",
+      "start": 290.0,
+      "end": 293.76
+    },
+    {
+      "block": 32,
+      "text": "Verifying startup results",
+      "start": 293.94,
+      "end": 296.18
+    },
+    {
+      "block": 33,
+      "text": "If you\u2019re working on Firefox, a good way to verify that your speed optimization made a difference is to use the about:startup extension.",
+      "start": 296.36,
+      "end": 303.24
+    },
+    {
+      "block": 34,
+      "text": "This extension times the startup of important events like firstPaint and sessionRestored and gives you the average up top.",
+      "start": 303.42,
+      "end": 309.82
+    },
+    {
+      "block": 35,
+      "text": "To verify my results I just did 20 startups in sequence with a release build that contained my patches vs a release build that did not contain my patches.",
+      "start": 310.0,
+      "end": 318.48
+    },
+    {
+      "block": 36,
+      "text": "Here is an example after one of the patches above:",
+      "start": 318.66,
+      "end": 321.54
+    }
+  ]
+}

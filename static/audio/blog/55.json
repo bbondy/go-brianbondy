@@ -1,0 +1,45 @@
+{
+  "post": 55,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "650b5d109a51669196672be24f4b406e72ce39c83a15f939e2ef87b415a78bba",
+  "audioSHA256": "918efbc97d5bf35861d2d78e80f21c3914825c6e9ad6e5111eb5bde9899bccf1",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "I signed up to be notified when I could join writely.",
+      "start": 0.0,
+      "end": 2.88
+    },
+    {
+      "block": 0,
+      "text": "I never got an invite.",
+      "start": 3.06,
+      "end": 4.74
+    },
+    {
+      "block": 0,
+      "text": "Today I went to lost password and it seems that it bypasses the wait for a new account.",
+      "start": 4.92,
+      "end": 9.32
+    },
+    {
+      "block": 0,
+      "text": "It emailed me a pass that I used with my email to access Writely.",
+      "start": 9.5,
+      "end": 13.42
+    },
+    {
+      "block": 0,
+      "text": "If anyone needs an invite, please try the above.",
+      "start": 13.6,
+      "end": 16.8
+    },
+    {
+      "block": 0,
+      "text": "If it doesn\u2019t work, just email me and I can invite you.",
+      "start": 16.98,
+      "end": 20.42
+    }
+  ]
+}

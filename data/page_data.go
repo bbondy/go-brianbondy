@@ -78,6 +78,7 @@ type BlogPostPage struct {
 	Tag                              string
 	Year                             int
 	ShareUrl, Description, ImagePath string
+	AudioURL, AudioTimingURL         string
 }
 
 type FiltersPage struct {

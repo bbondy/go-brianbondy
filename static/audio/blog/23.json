@@ -1,0 +1,51 @@
+{
+  "post": 23,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "779e053b69b342693c6c6a892d5aeb1c8bec4f48ab54ab35137b0fa36c173db2",
+  "audioSHA256": "4997d112a47e73ebc4bc57af2cc618aeb98a5c028db7906449cf5707cc167ee4",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "I have an Apple 30\u201d cinema display and new Mac Book Pro Laptop.",
+      "start": 0.0,
+      "end": 4.08
+    },
+    {
+      "block": 0,
+      "text": "The 30\u201d cinema display has a max resolution (which I use) of: 2560x1600.",
+      "start": 4.26,
+      "end": 11.22
+    },
+    {
+      "block": 0,
+      "text": "The screen is huge and is sure to give me a huge productivity boost for my work.",
+      "start": 11.4,
+      "end": 15.8
+    },
+    {
+      "block": 0,
+      "text": "The price tag on the 30\u201d apple display is around 2k USD, but over time it\u2019ll pay for itself.",
+      "start": 15.98,
+      "end": 22.06
+    },
+    {
+      "block": 0,
+      "text": "I\u2019m extremely happy with it.",
+      "start": 22.24,
+      "end": 24.32
+    },
+    {
+      "block": 0,
+      "text": "Ever since I got an iMac several months ago, I will never go back to PC hardware.",
+      "start": 24.5,
+      "end": 29.14
+    },
+    {
+      "block": 0,
+      "text": "Everything is bright, nice, fast, and overall just plain better with Apple.",
+      "start": 29.32,
+      "end": 34.04
+    }
+  ]
+}

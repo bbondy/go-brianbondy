@@ -1,0 +1,141 @@
+{
+  "post": 186,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "501df7d2ed4449474c3000313256d08751549706cd1796bd95898149d30a9125",
+  "audioSHA256": "a8da590af795f4366a3773e6a97a1b35dd0c7da700fd0580d6694237613c3007",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "I\u2019m not a religious person but I did go to a Catholic elementary school.",
+      "start": 0.0,
+      "end": 4.0
+    },
+    {
+      "block": 0,
+      "text": "I distinctly remember one day the local priest came to talk to the class.",
+      "start": 4.18,
+      "end": 8.26
+    },
+    {
+      "block": 0,
+      "text": "I often think about this day.",
+      "start": 8.44,
+      "end": 10.44
+    },
+    {
+      "block": 1,
+      "text": "He asked the room full of my classmates: \u201cWhy does the man go to church?\u201d",
+      "start": 10.62,
+      "end": 14.62
+    },
+    {
+      "block": 2,
+      "text": "A flurry of hands went up and one after the other, the students answered.",
+      "start": 14.8,
+      "end": 18.64
+    },
+    {
+      "block": 3,
+      "text": "Student: \u201cTo be closer to god!\u201d",
+      "start": 18.82,
+      "end": 21.3
+    },
+    {
+      "block": 4,
+      "text": "Priest: \u201cThat\u2019s a good answer, but no that\u2019s not why.\u201d",
+      "start": 21.48,
+      "end": 25.0
+    },
+    {
+      "block": 5,
+      "text": "Student: \u201cTo feel closer to the community!\u201d",
+      "start": 25.18,
+      "end": 28.06
+    },
+    {
+      "block": 6,
+      "text": "Priest: \u201cExcellent answer, but still not right.\u201d",
+      "start": 28.24,
+      "end": 31.52
+    },
+    {
+      "block": 7,
+      "text": "Student: \u201cTo get forgiveness for the wrong things they\u2019ve done?\u201d",
+      "start": 31.7,
+      "end": 35.3
+    },
+    {
+      "block": 8,
+      "text": "Priest: \u201cNo, that\u2019s still not why.\u201d",
+      "start": 35.48,
+      "end": 38.2
+    },
+    {
+      "block": 9,
+      "text": "This continued on for another 10 minutes, answers going from confident to uncertain until the priest exhausted all hands in the air.",
+      "start": 38.38,
+      "end": 45.1
+    },
+    {
+      "block": 9,
+      "text": "The room fell silent as everyone gazed at the priest, he went on to give the reason.",
+      "start": 45.28,
+      "end": 49.76
+    },
+    {
+      "block": 10,
+      "text": "Priest: \u201cThe man goes to church, because the church bell rings.\u201d",
+      "start": 49.94,
+      "end": 53.78
+    },
+    {
+      "block": 11,
+      "text": "The students of the class looked at each other confused.",
+      "start": 53.96,
+      "end": 56.92
+    },
+    {
+      "block": 11,
+      "text": "I definitely didn\u2019t get it at the time.",
+      "start": 57.1,
+      "end": 59.34
+    },
+    {
+      "block": 12,
+      "text": "Priest: \u201cYou see, the man doesn\u2019t need a reason to go to church.",
+      "start": 59.52,
+      "end": 63.28
+    },
+    {
+      "block": 12,
+      "text": "He has decided that faith is a core value to him, and when the bell rings, he doesn\u2019t think of why he will go, he just goes.\u201d",
+      "start": 63.46,
+      "end": 70.5
+    },
+    {
+      "block": 13,
+      "text": "The religious undertone didn\u2019t stick with me, but deciding what\u2019s important in your life, and having unwavering dedication to what you deem important in your life is something to strive for.",
+      "start": 70.68,
+      "end": 79.72
+    },
+    {
+      "block": 14,
+      "text": "A co-worker later shared to me, that a man doesn\u2019t decide every week if he will or will not go to church; he decides only once.",
+      "start": 79.9,
+      "end": 86.62
+    },
+    {
+      "block": 15,
+      "text": "Do you know what your core values are?",
+      "start": 86.8,
+      "end": 89.12
+    },
+    {
+      "block": 15,
+      "text": "If so, answer the bell when it rings.",
+      "start": 89.3,
+      "end": 92.1
+    }
+  ]
+}

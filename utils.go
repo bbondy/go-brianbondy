@@ -56,7 +56,7 @@ func GetTitle(titleSlug string) string {
 }
 
 func directToHttps(w http.ResponseWriter, r *http.Request, next http.HandlerFunc) {
-	if r.Host == "localhost:8080" {
+	if r.Host == "localhost:"+listenPort() || r.Host == "127.0.0.1:"+listenPort() {
 		next(w, r)
 		return
 	}

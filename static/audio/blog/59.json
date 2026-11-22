@@ -1,0 +1,39 @@
+{
+  "post": 59,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "34e6cbd5edecdc31f452d22a057eef8bb7485899a52b717253da53865e0fe416",
+  "audioSHA256": "b31e66936538bf68eaf3a1a9291e02be913ba82f4bf4e9795c4c5fae099c3e49",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "I installed Ubuntu Linux, and I\u2019m very impressed with it.",
+      "start": 0.0,
+      "end": 3.84
+    },
+    {
+      "block": 0,
+      "text": "I previously tried to install Fedora Core 5, Fedora Core 5 had problems with starting up (would hang at udev loading), after a few hours when I got in, my sound and network didn\u2019t work.",
+      "start": 4.02,
+      "end": 14.5
+    },
+    {
+      "block": 0,
+      "text": "I installed Ubuntu, the installation for Ubuntu took about 5 minutes, and everything worked including my internet with no configuration.",
+      "start": 14.68,
+      "end": 22.2
+    },
+    {
+      "block": 0,
+      "text": "It looks really cool and fast too.",
+      "start": 22.38,
+      "end": 24.78
+    },
+    {
+      "block": 0,
+      "text": "I would highly suggest to get Ubuntu if you want to install Linux.",
+      "start": 24.96,
+      "end": 29.04
+    }
+  ]
+}

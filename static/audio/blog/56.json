@@ -1,0 +1,15 @@
+{
+  "post": 56,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "0c569d12e38dcf5319bda113d36e2fda887a03f3d5bd3958b91fd2322db46b92",
+  "audioSHA256": "ab0de622a1cc9d82135b79b833e766847368c6f369a96588ec70a7e05f650d16",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "[Creator of Python talks about Python 30001",
+      "start": 0.0,
+      "end": 3.44
+    }
+  ]
+}

@@ -2,7 +2,7 @@
 
 # Every target is a command, not a file. Without this, `make locales` is a no-op
 # because the locales/ directory already exists and looks up to date.
-.PHONY: update memorable-runs cheatsheets locales blog-translations all format \
+.PHONY: update memorable-runs cheatsheets locales blog-translations blog-audio publish-blog-audio all format \
 	lint test update-cache deploy auth webp webp-force responsive-images \
 	blog-images github-stats pictures-manifest run-km-manifest \
 	strava-run-manifest build dev cache-version strava-clear-token \
@@ -69,6 +69,16 @@ responsive-images:
 blog-images:
 	python3 scripts/process_new_blog_images.py
 
+# Generate narration for every post, or set BLOG_AUDIO_ID for one post.
+blog-audio:
+	python3 scripts/generate_blog_audio.py $(if $(BLOG_AUDIO_ID),--id $(BLOG_AUDIO_ID),--all)
+
+BLOG_AUDIO_BUCKET ?= go-brianbondy-blog-audio
+
+# Upload locally generated MP3s and update the published URL manifest.
+publish-blog-audio:
+	python3 scripts/publish_blog_audio.py --bucket $(BLOG_AUDIO_BUCKET) $(if $(BLOG_AUDIO_ID),--id $(BLOG_AUDIO_ID),--all)
+
 # Fetch GitHub statistics for projects
 github-stats:
 	python3 scripts/fetch_github_stats.py
@@ -118,6 +128,8 @@ help:
 	@echo "  webp-force   - Force convert all images to WebP"
 	@echo "  responsive-images - Generate 640w, 960w, and 1200w WebP variants"
 	@echo "  blog-images  - Process new blog post images"
+	@echo "  blog-audio   - Generate narration for all posts (BLOG_AUDIO_ID=186 for one)"
+	@echo "  publish-blog-audio - Upload generated MP3s to Cloud Storage"
 	@echo "  blog-translations - Generate missing French blog sidecars with local Ollama"
 	@echo "  github-stats - Fetch GitHub statistics for projects"
 	@echo "  memorable-runs - Fetch memorable run statistics"

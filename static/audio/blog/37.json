@@ -1,0 +1,33 @@
+{
+  "post": 37,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "6ea562fd99cb013770d080929cd6dd62c4d8e8067d30853f0ec485b895780f4c",
+  "audioSHA256": "443271da40e94c2eceb733ee94a6a549b10b9fca8e62f037796e0231885f1fe0",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "Yahoo! and MSN, along with others in the search market, had the chance to buy youTube, but they let Google scoop it up for the small amount of 1.65 billion.",
+      "start": 0.0,
+      "end": 9.6
+    },
+    {
+      "block": 0,
+      "text": "Just another example of Google being a great company, they seen that video is becoming a huge part of the Internet and the Internet\u2019s future, and they decided to become #1 at it by buying youTube. iTV by apple is coming out first quarter of 2007, and i would bet that this has a lot to do with Google.",
+      "start": 9.78,
+      "end": 26.18
+    },
+    {
+      "block": 0,
+      "text": "Live streaming from Google\u2019s youTube to iTV?",
+      "start": 26.36,
+      "end": 29.24
+    },
+    {
+      "block": 0,
+      "text": "I think so\u2026",
+      "start": 29.42,
+      "end": 30.94
+    }
+  ]
+}

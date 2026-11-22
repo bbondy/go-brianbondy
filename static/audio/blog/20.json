@@ -1,0 +1,111 @@
+{
+  "post": 20,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "efddde5a1c02bbd66edbf6e8ae7ffc07701d3f084587039dc24fe1814dd44942",
+  "audioSHA256": "24d1a81fbe3ee61260c5c24f6863dd52670a26644dac8f94496d3b7300b5331a",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "BusinessWeek estimates it took 10,000 employees about five years to ship Vista.",
+      "start": 0.0,
+      "end": 4.8
+    },
+    {
+      "block": 0,
+      "text": "That\u2019s 50,000 employee years.",
+      "start": 4.98,
+      "end": 7.46
+    },
+    {
+      "block": 0,
+      "text": "They estimate about 10 billion in cost to develop the operating system.",
+      "start": 7.64,
+      "end": 11.72
+    },
+    {
+      "block": 1,
+      "text": "But is the operating system something that is wanted by consumers in the first place?",
+      "start": 11.9,
+      "end": 16.3
+    },
+    {
+      "block": 1,
+      "text": "I don\u2019t think so.",
+      "start": 16.48,
+      "end": 18.08
+    },
+    {
+      "block": 1,
+      "text": "As long as people can use the latest applications and play the latest games, do they really care about a different operating system?",
+      "start": 18.26,
+      "end": 24.74
+    },
+    {
+      "block": 2,
+      "text": "I\u2019m not sure why I\u2019d want to upgrade from Windows XP Pro, to another platform where i get annoyed by security popups every 2 seconds.",
+      "start": 24.92,
+      "end": 31.96
+    },
+    {
+      "block": 2,
+      "text": "I\u2019m not sure why I\u2019d want to develop software for this operating system and learn an entirely new language, when I know I can use the old languages and it will work on all old and new versions of Windows.",
+      "start": 32.14,
+      "end": 41.58
+    },
+    {
+      "block": 3,
+      "text": "I can\u2019t see vista taking off and making its costs back.",
+      "start": 41.76,
+      "end": 44.96
+    },
+    {
+      "block": 3,
+      "text": "Surely it will make in the billions, but I think relatively it will fall flat on its face.",
+      "start": 45.14,
+      "end": 50.02
+    },
+    {
+      "block": 3,
+      "text": "I think Microsoft took too long to get it out the door.",
+      "start": 50.2,
+      "end": 53.24
+    },
+    {
+      "block": 4,
+      "text": "What should they have done?",
+      "start": 53.42,
+      "end": 55.02
+    },
+    {
+      "block": 4,
+      "text": "They should have released smaller, incremental changes.",
+      "start": 55.2,
+      "end": 58.32
+    },
+    {
+      "block": 4,
+      "text": "End users don\u2019t want to have to re-learn everything.",
+      "start": 58.5,
+      "end": 61.22
+    },
+    {
+      "block": 4,
+      "text": "They want small sets of new features.",
+      "start": 61.4,
+      "end": 63.8
+    },
+    {
+      "block": 4,
+      "text": "I\u2019m anxious to see if Vista ever does overtake XP, like XP did 2000.",
+      "start": 63.98,
+      "end": 68.86
+    },
+    {
+      "block": 4,
+      "text": "I don\u2019t think history will repeat itself though.",
+      "start": 69.04,
+      "end": 71.76
+    }
+  ]
+}

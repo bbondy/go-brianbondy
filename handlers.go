@@ -960,7 +960,28 @@ func allPostsHandler(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
-// Keeps it simple with 1 blog post per page
+// Published audio is served from Cloud Storage; local files support previews.
+func setBlogAudio(page *data.BlogPostPage, postID int, language string) {
+	if language != "en" {
+		return
+	}
+	if published, ok := publishedBlogAudioByID[postID]; ok {
+		page.AudioURL = published.AudioURL
+		page.AudioTimingURL = fmt.Sprintf("/static/audio/blog/%d.json?v=%s", postID, published.TimingSHA256[:12])
+		return
+	}
+	base := "static/audio/blog/" + strconv.Itoa(postID)
+	for _, path := range []string{base + ".mp3", base + ".json"} {
+		info, err := os.Stat(path)
+		if err != nil || !info.Mode().IsRegular() {
+			return
+		}
+	}
+	page.AudioURL = "/" + base + ".mp3"
+	page.AudioTimingURL = "/" + base + ".json"
+}
+
+// Keeps it simple with 1 blog post per page.
 func blogPostPageHandler(w http.ResponseWriter, r *http.Request) {
 	vars := mux.Vars(r)
 	language := languageFromWriter(w)
@@ -1036,6 +1057,7 @@ func blogPostPageHandler(w http.ResponseWriter, r *http.Request) {
 				ShareUrl:     blogPostURL(sourcePost),
 				MarkdownSlug: "blog",
 			}
+			setBlogAudio(p, sourcePost.Id, language)
 			err := executeTemplate(w, "blogPost", p)
 			if err != nil {
 				http.Error(w, err.Error(), http.StatusInternalServerError)
@@ -1073,6 +1095,7 @@ func blogPostPageHandler(w http.ResponseWriter, r *http.Request) {
 			ShareUrl:     blogPostURL(sourcePost),
 			MarkdownSlug: "blog",
 		}
+		setBlogAudio(p, sourcePost.Id, language)
 		err := executeTemplate(w, "blogPost", p)
 		if err != nil {
 			http.Error(w, err.Error(), http.StatusInternalServerError)

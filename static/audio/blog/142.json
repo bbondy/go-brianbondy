@@ -1,0 +1,99 @@
+{
+  "post": 142,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "ca336cb1580465bb81fe036bef1f6644790b0cfd0d73b82e3ed8916fc89cfc43",
+  "audioSHA256": "d03883f3661b66b2b2db8e52a6faf5e8072b387d3f947b27ee766fc73272ea73",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "Microsoft announced last week that Visual Studio 11 Express will not have support for building Desktop applications, by extension this also means that it will not have support for building metro style enabled desktop browsers.",
+      "start": 0.0,
+      "end": 12.0
+    },
+    {
+      "block": 1,
+      "text": "The workaround is to install Visual Studio 2010 and use the Windows 8 SDK.",
+      "start": 12.18,
+      "end": 17.46
+    },
+    {
+      "block": 1,
+      "text": "This isn\u2019t a good solution, but it\u2019s even worse when you consider metro style enabled desktop browsers.",
+      "start": 17.64,
+      "end": 23.32
+    },
+    {
+      "block": 1,
+      "text": "This workaround won\u2019t work for metro style enabled desktop browsers that need the Visual Studio 11 compiler.",
+      "start": 23.5,
+      "end": 29.26
+    },
+    {
+      "block": 1,
+      "text": "The Windows 8 SDK no longer ships with a compiler of its own.",
+      "start": 29.44,
+      "end": 33.44
+    },
+    {
+      "block": 2,
+      "text": "Firefox can be built with a configuration option to disable the metro bits, so you\u2019ll still be able to use Visual Studio 2010 Express to develop on Windows 8, but not if you want to work on Metro related things.",
+      "start": 33.62,
+      "end": 44.74
+    },
+    {
+      "block": 2,
+      "text": "In that case, you\u2019ll need to use a paid version of Visual Studio 11.",
+      "start": 44.92,
+      "end": 49.08
+    },
+    {
+      "block": 3,
+      "text": "As we\u2019ve seen with Visual Studio 11 though, who itself can\u2019t target Windows XP, this will eventually become a problem as Windows versions increase if no change is made by Microsoft.",
+      "start": 49.26,
+      "end": 59.34
+    },
+    {
+      "block": 4,
+      "text": "I hope that Microsoft will come out with an edition of Visual Studio 11 Express for desktop development, because it hurts open source projects that want to develop for Windows 8 and beyond.",
+      "start": 59.52,
+      "end": 69.12
+    },
+    {
+      "block": 5,
+      "text": "If you also think this will hurt open source development in the long run, you can vote to add support for desktop development back into Visual Studio 2010 Express.",
+      "start": 69.3,
+      "end": 77.86
+    },
+    {
+      "block": 5,
+      "text": "Vote it, tweet it, blog it, add comments to it.",
+      "start": 78.04,
+      "end": 81.64
+    },
+    {
+      "block": 6,
+      "text": "Microsoft has previously claimed that it loves open source:",
+      "start": 81.82,
+      "end": 85.26
+    },
+    {
+      "block": 7,
+      "text": "\u201cWe love open source,\u201d says Jean Paoli of Microsoft in a recent interview with Network World.",
+      "start": 85.44,
+      "end": 91.04
+    },
+    {
+      "block": 7,
+      "text": "\u201cWe have worked with open source for a long time now.\u201d",
+      "start": 91.22,
+      "end": 94.26
+    },
+    {
+      "block": 8,
+      "text": "Actions speak louder than words, please show us.",
+      "start": 94.44,
+      "end": 97.72
+    }
+  ]
+}

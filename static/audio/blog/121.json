@@ -1,0 +1,201 @@
+{
+  "post": 121,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "e487ee3f7f81f725e49580af1a7defd202d987bd54f6f9a97ac9aaee5bffb005",
+  "audioSHA256": "2b2a0546d691ecdaa1e7b0f0e5cc5d1c32ca74576db178a7e400030ef0f896c0",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "We see the http a URL scheme, just about every day:",
+      "start": 0.0,
+      "end": 4.32
+    },
+    {
+      "block": 1,
+      "text": "https://brianbondy.com",
+      "start": 4.5,
+      "end": 9.3
+    },
+    {
+      "block": 2,
+      "text": "The http part in the example above is the URL scheme.",
+      "start": 9.48,
+      "end": 13.48
+    },
+    {
+      "block": 3,
+      "text": "But there are also dozens of other URL schemes, including: ftp, mailto, irc, smb, chrome, about, snmp, and data.",
+      "start": 13.66,
+      "end": 23.18
+    },
+    {
+      "block": 3,
+      "text": "This post talks about one called the data URL scheme.",
+      "start": 23.36,
+      "end": 26.72
+    },
+    {
+      "block": 4,
+      "text": "The data URL scheme, amongst other things, allows you to embed images into your HTML pages.",
+      "start": 26.9,
+      "end": 32.82
+    },
+    {
+      "block": 4,
+      "text": "That means that no separate HTTP request/response is needed to obtain such an image.",
+      "start": 33.0,
+      "end": 38.04
+    },
+    {
+      "block": 4,
+      "text": "It looks like this:",
+      "start": 38.22,
+      "end": 39.98
+    },
+    {
+      "block": 5,
+      "text": "The first part of the URL is the scheme data, followed by the mime type image/png, optionally followed by base64 (if not specified assumes ASCII characters with encoded non printable characters).",
+      "start": 40.16,
+      "end": 50.8
+    },
+    {
+      "block": 5,
+      "text": "The last part of the URI after the comma is the content of the file in the appropriate encoding.",
+      "start": 50.98,
+      "end": 56.02
+    },
+    {
+      "block": 6,
+      "text": "The data URL scheme was specified in 1998 in RFC 2397 and has been implemented by most major browsers as of HTML4.",
+      "start": 56.2,
+      "end": 66.2
+    },
+    {
+      "block": 6,
+      "text": "Most major browsers already have pretty good coverage for HTML5.",
+      "start": 66.38,
+      "end": 70.54
+    },
+    {
+      "block": 6,
+      "text": "IE1-IE7 lack support.",
+      "start": 70.72,
+      "end": 73.6
+    },
+    {
+      "block": 7,
+      "text": "The benefit of using the data URL scheme is that if the image is small, the overhead is less than the HTTP request/response headers.",
+      "start": 73.78,
+      "end": 81.06
+    },
+    {
+      "block": 7,
+      "text": "It also frees up concurrent connections since each browser has a maximum amount of connections it can make total and to each domain.",
+      "start": 81.24,
+      "end": 88.2
+    },
+    {
+      "block": 8,
+      "text": "You wouldn\u2019t want to use the data URL scheme for large images, or if you require support for IE7 and below.",
+      "start": 88.38,
+      "end": 94.7
+    },
+    {
+      "block": 8,
+      "text": "Your image won\u2019t be separately cached either, so this means that it will be downloaded with each request to the parent HTML page.",
+      "start": 94.88,
+      "end": 101.44
+    },
+    {
+      "block": 8,
+      "text": "You can get around this last limitation though by specifying your data URL inside an already cached CSS file with a CSS rule background:url(\u2018data:image/png;base64,\u2026);",
+      "start": 101.62,
+      "end": 112.02
+    },
+    {
+      "block": 9,
+      "text": "Overall it is a good thing to use and I\u2019d use it for social icons in HTML.",
+      "start": 112.2,
+      "end": 116.68
+    },
+    {
+      "block": 9,
+      "text": "There are also many other uses of the data URL scheme mentioned below.",
+      "start": 116.86,
+      "end": 121.1
+    },
+    {
+      "block": 10,
+      "text": "Uses of the data URI scheme:",
+      "start": 121.28,
+      "end": 123.52
+    },
+    {
+      "block": 11,
+      "text": "You may have noticed that sometimes emails with images don\u2019t have a separate attachment.",
+      "start": 123.7,
+      "end": 128.02
+    },
+    {
+      "block": 11,
+      "text": "You can use the data URI scheme inside HTML email messages without having a separate image attachment.",
+      "start": 128.2,
+      "end": 133.8
+    },
+    {
+      "block": 12,
+      "text": "The new HTML5 <canvas> element allows you to export your canvas to a data URL.",
+      "start": 133.98,
+      "end": 138.86
+    },
+    {
+      "block": 12,
+      "text": "You can do this with &lt;canvas&gt;.toDataURL",
+      "start": 139.04,
+      "end": 143.2
+    },
+    {
+      "block": 13,
+      "text": "How it relates to me:",
+      "start": 143.38,
+      "end": 145.14
+    },
+    {
+      "block": 14,
+      "text": "I recently improved the BMP and ICO decoder (refactoring plus adding support for PNG ICOs) for Firefox.",
+      "start": 145.32,
+      "end": 152.6
+    },
+    {
+      "block": 14,
+      "text": "I also have to implement BMP and ICO encoders so that we can have better shell integration with Windows 7.",
+      "start": 152.78,
+      "end": 158.86
+    },
+    {
+      "block": 15,
+      "text": "A side effect of doing these ICO and BMP encoders is that Firefox will support BMP and ICO generation via the <canvas>.toDataURL('image/ico') and <canvas>.toDataURL('image/bmp').",
+      "start": 159.04,
+      "end": 171.52
+    },
+    {
+      "block": 15,
+      "text": "This makes Firefox a pretty good image conversion program.",
+      "start": 171.7,
+      "end": 175.06
+    },
+    {
+      "block": 15,
+      "text": "This also makes it possible for example, for a web page developer to implement a favicon creator without server side code.",
+      "start": 175.24,
+      "end": 182.12
+    },
+    {
+      "block": 15,
+      "text": "No other browsers currently implement BMP and ICO mime types for canvas exporting.",
+      "start": 182.3,
+      "end": 187.34
+    }
+  ]
+}

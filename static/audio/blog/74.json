@@ -1,0 +1,45 @@
+{
+  "post": 74,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "ae7100043e79c4f1598d45d6a6c0a4f620798861b650cf39acd9c83464d9af7f",
+  "audioSHA256": "abdf835535dac4f4bd45a734f1d853de15f812fd8a79df9a7af26eb52b03ef4d",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "Google has a new project named Unladen Swallow.",
+      "start": 0.0,
+      "end": 3.2
+    },
+    {
+      "block": 0,
+      "text": "It\u2019s primary goal is to increase the performance of CPython by five times.",
+      "start": 3.38,
+      "end": 7.94
+    },
+    {
+      "block": 1,
+      "text": "They will do these optimizations in a branch of CPython and those changes will hopefully be eventually merged into the CPython trunk.",
+      "start": 8.12,
+      "end": 15.4
+    },
+    {
+      "block": 2,
+      "text": "The open source Low Level Virtual Machine (LVVM) project provides a compiler infrastructure framework that can be used to construct virtual machines and native code generators.",
+      "start": 15.58,
+      "end": 25.34
+    },
+    {
+      "block": 2,
+      "text": "Several front ends already exist including C and C++.",
+      "start": 25.52,
+      "end": 29.44
+    },
+    {
+      "block": 3,
+      "text": "Google plans to use LVVM to build a just in time (JIT) compilation to replace Python\u2019s own virtual machine.",
+      "start": 29.62,
+      "end": 36.74
+    }
+  ]
+}

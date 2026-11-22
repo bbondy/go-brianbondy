@@ -1,0 +1,39 @@
+{
+  "post": 61,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "f7fecae84211fc0cae762746a58013818391768479109d9ecf09e9b3fb9d9dd9",
+  "audioSHA256": "7846660684d8b7ac6e8920f697210114dca5900e2f6870b56a51f999f9f3b501",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "I\u2019ve been starting to learn programming on my apple computer.",
+      "start": 0.0,
+      "end": 3.12
+    },
+    {
+      "block": 0,
+      "text": "The cool thing is that all dev tools on Mac are free unlike in windows.",
+      "start": 3.3,
+      "end": 7.46
+    },
+    {
+      "block": 0,
+      "text": "The bad part is that it is quite a bit different from programming Win32 :(.",
+      "start": 7.64,
+      "end": 11.8
+    },
+    {
+      "block": 0,
+      "text": "I guess maybe i should be using Carbon (Which is more for porting applications from C++).",
+      "start": 11.98,
+      "end": 17.42
+    },
+    {
+      "block": 0,
+      "text": "Apple claims that they will be updating both Cocoa and Carbon as time goes on equally.",
+      "start": 17.6,
+      "end": 22.4
+    }
+  ]
+}

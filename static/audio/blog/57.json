@@ -1,0 +1,27 @@
+{
+  "post": 57,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "372dff1019b1b4053dc21c853172a2a9bb103887c2128bd1ba84adbf07d55799",
+  "audioSHA256": "ad15464c0942ac38db470bbc9bb30dab2c7cc7daf831f4569c583540d391e15a",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "With XULRunner you can develop your own XUL applications without having Firefox nor Thunderbird installed.",
+      "start": 0.0,
+      "end": 5.68
+    },
+    {
+      "block": 0,
+      "text": "This leverages the power of XUL, XPCOM and it\u2019s extensibility.",
+      "start": 5.86,
+      "end": 10.9
+    },
+    {
+      "block": 0,
+      "text": "And of course it allows you to make cross platform applications.",
+      "start": 11.08,
+      "end": 14.36
+    }
+  ]
+}

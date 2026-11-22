@@ -1,0 +1,285 @@
+{
+  "post": 147,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "7ab79e2271627680e9c884fbc219b9cb1c32c6962d4944307d26628d280330c7",
+  "audioSHA256": "bf1d5839ee2996ce10c5b501a4b3bac70da8499dc321f1b68bbaaea8680f8e1c",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "An overview of the initial work",
+      "start": 0.0,
+      "end": 2.16
+    },
+    {
+      "block": 1,
+      "text": "Creating website shortcuts with favicons was a Platform Integration task that has been pending development for almost a decade.",
+      "start": 2.34,
+      "end": 9.22
+    },
+    {
+      "block": 1,
+      "text": "Thanks to a new contributor named Parth Mudgal, they\u2019re now live on Nightly builds.",
+      "start": 9.4,
+      "end": 13.88
+    },
+    {
+      "block": 2,
+      "text": "Mentored bugs",
+      "start": 14.06,
+      "end": 15.74
+    },
+    {
+      "block": 3,
+      "text": "Having had done jump list icons built from favicons, I had a good idea of how to implement the task, but due to other priorities, I knew I wouldn\u2019t have time to work on it myself.",
+      "start": 15.92,
+      "end": 24.8
+    },
+    {
+      "block": 4,
+      "text": "I knew this was a bigger than usual task for a new contributor, but I thought I might as well add the mentor=bbondy whiteboard flag.",
+      "start": 24.98,
+      "end": 31.7
+    },
+    {
+      "block": 4,
+      "text": "I honestly didn\u2019t expect someone to come along to take the bug, but to my surprise a brand new contributor, Parth Mudgal came along 2 months later and emailed me to begin development on the task.",
+      "start": 31.88,
+      "end": 41.88
+    },
+    {
+      "block": 5,
+      "text": "Contrasting larger meaningful tasks to smaller trivial first bugs",
+      "start": 42.06,
+      "end": 46.06
+    },
+    {
+      "block": 6,
+      "text": "Smaller bugs get users more accustomed to the process of contributing to Mozilla.",
+      "start": 46.24,
+      "end": 50.72
+    },
+    {
+      "block": 6,
+      "text": "I think in most cases this is the best way to start, but tackling a bigger bug first has more meaning and will make the contributor feel (and rightly so) like they are making an impact at Mozilla.",
+      "start": 50.9,
+      "end": 60.9
+    },
+    {
+      "block": 7,
+      "text": "To help learn about a new contributor that worked on a large task first, I asked Parth for an interview, and he happily accepted.",
+      "start": 61.08,
+      "end": 67.56
+    },
+    {
+      "block": 8,
+      "text": "An interview with the contributor",
+      "start": 67.74,
+      "end": 69.74
+    },
+    {
+      "block": 9,
+      "text": "Why did you decide to contribute to an open source project?",
+      "start": 69.92,
+      "end": 73.2
+    },
+    {
+      "block": 10,
+      "text": "I had multiple reasons:",
+      "start": 73.38,
+      "end": 75.38
+    },
+    {
+      "block": 11,
+      "text": "Initially, as a refresher",
+      "start": 75.56,
+      "end": 77.96
+    },
+    {
+      "block": 12,
+      "text": "I wanted to dive into the real world of C++ coding",
+      "start": 78.14,
+      "end": 81.74
+    },
+    {
+      "block": 13,
+      "text": "I suppose everyone wants to be a part of something big",
+      "start": 81.92,
+      "end": 84.8
+    },
+    {
+      "block": 14,
+      "text": "And as a bonus, it looks good on my Resume :p",
+      "start": 84.98,
+      "end": 88.34
+    },
+    {
+      "block": 15,
+      "text": "Why did you pick Mozilla to contribute to?",
+      "start": 88.52,
+      "end": 91.32
+    },
+    {
+      "block": 16,
+      "text": "I asked myself what the one open source application that I use most was?",
+      "start": 91.5,
+      "end": 95.5
+    },
+    {
+      "block": 16,
+      "text": "Firefox!",
+      "start": 95.68,
+      "end": 97.2
+    },
+    {
+      "block": 16,
+      "text": "I have always enjoyed Firefox and the effort by Mozilla to keep it up!",
+      "start": 97.38,
+      "end": 101.54
+    },
+    {
+      "block": 17,
+      "text": "How was the process of contributing to Mozilla?",
+      "start": 101.72,
+      "end": 104.6
+    },
+    {
+      "block": 18,
+      "text": "There are a ton of help documents in the developer section, so I could understand a lot of things easily.",
+      "start": 104.78,
+      "end": 109.98
+    },
+    {
+      "block": 19,
+      "text": "Bugzilla was easy to use and straightforward as well.",
+      "start": 110.16,
+      "end": 113.44
+    },
+    {
+      "block": 20,
+      "text": "Do you have any suggestions that we can use to meet the needs of contributors?",
+      "start": 113.62,
+      "end": 117.62
+    },
+    {
+      "block": 21,
+      "text": "If developers understand the benefits of the contribution, they will contribute more.",
+      "start": 117.8,
+      "end": 122.36
+    },
+    {
+      "block": 21,
+      "text": "I got to learn so much and for me it was a sense of achievement when I completed it :D",
+      "start": 122.54,
+      "end": 127.5
+    },
+    {
+      "block": 22,
+      "text": "You worked on a large bug as your first patch, did you like working on it, or if you could have done it over again would you have picked several small bugs instead?",
+      "start": 127.68,
+      "end": 135.28
+    },
+    {
+      "block": 23,
+      "text": "Well, yeah.",
+      "start": 135.46,
+      "end": 136.9
+    },
+    {
+      "block": 23,
+      "text": "I had exams in between and other college things; there was a break many times during the course of development.",
+      "start": 137.08,
+      "end": 142.68
+    },
+    {
+      "block": 23,
+      "text": "On each break it would take a few days to get back on track.",
+      "start": 142.86,
+      "end": 146.22
+    },
+    {
+      "block": 23,
+      "text": "Perhaps some other people wouldn\u2019t come back after a break.",
+      "start": 146.4,
+      "end": 149.6
+    },
+    {
+      "block": 24,
+      "text": "Do you have any other feedback you\u2019d like to share?",
+      "start": 149.78,
+      "end": 152.5
+    },
+    {
+      "block": 25,
+      "text": "Better reference information would have been most helpful.",
+      "start": 152.68,
+      "end": 155.64
+    },
+    {
+      "block": 25,
+      "text": "How to use a particular function X, so a new developer can refer it initially.",
+      "start": 155.82,
+      "end": 160.38
+    },
+    {
+      "block": 26,
+      "text": "I had a hard time finding out how to do stuff like: How do I convert an object of type X to type Y.",
+      "start": 160.56,
+      "end": 166.16
+    },
+    {
+      "block": 26,
+      "text": "I know this will probably be a very big task considering the number of functions.",
+      "start": 166.34,
+      "end": 170.74
+    },
+    {
+      "block": 26,
+      "text": "I know we already have DXR and MXR for search, but it was still hard to find things.",
+      "start": 170.92,
+      "end": 176.12
+    },
+    {
+      "block": 27,
+      "text": "My thoughts",
+      "start": 176.3,
+      "end": 177.74
+    },
+    {
+      "block": 28,
+      "text": "Mentored bugs are great, if you haven\u2019t done any, then I would highly recommend that you mark bugs you know how to do with the mentor=yourusername whiteboard flag.",
+      "start": 177.92,
+      "end": 186.08
+    },
+    {
+      "block": 29,
+      "text": "I can say for sure that this bug wouldn\u2019t be done if it wasn\u2019t for Parth coming along and working hard to complete the bug.",
+      "start": 186.26,
+      "end": 192.02
+    },
+    {
+      "block": 29,
+      "text": "I\u2019d like to thank him from myself and from Mozilla for his hard work.",
+      "start": 192.2,
+      "end": 195.88
+    },
+    {
+      "block": 30,
+      "text": "Having a meaningful task completed at Mozilla means that this contributor can point future employers to his real world work.",
+      "start": 196.06,
+      "end": 202.54
+    },
+    {
+      "block": 30,
+      "text": "Other than the intrinsic value, this is a great bonus for contributors.",
+      "start": 202.72,
+      "end": 206.88
+    },
+    {
+      "block": 31,
+      "text": "When you are mentoring a bug, please always share with the contributor that they are making a difference, and explain to them why they are making a difference, it may not be obvious.",
+      "start": 207.06,
+      "end": 215.62
+    }
+  ]
+}

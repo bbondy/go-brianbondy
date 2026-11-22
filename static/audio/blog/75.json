@@ -1,0 +1,159 @@
+{
+  "post": 75,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "0adff59576d50b036f35b0233ad0bdb108a4fa927db1ece0ffed9c8e0f2065ce",
+  "audioSHA256": "2d37d13b97ee97887d4c62f811432ab05a7e71da418f2ef372f7956cb6a0d4a9",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "Morse Code",
+      "start": 0.0,
+      "end": 1.52
+    },
+    {
+      "block": 1,
+      "text": "Morse Code overview",
+      "start": 1.7,
+      "end": 3.62
+    },
+    {
+      "block": 2,
+      "text": "Morse code has a 1-1 alphabetical to short/long beep code combo.",
+      "start": 3.8,
+      "end": 8.04
+    },
+    {
+      "block": 3,
+      "text": "Morse code is a system of representing letters, numbers and punctuation marks by means of a code signal sent intermittently.",
+      "start": 8.22,
+      "end": 15.1
+    },
+    {
+      "block": 3,
+      "text": "It was developed by Alfred Vail while he was helping Samuel Morse with Morse\u2019s invention of the telegraph in 1835.",
+      "start": 15.28,
+      "end": 21.68
+    },
+    {
+      "block": 4,
+      "text": "Morse code is an early form of digital communication, however unlike modern binary digital codes that use just two states (commonly represented as 1 and 0), it uses five: dot (\u00b7), dash (-), short gap (between each letter), medium gap (between words) and long gap (between sentences).",
+      "start": 21.86,
+      "end": 38.5
+    },
+    {
+      "block": 5,
+      "text": "Basic Morse Code alphabet",
+      "start": 38.68,
+      "end": 40.92
+    },
+    {
+      "block": 6,
+      "text": "Braille",
+      "start": 41.1,
+      "end": 42.38
+    },
+    {
+      "block": 7,
+      "text": "Braille Information",
+      "start": 42.56,
+      "end": 44.4
+    },
+    {
+      "block": 8,
+      "text": "Braille was invented by Louis Braille who was born in 1809 and lost his sight when he was 6.",
+      "start": 44.58,
+      "end": 50.9
+    },
+    {
+      "block": 9,
+      "text": "Braille gives the blind the ability to read and do mathematics.",
+      "start": 51.08,
+      "end": 54.68
+    },
+    {
+      "block": 10,
+      "text": "How Braille works",
+      "start": 54.86,
+      "end": 56.62
+    },
+    {
+      "block": 11,
+      "text": "Braille consists of a series of raised dots.",
+      "start": 56.8,
+      "end": 59.68
+    },
+    {
+      "block": 11,
+      "text": "A braille cell consists of a \u20183 row x 2 column\u2019 grid.",
+      "start": 59.86,
+      "end": 63.54
+    },
+    {
+      "block": 11,
+      "text": "Anyone of these 6 dots can be raised to form different combinations.",
+      "start": 63.72,
+      "end": 67.48
+    },
+    {
+      "block": 11,
+      "text": "These combinations are interpreted to mean different characters, numbers, or groups of characters.",
+      "start": 67.66,
+      "end": 73.1
+    },
+    {
+      "block": 11,
+      "text": "There are 2^6 - 1 different possible symbols.",
+      "start": 73.28,
+      "end": 76.96
+    },
+    {
+      "block": 11,
+      "text": "This is only 63, however some braille codes can be used in combination to form others making the possibilities endless.",
+      "start": 77.14,
+      "end": 83.78
+    },
+    {
+      "block": 12,
+      "text": "One of my favorite composers Ray Charles, was blind at the age of 7.",
+      "start": 83.96,
+      "end": 88.28
+    },
+    {
+      "block": 13,
+      "text": "Why I care?",
+      "start": 88.46,
+      "end": 89.98
+    },
+    {
+      "block": 14,
+      "text": "I\u2019ve always been interested in different ways to represent things, and different methods of communication.",
+      "start": 90.16,
+      "end": 95.36
+    },
+    {
+      "block": 15,
+      "text": "For example, in my projects section I have a project on steganography (encoding data into normal images by using pixel color variations).",
+      "start": 95.54,
+      "end": 103.38
+    },
+    {
+      "block": 16,
+      "text": "Braille Alphabet",
+      "start": 103.56,
+      "end": 105.4
+    },
+    {
+      "block": 17,
+      "text": "In level 1 braille every letter has it\u2019s own braille code.",
+      "start": 105.58,
+      "end": 109.02
+    },
+    {
+      "block": 18,
+      "text": "Braille Numbers",
+      "start": 109.2,
+      "end": 110.96
+    }
+  ]
+}

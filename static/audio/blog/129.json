@@ -1,0 +1,339 @@
+{
+  "post": 129,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "eeaaeaee34e3eb9fd757ae1668bee9e7cd44820d6564292f185e91f30fe93258",
+  "audioSHA256": "0d5b2cf2aebab916348f8338308e83acd597b65a459cb3b5f60d940cc5048f6d",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "As of Monday of this week, development work began on Firefox for Metro.",
+      "start": 0.0,
+      "end": 4.24
+    },
+    {
+      "block": 1,
+      "text": "A bit of background on Windows 8 Metro and Firefox",
+      "start": 4.42,
+      "end": 7.86
+    },
+    {
+      "block": 2,
+      "text": "It turns out that on Windows 8 there are 3 types of applications:",
+      "start": 8.04,
+      "end": 11.8
+    },
+    {
+      "block": 3,
+      "text": "Classic desktop applications",
+      "start": 11.98,
+      "end": 14.46
+    },
+    {
+      "block": 4,
+      "text": "Metro applications",
+      "start": 14.64,
+      "end": 16.48
+    },
+    {
+      "block": 5,
+      "text": "Metro style enabled desktop browsers",
+      "start": 16.66,
+      "end": 19.38
+    },
+    {
+      "block": 6,
+      "text": "Metro style enabled desktop browsers have access to most Win32 API and the entire new WinRT API.",
+      "start": 19.56,
+      "end": 26.44
+    },
+    {
+      "block": 7,
+      "text": "Unfortunately a browser can only participate in Metro mode if it is the default browser.",
+      "start": 26.62,
+      "end": 31.58
+    },
+    {
+      "block": 7,
+      "text": "So if Firefox is not the default browser on a system, you can\u2019t use it in Metro mode.",
+      "start": 31.76,
+      "end": 36.72
+    },
+    {
+      "block": 7,
+      "text": "This is a decision made by Microsoft.",
+      "start": 36.9,
+      "end": 39.46
+    },
+    {
+      "block": 8,
+      "text": "The Firefox Metro enabled desktop browser can be, and will be included and packaged in the traditional way.",
+      "start": 39.64,
+      "end": 45.48
+    },
+    {
+      "block": 8,
+      "text": "I\u2019m not certain if it will be allowed on the Windows store or not since it is not of Metro application type.",
+      "start": 45.66,
+      "end": 50.78
+    },
+    {
+      "block": 9,
+      "text": "Languages we\u2019ll be programming in",
+      "start": 50.96,
+      "end": 53.12
+    },
+    {
+      "block": 10,
+      "text": "We will be using the Windows Runtime C++ Template Library (WRL) which is similar to C++ / ATL.",
+      "start": 53.3,
+      "end": 60.66
+    },
+    {
+      "block": 11,
+      "text": "We may also be using C++/CX which does compile down to native code but has some non-standard C++ extensions that allow for code to be about 1\u204410 the size.",
+      "start": 60.84,
+      "end": 71.56
+    },
+    {
+      "block": 12,
+      "text": "Our hesitation in using any C++/CX code is that it will definitely require a new build environment.",
+      "start": 71.74,
+      "end": 77.98
+    },
+    {
+      "block": 12,
+      "text": "Personally I think it would be worth using C++/CX in the long run.",
+      "start": 78.16,
+      "end": 82.32
+    },
+    {
+      "block": 12,
+      "text": "WRL and C++/CX code can freely be mixed even in the same source file.",
+      "start": 82.5,
+      "end": 87.7
+    },
+    {
+      "block": 13,
+      "text": "The GUI will be made mostly by painting to DirectX.",
+      "start": 87.88,
+      "end": 91.08
+    },
+    {
+      "block": 13,
+      "text": "XAML may be used in a very limited fashion.",
+      "start": 91.26,
+      "end": 94.3
+    },
+    {
+      "block": 13,
+      "text": "XAML is the main presentation layer in Windows 8 Metro if you are using a .NET enabled language or native C++.",
+      "start": 94.48,
+      "end": 102.08
+    },
+    {
+      "block": 13,
+      "text": "XAML is a declarative XML-based language similar to Mozilla\u2019s own XUL.",
+      "start": 102.26,
+      "end": 107.54
+    },
+    {
+      "block": 13,
+      "text": "XAML is familiar to WPF and Silverlight developers.",
+      "start": 107.72,
+      "end": 111.48
+    },
+    {
+      "block": 13,
+      "text": "XUL will most likely still be rendered to the DirectX surface.",
+      "start": 111.66,
+      "end": 115.5
+    },
+    {
+      "block": 14,
+      "text": "Windows 8 has a minimum requirement of hardware that supports Direct X 9 and I\u2019m not aware of any alternative like GDI available.",
+      "start": 115.68,
+      "end": 123.12
+    },
+    {
+      "block": 14,
+      "text": "So the Direct X blacklist of graphic cards we currently maintain may not be applicable in Metro mode.",
+      "start": 123.3,
+      "end": 128.58
+    },
+    {
+      "block": 15,
+      "text": "Development milestones",
+      "start": 128.76,
+      "end": 130.76
+    },
+    {
+      "block": 16,
+      "text": "Our first major goal is to get an experimental build of Fennec or Firefox running in Metro.",
+      "start": 130.94,
+      "end": 135.9
+    },
+    {
+      "block": 16,
+      "text": "This work is mainly being tracked in Bug 732518.",
+      "start": 136.08,
+      "end": 140.88
+    },
+    {
+      "block": 17,
+      "text": "To get started we read the MSDN whitepaper entitled Developing a Metro style enabled Desktop Browser.",
+      "start": 141.06,
+      "end": 147.14
+    },
+    {
+      "block": 17,
+      "text": "This document lacked quite a bit of information though so a lot of registry hacking was needed to get things working.",
+      "start": 147.32,
+      "end": 153.08
+    },
+    {
+      "block": 17,
+      "text": "Jim and I documented a lot of this missing information here and here.",
+      "start": 153.26,
+      "end": 156.86
+    },
+    {
+      "block": 18,
+      "text": "Most of our week was spent with registry exports, diffs, Process Monitor logs, and other tools.",
+      "start": 157.04,
+      "end": 162.96
+    },
+    {
+      "block": 18,
+      "text": "The first couple minor goals were to get a recognized Metro tile showing up, getting it to launch our process, and then finally displaying a Metro app.",
+      "start": 163.14,
+      "end": 170.9
+    },
+    {
+      "block": 19,
+      "text": "Jim and I hit those first milestones and made a basic application which launches in Metro mode as a medium integrity process.",
+      "start": 171.08,
+      "end": 177.72
+    },
+    {
+      "block": 19,
+      "text": "The application doesn\u2019t do anything exciting except display a DirectX surface and draw some text to the surface that tracks mouse movement.",
+      "start": 177.9,
+      "end": 184.86
+    },
+    {
+      "block": 20,
+      "text": "As a developer, your job gets pretty hard when you do a Google search for topics surrounding this barely supported third Metro application type and consistently get zero, one, or if you are lucky, two search results.",
+      "start": 185.04,
+      "end": 196.72
+    },
+    {
+      "block": 20,
+      "text": "All results being only slightly on topic.",
+      "start": 196.9,
+      "end": 199.54
+    },
+    {
+      "block": 21,
+      "text": "Next development steps",
+      "start": 199.72,
+      "end": 201.72
+    },
+    {
+      "block": 22,
+      "text": "We have several smaller goals that we want to tackle next week:",
+      "start": 201.9,
+      "end": 205.26
+    },
+    {
+      "block": 23,
+      "text": "Figure out how to make our own PRI files with our own resources.",
+      "start": 205.44,
+      "end": 209.28
+    },
+    {
+      "block": 24,
+      "text": "Get a C++/XAML application working",
+      "start": 209.46,
+      "end": 212.58
+    },
+    {
+      "block": 25,
+      "text": "Get our app launching through a delegate DLL instead of an EXE",
+      "start": 212.76,
+      "end": 216.6
+    },
+    {
+      "block": 26,
+      "text": "Figure out how to interop XAML / DirectX.",
+      "start": 216.78,
+      "end": 220.14
+    },
+    {
+      "block": 27,
+      "text": "Start to figure out how we will paint content to our DirectX surface with the graphics layer",
+      "start": 220.32,
+      "end": 225.2
+    },
+    {
+      "block": 28,
+      "text": "Figure out how to implement other contracts",
+      "start": 225.38,
+      "end": 228.02
+    },
+    {
+      "block": 29,
+      "text": "Look into native theme rendering",
+      "start": 228.2,
+      "end": 230.36
+    },
+    {
+      "block": 30,
+      "text": "Probably others",
+      "start": 230.54,
+      "end": 232.22
+    },
+    {
+      "block": 31,
+      "text": "Meetings",
+      "start": 232.4,
+      "end": 233.76
+    },
+    {
+      "block": 32,
+      "text": "We had our first weekly developer meeting half way through the week with attendees: Robert Strong, Tim Abraldes, Jim Mathies and myself (Brian R.",
+      "start": 233.94,
+      "end": 242.98
+    },
+    {
+      "block": 32,
+      "text": "Bondy).",
+      "start": 243.16,
+      "end": 244.44
+    },
+    {
+      "block": 33,
+      "text": "Helping out",
+      "start": 244.62,
+      "end": 246.14
+    },
+    {
+      "block": 34,
+      "text": "We\u2019re still extremely early in development so we\u2019re not ready for help with things like how the UI should look yet.",
+      "start": 246.32,
+      "end": 251.68
+    },
+    {
+      "block": 35,
+      "text": "If you want to help with the development effort to get Firefox up and running in Metro, we\u2019d love to hear from you.",
+      "start": 251.86,
+      "end": 257.38
+    },
+    {
+      "block": 35,
+      "text": "Please sync up with us in #windev on IRC or email me directly at netzen at gmail.com.",
+      "start": 257.56,
+      "end": 263.08
+    }
+  ]
+}

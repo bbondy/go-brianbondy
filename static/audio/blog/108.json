@@ -1,0 +1,177 @@
+{
+  "post": 108,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "591e4980ef04c166b25f788f7f78fe9b41ac7200b4672585cd42025a3a8ce52e",
+  "audioSHA256": "e8d41e47e11135b048a23f698898511765e3b15ee921367436133e891cda67b0",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "The January 2011 data dump was released today.",
+      "start": 0.0,
+      "end": 3.52
+    },
+    {
+      "block": 0,
+      "text": "Unfortunately new data dumps will only occur every 2 months officially now.",
+      "start": 3.7,
+      "end": 8.1
+    },
+    {
+      "block": 1,
+      "text": "Since the November 2010 data dump, four new sites have been added:",
+      "start": 8.28,
+      "end": 12.36
+    },
+    {
+      "block": 2,
+      "text": "English Language and Usage",
+      "start": 12.54,
+      "end": 14.86
+    },
+    {
+      "block": 3,
+      "text": "Programmers",
+      "start": 15.04,
+      "end": 16.56
+    },
+    {
+      "block": 4,
+      "text": "TeX - LaTeX",
+      "start": 16.74,
+      "end": 18.82
+    },
+    {
+      "block": 5,
+      "text": "Theoretical Computer Science",
+      "start": 19.0,
+      "end": 21.32
+    },
+    {
+      "block": 6,
+      "text": "There are around 400 new twitter users added to the StackOverflow data dump alone since the last data dump.",
+      "start": 21.5,
+      "end": 27.26
+    },
+    {
+      "block": 6,
+      "text": "I would imagine that some of these users seen the first list and then updated their profiles.",
+      "start": 27.44,
+      "end": 32.4
+    },
+    {
+      "block": 6,
+      "text": "Also there are new users.",
+      "start": 32.58,
+      "end": 34.5
+    },
+    {
+      "block": 7,
+      "text": "Here is the full StackExchange social network user lists:",
+      "start": 34.68,
+      "end": 38.28
+    },
+    {
+      "block": 8,
+      "text": "StackOverflow - Twitter - LinkedIn - Facebook",
+      "start": 38.46,
+      "end": 42.3
+    },
+    {
+      "block": 9,
+      "text": "ServerFault - Twitter - LinkedIn - Facebook",
+      "start": 42.48,
+      "end": 46.24
+    },
+    {
+      "block": 10,
+      "text": "SuperUser - Twitter - LinkedIn - Facebook",
+      "start": 46.42,
+      "end": 49.86
+    },
+    {
+      "block": 11,
+      "text": "Game Development - Twitter - LinkedIn - Facebook",
+      "start": 50.04,
+      "end": 53.64
+    },
+    {
+      "block": 12,
+      "text": "Webmasters - Twitter - LinkedIn - Facebook",
+      "start": 53.82,
+      "end": 57.58
+    },
+    {
+      "block": 13,
+      "text": "Web Applications - Twitter - LinkedIn - Facebook",
+      "start": 57.76,
+      "end": 61.68
+    },
+    {
+      "block": 14,
+      "text": "Ubuntu - Twitter - LinkedIn - Facebook",
+      "start": 61.86,
+      "end": 65.54
+    },
+    {
+      "block": 15,
+      "text": "Statistical Analysis - Twitter - LinkedIn - Facebook",
+      "start": 65.72,
+      "end": 69.96
+    },
+    {
+      "block": 16,
+      "text": "StackApps - Twitter - LinkedIn - Facebook",
+      "start": 70.14,
+      "end": 73.66
+    },
+    {
+      "block": 17,
+      "text": "Photography - Twitter - LinkedIn - Facebook",
+      "start": 73.84,
+      "end": 77.68
+    },
+    {
+      "block": 18,
+      "text": "Mathematics - Twitter - LinkedIn - Facebook",
+      "start": 77.86,
+      "end": 81.38
+    },
+    {
+      "block": 19,
+      "text": "Cooking - Twitter - LinkedIn - Facebook",
+      "start": 81.56,
+      "end": 85.0
+    },
+    {
+      "block": 20,
+      "text": "Gaming - Twitter - LinkedIn - Facebook",
+      "start": 85.18,
+      "end": 88.7
+    },
+    {
+      "block": 21,
+      "text": "English Language and Usage - Twitter - LinkedIn - Facebook",
+      "start": 88.88,
+      "end": 93.44
+    },
+    {
+      "block": 22,
+      "text": "Programmers - Twitter - LinkedIn - Facebook",
+      "start": 93.62,
+      "end": 97.14
+    },
+    {
+      "block": 23,
+      "text": "TeX - LaTeX - Twitter - LinkedIn - Facebook",
+      "start": 97.32,
+      "end": 101.4
+    },
+    {
+      "block": 24,
+      "text": "Theoretical Computer Science - Twitter - LinkedIn - Facebook",
+      "start": 101.58,
+      "end": 105.74
+    }
+  ]
+}

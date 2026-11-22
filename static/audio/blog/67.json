@@ -1,0 +1,21 @@
+{
+  "post": 67,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "64db80f419c9491d05454fbec66e534dfac5f8e864c17a7dad704314e67728e3",
+  "audioSHA256": "87ffe71629c22e73b851c18735ecffe4e2bf7fe04c6129ecea3556e3c2fad900",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "Dynamic DNS now allows a real http path to point directly to your computer.",
+      "start": 0.0,
+      "end": 5.12
+    },
+    {
+      "block": 0,
+      "text": "After creating a dynamic DNS called for example \u2018brianbondy\u2019 you can now access the dynamic IP via https://brianbondy.com/brianbondy Since the dynamic host brianbondy is linked to 127.0.0.1, you can access the web page on your local host via that URL.",
+      "start": 5.3,
+      "end": 24.98
+    }
+  ]
+}

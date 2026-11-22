@@ -1,0 +1,15 @@
+{
+  "post": 28,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "61e1f7da7888d66ad45c7ec045d4fb2652a639c62653bfe3188acb34a05c5210",
+  "audioSHA256": "66df7e15d902c635e6b041b8be01feec1eec1f5e1e448112a019d45711f82b2a",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "Funny weird Al video: White and nerdy",
+      "start": 0.0,
+      "end": 2.88
+    }
+  ]
+}

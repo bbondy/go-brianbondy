@@ -1,0 +1,381 @@
+{
+  "post": 117,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "f0a63631e06d4174c29c8af413d68f4f41fde9d74378a90b30ffe523670214bc",
+  "audioSHA256": "7753d29802cfa5839bfa6e87b4c3bfd30e044303007080d0c62d639c82babf4e",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "I thought it would be interesting to calculate the average age of users on each StackExchange site, and even more interesting to see each tag within those sites.",
+      "start": 0.0,
+      "end": 7.76
+    },
+    {
+      "block": 0,
+      "text": "I did a caculation using the April 2011 data dump and came up with the following data.",
+      "start": 7.94,
+      "end": 13.14
+    },
+    {
+      "block": 0,
+      "text": "I call the statistic the Expected age of a tag because it is calculated using the Expected Value.",
+      "start": 13.32,
+      "end": 18.84
+    },
+    {
+      "block": 1,
+      "text": "Observations:",
+      "start": 19.02,
+      "end": 20.62
+    },
+    {
+      "block": 2,
+      "text": "The expected age of the whole StackOverflow site is ~30 years old.",
+      "start": 20.8,
+      "end": 24.88
+    },
+    {
+      "block": 3,
+      "text": "On StackOverlow the tag with the youngest expected age is 26 years old, the tag with the oldest is 36.",
+      "start": 25.06,
+      "end": 31.22
+    },
+    {
+      "block": 3,
+      "text": "I was surprised they were so close together.",
+      "start": 31.4,
+      "end": 33.96
+    },
+    {
+      "block": 4,
+      "text": "The site with the youngest users of the StackExchange network is: Gaming, then surprisingly Game dev, and Ask Ubuntu.",
+      "start": 34.14,
+      "end": 41.58
+    },
+    {
+      "block": 5,
+      "text": "The site with the oldest users of the StackExchange network is: Do It Yourself, followed by Photography, and then by Geographic Information Systems.",
+      "start": 41.76,
+      "end": 50.0
+    },
+    {
+      "block": 6,
+      "text": "A funny one, on ServerFault one of the tags with the oldest expected age is old-hardware.",
+      "start": 50.18,
+      "end": 55.14
+    },
+    {
+      "block": 6,
+      "text": "Apparently older people know more about old-hardware than anything else.",
+      "start": 55.32,
+      "end": 59.32
+    },
+    {
+      "block": 7,
+      "text": "I\u2019m not sure if this is true, but perhaps the tags with younger ages are more cutting edge.",
+      "start": 59.5,
+      "end": 64.3
+    },
+    {
+      "block": 7,
+      "text": "For example vb6 and COBOL have ages of over 36 on Programmers SE.",
+      "start": 64.48,
+      "end": 69.6
+    },
+    {
+      "block": 7,
+      "text": "I don\u2019t think this assertion is true in general though.",
+      "start": 69.78,
+      "end": 72.74
+    },
+    {
+      "block": 8,
+      "text": "And as for the other sites, the expected age is:",
+      "start": 72.92,
+      "end": 75.96
+    },
+    {
+      "block": 9,
+      "text": "Android: 30.02 years old.",
+      "start": 76.14,
+      "end": 78.86
+    },
+    {
+      "block": 10,
+      "text": "Apple: 30.50 years old.",
+      "start": 79.04,
+      "end": 81.76
+    },
+    {
+      "block": 11,
+      "text": "Ask Ubuntu: 28.08 years old.",
+      "start": 81.94,
+      "end": 85.38
+    },
+    {
+      "block": 12,
+      "text": "Cooking: 33.18 years old.",
+      "start": 85.56,
+      "end": 88.52
+    },
+    {
+      "block": 13,
+      "text": "Do It Yourself: 35.68",
+      "start": 88.7,
+      "end": 91.74
+    },
+    {
+      "block": 14,
+      "text": "Electronics: 32.01 years old.",
+      "start": 91.92,
+      "end": 95.2
+    },
+    {
+      "block": 15,
+      "text": "English Language and Usage: 32.22 years old.",
+      "start": 95.38,
+      "end": 99.54
+    },
+    {
+      "block": 16,
+      "text": "Game Development: 27.72 years old.",
+      "start": 99.72,
+      "end": 103.32
+    },
+    {
+      "block": 17,
+      "text": "Gaming: 27.39 years old.",
+      "start": 103.5,
+      "end": 106.7
+    },
+    {
+      "block": 18,
+      "text": "Geographic Information Systems: 33.34 years old.",
+      "start": 106.88,
+      "end": 111.28
+    },
+    {
+      "block": 19,
+      "text": "Mathematics: 30.19 years old.",
+      "start": 111.46,
+      "end": 114.58
+    },
+    {
+      "block": 20,
+      "text": "Photography: 34.01 years old.",
+      "start": 114.76,
+      "end": 118.04
+    },
+    {
+      "block": 21,
+      "text": "Programmers: 32.26 years old.",
+      "start": 118.22,
+      "end": 121.42
+    },
+    {
+      "block": 22,
+      "text": "Server Fault: 31.63 years old.",
+      "start": 121.6,
+      "end": 125.04
+    },
+    {
+      "block": 23,
+      "text": "Stack Apps: 28.31 years old.",
+      "start": 125.22,
+      "end": 128.42
+    },
+    {
+      "block": 24,
+      "text": "Stack Overflow: 30.48 years old.",
+      "start": 128.6,
+      "end": 132.04
+    },
+    {
+      "block": 25,
+      "text": "Statistical Analysis: 33.67 years old.",
+      "start": 132.22,
+      "end": 136.38
+    },
+    {
+      "block": 26,
+      "text": "Super User: 30.09 years old.",
+      "start": 136.56,
+      "end": 139.76
+    },
+    {
+      "block": 27,
+      "text": "TeX - LaTeX: 30.86 5years old.",
+      "start": 139.94,
+      "end": 144.02
+    },
+    {
+      "block": 28,
+      "text": "Theoretical Computer Science: 30.58 years old.",
+      "start": 144.2,
+      "end": 148.04
+    },
+    {
+      "block": 29,
+      "text": "Unix: 29.97 years old.",
+      "start": 148.22,
+      "end": 151.42
+    },
+    {
+      "block": 30,
+      "text": "Web Applications: 29.85 years old.",
+      "start": 151.6,
+      "end": 155.28
+    },
+    {
+      "block": 31,
+      "text": "Webmasters: 29.64 years old.",
+      "start": 155.46,
+      "end": 158.98
+    },
+    {
+      "block": 32,
+      "text": "Wordpress: 30.32 years old",
+      "start": 159.16,
+      "end": 162.28
+    },
+    {
+      "block": 33,
+      "text": "You can see the per user tag data by clicking on the site name in the above list.",
+      "start": 162.46,
+      "end": 166.78
+    },
+    {
+      "block": 34,
+      "text": "You could probably say that the StackExchange network could use younger contributors.",
+      "start": 166.96,
+      "end": 171.12
+    },
+    {
+      "block": 34,
+      "text": "I\u2019ve said this before, but I think it would be advantageous for the StackExchange team to do some events at Universities.",
+      "start": 171.3,
+      "end": 177.3
+    },
+    {
+      "block": 34,
+      "text": "When I previously helped with some Microsoft events at University of Waterloo (Top Computer Science University in Canada, and one of the top in the world) several students didn\u2019t know what StackOverflow was.",
+      "start": 177.48,
+      "end": 188.2
+    },
+    {
+      "block": 35,
+      "text": "How I made the calculations per tag",
+      "start": 188.38,
+      "end": 190.86
+    },
+    {
+      "block": 36,
+      "text": "The below calculations were calculated with the April 2011 StackOverflow data dump.",
+      "start": 191.04,
+      "end": 196.24
+    },
+    {
+      "block": 37,
+      "text": "What I calculated was the average age per tag each answer comes from for each StackExchange site.",
+      "start": 196.42,
+      "end": 201.7
+    },
+    {
+      "block": 38,
+      "text": "To do this calculation I calculated the Expected Age of each site.",
+      "start": 201.88,
+      "end": 205.8
+    },
+    {
+      "block": 39,
+      "text": "Expected Age = Summation over each age X of: P(X) * X",
+      "start": 205.98,
+      "end": 210.86
+    },
+    {
+      "block": 40,
+      "text": "Where P(X) is the probability that a user of age X will answer a given question.",
+      "start": 211.04,
+      "end": 216.4
+    },
+    {
+      "block": 40,
+      "text": "You can calculate this probability by summing the number of answers by each age, divided by the total number of answers within that tag.",
+      "start": 216.58,
+      "end": 223.62
+    },
+    {
+      "block": 41,
+      "text": "I also only considered the top 3000 tags.",
+      "start": 223.8,
+      "end": 227.08
+    },
+    {
+      "block": 41,
+      "text": "The top tags may not match up exactly since I only consider tags if the answerer has an age specified in their profile.",
+      "start": 227.26,
+      "end": 233.34
+    },
+    {
+      "block": 42,
+      "text": "Other attempts at these stats",
+      "start": 233.52,
+      "end": 235.52
+    },
+    {
+      "block": 43,
+      "text": "I initially tried to do this statistic by weighing each age by the reputation of each user, but it turned out to not generate interesting data.",
+      "start": 235.7,
+      "end": 242.9
+    },
+    {
+      "block": 43,
+      "text": "The problem was that the data was weighted heavily to only include the top 1% or so of users.",
+      "start": 243.08,
+      "end": 248.52
+    },
+    {
+      "block": 44,
+      "text": "Limitations of this study",
+      "start": 248.7,
+      "end": 250.86
+    },
+    {
+      "block": 45,
+      "text": "Several users don\u2019t enter their age in their profile, so no answers from a user without an age specified counts.",
+      "start": 251.04,
+      "end": 256.88
+    },
+    {
+      "block": 46,
+      "text": "Users that are very young and users that are very old may be more unlikely to enter their age.",
+      "start": 257.06,
+      "end": 262.1
+    },
+    {
+      "block": 47,
+      "text": "Each user may be counted more than once, since I only count +1 for each age that answers a questions.",
+      "start": 262.28,
+      "end": 267.96
+    },
+    {
+      "block": 48,
+      "text": "Some users may be entering fake age values, although I ignored age values out of an acceptable range.",
+      "start": 268.14,
+      "end": 273.82
+    },
+    {
+      "block": 49,
+      "text": "We are talking about averages here, so this doesn\u2019t mean there aren\u2019t a lot of younger and older contributors.",
+      "start": 274.0,
+      "end": 279.12
+    },
+    {
+      "block": 49,
+      "text": "For example if an average is 20 years old, there could be an equal amount of 10 and 30 year olds answering, or there could be only 20 year olds answering.",
+      "start": 279.3,
+      "end": 287.38
+    }
+  ]
+}

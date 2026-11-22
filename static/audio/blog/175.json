@@ -1,0 +1,567 @@
+{
+  "post": 175,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "7479c02feaa8f477112299180ef72453dbe94e4534c1b7f38684798da2e97229",
+  "audioSHA256": "311861eb253a24ae775e756a977689394f6955e714a54d090ffccfa68fd671c7",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "It wasn\u2019t until later in my life at the age of 29 (2010) that I got into running.",
+      "start": 0.0,
+      "end": 5.68
+    },
+    {
+      "block": 0,
+      "text": "To try and stay in shape, I took karate, but my karate dojo had just closed.",
+      "start": 5.86,
+      "end": 10.74
+    },
+    {
+      "block": 0,
+      "text": "Running seemed interesting to me, but my cardio was horrible.",
+      "start": 10.92,
+      "end": 14.6
+    },
+    {
+      "block": 0,
+      "text": "I went out for a 1k run and I was out of breath and quit 7 minutes later.",
+      "start": 14.78,
+      "end": 19.02
+    },
+    {
+      "block": 0,
+      "text": "I\u2019d blame it on my asthma.",
+      "start": 19.2,
+      "end": 21.04
+    },
+    {
+      "block": 0,
+      "text": "It was no secret that I wasn\u2019t in shape, even the people at my karate dojo sarcastically called me \u201ccardio king\u201d.",
+      "start": 21.22,
+      "end": 27.38
+    },
+    {
+      "block": 1,
+      "text": "Over the course of the next couple years, with the help of my friend Sam Denommee fixing my running form and answering all my questions, I built up to a 5k, a 10k, and then a half marathon.",
+      "start": 27.56,
+      "end": 38.12
+    },
+    {
+      "block": 1,
+      "text": "The next year in 2013, I did my first marathon.",
+      "start": 38.3,
+      "end": 41.9
+    },
+    {
+      "block": 2,
+      "text": "5 years later in 2018, I kept running, but I was still out of shape.",
+      "start": 42.08,
+      "end": 46.56
+    },
+    {
+      "block": 2,
+      "text": "I had done up to a 50mi race at this point, but that 50mi race didn\u2019t go well and I went over the cut-off time by a few minutes.",
+      "start": 46.74,
+      "end": 53.54
+    },
+    {
+      "block": 2,
+      "text": "I never did beat my first marathon\u2019s time at that point even though I had done a bunch of other marathons.",
+      "start": 53.72,
+      "end": 58.92
+    },
+    {
+      "block": 2,
+      "text": "Most alarmingly though, stepping on the scale, I broke 200lbs for the first time in my life.",
+      "start": 59.1,
+      "end": 64.54
+    },
+    {
+      "block": 2,
+      "text": "This scared the shit out of me.",
+      "start": 64.72,
+      "end": 66.64
+    },
+    {
+      "block": 2,
+      "text": "My father died early in life and I wanted to make sure I was healthy for my 3 boys.",
+      "start": 66.82,
+      "end": 71.38
+    },
+    {
+      "block": 3,
+      "text": "I decided that over the winter, I\u2019d do a 10k 30 days in a row.",
+      "start": 71.56,
+      "end": 75.72
+    },
+    {
+      "block": 3,
+      "text": "This went well, so well that I extended it to 100 days in a row.",
+      "start": 75.9,
+      "end": 79.82
+    },
+    {
+      "block": 3,
+      "text": "I was down into the mid 190lbs at this point but still overweight.",
+      "start": 80.0,
+      "end": 84.56
+    },
+    {
+      "block": 3,
+      "text": "I felt better though and coming off the high of completing 100 10ks in consecutive days, and having just read David Goggins\u2019s book \u201cCan\u2019t Hurt Me\u201d, I decided it was time to try to push past my furthest distance.",
+      "start": 84.74,
+      "end": 95.62
+    },
+    {
+      "block": 4,
+      "text": "I sent Sam a message and asked her if she thought it would be stupid if I went from 50mi to 100mi instead of doing a 100k next.",
+      "start": 95.8,
+      "end": 102.76
+    },
+    {
+      "block": 4,
+      "text": "She said to go big and then to go home.",
+      "start": 102.94,
+      "end": 105.42
+    },
+    {
+      "block": 4,
+      "text": "So I signed up for the 100mi race.",
+      "start": 105.6,
+      "end": 108.08
+    },
+    {
+      "block": 4,
+      "text": "I had 6 months to get ready.",
+      "start": 108.26,
+      "end": 110.26
+    },
+    {
+      "block": 5,
+      "text": "I immediately knew I was in trouble, and this scared the shit out of me.",
+      "start": 110.44,
+      "end": 114.28
+    },
+    {
+      "block": 5,
+      "text": "I knew my previous 50mi went badly and that carrying the extra weight for 100mi would be a recipe for failure.",
+      "start": 114.46,
+      "end": 120.62
+    },
+    {
+      "block": 6,
+      "text": "It was at this point that I contacted a local sports nutritionist that I found online - Andrea Docherty.",
+      "start": 120.8,
+      "end": 126.72
+    },
+    {
+      "block": 6,
+      "text": "She helped me learn proper nutrition and what I needed to survive and feel good during the runs.",
+      "start": 126.9,
+      "end": 131.86
+    },
+    {
+      "block": 6,
+      "text": "This was by far the most important thing that I needed.",
+      "start": 132.04,
+      "end": 135.08
+    },
+    {
+      "block": 6,
+      "text": "I lost over 30lbs overall in my training and I kept the weight off since then.",
+      "start": 135.26,
+      "end": 139.74
+    },
+    {
+      "block": 7,
+      "text": "During this time, I kept a Google Sheet with everything that I ate and the macronutrients in each item.",
+      "start": 139.92,
+      "end": 145.28
+    },
+    {
+      "block": 7,
+      "text": "I was strict with myself and I wouldn\u2019t eat anything that I couldn\u2019t get the nutrition info for.",
+      "start": 145.46,
+      "end": 150.18
+    },
+    {
+      "block": 7,
+      "text": "I tracked everything I consumed for the next 6 months.",
+      "start": 150.36,
+      "end": 153.4
+    },
+    {
+      "block": 8,
+      "text": "I scribbled notes as Andrea taught me weekly.",
+      "start": 153.58,
+      "end": 156.46
+    },
+    {
+      "block": 8,
+      "text": "I learnt the right proportion of macronutrients: fats, proteins and carbs for my weight. 1.6-1.8g/kg of protein.",
+      "start": 156.64,
+      "end": 165.28
+    },
+    {
+      "block": 8,
+      "text": "Proteins and fats are the most filling because they take longer to digest.",
+      "start": 165.46,
+      "end": 169.7
+    },
+    {
+      "block": 8,
+      "text": "I learnt about micronutrients like vitamins and minerals.",
+      "start": 169.88,
+      "end": 173.16
+    },
+    {
+      "block": 8,
+      "text": "Sodium is the main electrolyte you lose when you sweat.",
+      "start": 173.34,
+      "end": 176.38
+    },
+    {
+      "block": 8,
+      "text": "For the extra calories that I\u2019d burn during a run, I\u2019d increase my average carb intake.",
+      "start": 176.56,
+      "end": 181.36
+    },
+    {
+      "block": 8,
+      "text": "I learnt to start eating 30-45min into the run.",
+      "start": 181.54,
+      "end": 184.98
+    },
+    {
+      "block": 8,
+      "text": "Caffeine has a half life of 5-6 hours.",
+      "start": 185.16,
+      "end": 188.04
+    },
+    {
+      "block": 8,
+      "text": "The list of supplements I should take.",
+      "start": 188.22,
+      "end": 190.46
+    },
+    {
+      "block": 8,
+      "text": "I should consume 30-60g of carbs / hour when running, or up to 400 calories.",
+      "start": 190.64,
+      "end": 196.48
+    },
+    {
+      "block": 8,
+      "text": "During a long run aim for 250-500mg of sodium/hour.",
+      "start": 196.66,
+      "end": 201.46
+    },
+    {
+      "block": 8,
+      "text": "Turmeric is good for inflammation for recovery.",
+      "start": 201.64,
+      "end": 204.52
+    },
+    {
+      "block": 8,
+      "text": "Ginger is good for an upset stomach.",
+      "start": 204.7,
+      "end": 207.1
+    },
+    {
+      "block": 8,
+      "text": "Lose at most 1\u20442 lbs a week.",
+      "start": 207.28,
+      "end": 210.32
+    },
+    {
+      "block": 8,
+      "text": "Etc.",
+      "start": 210.5,
+      "end": 211.7
+    },
+    {
+      "block": 9,
+      "text": "For my training plan, Sam shared a local running group\u2019s plan with me - the weULTRA 20-week 100mi training plan.",
+      "start": 211.88,
+      "end": 218.44
+    },
+    {
+      "block": 9,
+      "text": "The distance needed each week was mind blowing to me at the time.",
+      "start": 218.62,
+      "end": 222.06
+    },
+    {
+      "block": 9,
+      "text": "The longest single training run I did while on this plan was 50mi and I\u2019d regularly do above 100k per week.",
+      "start": 222.24,
+      "end": 228.56
+    },
+    {
+      "block": 9,
+      "text": "During this time, I could get through a couple audio books per week.",
+      "start": 228.74,
+      "end": 232.34
+    },
+    {
+      "block": 9,
+      "text": "I didn\u2019t miss a training run, and went above the needed distance on some weeks.",
+      "start": 232.52,
+      "end": 236.6
+    },
+    {
+      "block": 9,
+      "text": "I\u2019m thankful to my wife for being supportive and understanding during my training.",
+      "start": 236.78,
+      "end": 240.94
+    },
+    {
+      "block": 10,
+      "text": "By the end of my training plan, and in large part thanks to my nutritionist Andrea, I felt somewhat ready for my race.",
+      "start": 241.12,
+      "end": 247.44
+    },
+    {
+      "block": 10,
+      "text": "I explained to my boys that I wasn\u2019t sure if I could do it but that I\u2019d try to finish.",
+      "start": 247.62,
+      "end": 252.02
+    },
+    {
+      "block": 10,
+      "text": "They told me that they were sure I\u2019d do it, to which I explained, no really, I\u2019m not sure.",
+      "start": 252.2,
+      "end": 257.16
+    },
+    {
+      "block": 11,
+      "text": "On the day of the race, my wife and boys came with me to the race and helped me set up a tent which I\u2019d pass by on each loop of the race to get extra supplies.",
+      "start": 257.34,
+      "end": 265.18
+    },
+    {
+      "block": 12,
+      "text": "I had a couple of hours of down time before the run.",
+      "start": 265.36,
+      "end": 268.48
+    },
+    {
+      "block": 12,
+      "text": "I was tapered and pumped at the starting line.",
+      "start": 268.66,
+      "end": 271.14
+    },
+    {
+      "block": 13,
+      "text": "The race consisted of 6 loops, where each loop was a figure 8.",
+      "start": 271.32,
+      "end": 275.56
+    },
+    {
+      "block": 13,
+      "text": "I would follow the pink loop.",
+      "start": 275.74,
+      "end": 277.66
+    },
+    {
+      "block": 13,
+      "text": "Pretty simple, who could screw it up?",
+      "start": 277.84,
+      "end": 280.24
+    },
+    {
+      "block": 13,
+      "text": "A good friend of mine Sergey Zhukovsky came and crewed for me and ran the 4th and 5th loop with me, which happened to be around 4am.",
+      "start": 280.42,
+      "end": 287.46
+    },
+    {
+      "block": 13,
+      "text": "I\u2019m forever grateful for his support on each of the other loops too.",
+      "start": 287.64,
+      "end": 291.4
+    },
+    {
+      "block": 14,
+      "text": "The run went well overall, I made a wrong turn following someone at one point and added 1k extra.",
+      "start": 291.58,
+      "end": 297.26
+    },
+    {
+      "block": 14,
+      "text": "I stopped him and told him I thought we were going the wrong way and there weren\u2019t any markers.",
+      "start": 297.44,
+      "end": 301.92
+    },
+    {
+      "block": 14,
+      "text": "We turned back and got back in the right direction.",
+      "start": 302.1,
+      "end": 304.82
+    },
+    {
+      "block": 15,
+      "text": "Running for over 24h without a break is exhausting of course, and I wanted to die, but I had encouragement from my family sending me messages and words of encouragement the whole time, even throughout the night.",
+      "start": 305.0,
+      "end": 316.2
+    },
+    {
+      "block": 15,
+      "text": "I didn\u2019t think of quitting at all during this run.",
+      "start": 316.38,
+      "end": 319.1
+    },
+    {
+      "block": 16,
+      "text": "At the end of the 5th loop it seemed like I\u2019d finish the race with plenty of time to spare.",
+      "start": 319.28,
+      "end": 323.68
+    },
+    {
+      "block": 16,
+      "text": "The 6th loop was going well, that is until I didn\u2019t turn at the vertex of the figure 8, and did the top half of the 8 twice, adding an extra 10k to the total distance.",
+      "start": 323.86,
+      "end": 332.74
+    },
+    {
+      "block": 16,
+      "text": "The worst part of this is that the flags are still there, and are on the correct side, so it\u2019s hard to tell you\u2019re off course.",
+      "start": 332.92,
+      "end": 338.92
+    },
+    {
+      "block": 16,
+      "text": "Because you\u2019re still on course, just doing something you already did before, 6 times.",
+      "start": 339.1,
+      "end": 343.82
+    },
+    {
+      "block": 16,
+      "text": "I suspected I missed a turn, but I wasn\u2019t sure until about 4k in.",
+      "start": 344.0,
+      "end": 348.16
+    },
+    {
+      "block": 16,
+      "text": "I realized what I must have done but decided to just keep going and turn once I got back to the vertex of the 8.",
+      "start": 348.34,
+      "end": 354.26
+    },
+    {
+      "block": 16,
+      "text": "I could do this and still make the cut off time.",
+      "start": 354.44,
+      "end": 357.16
+    },
+    {
+      "block": 16,
+      "text": "Overall the distance of my race ended up being more than 4 consecutive marathons.",
+      "start": 357.34,
+      "end": 361.82
+    },
+    {
+      "block": 17,
+      "text": "It ended up being close, the cut off time was 30 hours, but I did end up finishing the 170k+ in 29 hours.",
+      "start": 362.0,
+      "end": 369.36
+    },
+    {
+      "block": 17,
+      "text": "To my dismay, there wasn\u2019t an award for longest 100mi run.",
+      "start": 369.54,
+      "end": 373.62
+    },
+    {
+      "block": 17,
+      "text": "It was dark (for a second time) by the time I finished the run.",
+      "start": 373.8,
+      "end": 377.64
+    },
+    {
+      "block": 17,
+      "text": "I could hear my wife Shannon calling out that she could see me and my boys ran in the finish line with me.",
+      "start": 377.82,
+      "end": 382.62
+    },
+    {
+      "block": 18,
+      "text": "After the run, I had blisters on my feet and chafing in more places that I want to admit.",
+      "start": 382.8,
+      "end": 387.6
+    },
+    {
+      "block": 18,
+      "text": "My body immediately turned off like a light switch.",
+      "start": 387.78,
+      "end": 390.74
+    },
+    {
+      "block": 18,
+      "text": "I was running seconds before, and seized up right after the finish line.",
+      "start": 390.92,
+      "end": 394.92
+    },
+    {
+      "block": 18,
+      "text": "I collected some finisher\u2019s race swag and ravaged a plate of pasta.",
+      "start": 395.1,
+      "end": 398.86
+    },
+    {
+      "block": 19,
+      "text": "I was back out running 5 days later.",
+      "start": 399.04,
+      "end": 401.52
+    },
+    {
+      "block": 19,
+      "text": "A month after that I went out for my second 100mi run.",
+      "start": 401.7,
+      "end": 405.22
+    },
+    {
+      "block": 20,
+      "text": "I fell in love with the 100mi distance during this first race.",
+      "start": 405.4,
+      "end": 409.16
+    },
+    {
+      "block": 20,
+      "text": "You get to push yourself to your limits, and then beyond your limits.",
+      "start": 409.34,
+      "end": 413.02
+    },
+    {
+      "block": 20,
+      "text": "Emotionally, you feel as raw as the chafing between your legs.",
+      "start": 413.2,
+      "end": 416.88
+    },
+    {
+      "block": 20,
+      "text": "You feel so loved, supported, and so thankful.",
+      "start": 417.06,
+      "end": 420.42
+    },
+    {
+      "block": 20,
+      "text": "You get to learn about yourself and realize that you can do more than you thought was possible.",
+      "start": 420.6,
+      "end": 425.0
+    },
+    {
+      "block": 20,
+      "text": "Without the bitter, the sweet ain\u2019t as sweet.",
+      "start": 425.18,
+      "end": 427.98
+    },
+    {
+      "block": 20,
+      "text": "When you run for 29 hours, there\u2019s a lot of bitterness, and you experience sweetness like you never have before.",
+      "start": 428.16,
+      "end": 434.24
+    }
+  ]
+}

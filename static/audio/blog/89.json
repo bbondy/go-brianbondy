@@ -1,0 +1,39 @@
+{
+  "post": 89,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "6be849f08c44bfebc3f4a026283a1ec487b5d2f7941d576485dbac7835ba47f2",
+  "audioSHA256": "13797c807c5090caef3f851c9f0e3913f3b2be8a870377da6dffce6d631be84d",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "I\u2019m currently reading:",
+      "start": 0.0,
+      "end": 1.84
+    },
+    {
+      "block": 1,
+      "text": "Gray Hat Python: Python Programming for hackers and reverse engineers by Justin Seitz",
+      "start": 2.02,
+      "end": 7.3
+    },
+    {
+      "block": 2,
+      "text": "C# in depth 2nd edition by John Skeet",
+      "start": 7.48,
+      "end": 10.68
+    },
+    {
+      "block": 3,
+      "text": "I\u2019m about half way through both books.",
+      "start": 10.86,
+      "end": 13.18
+    },
+    {
+      "block": 3,
+      "text": "They\u2019re both great books so far.",
+      "start": 13.36,
+      "end": 15.52
+    }
+  ]
+}

@@ -1,0 +1,219 @@
+{
+  "post": 136,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "27e10a4424a07c9956cea4bbe613a3f449236be1815254dc6d30e058e5027a58",
+  "audioSHA256": "26fb6687f5addf1b3f1429d81d43a66ab89d16090056fbd48fd98d5f4c2fa9a0",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "We\u2019ve made steady progress over the past 3 weeks on Firefox for Windows 8 Metro.",
+      "start": 0.0,
+      "end": 4.88
+    },
+    {
+      "block": 1,
+      "text": "Platform Integration:",
+      "start": 5.06,
+      "end": 7.06
+    },
+    {
+      "block": 2,
+      "text": "We have secondary tiles working, you can pin secondary tiles temporarily via a menu item.",
+      "start": 7.24,
+      "end": 12.76
+    },
+    {
+      "block": 2,
+      "text": "Like Internet Explorer 10, you can pin any number of sites to your start screen.",
+      "start": 12.94,
+      "end": 17.5
+    },
+    {
+      "block": 2,
+      "text": "When you click on the secondary tile, it will load the pinned site in Metro whether or not Firefox is already open.",
+      "start": 17.68,
+      "end": 23.92
+    },
+    {
+      "block": 3,
+      "text": "We also hooked up the Windows 8 settings contract which means you can access Firefox preferences via the Windows 8 Settings charm.",
+      "start": 24.1,
+      "end": 31.14
+    },
+    {
+      "block": 4,
+      "text": "Work is in progress for the Play To contract and the print contract.",
+      "start": 31.32,
+      "end": 35.08
+    },
+    {
+      "block": 5,
+      "text": "Accessibility and Input:",
+      "start": 35.26,
+      "end": 37.42
+    },
+    {
+      "block": 6,
+      "text": "We now support the soft keyboard which is especially important for when a keyboard is not attached and you are using a touch device.",
+      "start": 37.6,
+      "end": 44.16
+    },
+    {
+      "block": 7,
+      "text": "We are also working on hooking up Windows 8 touch events, Windows 8 gestures, and W3C DOM touch events.",
+      "start": 44.34,
+      "end": 51.46
+    },
+    {
+      "block": 8,
+      "text": "Core Changes:",
+      "start": 51.64,
+      "end": 53.24
+    },
+    {
+      "block": 9,
+      "text": "We added support for XAML interop.",
+      "start": 53.42,
+      "end": 56.06
+    },
+    {
+      "block": 9,
+      "text": "This means that we can overlay XAML controls on top of our XUL / HTML rendered DirectX surface.",
+      "start": 56.24,
+      "end": 63.04
+    },
+    {
+      "block": 9,
+      "text": "We don\u2019t know all of the use cases for this yet but we\u2019ll probably use this for at least the app bar.",
+      "start": 63.22,
+      "end": 68.26
+    },
+    {
+      "block": 9,
+      "text": "The app bar is a bar of controls you can slide up from the bottom edge or your screen or popup via right click.",
+      "start": 68.44,
+      "end": 74.36
+    },
+    {
+      "block": 10,
+      "text": "We also figured out PRI files in Windows 8.",
+      "start": 74.54,
+      "end": 77.82
+    },
+    {
+      "block": 10,
+      "text": "PRI files is an undocumented file type for storing resources.",
+      "start": 78.0,
+      "end": 82.0
+    },
+    {
+      "block": 11,
+      "text": "We were using another program\u2019s PRI file until recently.",
+      "start": 82.18,
+      "end": 85.94
+    },
+    {
+      "block": 12,
+      "text": "We fixed up some memory leaks on shutdown as well; these were not introduced but happened on Win32 Fennec which we are based on.",
+      "start": 86.12,
+      "end": 93.0
+    },
+    {
+      "block": 13,
+      "text": "Approval for Current Plan:",
+      "start": 93.18,
+      "end": 95.26
+    },
+    {
+      "block": 14,
+      "text": "We\u2019re hoping to get approval for the tentative plan which includes moving over the work to the main mozilla-central repository.",
+      "start": 95.44,
+      "end": 101.44
+    },
+    {
+      "block": 14,
+      "text": "The mozilla-central repository is where Nightly builds are made.",
+      "start": 101.62,
+      "end": 105.22
+    },
+    {
+      "block": 15,
+      "text": "Up until now we\u2019ve been developing and landing code on the elm repository.",
+      "start": 105.4,
+      "end": 109.48
+    },
+    {
+      "block": 16,
+      "text": "Open Questions:",
+      "start": 109.66,
+      "end": 111.42
+    },
+    {
+      "block": 17,
+      "text": "There are still several open questions, but the one we\u2019ve been investigating during the period of this update most is how to handle compiling with the Visual Studio 2011 Beta tools and still have support for running those binaries on Windows XP.",
+      "start": 111.6,
+      "end": 123.84
+    },
+    {
+      "block": 18,
+      "text": "To compile Firefox on Metro you have to use Visual Studio 11 Beta, but VS2011 cannot build binaries that are compatible for Windows XP.",
+      "start": 124.02,
+      "end": 133.38
+    },
+    {
+      "block": 18,
+      "text": "In bug 744942 we\u2019re discussing either patching the CRT, compiling a DLL with the WinRT code separately (2 compiler build process), or packaging a Windows 8 installer separate from the existing Windows installers and updates.",
+      "start": 133.56,
+      "end": 148.12
+    },
+    {
+      "block": 19,
+      "text": "In any case, we will be supporting Windows XP in the same way we always have.",
+      "start": 148.3,
+      "end": 152.78
+    },
+    {
+      "block": 19,
+      "text": "I\u2019m personally disappointed that VS 2011 drops XP support given that Windows XP has extended support up until April 8th, 2014.",
+      "start": 152.96,
+      "end": 162.64
+    },
+    {
+      "block": 20,
+      "text": "Firefox Work Week:",
+      "start": 162.82,
+      "end": 164.82
+    },
+    {
+      "block": 21,
+      "text": "Perhaps some of the most exciting work so far will happen this week coming up.",
+      "start": 165.0,
+      "end": 169.0
+    },
+    {
+      "block": 22,
+      "text": "On Monday I\u2019m heading to Toronto for the Firefox work week.",
+      "start": 169.18,
+      "end": 172.7
+    },
+    {
+      "block": 22,
+      "text": "One of the hacking goals during this week is to get some significant initial work done on the UI for Firefox on Metro.",
+      "start": 172.88,
+      "end": 178.96
+    },
+    {
+      "block": 22,
+      "text": "This work will be based on the UX work from Stephen Horlander and Yuan Wang.",
+      "start": 179.14,
+      "end": 183.3
+    },
+    {
+      "block": 22,
+      "text": "In the initial work we\u2019ll have the tab bar and address bar on the top and site specific options such as pin site on an app bar accessible from the bottom edge.",
+      "start": 183.48,
+      "end": 191.4
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "post": 91,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "d8a369a43043dc1af990729a20186ed98b62f4e72d154834560b2c0f00641fa2",
+  "audioSHA256": "1933824e1590f69c8ddd9b6aec5f0d8999576eab8f93bc46898bcbf310b0817e",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "A common mistake people make in C++ is thinking that arrays and pointers are the same thing.",
+      "start": 0.0,
+      "end": 5.36
+    },
+    {
+      "block": 0,
+      "text": "They\u2019re not.",
+      "start": 5.54,
+      "end": 6.9
+    },
+    {
+      "block": 1,
+      "text": "These 2 lines are very different.",
+      "start": 7.08,
+      "end": 9.32
+    },
+    {
+      "block": 2,
+      "text": "The first is a pointer to a string literal.",
+      "start": 9.5,
+      "end": 12.06
+    },
+    {
+      "block": 2,
+      "text": "The string literal is in read only memory.",
+      "start": 12.24,
+      "end": 14.88
+    },
+    {
+      "block": 2,
+      "text": "Changing p[i] for any index i is undefined.",
+      "start": 15.06,
+      "end": 18.34
+    },
+    {
+      "block": 3,
+      "text": "The second is a char array initialized with \u2018h\u2019, \u2018e\u2019, \u2018l\u2019, \u2018l\u2019, \u2018o\u2019, \u2018\\0\u2019.",
+      "start": 18.52,
+      "end": 25.72
+    },
+    {
+      "block": 3,
+      "text": "Changing q[i] for any index i in the range 0..5 is fine.",
+      "start": 25.9,
+      "end": 30.14
+    },
+    {
+      "block": 4,
+      "text": "Consequently:",
+      "start": 30.32,
+      "end": 31.92
+    },
+    {
+      "block": 5,
+      "text": "Not only are pointers and arrays 2 different things completely, but you can also have pointers to arrays.",
+      "start": 32.1,
+      "end": 37.62
+    },
+    {
+      "block": 5,
+      "text": "Most people think that a char* is a pointer to an array.",
+      "start": 37.8,
+      "end": 40.84
+    },
+    {
+      "block": 5,
+      "text": "It\u2019s not.",
+      "start": 41.02,
+      "end": 42.38
+    },
+    {
+      "block": 6,
+      "text": "And of course you can also create references to arrays.",
+      "start": 42.56,
+      "end": 45.52
+    },
+    {
+      "block": 6,
+      "text": "But the syntax is just as ugly as the syntax for pointers to arrays.",
+      "start": 45.7,
+      "end": 49.94
+    }
+  ]
+}

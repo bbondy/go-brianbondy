@@ -1,0 +1,783 @@
+{
+  "post": 189,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "3f01408754c8b8d3f0e480218cd3485eb359872dbd71a06fe9c69ec5dc8ae39d",
+  "audioSHA256": "544d92c7ec1630165e201d5f108873ee8679ca86b0f985a9d9d2eba88cad82f7",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "The Sedona Canyons 125, often called the \u201chalf-Cocodona\u201d, starts in Jerome, Arizona, and finishes in Flagstaff.",
+      "start": 0.0,
+      "end": 7.92
+    },
+    {
+      "block": 0,
+      "text": "The route winds through Sedona\u2019s red rocks, climbs into the Coconino National Forest, and traverses remote desert trails.",
+      "start": 8.1,
+      "end": 14.66
+    },
+    {
+      "block": 1,
+      "text": "For the last two years, I completed the Cocodona 250 and was eager to share Arizona\u2019s rugged beauty with someone else.",
+      "start": 14.84,
+      "end": 21.96
+    },
+    {
+      "block": 1,
+      "text": "My son Ronnie had finished his first 100-mile race last year at age 15, and this year, he wanted to go farther. 125 miles was the perfect next step.",
+      "start": 22.14,
+      "end": 32.06
+    },
+    {
+      "block": 1,
+      "text": "But unlike his last, flat race, this one came with 13,000 feet of elevation gain.",
+      "start": 32.24,
+      "end": 37.84
+    },
+    {
+      "block": 2,
+      "text": "This time, my one focus was Ronnie, not my own race.",
+      "start": 38.02,
+      "end": 41.78
+    },
+    {
+      "block": 2,
+      "text": "But he had to get himself to the finish, carrying his own gear, water, and doing all the work himself.",
+      "start": 41.96,
+      "end": 47.72
+    },
+    {
+      "block": 2,
+      "text": "I was just the navigator, advisor, and acting race captain.",
+      "start": 47.9,
+      "end": 51.9
+    },
+    {
+      "block": 3,
+      "text": "We estimated 48 hours on course: two full days and two full nights.",
+      "start": 52.08,
+      "end": 56.8
+    },
+    {
+      "block": 3,
+      "text": "The second night would be completely new territory for him.",
+      "start": 56.98,
+      "end": 60.18
+    },
+    {
+      "block": 3,
+      "text": "From past races, we expected people to say, \u201cWow, how old are you?",
+      "start": 60.36,
+      "end": 65.0
+    },
+    {
+      "block": 3,
+      "text": "You\u2019re doing this race?\u201d But not this time.",
+      "start": 65.18,
+      "end": 68.14
+    },
+    {
+      "block": 3,
+      "text": "I told him, \u201cYou know why, right?",
+      "start": 68.32,
+      "end": 70.88
+    },
+    {
+      "block": 3,
+      "text": "It\u2019s because you look so grown-up and capable now.\u201d Still, what he was doing at his age is incredibly rare.",
+      "start": 71.06,
+      "end": 77.3
+    },
+    {
+      "block": 3,
+      "text": "He deserves to be recognized!",
+      "start": 77.48,
+      "end": 79.64
+    },
+    {
+      "block": 4,
+      "text": "The race began at Gold King Mine, a very cool looking abandoned outpost near Jerome.",
+      "start": 79.82,
+      "end": 84.94
+    },
+    {
+      "block": 5,
+      "text": "The first 16km were fast, downhill, and deceptively easy.",
+      "start": 85.12,
+      "end": 89.84
+    },
+    {
+      "block": 5,
+      "text": "We went faster than we should have.",
+      "start": 90.02,
+      "end": 92.18
+    },
+    {
+      "block": 6,
+      "text": "Around 12.5km, we hit a water crossing.",
+      "start": 92.36,
+      "end": 96.2
+    },
+    {
+      "block": 6,
+      "text": "We had planned to change into water shoes to protect our foot tape, but Ronnie got a soaker just before.",
+      "start": 96.38,
+      "end": 101.82
+    },
+    {
+      "block": 6,
+      "text": "With his feet already wet, we barreled through.",
+      "start": 102.0,
+      "end": 104.96
+    },
+    {
+      "block": 6,
+      "text": "The current was strong but safe.",
+      "start": 105.14,
+      "end": 107.3
+    },
+    {
+      "block": 6,
+      "text": "It felt good not to stop, but the tape took a hit.",
+      "start": 107.48,
+      "end": 110.76
+    },
+    {
+      "block": 6,
+      "text": "At the next aid station, I re-taped what I could.",
+      "start": 110.94,
+      "end": 113.9
+    },
+    {
+      "block": 6,
+      "text": "We each grabbed two meat tacos and scarfed them down.",
+      "start": 114.08,
+      "end": 117.28
+    },
+    {
+      "block": 7,
+      "text": "Hours later, near the marathon mark, it was hot.",
+      "start": 117.46,
+      "end": 120.9
+    },
+    {
+      "block": 7,
+      "text": "Ronnie overheated, and the tacos didn\u2019t sit well.",
+      "start": 121.08,
+      "end": 124.2
+    },
+    {
+      "block": 7,
+      "text": "After a short break, I resumed my constant reminders: \u201cDrink water,\u201d \u201cEat something,\u201d \u201cTake salt pills.\u201d I knew I was being annoying, but it mattered.",
+      "start": 124.38,
+      "end": 133.42
+    },
+    {
+      "block": 8,
+      "text": "Running into Sedona, support through Shannon\u2019s Facebook posts from friends and family kept him going.",
+      "start": 133.6,
+      "end": 138.88
+    },
+    {
+      "block": 8,
+      "text": "His school even made announcements about his race.",
+      "start": 139.06,
+      "end": 141.78
+    },
+    {
+      "block": 8,
+      "text": "Ronnie had to do video calls to some family members to show the beauty he was experiencing.",
+      "start": 141.96,
+      "end": 146.44
+    },
+    {
+      "block": 9,
+      "text": "We rotated through mini-pushes, as an example: run 3km, walk 0.25km.",
+      "start": 146.62,
+      "end": 153.18
+    },
+    {
+      "block": 9,
+      "text": "At the Sedona aid station, we geared up for the cold night.",
+      "start": 153.36,
+      "end": 156.8
+    },
+    {
+      "block": 9,
+      "text": "It was too early to sleep.",
+      "start": 156.98,
+      "end": 158.9
+    },
+    {
+      "block": 10,
+      "text": "We climbed the Hangover Trail for five steep hours, stashing our poles and using our hands at times because it was too steep.",
+      "start": 159.08,
+      "end": 165.72
+    },
+    {
+      "block": 10,
+      "text": "One section required hopping over a 60\u201370 degree slide with a drop that felt like certain death.",
+      "start": 165.9,
+      "end": 171.34
+    },
+    {
+      "block": 10,
+      "text": "We had hoped to do this in daylight, but maybe it was better in the dark.",
+      "start": 171.52,
+      "end": 175.36
+    },
+    {
+      "block": 11,
+      "text": "Some parts were downright scary.",
+      "start": 175.54,
+      "end": 177.7
+    },
+    {
+      "block": 11,
+      "text": "I stayed close to Ronnie.",
+      "start": 177.88,
+      "end": 179.64
+    },
+    {
+      "block": 11,
+      "text": "One woman nearby was frozen with fear, and I held her pack to help her across a narrow section.",
+      "start": 179.82,
+      "end": 185.02
+    },
+    {
+      "block": 12,
+      "text": "Ronnie pointed out how beautiful the stars and moon were.",
+      "start": 185.2,
+      "end": 188.32
+    },
+    {
+      "block": 12,
+      "text": "It was nice to see him repeatedly appreciate nature.",
+      "start": 188.5,
+      "end": 191.46
+    },
+    {
+      "block": 13,
+      "text": "The course includes a mandatory shuttle midway due to nesting endangered owls.",
+      "start": 191.64,
+      "end": 196.2
+    },
+    {
+      "block": 13,
+      "text": "We were ahead of schedule at the sleep station before the shuttle.",
+      "start": 196.38,
+      "end": 199.66
+    },
+    {
+      "block": 13,
+      "text": "It was supposed to be a 15-minute wait, but the shuttle had just left.",
+      "start": 199.84,
+      "end": 203.76
+    },
+    {
+      "block": 13,
+      "text": "We waited nearly an hour by the fire, unable to sleep in the cold.",
+      "start": 203.94,
+      "end": 207.86
+    },
+    {
+      "block": 13,
+      "text": "During the shuttle ride, I dozed off, experiencing vivid hypnagogic hallucinations, a first for me.",
+      "start": 208.04,
+      "end": 214.12
+    },
+    {
+      "block": 13,
+      "text": "Scenes played in my mind with crystal clarity: Ronnie and me running through the desert, shifting landscapes like a film projected in my brain.",
+      "start": 214.3,
+      "end": 221.42
+    },
+    {
+      "block": 13,
+      "text": "I thought to myself \u201cthis is what it must be like for someone with photographic memory.\u201d",
+      "start": 221.6,
+      "end": 225.68
+    },
+    {
+      "block": 14,
+      "text": "After running longer, we reached the second sleep station, Munds Park, our first real rest.",
+      "start": 225.86,
+      "end": 231.38
+    },
+    {
+      "block": 14,
+      "text": "Runners by the fire said all the tents were full.",
+      "start": 231.56,
+      "end": 234.36
+    },
+    {
+      "block": 14,
+      "text": "I didn\u2019t want to rely on trail naps with Ronnie, it was cold.",
+      "start": 234.54,
+      "end": 238.3
+    },
+    {
+      "block": 14,
+      "text": "I headed for the medical tent.",
+      "start": 238.48,
+      "end": 240.4
+    },
+    {
+      "block": 14,
+      "text": "Both cots in the medical tent were taken, so I told Ronnie to try sleeping upright in a chair.",
+      "start": 240.58,
+      "end": 245.62
+    },
+    {
+      "block": 14,
+      "text": "Fifteen minutes later, a cot opened up and I had him grab it.",
+      "start": 245.8,
+      "end": 249.56
+    },
+    {
+      "block": 14,
+      "text": "He got 45 minutes of sleep.",
+      "start": 249.74,
+      "end": 251.98
+    },
+    {
+      "block": 14,
+      "text": "I nodded off for 15, hallucinating again.",
+      "start": 252.16,
+      "end": 255.36
+    },
+    {
+      "block": 14,
+      "text": "Then I prepped our gear for the next stretch.",
+      "start": 255.54,
+      "end": 258.02
+    },
+    {
+      "block": 15,
+      "text": "The next day was a grind of running and walking, letting the terrain dictate our pace.",
+      "start": 258.2,
+      "end": 263.0
+    },
+    {
+      "block": 15,
+      "text": "We headed toward Fort Tuthill, the biggest and best aid station I\u2019ve experienced.",
+      "start": 263.18,
+      "end": 267.74
+    },
+    {
+      "block": 16,
+      "text": "As the second night began, I got a nosebleed that wouldn\u2019t clot.",
+      "start": 267.92,
+      "end": 271.68
+    },
+    {
+      "block": 16,
+      "text": "It started 20 minutes before the Tuthill aid station and lasted hours.",
+      "start": 271.86,
+      "end": 275.86
+    },
+    {
+      "block": 16,
+      "text": "I felt I lost a lot of blood, I was worried I could faint, Ronnie needed me for navigation.",
+      "start": 276.04,
+      "end": 281.08
+    },
+    {
+      "block": 16,
+      "text": "We rushed uphill.",
+      "start": 281.26,
+      "end": 283.02
+    },
+    {
+      "block": 16,
+      "text": "I asked Ronnie to stay close as I pinched my nose to stop it from draining into my throat.",
+      "start": 283.2,
+      "end": 287.76
+    },
+    {
+      "block": 16,
+      "text": "Ronnie, though exhausted, knew it was a mini-emergency.",
+      "start": 287.94,
+      "end": 291.62
+    },
+    {
+      "block": 16,
+      "text": "He even asked if he should blow the emergency whistle.",
+      "start": 291.8,
+      "end": 294.68
+    },
+    {
+      "block": 16,
+      "text": "Low platelets and iron, which I\u2019ve since been addressing, were likely factors.",
+      "start": 294.86,
+      "end": 299.26
+    },
+    {
+      "block": 17,
+      "text": "Arriving at Fort Tuthill, we slept around the 100-mile mark.",
+      "start": 299.44,
+      "end": 303.44
+    },
+    {
+      "block": 17,
+      "text": "I got 15 minutes, Ronnie got 45.",
+      "start": 303.62,
+      "end": 306.74
+    },
+    {
+      "block": 17,
+      "text": "I woke him when a massage therapist was available and moved him over while I got our things ready.",
+      "start": 306.92,
+      "end": 311.8
+    },
+    {
+      "block": 17,
+      "text": "After a good recovery at that aid station we moved on.",
+      "start": 311.98,
+      "end": 315.34
+    },
+    {
+      "block": 18,
+      "text": "That night, Ronnie suddenly shouted, \u201cWHAT THE HECK IS THAT, THE GRIM REAPER?!?\u201d It was a guy peeing off-trail in a black hoodie.",
+      "start": 315.52,
+      "end": 322.96
+    },
+    {
+      "block": 18,
+      "text": "I apologized, explaining the hallucination.",
+      "start": 323.14,
+      "end": 326.18
+    },
+    {
+      "block": 18,
+      "text": "The man peeing didn\u2019t find it funny.",
+      "start": 326.36,
+      "end": 328.6
+    },
+    {
+      "block": 19,
+      "text": "Just over a half marathon remained until the final aid station.",
+      "start": 328.78,
+      "end": 332.46
+    },
+    {
+      "block": 19,
+      "text": "Nearing morning, Ronnie broke down.",
+      "start": 332.64,
+      "end": 335.12
+    },
+    {
+      "block": 19,
+      "text": "The forest was repetitive and disorienting.",
+      "start": 335.3,
+      "end": 337.94
+    },
+    {
+      "block": 20,
+      "text": "\u201cHow much longer?\u201d he asked.",
+      "start": 338.12,
+      "end": 340.6
+    },
+    {
+      "block": 20,
+      "text": "\u201c17km,\u201d I said.",
+      "start": 340.78,
+      "end": 343.26
+    },
+    {
+      "block": 20,
+      "text": "It was 19.",
+      "start": 343.44,
+      "end": 345.2
+    },
+    {
+      "block": 20,
+      "text": "\u201c17?!",
+      "start": 345.38,
+      "end": 346.58
+    },
+    {
+      "block": 20,
+      "text": "We\u2019ll never make it!\u201d he cried.",
+      "start": 346.76,
+      "end": 349.16
+    },
+    {
+      "block": 20,
+      "text": "\u201cThis isn\u2019t like you, Ronnie.",
+      "start": 349.34,
+      "end": 351.18
+    },
+    {
+      "block": 20,
+      "text": "One step at a time.\u201d \u201cNo!",
+      "start": 351.36,
+      "end": 353.68
+    },
+    {
+      "block": 20,
+      "text": "It\u2019s the same thing over and over.",
+      "start": 353.86,
+      "end": 356.02
+    },
+    {
+      "block": 20,
+      "text": "We\u2019ll never arrive!\u201d \u201cCrying won\u2019t help!\u201d (I later regretted my lack of compassion, I\u2019m far from perfect) \u201cI need to let it out!\u201d \u201cOK.",
+      "start": 356.2,
+      "end": 364.84
+    },
+    {
+      "block": 20,
+      "text": "Just 16.5km left.\u201d Another lie.",
+      "start": 365.02,
+      "end": 368.86
+    },
+    {
+      "block": 21,
+      "text": "This might sound like a short exchange, but this section lasted around 5 hours.",
+      "start": 369.04,
+      "end": 373.52
+    },
+    {
+      "block": 21,
+      "text": "I layered on the lies as needed.",
+      "start": 373.7,
+      "end": 375.78
+    },
+    {
+      "block": 21,
+      "text": "Several miles, tears, and lies later, we made it to the last aid station.",
+      "start": 375.96,
+      "end": 380.84
+    },
+    {
+      "block": 21,
+      "text": "Dawn was breaking.",
+      "start": 381.02,
+      "end": 382.7
+    },
+    {
+      "block": 21,
+      "text": "Ronnie slept 15 minutes in a medical cot while I prepped gear.",
+      "start": 382.88,
+      "end": 386.56
+    },
+    {
+      "block": 21,
+      "text": "I envied that cot.",
+      "start": 386.74,
+      "end": 388.58
+    },
+    {
+      "block": 21,
+      "text": "I had about 30 minutes of sleep in two days.",
+      "start": 388.76,
+      "end": 391.64
+    },
+    {
+      "block": 21,
+      "text": "Someone at the aid station asked if my son was OK?",
+      "start": 391.82,
+      "end": 394.94
+    },
+    {
+      "block": 21,
+      "text": "He looked bad in that last section.",
+      "start": 395.12,
+      "end": 397.28
+    },
+    {
+      "block": 21,
+      "text": "I assured him that he was fine and that he would bounce back.",
+      "start": 397.46,
+      "end": 400.9
+    },
+    {
+      "block": 21,
+      "text": "When it was time to go, I struggled to wake Ronnie.",
+      "start": 401.08,
+      "end": 404.28
+    },
+    {
+      "block": 21,
+      "text": "He sat up, then collapsed back asleep.",
+      "start": 404.46,
+      "end": 407.26
+    },
+    {
+      "block": 21,
+      "text": "I finally got him up and moving.",
+      "start": 407.44,
+      "end": 409.52
+    },
+    {
+      "block": 22,
+      "text": "As we continued in the last segment, there were no more aid stations.",
+      "start": 409.7,
+      "end": 413.54
+    },
+    {
+      "block": 22,
+      "text": "You can\u2019t quit at that point, we virtually made it!",
+      "start": 413.72,
+      "end": 417.0
+    },
+    {
+      "block": 22,
+      "text": "We took it slow.",
+      "start": 417.18,
+      "end": 418.86
+    },
+    {
+      "block": 22,
+      "text": "Ronnie had long calls with family, recounting everything.",
+      "start": 419.04,
+      "end": 422.48
+    },
+    {
+      "block": 22,
+      "text": "It was peaceful.",
+      "start": 422.66,
+      "end": 424.26
+    },
+    {
+      "block": 22,
+      "text": "I fell asleep while hiking, drifting off the trail until Ronnie said, \u201cDad!",
+      "start": 424.44,
+      "end": 429.24
+    },
+    {
+      "block": 22,
+      "text": "Isn\u2019t it this way?\u201d I snapped awake.",
+      "start": 429.42,
+      "end": 432.22
+    },
+    {
+      "block": 22,
+      "text": "\u201cOh, sorry.",
+      "start": 432.4,
+      "end": 434.0
+    },
+    {
+      "block": 22,
+      "text": "I fell asleep.\u201d Yes, you can hike, walk, and even run while sleeping.",
+      "start": 434.18,
+      "end": 438.74
+    },
+    {
+      "block": 22,
+      "text": "I\u2019ve done it more than once.",
+      "start": 438.92,
+      "end": 440.68
+    },
+    {
+      "block": 23,
+      "text": "Over 212 kilometers and 49 hours, Ronnie climbed 4,000 meters, burned 15,000 calories, and poured out 17 liters of sweat, taking 170,000 punishing steps.",
+      "start": 440.86,
+      "end": 452.78
+    },
+    {
+      "block": 23,
+      "text": "He tripped, slipped, kicked rocks, and still tucked a few into his pack, adding weight to already heavy gear.",
+      "start": 452.96,
+      "end": 459.12
+    },
+    {
+      "block": 23,
+      "text": "His rock collection back home is now more impressive.",
+      "start": 459.3,
+      "end": 462.34
+    },
+    {
+      "block": 24,
+      "text": "We made it at last.",
+      "start": 462.52,
+      "end": 464.2
+    },
+    {
+      "block": 24,
+      "text": "Ronnie, true to form, couldn\u2019t resist a sprint finish.",
+      "start": 464.38,
+      "end": 468.06
+    },
+    {
+      "block": 25,
+      "text": "The next day, we were both moving well.",
+      "start": 468.24,
+      "end": 470.96
+    },
+    {
+      "block": 25,
+      "text": "Just minor blisters.",
+      "start": 471.14,
+      "end": 473.06
+    },
+    {
+      "block": 25,
+      "text": "Ronnie even signed up for a trip to Six Flags water park despite my warnings about stairs.",
+      "start": 473.24,
+      "end": 478.2
+    },
+    {
+      "block": 25,
+      "text": "He ate more ravenously than usual.",
+      "start": 478.38,
+      "end": 480.7
+    },
+    {
+      "block": 26,
+      "text": "The difficulty didn\u2019t deter him.",
+      "start": 480.88,
+      "end": 483.12
+    },
+    {
+      "block": 26,
+      "text": "He wants to do the full Cocodona 250.",
+      "start": 483.3,
+      "end": 486.02
+    },
+    {
+      "block": 26,
+      "text": "I understand.",
+      "start": 486.2,
+      "end": 487.8
+    },
+    {
+      "block": 26,
+      "text": "This kind of challenge is brutal, but it makes you feel alive.",
+      "start": 487.98,
+      "end": 491.5
+    },
+    {
+      "block": 26,
+      "text": "I\u2019m hoping to do Fat Dog 120mi with him in British Columbia before we get back to Cocodona to give him more experience.",
+      "start": 491.68,
+      "end": 498.72
+    },
+    {
+      "block": 27,
+      "text": "Congratulations, Ronnie.",
+      "start": 498.9,
+      "end": 501.06
+    },
+    {
+      "block": 27,
+      "text": "You did something extraordinary.",
+      "start": 501.24,
+      "end": 503.48
+    },
+    {
+      "block": 27,
+      "text": "You found a confidence that you\u2019ll carry for life.",
+      "start": 503.66,
+      "end": 506.46
+    },
+    {
+      "block": 27,
+      "text": "We\u2019re so proud of you.",
+      "start": 506.64,
+      "end": 508.32
+    }
+  ]
+}

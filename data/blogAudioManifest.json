@@ -1,0 +1,686 @@
+{
+  "1": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/1-540a9610b82fb94e.mp3",
+    "timingSHA256": "848fc1f5e45cc67001bc61c1ff132c0c48e5a314d8be941ab72a89bef389329e"
+  },
+  "2": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/2-e8fedae03f70db17.mp3",
+    "timingSHA256": "48daba308e566c0269e475706d33167af3bdaa2229e7afed92b0e2bca9e7e190"
+  },
+  "3": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/3-80e56931ec1813a4.mp3",
+    "timingSHA256": "72e723a3b3a0268a4faf35347037fec90ad33b820790bddaffb32fbfbab383a5"
+  },
+  "4": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/4-1e48b27cfb230cb9.mp3",
+    "timingSHA256": "a4a690d6d8381b2b01125619990535918465397b0e8c3615883cb42399f25709"
+  },
+  "5": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/5-e615fd43144d49f4.mp3",
+    "timingSHA256": "a47732dd4d62473ae3dc4fa618834f033b01d8a684d83c35866fc260f004fbf1"
+  },
+  "6": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/6-567c82c18b4a8982.mp3",
+    "timingSHA256": "80ba4b810f34c09976e3a0565bb0fa67765d03810a055ae26260951364447eef"
+  },
+  "7": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/7-b4f00aee8a78c71b.mp3",
+    "timingSHA256": "077b714e382b6b9fe34d1b502de8617c29dbdd58a6cae44e4263a2eb33bd0b3e"
+  },
+  "8": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/8-1e4add93aeabd079.mp3",
+    "timingSHA256": "0b150a7686354fcc397b352ceeb05df495529abdc0ea02ec20dfa5e04b933f66"
+  },
+  "9": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/9-cabb39d008b215c2.mp3",
+    "timingSHA256": "4f1b97aa8d78e392c981b18264281f23d5c7d0640180f0e66ee0c2ec920bb5f8"
+  },
+  "10": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/10-ebbd076c14312dd2.mp3",
+    "timingSHA256": "8fe725396bba18c0c097537f4d536a377e3786f7c7672deb3aa6087ba61a79e4"
+  },
+  "11": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/11-d037ab8005f868cf.mp3",
+    "timingSHA256": "7cd49850354f8a899e049f048936ff93ce17c831d4612e60f17ac88de784e92f"
+  },
+  "12": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/12-d2e5395fc938335f.mp3",
+    "timingSHA256": "65692ca5273d4a4b39b626b0c6ea596fc816d313adfab986afdfa3ddaf1c34f4"
+  },
+  "13": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/13-f91d56e8989ba20b.mp3",
+    "timingSHA256": "1a1fb5e7447dedfbf60945a7530417a91d9b8bcdbac2724450fa5ffda55ce02e"
+  },
+  "14": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/14-061b2189bb285d41.mp3",
+    "timingSHA256": "344b5f0286eea10c6933baa62da4a067def8fbee16714a07a44c7f7be1834a46"
+  },
+  "15": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/15-1b073b02dfac7642.mp3",
+    "timingSHA256": "8d71393bd2247545b03eb17173acebc8777c8818615d4dbe9714969bb7b70998"
+  },
+  "16": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/16-1a5ef09c92435c0d.mp3",
+    "timingSHA256": "596e65109bdb62802f1adf5338cf99ffe871d9925a8db95f5dec1cd648dbcf7a"
+  },
+  "17": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/17-9e7f6eda4803ac19.mp3",
+    "timingSHA256": "217be4799daddfafffc2596164db1c252038eb1ecbd20106d7307e88345c2eb2"
+  },
+  "18": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/18-391a13c398f0b149.mp3",
+    "timingSHA256": "ae22011e1f1304fd1eef0384e2277e915ab3668bad38234e30572b0ba26d3020"
+  },
+  "19": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/19-680ad46531aabd1e.mp3",
+    "timingSHA256": "c7524e0e378637b3053b744c570e4e4f0bf6961acb12708aabdd42758f9d7b10"
+  },
+  "20": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/20-24d1a81fbe3ee612.mp3",
+    "timingSHA256": "bb6e2cf4138740debd22362ed213e46651983bcd02dda8634d40fbbd44a5acaa"
+  },
+  "21": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/21-27a73e60022389a1.mp3",
+    "timingSHA256": "f7ac777ddf3eefa6587a2f1fcb9da412248853b9e6b0fb902b65391e842d2063"
+  },
+  "22": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/22-c5bcb4e152186277.mp3",
+    "timingSHA256": "314756ee58905e77102eaec4c47ce2e17a5cdeeb2f30f82471d3828ee35bdd2c"
+  },
+  "23": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/23-4997d112a47e73eb.mp3",
+    "timingSHA256": "d709ac511cd98e589ec36a9dfd03fda394d391c5fb6976810e4ad5a6afceb338"
+  },
+  "24": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/24-f40e8f4b259e4152.mp3",
+    "timingSHA256": "65c8b465d3c5dd200020dac07247a072edf93b32ab617e2a78b87213bc962930"
+  },
+  "25": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/25-d651d6d5f32e9ecb.mp3",
+    "timingSHA256": "08c39f4b670b485bac72fc801ce56529120f621c588fd2be60cf02ceb4a85cde"
+  },
+  "26": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/26-40967bc94a42a757.mp3",
+    "timingSHA256": "82c7d1385838c2f67260c7687c5b6b4ffcd81a2a838822d8e5e6863da1651e55"
+  },
+  "27": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/27-108901f7e38517ce.mp3",
+    "timingSHA256": "92fcf76d61a1073f6787feefb38afe3c9bd1e9d13b2870fd5a6426e6655022c5"
+  },
+  "28": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/28-66df7e15d902c635.mp3",
+    "timingSHA256": "e28b1ed79eef880b09e72b29189af6c377d5f3f2639847be450cb0b617d6b3ed"
+  },
+  "29": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/29-61d555d244da6e39.mp3",
+    "timingSHA256": "d88101922a53e37d19368fcfbb777536588d4608d3d36cfd154d80a181aa4013"
+  },
+  "30": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/30-1867aa975c34f492.mp3",
+    "timingSHA256": "c74dfec03535228ae1460a0791cf94a08173ab1d72637ddd471acf300a33854c"
+  },
+  "31": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/31-e2964c6d8d65b12e.mp3",
+    "timingSHA256": "d6265b567ee643e8c0683c014b87257f5aba9f34397630dea29f11a81ed2b2e5"
+  },
+  "32": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/32-fe4329b7ac398c8f.mp3",
+    "timingSHA256": "8c44136b8efee9700448084d98cd5518bfe7c08a7e365d304ae1db2e7984b8d5"
+  },
+  "33": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/33-e69fa745af592127.mp3",
+    "timingSHA256": "9378aeb2d8b584df0e1a634a1e0fec6937fcd5cc57405dda865a378d9eec76eb"
+  },
+  "34": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/34-eb4c5fff346606bd.mp3",
+    "timingSHA256": "6f7b57ede563efefddbc4e7d918ea3cb8c653166967be2dfca6f0545ed89046c"
+  },
+  "35": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/35-79fb20c53113743a.mp3",
+    "timingSHA256": "64e4f8983b35d9fb6ecccc57033e21492f146907c15b72b55fefa08d298e23e1"
+  },
+  "36": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/36-7932e8a3ac61c612.mp3",
+    "timingSHA256": "ceb9ee193549a4243c81ced85144d931d07895487d648039bd18e506cdb6266e"
+  },
+  "37": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/37-443271da40e94c2e.mp3",
+    "timingSHA256": "537e368357396b6f7ac880f73f374931714a92084d8cba877d612df496308a33"
+  },
+  "38": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/38-a74b79293be4efc2.mp3",
+    "timingSHA256": "e78c89d1955c81be2d3d16410614d74bdc60732b6c8ffa0d599e81d53d3b1f1f"
+  },
+  "39": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/39-955f2b427f0c1ddd.mp3",
+    "timingSHA256": "c8df8f77cb40c29a50c533986cbd90aab3288bf4a6992f384af652cd6301926b"
+  },
+  "40": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/40-1b3277f77528a239.mp3",
+    "timingSHA256": "4b497e27db2cf819732df03ddd7f76fd18aa537d8772bf59ea840406f644da7f"
+  },
+  "41": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/41-f48ff99b250eb883.mp3",
+    "timingSHA256": "9d5b4a270902d799d89a3cc03cd4aabbdc31475c1fd22f812df97fecc5263b5e"
+  },
+  "42": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/42-01e6344ab96202a5.mp3",
+    "timingSHA256": "f1552a27303073ab925d3b5835b194c1792e0d7ca7be6d6744c634da99b738cd"
+  },
+  "43": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/43-fb94f3de0e7056fa.mp3",
+    "timingSHA256": "e007ad213674fe120c041d318a67aad1f8713e00b695dba4f6fd22aeb41dae33"
+  },
+  "44": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/44-6009672ed714e4b3.mp3",
+    "timingSHA256": "4937c64c77e4f1ac278399ca33a4c19666d870aaf935eb6d82865fc4cbc6d905"
+  },
+  "45": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/45-aa04de148688d272.mp3",
+    "timingSHA256": "681ac9e5d43e3076ae834dab069c0c18a68cadebed505b5d415ea2829e161ccc"
+  },
+  "47": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/47-599c2623cb3cac38.mp3",
+    "timingSHA256": "cf751d82aa61a646d6e4b9221064a375ca7cdf9f4b4b4421c83b8623fa41ac59"
+  },
+  "48": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/48-2d33de890c02567a.mp3",
+    "timingSHA256": "3314ee69fe4990471b4cd3f49b1028d6642f977d0cdd6041b17311bee81b9b79"
+  },
+  "49": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/49-f4cb730e08f4fda0.mp3",
+    "timingSHA256": "0821995cb0701fdca4bbca38770e6f7febf2e7f0d28405c6ed05dea28f52c05c"
+  },
+  "50": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/50-c44e373da477cbb6.mp3",
+    "timingSHA256": "e4a4b74bd4699cfac46065781ab2254dfb4237dae4fd3695bfbad15d3dcb6216"
+  },
+  "51": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/51-bec10be013bf5962.mp3",
+    "timingSHA256": "65147cae7eb4d661dcc2c57ce9041de49bf4d5421eff92ed8e45c2b290cf808b"
+  },
+  "52": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/52-9e4ef635ca7c718c.mp3",
+    "timingSHA256": "34389c8c278460cf7ef35b280823ab9f5d0c82e9da6dd1d52967a470f6f466f7"
+  },
+  "53": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/53-5249334d584ba8cc.mp3",
+    "timingSHA256": "f0c8db50856d64cadd661a649bc02f1cbda8b0d9f24e53862d9146f0f1b4f4af"
+  },
+  "54": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/54-bfcd8008b98fe733.mp3",
+    "timingSHA256": "11d88ca0349466760dac5f3f3e3b3d9d56c84338521ec83014f89a1f9e74443c"
+  },
+  "55": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/55-918efbc97d5bf358.mp3",
+    "timingSHA256": "52866ba25d14a8e117d7428ad6fde5e3f047c34baee7e348b2044138f55658f7"
+  },
+  "56": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/56-ab0de622a1cc9d82.mp3",
+    "timingSHA256": "b04ad65a9fd1065b7471a5a4ca8073e90b67ad422a08277f2f72b416e625eec8"
+  },
+  "57": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/57-ad15464c0942ac38.mp3",
+    "timingSHA256": "90d7d01e5cfa573c3eeab23e816c590c7376e98dca343fd6c1b513896a4ea6e3"
+  },
+  "58": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/58-6b68deba665f80bd.mp3",
+    "timingSHA256": "84382e2f04f7164ee83aa57384b874be9e8591aa317f2234a3c11d85e7eed73d"
+  },
+  "59": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/59-b31e66936538bf68.mp3",
+    "timingSHA256": "6d9def9174b0507305ed1de0d7d58460052ee6b2947f252066c23e02aece0f5b"
+  },
+  "60": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/60-3d186f8a2871641f.mp3",
+    "timingSHA256": "afd2fea4a701185ae2b7aeaa6781ed288c7739f21cbfe9ebbcc4f815f4db5e2b"
+  },
+  "61": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/61-7846660684d8b7ac.mp3",
+    "timingSHA256": "b9c7fdd0f76031797accb439ad537f69fe4871c65e270291ba95154fbeb2bc14"
+  },
+  "62": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/62-16137f74743fb7c1.mp3",
+    "timingSHA256": "6eb48ef4a5574716a1c825ebdc29785758a3aea444f154ef0d679819cfc3d12f"
+  },
+  "63": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/63-52366b241be944eb.mp3",
+    "timingSHA256": "f4e88b4cbc5ce9dd0c3a7a22eff2dd846b70c9469eaaa9765530b6467f85b466"
+  },
+  "64": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/64-22a0cb259107263f.mp3",
+    "timingSHA256": "e8058e57d98205ee5b47b63cdb733f16e042af76715c9cd64e99a010250921f6"
+  },
+  "65": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/65-2a4b05979b22c80b.mp3",
+    "timingSHA256": "84cbbd060b52a6c2e6462fc02c9cc83952a81b900c1da1c189052c50504bbf56"
+  },
+  "66": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/66-070191b5cbc2a886.mp3",
+    "timingSHA256": "f2a7e5b5c7ef8cacbb0dae8047e36fce1eed5bfd286c92dc9572ada1f4154180"
+  },
+  "67": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/67-87ffe71629c22e73.mp3",
+    "timingSHA256": "079a21907c7acfb72ec5b1ac72af633dc4166217e16f877907ea8bf64e6b7a0e"
+  },
+  "68": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/68-d9826fbbd47f94cc.mp3",
+    "timingSHA256": "c5b1d6fa844c02140f4efd0edbaa7720e315a1297faaa2b7f82bd8c038c40516"
+  },
+  "69": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/69-9afb2540cb0b0708.mp3",
+    "timingSHA256": "ab3af0ba09013d12fd1353cdfde2aa74ae4d7ad888ac7e67b7cbe30ffac12f65"
+  },
+  "72": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/72-5bdb6ed1efe6c2d2.mp3",
+    "timingSHA256": "783b77ce6fb2e507e831a39f9ef43e7ff312b65c33a374bbb6598caebc0d3548"
+  },
+  "74": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/74-abdf835535dac4f4.mp3",
+    "timingSHA256": "7ef1e03c802b2c543ab08490660511b98483dea1796a03cc04af40f63783b08c"
+  },
+  "75": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/75-2d37d13b97ee9788.mp3",
+    "timingSHA256": "c913a3276b7c37d50c277b94599dae780bdb038b4686f8674ae8cf39e0d1faca"
+  },
+  "76": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/76-0ec754d6e37d2c60.mp3",
+    "timingSHA256": "e23f85f36cc68fca9a8046a79243ba8b39bd4c2c69ab87f130023eea86b6e182"
+  },
+  "78": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/78-4db49873f22ae814.mp3",
+    "timingSHA256": "00b892fa0fa35009965273792230d4125461c7a828e9060ac6cba7e7f265dd85"
+  },
+  "79": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/79-eb1a27e804728d20.mp3",
+    "timingSHA256": "f9082d8716c5d27699f47dc4a988e258647dfe7ddf5976bbd980d4920b24ccfc"
+  },
+  "80": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/80-2fbf5153805c547d.mp3",
+    "timingSHA256": "51f6bcb7929cbccdac22b2e7a01f796d9d62d6d8ef8bdf20f6f9377a4a2e6c2d"
+  },
+  "81": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/81-12ddfb4aac52edc8.mp3",
+    "timingSHA256": "fe62714a77daa6214d97e46d60d5c2e2df2aafd800aee101e645440512fc5e74"
+  },
+  "82": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/82-f56c1c1f83e4255b.mp3",
+    "timingSHA256": "3397c6fa057833bfe930f71a2c7d8a56c1e304f22c6f48821990a4e996612af4"
+  },
+  "83": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/83-12677c19b378aad1.mp3",
+    "timingSHA256": "f320c9ad73860fd82157a043b9d575cda0a5231cb398683343fdbd35cffc8a3b"
+  },
+  "84": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/84-6851504604c52ae5.mp3",
+    "timingSHA256": "c2949ae5a9c19b41912584611a95dc5c3b91b1213c5b74a44332305d48651fc2"
+  },
+  "87": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/87-42c6041cdc45a481.mp3",
+    "timingSHA256": "4f74b64bb83a33fa7137e974def326827083083d28452cc4482615ef2292fef3"
+  },
+  "89": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/89-13797c807c5090ca.mp3",
+    "timingSHA256": "99dc7f2f7c1d35cb37f1979ecba9bc34c10fad843d72a6ca442a31fbc96cdb1c"
+  },
+  "90": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/90-602eecaa14827493.mp3",
+    "timingSHA256": "939a98af661a0aa9724a29f44ba163dbccce9115b0724bce8736aa2f7a8ca1b9"
+  },
+  "91": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/91-1933824e1590f69c.mp3",
+    "timingSHA256": "a78aad5fffc3a337b7f8b6569b2efa85b9ab0c1b9e2a76443eb30ae7f4f56773"
+  },
+  "92": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/92-734bcaae62b9d3f2.mp3",
+    "timingSHA256": "7e4e66cbb5f7408ef12b93f9311df1a9ef0d6c0cc9ee620d15cbc8ea5932457c"
+  },
+  "93": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/93-fb77d6e9cc4b2c75.mp3",
+    "timingSHA256": "32809078d29840aa7ec6a3066729ff4880bb18be83eb38981c845e2796487fa9"
+  },
+  "94": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/94-f387ed284324eeab.mp3",
+    "timingSHA256": "23ac3e2dc8806f2af14566704e88d1c8b7256abd0c1dbfd7dd609ac7b73d4d2b"
+  },
+  "95": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/95-5d38edd18f309788.mp3",
+    "timingSHA256": "4c10371e67e8c02f56dc44a20f723d07d8271b84da08aaf746105fc537b056b3"
+  },
+  "96": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/96-dfd62f9f4765a9b6.mp3",
+    "timingSHA256": "a8ec6a52850ce7b5bc2e4fdf99031aecc4bca2c2f234dfcf17ba4b370c3b35ed"
+  },
+  "97": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/97-993b78cf5b3f4049.mp3",
+    "timingSHA256": "3d9920f4d97b5e731b5e912f15ab40a4a294a173f18a6183620fd33b2c501eee"
+  },
+  "98": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/98-1b386530b78f380c.mp3",
+    "timingSHA256": "2916418bb945f9bbbbd7e483cfd32cd2f81839dcb0a017d15735803807b5e11f"
+  },
+  "99": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/99-d5251a2038602193.mp3",
+    "timingSHA256": "fa7b049a4635ea0e6661aa8b874b99fb203110f03efc11d6f56ff2d7a68392ac"
+  },
+  "100": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/100-5b3e2f8205a9d0f5.mp3",
+    "timingSHA256": "65f34353d9a3e5bc84bc9ad25872c33c99eded853785900f22caa74d7c5c9842"
+  },
+  "101": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/101-c4095648f7dd30dc.mp3",
+    "timingSHA256": "ebfa97be181e0d3c1752d9992a5aaf582429cc531aa9bafd540863b41e7277d7"
+  },
+  "102": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/102-d4e8a2382736757e.mp3",
+    "timingSHA256": "787823b5f2e03c7c775dcfcd2408c354247a09c658703324b8345fd8a274abe4"
+  },
+  "103": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/103-162e826447a86814.mp3",
+    "timingSHA256": "5b6735b06fdabb75adf82348f703864db425ba5e96ab275f1c12398c5e144545"
+  },
+  "104": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/104-dbbf7ed2403ee415.mp3",
+    "timingSHA256": "46a2cbaaa2975cfb7e1a531839eef3779a0b3df439f1d3d77a385913186fdbab"
+  },
+  "105": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/105-0f280bfc4b03242f.mp3",
+    "timingSHA256": "8ef507213bfa0ffb13476c5d57fef405a87ebe0e69b5acdcff1a560d2ff05b08"
+  },
+  "106": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/106-b84258e0848f0e44.mp3",
+    "timingSHA256": "eed793a8490246f223290b10fff93dc5517d141ad0eccc25b6feaa8b66601b31"
+  },
+  "107": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/107-8a738465aaca0059.mp3",
+    "timingSHA256": "23cb356dc3043b2cf16c1284189787ade97e3392789533d042a1d0c165a85c51"
+  },
+  "108": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/108-e8d41e47e11135b0.mp3",
+    "timingSHA256": "5928959c0e7a116dc1f7a2ba898bbdd5e0818cfa08dde009348c6d8f0c6a32b0"
+  },
+  "109": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/109-3fa21d79e7db911e.mp3",
+    "timingSHA256": "385abcd720c25ca6de45acc684d1fad12edbb2eed0e559a1b0bf3b81f85f25d2"
+  },
+  "110": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/110-0d70a128fb757284.mp3",
+    "timingSHA256": "ff8307c704367618517dd3dfc8ef149f0980c129465751f46e87e42fc9afcf95"
+  },
+  "111": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/111-68729366efcc0a6e.mp3",
+    "timingSHA256": "1760142ff37ddd847c795018b4034bfc90f747d20721037ab9ce5179faa7ab4b"
+  },
+  "112": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/112-8622a71ebc2b1bec.mp3",
+    "timingSHA256": "3ec50549a9f71284bc06e873250ec1cbe3fa03176da24bf78f8491a3ec6450a1"
+  },
+  "113": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/113-b39ae042635387d5.mp3",
+    "timingSHA256": "c610989774c78cc83c49c94160e1aa88c1eaa9b0170857860f827d0ff925c248"
+  },
+  "114": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/114-cd5f2ea8d5910140.mp3",
+    "timingSHA256": "710681f5e9053e439b26c3279ddeebf54a43451822c86e24fb145cbe1e8f59d6"
+  },
+  "115": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/115-cb0420b5156abd36.mp3",
+    "timingSHA256": "b31ddcbec06b5cf23f20f68b8476691719d68470d0b61b68df28a66a162611a8"
+  },
+  "116": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/116-75d62080f3bb33f5.mp3",
+    "timingSHA256": "5c98d03a405b1b5c7592f133809463df7f2765b68130a149030671b9023633a5"
+  },
+  "117": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/117-7753d29802cfa583.mp3",
+    "timingSHA256": "59fe09912a75439608590c3a166d50eb2ebdaa9c7e3daccbcb99f4c955a3b5f8"
+  },
+  "118": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/118-b42f565cd1278154.mp3",
+    "timingSHA256": "9f5e6ce48ab28559b42e1f238e95e4a544d00789d9d5633a097cede3192d6693"
+  },
+  "119": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/119-07b64ef00d6a00ce.mp3",
+    "timingSHA256": "86b43d9ed57e91290a81f263bdf4bdaeb482a572886bd143205b087e8fa8e1b3"
+  },
+  "121": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/121-2b2a0546d691ecda.mp3",
+    "timingSHA256": "a06b169ca58121efa3d06f1f43aff5e474247d25a9b0798e3b297b6c75d085e4"
+  },
+  "122": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/122-c7f047a591d96943.mp3",
+    "timingSHA256": "ad79c2f82ce9146388ffcb60005dc1b79338589671888345c808294455b2d01e"
+  },
+  "123": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/123-fdad10557577c5ae.mp3",
+    "timingSHA256": "1de755d260d23a698fda5a37b0d751af0d281d15e70ceeca9fd57d64572a9275"
+  },
+  "124": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/124-025060e26a8028a9.mp3",
+    "timingSHA256": "8b1eb91321ed85d6d8f06d1a7eb2a01e3bfa6562689df4f2133ae40048674cb6"
+  },
+  "125": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/125-7938b2aa244a4bcf.mp3",
+    "timingSHA256": "1f29a6087f4df391b8c2c60fe5920c36308ce5168feaea928ef56427ca2ecd62"
+  },
+  "126": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/126-9b2a955dae2f95d8.mp3",
+    "timingSHA256": "abbd35a6e011114eadb4e95a032f93bae8452d85d3fe83563f26e955ee46c341"
+  },
+  "127": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/127-46921b0a6db125ff.mp3",
+    "timingSHA256": "30a9aedc38e79adcc2b9fdda2be0a5b36531a057f352526182376242149c4765"
+  },
+  "129": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/129-0d5b2cf2aebab916.mp3",
+    "timingSHA256": "fae87c196ccdce8e8217f62c5043a50c7392c793b1e3d47651f75362a04b147a"
+  },
+  "130": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/130-fb154dd433c1d628.mp3",
+    "timingSHA256": "7271e8311b90d3efa7d2435613a8d8f3b91906ae7127bbe25a9dabf8cb00b070"
+  },
+  "132": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/132-78e0f90531135836.mp3",
+    "timingSHA256": "ec32d033e622504ee56fa671dee29dda1d6cfe672464e0754411b7a9a39c88aa"
+  },
+  "133": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/133-1e1ace20da409d69.mp3",
+    "timingSHA256": "bc970c8e933784226aa314c379f9284bba2387b4ee85b9cf883bfe14c1bfc040"
+  },
+  "135": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/135-5149a1554022c496.mp3",
+    "timingSHA256": "eb72e4e43c3f6afaac5c413b9bb901a16c7965eed88333bd44d188bec44661de"
+  },
+  "136": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/136-26fb6687f5addf1b.mp3",
+    "timingSHA256": "cf06fcaa7e5723c9e4a88fc8747b51721c9ae38a7504d91e77300317ca9724f4"
+  },
+  "137": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/137-96b090fbe9253d0e.mp3",
+    "timingSHA256": "4f175716726820b00d04674487da111406b4d5ca7602d386d5e74c6579a9d156"
+  },
+  "138": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/138-b2b032a6fc5eaeb7.mp3",
+    "timingSHA256": "ac9367612f12457428df42c79cba8f7c0648a5bdef6c72b6cbfcb5fb835b3bc1"
+  },
+  "139": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/139-b1baa473e85232f5.mp3",
+    "timingSHA256": "4e958af4371a2aba873a1b188248053b9b91997d54d10a0451f9b3709d012f06"
+  },
+  "140": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/140-adfc4d5f8d08bb93.mp3",
+    "timingSHA256": "691a7fecc13b2477ecc8fe26f8422142447d6112b9cd0ca893c67892d0ad06b5"
+  },
+  "141": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/141-0313aa0ccce43aa4.mp3",
+    "timingSHA256": "47241cdf4270fbeb3c54f2b437a182bc168a42fb10a4495e452fdee0405b5835"
+  },
+  "142": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/142-d03883f3661b66b2.mp3",
+    "timingSHA256": "67c685e7f04c45a58f7eb4611e6a965e3a46f99773719f24a8b9bf394ecb9e55"
+  },
+  "143": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/143-94e53537d7af7d95.mp3",
+    "timingSHA256": "985505ee63e0c2d5e0ad23b7e9a49daa92e17d3bbc6a05f8dde24786142311d3"
+  },
+  "144": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/144-63a6cf8f7873a623.mp3",
+    "timingSHA256": "27a726a8a082a4cbf57203d630d20bad5c72b3de8437098b2681a016354fa5ee"
+  },
+  "145": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/145-1879f87c4193c847.mp3",
+    "timingSHA256": "416b8b273553bd95ddf80c7da5b643dc53ac448e7bf7545abc275d261b01f89d"
+  },
+  "147": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/147-bf1d5839ee2996ce.mp3",
+    "timingSHA256": "9298ef44887565aca037b8c066c064e5e9e4c489b7aafd3f921193a3cde2a334"
+  },
+  "148": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/148-b59dbb25d3b63d3c.mp3",
+    "timingSHA256": "67292bc3b2e5d5369f105f664fa291c0134acec491061c5acf00a15e47a217df"
+  },
+  "150": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/150-1b740e74d4df6c22.mp3",
+    "timingSHA256": "e4016a8f472406e065b0dfa3af12a6f3672f06750e544635b29b015cc1e064b1"
+  },
+  "151": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/151-dc09370028df85c4.mp3",
+    "timingSHA256": "8589bdb07fb513cd2e0a1f5c122a171a4ba9f02624c86c874ff78b707d961604"
+  },
+  "153": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/153-2760159bf46fda29.mp3",
+    "timingSHA256": "f3712202e4b0dc3ba7acb91632b4769a4a7af0dfcdc2accdbc05b25cda22dc12"
+  },
+  "155": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/155-6376e1630e85c807.mp3",
+    "timingSHA256": "847f456ffc1a8283bfd10bef16378c843795a710d088cd495b3f297821703827"
+  },
+  "156": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/156-62afc35f4ce6c07a.mp3",
+    "timingSHA256": "6e457e797146ede6d918ad81c8c0e1627a5ceb7cc18d080677a6ebc653b99a6f"
+  },
+  "158": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/158-63ab05ad7c492a7f.mp3",
+    "timingSHA256": "b2af5c2944abb38d31b1fb939489570242b1585d4090ae8bc42108a31a375f38"
+  },
+  "160": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/160-b4ddd199e58dee76.mp3",
+    "timingSHA256": "527db5a2d112276a8ff75cb9b6fdc70e064f022884576bb80078a8412495c415"
+  },
+  "162": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/162-644c490a99ad2885.mp3",
+    "timingSHA256": "f9d599f0cd56c24a03106ea17548ca5c76114a5dd6a15033c1a814d79ba39787"
+  },
+  "164": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/164-93f7e9e08a9474b8.mp3",
+    "timingSHA256": "ba0b2ab7abf4b9d88a6b9e3770f0d7f84e40bf3fbdccc5109df73d1bdf0f4c23"
+  },
+  "165": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/165-bd525de54b049c51.mp3",
+    "timingSHA256": "bb7bfbd3ab5debd1ae5c453d3d1201dd8021bd53e6c0b54ab3e5ad6946f5cab7"
+  },
+  "166": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/166-26fb415294c2759d.mp3",
+    "timingSHA256": "03b535d1bd49cc90d94e509c352492e3c35db08672e64ee9b454e07228e095c6"
+  },
+  "167": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/167-232f192fe3651f60.mp3",
+    "timingSHA256": "e44379b2f24ed10f03e64409239370df4b8558ea1dcb20c390d0d3e4dd9f0c4d"
+  },
+  "168": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/168-f67ac904c84559af.mp3",
+    "timingSHA256": "2cc4c89a9021af68d8c2becd22e0fd101990e5b109f29c7934b81b1defaf6321"
+  },
+  "169": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/169-3ef7772c63e81f74.mp3",
+    "timingSHA256": "b43014931e0716cf4884a04c0a202a763ad66196c8dc5f4b667368472802cce2"
+  },
+  "170": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/170-f6a186c46df422ba.mp3",
+    "timingSHA256": "3ee7cf9d8912db0304f203fbe66dae98e1c43c581e3f2b836212165be68fcb62"
+  },
+  "171": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/171-6d96b3e104354517.mp3",
+    "timingSHA256": "4e5695957a49272d1a2333c28df824ebb3600dce8150f68f11a8e4075ff7c76f"
+  },
+  "172": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/172-c17b698b38d1ea50.mp3",
+    "timingSHA256": "3b953f523feff91af9e519a28e56b5ddc1ba79b3ea1d2fef36876efe996a42dd"
+  },
+  "173": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/173-2e331c8991ebe293.mp3",
+    "timingSHA256": "40999444050dec8dd4547252699034d2fbf12ad3e3ca4246ed000fb00c12a95f"
+  },
+  "174": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/174-4bdd2d3f6e5d0c39.mp3",
+    "timingSHA256": "a18330153346a8ae1020678f7fe18db5a1383788f0631fdc4cf02f17fe50e1f2"
+  },
+  "175": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/175-311861eb253a24ae.mp3",
+    "timingSHA256": "5e68c3779073a10095632f8c8b8f7f052143e0507c73ee563b9a27b3442838a9"
+  },
+  "176": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/176-c837ea56e7b2efb5.mp3",
+    "timingSHA256": "38d29bba13e0c5afd8753dc66a507b10d8023147e91c8b0a6289e13b0e8bbef6"
+  },
+  "177": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/177-4319664da39bcdb7.mp3",
+    "timingSHA256": "7d0862622ddf00a318dd5ef7efa308f0ffd1d1a32992e81a3c5abc86f878e116"
+  },
+  "178": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/178-86357edd40529610.mp3",
+    "timingSHA256": "2acefccbbc8cad70bab8116d4f284d52ef510bdb75d2f5e263899ff062d4d605"
+  },
+  "179": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/179-c41c3a50c7ebaa54.mp3",
+    "timingSHA256": "967a8a2d593c54a11b714bb104072d23286143d61781eb60475af72481c70700"
+  },
+  "180": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/180-cced30cd891dc800.mp3",
+    "timingSHA256": "b773959d0ac5951705966e91c3ef724baea34c90ae1875f22dacfe774b1f0e86"
+  },
+  "181": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/181-421f18dcc03cb41d.mp3",
+    "timingSHA256": "23756d005939677ab834632b4586021190dc91bb81f2644b6984d4e51ab3b298"
+  },
+  "182": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/182-42d9c27c156d38ce.mp3",
+    "timingSHA256": "4b4dbfd7ce73eae079592dda95358ceb3e3894a236d17505c7cdca5431960888"
+  },
+  "183": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/183-3a98aea51eb2ad7a.mp3",
+    "timingSHA256": "bd0e4327bfbf8ad805953db52022af7dca917fe94d44c34197421e3c3becf6b7"
+  },
+  "184": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/184-cf16864326138846.mp3",
+    "timingSHA256": "5c09538be868392716c375dec33a329d6d95f81c3237bee6d94ec6a4cc26d231"
+  },
+  "185": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/185-28a21f75198537e9.mp3",
+    "timingSHA256": "97dddc5df9698a580fe7216e6745a36d94e18b4a1b4977355598e0622efed9ed"
+  },
+  "186": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/186-a8da590af795f436.mp3",
+    "timingSHA256": "d5f5687c85cddd638f6e7e0645664096b2451ed93b4916355573e5eed33b22c9"
+  },
+  "187": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/187-b9dd3cf7a5c5891d.mp3",
+    "timingSHA256": "43d00aa85ead4e3229d69e28f88d8631b6b278c9c6ccfcb0b8dd098abcb65249"
+  },
+  "188": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/188-e184ab1b72efe019.mp3",
+    "timingSHA256": "175bdba114b6c57c13d8c0f98504f806ecdd2e6f9d782205de3fcc95c4660bbc"
+  },
+  "189": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/189-544d92c7ec163016.mp3",
+    "timingSHA256": "59550e62bfc6c577248f8faa871afe9b2a8fa1cdadf962ab4e9f7f2db9c5a2d9"
+  },
+  "190": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/190-9c183d38f228fc84.mp3",
+    "timingSHA256": "df952bf3b3d2e16ff3723c1043d0faa97b4157e59746c43942ea04020351b3f7"
+  },
+  "191": {
+    "audioURL": "https://storage.googleapis.com/go-brianbondy-blog-audio/blog-audio/191-43d4d512c79fb3a5.mp3",
+    "timingSHA256": "cdbc0a93d8df5c57d0841d3cced68b4612d36d1a58b7cccb2b442eb78a9f6a23"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "post": 69,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "3bc8276ea5fe2cd2da7aea91b8a23ba98b346742d44c0700bbf09be5ba8b2a7f",
+  "audioSHA256": "9afb2540cb0b0708ccda81800a5cab59112ec4f2e9145e14730985500b49ea1a",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "Added a new section available here which allows you to keep track of your non static IP address via a user defined host name.",
+      "start": 0.0,
+      "end": 6.64
+    },
+    {
+      "block": 0,
+      "text": "You can use the SOAP Dynamic DNS API to update your IP address periodically, as well as check what the IP address is via the API.",
+      "start": 6.82,
+      "end": 14.66
+    },
+    {
+      "block": 0,
+      "text": "You can also simply use the form on the Dynamic DNS page to access the IP address of your host name.",
+      "start": 14.84,
+      "end": 20.52
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "post": 113,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "7a6d5f8373983747dcddbf00e2dd9e053baee7c66d021d71dd7813bd55c57950",
+  "audioSHA256": "b39ae042635387d5511a2ba739e63a6ae5b0078a8299f00bc6ecc7930ede15f3",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "The ROBOBAK company which myself, Ben Puzzuoli, and Rob Puzzuoli co-founded, was acquired by KineticD.",
+      "start": 0.0,
+      "end": 6.8
+    },
+    {
+      "block": 1,
+      "text": "VisionWorks Solutions Inc. which primarily worked on ROBOBAK was founded in 2003.",
+      "start": 6.98,
+      "end": 12.1
+    },
+    {
+      "block": 1,
+      "text": "Likewise ACPANA dba KineticD was also founded in 2003.",
+      "start": 12.28,
+      "end": 16.68
+    },
+    {
+      "block": 2,
+      "text": "You can read about it here, here, here, here, and here.",
+      "start": 16.86,
+      "end": 20.14
+    },
+    {
+      "block": 3,
+      "text": "I am now working for the new company and still hold shares in the new company.",
+      "start": 20.32,
+      "end": 24.4
+    }
+  ]
+}

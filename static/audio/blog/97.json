@@ -1,0 +1,93 @@
+{
+  "post": 97,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "f11e933fc97b79702536743ad4d22dacd66c7176766292e7bb43efe1c46ccf78",
+  "audioSHA256": "993b78cf5b3f404974c7a6eb0cd9ca604c417d31165947722efc01c649350f28",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "I\u2019ve implemented comments on this site for all blog posts.",
+      "start": 0.0,
+      "end": 3.52
+    },
+    {
+      "block": 0,
+      "text": "I\u2019ve been wanting to add comments for a long time, especially in case I have errors in any of my postings.",
+      "start": 3.7,
+      "end": 9.14
+    },
+    {
+      "block": 1,
+      "text": "I decided to build off of Django\u2019s built in comment framework django.contrib.comments.",
+      "start": 9.32,
+      "end": 14.6
+    },
+    {
+      "block": 1,
+      "text": "I was very impressed on how easy it is to integrate and customize.",
+      "start": 14.78,
+      "end": 18.62
+    },
+    {
+      "block": 1,
+      "text": "The Django comment framework allows you to attach comments to any model you have.",
+      "start": 18.8,
+      "end": 23.2
+    },
+    {
+      "block": 1,
+      "text": "So I didn\u2019t need to do any additional database work.",
+      "start": 23.38,
+      "end": 26.34
+    },
+    {
+      "block": 2,
+      "text": "I\u2019m going to attempt to hold off on CAPTCHA for the moment to see how their honeypot feature works.",
+      "start": 26.52,
+      "end": 31.16
+    },
+    {
+      "block": 2,
+      "text": "But I expect that I\u2019ll have to implement a CAPTCHA system eventually.",
+      "start": 31.34,
+      "end": 34.86
+    },
+    {
+      "block": 2,
+      "text": "Basically the honeypot feature is an extra field in the form that\u2019s used as a trap.",
+      "start": 35.04,
+      "end": 39.52
+    },
+    {
+      "block": 2,
+      "text": "If any data is entered in that field, the comment will be considered spam.",
+      "start": 39.7,
+      "end": 43.86
+    },
+    {
+      "block": 2,
+      "text": "Spam robots will typically fill out all fields when attempting to make a form submission.",
+      "start": 44.04,
+      "end": 48.6
+    },
+    {
+      "block": 3,
+      "text": "The sliding and collapsing effects are basically done with a single line of jQuery code.",
+      "start": 48.78,
+      "end": 53.66
+    },
+    {
+      "block": 4,
+      "text": "You can also optionally pass in a duration or \u2018fast\u2019 and \u2018slow\u2019 keywords to the slideToggle function.",
+      "start": 53.84,
+      "end": 59.36
+    },
+    {
+      "block": 4,
+      "text": "Some other cool cross browser things you can do with jQuery are: adding animated effects, Making XML HTTP (AJAX) requests, DOM navigation, DOM manipulation, drag and drop, complex client side operations, and validation.",
+      "start": 59.54,
+      "end": 74.66
+    }
+  ]
+}

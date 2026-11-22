@@ -1,0 +1,27 @@
+{
+  "post": 80,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "3bd260822bdfbf5484eba66d3fc545ec4852d1fd1949599c1ebcc026d6dcdbe5",
+  "audioSHA256": "2fbf5153805c547d63cdfb8abb7a799582f41d4cf3000654d2f8c284bab5c173",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "The PyISAPIe help files currently claim you have to use Python 2.5 and uses Django pre 1.0.",
+      "start": 0.0,
+      "end": 6.72
+    },
+    {
+      "block": 1,
+      "text": "But with some small changes to one of the config files, you can actually have Django 1.1 and Python 2.6.",
+      "start": 6.9,
+      "end": 13.46
+    },
+    {
+      "block": 2,
+      "text": "The only change from their help file that you need to do is replace their pyisapie.py with this file that I modified.",
+      "start": 13.64,
+      "end": 19.96
+    }
+  ]
+}

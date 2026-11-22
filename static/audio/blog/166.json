@@ -1,0 +1,33 @@
+{
+  "post": 166,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "aed530bf16d824652030006bb6c55e7e36fa23533f9cb7bc7c531ff0901a6b97",
+  "audioSHA256": "26fb415294c2759dcb9a3b156b53d83c785d2d8f33231d116e445ad1fb8b3290",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "The Khan Academy Healthy Hackathon is a 3 day period where people from Khan Academy get together and work on something they think would be cool.",
+      "start": 0.0,
+      "end": 7.44
+    },
+    {
+      "block": 1,
+      "text": "The theme for my hackathon idea was to make programming easier on Khan Academy.",
+      "start": 7.62,
+      "end": 12.26
+    },
+    {
+      "block": 2,
+      "text": "I could describe it with a few hundred words and pictures, but let\u2019s instead:",
+      "start": 12.44,
+      "end": 16.6
+    },
+    {
+      "block": 3,
+      "text": "\u2026and after watching the video, try things out yourself here.",
+      "start": 16.78,
+      "end": 20.14
+    }
+  ]
+}

@@ -54,3 +54,9 @@ __pycache__/
 
 # Logs
 *.log
+
+# Reusable local speech chunks and intermediate WAV files
+.cache/blog-audio/
+
+# Generated narration is published to Cloud Storage, not Git.
+static/audio/blog/*.mp3

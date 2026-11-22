@@ -1,0 +1,111 @@
+{
+  "post": 172,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "0c67034e45bd4012eea03df7329c24d190f79e01930d2cfbd065a4c6fc60df42",
+  "audioSHA256": "c17b698b38d1ea50c14437fde36ef7b1039b2e14c3934e0fd876e560b5d3558e",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "Since June of last year, I\u2019ve been co-founding a new startup called Brave Software with Brendan Eich.",
+      "start": 0.0,
+      "end": 5.6
+    },
+    {
+      "block": 0,
+      "text": "With our amazing team, we\u2019re developing something pretty epic.",
+      "start": 5.78,
+      "end": 9.3
+    },
+    {
+      "block": 1,
+      "text": "We\u2019re building the next-generation of browsers for smartphones and laptops as part of our new ad-tech platform.",
+      "start": 9.48,
+      "end": 15.24
+    },
+    {
+      "block": 1,
+      "text": "Our terms of use give our users control over their personal data by blocking ad trackers and third party cookies.",
+      "start": 15.42,
+      "end": 21.5
+    },
+    {
+      "block": 1,
+      "text": "We re-integrate fewer and better ads directly into programmatic ad positions, paying revenue shares to users and publishers to support both of these essential parties in the web ecosystem.",
+      "start": 21.68,
+      "end": 31.52
+    },
+    {
+      "block": 2,
+      "text": "Coming built in, we have new faster engines for tracking protection, ad block, HTTPS Everywhere, safe ads with rev-share, and more.",
+      "start": 31.7,
+      "end": 40.58
+    },
+    {
+      "block": 2,
+      "text": "We\u2019re seeing massive web page load time speedups.",
+      "start": 40.76,
+      "end": 43.8
+    },
+    {
+      "block": 3,
+      "text": "We\u2019re starting to bring people in for early developer build access on all platforms.",
+      "start": 43.98,
+      "end": 48.54
+    },
+    {
+      "block": 4,
+      "text": "I\u2019m happy to share that the browsers we\u2019re developing were made fully open sourced.",
+      "start": 48.72,
+      "end": 52.8
+    },
+    {
+      "block": 4,
+      "text": "We welcome contributors, and would love your help.",
+      "start": 52.98,
+      "end": 55.94
+    },
+    {
+      "block": 5,
+      "text": "Some of the repositories include:",
+      "start": 56.12,
+      "end": 58.36
+    },
+    {
+      "block": 6,
+      "text": "Brave OSX and Windows x64 browsers: Prototyped as a Gecko based browser, but now replaced with a powerful new browser built on top of the electron framework.",
+      "start": 58.54,
+      "end": 67.58
+    },
+    {
+      "block": 6,
+      "text": "The electron framework is the same one in use by Slack and the Atom editor.",
+      "start": 67.76,
+      "end": 71.84
+    },
+    {
+      "block": 6,
+      "text": "It uses the latest libchromiumcontent and Node.",
+      "start": 72.02,
+      "end": 75.14
+    },
+    {
+      "block": 7,
+      "text": "Brave for Android: Formerly Link Bubble, working as a background service so you can use other apps as your pages load.",
+      "start": 75.32,
+      "end": 81.88
+    },
+    {
+      "block": 8,
+      "text": "Brave for iOS: Originally forked from Firefox for iOS but with all of the built-in greatness described above.",
+      "start": 82.06,
+      "end": 88.54
+    },
+    {
+      "block": 9,
+      "text": "And many others: Website, updater code, vault, electron fork, and others.",
+      "start": 88.72,
+      "end": 94.56
+    }
+  ]
+}

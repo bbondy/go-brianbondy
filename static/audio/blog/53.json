@@ -1,0 +1,27 @@
+{
+  "post": 53,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "70730d2750c9514fa7ecff44df9dfb78131c05af7062d501b0178d6a449b9087",
+  "audioSHA256": "5249334d584ba8cc3a336cbba574de60795d0d1ca18342e10b593ce58aea52be",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "ou can now go to http://urlzip.org and \u201czip\u201d your long URLs into small URLs.",
+      "start": 0.0,
+      "end": 7.2
+    },
+    {
+      "block": 0,
+      "text": "Converting long URLs to short URLs is useful when sending long URLs via email.",
+      "start": 7.38,
+      "end": 12.5
+    },
+    {
+      "block": 0,
+      "text": "You can also set keywords for your URLs, so that you can always access long URLs just by remembering a short URL.",
+      "start": 12.68,
+      "end": 19.16
+    }
+  ]
+}

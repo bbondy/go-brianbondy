@@ -13,6 +13,12 @@ handlers:
   http_headers:
     Cache-Control: "public, max-age=31536000, immutable"
 
+# Small sentence timing files stay with the app; MP3s live in Cloud Storage.
+- url: /static/audio/blog
+  static_dir: static/audio/blog
+  http_headers:
+    Cache-Control: "public, max-age=31536000, immutable"
+
 # Serve font-awesome files with long-term cache
 - url: /static/font-awesome
   static_dir: static/font-awesome

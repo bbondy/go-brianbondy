@@ -1,0 +1,99 @@
+{
+  "post": 17,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "aeb39b545e40185224710cdcaa0fce874257d48f86e5e3fa5c08e3dbcd9a5845",
+  "audioSHA256": "9e7f6eda4803ac19b2b71aa461f17a54bb977f65f59ed4ed3124556bf0b26af0",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "It took Microsoft 5 years to finally release version 7 of IE.",
+      "start": 0.0,
+      "end": 4.08
+    },
+    {
+      "block": 1,
+      "text": "Internet Explorer 7 has no original ideas and it is largely just copying Firefox and Opera\u2019s features.",
+      "start": 4.26,
+      "end": 10.58
+    },
+    {
+      "block": 1,
+      "text": "It is an improvement from version 6.0, but I\u2019m largely disappointed overall.",
+      "start": 10.76,
+      "end": 15.8
+    },
+    {
+      "block": 2,
+      "text": "You would think that a company like Microsoft would have support for emerging standards like SVG.",
+      "start": 15.98,
+      "end": 21.02
+    },
+    {
+      "block": 2,
+      "text": "SVG is the acronym for Scalable Vector Graphics.",
+      "start": 21.2,
+      "end": 24.72
+    },
+    {
+      "block": 2,
+      "text": "I remember reading the SVG recommendation which was created by the W3C almost 6 years ago.",
+      "start": 24.9,
+      "end": 30.5
+    },
+    {
+      "block": 2,
+      "text": "I knew that although browsers didn\u2019t have built in support for SVG, that eventually they would.",
+      "start": 30.68,
+      "end": 35.96
+    },
+    {
+      "block": 3,
+      "text": "Today I see firefox and others with built in support.",
+      "start": 36.14,
+      "end": 39.42
+    },
+    {
+      "block": 3,
+      "text": "Microsoft decided that this extremely important technology should not be included.",
+      "start": 39.6,
+      "end": 44.16
+    },
+    {
+      "block": 4,
+      "text": "Had IE7 included SVG support, the internet would be a different, better place.",
+      "start": 44.34,
+      "end": 49.14
+    },
+    {
+      "block": 4,
+      "text": "Microsoft has ruined that, and as usual they have shown us just how little they care bout web standards.",
+      "start": 49.32,
+      "end": 54.84
+    },
+    {
+      "block": 5,
+      "text": "Does your browser support SVG?",
+      "start": 55.02,
+      "end": 57.5
+    },
+    {
+      "block": 5,
+      "text": "If you can\u2019t see this than go get firefox here",
+      "start": 57.68,
+      "end": 60.56
+    },
+    {
+      "block": 6,
+      "text": "Note that you can get SVG plug-ins from Corel Corporation and Adobe, but IE should have included built in support for it.",
+      "start": 60.74,
+      "end": 67.38
+    },
+    {
+      "block": 6,
+      "text": "Maybe adobe paid them off so that SVG wouldn\u2019t be a competitor to Flash and Microsoft\u2019s newer crappier similar product to flash.",
+      "start": 67.56,
+      "end": 74.44
+    }
+  ]
+}

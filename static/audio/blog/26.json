@@ -1,0 +1,15 @@
+{
+  "post": 26,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "747036fe0f607f03f39dd4b7b3b77c96e451b2f3e1694be6d5f82225f560208a",
+  "audioSHA256": "40967bc94a42a75782134430ee7ed8bcc8a65b069df4310e5c72fa576f569d03",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "I want one: Transparent fridge and washing machine",
+      "start": 0.0,
+      "end": 3.52
+    }
+  ]
+}

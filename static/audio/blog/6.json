@@ -1,0 +1,63 @@
+{
+  "post": 6,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "4053a13d8b5b1929b49425f6e2b0b3694a127bd3d5ccaae6087c172597078539",
+  "audioSHA256": "567c82c18b4a898217e7582fd23a7dc1330af09ba5eeede1f73c2e08d47ce0e7",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "I found a VS plug-in that allows you to define solution level build environment variables.",
+      "start": 0.0,
+      "end": 4.88
+    },
+    {
+      "block": 0,
+      "text": "This is something I\u2019ve been wishing Visual Studio had built in for several years now.",
+      "start": 5.06,
+      "end": 9.14
+    },
+    {
+      "block": 0,
+      "text": "One of the reasons that it\u2019s so important is that you can easily define include directories for all of your projects while keeping them in sync.",
+      "start": 9.32,
+      "end": 16.12
+    },
+    {
+      "block": 0,
+      "text": "This is important when administering multiple build configurations.",
+      "start": 16.3,
+      "end": 20.06
+    },
+    {
+      "block": 1,
+      "text": "Typically a simple project only has 2 configs (Debug, and Release) so the problem is not that apparent.",
+      "start": 20.24,
+      "end": 26.8
+    },
+    {
+      "block": 1,
+      "text": "But a production level product has at least (Release + Debug) * (x64 + x86 + ia64) = 6 configurations that you have to try and keep in sync.",
+      "start": 26.98,
+      "end": 37.46
+    },
+    {
+      "block": 1,
+      "text": "You can download the Solution Build Environment plug-in here.",
+      "start": 37.64,
+      "end": 40.92
+    },
+    {
+      "block": 2,
+      "text": "Also it is important to patch Visual Studio because they have a bug in VS2005 SP1 where plug-ins don\u2019t work if you run via command line.",
+      "start": 41.1,
+      "end": 49.66
+    },
+    {
+      "block": 2,
+      "text": "You can download this fix here",
+      "start": 49.84,
+      "end": 51.92
+    }
+  ]
+}

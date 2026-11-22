@@ -1,0 +1,141 @@
+{
+  "post": 78,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "c12d740324701d6b7ace42362f5fa9253e66e4921208d4f5320365777f2670e8",
+  "audioSHA256": "4db49873f22ae81444e06a967eb10d1b835a0ef49cf8e658e9815afc3b70621a",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "It is no surprise that the following function returns true",
+      "start": 0.0,
+      "end": 3.6
+    },
+    {
+      "block": 1,
+      "text": "But why does it return true?",
+      "start": 3.78,
+      "end": 5.7
+    },
+    {
+      "block": 1,
+      "text": "Most people think that there are 2 expressions here, b1 and b2 and that if either of them are true then the language magically evaluates the total expression to true.",
+      "start": 5.88,
+      "end": 15.24
+    },
+    {
+      "block": 2,
+      "text": "But what\u2019s actually happening is that there is a built in global operator that is defined.",
+      "start": 15.42,
+      "end": 20.14
+    },
+    {
+      "block": 3,
+      "text": "This function is called for every 2 boolean values that you stick an || in between.",
+      "start": 20.32,
+      "end": 24.56
+    },
+    {
+      "block": 4,
+      "text": "This raises the question, if there is an || operator for boolean values, can you define some for other types too?",
+      "start": 24.74,
+      "end": 30.66
+    },
+    {
+      "block": 4,
+      "text": "The answer is: Yes! (But not for built-in types)",
+      "start": 30.84,
+      "end": 34.44
+    },
+    {
+      "block": 5,
+      "text": "It is not obvious, because most people haven\u2019t seen code like this, but you can also overload logical operators to work with types other than boolean values.",
+      "start": 34.62,
+      "end": 42.86
+    },
+    {
+      "block": 6,
+      "text": "Is a1 and a2 implicitly converted to bool?",
+      "start": 43.04,
+      "end": 46.24
+    },
+    {
+      "block": 6,
+      "text": "No.",
+      "start": 46.42,
+      "end": 47.62
+    },
+    {
+      "block": 6,
+      "text": "What\u2019s happening here is that the class A has an overloaded logical operator.",
+      "start": 47.8,
+      "end": 52.12
+    },
+    {
+      "block": 7,
+      "text": "Here\u2019s how to overload the logical OR operator:",
+      "start": 52.3,
+      "end": 55.02
+    },
+    {
+      "block": 8,
+      "text": "What we have above is an overloaded operator for logical OR and it takes in 2 different A types.",
+      "start": 55.2,
+      "end": 60.64
+    },
+    {
+      "block": 9,
+      "text": "So what happens if you stick a bool value on the right hand side of a value with type A?",
+      "start": 60.82,
+      "end": 65.54
+    },
+    {
+      "block": 9,
+      "text": "It will give you a compiling error.",
+      "start": 65.72,
+      "end": 67.96
+    },
+    {
+      "block": 10,
+      "text": "What\u2019s seems even more strange though, is that you can overload logical operators so that they do not return a bool type.",
+      "start": 68.14,
+      "end": 74.3
+    },
+    {
+      "block": 11,
+      "text": "Why would you ever want to do that?",
+      "start": 74.48,
+      "end": 76.48
+    },
+    {
+      "block": 11,
+      "text": "One good reason comes to mind.",
+      "start": 76.66,
+      "end": 78.82
+    },
+    {
+      "block": 12,
+      "text": "Consider you would like to define a new type similar in every way to boolean values, but it can have 3 states: true, false, and not_set.",
+      "start": 79.0,
+      "end": 87.24
+    },
+    {
+      "block": 12,
+      "text": "You could define a tristate type which works exactly the same way as a boolean value in every way, but that has 3 different states.",
+      "start": 87.42,
+      "end": 94.3
+    },
+    {
+      "block": 13,
+      "text": "This is in fact how boost::tribool is implemented:",
+      "start": 94.48,
+      "end": 98.0
+    },
+    {
+      "block": 14,
+      "text": "Overaloading logical operators can be powerful, but I would advise to only do it if your type can be logically and implicitly considered true or false.",
+      "start": 98.18,
+      "end": 106.26
+    }
+  ]
+}

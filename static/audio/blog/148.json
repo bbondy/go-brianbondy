@@ -1,0 +1,369 @@
+{
+  "post": 148,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "cf3f229fe629e661210d764c6aba4a66cd79aea9220ff5bf057c996e19ed8a92",
+  "audioSHA256": "b59dbb25d3b63d3c18cfca77f7cd7837945f27d67c3e6e9bf507a35f7db0c2ae",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "Recently a question appeared on Quora:",
+      "start": 0.0,
+      "end": 2.4
+    },
+    {
+      "block": 1,
+      "text": "What is it like to work as an engineer at Mozilla?",
+      "start": 2.58,
+      "end": 5.54
+    },
+    {
+      "block": 2,
+      "text": "First, please read the awesome responses from people who answered before me: Johnath\u2019s response, Jared\u2019s response, and others will show up here.",
+      "start": 5.72,
+      "end": 13.64
+    },
+    {
+      "block": 3,
+      "text": "I wanted to provide another answer, but with a slightly different spin: I work completely remotely.",
+      "start": 13.82,
+      "end": 19.18
+    },
+    {
+      "block": 3,
+      "text": "I work on the Firefox team as a software engineer dealing mostly with C++ and Javascript.",
+      "start": 19.36,
+      "end": 24.96
+    },
+    {
+      "block": 4,
+      "text": "I broke down my answer into several sections, I\u2019m probably forgetting to add some sections, but this should give you a good idea.",
+      "start": 25.14,
+      "end": 31.78
+    },
+    {
+      "block": 5,
+      "text": "Inclusiveness",
+      "start": 31.96,
+      "end": 33.56
+    },
+    {
+      "block": 6,
+      "text": "I can\u2019t imagine a company ever being as inclusive with remote employees as Mozilla.",
+      "start": 33.74,
+      "end": 38.46
+    },
+    {
+      "block": 6,
+      "text": "If you want to be part of any meeting, simply call in and be part of it.",
+      "start": 38.64,
+      "end": 42.64
+    },
+    {
+      "block": 7,
+      "text": "If you want to chat with someone at any time, you can use video conferencing or IRC.",
+      "start": 42.82,
+      "end": 47.78
+    },
+    {
+      "block": 8,
+      "text": "Every week you have a 1 on 1 meeting time with your manager.",
+      "start": 47.96,
+      "end": 51.32
+    },
+    {
+      "block": 8,
+      "text": "At least once a year you will have a performance evaluation discussion with your manager which is designed to help you grow and succeed.",
+      "start": 51.5,
+      "end": 57.82
+    },
+    {
+      "block": 9,
+      "text": "Travel",
+      "start": 58.0,
+      "end": 59.28
+    },
+    {
+      "block": 10,
+      "text": "There are team work weeks you get flown in for, and there are plenty of other opportunities to travel as much or as little as you would like for various get-togethers and conferences.",
+      "start": 59.46,
+      "end": 67.78
+    },
+    {
+      "block": 11,
+      "text": "Control of your schedule",
+      "start": 67.96,
+      "end": 69.88
+    },
+    {
+      "block": 12,
+      "text": "Mozilla has employees, contractors, and contributors in pretty much every time zone.",
+      "start": 70.06,
+      "end": 75.42
+    },
+    {
+      "block": 12,
+      "text": "It\u2019s best to have a mostly consistent schedule so people can find you, but no one will question you on exactly how often you work, or exactly what hours you work.",
+      "start": 75.6,
+      "end": 84.24
+    },
+    {
+      "block": 13,
+      "text": "What you work on",
+      "start": 84.42,
+      "end": 86.1
+    },
+    {
+      "block": 14,
+      "text": "There are quarterly goals, and to meet those quarterly goals you may be part of a project.",
+      "start": 86.28,
+      "end": 91.08
+    },
+    {
+      "block": 14,
+      "text": "So naturally you\u2019re expected to work on the goals you own, but otherwise you can work on anything you want.",
+      "start": 91.26,
+      "end": 96.62
+    },
+    {
+      "block": 15,
+      "text": "I personally work mostly on bugs that I post.",
+      "start": 96.8,
+      "end": 99.76
+    },
+    {
+      "block": 15,
+      "text": "I\u2019ve never had a bug I posted questioned, nor have I been questioned about what I work on.",
+      "start": 99.94,
+      "end": 104.58
+    },
+    {
+      "block": 15,
+      "text": "To work at Mozilla you have to have good judgment about what should be done since you have so much control.",
+      "start": 104.76,
+      "end": 109.8
+    },
+    {
+      "block": 16,
+      "text": "A manager can probably force prioritization on you, but I\u2019ve never had it happen.",
+      "start": 109.98,
+      "end": 114.54
+    },
+    {
+      "block": 17,
+      "text": "Barriers",
+      "start": 114.72,
+      "end": 116.16
+    },
+    {
+      "block": 18,
+      "text": "There are no barriers put in place, if you want to do something, just do it.",
+      "start": 116.34,
+      "end": 120.66
+    },
+    {
+      "block": 18,
+      "text": "If you see a role that needs to be filled, no one will stop you.",
+      "start": 120.84,
+      "end": 124.6
+    },
+    {
+      "block": 18,
+      "text": "If you want to be awesome, no one will stop you or question what you do.",
+      "start": 124.78,
+      "end": 128.7
+    },
+    {
+      "block": 19,
+      "text": "Transparency",
+      "start": 128.88,
+      "end": 130.56
+    },
+    {
+      "block": 20,
+      "text": "Just about everything is public at Mozilla.",
+      "start": 130.74,
+      "end": 133.3
+    },
+    {
+      "block": 20,
+      "text": "Sometimes company operational related information is protected behind a password, but as an employee you will have access to all of this information.",
+      "start": 133.48,
+      "end": 141.08
+    },
+    {
+      "block": 21,
+      "text": "For example, if you want to know how you may get a raise, you can look up this information including data sheets, considerations, processes, and tools.",
+      "start": 141.26,
+      "end": 149.82
+    },
+    {
+      "block": 22,
+      "text": "Sharing what you work on",
+      "start": 150.0,
+      "end": 151.76
+    },
+    {
+      "block": 23,
+      "text": "If you work on something cool, you can not only talk about it, but you\u2019re encouraged to talk about it.",
+      "start": 151.94,
+      "end": 157.14
+    },
+    {
+      "block": 23,
+      "text": "There are rare cases where you will have to keep quiet, but only if it has security, legal or confidential corporate partnership implications.",
+      "start": 157.32,
+      "end": 164.68
+    },
+    {
+      "block": 24,
+      "text": "There is a large community of Mozillians as well who will be reading what you post.",
+      "start": 164.86,
+      "end": 169.18
+    },
+    {
+      "block": 24,
+      "text": "It\u2019s also likely that several large news sites will pick up what you write and quote you.",
+      "start": 169.36,
+      "end": 174.0
+    },
+    {
+      "block": 25,
+      "text": "Building a portfolio",
+      "start": 174.18,
+      "end": 176.18
+    },
+    {
+      "block": 26,
+      "text": "Why do developers answer questions on sites like StackOverflow?",
+      "start": 176.36,
+      "end": 180.2
+    },
+    {
+      "block": 26,
+      "text": "Other than being a good person and helping the world, these people are building themselves an online portfolio that gives them credibility.",
+      "start": 180.38,
+      "end": 187.26
+    },
+    {
+      "block": 27,
+      "text": "Almost everything you do at Mozilla is open, and therefore you build yourself a portfolio that is at least as valuable as the value you have from your University degree.",
+      "start": 187.44,
+      "end": 195.6
+    },
+    {
+      "block": 28,
+      "text": "Corporate hierarchy",
+      "start": 195.78,
+      "end": 197.62
+    },
+    {
+      "block": 29,
+      "text": "Everyone has a manager, and so in an abstract sense there is a hierarchy, but really there is no hierarchy.",
+      "start": 197.8,
+      "end": 203.72
+    },
+    {
+      "block": 30,
+      "text": "Managers don\u2019t act like your boss, they act like your partner, counselor, facilitator, and if you need it, mentor.",
+      "start": 203.9,
+      "end": 210.54
+    },
+    {
+      "block": 30,
+      "text": "You gain credibility from the work you do.",
+      "start": 210.72,
+      "end": 213.28
+    },
+    {
+      "block": 31,
+      "text": "You can start to be a peer in certain parts of the code which allows you to review code based only on the contributions you\u2019ve made to that section of code.",
+      "start": 213.46,
+      "end": 220.5
+    },
+    {
+      "block": 32,
+      "text": "Community",
+      "start": 220.68,
+      "end": 222.04
+    },
+    {
+      "block": 33,
+      "text": "There is little to no distinction between contributors who pop out of nowhere, contractors, and employees.",
+      "start": 222.22,
+      "end": 228.14
+    },
+    {
+      "block": 33,
+      "text": "Mozilla is the community.",
+      "start": 228.32,
+      "end": 230.4
+    },
+    {
+      "block": 34,
+      "text": "Morals",
+      "start": 230.58,
+      "end": 231.94
+    },
+    {
+      "block": 35,
+      "text": "All decisions are made in terms of what is best for the community and the users.",
+      "start": 232.12,
+      "end": 236.12
+    },
+    {
+      "block": 36,
+      "text": "Decisions are effected by neither market share nor profit.",
+      "start": 236.3,
+      "end": 239.58
+    },
+    {
+      "block": 36,
+      "text": "Seriously.",
+      "start": 239.76,
+      "end": 241.2
+    },
+    {
+      "block": 37,
+      "text": "People",
+      "start": 241.38,
+      "end": 242.58
+    },
+    {
+      "block": 38,
+      "text": "The people are awesome, intelligent, logical and make you proud to be part of the same team.",
+      "start": 242.76,
+      "end": 248.04
+    },
+    {
+      "block": 38,
+      "text": "There are plenty of opportunities to be mentored and to mentor others.",
+      "start": 248.22,
+      "end": 251.9
+    },
+    {
+      "block": 39,
+      "text": "Bonus: How to get a job at Mozilla",
+      "start": 252.08,
+      "end": 254.8
+    },
+    {
+      "block": 40,
+      "text": "Anyone can join the community and start helping Mozilla.",
+      "start": 254.98,
+      "end": 258.18
+    },
+    {
+      "block": 40,
+      "text": "If you want a job here, you\u2019d be in a better position by simply jumping in and showing your value.",
+      "start": 258.36,
+      "end": 263.48
+    },
+    {
+      "block": 41,
+      "text": "You won\u2019t be guaranteed a position, but at a minimum you\u2019re increasing your odds significantly, helping a non profit, improving your skills, and building yourself an online portfolio.",
+      "start": 263.66,
+      "end": 273.1
+    }
+  ]
+}

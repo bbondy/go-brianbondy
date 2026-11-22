@@ -1,0 +1,225 @@
+{
+  "post": 94,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "c12e9631791d4f1db47d5ec0005615bf2be47eec96c533bebbb5f8680219af24",
+  "audioSHA256": "f387ed284324eeab4b25e5765c93b4cb70b9f8a7272fb6c94b9c646062347ee8",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "This post will use Fibonacci numbers as a tool to build up to explaining the usefulness of Python generators.",
+      "start": 0.0,
+      "end": 5.76
+    },
+    {
+      "block": 1,
+      "text": "This post will feature both C++ and Python code.",
+      "start": 5.94,
+      "end": 9.7
+    },
+    {
+      "block": 2,
+      "text": "Fibonacci numbers are defined as the sequence: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, \u2026.",
+      "start": 9.88,
+      "end": 17.48
+    },
+    {
+      "block": 3,
+      "text": "Or in general:",
+      "start": 17.66,
+      "end": 19.34
+    },
+    {
+      "block": 4,
+      "text": "This can be transferred into a C++ function extremely easily:",
+      "start": 19.52,
+      "end": 23.68
+    },
+    {
+      "block": 5,
+      "text": "But if you want to print the first 6 Fibonacci numbers, you will be recalculating a lot of the values with the above function.",
+      "start": 23.86,
+      "end": 30.02
+    },
+    {
+      "block": 6,
+      "text": "For example: Fib(3) = Fib(2) + Fib(1), but Fib(2) also recalculates Fib(1).",
+      "start": 30.2,
+      "end": 39.0
+    },
+    {
+      "block": 6,
+      "text": "The higher the value you want to calculate, the worse off you will be.",
+      "start": 39.18,
+      "end": 43.02
+    },
+    {
+      "block": 7,
+      "text": "So one may be tempted to re-write the above by keeping track of the state in main.",
+      "start": 43.2,
+      "end": 47.44
+    },
+    {
+      "block": 8,
+      "text": "But this is very ugly, and it complicates our logic in main, it would be better to not have to worry about state in our main function.",
+      "start": 47.62,
+      "end": 54.34
+    },
+    {
+      "block": 9,
+      "text": "We could return a vector of values and use an iterator to iterate over that set of values, but this requires a lot of memory all at once for a large number of return values.",
+      "start": 54.52,
+      "end": 63.48
+    },
+    {
+      "block": 10,
+      "text": "So back to our old approach, what happens if we wanted to do something else besides print the numbers?",
+      "start": 63.66,
+      "end": 69.02
+    },
+    {
+      "block": 10,
+      "text": "We\u2019d have to copy and paste the whole block of code in main and change the output statements to whatever else we wanted to do.",
+      "start": 69.2,
+      "end": 75.2
+    },
+    {
+      "block": 10,
+      "text": "And if you copy and paste code, then you should be shot.",
+      "start": 75.38,
+      "end": 78.74
+    },
+    {
+      "block": 10,
+      "text": "You don\u2019t want to get shot do you?",
+      "start": 78.92,
+      "end": 80.76
+    },
+    {
+      "block": 11,
+      "text": "To solve these problems, and to avoid getting shot, we may re-write this block of code using a callback function.",
+      "start": 80.94,
+      "end": 87.18
+    },
+    {
+      "block": 11,
+      "text": "Every time a new Fibonacci number is encountered, we would call the callback function.",
+      "start": 87.36,
+      "end": 92.16
+    },
+    {
+      "block": 12,
+      "text": "This is clearly an improvement, your logic in main is not as cluttered, and you can do anything you want with the Fibonacci numbers, simply define new callbacks.",
+      "start": 92.34,
+      "end": 100.66
+    },
+    {
+      "block": 13,
+      "text": "But this is still not perfect.",
+      "start": 100.84,
+      "end": 102.84
+    },
+    {
+      "block": 13,
+      "text": "What if you wanted to only get the first 2 Fibonacci numbers, and then do something, then get some more, then do something else.",
+      "start": 103.02,
+      "end": 109.82
+    },
+    {
+      "block": 14,
+      "text": "Well we could go on like we have been, and we could start adding state again into main, allowing GetFibNumbers to start from an arbitrary point.",
+      "start": 110.0,
+      "end": 117.28
+    },
+    {
+      "block": 14,
+      "text": "But this will further bloat our code, and it already looks too big for a simple task like printing Fibonacci numbers.",
+      "start": 117.46,
+      "end": 123.78
+    },
+    {
+      "block": 15,
+      "text": "We could implement a producer and consumer model via a couple threads.",
+      "start": 123.96,
+      "end": 127.88
+    },
+    {
+      "block": 15,
+      "text": "But this complicates the code even more.",
+      "start": 128.06,
+      "end": 130.54
+    },
+    {
+      "block": 16,
+      "text": "Instead let\u2019s talk about generators.",
+      "start": 130.72,
+      "end": 133.04
+    },
+    {
+      "block": 17,
+      "text": "Python has a very nice language feature that solves problems like these called generators.",
+      "start": 133.22,
+      "end": 138.18
+    },
+    {
+      "block": 18,
+      "text": "A generator allows you to execute a function, stop at an arbitrary point, and then continue again where you left off.",
+      "start": 138.36,
+      "end": 144.76
+    },
+    {
+      "block": 18,
+      "text": "Each time returning a value.",
+      "start": 144.94,
+      "end": 147.02
+    },
+    {
+      "block": 19,
+      "text": "Consider the following code that uses a generator:",
+      "start": 147.2,
+      "end": 150.16
+    },
+    {
+      "block": 20,
+      "text": "Which gives us the results:",
+      "start": 150.34,
+      "end": 152.18
+    },
+    {
+      "block": 21,
+      "text": "0 1 1 2 3 5",
+      "start": 152.36,
+      "end": 155.96
+    },
+    {
+      "block": 22,
+      "text": "The yield statement is used in conjuction with Python generators.",
+      "start": 156.14,
+      "end": 159.9
+    },
+    {
+      "block": 22,
+      "text": "It saves the state of the function and returns the yeilded value.",
+      "start": 160.08,
+      "end": 163.52
+    },
+    {
+      "block": 22,
+      "text": "The next time you call the next() function on the generator, it will continue where the yield left off.",
+      "start": 163.7,
+      "end": 168.98
+    },
+    {
+      "block": 23,
+      "text": "This is by far more clean than the callback function code.",
+      "start": 169.16,
+      "end": 172.52
+    },
+    {
+      "block": 23,
+      "text": "We have cleaner code, smaller code, and not to mention much more functional code (Python allows arbitrarily large integers).",
+      "start": 172.7,
+      "end": 179.98
+    }
+  ]
+}

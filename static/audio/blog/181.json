@@ -1,0 +1,1893 @@
+{
+  "post": 181,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "3a1ac35a1a019d0c5c8794c4b0c0f5782a195ef40e5f3b1ba24c6e06c62f83f9",
+  "audioSHA256": "421f18dcc03cb41d9d6843af689d044db65beae709aafad9f2da4fda59441767",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "\u201cDiscomfort is the price of admission to a meaningful life\u201d Susan David, PhD.",
+      "start": 0.0,
+      "end": 4.8
+    },
+    {
+      "block": 1,
+      "text": "The race",
+      "start": 4.98,
+      "end": 6.34
+    },
+    {
+      "block": 2,
+      "text": "On October 15th at 5am I took part in a very special race.",
+      "start": 6.52,
+      "end": 10.44
+    },
+    {
+      "block": 2,
+      "text": "Here\u2019s a quick summary to get you up to speed:",
+      "start": 10.62,
+      "end": 13.1
+    },
+    {
+      "block": 3,
+      "text": "This race was the National World Championships for backyard ultras organized by Lazarus Lake (Gary Cantrell)",
+      "start": 13.28,
+      "end": 19.44
+    },
+    {
+      "block": 4,
+      "text": "37 countries, 555 participants",
+      "start": 19.62,
+      "end": 23.46
+    },
+    {
+      "block": 5,
+      "text": "15 person team per country each of the 37 countries holding their own separate race, all starting at the same time.",
+      "start": 23.64,
+      "end": 30.04
+    },
+    {
+      "block": 6,
+      "text": "6.71km loop per hour calld a \u201cyard\u201d.",
+      "start": 30.22,
+      "end": 33.9
+    },
+    {
+      "block": 6,
+      "text": "A distance which works out to 100mi / 24 hours.",
+      "start": 34.08,
+      "end": 38.16
+    },
+    {
+      "block": 6,
+      "text": "A respectable pace for a 100mi.",
+      "start": 38.34,
+      "end": 41.14
+    },
+    {
+      "block": 6,
+      "text": "An even harder pace for beyond that distance.",
+      "start": 41.32,
+      "end": 44.12
+    },
+    {
+      "block": 7,
+      "text": "All races compete virtually with a point system of 1 point for each completed yard.",
+      "start": 44.3,
+      "end": 49.02
+    },
+    {
+      "block": 8,
+      "text": "Each country\u2019s race ends 1 yard after their 2nd place person quits.",
+      "start": 49.2,
+      "end": 53.2
+    },
+    {
+      "block": 9,
+      "text": "There are no male or female categories.",
+      "start": 53.38,
+      "end": 56.02
+    },
+    {
+      "block": 9,
+      "text": "Females often win this format right out and a sure fire way to not see someone\u2019s full potential is to tell them they already won.",
+      "start": 56.2,
+      "end": 62.68
+    },
+    {
+      "block": 10,
+      "text": "Participants for each country are qualified by winning other races called silver ticket races (5 of 15 spots) and the remaining are the highest number of yards in the country for the qualifying year (10 of 15 spots).",
+      "start": 62.86,
+      "end": 74.14
+    },
+    {
+      "block": 11,
+      "text": "If you\u2019re not there to start the next hour in time, even by a second, you\u2019re out.",
+      "start": 74.32,
+      "end": 78.64
+    },
+    {
+      "block": 12,
+      "text": "Qualifying for the team",
+      "start": 78.82,
+      "end": 80.82
+    },
+    {
+      "block": 13,
+      "text": "I\u2019ve had the dream of making it to Big Dog\u2019s Backyard Ultra for several years now.",
+      "start": 81.0,
+      "end": 85.32
+    },
+    {
+      "block": 13,
+      "text": "There are 2 different versions of Big Dog\u2019s and they alternate each year.",
+      "start": 85.5,
+      "end": 89.5
+    },
+    {
+      "block": 13,
+      "text": "One is a country vs country race of races competition called the national championships.",
+      "start": 89.68,
+      "end": 94.72
+    },
+    {
+      "block": 13,
+      "text": "The other is more or less for the winners of each of those races to compete against each other in person.",
+      "start": 94.9,
+      "end": 99.86
+    },
+    {
+      "block": 13,
+      "text": "My goal is to eventually do both.",
+      "start": 100.04,
+      "end": 102.28
+    },
+    {
+      "block": 14,
+      "text": "I had 2 opportunities to qualify for the national country vs country race this year.",
+      "start": 102.46,
+      "end": 107.34
+    },
+    {
+      "block": 15,
+      "text": "My first race of the year was the Perfect PR Backyard Ultra put on by Tad Machrowicz in Michigan.",
+      "start": 107.52,
+      "end": 112.64
+    },
+    {
+      "block": 15,
+      "text": "I won this race but only with 31 yards.",
+      "start": 112.82,
+      "end": 115.62
+    },
+    {
+      "block": 15,
+      "text": "This wasn\u2019t enough to qualify me for one of the 10 spots reserved for the largest yards list in Canada.",
+      "start": 115.8,
+      "end": 121.08
+    },
+    {
+      "block": 15,
+      "text": "It did put me in the top 20 for Canada though.",
+      "start": 121.26,
+      "end": 124.06
+    },
+    {
+      "block": 16,
+      "text": "My second race that I attempted to qualify in was via a silver ticket race in London Ontario.",
+      "start": 124.24,
+      "end": 129.36
+    },
+    {
+      "block": 16,
+      "text": "I got 2nd place (called an assist) at Persistence Backyard Ultra put on by Neil McKay.",
+      "start": 129.54,
+      "end": 134.98
+    },
+    {
+      "block": 16,
+      "text": "Amanda Nelson was the winner with 33 yards.",
+      "start": 135.16,
+      "end": 138.2
+    },
+    {
+      "block": 17,
+      "text": "I didn\u2019t make the team originally and I was torn apart.",
+      "start": 138.38,
+      "end": 141.5
+    },
+    {
+      "block": 17,
+      "text": "Had I done a single yard more at Persistence I would have made the team.",
+      "start": 141.68,
+      "end": 145.2
+    },
+    {
+      "block": 17,
+      "text": "To my fortune and after a month of waiting, I did eventually get an invitation for the team though.",
+      "start": 145.38,
+      "end": 150.5
+    },
+    {
+      "block": 17,
+      "text": "This was due to a couple people not being able to make the race, the spot eventually fell to me as an alternate.",
+      "start": 150.68,
+      "end": 156.2
+    },
+    {
+      "block": 18,
+      "text": "I was the last person added to the team of 15.",
+      "start": 156.38,
+      "end": 159.58
+    },
+    {
+      "block": 18,
+      "text": "The team was locked in from that point forward.",
+      "start": 159.76,
+      "end": 162.4
+    },
+    {
+      "block": 19,
+      "text": "The course",
+      "start": 162.58,
+      "end": 164.02
+    },
+    {
+      "block": 20,
+      "text": "The race was at Summerland Rodeo Grounds in British Columbia, Canada.",
+      "start": 164.2,
+      "end": 168.2
+    },
+    {
+      "block": 20,
+      "text": "The course was a loop up and down Mount Conkle.",
+      "start": 168.38,
+      "end": 171.1
+    },
+    {
+      "block": 20,
+      "text": "The entire course was jaw droppingly beautiful.",
+      "start": 171.28,
+      "end": 174.24
+    },
+    {
+      "block": 21,
+      "text": "The course could be roughly divided into 2.",
+      "start": 174.42,
+      "end": 177.22
+    },
+    {
+      "block": 21,
+      "text": "Each having rolling hills.",
+      "start": 177.4,
+      "end": 179.4
+    },
+    {
+      "block": 22,
+      "text": "The first half was much easier.",
+      "start": 179.58,
+      "end": 181.74
+    },
+    {
+      "block": 22,
+      "text": "You ended up part way up Mount Conkle.",
+      "start": 181.92,
+      "end": 184.32
+    },
+    {
+      "block": 22,
+      "text": "The second half you went up more than double that elevation gain again.",
+      "start": 184.5,
+      "end": 188.1
+    },
+    {
+      "block": 22,
+      "text": "There was one particularly long 300-400 meter stretch up a steep long hill that was sure to throw off your pace.",
+      "start": 188.28,
+      "end": 194.28
+    },
+    {
+      "block": 22,
+      "text": "There was a noticeable temperature change at the top.",
+      "start": 194.46,
+      "end": 197.26
+    },
+    {
+      "block": 22,
+      "text": "There was also a lot of steeper elevation loss on the way down which was a quad and knee breaker.",
+      "start": 197.44,
+      "end": 202.32
+    },
+    {
+      "block": 22,
+      "text": "Some of the course, including the steep downhill, was technical.",
+      "start": 202.5,
+      "end": 206.34
+    },
+    {
+      "block": 23,
+      "text": "There were also more than a couple spots with sand on the course.",
+      "start": 206.52,
+      "end": 209.96
+    },
+    {
+      "block": 23,
+      "text": "They weren\u2019t long but I know the sand is what took at least one person out of the race later on.",
+      "start": 210.14,
+      "end": 214.94
+    },
+    {
+      "block": 24,
+      "text": "There were coyotes and bears on the course.",
+      "start": 215.12,
+      "end": 217.68
+    },
+    {
+      "block": 24,
+      "text": "I saw a coyote run by the day before the race when I walked the course, but I only heard them during the nights for the race.",
+      "start": 217.86,
+      "end": 223.78
+    },
+    {
+      "block": 24,
+      "text": "A couple of people saw bears on the course but there were no encounters.",
+      "start": 223.96,
+      "end": 227.8
+    },
+    {
+      "block": 24,
+      "text": "I believe they were black bears which are not very dangerous.",
+      "start": 227.98,
+      "end": 231.26
+    },
+    {
+      "block": 25,
+      "text": "Often in backyard ultras you get to have a day and a night course, and the night course is usually on road and much easier.",
+      "start": 231.44,
+      "end": 237.36
+    },
+    {
+      "block": 25,
+      "text": "In this case it was the same course for both day and night.",
+      "start": 237.54,
+      "end": 241.06
+    },
+    {
+      "block": 26,
+      "text": "The Team",
+      "start": 241.24,
+      "end": 242.6
+    },
+    {
+      "block": 27,
+      "text": "The team was made up of the best backyard ultra runners from across Canada representing Alberta, British Columbia, Ontario, Nova Scotia and Quebec.",
+      "start": 242.78,
+      "end": 251.26
+    },
+    {
+      "block": 28,
+      "text": "Many of which I\u2019ve watched in admiration at previous Big Dog\u2019s Backyard Ultra races before.",
+      "start": 251.44,
+      "end": 256.48
+    },
+    {
+      "block": 28,
+      "text": "All of them are much more accomplished runners.",
+      "start": 256.66,
+      "end": 259.14
+    },
+    {
+      "block": 28,
+      "text": "Impostor syndrome set in pretty good and with good reason.",
+      "start": 259.32,
+      "end": 262.6
+    },
+    {
+      "block": 29,
+      "text": "In this race everyone\u2019s position on the team is stated up front.",
+      "start": 262.78,
+      "end": 266.22
+    },
+    {
+      "block": 29,
+      "text": "For the results, every completed yard by every person on the team is added up.",
+      "start": 266.4,
+      "end": 271.04
+    },
+    {
+      "block": 29,
+      "text": "So you need a deep field for your country to win.",
+      "start": 271.22,
+      "end": 273.94
+    },
+    {
+      "block": 29,
+      "text": "The people in the lowest positions on the team actually have the potential to have the biggest benefit for the team because there\u2019s more room to outperform others and play above their position.",
+      "start": 274.12,
+      "end": 282.68
+    },
+    {
+      "block": 29,
+      "text": "Before the race, I was re-sorted to the 14th spot because one of the silver ticket winners had a smaller yard count.",
+      "start": 282.86,
+      "end": 288.78
+    },
+    {
+      "block": 29,
+      "text": "I had the 2nd smallest personal best yard count at 32 yards going into this race.",
+      "start": 288.96,
+      "end": 293.68
+    },
+    {
+      "block": 30,
+      "text": "Here was the team and the order of previous best highest to lowest yard count (not the order displayed in the picture):",
+      "start": 293.86,
+      "end": 299.62
+    },
+    {
+      "block": 31,
+      "text": "Eric Deshaies",
+      "start": 299.8,
+      "end": 301.48
+    },
+    {
+      "block": 32,
+      "text": "Stephanie Simpson",
+      "start": 301.66,
+      "end": 303.42
+    },
+    {
+      "block": 33,
+      "text": "Matthew Shepard (Shep)",
+      "start": 303.6,
+      "end": 305.68
+    },
+    {
+      "block": 34,
+      "text": "Marco Poulin",
+      "start": 305.86,
+      "end": 307.54
+    },
+    {
+      "block": 35,
+      "text": "Kevin Barata",
+      "start": 307.72,
+      "end": 309.32
+    },
+    {
+      "block": 36,
+      "text": "Ihor Verys",
+      "start": 309.5,
+      "end": 311.18
+    },
+    {
+      "block": 37,
+      "text": "Michel Leblanc",
+      "start": 311.36,
+      "end": 313.04
+    },
+    {
+      "block": 38,
+      "text": "Adela Salt",
+      "start": 313.22,
+      "end": 314.82
+    },
+    {
+      "block": 39,
+      "text": "Cedric Chavanne",
+      "start": 315.0,
+      "end": 316.68
+    },
+    {
+      "block": 40,
+      "text": "Amanda Nelson",
+      "start": 316.86,
+      "end": 318.62
+    },
+    {
+      "block": 41,
+      "text": "Jodi Isenor",
+      "start": 318.8,
+      "end": 320.48
+    },
+    {
+      "block": 42,
+      "text": "Mike Huber",
+      "start": 320.66,
+      "end": 322.18
+    },
+    {
+      "block": 43,
+      "text": "Erik Bird",
+      "start": 322.36,
+      "end": 323.88
+    },
+    {
+      "block": 44,
+      "text": "Brian Bondy",
+      "start": 324.06,
+      "end": 325.66
+    },
+    {
+      "block": 45,
+      "text": "Stewart Wyllie",
+      "start": 325.84,
+      "end": 327.44
+    },
+    {
+      "block": 46,
+      "text": "Before the race",
+      "start": 327.62,
+      "end": 329.22
+    },
+    {
+      "block": 47,
+      "text": "The day before the race I set up camp and walked the course.",
+      "start": 329.4,
+      "end": 332.68
+    },
+    {
+      "block": 47,
+      "text": "Part of me was scared.",
+      "start": 332.86,
+      "end": 334.62
+    },
+    {
+      "block": 47,
+      "text": "It was much harder and more technical than I was expecting.",
+      "start": 334.8,
+      "end": 338.08
+    },
+    {
+      "block": 47,
+      "text": "I knew I didn\u2019t have the home advantage but kept it to myself and tried to stay positive.",
+      "start": 338.26,
+      "end": 342.82
+    },
+    {
+      "block": 47,
+      "text": "I had trained on hills doing repeats, but we have no mountains at home.",
+      "start": 343.0,
+      "end": 346.92
+    },
+    {
+      "block": 47,
+      "text": "Just a couple 90 foot hills.",
+      "start": 347.1,
+      "end": 349.34
+    },
+    {
+      "block": 48,
+      "text": "We also had a rule of no phones and no music on the course.",
+      "start": 349.52,
+      "end": 353.04
+    },
+    {
+      "block": 48,
+      "text": "I do all of my running with audio books and music, and the music always gives me a pick-me up.",
+      "start": 353.22,
+      "end": 358.18
+    },
+    {
+      "block": 48,
+      "text": "So I was worried about not having access to that.",
+      "start": 358.36,
+      "end": 361.16
+    },
+    {
+      "block": 49,
+      "text": "My coach and friend Matt Masserant was my crew.",
+      "start": 361.34,
+      "end": 364.14
+    },
+    {
+      "block": 49,
+      "text": "He flew in the night before the race and we had dinner.",
+      "start": 364.32,
+      "end": 367.12
+    },
+    {
+      "block": 49,
+      "text": "After a 12 hour travel day (3 flights with layovers from the day before) I wasn\u2019t in the right headspace.",
+      "start": 367.3,
+      "end": 373.38
+    },
+    {
+      "block": 49,
+      "text": "Matt cleared me of it.",
+      "start": 373.56,
+      "end": 375.16
+    },
+    {
+      "block": 49,
+      "text": "He reminded me of the work I\u2019d put in.",
+      "start": 375.34,
+      "end": 377.66
+    },
+    {
+      "block": 49,
+      "text": "I didn\u2019t need to have a mountain back home.",
+      "start": 377.84,
+      "end": 380.16
+    },
+    {
+      "block": 49,
+      "text": "The training I put in was unmatched by anyone else, and I believe it was.",
+      "start": 380.34,
+      "end": 384.5
+    },
+    {
+      "block": 50,
+      "text": "I slept very well for 3 hours the night before the race, and then I couldn\u2019t fall back asleep after that.",
+      "start": 384.68,
+      "end": 390.2
+    },
+    {
+      "block": 50,
+      "text": "This is not atypical for me before races and I\u2019m sure it would really help me if I could figure it out.",
+      "start": 390.38,
+      "end": 395.5
+    },
+    {
+      "block": 51,
+      "text": "After rolling around in bed trying to sleep for 3 hours, I got up at 3am, showered off, got dressed and we took off towards the race.",
+      "start": 395.68,
+      "end": 402.96
+    },
+    {
+      "block": 51,
+      "text": "Arriving around 4am.",
+      "start": 403.14,
+      "end": 405.22
+    },
+    {
+      "block": 51,
+      "text": "My body still felt like it was in the Eastern time zone, so 3am actually felt like 6am for me.",
+      "start": 405.4,
+      "end": 411.08
+    },
+    {
+      "block": 52,
+      "text": "Shannon called me just before the race to give me a pep talk again and to get me thinking positive.",
+      "start": 411.26,
+      "end": 416.3
+    },
+    {
+      "block": 52,
+      "text": "She reminded me of the commitment of work I put in, of the people that were watching, of the opportunity that lay ahead.",
+      "start": 416.48,
+      "end": 422.72
+    },
+    {
+      "block": 52,
+      "text": "It was a perfect pre-race chat.",
+      "start": 422.9,
+      "end": 425.3
+    },
+    {
+      "block": 52,
+      "text": "She made me promise that I had to \u201cNOT be like Brian Bondy\u201d and ask for help when something was wrong.",
+      "start": 425.48,
+      "end": 430.44
+    },
+    {
+      "block": 52,
+      "text": "\u201cThis is a team, and they want to help you.",
+      "start": 430.62,
+      "end": 433.26
+    },
+    {
+      "block": 52,
+      "text": "They want the highest number for Canada\u201d.",
+      "start": 433.44,
+      "end": 435.84
+    },
+    {
+      "block": 53,
+      "text": "Shannon had purchased some temporary tattoos for me to wear to look at when I was struggling.",
+      "start": 436.02,
+      "end": 440.34
+    },
+    {
+      "block": 54,
+      "text": "The early race",
+      "start": 440.52,
+      "end": 442.2
+    },
+    {
+      "block": 55,
+      "text": "The race started at 5am and we had 2 hours of darkness and headlamps before the morning opened up.",
+      "start": 442.38,
+      "end": 447.9
+    },
+    {
+      "block": 56,
+      "text": "The early race for me is always just a matter of not over stressing myself in any way too much.",
+      "start": 448.08,
+      "end": 453.2
+    },
+    {
+      "block": 57,
+      "text": "After doing the course a few times during the race, I became more confident on it.",
+      "start": 453.38,
+      "end": 457.7
+    },
+    {
+      "block": 57,
+      "text": "I just let myself stop worrying and enjoyed the nature surrounding me from all directions.",
+      "start": 457.88,
+      "end": 462.36
+    },
+    {
+      "block": 58,
+      "text": "I hung towards the back with an extremely fun group of guys.",
+      "start": 462.54,
+      "end": 465.98
+    },
+    {
+      "block": 58,
+      "text": "The miles and the hours melted away little by little.",
+      "start": 466.16,
+      "end": 469.12
+    },
+    {
+      "block": 58,
+      "text": "We got to know each other and created strong bonds that would normally take years to create.",
+      "start": 469.3,
+      "end": 473.86
+    },
+    {
+      "block": 58,
+      "text": "Although I spent time with most runners, the group of guys that I spent the most time with was: Shep, Kevin, Ihor, Mitch, Jodi, Mike, and Erik.",
+      "start": 474.04,
+      "end": 482.92
+    },
+    {
+      "block": 59,
+      "text": "Just before it got dark a second time (the 1st of 2 nights), I tried to drink an Ensure and it caused stomach problems.",
+      "start": 483.1,
+      "end": 489.58
+    },
+    {
+      "block": 59,
+      "text": "My diet for the past couple years does not include dairy, so I should have known better.",
+      "start": 489.76,
+      "end": 494.4
+    },
+    {
+      "block": 59,
+      "text": "The stomach issues lasted 8 hours into that night.",
+      "start": 494.58,
+      "end": 497.7
+    },
+    {
+      "block": 59,
+      "text": "I hit my peak tiredness during this period too because of the time zone difference so I took Shannon\u2019s advice and shared my struggles with a few of the guys I was running with.",
+      "start": 497.88,
+      "end": 505.96
+    },
+    {
+      "block": 59,
+      "text": "They talked me through it.",
+      "start": 506.14,
+      "end": 507.82
+    },
+    {
+      "block": 59,
+      "text": "\u201cWe\u2019re feeling that way too\u201d, \u201cIt\u2019s normal\u201d, \u201cYou\u2019re doing great\u201d, \u201cGrind through it\u201d.",
+      "start": 508.0,
+      "end": 512.72
+    },
+    {
+      "block": 59,
+      "text": "They perked me up and talked with me which woke me up more.",
+      "start": 512.9,
+      "end": 516.1
+    },
+    {
+      "block": 60,
+      "text": "Runners grouped up in a couple of different dimensions.",
+      "start": 516.28,
+      "end": 519.08
+    },
+    {
+      "block": 60,
+      "text": "One was by language.",
+      "start": 519.26,
+      "end": 521.1
+    },
+    {
+      "block": 60,
+      "text": "It\u2019s pretty mentally taxing to speak in your non primary language for several days of running, so people seemed to group that way.",
+      "start": 521.28,
+      "end": 527.76
+    },
+    {
+      "block": 60,
+      "text": "The other was via running pace.",
+      "start": 527.94,
+      "end": 530.02
+    },
+    {
+      "block": 60,
+      "text": "There were always faster and slower groups of runners.",
+      "start": 530.2,
+      "end": 533.32
+    },
+    {
+      "block": 61,
+      "text": "The mid race",
+      "start": 533.5,
+      "end": 535.1
+    },
+    {
+      "block": 62,
+      "text": "The mid race was just taking things 1 loop at a time and not thinking too far ahead.",
+      "start": 535.28,
+      "end": 540.16
+    },
+    {
+      "block": 62,
+      "text": "Micro goals were made and met.",
+      "start": 540.34,
+      "end": 542.58
+    },
+    {
+      "block": 62,
+      "text": "It was uneventful for the most part and the entire team made it over 24 hours. 75% of backyard races are won within less than 24 hours.",
+      "start": 542.76,
+      "end": 551.08
+    },
+    {
+      "block": 62,
+      "text": "That is to say every runner but one quits before 24h, and the last runner is unable to continue to find out if they can exceed 24h because the race has ended.",
+      "start": 551.26,
+      "end": 560.38
+    },
+    {
+      "block": 62,
+      "text": "So seeing our entire team go over 24h with no one dropping was incredible.",
+      "start": 560.56,
+      "end": 565.2
+    },
+    {
+      "block": 63,
+      "text": "It was very inspiring to watch people work through problems that would normally take people out of a race in this format.",
+      "start": 565.38,
+      "end": 571.14
+    },
+    {
+      "block": 63,
+      "text": "Each person knows they want to put up a huge number, and it really helps to have others there.",
+      "start": 571.32,
+      "end": 576.2
+    },
+    {
+      "block": 63,
+      "text": "So you really don\u2019t want anyone dropping.",
+      "start": 576.38,
+      "end": 578.62
+    },
+    {
+      "block": 63,
+      "text": "At least not until your country\u2019s position is locked in by too big of a margin to overcome.",
+      "start": 578.8,
+      "end": 583.52
+    },
+    {
+      "block": 64,
+      "text": "Those strong bonds that were created made people fight to keep each other in the race.",
+      "start": 583.7,
+      "end": 587.94
+    },
+    {
+      "block": 64,
+      "text": "This is quite a contrast from a normal backyard ultra which sometimes involves mind games and boasting.",
+      "start": 588.12,
+      "end": 593.88
+    },
+    {
+      "block": 65,
+      "text": "I felt like my sodium intake was on par this time, you lose a lot of sodium when you sweat so you need to balance that with salt and other electrolyte intake.",
+      "start": 594.06,
+      "end": 601.98
+    },
+    {
+      "block": 65,
+      "text": "As for fluids, I only drank water.",
+      "start": 602.16,
+      "end": 604.88
+    },
+    {
+      "block": 65,
+      "text": "I held off on caffeine as long as I could, which was into the night.",
+      "start": 605.06,
+      "end": 608.82
+    },
+    {
+      "block": 66,
+      "text": "My nutrition was on par thanks to Matt nagging me (in a good way) to eat to get my calorie intake up.",
+      "start": 609.0,
+      "end": 614.76
+    },
+    {
+      "block": 66,
+      "text": "When I didn\u2019t want to eat, he put effort into making the food look more appealing so that I would.",
+      "start": 614.94,
+      "end": 619.58
+    },
+    {
+      "block": 67,
+      "text": "I had written, printed, and cut up little fortune cookie-like papers with 60 different reasons I was doing this.",
+      "start": 619.76,
+      "end": 625.76
+    },
+    {
+      "block": 67,
+      "text": "I read one of those for each and every yard.",
+      "start": 625.94,
+      "end": 628.34
+    },
+    {
+      "block": 67,
+      "text": "It kept my mind in the right place.",
+      "start": 628.52,
+      "end": 630.68
+    },
+    {
+      "block": 68,
+      "text": "Inspiring grit and teamwork",
+      "start": 630.86,
+      "end": 633.18
+    },
+    {
+      "block": 69,
+      "text": "I saw many people struggle and I saw heros amongst the team keeping each other alive.",
+      "start": 633.36,
+      "end": 637.76
+    },
+    {
+      "block": 69,
+      "text": "It wasn\u2019t uncommon to come in slower for a loop because you were helping someone get back.",
+      "start": 637.94,
+      "end": 642.5
+    },
+    {
+      "block": 70,
+      "text": "Everything went more or less OK until the 40th yard.",
+      "start": 642.68,
+      "end": 646.04
+    },
+    {
+      "block": 70,
+      "text": "Sure it was hard, but there was no end in sight.",
+      "start": 646.22,
+      "end": 649.1
+    },
+    {
+      "block": 71,
+      "text": "The 40th yard was a complete shit show.",
+      "start": 649.28,
+      "end": 652.0
+    },
+    {
+      "block": 72,
+      "text": "Everyone was exhausted.",
+      "start": 652.18,
+      "end": 654.18
+    },
+    {
+      "block": 72,
+      "text": "Some were bent over holding their legs.",
+      "start": 654.36,
+      "end": 656.68
+    },
+    {
+      "block": 72,
+      "text": "People were minutes off of their normal pace.",
+      "start": 656.86,
+      "end": 659.42
+    },
+    {
+      "block": 72,
+      "text": "Some faster people were at the back.",
+      "start": 659.6,
+      "end": 661.76
+    },
+    {
+      "block": 72,
+      "text": "And many were struggling to get it done.",
+      "start": 661.94,
+      "end": 664.26
+    },
+    {
+      "block": 72,
+      "text": "It seemed like the entire team was falling apart.",
+      "start": 664.44,
+      "end": 667.4
+    },
+    {
+      "block": 73,
+      "text": "On the 40th yard I had the opportunity to help one of my teammates make it to the end.",
+      "start": 667.58,
+      "end": 671.9
+    },
+    {
+      "block": 73,
+      "text": "His watch had died and he couldn\u2019t pace himself accurately and I was worried he wouldn\u2019t make it in.",
+      "start": 672.08,
+      "end": 677.2
+    },
+    {
+      "block": 73,
+      "text": "He was looking bad earlier in the race and made a full recovery so it was important he kept going.",
+      "start": 677.38,
+      "end": 682.26
+    },
+    {
+      "block": 73,
+      "text": "He would bounce back.",
+      "start": 682.44,
+      "end": 684.2
+    },
+    {
+      "block": 73,
+      "text": "He also had helped keep several people on the team going before.",
+      "start": 684.38,
+      "end": 687.82
+    },
+    {
+      "block": 73,
+      "text": "In my mind he was the team\u2019s MVP for keeping others going.",
+      "start": 688.0,
+      "end": 691.52
+    },
+    {
+      "block": 73,
+      "text": "The points he earned for the team far outweigh his yard count.",
+      "start": 691.7,
+      "end": 694.98
+    },
+    {
+      "block": 73,
+      "text": "I\u2019m speaking of Shep.",
+      "start": 695.16,
+      "end": 696.92
+    },
+    {
+      "block": 74,
+      "text": "He said he would follow me at the back and I witnessed a new level of mind blowing grit that I had never seen before.",
+      "start": 697.1,
+      "end": 702.62
+    },
+    {
+      "block": 74,
+      "text": "I believe he violently puked at least a dozen times and while he was doing that he continued running, uphill.",
+      "start": 702.8,
+      "end": 708.88
+    },
+    {
+      "block": 74,
+      "text": "This guy is next level.",
+      "start": 709.06,
+      "end": 710.9
+    },
+    {
+      "block": 74,
+      "text": "He\u2019s the most outdoorsman I\u2019ve ever met.",
+      "start": 711.08,
+      "end": 713.48
+    },
+    {
+      "block": 74,
+      "text": "When I asked him earlier if he had gaiters for his shoes (keeps rocks and sand out) he said there was no need, he even puts small pebbles in his shoes for runs just to make it harder.",
+      "start": 713.66,
+      "end": 722.7
+    },
+    {
+      "block": 75,
+      "text": "We made it back in on time just after the 3 minute whistle.",
+      "start": 722.88,
+      "end": 726.24
+    },
+    {
+      "block": 75,
+      "text": "I didn\u2019t get faster after that yard.",
+      "start": 726.42,
+      "end": 728.66
+    },
+    {
+      "block": 76,
+      "text": "Others on the team displayed insane levels of grit as well.",
+      "start": 728.84,
+      "end": 732.36
+    },
+    {
+      "block": 76,
+      "text": "Stewart, who previously had a PR of 30 yards, did an additional 10 with a wrapped up leg with a messed up shin.",
+      "start": 732.54,
+      "end": 739.18
+    },
+    {
+      "block": 77,
+      "text": "I heard that another runner ran to a point that his calves swelled up so much that he couldn\u2019t walk anymore.",
+      "start": 739.36,
+      "end": 744.72
+    },
+    {
+      "block": 78,
+      "text": "Mitch ran countless yards with a messed up foot.",
+      "start": 744.9,
+      "end": 747.78
+    },
+    {
+      "block": 79,
+      "text": "In any normal race, numbers would be dropping fast, but these people dealt with the problems and moved on until they couldn\u2019t.",
+      "start": 747.96,
+      "end": 754.36
+    },
+    {
+      "block": 80,
+      "text": "After yard 40, 4 runners from Canada either didn\u2019t go out or didn\u2019t attempt another yard.",
+      "start": 754.54,
+      "end": 759.82
+    },
+    {
+      "block": 80,
+      "text": "My pack was gone and the remaining members of the group dispersed.",
+      "start": 760.0,
+      "end": 763.52
+    },
+    {
+      "block": 81,
+      "text": "The end game",
+      "start": 763.7,
+      "end": 765.22
+    },
+    {
+      "block": 82,
+      "text": "For me the 40th yard was the last yard I could perceive others.",
+      "start": 765.4,
+      "end": 768.92
+    },
+    {
+      "block": 82,
+      "text": "I was too inwardly focused after that, it was full survival mode.",
+      "start": 769.1,
+      "end": 773.18
+    },
+    {
+      "block": 82,
+      "text": "With less than 3 minutes of recovery and feeling exhausted I was not in a good state and being sucked up by what they call the death spiral.",
+      "start": 773.36,
+      "end": 780.4
+    },
+    {
+      "block": 83,
+      "text": "I knew 40 was a huge milestone and I knew there would be a lot of people dropping at 40.",
+      "start": 780.58,
+      "end": 785.54
+    },
+    {
+      "block": 83,
+      "text": "Matt reminded me of this and that fired me up enough to give it one more go.",
+      "start": 785.72,
+      "end": 789.72
+    },
+    {
+      "block": 83,
+      "text": "I finished yard 41 alone and with less than 3 minutes again.",
+      "start": 789.9,
+      "end": 793.74
+    },
+    {
+      "block": 84,
+      "text": "On my 42nd yard Matt reminded me of the one time I almost didn\u2019t get on the team because of 1 yard.",
+      "start": 793.92,
+      "end": 799.52
+    },
+    {
+      "block": 84,
+      "text": "This fired me up and I went out of the gate running fast.",
+      "start": 799.7,
+      "end": 802.82
+    },
+    {
+      "block": 84,
+      "text": "I turned the wrong way because I was so out of it and the other runners behind called out to me that I was going the wrong way.",
+      "start": 803.0,
+      "end": 808.76
+    },
+    {
+      "block": 84,
+      "text": "I embarrassingly replied: \u201cOops!",
+      "start": 808.94,
+      "end": 811.66
+    },
+    {
+      "block": 84,
+      "text": "Thanks!\u201d.",
+      "start": 811.84,
+      "end": 813.2
+    },
+    {
+      "block": 84,
+      "text": "I heard Eric call out: \u201cIs he OK?\u201d To which the rest of the remaining team just answered \u201cOh ya he\u2019s doing fine, everyone messed up that turn at one point\u201d.",
+      "start": 813.38,
+      "end": 822.34
+    },
+    {
+      "block": 84,
+      "text": "Well probably not after doing it for the 42nd time!",
+      "start": 822.52,
+      "end": 825.88
+    },
+    {
+      "block": 84,
+      "text": "I believe they knew I was completely out of my mind at that point, thank you for pushing me to stay in!",
+      "start": 826.06,
+      "end": 831.34
+    },
+    {
+      "block": 85,
+      "text": "I racewalked most of this yard until I reached the big hill and it slowed me down too much.",
+      "start": 831.52,
+      "end": 836.0
+    },
+    {
+      "block": 85,
+      "text": "I ran just after that big hill for the rest of the way in.",
+      "start": 836.18,
+      "end": 839.38
+    },
+    {
+      "block": 86,
+      "text": "My final yard",
+      "start": 839.56,
+      "end": 841.24
+    },
+    {
+      "block": 87,
+      "text": "In the corral on the start of yard 43 I was barely able to stand straight.",
+      "start": 841.42,
+      "end": 845.58
+    },
+    {
+      "block": 87,
+      "text": "I probably looked drunk to the spectators and the remaining 4 other runners.",
+      "start": 845.76,
+      "end": 849.68
+    },
+    {
+      "block": 87,
+      "text": "I knew there was no chance I could finish.",
+      "start": 849.86,
+      "end": 852.18
+    },
+    {
+      "block": 87,
+      "text": "Stephanie the race director told me there were a lot of people cheering for me on the live feed.",
+      "start": 852.36,
+      "end": 856.92
+    },
+    {
+      "block": 87,
+      "text": "I knew I had to go out even though I couldn\u2019t make it.",
+      "start": 857.1,
+      "end": 859.74
+    },
+    {
+      "block": 88,
+      "text": "Out on yard 43 I got to the first hill and went up.",
+      "start": 859.92,
+      "end": 863.6
+    },
+    {
+      "block": 88,
+      "text": "Everything hurt, I was beyond exhausted, completely empty.",
+      "start": 863.78,
+      "end": 867.7
+    },
+    {
+      "block": 88,
+      "text": "I turned around and walked back down the hill back towards camp.",
+      "start": 867.88,
+      "end": 871.24
+    },
+    {
+      "block": 88,
+      "text": "But when I reached the bottom I couldn\u2019t will myself to walk back to camp.",
+      "start": 871.42,
+      "end": 875.18
+    },
+    {
+      "block": 88,
+      "text": "I knew I had to go out by timing out, not by turning back.",
+      "start": 875.36,
+      "end": 879.04
+    },
+    {
+      "block": 88,
+      "text": "I promised myself I wouldn\u2019t quit in any other way.",
+      "start": 879.22,
+      "end": 882.18
+    },
+    {
+      "block": 88,
+      "text": "I turned around and went back up the hill.",
+      "start": 882.36,
+      "end": 884.76
+    },
+    {
+      "block": 89,
+      "text": "A built up flood of emotions came crashing down hard on me.",
+      "start": 884.94,
+      "end": 888.54
+    },
+    {
+      "block": 89,
+      "text": "I started bawling and repeating \u201cfuck\u201d.",
+      "start": 888.72,
+      "end": 891.12
+    },
+    {
+      "block": 89,
+      "text": "I thought of being in hard training for the entire past year, over 6000km and 700 hours of running this year alone, of the 5am mornings, of running through snow storms, rain, and extreme heat.",
+      "start": 891.3,
+      "end": 903.3
+    },
+    {
+      "block": 89,
+      "text": "I thought of all the past races that built up to this race.",
+      "start": 903.48,
+      "end": 906.76
+    },
+    {
+      "block": 89,
+      "text": "I thought of my country.",
+      "start": 906.94,
+      "end": 908.62
+    },
+    {
+      "block": 89,
+      "text": "I thought of the past 42 hours of running every hour. thought of the sacrifices my family and I made for this.",
+      "start": 908.8,
+      "end": 914.88
+    },
+    {
+      "block": 89,
+      "text": "I thought of everyone watching, everyone I was letting down.",
+      "start": 915.06,
+      "end": 918.5
+    },
+    {
+      "block": 90,
+      "text": "I would walk the whole thing if I had to, but I was finishing yard 43.",
+      "start": 918.68,
+      "end": 922.92
+    },
+    {
+      "block": 91,
+      "text": "I kept alternating between running and walking as much as I could despite having nothing left in the tank.",
+      "start": 923.1,
+      "end": 928.06
+    },
+    {
+      "block": 91,
+      "text": "I knew there was no chance of getting back in time.",
+      "start": 928.24,
+      "end": 931.04
+    },
+    {
+      "block": 91,
+      "text": "My only motivation to keep running vs walking was that I was worried family or friends would be watching and not see me get back in time and think that I got lost on the mountain somewhere.",
+      "start": 931.22,
+      "end": 940.26
+    },
+    {
+      "block": 91,
+      "text": "I didn\u2019t want my wife Shannon worrying, so I ran.",
+      "start": 940.44,
+      "end": 943.4
+    },
+    {
+      "block": 91,
+      "text": "I came in only 7 minutes after the bell.",
+      "start": 943.58,
+      "end": 946.22
+    },
+    {
+      "block": 91,
+      "text": "If I wasn\u2019t worried about others watching and worrying, it would have probably been 30 minutes after the bell.",
+      "start": 946.4,
+      "end": 951.68
+    },
+    {
+      "block": 92,
+      "text": "That was the end of my race.",
+      "start": 951.86,
+      "end": 953.86
+    },
+    {
+      "block": 93,
+      "text": "Results",
+      "start": 954.04,
+      "end": 955.4
+    },
+    {
+      "block": 94,
+      "text": "Full worldwide results can be found here",
+      "start": 955.58,
+      "end": 958.22
+    },
+    {
+      "block": 95,
+      "text": "Canadian results are displayed below:",
+      "start": 958.4,
+      "end": 960.8
+    },
+    {
+      "block": 96,
+      "text": "The individuals with the most yards were from Belgium with a world record breaking 101 yards.",
+      "start": 960.98,
+      "end": 966.18
+    },
+    {
+      "block": 96,
+      "text": "The race ended with both of them quitting at the same time, technically both are considered as Did Not Finish (DNF) - neither one taking the win.",
+      "start": 966.36,
+      "end": 974.12
+    },
+    {
+      "block": 97,
+      "text": "I don\u2019t believe in the history of the human race that any human has run over 100 consecutive hours before.",
+      "start": 974.3,
+      "end": 979.82
+    },
+    {
+      "block": 98,
+      "text": "Team USA was first place with a collective 860 completed yards.",
+      "start": 980.0,
+      "end": 984.32
+    },
+    {
+      "block": 99,
+      "text": "Team Canada ended up 5th out of 37 countries with a combined 620 yards.",
+      "start": 984.5,
+      "end": 989.7
+    },
+    {
+      "block": 99,
+      "text": "I witnessed first hand from 14 of my other teammates exactly why they were there.",
+      "start": 989.88,
+      "end": 994.28
+    },
+    {
+      "block": 99,
+      "text": "Problems that others would run into in a normal race were merely things to work through for them.",
+      "start": 994.46,
+      "end": 999.02
+    },
+    {
+      "block": 100,
+      "text": "Ihor Verys took 1st place within Canada with an amazing 67 yards.",
+      "start": 999.2,
+      "end": 1003.68
+    },
+    {
+      "block": 100,
+      "text": "The Canadian record before this was held by Dave Proctor with 52 yards.",
+      "start": 1003.86,
+      "end": 1008.26
+    },
+    {
+      "block": 100,
+      "text": "Eric Deshaies was the assist with 66 yards.",
+      "start": 1008.44,
+      "end": 1011.64
+    },
+    {
+      "block": 101,
+      "text": "Amanda Nelson was the last female in the entire competition out of all 37 countries with 55 yards.",
+      "start": 1011.82,
+      "end": 1018.22
+    },
+    {
+      "block": 102,
+      "text": "I ended up being 5th within Canada and 89th in the world with 42 yards.",
+      "start": 1018.4,
+      "end": 1022.96
+    },
+    {
+      "block": 102,
+      "text": "It was a new personal best (PB) result for me, my last best was 32 yards.",
+      "start": 1023.14,
+      "end": 1028.82
+    },
+    {
+      "block": 102,
+      "text": "It was also a new PB distance for me of 288km, although the last 6.71km didn\u2019t count because I came in late.",
+      "start": 1029.0,
+      "end": 1037.24
+    },
+    {
+      "block": 103,
+      "text": "Since runners on each team were ranked 1-15 before the race, I could see that I was the 4th best in my seed (#14 runner) out of the 37 countries.",
+      "start": 1037.42,
+      "end": 1046.06
+    },
+    {
+      "block": 104,
+      "text": "263 (48.3%) individuals set personal bests (by an average of 10 yards).",
+      "start": 1046.24,
+      "end": 1052.88
+    },
+    {
+      "block": 104,
+      "text": "I think this was because of 2 things.",
+      "start": 1053.06,
+      "end": 1055.46
+    },
+    {
+      "block": 104,
+      "text": "One is that being part of a team helps, the team pushes each other to go further, you don\u2019t want to let your team down.",
+      "start": 1055.64,
+      "end": 1061.64
+    },
+    {
+      "block": 104,
+      "text": "And the other is that you are representing your country and not just doing it for yourself, you don\u2019t want to let your country down.",
+      "start": 1061.82,
+      "end": 1067.98
+    },
+    {
+      "block": 105,
+      "text": "Just after the race",
+      "start": 1068.16,
+      "end": 1070.0
+    },
+    {
+      "block": 106,
+      "text": "As is custom, like a light switch, your body goes into \u201cold man mode\u201d the second your race is over and you can barely walk.",
+      "start": 1070.18,
+      "end": 1077.14
+    },
+    {
+      "block": 107,
+      "text": "I was presented with my silver coin by the race directors (RDs).",
+      "start": 1077.32,
+      "end": 1081.4
+    },
+    {
+      "block": 108,
+      "text": "I finished my race during the night so we got a hotel and came back the next morning to clean up.",
+      "start": 1081.58,
+      "end": 1086.3
+    },
+    {
+      "block": 109,
+      "text": "At the hotel on the night I finished, I was so tired that I fell asleep while I was drinking a cup of water and spilled it all over myself.",
+      "start": 1086.48,
+      "end": 1093.36
+    },
+    {
+      "block": 110,
+      "text": "The next morning we returned to the race to pack up.",
+      "start": 1093.54,
+      "end": 1096.42
+    },
+    {
+      "block": 110,
+      "text": "The race was still going on and we arrived on the yard that Amanda went out.",
+      "start": 1096.6,
+      "end": 1100.52
+    },
+    {
+      "block": 111,
+      "text": "Training",
+      "start": 1100.7,
+      "end": 1101.98
+    },
+    {
+      "block": 112,
+      "text": "I train year round.",
+      "start": 1102.16,
+      "end": 1104.0
+    },
+    {
+      "block": 112,
+      "text": "Winter to Summer and everything in between.",
+      "start": 1104.18,
+      "end": 1106.74
+    },
+    {
+      "block": 112,
+      "text": "Leading up to this race within the last month I was by far in the best shape of my life.",
+      "start": 1106.92,
+      "end": 1111.4
+    },
+    {
+      "block": 112,
+      "text": "I lost 8 pounds in 2 months leading up this race.",
+      "start": 1111.58,
+      "end": 1114.7
+    },
+    {
+      "block": 113,
+      "text": "Just before my taper I did a personal best 5k, 10k, half marathon, and marathon while also maintaining 100mi and above weeks.",
+      "start": 1114.88,
+      "end": 1123.28
+    },
+    {
+      "block": 113,
+      "text": "I would set these personal best times for distances the day after doing a slow 20mi run the day before too.",
+      "start": 1123.46,
+      "end": 1129.38
+    },
+    {
+      "block": 113,
+      "text": "Typically if you set a personal best, you would taper first.",
+      "start": 1129.56,
+      "end": 1133.24
+    },
+    {
+      "block": 113,
+      "text": "I was in much better shape than my previous 2 backyard ultra races this year.",
+      "start": 1133.42,
+      "end": 1137.74
+    },
+    {
+      "block": 114,
+      "text": "My mileage for the past year is very close to an average of 1\u20442 marathon every day.",
+      "start": 1137.92,
+      "end": 1143.52
+    },
+    {
+      "block": 114,
+      "text": "That might not seem like a lot, but when you consider vacation, rest days, and tapering for races, that makes the days you have to run require high volume to maintain that average.",
+      "start": 1143.7,
+      "end": 1153.06
+    },
+    {
+      "block": 115,
+      "text": "Backyard ultra vs normal ultra marathon",
+      "start": 1153.24,
+      "end": 1156.12
+    },
+    {
+      "block": 116,
+      "text": "In a normal ultramarathon if you have stomach problems, or need to deal with anything else.",
+      "start": 1156.3,
+      "end": 1161.18
+    },
+    {
+      "block": 116,
+      "text": "You can stop at the next aid station, take as long as you want.",
+      "start": 1161.36,
+      "end": 1164.96
+    },
+    {
+      "block": 116,
+      "text": "Let your food digest, tape up your feet, take in more nutrition, even sleep, and then move on.",
+      "start": 1165.14,
+      "end": 1171.22
+    },
+    {
+      "block": 117,
+      "text": "With a backyard ultra you don\u2019t have that opportunity.",
+      "start": 1171.4,
+      "end": 1174.6
+    },
+    {
+      "block": 117,
+      "text": "You have a few minutes to get your shit together and get back out there.",
+      "start": 1174.78,
+      "end": 1178.22
+    },
+    {
+      "block": 117,
+      "text": "I have no doubt in my mind that the distances achieved would have been much higher had people been able to go back out after missing an hourly cut off.",
+      "start": 1178.4,
+      "end": 1185.28
+    },
+    {
+      "block": 118,
+      "text": "Thanks",
+      "start": 1185.46,
+      "end": 1186.74
+    },
+    {
+      "block": 119,
+      "text": "Thanks to my wife, family, and friends for being so supportive during training and for letting me get away for several days.",
+      "start": 1186.92,
+      "end": 1193.16
+    },
+    {
+      "block": 119,
+      "text": "I try to keep my running segmented into its own bucket but I know it leaks outside of that and she\u2019s always supportive.",
+      "start": 1193.34,
+      "end": 1199.26
+    },
+    {
+      "block": 120,
+      "text": "Thanks to my crew Matt Masserant, he was a true professional out there.",
+      "start": 1199.44,
+      "end": 1203.12
+    },
+    {
+      "block": 120,
+      "text": "Being there for me EVERY hour.",
+      "start": 1203.3,
+      "end": 1205.46
+    },
+    {
+      "block": 120,
+      "text": "I highly recommend him to anyone looking for a coach.",
+      "start": 1205.64,
+      "end": 1208.76
+    },
+    {
+      "block": 121,
+      "text": "Thanks to the RDs of GrassRoots Racing.",
+      "start": 1208.94,
+      "end": 1211.42
+    },
+    {
+      "block": 121,
+      "text": "The RDs were out there every yard as far as I could remember.",
+      "start": 1211.6,
+      "end": 1214.96
+    },
+    {
+      "block": 121,
+      "text": "Stephanie GillisPaulgaard and Sharon Hernandez were complete champs keeping everything running.",
+      "start": 1215.14,
+      "end": 1220.02
+    },
+    {
+      "block": 122,
+      "text": "Thanks also to all of the rest of the crew out there.",
+      "start": 1220.2,
+      "end": 1222.76
+    },
+    {
+      "block": 122,
+      "text": "Everyone came together for a very positive atmosphere that kept this race going.",
+      "start": 1222.94,
+      "end": 1227.5
+    },
+    {
+      "block": 123,
+      "text": "Thanks to the team itself, it was true teamwork out there.",
+      "start": 1227.68,
+      "end": 1231.04
+    },
+    {
+      "block": 124,
+      "text": "Thanks to the supportive running communities around my past backyard ultra races this past year.",
+      "start": 1231.22,
+      "end": 1236.18
+    },
+    {
+      "block": 124,
+      "text": "Both races are worth signing up for in 2023 if you get the chance.",
+      "start": 1236.36,
+      "end": 1240.44
+    },
+    {
+      "block": 124,
+      "text": "Persistence Backyard Ultra in London, Ontario and Perfect PR Backyard Ultra in Michigan.",
+      "start": 1240.62,
+      "end": 1246.22
+    },
+    {
+      "block": 125,
+      "text": "Thanks to our local running group weUltra for the encouragement, races, and friendships.",
+      "start": 1246.4,
+      "end": 1251.2
+    },
+    {
+      "block": 126,
+      "text": "Thanks to Serg & Kamil who helped crew me before to get me to this race.",
+      "start": 1251.38,
+      "end": 1255.14
+    },
+    {
+      "block": 127,
+      "text": "Thanks to my company Brave for being so supportive as I take on these big challenges.",
+      "start": 1255.32,
+      "end": 1259.8
+    },
+    {
+      "block": 128,
+      "text": "Thanks to Jodi Isenor for many of the pictures in this post.",
+      "start": 1259.98,
+      "end": 1263.26
+    },
+    {
+      "block": 129,
+      "text": "Final thoughts",
+      "start": 1263.44,
+      "end": 1264.96
+    },
+    {
+      "block": 130,
+      "text": "New and meaningful opportunities will present themselves to you in life.",
+      "start": 1265.14,
+      "end": 1268.9
+    },
+    {
+      "block": 130,
+      "text": "But you need to be able to go beyond your comfort zone to find them.",
+      "start": 1269.08,
+      "end": 1272.6
+    },
+    {
+      "block": 131,
+      "text": "Don\u2019t try to avoid discomfort and pain, as Susan David says: \u201cthose are dead people\u2019s goals\u201d.",
+      "start": 1272.78,
+      "end": 1278.38
+    },
+    {
+      "block": 132,
+      "text": "There\u2019s something appealing about seeing how far you can push yourself.",
+      "start": 1278.56,
+      "end": 1282.08
+    },
+    {
+      "block": 132,
+      "text": "Being able to completely empty your energy, give your 100% and still very likely fail, or in rare cases even succeed at your goal.",
+      "start": 1282.26,
+      "end": 1290.26
+    },
+    {
+      "block": 133,
+      "text": "But for it to be real, it has to be more likely it will end in a failure.",
+      "start": 1290.44,
+      "end": 1294.44
+    },
+    {
+      "block": 133,
+      "text": "Failures aren\u2019t so bad, they\u2019re learning opportunities and stepping stones.",
+      "start": 1294.62,
+      "end": 1298.78
+    },
+    {
+      "block": 134,
+      "text": "You can\u2019t find those opportunities without putting it all out there.",
+      "start": 1298.96,
+      "end": 1302.24
+    },
+    {
+      "block": 135,
+      "text": "It isn\u2019t about winning at all for me.",
+      "start": 1302.42,
+      "end": 1304.58
+    },
+    {
+      "block": 135,
+      "text": "Winning is a nice bonus, but if you win and you weren\u2019t completely emptied, you simply didn\u2019t achieve the essence of what I\u2019m searching for.",
+      "start": 1304.76,
+      "end": 1311.4
+    },
+    {
+      "block": 136,
+      "text": "I didn\u2019t win this race, but I achieved everything I went for.",
+      "start": 1311.58,
+      "end": 1314.94
+    },
+    {
+      "block": 136,
+      "text": "I feel re-born.",
+      "start": 1315.12,
+      "end": 1316.8
+    },
+    {
+      "block": 136,
+      "text": "This was a life changing experience for me and one of the most impactful moments of my life.",
+      "start": 1316.98,
+      "end": 1321.86
+    }
+  ]
+}

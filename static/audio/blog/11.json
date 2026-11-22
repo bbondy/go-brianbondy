@@ -1,0 +1,33 @@
+{
+  "post": 11,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "80495ecc6f5e532651e89e2a988cc6e4edb60c975db572bd68df46dbf962bf72",
+  "audioSHA256": "d037ab8005f868cffe4dd462844207f7a85cbe16dc2c2341a51dcb6f5bb587c5",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "Homer:",
+      "start": 0.0,
+      "end": 1.2
+    },
+    {
+      "block": 1,
+      "text": "How is education supposed to make me feel smarter?",
+      "start": 1.38,
+      "end": 4.34
+    },
+    {
+      "block": 1,
+      "text": "Besides, every time I learn something new, it pushes some old stuff out of my brain.",
+      "start": 4.52,
+      "end": 9.48
+    },
+    {
+      "block": 1,
+      "text": "Remember when I took that home winemaking course, and I forgot how to drive?",
+      "start": 9.66,
+      "end": 13.82
+    }
+  ]
+}

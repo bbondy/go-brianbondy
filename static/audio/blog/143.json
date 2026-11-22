@@ -1,0 +1,39 @@
+{
+  "post": 143,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "75f4114c2efc7396fcf920d24942cf169a3bd89a58d5e17f52df857fdfe07ad3",
+  "audioSHA256": "94e53537d7af7d9597467f4c2f8034d22d45f60a3d51b1fc0057b24d1a006a6a",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "Two weeks ago I wrote this tweet that generated over 1500 link clicks alone, as well as several retweets with different untracked links.",
+      "start": 0.0,
+      "end": 7.12
+    },
+    {
+      "block": 1,
+      "text": "In this blog post I mentioned that actions speak louder than words and asked Microsoft to show us their commitment to open source.",
+      "start": 7.3,
+      "end": 13.54
+    },
+    {
+      "block": 2,
+      "text": "I\u2019m happy to say that today Microsoft announced that they listened to user feedback and will now be offering a Visual Studio Express for Desktop applications.",
+      "start": 13.72,
+      "end": 21.56
+    },
+    {
+      "block": 3,
+      "text": "Not having a Visual Studio Express for Desktop applications would have had a negative impact on open source.",
+      "start": 21.74,
+      "end": 27.34
+    },
+    {
+      "block": 3,
+      "text": "Thanks to everyone who retweeted and voted!",
+      "start": 27.52,
+      "end": 30.0
+    }
+  ]
+}

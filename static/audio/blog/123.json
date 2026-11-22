@@ -1,0 +1,243 @@
+{
+  "post": 123,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "08f9f99be96266bd8079a13ee4d2ffa6fe157c98ad9f4797ad35466266aea780",
+  "audioSHA256": "fdad10557577c5aeb70f734735b39acfc4400104e162efa87afe587e9ecef510",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "As you probably already know, Windows 8 introduces the new default Tablet interface, and the old normal Desktop interface.",
+      "start": 0.0,
+      "end": 6.8
+    },
+    {
+      "block": 0,
+      "text": "It uses the new tablet interface as the startup interface even on Desktops though.",
+      "start": 6.98,
+      "end": 11.54
+    },
+    {
+      "block": 0,
+      "text": "For a good rundown on all of the new features, see here.",
+      "start": 11.72,
+      "end": 14.92
+    },
+    {
+      "block": 1,
+      "text": "When you first boot up into Windows 8, it takes you briefly for about 1\u20442 of a second to the desktop interface and then switches directly to the tablet interface.",
+      "start": 15.1,
+      "end": 24.06
+    },
+    {
+      "block": 1,
+      "text": "I had read previously that the desktop/explorer process was only loaded into memory if you clicked it, but it seems to not be the case for this early pre-beta release.",
+      "start": 24.24,
+      "end": 32.72
+    },
+    {
+      "block": 2,
+      "text": "The next thing you notice is that once in the Desktop interface, the start menu button no longer brings up a menu.",
+      "start": 32.9,
+      "end": 38.66
+    },
+    {
+      "block": 2,
+      "text": "It brings you back to the tablet interface.",
+      "start": 38.84,
+      "end": 41.32
+    },
+    {
+      "block": 2,
+      "text": "Pressing the Start/Windows keyboard button will take you between the 2 interfaces.",
+      "start": 41.5,
+      "end": 45.74
+    },
+    {
+      "block": 3,
+      "text": "Firefox on Windows 8:",
+      "start": 45.92,
+      "end": 48.08
+    },
+    {
+      "block": 4,
+      "text": "The first thing I did was install Firefox.",
+      "start": 48.26,
+      "end": 50.98
+    },
+    {
+      "block": 5,
+      "text": "After installing Firefox, Windows will ask you which web browser you would like to use by default.",
+      "start": 51.16,
+      "end": 56.52
+    },
+    {
+      "block": 5,
+      "text": "It shows you a picture of Firefox and IE and lets you pick.",
+      "start": 56.7,
+      "end": 60.22
+    },
+    {
+      "block": 5,
+      "text": "Nice interface.",
+      "start": 60.4,
+      "end": 62.08
+    },
+    {
+      "block": 5,
+      "text": "It shows you this dialog even before our process starts.",
+      "start": 62.26,
+      "end": 65.78
+    },
+    {
+      "block": 5,
+      "text": "If you change focus to another tab or application though, the dialog goes away forever unless you uninstall and reinstall Firefox.",
+      "start": 65.96,
+      "end": 73.16
+    },
+    {
+      "block": 6,
+      "text": "After installing we show automatically into the tablet interface as a new tile.",
+      "start": 73.34,
+      "end": 77.66
+    },
+    {
+      "block": 7,
+      "text": "But when you click on the Firefox icon in the tablet interface, it takes you directly to the old Desktop environment and loads the Firefox process as normal.",
+      "start": 77.84,
+      "end": 86.24
+    },
+    {
+      "block": 7,
+      "text": "I think it\u2019ll be possible for integration like IE does into the tablet interface direclty.",
+      "start": 86.42,
+      "end": 91.3
+    },
+    {
+      "block": 7,
+      "text": "Although the solution may have to be \u2018creative\u2019.",
+      "start": 91.48,
+      "end": 94.04
+    },
+    {
+      "block": 8,
+      "text": "Full screen mode in Firefox works the same as previous versions currently.",
+      "start": 94.22,
+      "end": 98.38
+    },
+    {
+      "block": 8,
+      "text": "If you start in full screen it will switch you first to the Desktop mode, and then launch full screen.",
+      "start": 98.56,
+      "end": 103.84
+    },
+    {
+      "block": 8,
+      "text": "Exiting full screen leaves you at the Desktop interface.",
+      "start": 104.02,
+      "end": 107.22
+    },
+    {
+      "block": 9,
+      "text": "Internet Explorer Tablet Mode:",
+      "start": 107.4,
+      "end": 109.72
+    },
+    {
+      "block": 10,
+      "text": "If you start Internet Explorer from the tablet mode you\u2019ll see a full screen app with no switch to Desktop.",
+      "start": 109.9,
+      "end": 115.66
+    },
+    {
+      "block": 10,
+      "text": "It has a nice interface and allows you to pin any web page to your Tablet interface as a tile.",
+      "start": 115.84,
+      "end": 120.96
+    },
+    {
+      "block": 11,
+      "text": "The problem with this is that even though I set Firefox as my default browser, through the Windows interface, it still launches IE for these shortcut tiles.",
+      "start": 121.14,
+      "end": 129.3
+    },
+    {
+      "block": 12,
+      "text": "Here is a tile created on the far left from a pinned page in IE of the mozilla.org page:",
+      "start": 129.48,
+      "end": 134.6
+    },
+    {
+      "block": 13,
+      "text": "Work to be done for Firefox on Windows 8:",
+      "start": 134.78,
+      "end": 137.66
+    },
+    {
+      "block": 14,
+      "text": "There\u2019s probably a ton, but here are a few things that come to mind:",
+      "start": 137.84,
+      "end": 141.76
+    },
+    {
+      "block": 15,
+      "text": "We need to support the VS2011 developer tools for MozillaBuild",
+      "start": 141.94,
+      "end": 147.06
+    },
+    {
+      "block": 16,
+      "text": "It would be nice to not need to switch to Desktop to launch the browser.",
+      "start": 147.24,
+      "end": 150.84
+    },
+    {
+      "block": 17,
+      "text": "Platform integration for apps seems very important.",
+      "start": 151.02,
+      "end": 154.3
+    },
+    {
+      "block": 17,
+      "text": "We should be showing up as tiles for web applications that launch Firefox full screen.",
+      "start": 154.48,
+      "end": 159.28
+    },
+    {
+      "block": 18,
+      "text": "The Firefox tile can be leveraged to have more functionality built into it.",
+      "start": 159.46,
+      "end": 163.62
+    },
+    {
+      "block": 19,
+      "text": "Related bugs:",
+      "start": 163.8,
+      "end": 165.48
+    },
+    {
+      "block": 20,
+      "text": "Bug 686835 - Investigate using XPCOM in a metro style application, and providing Firefox as a Metro app",
+      "start": 165.66,
+      "end": 174.46
+    },
+    {
+      "block": 21,
+      "text": "Bug 686837 - Add VS2011 support for mozilla-build",
+      "start": 174.64,
+      "end": 181.12
+    },
+    {
+      "block": 22,
+      "text": "Bug 686839 - Investigate Windows 8 metro tile integration",
+      "start": 181.3,
+      "end": 187.54
+    },
+    {
+      "block": 23,
+      "text": "Bug 686840 - Investigate the ability to toggle between a metro app and a native app",
+      "start": 187.72,
+      "end": 194.6
+    }
+  ]
+}

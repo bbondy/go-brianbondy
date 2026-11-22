@@ -1,0 +1,123 @@
+{
+  "post": 13,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "cbe5134410f3785338dd4578fd51779ab578a3105f30d9ad3c3bbacc1ebe2a32",
+  "audioSHA256": "f91d56e8989ba20bce194368c7e89a081766abf3c7336b3af0c956209411571a",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "I have multiple Macs and PCs.",
+      "start": 0.0,
+      "end": 2.4
+    },
+    {
+      "block": 0,
+      "text": "I like to use the Macs more, but I do most of my development in windows.",
+      "start": 2.58,
+      "end": 6.74
+    },
+    {
+      "block": 0,
+      "text": "I tried using parallels at first, but it turned out to be slow for several apps.",
+      "start": 6.92,
+      "end": 11.4
+    },
+    {
+      "block": 1,
+      "text": "I\u2019ve been using parallels with my MBP for a few months now.",
+      "start": 11.58,
+      "end": 15.1
+    },
+    {
+      "block": 1,
+      "text": "My MBP had 2GB of RAM and is a 2.33GHz Intel Core 2 Duo.",
+      "start": 15.28,
+      "end": 21.12
+    },
+    {
+      "block": 1,
+      "text": "Parallels always made OS X slow, and running applications like Visual Studio was painfully slow.",
+      "start": 21.3,
+      "end": 27.14
+    },
+    {
+      "block": 2,
+      "text": "I decided to replace one of my 1GB sticks of RAM with a 2GB stick of RAM to reach the maximum available 3GB of RAM in my MBP.",
+      "start": 27.32,
+      "end": 35.56
+    },
+    {
+      "block": 2,
+      "text": "Apparently if you try to use two 2GB sticks of RAM, then there could be memory address overlap and problems can arrive.",
+      "start": 35.74,
+      "end": 42.46
+    },
+    {
+      "block": 3,
+      "text": "What did I find?",
+      "start": 42.64,
+      "end": 44.32
+    },
+    {
+      "block": 3,
+      "text": "The performance difference after installing the extra 1GB of RAM is amazing.",
+      "start": 44.5,
+      "end": 49.06
+    },
+    {
+      "block": 3,
+      "text": "Windows runs extremely fast in parallels, and there are no delays at all.",
+      "start": 49.24,
+      "end": 53.64
+    },
+    {
+      "block": 3,
+      "text": "I have parallels configured to use 16MB video and 1500MB of RAM.",
+      "start": 53.82,
+      "end": 59.42
+    },
+    {
+      "block": 3,
+      "text": "It runs better than my best PC.",
+      "start": 59.6,
+      "end": 61.92
+    },
+    {
+      "block": 3,
+      "text": "Before I had parallels configured to use 1GB of RAM.",
+      "start": 62.1,
+      "end": 65.54
+    },
+    {
+      "block": 4,
+      "text": "I even keep parallels open during my normal work day while in OS X just for convenience\u2019s sake.",
+      "start": 65.72,
+      "end": 71.24
+    },
+    {
+      "block": 4,
+      "text": "This is something I wouldn\u2019t dream of doing with my old configuration.",
+      "start": 71.42,
+      "end": 75.02
+    },
+    {
+      "block": 5,
+      "text": "In conclusion, if you\u2019re going to buy a MBP and you are going to use parallels.",
+      "start": 75.2,
+      "end": 79.44
+    },
+    {
+      "block": 5,
+      "text": "Make sure you select the 3GB RAM maximum.",
+      "start": 79.62,
+      "end": 82.66
+    },
+    {
+      "block": 5,
+      "text": "It makes all the difference in the world.",
+      "start": 82.84,
+      "end": 85.0
+    }
+  ]
+}

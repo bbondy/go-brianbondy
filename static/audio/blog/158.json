@@ -1,0 +1,705 @@
+{
+  "post": 158,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "9c638d0764ece8435841e2d9a106e4be687ae543699ea333105e7aa57d78fa9d",
+  "audioSHA256": "63ab05ad7c492a7f6afd35f8b01cf5c0d6d89e91a2096a05c471cf0cd274258c",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "Mozilla 2014 Goal",
+      "start": 0.0,
+      "end": 2.4
+    },
+    {
+      "block": 1,
+      "text": "As Deb Cohen (VP, Chief of People) said: Our goal this year is to find new ways for people to become part of us.",
+      "start": 2.58,
+      "end": 9.62
+    },
+    {
+      "block": 1,
+      "text": "This year we have a very aggressive goal, for all of us to look inside our teams, our work, our organization, and create some of these pathways.",
+      "start": 9.8,
+      "end": 17.72
+    },
+    {
+      "block": 2,
+      "text": "What is Code Firefox?",
+      "start": 17.9,
+      "end": 19.98
+    },
+    {
+      "block": 3,
+      "text": "The Code Firefox site (@codefirefox), is a new video and exercise framework which is highly inspired by Khan Academy.",
+      "start": 20.16,
+      "end": 27.44
+    },
+    {
+      "block": 3,
+      "text": "Its purpose is for on-boarding contributors and sharpening the skills of existing community members.",
+      "start": 27.62,
+      "end": 32.82
+    },
+    {
+      "block": 4,
+      "text": "People learn differently.",
+      "start": 33.0,
+      "end": 34.92
+    },
+    {
+      "block": 4,
+      "text": "Providing different ways to consume information is crucial to growing Mozilla.",
+      "start": 35.1,
+      "end": 39.26
+    },
+    {
+      "block": 4,
+      "text": "For many people, Code Firefox provides an easier, and more consumable approach to learning how to contribute to Mozilla.",
+      "start": 39.44,
+      "end": 46.24
+    },
+    {
+      "block": 5,
+      "text": "Would you like to start contributing patches to Mozilla?",
+      "start": 46.42,
+      "end": 49.38
+    },
+    {
+      "block": 5,
+      "text": "Start here",
+      "start": 49.56,
+      "end": 51.0
+    },
+    {
+      "block": 6,
+      "text": "Testimonial",
+      "start": 51.18,
+      "end": 52.78
+    },
+    {
+      "block": 7,
+      "text": "One prime example of Code Firefox\u2019s usefulness is of a new contributor who joined last month, and actively uses Code Firefox.",
+      "start": 52.96,
+      "end": 60.32
+    },
+    {
+      "block": 7,
+      "text": "He has already submitted 18 patches.",
+      "start": 60.5,
+      "end": 63.06
+    },
+    {
+      "block": 8,
+      "text": "In a personal email Anuj Agarwal (Student at Vellore Institute of Technology) writes: Just for fun, here is the patch I got reviewed today!",
+      "start": 63.24,
+      "end": 71.8
+    },
+    {
+      "block": 8,
+      "text": "And it was made possible only because of your tutorials.",
+      "start": 71.98,
+      "end": 75.02
+    },
+    {
+      "block": 8,
+      "text": "Thank you!",
+      "start": 75.2,
+      "end": 76.56
+    },
+    {
+      "block": 9,
+      "text": "Code Firefox statistics",
+      "start": 76.74,
+      "end": 79.06
+    },
+    {
+      "block": 10,
+      "text": "The site has not been promoted yet, but it already has:",
+      "start": 79.24,
+      "end": 82.68
+    },
+    {
+      "block": 11,
+      "text": "~46,000 unique visits since it was released on October 30, 2013",
+      "start": 82.86,
+      "end": 87.98
+    },
+    {
+      "block": 12,
+      "text": "~10,000 full video views across the 53 videos",
+      "start": 88.16,
+      "end": 92.16
+    },
+    {
+      "block": 13,
+      "text": "Most functionality is available without accounts, but there are still over 110 Code Firefox accounts and 35 YouTube subscribers.",
+      "start": 92.34,
+      "end": 100.26
+    },
+    {
+      "block": 13,
+      "text": "Most of these accounts are new Bugzilla users as well and several have patches.",
+      "start": 100.44,
+      "end": 105.0
+    },
+    {
+      "block": 14,
+      "text": "What has Code Firefox accomplished?",
+      "start": 105.18,
+      "end": 107.66
+    },
+    {
+      "block": 15,
+      "text": "51 videos, 3 exercises focused mostly on on-boarding new Firefox developers Videos are captioned Ability to track watched videos and completed exercises when logged in Exercise framework that parses code and gives immediate feedback and experience Videos and Exercises are accessible and searchable through tags",
+      "start": 107.84,
+      "end": 124.48
+    },
+    {
+      "block": 16,
+      "text": "Where is the Code Firefox site going? (Code Firefox Goals)",
+      "start": 124.66,
+      "end": 128.58
+    },
+    {
+      "block": 17,
+      "text": "Opening up the ability to post videos to other people Ability to create different \u201cOutline tracks\u201d, for example, a QA track.",
+      "start": 128.76,
+      "end": 135.96
+    },
+    {
+      "block": 17,
+      "text": "More video and exercise content being added, initially for Firefox OS and Desktop Integrate with Mozilla Open Badges Working more closely with Student Ambassadors Implement a point system Interoperability with Mozillians in creative ways Implementing hints for exercises Other goals",
+      "start": 136.14,
+      "end": 150.94
+    },
+    {
+      "block": 18,
+      "text": "Highlights of benefits gained by Mozilla from the site",
+      "start": 151.12,
+      "end": 154.24
+    },
+    {
+      "block": 19,
+      "text": "Brings in new contributors Retains new and existing contributors Sharpens skills of existing members of our community Code Firefox uses and promotes Persona Code Firefox will use and promotes Open Badges Will train employees with advanced skills with advanced tracks",
+      "start": 154.42,
+      "end": 169.22
+    },
+    {
+      "block": 20,
+      "text": "Media coverage of Code Firefox so far",
+      "start": 169.4,
+      "end": 172.28
+    },
+    {
+      "block": 21,
+      "text": "Some people have taken the time to write about Code Firefox:",
+      "start": 172.46,
+      "end": 175.74
+    },
+    {
+      "block": 22,
+      "text": "GigaOM: Mozilla developer creates curriculum to on-board new contributors to Firefox by Lauren Hockenson",
+      "start": 175.92,
+      "end": 182.56
+    },
+    {
+      "block": 23,
+      "text": "I Programmer: ABCs of Firefox Dev in Easy Videos by Ian Elliot",
+      "start": 182.74,
+      "end": 187.54
+    },
+    {
+      "block": 24,
+      "text": "Teaching people to think about code instead of acing a test by Christian Heilmann",
+      "start": 187.72,
+      "end": 192.04
+    },
+    {
+      "block": 25,
+      "text": "Very positive feedback from the software development community",
+      "start": 192.22,
+      "end": 195.82
+    },
+    {
+      "block": 26,
+      "text": "Hundreds of other tweets about Code Firefox",
+      "start": 196.0,
+      "end": 198.88
+    },
+    {
+      "block": 27,
+      "text": "What our community is saying",
+      "start": 199.06,
+      "end": 201.06
+    },
+    {
+      "block": 28,
+      "text": "Robert O\u2019Callahan (Distinguished Engineer): In all my years with Mozilla I\u2019ve never seen such an exciting effort to engage new Firefox contributors.",
+      "start": 201.24,
+      "end": 209.24
+    },
+    {
+      "block": 28,
+      "text": "Well done!",
+      "start": 209.42,
+      "end": 210.86
+    },
+    {
+      "block": 29,
+      "text": "Josh Matthews (Community Engagement Lead): To me, Code Firefox\u2019s value lies in the clear, forthright instruction provided, along with the bite-sized nature of the lessons, which provides a counterpoint to the existing long-winded and slightly overwhelming textual documentation.",
+      "start": 211.04,
+      "end": 225.84
+    },
+    {
+      "block": 29,
+      "text": "I have interacted with countless potential volunteers over the past several years, and there is a non-trivial segment of the population that immediately looks for instructional videos to aid in understanding.",
+      "start": 226.02,
+      "end": 236.02
+    },
+    {
+      "block": 29,
+      "text": "In addition, perhaps counter-intuitively, video explanations are often preferred by non-native English speakers as a visual reference to aid in comprehension, and I\u2019m often asked at events whether these exist for Firefox development.",
+      "start": 236.2,
+      "end": 248.36
+    },
+    {
+      "block": 30,
+      "text": "Chris Peterson (Engineering Program Manager): Facebook has its infamous bootcamp for new employees.",
+      "start": 248.54,
+      "end": 254.62
+    },
+    {
+      "block": 30,
+      "text": "Code Firefox should be required watching, end-to-end, for all new Mozilla engineers.",
+      "start": 254.8,
+      "end": 260.0
+    },
+    {
+      "block": 30,
+      "text": "Even non-engineers can benefit from the introductory videos.",
+      "start": 260.18,
+      "end": 263.7
+    },
+    {
+      "block": 30,
+      "text": "Given the positive community response and patches to prove it, Brian has shown that this e-learning format works.",
+      "start": 263.88,
+      "end": 270.04
+    },
+    {
+      "block": 30,
+      "text": "More than just lessons, Brian has built Code Firefox as a platform.",
+      "start": 270.22,
+      "end": 274.46
+    },
+    {
+      "block": 30,
+      "text": "I would love to see other Mozilla teams contribute videos for their feature areas.",
+      "start": 274.64,
+      "end": 278.96
+    },
+    {
+      "block": 30,
+      "text": "Even within Mozilla we have some technology silos that could learn from each other.",
+      "start": 279.14,
+      "end": 283.38
+    },
+    {
+      "block": 31,
+      "text": "Lukas Blakk (Senior Release Manager): Getting into Open Source contribution is not always a clear path.",
+      "start": 283.56,
+      "end": 289.64
+    },
+    {
+      "block": 31,
+      "text": "In my experience, it took me 4 different attempts (MDN, Sumo, QA, AMO) before I found my path for a deeper dive and got \u2018hooked\u2019 on contributing to Mozilla.",
+      "start": 289.82,
+      "end": 300.38
+    },
+    {
+      "block": 31,
+      "text": "These videos and the technical mentorship they provide is already proving to be a valuable resource for engaging new coders and that is an area that can be hardest for a newcomer to break into alone since we are now such a legacy project.",
+      "start": 300.56,
+      "end": 312.08
+    },
+    {
+      "block": 31,
+      "text": "Fortunately Code Firefox is also a budding online community and that ensures no one is ever truly alone as they move up in their learning.Having someone (or several people) getting to focus more time on this particular pathway will ensure more robust community surrounds our software products and makes what we give back a product that is a reflection of that wider community.",
+      "start": 312.26,
+      "end": 331.22
+    },
+    {
+      "block": 31,
+      "text": "Win-win.",
+      "start": 331.4,
+      "end": 332.68
+    },
+    {
+      "block": 32,
+      "text": "Jared Wein (Firefox Engineer): Code Firefox is an amazing site that is full of detailed, finely-crafted videos that guide interested people from being Firefox users to Firefox contributors.",
+      "start": 332.86,
+      "end": 343.74
+    },
+    {
+      "block": 32,
+      "text": "It is an invaluable tool and one that I wished was around when I was just getting started contributing to Firefox.",
+      "start": 343.92,
+      "end": 349.44
+    },
+    {
+      "block": 32,
+      "text": "Projects the size of Firefox can be very daunting and scary to newcomers.",
+      "start": 349.62,
+      "end": 353.86
+    },
+    {
+      "block": 32,
+      "text": "The tutorials on the site bring a level of comfort not found in many other places, and walk people through steps at a pace that they can handle.",
+      "start": 354.04,
+      "end": 361.08
+    },
+    {
+      "block": 32,
+      "text": "Before they know it they are knee deep in a great community of people who are working together to make Firefox and the Internet a better place for everyone.",
+      "start": 361.26,
+      "end": 368.22
+    },
+    {
+      "block": 33,
+      "text": "David Boswell (Community Engagement Lead): Code Firefox and other efforts to help support coding contributors are crucial to growing and empowering new members of the Mozilla community.",
+      "start": 368.4,
+      "end": 378.16
+    },
+    {
+      "block": 34,
+      "text": "Kamil Jozwiak (QA Engineer): Code Firefox has helped me out tremendously while I was contributing to Mozilla.",
+      "start": 378.34,
+      "end": 384.82
+    },
+    {
+      "block": 34,
+      "text": "It helped me complete my first patch and it\u2019s an amazing resource to sharpen your skills.",
+      "start": 385.0,
+      "end": 389.72
+    },
+    {
+      "block": 34,
+      "text": "I\u2019m a Code Firefox lifer and visit the site on a daily basis to see if anything new has been added.",
+      "start": 389.9,
+      "end": 395.34
+    },
+    {
+      "block": 34,
+      "text": "I really believe in this project and I know from first hand experience how powerful this resource can be in helping people interested in the Mozilla mission.",
+      "start": 395.52,
+      "end": 402.88
+    },
+    {
+      "block": 35,
+      "text": "Rodrigo Silveira (Firefox Engineer): Getting started with contributing to any code base can be daunting.",
+      "start": 403.06,
+      "end": 409.22
+    },
+    {
+      "block": 35,
+      "text": "Code Firefox videos are presented in such a friendly way that makes contributing to Firefox a lot more approachable.",
+      "start": 409.4,
+      "end": 415.48
+    },
+    {
+      "block": 35,
+      "text": "Being able to learn through video at your own pace is convenient too, you can get from zero to landing patches much faster.",
+      "start": 415.66,
+      "end": 421.98
+    },
+    {
+      "block": 35,
+      "text": "I liked it so much I had to help translate it so more people could benefit.",
+      "start": 422.16,
+      "end": 426.16
+    },
+    {
+      "block": 36,
+      "text": "Marco Mucci (Engineering Program Manager): Part of wanting to make a difference is learning how to make one.",
+      "start": 426.34,
+      "end": 432.18
+    },
+    {
+      "block": 36,
+      "text": "Code Firefox is the tool of choice for learning how to contribute to Mozilla.",
+      "start": 432.36,
+      "end": 436.6
+    },
+    {
+      "block": 37,
+      "text": "Samuel Foster @codefirefox has grown into a great resource for lifting you over the learning curve involved in making firefox awesomer.",
+      "start": 436.78,
+      "end": 443.74
+    },
+    {
+      "block": 37,
+      "text": "Nice work.",
+      "start": 443.92,
+      "end": 445.36
+    },
+    {
+      "block": 38,
+      "text": "David Bolter: If you want to watch video tutorials on how to hack on Firefox, follow @codefirefox.",
+      "start": 445.54,
+      "end": 451.94
+    },
+    {
+      "block": 39,
+      "text": "Mark Finkle: The Module Owner and Becoming A Reviewer videos on @codefirefox are awesome: http://codefirefox.com/#reviewing-code",
+      "start": 452.12,
+      "end": 462.12
+    },
+    {
+      "block": 40,
+      "text": "Till Schneidereit: This really is fantastic - I wish I\u2019d had something like these videos when I started contributing.",
+      "start": 462.3,
+      "end": 468.22
+    },
+    {
+      "block": 41,
+      "text": "Margaret Leibovic: I know I\u2019m late to the party, but @codefirefox is seriously awesome.",
+      "start": 468.4,
+      "end": 473.68
+    },
+    {
+      "block": 41,
+      "text": "Great work by @brianbondy!",
+      "start": 473.86,
+      "end": 476.1
+    },
+    {
+      "block": 42,
+      "text": "Lucas Rocha: If you\u2019ve been considering contributing to Firefox, @codefirefox is definitely a good start.",
+      "start": 476.28,
+      "end": 482.68
+    },
+    {
+      "block": 42,
+      "text": "Big thanks @brianbondy! http://buff.ly/18LSSZZ",
+      "start": 482.86,
+      "end": 489.98
+    },
+    {
+      "block": 43,
+      "text": "Asa Dotzler: Mozillian @brianbondy has started publishing video tutorials on Firefox hacking. http://codefirefox.com/videos Follow @codefirefox for updates.",
+      "start": 490.16,
+      "end": 503.52
+    },
+    {
+      "block": 44,
+      "text": "Christian Heilmann: Superb framework to create code tests by @brianbondy https://github.com/bbondy",
+      "start": 503.7,
+      "end": 512.98
+    },
+    {
+      "block": 45,
+      "text": "Mozilla Pakistan: @codefirefox.com now supports accounts via @MozillaPersona You can track which videos you\u2019ve watched too - pic.twitter.com/I4EizTAzbk",
+      "start": 513.16,
+      "end": 523.88
+    },
+    {
+      "block": 46,
+      "text": "Mozilla India: Becoming a Mozilla contributor is now even more easy. http://codefirefox.com/ site aim to outline the process\u2026 http://fb.me/1ChAz9qPE",
+      "start": 524.06,
+      "end": 540.46
+    },
+    {
+      "block": 47,
+      "text": "Ian Elliot: Other open source projects could also benefit from the same sort of idea - are you listening Linus?",
+      "start": 540.64,
+      "end": 546.96
+    },
+    {
+      "block": 48,
+      "text": "Alessio Placitelli: Thank you @brianbondy for both http://codefirefox.com and https://www.brianbondy.com/mozilla/cheatsheet/ !",
+      "start": 547.14,
+      "end": 561.06
+    },
+    {
+      "block": 48,
+      "text": "Very helpful for new #Firefox contributors!",
+      "start": 561.24,
+      "end": 564.12
+    },
+    {
+      "block": 49,
+      "text": "Jennie Rose Halperin: http://codefirefox.com/ wanna get deep with your code? totally digging this @mozilla",
+      "start": 564.3,
+      "end": 573.02
+    },
+    {
+      "block": 50,
+      "text": "Azeem Arshad: codefirefox.com/ these videos are awesome. setting up firefox dev setup is pretty easy",
+      "start": 573.2,
+      "end": 580.24
+    },
+    {
+      "block": 51,
+      "text": "Rodrigo Ludgero: Do the right thing.",
+      "start": 580.42,
+      "end": 583.14
+    },
+    {
+      "block": 51,
+      "text": "Some lessons to be learned. http://codefirefox.com/ I thought it was a great initiative. #codefirefox @codefirefox",
+      "start": 583.32,
+      "end": 593.16
+    },
+    {
+      "block": 52,
+      "text": "serge2k: This is awesome, and I wish more projects would do it.",
+      "start": 593.34,
+      "end": 597.5
+    },
+    {
+      "block": 53,
+      "text": "iamleppert: +1 for whoever\u2019s idea this was.",
+      "start": 597.68,
+      "end": 601.12
+    },
+    {
+      "block": 53,
+      "text": "We need more guides like this that ask that answer the basic questions on just dev process and work flows.",
+      "start": 601.3,
+      "end": 606.98
+    },
+    {
+      "block": 53,
+      "text": "Let\u2019s make it easier for people to contribute!",
+      "start": 607.16,
+      "end": 609.8
+    },
+    {
+      "block": 54,
+      "text": "Thaddee Tyl: @FremyCompany I agree.",
+      "start": 609.98,
+      "end": 612.94
+    },
+    {
+      "block": 54,
+      "text": "I think the http://codefirefox.com/ project is our best bet.",
+      "start": 613.12,
+      "end": 619.6
+    },
+    {
+      "block": 54,
+      "text": "Not sure if Chrome could have that (let alone Opera, IE\u2026)",
+      "start": 619.78,
+      "end": 623.54
+    },
+    {
+      "block": 55,
+      "text": "Michael Mahemoff: Encouraging open source contributions, done right by Moz at http://CodeFirefox.com",
+      "start": 623.72,
+      "end": 632.28
+    },
+    {
+      "block": 56,
+      "text": "\u0441\u0443\u043f\u0435\u0440\u0441\u043e\u043b\u044d: (now a serious tweet) If you\u2019re interested in contributing to Firefox, this is a fantastic site: http://codefirefox.com",
+      "start": 632.46,
+      "end": 642.22
+    },
+    {
+      "block": 57,
+      "text": "Ashley Myers: OMG.",
+      "start": 642.4,
+      "end": 644.8
+    },
+    {
+      "block": 57,
+      "text": "This is so awesome.",
+      "start": 644.98,
+      "end": 646.82
+    },
+    {
+      "block": 57,
+      "text": "Videos on how the heck to actually contribute to Firefox: http://codefirefox.com cc/ @codefirefox",
+      "start": 647.0,
+      "end": 655.64
+    },
+    {
+      "block": 58,
+      "text": "Mike Rogers: Decided over my Xmas break I\u2019m going to try and contribute to Firefox somehow http://codefirefox.com",
+      "start": 655.82,
+      "end": 664.7
+    },
+    {
+      "block": 59,
+      "text": "Dongie Agnir: @codefirefox Just wanted to let you know your website is an excellent resource!",
+      "start": 664.88,
+      "end": 670.24
+    },
+    {
+      "block": 59,
+      "text": "Please keep up the great work!",
+      "start": 670.42,
+      "end": 672.42
+    },
+    {
+      "block": 60,
+      "text": "Brian Graham: This is awesome.",
+      "start": 672.6,
+      "end": 675.08
+    },
+    {
+      "block": 60,
+      "text": "I wish this existed when I wrote my first #FireFox patch.",
+      "start": 675.26,
+      "end": 678.78
+    },
+    {
+      "block": 61,
+      "text": "Swarnava Sengupta: Thank you @codefirefox for such a great collection!",
+      "start": 678.96,
+      "end": 683.44
+    },
+    {
+      "block": 61,
+      "text": "Hope it will produce more developer all around the world! :)",
+      "start": 683.62,
+      "end": 686.74
+    },
+    {
+      "block": 62,
+      "text": "Mike Evans: @angelinamagnum I like the style of @codefirefox, allows someone to get up to speed in an easy to digest manner. so more of that please :)",
+      "start": 686.92,
+      "end": 695.32
+    },
+    {
+      "block": 63,
+      "text": "Michael Kohler: That\u2019s how I did my first patches!",
+      "start": 695.5,
+      "end": 698.78
+    },
+    {
+      "block": 63,
+      "text": "RT @codefirefox: [\u2026]feature from start to finish, without knowing the code",
+      "start": 698.96,
+      "end": 703.68
+    },
+    {
+      "block": 64,
+      "text": "Hundreds of other tweets about Code Firefox",
+      "start": 703.86,
+      "end": 706.74
+    },
+    {
+      "block": 65,
+      "text": "Would you like to create Code Firefox videos?",
+      "start": 706.92,
+      "end": 709.72
+    },
+    {
+      "block": 66,
+      "text": "Please contact me at bbondy[at]gmail.com if you\u2019d like to make a series of videos on Code Firefox for your area of expertise.",
+      "start": 709.9,
+      "end": 717.1
+    }
+  ]
+}

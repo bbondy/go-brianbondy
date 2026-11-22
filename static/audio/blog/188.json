@@ -1,0 +1,879 @@
+{
+  "post": 188,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "97c5e5547181c658f42f148ebd52d12b8be08e9a6434f678d2a7cb197602a572",
+  "audioSHA256": "e184ab1b72efe01938858050696151fde7a3d4069816200654a361cd5bed5c21",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "Suddenly my body was dangling with only 1 arm holding the narrow ledge of a mountain cliff in the rainforest.",
+      "start": 0.0,
+      "end": 5.6
+    },
+    {
+      "block": 0,
+      "text": "I grabbed onto something, probably a root on the trail and skinned my index finger as I tried to support my body weight.",
+      "start": 5.78,
+      "end": 11.7
+    },
+    {
+      "block": 0,
+      "text": "I tried to pull myself up and couldn\u2019t.",
+      "start": 11.88,
+      "end": 14.2
+    },
+    {
+      "block": 0,
+      "text": "Someone running behind me grabbed my arm and pulled me up.",
+      "start": 14.38,
+      "end": 17.42
+    },
+    {
+      "block": 0,
+      "text": "With my heart beating fast, I quickly got to my feet and continued to run.",
+      "start": 17.6,
+      "end": 21.92
+    },
+    {
+      "block": 0,
+      "text": "It continued to beat fast for the next 10 minutes.",
+      "start": 22.1,
+      "end": 24.98
+    },
+    {
+      "block": 0,
+      "text": "To be fair, I wouldn\u2019t have fallen to my death.",
+      "start": 25.16,
+      "end": 27.96
+    },
+    {
+      "block": 0,
+      "text": "But I would have likely gotten hurt, gotten stopped by trees or brush, and had a hard time getting back up a very steep incline.",
+      "start": 28.14,
+      "end": 34.86
+    },
+    {
+      "block": 0,
+      "text": "I made a mental note to always go closer to the side of the mountain and not the ledge from that point on even when it was more difficult.",
+      "start": 35.04,
+      "end": 41.36
+    },
+    {
+      "block": 1,
+      "text": "But that was 30 minutes into the start of my race while it was still dark out on race morning.",
+      "start": 41.54,
+      "end": 46.34
+    },
+    {
+      "block": 1,
+      "text": "Let\u2019s rewind\u2026",
+      "start": 46.52,
+      "end": 48.04
+    },
+    {
+      "block": 2,
+      "text": "HURT 100 has a lottery based system and only 135 people per year get in.",
+      "start": 48.22,
+      "end": 53.66
+    },
+    {
+      "block": 2,
+      "text": "It\u2019s known as one of the hardest 100mi and it\u2019s been the #1 race on my bucket list for years.",
+      "start": 53.84,
+      "end": 59.2
+    },
+    {
+      "block": 2,
+      "text": "For the past 4 years I had done the 8 hour trail work requirement, which is only required if you make it in, but because of the timing of the lottery and work available, logistically had to happen before the lottery for me.",
+      "start": 59.38,
+      "end": 70.66
+    },
+    {
+      "block": 2,
+      "text": "Each year I did 8 hours of trail work proceeding the Ode to Laz race in Holly Michigan with my twin boys who also needed volunteer hours for school.",
+      "start": 70.84,
+      "end": 78.36
+    },
+    {
+      "block": 2,
+      "text": "I was one of the final names selected for the lottery in the 4th year.",
+      "start": 78.54,
+      "end": 82.22
+    },
+    {
+      "block": 3,
+      "text": "HURT is an acronym for the Hawaiian Ultra Running Team and it was the 25th anniversary of the race but 24th event because there was no race during the COVID year.",
+      "start": 82.4,
+      "end": 91.44
+    },
+    {
+      "block": 3,
+      "text": "HURT is part of ultra running lore and their story is told beautifully by the Rooted documentary.",
+      "start": 91.62,
+      "end": 96.66
+    },
+    {
+      "block": 3,
+      "text": "The race honors Big John who passed away.",
+      "start": 96.84,
+      "end": 99.56
+    },
+    {
+      "block": 3,
+      "text": "The race wouldn\u2019t exist without him and they honor him by reserving bib#1 for him each year.",
+      "start": 99.74,
+      "end": 104.86
+    },
+    {
+      "block": 3,
+      "text": "His ashes are also on the course and you can feel the emotion in others about just how much he meant to everyone when he is mentioned.",
+      "start": 105.04,
+      "end": 111.28
+    },
+    {
+      "block": 4,
+      "text": "HURT 100 begins at the Hawaii nature center which is surrounded by the Tantalus mountain range, valleys and ridges.",
+      "start": 111.46,
+      "end": 117.86
+    },
+    {
+      "block": 4,
+      "text": "The race starts with a long steep ascent.",
+      "start": 118.04,
+      "end": 120.6
+    },
+    {
+      "block": 4,
+      "text": "It consists of a 5 lap, 20mi course.",
+      "start": 120.78,
+      "end": 124.22
+    },
+    {
+      "block": 4,
+      "text": "Each of the 5 laps consist of 3 steep climbs and descents totalling 24,500\u2019 of elevation gain and loss.",
+      "start": 124.4,
+      "end": 131.44
+    },
+    {
+      "block": 4,
+      "text": "There are 3 well stocked aid stations evenly spaced out at the start of each climb.",
+      "start": 131.62,
+      "end": 135.94
+    },
+    {
+      "block": 4,
+      "text": "The aid stations are super fun and high energy, one is completely themed as pirates.",
+      "start": 136.12,
+      "end": 141.16
+    },
+    {
+      "block": 4,
+      "text": "The volunteers are amazing and are like a pit crew helping you get in and out as fast as possible.",
+      "start": 141.34,
+      "end": 146.22
+    },
+    {
+      "block": 4,
+      "text": "This race shirt captures the elevation profile.",
+      "start": 146.4,
+      "end": 149.28
+    },
+    {
+      "block": 5,
+      "text": "The course itself is hard to describe, but I\u2019ve never seen anything like it.",
+      "start": 149.46,
+      "end": 153.62
+    },
+    {
+      "block": 5,
+      "text": "You run through bamboo forests that crackle loudly from the wind.",
+      "start": 153.8,
+      "end": 157.32
+    },
+    {
+      "block": 5,
+      "text": "Surrounded by dense vegetation with sounds of birds chirping.",
+      "start": 157.5,
+      "end": 160.94
+    },
+    {
+      "block": 5,
+      "text": "The most gnarly tree roots are spread almost everywhere throughout the course.",
+      "start": 161.12,
+      "end": 164.96
+    },
+    {
+      "block": 5,
+      "text": "You\u2019re often stepping on top, or down from rocks and roots waist high and sometimes over your head.",
+      "start": 165.14,
+      "end": 170.5
+    },
+    {
+      "block": 5,
+      "text": "The descents are more difficult than the climbs and I think I must have fallen nearly 50 times in total for the duration of the run.",
+      "start": 170.68,
+      "end": 177.08
+    },
+    {
+      "block": 5,
+      "text": "Steep ascent climbs sometimes last over 2mi without relief, and then it keeps going uphill.",
+      "start": 177.26,
+      "end": 182.78
+    },
+    {
+      "block": 5,
+      "text": "It\u2019s maximally what runners mean when they say a course is technical.",
+      "start": 182.96,
+      "end": 186.48
+    },
+    {
+      "block": 6,
+      "text": "Some of the most beautiful views sometimes peak through the thick vegetation.",
+      "start": 186.66,
+      "end": 190.66
+    },
+    {
+      "block": 6,
+      "text": "And the canopy from the vegetation above often blocks the sun and the GPS signal.",
+      "start": 190.84,
+      "end": 195.48
+    },
+    {
+      "block": 7,
+      "text": "I told everyone I wasn\u2019t going to be checking messages and answering calls this run and that was definitely the right call.",
+      "start": 195.66,
+      "end": 201.34
+    },
+    {
+      "block": 7,
+      "text": "The course being so technical meant it needed my full attention at all times.",
+      "start": 201.52,
+      "end": 205.68
+    },
+    {
+      "block": 7,
+      "text": "And even my full attention wasn\u2019t enough as I stumbled countless times.",
+      "start": 205.86,
+      "end": 209.86
+    },
+    {
+      "block": 8,
+      "text": "I only got a couple of pictures so most pictures included here are from past races.",
+      "start": 210.04,
+      "end": 214.84
+    },
+    {
+      "block": 8,
+      "text": "Before the race I thought maybe sections like this were few and far between, but this really doesn\u2019t even capture the type of things you see out there.",
+      "start": 215.02,
+      "end": 221.9
+    },
+    {
+      "block": 8,
+      "text": "And to be completely honest, I didn\u2019t get pictures of the worst parts.",
+      "start": 222.08,
+      "end": 225.76
+    },
+    {
+      "block": 9,
+      "text": "Thinking hard about why I wanted to do this race is twofold.",
+      "start": 225.94,
+      "end": 229.38
+    },
+    {
+      "block": 9,
+      "text": "I wanted to take part and immerse myself in the ultra running lore and I also wanted to see if I was up to the challenge.",
+      "start": 229.56,
+      "end": 235.32
+    },
+    {
+      "block": 9,
+      "text": "Spoiler alert, after 80mi I found out that I wasn\u2019t.",
+      "start": 235.5,
+      "end": 239.18
+    },
+    {
+      "block": 9,
+      "text": "Back home I train on what I have available.",
+      "start": 239.36,
+      "end": 241.92
+    },
+    {
+      "block": 9,
+      "text": "Which is hill repeats of a 90\u2019 groomed hill, weight training, and the stair stepper at the gym.",
+      "start": 242.1,
+      "end": 247.46
+    },
+    {
+      "block": 9,
+      "text": "There just isn\u2019t a way to train for it sufficiently.",
+      "start": 247.64,
+      "end": 250.44
+    },
+    {
+      "block": 9,
+      "text": "That\u2019s not to say it was impossible.",
+      "start": 250.62,
+      "end": 252.78
+    },
+    {
+      "block": 9,
+      "text": "If I was stronger, I would have finished.",
+      "start": 252.96,
+      "end": 255.52
+    },
+    {
+      "block": 9,
+      "text": "I just didn\u2019t train hard enough.",
+      "start": 255.7,
+      "end": 257.7
+    },
+    {
+      "block": 9,
+      "text": "I have no regrets though and got the experience I was looking for.",
+      "start": 257.88,
+      "end": 261.4
+    },
+    {
+      "block": 10,
+      "text": "My first lap was strong at 5h20min, by my second lap I was right at 12 hours, averaging 6h/loop, still doing great.",
+      "start": 261.58,
+      "end": 269.26
+    },
+    {
+      "block": 10,
+      "text": "I progressively got a lot slower after that.",
+      "start": 269.44,
+      "end": 272.24
+    },
+    {
+      "block": 10,
+      "text": "I had hamstring, calf, and quad spasms from the first lap on.",
+      "start": 272.42,
+      "end": 276.58
+    },
+    {
+      "block": 10,
+      "text": "I think my body was in shock.",
+      "start": 276.76,
+      "end": 278.84
+    },
+    {
+      "block": 10,
+      "text": "As that happened, salt pills made it go back away.",
+      "start": 279.02,
+      "end": 282.3
+    },
+    {
+      "block": 11,
+      "text": "The course was marked well with white, green and orange markings for each of the 3 legs.",
+      "start": 282.48,
+      "end": 287.36
+    },
+    {
+      "block": 11,
+      "text": "Blue markings for the turns you shouldn\u2019t take.",
+      "start": 287.54,
+      "end": 290.18
+    },
+    {
+      "block": 11,
+      "text": "I was still glad I had the GPS map loaded on my watch and the Gaia app though.",
+      "start": 290.36,
+      "end": 294.68
+    },
+    {
+      "block": 12,
+      "text": "There was only 1 significant water crossing but I was able to carefully rock skip to make it over dry.",
+      "start": 294.86,
+      "end": 300.62
+    },
+    {
+      "block": 12,
+      "text": "Several people did lose balance and got their feet wet though.",
+      "start": 300.8,
+      "end": 304.08
+    },
+    {
+      "block": 12,
+      "text": "There were puddles and mud throughout the course though and the morning dew was slippery.",
+      "start": 304.26,
+      "end": 308.58
+    },
+    {
+      "block": 13,
+      "text": "Other than my near dive off the cliff described at the start of this post, I stayed safe for the rest of the time.",
+      "start": 308.76,
+      "end": 314.36
+    },
+    {
+      "block": 13,
+      "text": "I turned each of my ankles painfully more than a half dozen times but nothing too serious.",
+      "start": 314.54,
+      "end": 319.66
+    },
+    {
+      "block": 13,
+      "text": "Post run my whole body is sore including my chest, shoulders, upper and lower back, hands, and forearms, I guess from the climbing and pole use.",
+      "start": 319.84,
+      "end": 328.4
+    },
+    {
+      "block": 13,
+      "text": "I had no chafing so that problem is completely figured out.",
+      "start": 328.58,
+      "end": 331.94
+    },
+    {
+      "block": 13,
+      "text": "Baggies of Salty Britches turned inside out to apply and flipped back afterwards and sealed every couple hours is a clean and good way to keep chafing under control.",
+      "start": 332.12,
+      "end": 340.12
+    },
+    {
+      "block": 14,
+      "text": "Stomach issues appeared but were quickly taken care of with Gravol ginger pills and Pepcid AC.",
+      "start": 340.3,
+      "end": 345.74
+    },
+    {
+      "block": 15,
+      "text": "Taping my feet definitely helped but I still had several blisters.",
+      "start": 345.92,
+      "end": 349.84
+    },
+    {
+      "block": 15,
+      "text": "Engo patches applied in my shoes also helped.",
+      "start": 350.02,
+      "end": 352.98
+    },
+    {
+      "block": 15,
+      "text": "The tape stayed on thanks to Tincture of Benzoin applied before the Rock tape.",
+      "start": 353.16,
+      "end": 357.24
+    },
+    {
+      "block": 15,
+      "text": "Injinji socks on top.",
+      "start": 357.42,
+      "end": 359.58
+    },
+    {
+      "block": 15,
+      "text": "I don\u2019t think there\u2019s anything to improve on in that area other than just being more conditioned for the terrain.",
+      "start": 359.76,
+      "end": 364.96
+    },
+    {
+      "block": 16,
+      "text": "I ran into pole drama again in this race.",
+      "start": 365.14,
+      "end": 367.86
+    },
+    {
+      "block": 16,
+      "text": "At the start of my 3rd loop during an uphill climb, without even falling, my Leki pole just snapped.",
+      "start": 368.04,
+      "end": 373.88
+    },
+    {
+      "block": 16,
+      "text": "Most people use these poles but they failed me at 2 races now and I\u2019m going to switch back to old reliable Black Diamond poles which took me through my first Cocodona race without issues.",
+      "start": 374.06,
+      "end": 383.58
+    },
+    {
+      "block": 16,
+      "text": "I did bring backup poles but I couldn\u2019t remember which of the 3 drop bags had them.",
+      "start": 383.76,
+      "end": 388.4
+    },
+    {
+      "block": 16,
+      "text": "At the first aid station I couldn\u2019t find them, same at the 2nd, and same at the third.",
+      "start": 388.58,
+      "end": 393.3
+    },
+    {
+      "block": 16,
+      "text": "After my third loop I found a local named Eric to lend me his poles.",
+      "start": 393.48,
+      "end": 397.48
+    },
+    {
+      "block": 16,
+      "text": "They were of the same type, but 3 inches too long, heavier, and were stuck in a non collapsible state.",
+      "start": 397.66,
+      "end": 403.74
+    },
+    {
+      "block": 16,
+      "text": "I found out during my 4th loop that I overlooked my spare set of poles at the first aid station so I swapped them there.",
+      "start": 403.92,
+      "end": 410.0
+    },
+    {
+      "block": 16,
+      "text": "It was a major fail that I didn\u2019t have my poles during that 3rd loop.",
+      "start": 410.18,
+      "end": 413.86
+    },
+    {
+      "block": 16,
+      "text": "I would have been a bit faster and had a bit of an easier time.",
+      "start": 414.04,
+      "end": 417.24
+    },
+    {
+      "block": 17,
+      "text": "Most of the race my head was calculating if I could make the cut-offs, I kept repeating the mantra \u201cpatience and grit\u201d to myself to help me stay focused.",
+      "start": 417.42,
+      "end": 425.02
+    },
+    {
+      "block": 17,
+      "text": "I kept visualizing myself ringing the bell and kissing the sign which is the \u201cofficial\u201d and \u201crequired\u201d way to finish the race.",
+      "start": 425.2,
+      "end": 431.28
+    },
+    {
+      "block": 18,
+      "text": "I hit a major low on the 4th lap in the 13th hour of darkness.",
+      "start": 431.46,
+      "end": 435.22
+    },
+    {
+      "block": 18,
+      "text": "On the last aid station (Nu\u2019uanu) of my 4th lap I entered the aid station 100% convinced that my race was over.",
+      "start": 435.4,
+      "end": 442.36
+    },
+    {
+      "block": 18,
+      "text": "I had planned to order an uber to pick me up at the aid station after dropping out.",
+      "start": 442.54,
+      "end": 446.7
+    },
+    {
+      "block": 18,
+      "text": "I tried to quit (a first for me) but the aid station captain Freddy Halms wasn\u2019t having it.",
+      "start": 446.88,
+      "end": 452.16
+    },
+    {
+      "block": 18,
+      "text": "He was part of the Rooted video and with his strong accent the conversation went something like this:",
+      "start": 452.34,
+      "end": 457.14
+    },
+    {
+      "block": 19,
+      "text": "Me: I\u2019m dropping out.",
+      "start": 457.32,
+      "end": 459.56
+    },
+    {
+      "block": 20,
+      "text": "Freddy: No, no, no.",
+      "start": 459.74,
+      "end": 461.82
+    },
+    {
+      "block": 20,
+      "text": "What\u2019s wrong?",
+      "start": 462.0,
+      "end": 463.44
+    },
+    {
+      "block": 20,
+      "text": "Sit down and we\u2019ll talk about it and take care of it.",
+      "start": 463.62,
+      "end": 466.42
+    },
+    {
+      "block": 21,
+      "text": "Me: My legs keep giving out and I keep falling.",
+      "start": 466.6,
+      "end": 469.72
+    },
+    {
+      "block": 21,
+      "text": "They have nothing left.",
+      "start": 469.9,
+      "end": 471.74
+    },
+    {
+      "block": 21,
+      "text": "I\u2019ve slowed to worse than 20min/km.",
+      "start": 471.92,
+      "end": 474.96
+    },
+    {
+      "block": 22,
+      "text": "Freddy: That was yesterday, the sun is coming back up.",
+      "start": 475.14,
+      "end": 478.74
+    },
+    {
+      "block": 22,
+      "text": "You\u2019ll feel better now and it\u2019s a new day.",
+      "start": 478.92,
+      "end": 481.48
+    },
+    {
+      "block": 22,
+      "text": "You\u2019ll regret that forever.",
+      "start": 481.66,
+      "end": 483.66
+    },
+    {
+      "block": 22,
+      "text": "Don\u2019t do that.",
+      "start": 483.84,
+      "end": 485.36
+    },
+    {
+      "block": 23,
+      "text": "Me: It\u2019ll take me 5 hours for the next 12km section.",
+      "start": 485.54,
+      "end": 489.86
+    },
+    {
+      "block": 24,
+      "text": "Freddy: No talking negatively, it won\u2019t take you 5 hours, maybe 3 hours or 3.5 hours.",
+      "start": 490.04,
+      "end": 496.44
+    },
+    {
+      "block": 24,
+      "text": "We\u2019re going to get you back out.",
+      "start": 496.62,
+      "end": 498.46
+    },
+    {
+      "block": 24,
+      "text": "I\u2019m going to find you a pacer for the next lap.",
+      "start": 498.64,
+      "end": 501.2
+    },
+    {
+      "block": 25,
+      "text": "The other people at the aid station were also not hearing my words, they kept saying things like \u201cwhen you go back out\u2026\u201d and I couldn\u2019t understand why they weren\u2019t on the same page as me!",
+      "start": 501.38,
+      "end": 510.5
+    },
+    {
+      "block": 25,
+      "text": "This went on with me trying to quit and them not letting me for several minutes until I had 2 cups of soup, a dixie cup smoothie and no choice but to go back out.",
+      "start": 510.68,
+      "end": 519.16
+    },
+    {
+      "block": 25,
+      "text": "Freddy and his team genuinely cared and they were right, I had no good reason to quit and the sun had come back out making me feel refreshed.",
+      "start": 519.34,
+      "end": 526.22
+    },
+    {
+      "block": 25,
+      "text": "To his word he found me a pacer named Andy who saw me up the climb on the 4th lap and met me at the start of the 5th loop.",
+      "start": 526.4,
+      "end": 532.8
+    },
+    {
+      "block": 25,
+      "text": "I\u2019ll try to make a note of always re-evaluating in the daylight in the future.",
+      "start": 532.98,
+      "end": 536.9
+    },
+    {
+      "block": 25,
+      "text": "It really is like a light switch and can turn everything around.",
+      "start": 537.08,
+      "end": 540.44
+    },
+    {
+      "block": 26,
+      "text": "I promised my newly found pacer Andy (who I believe is also a core part of the HURT group) I would consider starting the 5th and final lap if I arrived before 10am.",
+      "start": 540.62,
+      "end": 549.42
+    },
+    {
+      "block": 26,
+      "text": "I arrived closer to 10:30am which meant I\u2019d need to do a lap in 7.4h including aid station times.",
+      "start": 549.6,
+      "end": 556.48
+    },
+    {
+      "block": 26,
+      "text": "I knew I didn\u2019t have it in me.",
+      "start": 556.66,
+      "end": 558.58
+    },
+    {
+      "block": 26,
+      "text": "My pee during that last part of the 4th lap had also gone from pink to red and I was dehydrated.",
+      "start": 558.76,
+      "end": 563.96
+    },
+    {
+      "block": 26,
+      "text": "I didn\u2019t find it hard to admit defeat and after sharing about my pee, Andy agreed it was right for me to call it.",
+      "start": 564.14,
+      "end": 569.98
+    },
+    {
+      "block": 26,
+      "text": "Hydrating for several hours after the race and watching people finish got me and my pee back to normal.",
+      "start": 570.16,
+      "end": 575.36
+    },
+    {
+      "block": 27,
+      "text": "Not a picture of me post-race:",
+      "start": 575.54,
+      "end": 577.7
+    },
+    {
+      "block": 28,
+      "text": "This red urine problem affected me on 2 other runs before: Persistence Backyard Ultra 2024 and FAwR 2024, but surprisingly neither time at Cocodona.",
+      "start": 577.88,
+      "end": 588.04
+    },
+    {
+      "block": 28,
+      "text": "Each time I figured (and I still think it\u2019s the case) that I need to hydrate more.",
+      "start": 588.22,
+      "end": 592.78
+    },
+    {
+      "block": 28,
+      "text": "I consumed two 800ml bottles between each aid station at HURT and that felt like it was perfect, but I think I need to over hydrate in the future.",
+      "start": 592.96,
+      "end": 600.96
+    },
+    {
+      "block": 28,
+      "text": "I was born with only 1 kidney so it does freak me out when I\u2019m in a situation that puts stress on it.",
+      "start": 601.14,
+      "end": 606.34
+    },
+    {
+      "block": 28,
+      "text": "I\u2019m going to try and get a referral to a nephrologist.",
+      "start": 606.52,
+      "end": 609.32
+    },
+    {
+      "block": 29,
+      "text": "Here\u2019s the worst of the blisters, I\u2019ve had a LOT worse the first time at Cocodona.",
+      "start": 609.5,
+      "end": 613.9
+    },
+    {
+      "block": 30,
+      "text": "So that was it, a Did Not Finish (DNF).",
+      "start": 614.08,
+      "end": 617.28
+    },
+    {
+      "block": 30,
+      "text": "It wouldn\u2019t be interesting to me if I was doing something I knew I could do.",
+      "start": 617.46,
+      "end": 620.9
+    },
+    {
+      "block": 30,
+      "text": "Not always having success is part of the process and something I\u2019ve come to terms with.",
+      "start": 621.08,
+      "end": 625.24
+    },
+    {
+      "block": 30,
+      "text": "You simply can\u2019t progress without pushing yourself to failure.",
+      "start": 625.42,
+      "end": 628.78
+    },
+    {
+      "block": 30,
+      "text": "I didn\u2019t come home with a buckle, but I\u2019ve crossed this off my bucket list and had the experience I was craving.",
+      "start": 628.96,
+      "end": 634.32
+    },
+    {
+      "block": 31,
+      "text": "I said during and after the race that I would never be back.",
+      "start": 634.5,
+      "end": 637.54
+    },
+    {
+      "block": 31,
+      "text": "My wife Shannon said she doesn\u2019t believe me.",
+      "start": 637.72,
+      "end": 640.2
+    },
+    {
+      "block": 31,
+      "text": "This race was too hard for me and my limit was found.",
+      "start": 640.38,
+      "end": 643.66
+    },
+    {
+      "block": 31,
+      "text": "I\u2019ve already softened that stance, I\u2019d do it again, so my wife knows me better than I know myself.",
+      "start": 643.84,
+      "end": 649.2
+    },
+    {
+      "block": 31,
+      "text": "But I also don\u2019t feel like I need to come back.",
+      "start": 649.38,
+      "end": 651.94
+    },
+    {
+      "block": 31,
+      "text": "If I ever do, I\u2019d want a pacer and crew next time.",
+      "start": 652.12,
+      "end": 655.4
+    },
+    {
+      "block": 32,
+      "text": "Post race I had an unquenchable hunger, I ate an avocado sandwich, a hot dog, a popsicle, chips, a smoothie, fries, a pickle, and some veggie broth.",
+      "start": 655.58,
+      "end": 665.26
+    },
+    {
+      "block": 32,
+      "text": "Then when I got back to the hotel I ordered a bunch of thai food and ate most of that too.",
+      "start": 665.44,
+      "end": 670.32
+    },
+    {
+      "block": 33,
+      "text": "Thank you to HURT for letting me be part of the HURT Ohana.",
+      "start": 670.5,
+      "end": 673.54
+    },
+    {
+      "block": 33,
+      "text": "The race was administered and run magically and professionally.",
+      "start": 673.72,
+      "end": 677.24
+    },
+    {
+      "block": 33,
+      "text": "My heart is full.",
+      "start": 677.42,
+      "end": 679.1
+    },
+    {
+      "block": 33,
+      "text": "Thank you to my family and wife who selflessly allows me to be myself and continue to explore this part of myself.",
+      "start": 679.28,
+      "end": 685.28
+    }
+  ]
+}

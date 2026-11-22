@@ -1,0 +1,123 @@
+{
+  "post": 112,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "254eb68a3df548146e8eedbf6080041abd6762a0c99941266df1b44af5288412",
+  "audioSHA256": "8622a71ebc2b1becab47dd93d26db321907c8b7079f7be46a4c6fe81d800fe93",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "\u2605\u2605\u2605\u2606\u2606 (3 stars out of 5)",
+      "start": 0.0,
+      "end": 3.6
+    },
+    {
+      "block": 1,
+      "text": "The book 97 Things Every Programmer Should Know was edited by Kevlin Henney and has no single author.",
+      "start": 3.78,
+      "end": 9.94
+    },
+    {
+      "block": 1,
+      "text": "Instead of a typical book with one, two or three authors, this book has almost 1 author per topic covered.",
+      "start": 10.12,
+      "end": 16.36
+    },
+    {
+      "block": 1,
+      "text": "The book does re-use some authors across topics, so naturally there are not quite 97 contributors.",
+      "start": 16.54,
+      "end": 22.22
+    },
+    {
+      "block": 2,
+      "text": "Each of the 97 chapters in the book covers one topic, each topic being 2 pages long.",
+      "start": 22.4,
+      "end": 27.92
+    },
+    {
+      "block": 2,
+      "text": "The depth of each topic would be equivalent to what you would find on a blog post, or a well written StackOverflow or programmers.stackexchange.com answer.",
+      "start": 28.1,
+      "end": 36.5
+    },
+    {
+      "block": 3,
+      "text": "As expected with dozens of contributors for the book, I had various opinions which can be grouped into:",
+      "start": 36.68,
+      "end": 41.88
+    },
+    {
+      "block": 4,
+      "text": "I completely agreed with some points",
+      "start": 42.06,
+      "end": 44.46
+    },
+    {
+      "block": 5,
+      "text": "I completely disagreed with some points",
+      "start": 44.64,
+      "end": 47.2
+    },
+    {
+      "block": 6,
+      "text": "Other topics I found were acceptable points but really didn\u2019t matter as much as the author thought",
+      "start": 47.38,
+      "end": 52.58
+    },
+    {
+      "block": 7,
+      "text": "It was nice to have so many varying contributors and perspectives, all from successful and knowledgeable authors; However, personally I prefer reading from a single author or very small group of authors.",
+      "start": 52.76,
+      "end": 63.08
+    },
+    {
+      "block": 8,
+      "text": "I found it a little annoying that the description of who was giving the advise on each topic wasn\u2019t inline with the topic for each chapter.",
+      "start": 63.26,
+      "end": 69.82
+    },
+    {
+      "block": 8,
+      "text": "Instead readers need to flip to the back of the book to read up on each author.",
+      "start": 70.0,
+      "end": 73.76
+    },
+    {
+      "block": 9,
+      "text": "Personally, I like to know about the author when I\u2019m reading any article; it adds more depth and credibility to what is being said.",
+      "start": 73.94,
+      "end": 80.42
+    },
+    {
+      "block": 9,
+      "text": "At the very least, it would have been nice to have a page number reference to where the contributor description is exactly.",
+      "start": 80.6,
+      "end": 86.44
+    },
+    {
+      "block": 10,
+      "text": "Strangely enough, I think the best way to read this book may be to start with the contributor list at the end of the book, and read each person\u2019s description, and then what they have to say.",
+      "start": 86.62,
+      "end": 95.42
+    },
+    {
+      "block": 10,
+      "text": "The page references to each author\u2019s articles are inline with each contributor in the back of the book.",
+      "start": 95.6,
+      "end": 100.48
+    },
+    {
+      "block": 11,
+      "text": "If you haven\u2019t read the Joel on Software book series, I\u2019d recommend reading those first.",
+      "start": 100.66,
+      "end": 105.3
+    },
+    {
+      "block": 11,
+      "text": "If you have read them and want more, then this book is a great fit.",
+      "start": 105.48,
+      "end": 109.24
+    }
+  ]
+}

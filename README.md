@@ -34,6 +34,8 @@ go run .
 ```
 
 The site will be available at `http://localhost:8080`
+If that port is occupied, use `PORT=8081 go run .` and open
+`http://localhost:8081` instead.
 
 ### Testing
 
@@ -96,6 +98,27 @@ make deploy
 ```
 
 ## Blog Post Workflow
+
+### Blog audio narration
+
+All 171 English blog posts have published narration made locally with Ollama
+Phonon. Try [Unwavering dedication](http://localhost:8080/blog/186/unwavering-dedication)
+or [Shutting down Code Firefox](http://localhost:8080/blog/173/shutting-down-code-firefox). The audio
+player highlights the current sentence and lets readers select a sentence to
+seek. French pages have no English audio player.
+
+Generate and publish one post with:
+
+```bash
+make blog-audio BLOG_AUDIO_ID=186
+make publish-blog-audio BLOG_AUDIO_ID=186
+```
+
+Omit `BLOG_AUDIO_ID` to generate or publish all available posts. The generator
+checks its dependencies and pulls Phonon automatically when needed. MP3s stay
+out of Git and App Engine deployments; Cloud Storage serves them. See the
+[complete blog audio guide](docs/blog-audio.md) for setup, local preview,
+publishing, deployment, and troubleshooting.
 
 ### Adding a New Blog Post
 

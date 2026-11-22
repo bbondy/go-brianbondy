@@ -1,0 +1,21 @@
+{
+  "post": 165,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "436afbb8963e1d6d274bd77b5051bae56cd096da606fb3e8964f2f9baaa02a06",
+  "audioSHA256": "bd525de54b049c51fcf38819e213e683c37ff51fa421fd09f0548361b07527c9",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "We just launched a pretty big new feature in the Computer Science section of Khan Academy called peer evaluations.",
+      "start": 0.0,
+      "end": 5.84
+    },
+    {
+      "block": 0,
+      "text": "I blogged more about it here.",
+      "start": 6.02,
+      "end": 8.02
+    }
+  ]
+}

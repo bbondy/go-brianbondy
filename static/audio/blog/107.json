@@ -1,0 +1,123 @@
+{
+  "post": 107,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "ab6973218bd4425e6316fb4f331f64c6ac3e4fb8bda7507339572b98708f6660",
+  "audioSHA256": "8a738465aaca0059cbc9f2d1e0021d382ae8866325ae0c733a238f068ece38a4",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "StackOverflow users sorted by reputation are now available for Twitter, LinkedIn, and Facebook!",
+      "start": 0.0,
+      "end": 5.84
+    },
+    {
+      "block": 1,
+      "text": "A few days ago I blogged about a list of StackOverflow (and related StackExchange sites) users sorted by reputation who had twitter accounts.",
+      "start": 6.02,
+      "end": 14.02
+    },
+    {
+      "block": 2,
+      "text": "A couple days later I added extra info to those lists showing the following, followers, last tweet date, and twitter description.",
+      "start": 14.2,
+      "end": 21.24
+    },
+    {
+      "block": 3,
+      "text": "Today I added a couple more list types: LinkedIn, and Facebook.",
+      "start": 21.42,
+      "end": 25.5
+    },
+    {
+      "block": 4,
+      "text": "StackOverflow - Twitter - LinkedIn - Facebook",
+      "start": 25.68,
+      "end": 29.52
+    },
+    {
+      "block": 5,
+      "text": "ServerFault - Twitter - LinkedIn - Facebook",
+      "start": 29.7,
+      "end": 33.46
+    },
+    {
+      "block": 6,
+      "text": "SuperUser - Twitter - LinkedIn - Facebook",
+      "start": 33.64,
+      "end": 37.08
+    },
+    {
+      "block": 7,
+      "text": "Game Development - Twitter - LinkedIn - Facebook",
+      "start": 37.26,
+      "end": 40.86
+    },
+    {
+      "block": 8,
+      "text": "Webmasters - Twitter - LinkedIn - Facebook",
+      "start": 41.04,
+      "end": 44.8
+    },
+    {
+      "block": 9,
+      "text": "Web Applications - Twitter - LinkedIn - Facebook",
+      "start": 44.98,
+      "end": 48.9
+    },
+    {
+      "block": 10,
+      "text": "Ubuntu - Twitter - LinkedIn - Facebook",
+      "start": 49.08,
+      "end": 52.76
+    },
+    {
+      "block": 11,
+      "text": "Statistical Analysis - Twitter - LinkedIn - Facebook",
+      "start": 52.94,
+      "end": 57.18
+    },
+    {
+      "block": 12,
+      "text": "StackApps - Twitter - LinkedIn - Facebook",
+      "start": 57.36,
+      "end": 60.88
+    },
+    {
+      "block": 13,
+      "text": "Photography - Twitter - LinkedIn - Facebook",
+      "start": 61.06,
+      "end": 64.9
+    },
+    {
+      "block": 14,
+      "text": "Mathematics - Twitter - LinkedIn - Facebook",
+      "start": 65.08,
+      "end": 68.6
+    },
+    {
+      "block": 15,
+      "text": "Cooking - Twitter - LinkedIn - Facebook",
+      "start": 68.78,
+      "end": 72.22
+    },
+    {
+      "block": 16,
+      "text": "Gaming - Twitter - LinkedIn - Facebook",
+      "start": 72.4,
+      "end": 75.92
+    },
+    {
+      "block": 17,
+      "text": "Across all sites users are 2x more likely to have their twitter info vs. their LinkedIn info.",
+      "start": 76.1,
+      "end": 81.54
+    },
+    {
+      "block": 18,
+      "text": "Likewise across all sites users are 2x more likely to have their LinkedIn info vs. their facebook info.",
+      "start": 81.72,
+      "end": 87.8
+    }
+  ]
+}

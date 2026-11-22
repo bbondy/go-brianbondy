@@ -1,0 +1,357 @@
+{
+  "post": 169,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "f519db6c74019759ed76a8e6910b3e5b01645056ab2dc194bd8448d14d39316c",
+  "audioSHA256": "3ef7772c63e81f743c8cb5a364c740ebc377e6028e5ef7ae270adca310d09387",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "I\u2019m happy to announce that the Khan Academy Firefox OS app is now available in the Firefox Marketplace!",
+      "start": 0.0,
+      "end": 5.84
+    },
+    {
+      "block": 1,
+      "text": "Khan Academy\u2019s mission is to provide a free world-class education for anyone anywhere.",
+      "start": 6.02,
+      "end": 10.82
+    },
+    {
+      "block": 1,
+      "text": "The goal of the Firefox OS app is to help with the \u201canyone anywhere\u201d part of the KA mission.",
+      "start": 11.0,
+      "end": 15.96
+    },
+    {
+      "block": 2,
+      "text": "Why?",
+      "start": 16.14,
+      "end": 17.34
+    },
+    {
+      "block": 3,
+      "text": "There\u2019s something exciting about being able to hold a world class education in your pocket for the cheap price of a Firefox OS phone.",
+      "start": 17.52,
+      "end": 24.24
+    },
+    {
+      "block": 3,
+      "text": "Firefox OS devices are mostly deployed in countries where the cost of an iPhone or Android based smart phone is out of reach for most people.",
+      "start": 24.42,
+      "end": 31.94
+    },
+    {
+      "block": 4,
+      "text": "The app enables developing countries, lower income families, and anyone else to take advantage of the Khan Academy content.",
+      "start": 32.12,
+      "end": 38.92
+    },
+    {
+      "block": 4,
+      "text": "A persistent internet connection is not required.",
+      "start": 39.1,
+      "end": 42.22
+    },
+    {
+      "block": 5,
+      "text": "What\u2019s that\u2026. you say you want another use case?",
+      "start": 42.4,
+      "end": 45.6
+    },
+    {
+      "block": 5,
+      "text": "Well OK, here goes: A parent wanting each of their kids to have access to Khan Academy at the same time could be very expensive in device costs.",
+      "start": 45.78,
+      "end": 53.86
+    },
+    {
+      "block": 5,
+      "text": "Not anymore.",
+      "start": 54.04,
+      "end": 55.56
+    },
+    {
+      "block": 6,
+      "text": "Screenshots!",
+      "start": 55.74,
+      "end": 57.26
+    },
+    {
+      "block": 7,
+      "text": "App features",
+      "start": 57.44,
+      "end": 59.04
+    },
+    {
+      "block": 8,
+      "text": "Access to the full library of Khan Academy videos and articles.",
+      "start": 59.22,
+      "end": 63.14
+    },
+    {
+      "block": 9,
+      "text": "Search for videos and articles.",
+      "start": 63.32,
+      "end": 65.48
+    },
+    {
+      "block": 10,
+      "text": "Ability to sign into your account for: Profile access.",
+      "start": 65.66,
+      "end": 69.42
+    },
+    {
+      "block": 10,
+      "text": "Earning points for watching videos.",
+      "start": 69.6,
+      "end": 71.84
+    },
+    {
+      "block": 10,
+      "text": "Continuing where you left off from previous partial video watches, even if that was on the live site.",
+      "start": 72.02,
+      "end": 77.22
+    },
+    {
+      "block": 10,
+      "text": "Partial and full completion status of videos and articles.",
+      "start": 77.4,
+      "end": 80.92
+    },
+    {
+      "block": 11,
+      "text": "Downloading videos, articles, or entire topics for later use.",
+      "start": 81.1,
+      "end": 85.5
+    },
+    {
+      "block": 12,
+      "text": "Sharing functionality.",
+      "start": 85.68,
+      "end": 87.6
+    },
+    {
+      "block": 13,
+      "text": "Significant effort was put in, to minify topic tree sizes for minimal memory use and faster loading.",
+      "start": 87.78,
+      "end": 93.7
+    },
+    {
+      "block": 14,
+      "text": "Scrolling transcripts for videos as you watch.",
+      "start": 93.88,
+      "end": 96.76
+    },
+    {
+      "block": 15,
+      "text": "The UI is highly influenced by the first generation iPhone app.",
+      "start": 96.94,
+      "end": 100.7
+    },
+    {
+      "block": 16,
+      "text": "Development statistics",
+      "start": 100.88,
+      "end": 102.88
+    },
+    {
+      "block": 17,
+      "text": "340 commits",
+      "start": 103.06,
+      "end": 105.22
+    },
+    {
+      "block": 18,
+      "text": "4 months of consecutive commits with at least 1 commit per day",
+      "start": 105.4,
+      "end": 109.0
+    },
+    {
+      "block": 19,
+      "text": "30 minutes - 2 hours per day max",
+      "start": 109.18,
+      "end": 111.9
+    },
+    {
+      "block": 20,
+      "text": "Technologies used",
+      "start": 112.08,
+      "end": 114.0
+    },
+    {
+      "block": 21,
+      "text": "Technologies used to develop the app include:",
+      "start": 114.18,
+      "end": 116.98
+    },
+    {
+      "block": 22,
+      "text": "The Khan Academy API",
+      "start": 117.16,
+      "end": 119.4
+    },
+    {
+      "block": 23,
+      "text": "React",
+      "start": 119.58,
+      "end": 120.86
+    },
+    {
+      "block": 24,
+      "text": "Backbone",
+      "start": 121.04,
+      "end": 122.48
+    },
+    {
+      "block": 25,
+      "text": "Web APIs",
+      "start": 122.66,
+      "end": 124.34
+    },
+    {
+      "block": 26,
+      "text": "Localization",
+      "start": 124.52,
+      "end": 126.2
+    },
+    {
+      "block": 27,
+      "text": "The app is fully localized for English, Portuguese, French, and Spanish, and will use those locales automatically depending on the system locale.",
+      "start": 126.38,
+      "end": 134.78
+    },
+    {
+      "block": 27,
+      "text": "The content (videos, articles, subtitles) that the app hosts will also automatically change.",
+      "start": 134.96,
+      "end": 141.2
+    },
+    {
+      "block": 28,
+      "text": "I was lucky enough to have several amazing and kind translators for the app volunteer their time.",
+      "start": 141.38,
+      "end": 146.34
+    },
+    {
+      "block": 29,
+      "text": "Rodrigo Silveira - Portuguese app translation",
+      "start": 146.52,
+      "end": 150.12
+    },
+    {
+      "block": 30,
+      "text": "Romain Sertelon - French app translation",
+      "start": 150.3,
+      "end": 153.34
+    },
+    {
+      "block": 31,
+      "text": "Pablo Solares Acebal - Spanish translation",
+      "start": 153.52,
+      "end": 157.12
+    },
+    {
+      "block": 32,
+      "text": "The translations are hosted and managed on Transifex.",
+      "start": 157.3,
+      "end": 160.58
+    },
+    {
+      "block": 33,
+      "text": "Want to contribute?",
+      "start": 160.76,
+      "end": 162.52
+    },
+    {
+      "block": 34,
+      "text": "The Khan Academy Firefox OS app source is hosted in one of my github repositories and periodically mirrored on the Khan Academy github page.",
+      "start": 162.7,
+      "end": 170.62
+    },
+    {
+      "block": 35,
+      "text": "If you\u2019d like to contribute there\u2019s a lot of future tasks posted as issues on github.",
+      "start": 170.8,
+      "end": 175.28
+    },
+    {
+      "block": 36,
+      "text": "Current minimum system requirements",
+      "start": 175.46,
+      "end": 177.94
+    },
+    {
+      "block": 37,
+      "text": "Around 8MB of space.",
+      "start": 178.12,
+      "end": 180.52
+    },
+    {
+      "block": 38,
+      "text": "512 MB of RAM",
+      "start": 180.7,
+      "end": 183.42
+    },
+    {
+      "block": 39,
+      "text": "Low memory devices",
+      "start": 183.6,
+      "end": 185.6
+    },
+    {
+      "block": 40,
+      "text": "By default, apps on the Firefox marketplace are only served to devices with at least 500MB of RAM.",
+      "start": 185.78,
+      "end": 192.26
+    },
+    {
+      "block": 40,
+      "text": "To get them on 256MB devices, you need to do a low memory review.",
+      "start": 192.44,
+      "end": 197.56
+    },
+    {
+      "block": 41,
+      "text": "One of the major enhancements I\u2019d like to add next, is to add an option to use the YouTube player instead of HTML5 video.",
+      "start": 197.74,
+      "end": 204.46
+    },
+    {
+      "block": 41,
+      "text": "This may use less memory and may be a way onto 256MB devices.",
+      "start": 204.64,
+      "end": 209.44
+    },
+    {
+      "block": 42,
+      "text": "How about exercises?",
+      "start": 209.62,
+      "end": 211.62
+    },
+    {
+      "block": 43,
+      "text": "They\u2019re coming in a future release.",
+      "start": 211.8,
+      "end": 213.88
+    },
+    {
+      "block": 44,
+      "text": "Getting preinstalled on devices",
+      "start": 214.06,
+      "end": 216.54
+    },
+    {
+      "block": 45,
+      "text": "It\u2019s possible to request to get pre-installed on devices and I\u2019ll be looking into that in the near future after getting some more initial feedback.",
+      "start": 216.72,
+      "end": 223.68
+    },
+    {
+      "block": 46,
+      "text": "Projects like Matchstick also seem like a great opportunity for this app.",
+      "start": 223.86,
+      "end": 228.02
+    }
+  ]
+}

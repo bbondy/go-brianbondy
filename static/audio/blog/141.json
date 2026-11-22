@@ -1,0 +1,105 @@
+{
+  "post": 141,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "2a8ebeaf4e2b64167a921c8f1d3dd321c1992e1b97c738fc03488851e8ecad61",
+  "audioSHA256": "0313aa0ccce43aa4d7a98121e57a5aa7c4541c20bfe885b5674425fd72908aa9",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "The Windows 8 Consumer Preview introduced a great new feature called XAML interop for DirectX applications.",
+      "start": 0.0,
+      "end": 6.32
+    },
+    {
+      "block": 0,
+      "text": "Since Firefox on Metro is a Direct X application, we took advantage of that feature.",
+      "start": 6.5,
+      "end": 11.46
+    },
+    {
+      "block": 1,
+      "text": "Using XAML interop made the following things easier:",
+      "start": 11.64,
+      "end": 14.84
+    },
+    {
+      "block": 2,
+      "text": "Platform integration features",
+      "start": 15.02,
+      "end": 17.42
+    },
+    {
+      "block": 3,
+      "text": "Input related work",
+      "start": 17.6,
+      "end": 19.44
+    },
+    {
+      "block": 4,
+      "text": "The appbar",
+      "start": 19.62,
+      "end": 21.06
+    },
+    {
+      "block": 5,
+      "text": "Edge detection",
+      "start": 21.24,
+      "end": 22.92
+    },
+    {
+      "block": 6,
+      "text": "Other areas where we would use XAML based WinRT APIs",
+      "start": 23.1,
+      "end": 26.7
+    },
+    {
+      "block": 7,
+      "text": "We ran into a bug in Windows where our process would crash on suspend though.",
+      "start": 26.88,
+      "end": 31.12
+    },
+    {
+      "block": 7,
+      "text": "This bug was confirmed in Windows 8 and was expected to be fixed for the release preview.",
+      "start": 31.3,
+      "end": 36.34
+    },
+    {
+      "block": 7,
+      "text": "Unfortunately since then, it was decided that this functionality would not be supported for metro style enabled desktop browsers.",
+      "start": 36.52,
+      "end": 43.4
+    },
+    {
+      "block": 8,
+      "text": "This doesn\u2019t cause us major pain, but does take some extra time.",
+      "start": 43.58,
+      "end": 47.42
+    },
+    {
+      "block": 8,
+      "text": "We need to backout the XAML interop support.",
+      "start": 47.6,
+      "end": 50.72
+    },
+    {
+      "block": 8,
+      "text": "I\u2019ll be working on doing that this weekend, and expect to be finished by Monday.",
+      "start": 50.9,
+      "end": 55.06
+    },
+    {
+      "block": 9,
+      "text": "We are currently using XUL for UI, if we ever did decide to switch to native UI like Android did, then this may be a problem.",
+      "start": 55.24,
+      "end": 62.76
+    },
+    {
+      "block": 9,
+      "text": "The appbar support will be reimplemented in XUL.",
+      "start": 62.94,
+      "end": 66.14
+    }
+  ]
+}

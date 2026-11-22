@@ -1,0 +1,291 @@
+{
+  "post": 151,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "c707a55c63209ecf3b93f54686a6d5e27b0158770cfb8c13e2c8af7fda1ac500",
+  "audioSHA256": "dc09370028df85c4173283c8cca72e3327d9253f8666f4932e5cf5d725f13552",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "Front end team",
+      "start": 0.0,
+      "end": 1.68
+    },
+    {
+      "block": 1,
+      "text": "As of the end of August, two awesome Mozilla hackers, Matt Brubeck and Frank Yan started tearing through front end bugs for the Metro browser.",
+      "start": 1.86,
+      "end": 9.3
+    },
+    {
+      "block": 2,
+      "text": "Mark Finkle who is the mobile front end lead has also been joining in and sharing invaluable insight.",
+      "start": 9.48,
+      "end": 14.76
+    },
+    {
+      "block": 3,
+      "text": "Jonathan Wilde has been working on making the Metro UI mockups a reality for the past few months.",
+      "start": 14.94,
+      "end": 20.22
+    },
+    {
+      "block": 3,
+      "text": "Jonathan Wilde\u2019s internship is complete, but he is still contributing.",
+      "start": 20.4,
+      "end": 24.4
+    },
+    {
+      "block": 4,
+      "text": "Tim Abraldes, Jim Mathies,and I do some work in front end code, but are all mostly focused on the core platform code.",
+      "start": 24.58,
+      "end": 31.62
+    },
+    {
+      "block": 5,
+      "text": "Front end progress",
+      "start": 31.8,
+      "end": 33.64
+    },
+    {
+      "block": 6,
+      "text": "Several keyboard shortcuts were added, the new tab page is now the default home page, and a ton of small glitches on the front end are now fixed.",
+      "start": 33.82,
+      "end": 41.5
+    },
+    {
+      "block": 7,
+      "text": "There are 2 modes for tabs in the Metro Firefox front end.",
+      "start": 41.68,
+      "end": 45.44
+    },
+    {
+      "block": 7,
+      "text": "You can have tab previews above the URL bar when you swipe down, or you can have classic style tabs that are always showing.",
+      "start": 45.62,
+      "end": 52.02
+    },
+    {
+      "block": 7,
+      "text": "The mode-selection persists now when you toggle between the 2 modes.",
+      "start": 52.2,
+      "end": 56.2
+    },
+    {
+      "block": 8,
+      "text": "An actual installer",
+      "start": 56.38,
+      "end": 58.22
+    },
+    {
+      "block": 9,
+      "text": "We updated the Firefox installer to do the necessary metro registration and include all of the new Metro bits.",
+      "start": 58.4,
+      "end": 64.32
+    },
+    {
+      "block": 10,
+      "text": "We also have zip builds which will do the needed Metro registration after you set the default browser from within Firefox preferences.",
+      "start": 64.5,
+      "end": 71.3
+    },
+    {
+      "block": 11,
+      "text": "Default browser handling changes",
+      "start": 71.48,
+      "end": 74.12
+    },
+    {
+      "block": 12,
+      "text": "In Windows 8 RTM, Microsoft protects both the default protocol handler, and the default file type handlers (such as .html) with a cryptographic hash.",
+      "start": 74.3,
+      "end": 84.06
+    },
+    {
+      "block": 13,
+      "text": "The only way for a browser to set itself as default now, is to ask the OS to do it.",
+      "start": 84.24,
+      "end": 89.28
+    },
+    {
+      "block": 13,
+      "text": "And the OS asks the user to do it.",
+      "start": 89.46,
+      "end": 92.02
+    },
+    {
+      "block": 14,
+      "text": "For this reason, we\u2019re switching the startup check to be a nice Windows 8 fly out which asks you to select your default browser.",
+      "start": 92.2,
+      "end": 98.36
+    },
+    {
+      "block": 14,
+      "text": "This fly out only has the ability to set the HTTP defaults though.",
+      "start": 98.54,
+      "end": 102.86
+    },
+    {
+      "block": 15,
+      "text": "The check in preferences is also updated to simply open control panel\u2019s Control Panel\\Programs\\Default Programs\\Set Default Programs.",
+      "start": 103.04,
+      "end": 111.52
+    },
+    {
+      "block": 16,
+      "text": "When you set your defaults in control panel, you can set both HTTP and HTML defaults at the same time.",
+      "start": 111.7,
+      "end": 118.18
+    },
+    {
+      "block": 16,
+      "text": "We\u2019re opting for not showing the control panel screen for startup checks because the UI is complex.",
+      "start": 118.36,
+      "end": 123.4
+    },
+    {
+      "block": 16,
+      "text": "I\u2019m hoping a new UI will be introduced in Windows 9 that will more easily allow the user to set both HTTP and HTML defaults at once without using the Control Panel screen.",
+      "start": 123.58,
+      "end": 133.5
+    },
+    {
+      "block": 17,
+      "text": "We also added code to do the needed Metro registration on Windows 8 after each upgrade.",
+      "start": 133.68,
+      "end": 138.64
+    },
+    {
+      "block": 17,
+      "text": "So when we release support on Windows 8, you\u2019ll have the needed registration.",
+      "start": 138.82,
+      "end": 143.06
+    },
+    {
+      "block": 18,
+      "text": "Default browser handling and UAC",
+      "start": 143.24,
+      "end": 146.04
+    },
+    {
+      "block": 19,
+      "text": "Due to the way default browser registration works, depending on what your default browser was previously, Firefox would sometimes have to prompt you with a UAC window on Windows 7 and Vista.",
+      "start": 146.22,
+      "end": 156.3
+    },
+    {
+      "block": 19,
+      "text": "In Windows 8 Microsoft changed this so that you can do this registration entirely in HKCU.",
+      "start": 156.48,
+      "end": 161.92
+    },
+    {
+      "block": 20,
+      "text": "We updated our code to take advantage of this, so as of Windows 8, you will never see a UAC dialog for default browser handling in Firefox.",
+      "start": 162.1,
+      "end": 170.1
+    },
+    {
+      "block": 21,
+      "text": "Things we disabled",
+      "start": 170.28,
+      "end": 172.04
+    },
+    {
+      "block": 22,
+      "text": "We disabled the code for loading external add-ons since we don\u2019t plan to have add-on support for the initial release.",
+      "start": 172.22,
+      "end": 177.9
+    },
+    {
+      "block": 22,
+      "text": "We will have add-ons through the add-on SDK after the initial release though.",
+      "start": 178.08,
+      "end": 182.16
+    },
+    {
+      "block": 23,
+      "text": "The Flash support that we currently do have is disabled for the preview as well.",
+      "start": 182.34,
+      "end": 186.66
+    },
+    {
+      "block": 24,
+      "text": "Build changes",
+      "start": 186.84,
+      "end": 188.52
+    },
+    {
+      "block": 25,
+      "text": "The platform splitting bug that was holding us up from landing on mozilla-central is complete as far as our needs are concerned.",
+      "start": 188.7,
+      "end": 195.1
+    },
+    {
+      "block": 25,
+      "text": "It landed on elm which is where we\u2019ll do the Metro preview from.",
+      "start": 195.28,
+      "end": 198.8
+    },
+    {
+      "block": 25,
+      "text": "There was a lot of fallout from these changes that got fixed up as well.",
+      "start": 198.98,
+      "end": 202.82
+    },
+    {
+      "block": 26,
+      "text": "Various other changes",
+      "start": 203.0,
+      "end": 205.0
+    },
+    {
+      "block": 27,
+      "text": "We synced up the user agent string with the desktop one, did some crash reporting fixes, improved text selection, fixed up things for mouse and touch, fixed the Metro clipboard handling, added support for anonymous opt-in telemetry data reporting, and fixed several other bugs.",
+      "start": 205.18,
+      "end": 219.58
+    },
+    {
+      "block": 28,
+      "text": "We added a save file picker, context menu items for saving images, enabled spell checking, and more.",
+      "start": 219.76,
+      "end": 225.92
+    },
+    {
+      "block": 29,
+      "text": "Landing on mozilla-central",
+      "start": 226.1,
+      "end": 228.42
+    },
+    {
+      "block": 30,
+      "text": "The platform splitting bug is complete enough for our needs but I think there is still a bit of work before it can land on m-c.",
+      "start": 228.6,
+      "end": 235.0
+    },
+    {
+      "block": 31,
+      "text": "We also need to make a decision on if we will wait for Microsoft to add VS2012 Windows XP targeting support.",
+      "start": 235.18,
+      "end": 242.38
+    },
+    {
+      "block": 31,
+      "text": "They will be adding it soon, but if we don\u2019t hear an exact date we\u2019ll be switching out all of our C++/CX code for WRL code.",
+      "start": 242.56,
+      "end": 249.6
+    },
+    {
+      "block": 32,
+      "text": "That switch won\u2019t take us too long, I would guess a week of long hours, or slightly more.",
+      "start": 249.78,
+      "end": 254.74
+    },
+    {
+      "block": 32,
+      "text": "Dropping C++/CX support would mean we can use VS2010 and the Windows 8 SDK.",
+      "start": 254.92,
+      "end": 261.48
+    }
+  ]
+}

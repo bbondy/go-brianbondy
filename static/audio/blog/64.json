@@ -1,0 +1,21 @@
+{
+  "post": 64,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "f09aabd40ad1a53f832b5fb3e364d666b7c15d9a5b7c873a38498ae2246f73ce",
+  "audioSHA256": "22a0cb259107263f8ba875f3cd11e87dfbf628882d75d04c22f66b3bda9dc9d7",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "I updated the DynamicDNS service so that you can pass paths directly to the mapped IP.",
+      "start": 0.0,
+      "end": 5.04
+    },
+    {
+      "block": 1,
+      "text": "For example: https://brianbondy.com/brianbondy/testing123/hi.html",
+      "start": 5.22,
+      "end": 14.66
+    }
+  ]
+}

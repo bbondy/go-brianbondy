@@ -1,0 +1,99 @@
+{
+  "post": 140,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "c0fd14fc172c4907be50bdb829232565a7a5874431538c2194fffe5382a0f83a",
+  "audioSHA256": "adfc4d5f8d08bb93cc177396b810027c0523b60f63a5a34bd5106aad13de7bc7",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "User Account Control (UAC) is a security enhancement in Windows introduced in Vista.",
+      "start": 0.0,
+      "end": 5.76
+    },
+    {
+      "block": 1,
+      "text": "It makes applications that run by administrators, by default, only have access to what limited users would have access to.",
+      "start": 5.94,
+      "end": 12.82
+    },
+    {
+      "block": 1,
+      "text": "Another way to say this is that applications run at medium integrity level by default.",
+      "start": 13.0,
+      "end": 17.96
+    },
+    {
+      "block": 2,
+      "text": "If an application needs more privileges, it need to request it, and Windows will show a UAC dialog.",
+      "start": 18.14,
+      "end": 23.9
+    },
+    {
+      "block": 2,
+      "text": "If you press Yes to elevate on the UAC dialog, the process is said to be running as a high integrity process.",
+      "start": 24.08,
+      "end": 30.24
+    },
+    {
+      "block": 3,
+      "text": "UAC can be disabled, and when it is, applications in Windows Vista and Windows 7 run as high integrity processes by default.",
+      "start": 30.42,
+      "end": 38.02
+    },
+    {
+      "block": 4,
+      "text": "This changes in Windows 8, if UAC is disabled, your applications will no longer run as a high integrity process, they will run as a medium integrity process.",
+      "start": 38.2,
+      "end": 47.32
+    },
+    {
+      "block": 5,
+      "text": "Applications can request elevation to a high integrity process when UAC is off explicitly and no UAC dialog will be shown.",
+      "start": 47.5,
+      "end": 54.54
+    },
+    {
+      "block": 6,
+      "text": "We first realized this in Firefox because we noticed the update service was being used for all updates in Windows 8, even when UAC is off.",
+      "start": 54.72,
+      "end": 62.56
+    },
+    {
+      "block": 6,
+      "text": "We designed the update service to only use the service when UAC is on though.",
+      "start": 62.74,
+      "end": 67.06
+    },
+    {
+      "block": 6,
+      "text": "So this change broke that design choice, and to fix it we need to check if the process is running on Windows 8 and if UAC is off.",
+      "start": 67.24,
+      "end": 74.28
+    },
+    {
+      "block": 6,
+      "text": "If those conditions are met we would elevate our process which would not produce a UAC dialog.",
+      "start": 74.46,
+      "end": 79.42
+    },
+    {
+      "block": 7,
+      "text": "Overall this is a great change by Microsoft though.",
+      "start": 79.6,
+      "end": 82.72
+    },
+    {
+      "block": 7,
+      "text": "It makes Windows more secure when users disable UAC.",
+      "start": 82.9,
+      "end": 86.42
+    },
+    {
+      "block": 7,
+      "text": "It\u2019s good to know about if you develop software for Windows.",
+      "start": 86.6,
+      "end": 89.8
+    }
+  ]
+}

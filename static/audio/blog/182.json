@@ -1,0 +1,2133 @@
+{
+  "post": 182,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "41f4bddb4f8f23f1086d496c38b003ff41d6f748c698d6f1cad8ff629f99af75",
+  "audioSHA256": "42d9c27c156d38ceea2826574e1a6632f7e8569436532077941306c439f8e4a3",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "Cocodona 250 is an ultra-endurance race that spans over 250 miles, taking runners on a journey in Arizona through mountains, deserts, and water crossings.",
+      "start": 0.0,
+      "end": 10.48
+    },
+    {
+      "block": 0,
+      "text": "From Black Canyon City to Flagstaff the route involves an elevation gain of approximately 39,410 feet.",
+      "start": 10.66,
+      "end": 17.54
+    },
+    {
+      "block": 0,
+      "text": "It is a multi-day grueling test of physical and mental endurance.",
+      "start": 17.72,
+      "end": 21.4
+    },
+    {
+      "block": 1,
+      "text": "The racers experience a wide range of weather conditions, including scorching desert heat during daylight hours and cooler mountain temperatures during nighttime hours.",
+      "start": 21.58,
+      "end": 29.66
+    },
+    {
+      "block": 1,
+      "text": "This extraordinary yearly event pushes runners past their limits.",
+      "start": 29.84,
+      "end": 33.52
+    },
+    {
+      "block": 2,
+      "text": "This blog post is about my (bib #150) experience running this breathtakingly beautiful race.",
+      "start": 33.7,
+      "end": 39.78
+    },
+    {
+      "block": 3,
+      "text": "Training",
+      "start": 39.96,
+      "end": 41.24
+    },
+    {
+      "block": 4,
+      "text": "I felt incredibly fortunate to find myself at the start line of Cocodona, especially given the numerous hurdles I faced during my training.",
+      "start": 41.42,
+      "end": 48.62
+    },
+    {
+      "block": 4,
+      "text": "I had plenty of legitimate reasons to consider backing out of the race.",
+      "start": 48.8,
+      "end": 52.48
+    },
+    {
+      "block": 4,
+      "text": "In fact, the thought of potentially having to withdraw haunted me in the months leading up to the event.",
+      "start": 52.66,
+      "end": 57.62
+    },
+    {
+      "block": 5,
+      "text": "The year kicked off with shin splints that impacted my training volume.",
+      "start": 57.8,
+      "end": 61.48
+    },
+    {
+      "block": 5,
+      "text": "To make up for it, I focused on strength training and included cross-training activities such as indoor cycling and rowing.",
+      "start": 61.66,
+      "end": 67.98
+    },
+    {
+      "block": 5,
+      "text": "My goal was to achieve at least 15 hours of cardiovascular exercise each week.",
+      "start": 68.16,
+      "end": 72.8
+    },
+    {
+      "block": 6,
+      "text": "My battle with shin splints persisted until just a month before the race when I encountered another obstacle.",
+      "start": 72.98,
+      "end": 78.1
+    },
+    {
+      "block": 6,
+      "text": "After using an ab machine at the gym, I experienced severe abdominal pain.",
+      "start": 78.28,
+      "end": 82.92
+    },
+    {
+      "block": 6,
+      "text": "An ultrasound revealed a reducible hernia along the superior edge of my umbilicus.",
+      "start": 83.1,
+      "end": 87.82
+    },
+    {
+      "block": 6,
+      "text": "Fortunately, my stomach began to feel better a week later.",
+      "start": 88.0,
+      "end": 91.6
+    },
+    {
+      "block": 6,
+      "text": "Reducible means the hernia can go back to its normal position.",
+      "start": 91.78,
+      "end": 95.3
+    },
+    {
+      "block": 7,
+      "text": "As my stomach pain subsided, I had the opportunity to join some running friends on a Rim2Rim2Rim run near the race location through the Grand Canyon, just one month before the big day.",
+      "start": 95.48,
+      "end": 105.16
+    },
+    {
+      "block": 7,
+      "text": "This was the perfect chance to familiarize myself with the conditions I\u2019d face during Cocodona.",
+      "start": 105.34,
+      "end": 110.38
+    },
+    {
+      "block": 7,
+      "text": "I could also drive along the course I\u2019d be running and test out the navigation app I\u2019d be using.",
+      "start": 110.56,
+      "end": 115.44
+    },
+    {
+      "block": 7,
+      "text": "Unfortunately I rolled my right ankle during this excursion, which took about three weeks to fully heal.",
+      "start": 115.62,
+      "end": 121.06
+    },
+    {
+      "block": 7,
+      "text": "Just in time for my final week taper.",
+      "start": 121.24,
+      "end": 123.8
+    },
+    {
+      "block": 8,
+      "text": "Despite these setbacks, I managed to complete a reasonable amount of training including several weeks over 100 mi.",
+      "start": 123.98,
+      "end": 130.22
+    },
+    {
+      "block": 8,
+      "text": "My training was guided by Matt Masserant and the plan involved a weekly elevation goal and increasing vest weight over time.",
+      "start": 130.4,
+      "end": 136.96
+    },
+    {
+      "block": 8,
+      "text": "In truth I didn\u2019t follow this plan exactly because of my various injuries.",
+      "start": 137.14,
+      "end": 141.3
+    },
+    {
+      "block": 9,
+      "text": "Although I felt good on all fronts on race day, I knew that I was not in my ideal shape and that any one of these problems could come back during the race.",
+      "start": 141.48,
+      "end": 148.84
+    },
+    {
+      "block": 9,
+      "text": "One may not have noticed on my Strava page, because there were still a lot of activities, but I usually put in more training.",
+      "start": 149.02,
+      "end": 155.26
+    },
+    {
+      "block": 9,
+      "text": "I knew I had to rely on the high volume I had previously built out for years.",
+      "start": 155.44,
+      "end": 159.68
+    },
+    {
+      "block": 9,
+      "text": "Despite these problems, I still felt confident going in.",
+      "start": 159.86,
+      "end": 163.38
+    },
+    {
+      "block": 10,
+      "text": "Top Concerns",
+      "start": 163.56,
+      "end": 165.24
+    },
+    {
+      "block": 11,
+      "text": "As I prepared for this daunting race, several key worries weighed on my mind:",
+      "start": 165.42,
+      "end": 169.74
+    },
+    {
+      "block": 12,
+      "text": "Navigating the extensive course across a significant portion of Arizona.",
+      "start": 169.92,
+      "end": 174.08
+    },
+    {
+      "block": 13,
+      "text": "The potentially unbearable heat.",
+      "start": 174.26,
+      "end": 176.58
+    },
+    {
+      "block": 14,
+      "text": "The risk of one of my previous injuries resurfacing.",
+      "start": 176.76,
+      "end": 179.72
+    },
+    {
+      "block": 15,
+      "text": "Not having done enough training.",
+      "start": 179.9,
+      "end": 181.9
+    },
+    {
+      "block": 16,
+      "text": "Facing an elevation gain four times greater than anything I had previously tackled.",
+      "start": 182.08,
+      "end": 186.48
+    },
+    {
+      "block": 17,
+      "text": "Covering a distance 1.4 times longer than my longest run to date.",
+      "start": 186.66,
+      "end": 190.9
+    },
+    {
+      "block": 18,
+      "text": "The challenging and technical nature of the course, lots of rocks and unsteady surfaces",
+      "start": 191.08,
+      "end": 196.04
+    },
+    {
+      "block": 19,
+      "text": "Hallucinations",
+      "start": 196.22,
+      "end": 197.9
+    },
+    {
+      "block": 20,
+      "text": "Many people are intrigued by stories of hallucinations, so I\u2019ll share some of the most memorable ones I experienced during the race.",
+      "start": 198.08,
+      "end": 204.72
+    },
+    {
+      "block": 20,
+      "text": "It\u2019s worth mentioning that I\u2019ve never taken drugs of any kind, but I imagine my mental state was quite similar to someone under their influence.",
+      "start": 204.9,
+      "end": 211.78
+    },
+    {
+      "block": 21,
+      "text": "These hallucinations occurred over the course of approximately five days (102 hours) with minimal sleep.",
+      "start": 211.96,
+      "end": 218.36
+    },
+    {
+      "block": 22,
+      "text": "Nighttime seemed to intensify the hallucinations, as the shadows cast by my headlamp played tricks on my mind.",
+      "start": 218.54,
+      "end": 224.38
+    },
+    {
+      "block": 22,
+      "text": "By the last couple of nights, I had grown accustomed to these strange visions and knew better than to trust my eyes.",
+      "start": 224.56,
+      "end": 230.48
+    },
+    {
+      "block": 22,
+      "text": "My phone\u2019s navigation app, Gaia, and my GPS watch were the only sources of truth I relied on.",
+      "start": 230.66,
+      "end": 236.58
+    },
+    {
+      "block": 23,
+      "text": "Some of the hallucinations included:",
+      "start": 236.76,
+      "end": 239.0
+    },
+    {
+      "block": 24,
+      "text": "A man dressed like Robin Hood, sitting cross-legged and reading a book, who turned out to be just a cactus upon closer inspection.",
+      "start": 239.18,
+      "end": 245.98
+    },
+    {
+      "block": 25,
+      "text": "Smiling for a supposed photographer on the course, only to realize it was yet another cactus.",
+      "start": 246.16,
+      "end": 251.2
+    },
+    {
+      "block": 26,
+      "text": "When exhaustion set in, I repeatedly saw camping gear, tents, and sleeping bags along the route, which were actually variously shaped rocks.",
+      "start": 251.38,
+      "end": 259.14
+    },
+    {
+      "block": 27,
+      "text": "Aid stations that were, in reality, merely fallen trees.",
+      "start": 259.32,
+      "end": 263.32
+    },
+    {
+      "block": 28,
+      "text": "Pirate ships that turned out to be clusters of dead trees.",
+      "start": 263.5,
+      "end": 266.86
+    },
+    {
+      "block": 29,
+      "text": "A jet ski perched atop a mountain.",
+      "start": 267.04,
+      "end": 269.52
+    },
+    {
+      "block": 30,
+      "text": "For each hallucination, I would initially doubt its authenticity, suspecting that my mind was playing tricks on me.",
+      "start": 269.7,
+      "end": 275.78
+    },
+    {
+      "block": 30,
+      "text": "As I attempted to analyze what I was seeing, my visual system would insist that it was genuine.",
+      "start": 275.96,
+      "end": 280.92
+    },
+    {
+      "block": 30,
+      "text": "It wasn\u2019t until I approached each vision that it would finally dissipate and reveal its true form.",
+      "start": 281.1,
+      "end": 286.06
+    },
+    {
+      "block": 30,
+      "text": "The hallucinations only affected my vision, while my other senses remained unimpaired.",
+      "start": 286.24,
+      "end": 291.04
+    },
+    {
+      "block": 31,
+      "text": "Extreme deja vu",
+      "start": 291.22,
+      "end": 293.14
+    },
+    {
+      "block": 32,
+      "text": "There was something strange I had never experienced before that went beyond Deja-vu.",
+      "start": 293.32,
+      "end": 297.64
+    },
+    {
+      "block": 32,
+      "text": "Various times throughout the race I felt like I had run the course before.",
+      "start": 297.82,
+      "end": 301.74
+    },
+    {
+      "block": 32,
+      "text": "I felt like I had explored different areas of the course and knew that this was not quite the section where an aid station would appear.",
+      "start": 301.92,
+      "end": 307.92
+    },
+    {
+      "block": 32,
+      "text": "I truly felt like I had run this race already, and I was just replaying it, but making fewer mistakes.",
+      "start": 308.1,
+      "end": 313.94
+    },
+    {
+      "block": 33,
+      "text": "This feeling peaked on the very last section of the race when I remembered that when I ran this race I went off course and DNF\u2019ed the race in the final section.",
+      "start": 314.12,
+      "end": 321.24
+    },
+    {
+      "block": 33,
+      "text": "My blisters and foot pain were unrecoverable.",
+      "start": 321.42,
+      "end": 324.22
+    },
+    {
+      "block": 33,
+      "text": "Upon remembering this, I instantly stopped, took out my phone, and realized that I was a mile off course.",
+      "start": 324.4,
+      "end": 330.72
+    },
+    {
+      "block": 34,
+      "text": "I don\u2019t think I actually had a supernatural Deja-vu 6th sense, but I think maybe I watched so many videos, and read so much about Cocodona that I dreamed about it in the past, and I was remembering those dreams.",
+      "start": 330.9,
+      "end": 341.3
+    },
+    {
+      "block": 34,
+      "text": "It was very mystifying during the run though, it felt like an out of body experience where I was watching myself replay this experience and avoid mistakes.",
+      "start": 341.48,
+      "end": 349.72
+    },
+    {
+      "block": 35,
+      "text": "Extreme sleep deprivation made me feel like I was being supernaturally guided or navigating while observing a different alternate dimension.",
+      "start": 349.9,
+      "end": 356.62
+    },
+    {
+      "block": 35,
+      "text": "I know this sounds crazy, but that\u2019s what you get for a 102 hour run.",
+      "start": 356.8,
+      "end": 361.28
+    },
+    {
+      "block": 36,
+      "text": "Sleep",
+      "start": 361.46,
+      "end": 362.66
+    },
+    {
+      "block": 37,
+      "text": "I went into the race with three, three hour naps planned.",
+      "start": 362.84,
+      "end": 366.28
+    },
+    {
+      "block": 37,
+      "text": "This turned out to be completely inaccurate.",
+      "start": 366.46,
+      "end": 369.1
+    },
+    {
+      "block": 37,
+      "text": "Some aid stations have places where you can sleep, they are usually cots.",
+      "start": 369.28,
+      "end": 373.52
+    },
+    {
+      "block": 37,
+      "text": "I could only sleep for 10 minutes on the first night though.",
+      "start": 373.7,
+      "end": 376.74
+    },
+    {
+      "block": 37,
+      "text": "My body had too much caffeine in it and it was distracting with people moving around in cots next to you.",
+      "start": 376.92,
+      "end": 381.96
+    },
+    {
+      "block": 38,
+      "text": "\u201cTrail naps\u201d to the rescue.",
+      "start": 382.14,
+      "end": 384.06
+    },
+    {
+      "block": 38,
+      "text": "I have never needed to do a trail nap before, but I feel like I gained a new skill and mastered them during this race.",
+      "start": 384.24,
+      "end": 390.24
+    },
+    {
+      "block": 38,
+      "text": "Here was my first trail nap spot:",
+      "start": 390.42,
+      "end": 392.82
+    },
+    {
+      "block": 39,
+      "text": "The basic \u201cscientific\u201d explanation is as follows:",
+      "start": 393.0,
+      "end": 396.2
+    },
+    {
+      "block": 40,
+      "text": "Find a somewhat flat looking piece of ground off the trail but close.",
+      "start": 396.38,
+      "end": 400.06
+    },
+    {
+      "block": 40,
+      "text": "Try to minimize rocks and watch out for cacti.",
+      "start": 400.24,
+      "end": 403.12
+    },
+    {
+      "block": 41,
+      "text": "Throw your poles down facing the direction you should continue when you wake up (I figured this one out after going the wrong way one time)",
+      "start": 403.3,
+      "end": 409.86
+    },
+    {
+      "block": 42,
+      "text": "Throw your pack off and use it as a pillow.",
+      "start": 410.04,
+      "end": 412.6
+    },
+    {
+      "block": 42,
+      "text": "Your water bottle is especially comfortable if you can angle it right",
+      "start": 412.78,
+      "end": 416.38
+    },
+    {
+      "block": 43,
+      "text": "Set your alarm for 20 minutes",
+      "start": 416.56,
+      "end": 418.72
+    },
+    {
+      "block": 44,
+      "text": "Turn off your headlamp",
+      "start": 418.9,
+      "end": 420.74
+    },
+    {
+      "block": 45,
+      "text": "Pull your buff over your face so critters can\u2019t get at your face",
+      "start": 420.92,
+      "end": 424.36
+    },
+    {
+      "block": 46,
+      "text": "Sleep!",
+      "start": 424.54,
+      "end": 425.82
+    },
+    {
+      "block": 47,
+      "text": "For most of the rest of the race I did this when I felt extreme exhaustion.",
+      "start": 426.0,
+      "end": 429.84
+    },
+    {
+      "block": 47,
+      "text": "Because I was so tired I could instantly fall asleep.",
+      "start": 430.02,
+      "end": 433.22
+    },
+    {
+      "block": 47,
+      "text": "And when I woke up I felt mentally renewed.",
+      "start": 433.4,
+      "end": 435.96
+    },
+    {
+      "block": 47,
+      "text": "Each time I\u2019d wake up before my alarm, probably after 10 minutes.",
+      "start": 436.14,
+      "end": 440.06
+    },
+    {
+      "block": 48,
+      "text": "I found I needed 4 of these per night and I didn\u2019t need to feel the urge to fight off sleep.",
+      "start": 440.24,
+      "end": 445.04
+    },
+    {
+      "block": 48,
+      "text": "They also helped to break up the segments between aid stations when they felt too long.",
+      "start": 445.22,
+      "end": 449.54
+    },
+    {
+      "block": 48,
+      "text": "I only did trail naps during the night.",
+      "start": 449.72,
+      "end": 452.12
+    },
+    {
+      "block": 48,
+      "text": "During daylight hours, I never felt tired.",
+      "start": 452.3,
+      "end": 455.18
+    },
+    {
+      "block": 49,
+      "text": "Scary parts of the race for me",
+      "start": 455.36,
+      "end": 457.44
+    },
+    {
+      "block": 50,
+      "text": "There was only one section of the course that was too cold and I couldn\u2019t sleep but knew I needed to.",
+      "start": 457.62,
+      "end": 462.58
+    },
+    {
+      "block": 50,
+      "text": "I was extremely sleep deprived and extremely confused.",
+      "start": 462.76,
+      "end": 466.2
+    },
+    {
+      "block": 50,
+      "text": "I forgot where I was and what I was doing.",
+      "start": 466.38,
+      "end": 468.78
+    },
+    {
+      "block": 50,
+      "text": "I just felt that I had to keep running.",
+      "start": 468.96,
+      "end": 471.12
+    },
+    {
+      "block": 50,
+      "text": "My brain was reduced to its most primal functioning and instincts.",
+      "start": 471.3,
+      "end": 474.9
+    },
+    {
+      "block": 50,
+      "text": "\u201cGet the number on your watch to 36\u201d.",
+      "start": 475.08,
+      "end": 477.8
+    },
+    {
+      "block": 50,
+      "text": "But what does 36 mean?",
+      "start": 477.98,
+      "end": 479.98
+    },
+    {
+      "block": 50,
+      "text": "I don\u2019t know but we have to do it.",
+      "start": 480.16,
+      "end": 482.48
+    },
+    {
+      "block": 50,
+      "text": "Tyrion Lannister says you must.",
+      "start": 482.66,
+      "end": 484.82
+    },
+    {
+      "block": 50,
+      "text": "Wait, that doesn\u2019t make sense\u2026 It must be because I was listening to Game of Thrones earlier. 36 came and went with no aid station or relief.",
+      "start": 485.0,
+      "end": 492.68
+    },
+    {
+      "block": 50,
+      "text": "Maybe I followed the wrong number?",
+      "start": 492.86,
+      "end": 494.94
+    },
+    {
+      "block": 50,
+      "text": "How do you follow a number?",
+      "start": 495.12,
+      "end": 496.96
+    },
+    {
+      "block": 50,
+      "text": "Huh?",
+      "start": 497.14,
+      "end": 498.34
+    },
+    {
+      "block": 50,
+      "text": "Why am I running?",
+      "start": 498.52,
+      "end": 500.12
+    },
+    {
+      "block": 50,
+      "text": "When I made it to the actual aid station I took a proper nap because I needed it.",
+      "start": 500.3,
+      "end": 504.94
+    },
+    {
+      "block": 50,
+      "text": "The 36 shown on my watch I now realize was the distance in km remaining to finish the race. 21.5 miles from Walnut Canyon aid station to the end, I was wrong by 2 on the number I was trying to reach. 21.5mi is 34.6km, not 36km.",
+      "start": 505.12,
+      "end": 522.72
+    },
+    {
+      "block": 51,
+      "text": "Another scary section was after the night time water crossing and after a massive climb.",
+      "start": 522.9,
+      "end": 527.62
+    },
+    {
+      "block": 51,
+      "text": "I found it very hard to navigate to find a water station (I was nearly out) and it was also freezing cold.",
+      "start": 527.8,
+      "end": 533.88
+    },
+    {
+      "block": 51,
+      "text": "Luckily I had clothes in my pack to put on or else I would have been in trouble.",
+      "start": 534.06,
+      "end": 537.9
+    },
+    {
+      "block": 51,
+      "text": "It was extremely windy and cold.",
+      "start": 538.08,
+      "end": 540.56
+    },
+    {
+      "block": 51,
+      "text": "There was no one around and I felt a little worried.",
+      "start": 540.74,
+      "end": 543.54
+    },
+    {
+      "block": 51,
+      "text": "I threw off my pack and quickly put on all the extra clothes I had.",
+      "start": 543.72,
+      "end": 547.56
+    },
+    {
+      "block": 51,
+      "text": "I was warm enough.",
+      "start": 547.74,
+      "end": 549.42
+    },
+    {
+      "block": 51,
+      "text": "In all seriousness there was a required checkin and gear check by the race organizers before this section.",
+      "start": 549.6,
+      "end": 554.96
+    },
+    {
+      "block": 51,
+      "text": "Thankfully they knew what they were doing and thankfully I had the gear that I needed in that drop bag.",
+      "start": 555.14,
+      "end": 559.86
+    },
+    {
+      "block": 52,
+      "text": "Weather",
+      "start": 560.04,
+      "end": 561.24
+    },
+    {
+      "block": 53,
+      "text": "This race traverses diverse terrain, including mountain ranges, deserts, cities, and river crossings, both during the day and at night.",
+      "start": 561.42,
+      "end": 569.18
+    },
+    {
+      "block": 53,
+      "text": "Temperatures can vary drastically, ranging from 100\u00b0F to 20\u00b0F.",
+      "start": 569.36,
+      "end": 575.28
+    },
+    {
+      "block": 53,
+      "text": "There were moments when I felt overheated, while at other times, I bundled up in two pairs of pants and a whopping five layers of tops!",
+      "start": 575.46,
+      "end": 582.5
+    },
+    {
+      "block": 54,
+      "text": "Mistakes (near fatal and minor)",
+      "start": 582.68,
+      "end": 585.32
+    },
+    {
+      "block": 55,
+      "text": "You can\u2019t go into a multi day race like this without making mistakes.",
+      "start": 585.5,
+      "end": 589.1
+    },
+    {
+      "block": 55,
+      "text": "You know going in that you will make them and you need to figure things out as you go.",
+      "start": 589.28,
+      "end": 593.12
+    },
+    {
+      "block": 56,
+      "text": "My first mistake was that I forgot to take the salt pills out of my first drop bag for the first section, which is the longest and most difficult segment of the race.",
+      "start": 593.3,
+      "end": 601.22
+    },
+    {
+      "block": 56,
+      "text": "You wouldn\u2019t see another drop bag for 7-12 hours and it was covering the hottest part of the day.",
+      "start": 601.4,
+      "end": 606.36
+    },
+    {
+      "block": 56,
+      "text": "This was the one segment you should have really NOT forgotten salt pills.",
+      "start": 606.54,
+      "end": 610.22
+    },
+    {
+      "block": 56,
+      "text": "I planned to take 2 salt pills every hour.",
+      "start": 610.4,
+      "end": 613.2
+    },
+    {
+      "block": 56,
+      "text": "I navigated this problem by prioritizing salty options I had packed and filling all my bottles with Gnarly nutrition drink mix at the only aid station during this section.",
+      "start": 613.38,
+      "end": 621.78
+    },
+    {
+      "block": 57,
+      "text": "During that first very hard segment I also made my second mistake.",
+      "start": 621.96,
+      "end": 625.88
+    },
+    {
+      "block": 57,
+      "text": "You are required to be carrying 4L of water after the aid station in that section and the next water station has a fill limit of 1L only.",
+      "start": 626.06,
+      "end": 633.82
+    },
+    {
+      "block": 57,
+      "text": "I carried 4.5L just to be on the safe side because this was the hardest part of the course and many people in the first year ran out of water.",
+      "start": 634.0,
+      "end": 641.28
+    },
+    {
+      "block": 57,
+      "text": "I topped off to get the 1L at the aid station, and dropped a wrapper out of my vest.",
+      "start": 641.46,
+      "end": 646.1
+    },
+    {
+      "block": 57,
+      "text": "I bent down to pick it up and the pressure on the bladder of me bending down made a SPLASH down my back.",
+      "start": 646.28,
+      "end": 651.48
+    },
+    {
+      "block": 57,
+      "text": "My 2L bladder of water on my bag split open and went down my back.",
+      "start": 651.66,
+      "end": 655.82
+    },
+    {
+      "block": 57,
+      "text": "I lost about 1L of water.",
+      "start": 656.0,
+      "end": 658.24
+    },
+    {
+      "block": 57,
+      "text": "This was refreshing, but very concerning.",
+      "start": 658.42,
+      "end": 661.3
+    },
+    {
+      "block": 57,
+      "text": "I had to finish the segment they warn you about the most with less water than they say you will absolutely need.",
+      "start": 661.48,
+      "end": 666.76
+    },
+    {
+      "block": 58,
+      "text": "I forgot my hat at the first drop bag so didn\u2019t have a hat until the second day.",
+      "start": 666.94,
+      "end": 671.26
+    },
+    {
+      "block": 58,
+      "text": "Luckily later in the day when I was suffering from heat exhaustion I found a hat on the ground.",
+      "start": 671.44,
+      "end": 676.32
+    },
+    {
+      "block": 58,
+      "text": "I found no shame in putting it on my head and being proud of my find.",
+      "start": 676.5,
+      "end": 680.18
+    },
+    {
+      "block": 58,
+      "text": "I was near heat exhaustion and I really needed that hat!",
+      "start": 680.36,
+      "end": 683.64
+    },
+    {
+      "block": 58,
+      "text": "I had a new hat in my drop bag for the 3rd day so I dropped off the found hat to an aid station and asked them to put it in lost and found (if such a thing exists, I don\u2019t know).",
+      "start": 683.82,
+      "end": 692.86
+    },
+    {
+      "block": 59,
+      "text": "After my first trail nap, I woke up and proceeded to go down the trail the wrong way.",
+      "start": 693.04,
+      "end": 697.76
+    },
+    {
+      "block": 59,
+      "text": "Luckily I saw a headlamp within 5 minutes coming towards me.",
+      "start": 697.94,
+      "end": 701.38
+    },
+    {
+      "block": 60,
+      "text": "At the very last segment of the race I missed a turn.",
+      "start": 701.56,
+      "end": 704.6
+    },
+    {
+      "block": 60,
+      "text": "I thought you just kept going down a very long path to the finish so I didn\u2019t bother checking my GPS until too late.",
+      "start": 704.78,
+      "end": 710.86
+    },
+    {
+      "block": 60,
+      "text": "I probably went 1mi down too far and had to climb back up to find the turn.",
+      "start": 711.04,
+      "end": 715.52
+    },
+    {
+      "block": 61,
+      "text": "I rolled my ankle while crossing a creek on the first night.",
+      "start": 715.7,
+      "end": 718.98
+    },
+    {
+      "block": 61,
+      "text": "This was the same bad ankle that I rolled for the Rim2Rim2Rim run a month prior.",
+      "start": 719.16,
+      "end": 723.64
+    },
+    {
+      "block": 61,
+      "text": "I was very worried, I could feel pain on every step.",
+      "start": 723.82,
+      "end": 727.1
+    },
+    {
+      "block": 61,
+      "text": "They wrapped it for me on the next aid station and ibuprofen became a necessity throughout the rest of the run.",
+      "start": 727.28,
+      "end": 732.64
+    },
+    {
+      "block": 61,
+      "text": "By the second day the pain in my ankle went away completely.",
+      "start": 732.82,
+      "end": 736.18
+    },
+    {
+      "block": 61,
+      "text": "But a couple days after the race I saw my foot balloon in size to the point that I couldn\u2019t get a shoe on.",
+      "start": 736.36,
+      "end": 741.56
+    },
+    {
+      "block": 62,
+      "text": "During a small stream crossing during the day I accidentally dropped a headphone in the water.",
+      "start": 741.74,
+      "end": 746.38
+    },
+    {
+      "block": 62,
+      "text": "I tried to find it but I couldn\u2019t.",
+      "start": 746.56,
+      "end": 748.64
+    },
+    {
+      "block": 63,
+      "text": "Foot maintenance was my biggest mistake.",
+      "start": 748.82,
+      "end": 751.3
+    },
+    {
+      "block": 63,
+      "text": "I did change socks and clean them off but it wasn\u2019t enough.",
+      "start": 751.48,
+      "end": 754.6
+    },
+    {
+      "block": 63,
+      "text": "I should have pre-taped them.",
+      "start": 754.78,
+      "end": 756.62
+    },
+    {
+      "block": 63,
+      "text": "I should have lubed them on each drop bag.",
+      "start": 756.8,
+      "end": 759.04
+    },
+    {
+      "block": 63,
+      "text": "I should have even carried socks with me between drop bags to change them even more often.",
+      "start": 759.22,
+      "end": 763.78
+    },
+    {
+      "block": 64,
+      "text": "Poles!",
+      "start": 763.96,
+      "end": 765.32
+    },
+    {
+      "block": 64,
+      "text": "I was originally planning to use my poles only for the first section, and put them in a drop bag that was transported near the end.",
+      "start": 765.5,
+      "end": 771.98
+    },
+    {
+      "block": 64,
+      "text": "I am 100% certain that if I didn\u2019t keep my poles I would have DNF\u2019ed (ending the race with a did not finish result) this technical terrain race.",
+      "start": 772.16,
+      "end": 780.24
+    },
+    {
+      "block": 64,
+      "text": "They were absolutely essential.",
+      "start": 780.42,
+      "end": 782.66
+    },
+    {
+      "block": 64,
+      "text": "Luckily I didn\u2019t follow my plan for that one.",
+      "start": 782.84,
+      "end": 785.4
+    },
+    {
+      "block": 65,
+      "text": "The race guide did mention I should have trail gloves.",
+      "start": 785.58,
+      "end": 788.54
+    },
+    {
+      "block": 65,
+      "text": "I couldn\u2019t figure out what those were though so I didn\u2019t bring them.",
+      "start": 788.72,
+      "end": 792.0
+    },
+    {
+      "block": 65,
+      "text": "I think they would have helped keep me cool, keep my hands unburnt (the only part of me that got burnt), and avoid blisters on my hands from the frequent pole usage.",
+      "start": 792.18,
+      "end": 800.34
+    },
+    {
+      "block": 66,
+      "text": "I nearly ran out of battery a couple times.",
+      "start": 800.52,
+      "end": 803.16
+    },
+    {
+      "block": 66,
+      "text": "I recommend a good backup battery to exchange at each drop bag.",
+      "start": 803.34,
+      "end": 807.02
+    },
+    {
+      "block": 66,
+      "text": "Don\u2019t worry about the weight.",
+      "start": 807.2,
+      "end": 808.96
+    },
+    {
+      "block": 66,
+      "text": "Some of the battery backups I had were not enough to charge my phone, headphones, watch, and headlamp when needed.",
+      "start": 809.14,
+      "end": 815.3
+    },
+    {
+      "block": 67,
+      "text": "Navigation",
+      "start": 815.48,
+      "end": 817.0
+    },
+    {
+      "block": 68,
+      "text": "I was worried about navigation because during a long race like this people tend to get pretty spread out.",
+      "start": 817.18,
+      "end": 822.3
+    },
+    {
+      "block": 68,
+      "text": "I couldn\u2019t rely on following someone through a confusing part of the course.",
+      "start": 822.48,
+      "end": 826.16
+    },
+    {
+      "block": 69,
+      "text": "I used an app named Gaia which loaded the GPX file to show you the route and where you are located on (or off!) the route.",
+      "start": 826.34,
+      "end": 833.14
+    },
+    {
+      "block": 69,
+      "text": "I learned during the race that if you use \u201cBattery Saver\u201d on your phone then the precision is not as good.",
+      "start": 833.32,
+      "end": 838.68
+    },
+    {
+      "block": 69,
+      "text": "Turning this off helped me later in the course a couple times.",
+      "start": 838.86,
+      "end": 842.22
+    },
+    {
+      "block": 69,
+      "text": "Sometimes the app shows the arrow you\u2019re pointing in the wrong direction making things confusing.",
+      "start": 842.4,
+      "end": 846.96
+    },
+    {
+      "block": 69,
+      "text": "The only way I found to get around this was to pan the map to the corner of my screen and see if I went offscreen or more on screen to determine my direction.",
+      "start": 847.14,
+      "end": 854.74
+    },
+    {
+      "block": 70,
+      "text": "This is the first time I loaded the GPX file onto my Garmin watch and it was buggy, but overall extremely helpful.",
+      "start": 854.92,
+      "end": 861.24
+    },
+    {
+      "block": 70,
+      "text": "It showed you in a very zoomed in way where you were going next.",
+      "start": 861.42,
+      "end": 864.78
+    },
+    {
+      "block": 70,
+      "text": "The problem was that it often said off course when you weren\u2019t off course and would often lock up the course navigation data screen.",
+      "start": 864.96,
+      "end": 871.44
+    },
+    {
+      "block": 70,
+      "text": "If it locked up I did luckily find a work around though.",
+      "start": 871.62,
+      "end": 874.74
+    },
+    {
+      "block": 70,
+      "text": "You could stop the course on the watch, and then go into settings and restart the course navigation.",
+      "start": 874.92,
+      "end": 879.96
+    },
+    {
+      "block": 70,
+      "text": "It continued where you left off.",
+      "start": 880.14,
+      "end": 882.3
+    },
+    {
+      "block": 71,
+      "text": "Overall the distance was 12.461mi more than it was supposed to be for me.",
+      "start": 882.48,
+      "end": 887.92
+    },
+    {
+      "block": 71,
+      "text": "This was due to a couple wrong turns and just to the GPX not matching exactly what the course was showing.",
+      "start": 888.1,
+      "end": 893.62
+    },
+    {
+      "block": 71,
+      "text": "Sometimes you were wondering if you were off the GPX because you missed a turn, or because it just changed slightly.",
+      "start": 893.8,
+      "end": 899.72
+    },
+    {
+      "block": 71,
+      "text": "So you\u2019d go back and check to see if you missed anything and you\u2019d find a flag that proved you were on the right track.",
+      "start": 899.9,
+      "end": 905.02
+    },
+    {
+      "block": 72,
+      "text": "Water crossings",
+      "start": 905.2,
+      "end": 906.96
+    },
+    {
+      "block": 73,
+      "text": "This race marked my first encounter with water crossings.",
+      "start": 907.14,
+      "end": 910.5
+    },
+    {
+      "block": 73,
+      "text": "Initially, the course was designed to include three water crossings, but one was rerouted due to high water levels that rendered it unsafe to cross.",
+      "start": 910.68,
+      "end": 918.52
+    },
+    {
+      "block": 74,
+      "text": "I was keen on keeping my shoes and socks dry to prevent blisters, which could result from wet footwear or sediment from the river getting trapped in my shoes.",
+      "start": 918.7,
+      "end": 926.38
+    },
+    {
+      "block": 75,
+      "text": "To prepare for the two remaining water crossings, I packed water shoes in the drop bags at the preceding aid stations.",
+      "start": 926.56,
+      "end": 932.72
+    },
+    {
+      "block": 76,
+      "text": "The first crossing was relatively straightforward, but the second proved more challenging.",
+      "start": 932.9,
+      "end": 937.54
+    },
+    {
+      "block": 76,
+      "text": "The water reached above my knees, and the crossing took place at night, making it cold and unstable.",
+      "start": 937.72,
+      "end": 943.24
+    },
+    {
+      "block": 76,
+      "text": "A rope stretched across the crossing provided some support.",
+      "start": 943.42,
+      "end": 946.7
+    },
+    {
+      "block": 76,
+      "text": "My primary concern was accidentally dropping and losing a shoe in the water, which would have spelled the end of my race.",
+      "start": 946.88,
+      "end": 953.04
+    },
+    {
+      "block": 76,
+      "text": "I noticed that most participants either kept their shoes and socks on or removed only their socks for the crossing.",
+      "start": 953.22,
+      "end": 959.14
+    },
+    {
+      "block": 76,
+      "text": "However, I didn\u2019t want to take any chances, and I believe that the extra five minutes spent changing shoes had no significant impact on my finishing time.",
+      "start": 959.32,
+      "end": 967.0
+    },
+    {
+      "block": 77,
+      "text": "Takeaway goals going into the race",
+      "start": 967.18,
+      "end": 969.5
+    },
+    {
+      "block": 78,
+      "text": "I had some very specific takeaway goals I wanted to get out of this race.",
+      "start": 969.68,
+      "end": 973.76
+    },
+    {
+      "block": 79,
+      "text": "\u2705 I wanted to get past the mental barrier of running for more than 2 full days.",
+      "start": 973.94,
+      "end": 978.1
+    },
+    {
+      "block": 79,
+      "text": "In fact I now know I can run for over 100 hours. \u2705 I wanted to try a 200-mile race, I read in awe about this distance several times before. \u2705 I wanted to get better at using my poles. \u2705 I wanted to experience the beauty of Arizona in the most intimate way.",
+      "start": 978.28,
+      "end": 992.04
+    },
+    {
+      "block": 80,
+      "text": "Race organization",
+      "start": 992.22,
+      "end": 994.06
+    },
+    {
+      "block": 81,
+      "text": "This race was put on by Aravaipa.",
+      "start": 994.24,
+      "end": 996.56
+    },
+    {
+      "block": 81,
+      "text": "I had won one event before by Aravaipa during COVID times, a last man standing event named The Lone Cactus.",
+      "start": 996.74,
+      "end": 1002.74
+    },
+    {
+      "block": 82,
+      "text": "Aravaipa truly demonstrated their professionalism in organizing and running the race.",
+      "start": 1002.92,
+      "end": 1007.56
+    },
+    {
+      "block": 82,
+      "text": "The race director Steve Aderholt is a master at organizing races.",
+      "start": 1007.74,
+      "end": 1011.74
+    },
+    {
+      "block": 82,
+      "text": "Both Steve and Jamil Coury (an owner and CEO of Aravaipa) were everywhere on the course.",
+      "start": 1011.92,
+      "end": 1017.44
+    },
+    {
+      "block": 82,
+      "text": "The dedicated volunteers at the aid stations went above and beyond to cater to our needs and provide any assistance required.",
+      "start": 1017.62,
+      "end": 1024.1
+    },
+    {
+      "block": 82,
+      "text": "The medics were very friendly and helped with foot care and other problems when you needed it.",
+      "start": 1024.28,
+      "end": 1029.08
+    },
+    {
+      "block": 83,
+      "text": "With around 20 aid stations strategically placed along the route, half of them offered drop bag access.",
+      "start": 1029.26,
+      "end": 1034.86
+    },
+    {
+      "block": 83,
+      "text": "Additionally, a few water stations were available to help runners tackle longer segments.",
+      "start": 1035.04,
+      "end": 1040.0
+    },
+    {
+      "block": 83,
+      "text": "Much of this course is at remote locations, so it is truly exceptional that they can pull this together.",
+      "start": 1040.18,
+      "end": 1045.7
+    },
+    {
+      "block": 84,
+      "text": "Aravaipa ensured that each participant had access to a \u201cRace Command\u201d phone number capable of receiving text messages in case assistance was needed on the course.",
+      "start": 1045.88,
+      "end": 1053.96
+    },
+    {
+      "block": 84,
+      "text": "I personally used this service a couple of times, including once in the middle of the night, and received prompt responses each time.",
+      "start": 1054.14,
+      "end": 1061.02
+    },
+    {
+      "block": 85,
+      "text": "There were little touches sprinkled everywhere such as the bibs having your country on them.",
+      "start": 1061.2,
+      "end": 1065.6
+    },
+    {
+      "block": 85,
+      "text": "They made sure they got your picture at check-in and on finish.",
+      "start": 1065.78,
+      "end": 1069.06
+    },
+    {
+      "block": 85,
+      "text": "Offering vegan options at every aid station.",
+      "start": 1069.24,
+      "end": 1072.12
+    },
+    {
+      "block": 86,
+      "text": "The course was marked very well considering the distance.",
+      "start": 1072.3,
+      "end": 1075.34
+    },
+    {
+      "block": 86,
+      "text": "I think they promised a course marker at least every 0.5 miles but there were more than that.",
+      "start": 1075.52,
+      "end": 1080.8
+    },
+    {
+      "block": 86,
+      "text": "The only minor criticism here is that some of them were hard to see at night with the tape not being reflective and having a separate (I believe sometimes 1 sided) reflector, or no reflector at all on some.",
+      "start": 1080.98,
+      "end": 1091.54
+    },
+    {
+      "block": 86,
+      "text": "They did make it very clear that you needed to use your GPX file though for navigation so the markers themselves were just icing on the cake.",
+      "start": 1091.72,
+      "end": 1099.16
+    },
+    {
+      "block": 87,
+      "text": "There were 2 other races Sedona Canyons 125 and Elden Crest 36 that overlapped the same terrain as Cocodona 250.",
+      "start": 1099.34,
+      "end": 1107.98
+    },
+    {
+      "block": 87,
+      "text": "It was very nice to see more fresh people to talk with during the race.",
+      "start": 1108.16,
+      "end": 1111.84
+    },
+    {
+      "block": 88,
+      "text": "The live coverage and live tracking was really awesome.",
+      "start": 1112.02,
+      "end": 1115.14
+    },
+    {
+      "block": 88,
+      "text": "They did an amazing job at putting on a show for people to follow.",
+      "start": 1115.32,
+      "end": 1118.92
+    },
+    {
+      "block": 88,
+      "text": "Ultra running is often overlooked but Araviapa knows how to make it exciting for viewers to follow for days.",
+      "start": 1119.1,
+      "end": 1125.02
+    },
+    {
+      "block": 89,
+      "text": "Race Prep",
+      "start": 1125.2,
+      "end": 1126.64
+    },
+    {
+      "block": 90,
+      "text": "To prepare for the race I read the race guide several times over.",
+      "start": 1126.82,
+      "end": 1130.26
+    },
+    {
+      "block": 90,
+      "text": "I did not have a crew and I did not have a pacer, so I quickly figured out that the drop bag aid stations were my lifelines.",
+      "start": 1130.44,
+      "end": 1136.68
+    },
+    {
+      "block": 90,
+      "text": "I would need to plan and organize around these drop bags to make sure I had all supplies needed between all aid stations that were between those aid stations.",
+      "start": 1136.86,
+      "end": 1144.3
+    },
+    {
+      "block": 91,
+      "text": "I worked on a spreadsheet for several weeks little bits at a time to wrap my head around everything.",
+      "start": 1144.48,
+      "end": 1149.12
+    },
+    {
+      "block": 91,
+      "text": "I referenced a downloaded copy of this spreadsheet several times throughout the race.",
+      "start": 1149.3,
+      "end": 1153.54
+    },
+    {
+      "block": 92,
+      "text": "At each aid station I had a checklist to go through so I wouldn\u2019t forget something important.",
+      "start": 1153.72,
+      "end": 1158.12
+    },
+    {
+      "block": 92,
+      "text": "It would be all too easy to end your race by forgetting to fill your water bottles.",
+      "start": 1158.3,
+      "end": 1162.46
+    },
+    {
+      "block": 93,
+      "text": "My own personal race command",
+      "start": 1162.64,
+      "end": 1164.72
+    },
+    {
+      "block": 94,
+      "text": "I had no crew or pacers, but my superhuman wife who was keeping everything going at home was my first line of virtual crew.",
+      "start": 1164.9,
+      "end": 1171.46
+    },
+    {
+      "block": 95,
+      "text": "She reminded me to sleep, and told me when I needed it.",
+      "start": 1171.64,
+      "end": 1174.92
+    },
+    {
+      "block": 95,
+      "text": "She sent me messages and called to keep me engaged when something interesting was happening.",
+      "start": 1175.1,
+      "end": 1179.42
+    },
+    {
+      "block": 95,
+      "text": "She told me when I appeared on the live streams and when the kids were watching.",
+      "start": 1179.6,
+      "end": 1183.36
+    },
+    {
+      "block": 95,
+      "text": "She sent pictures of things I was missing like the boys participating in track and field.",
+      "start": 1183.54,
+      "end": 1187.94
+    },
+    {
+      "block": 96,
+      "text": "The rest of my family were also extremely supportive throughout various messages and calls.",
+      "start": 1188.12,
+      "end": 1193.08
+    },
+    {
+      "block": 97,
+      "text": "After the race when I had to drive to my hotel she made sure to talk with me to keep me awake.",
+      "start": 1193.26,
+      "end": 1198.06
+    },
+    {
+      "block": 98,
+      "text": "Quitting",
+      "start": 1198.24,
+      "end": 1199.44
+    },
+    {
+      "block": 99,
+      "text": "At no point during the run did I consider quitting.",
+      "start": 1199.62,
+      "end": 1202.5
+    },
+    {
+      "block": 99,
+      "text": "I did fear making mistakes that would take me out of the race.",
+      "start": 1202.68,
+      "end": 1205.88
+    },
+    {
+      "block": 99,
+      "text": "I had many dark moments, but there was no part of me that would have given in to dark moments unless I physically collapsed.",
+      "start": 1206.06,
+      "end": 1212.22
+    },
+    {
+      "block": 100,
+      "text": "I did reach out for help in dark moments by for example talking through my blister pain.",
+      "start": 1212.4,
+      "end": 1217.2
+    },
+    {
+      "block": 101,
+      "text": "I decided before the race that I\u2019d draw inspiration from the Black Knight from Monty Python and never give up.",
+      "start": 1217.38,
+      "end": 1222.9
+    },
+    {
+      "block": 101,
+      "text": "I wore a pin to remind me of that promise.",
+      "start": 1223.08,
+      "end": 1225.72
+    },
+    {
+      "block": 102,
+      "text": "Dryness",
+      "start": 1225.9,
+      "end": 1227.26
+    },
+    {
+      "block": 103,
+      "text": "I wasn\u2019t prepared for how dry the desert would be.",
+      "start": 1227.44,
+      "end": 1230.24
+    },
+    {
+      "block": 103,
+      "text": "My nose was very blocked up and dry.",
+      "start": 1230.42,
+      "end": 1232.9
+    },
+    {
+      "block": 103,
+      "text": "The congestion expanded down to my throat and made my throat hurt.",
+      "start": 1233.08,
+      "end": 1236.84
+    },
+    {
+      "block": 103,
+      "text": "By the second day any time I spit it would contain blood.",
+      "start": 1237.02,
+      "end": 1240.3
+    },
+    {
+      "block": 103,
+      "text": "Normally I\u2019d be very concerned about this but I was feeling great at the time and I knew how dried out my nose was.",
+      "start": 1240.48,
+      "end": 1246.56
+    },
+    {
+      "block": 103,
+      "text": "It wasn\u2019t just one spit that had blood, it was every time I spit.",
+      "start": 1246.74,
+      "end": 1250.66
+    },
+    {
+      "block": 103,
+      "text": "I consulted my wife Shannon for help looking up if I was ok.",
+      "start": 1250.84,
+      "end": 1254.28
+    },
+    {
+      "block": 104,
+      "text": "What helped me most here is I took some chapstick (Tanri) off of the roller on my finger and shoved it into each nostril.",
+      "start": 1254.46,
+      "end": 1261.02
+    },
+    {
+      "block": 104,
+      "text": "I repeated this a few times until it felt better.",
+      "start": 1261.2,
+      "end": 1264.08
+    },
+    {
+      "block": 105,
+      "text": "Nutrition",
+      "start": 1264.26,
+      "end": 1265.7
+    },
+    {
+      "block": 106,
+      "text": "The aid stations were packed with food.",
+      "start": 1265.88,
+      "end": 1268.28
+    },
+    {
+      "block": 106,
+      "text": "I mostly eat vegan but I threw that all out during the race after the first day because I was craving meat.",
+      "start": 1268.46,
+      "end": 1274.06
+    },
+    {
+      "block": 106,
+      "text": "I am not religious about being vegan so I just went with what my body wanted.",
+      "start": 1274.24,
+      "end": 1278.32
+    },
+    {
+      "block": 107,
+      "text": "Sloppy Joe\u2019s vegan lentils and mashed potatoes and lasagna (vegan or meat) and salad at the top of Mingus Mountain",
+      "start": 1278.5,
+      "end": 1285.46
+    },
+    {
+      "block": 108,
+      "text": "The final climb",
+      "start": 1285.64,
+      "end": 1287.4
+    },
+    {
+      "block": 109,
+      "text": "The final big climb was on the second last segment to the end of the race.",
+      "start": 1287.58,
+      "end": 1291.34
+    },
+    {
+      "block": 109,
+      "text": "With over 240 miles into the race you had to climb a massive mountain.",
+      "start": 1291.52,
+      "end": 1295.84
+    },
+    {
+      "block": 109,
+      "text": "At this point during the race your mindset was unshakable.",
+      "start": 1296.02,
+      "end": 1299.3
+    },
+    {
+      "block": 109,
+      "text": "Even if the mountain had been twice its size, we would have taken it on without hesitation.",
+      "start": 1299.48,
+      "end": 1304.04
+    },
+    {
+      "block": 110,
+      "text": "The key to conquering this mountain was not in scaling its heights but in persistently moving forward, refusing to give up.",
+      "start": 1304.22,
+      "end": 1310.7
+    },
+    {
+      "block": 110,
+      "text": "This forward motion was a fitting metaphor for the race and, indeed, for any Herculean task life might throw at you.",
+      "start": 1310.88,
+      "end": 1317.52
+    },
+    {
+      "block": 110,
+      "text": "Just as with this mountain, success lies in our unwavering determination to make forward progress, no matter the size of the challenge.",
+      "start": 1317.7,
+      "end": 1324.82
+    },
+    {
+      "block": 110,
+      "text": "Focus on the small progress you make on each step and not on the unfathomably large task ahead.",
+      "start": 1325.0,
+      "end": 1330.28
+    },
+    {
+      "block": 111,
+      "text": "The finish",
+      "start": 1330.46,
+      "end": 1331.9
+    },
+    {
+      "block": 112,
+      "text": "As the final 5km approached, the atmosphere became electric with cheers and encouragement.",
+      "start": 1332.08,
+      "end": 1337.68
+    },
+    {
+      "block": 112,
+      "text": "A person live-streaming while running next to me captured the last moments of my race for all to see.",
+      "start": 1337.86,
+      "end": 1342.74
+    },
+    {
+      "block": 113,
+      "text": "Shannon kindly arranged for our three boys to watch their dad complete this incredible journey by getting them home from school a bit early.",
+      "start": 1342.92,
+      "end": 1349.64
+    },
+    {
+      "block": 114,
+      "text": "Throughout the race, I had envisioned myself breaking down in tears as I crossed the finish line.",
+      "start": 1349.82,
+      "end": 1354.78
+    },
+    {
+      "block": 114,
+      "text": "While those emotions did surface when the moment arrived, the actual ending was quite different than I had anticipated \u2013 a full-on sprint.",
+      "start": 1354.96,
+      "end": 1361.68
+    },
+    {
+      "block": 115,
+      "text": "In the last kilometer, a fellow runner made a bold move to overtake me.",
+      "start": 1361.86,
+      "end": 1366.1
+    },
+    {
+      "block": 115,
+      "text": "With my kids watching, I couldn\u2019t bear the thought of disappointing them.",
+      "start": 1366.28,
+      "end": 1369.96
+    },
+    {
+      "block": 115,
+      "text": "After pushing myself through this race with minimal sleep for over 100 hours, I wanted my children to witness me triumphantly finish, not fall behind in the final moments.",
+      "start": 1370.14,
+      "end": 1378.86
+    },
+    {
+      "block": 116,
+      "text": "As the runner began to pass me, I thought, \u201cNot today @%$!%#!%!\u201d Suddenly, all the pain in my feet vanished, pure adrenaline was pumping through my veins, and I sprinted as fast as I could.",
+      "start": 1379.04,
+      "end": 1391.76
+    },
+    {
+      "block": 116,
+      "text": "We raced neck and neck for a while before he finally fell back.",
+      "start": 1391.94,
+      "end": 1395.46
+    },
+    {
+      "block": 117,
+      "text": "I don\u2019t hold any grudges; it\u2019s a race, after all, and he had every right to pass me.",
+      "start": 1395.64,
+      "end": 1400.84
+    },
+    {
+      "block": 117,
+      "text": "But I also had the right \u2013 and the determination \u2013 to make my family and friends proud.",
+      "start": 1401.02,
+      "end": 1405.42
+    },
+    {
+      "block": 118,
+      "text": "Here\u2019s a link to the part of the live stream that I describe on YouTube.",
+      "start": 1405.6,
+      "end": 1409.12
+    },
+    {
+      "block": 119,
+      "text": "Just after the finish",
+      "start": 1409.3,
+      "end": 1411.14
+    },
+    {
+      "block": 120,
+      "text": "Upon finishing the race, I was awarded my 250-mile Cocodona belt buckle, a truly prized possession.",
+      "start": 1411.32,
+      "end": 1417.88
+    },
+    {
+      "block": 121,
+      "text": "At the last aid station, I had developed some stomach issues, so I made frequent visits to the restroom after crossing the finish line.",
+      "start": 1418.06,
+      "end": 1424.86
+    },
+    {
+      "block": 122,
+      "text": "The shuttle that would take me back to the starting line, where my car was parked, hadn\u2019t arrived yet, so I continued using the restroom.",
+      "start": 1425.04,
+      "end": 1431.92
+    },
+    {
+      "block": 122,
+      "text": "When I asked about the shuttle, they informed me it had already left.",
+      "start": 1432.1,
+      "end": 1435.62
+    },
+    {
+      "block": 122,
+      "text": "I felt bad for missing it and offered to call an Uber or Lyft.",
+      "start": 1435.8,
+      "end": 1439.24
+    },
+    {
+      "block": 122,
+      "text": "However, the race organizers were incredibly accommodating and kindly arranged for the shuttle to pull over and pick me up.",
+      "start": 1439.42,
+      "end": 1445.82
+    },
+    {
+      "block": 122,
+      "text": "Then they drove me over to meet the shuttle.",
+      "start": 1446.0,
+      "end": 1448.4
+    },
+    {
+      "block": 122,
+      "text": "The people in the shuttle were a lot of fun.",
+      "start": 1448.58,
+      "end": 1450.98
+    },
+    {
+      "block": 123,
+      "text": "My wife told me that the live stream announcers were excitedly discussing my company Brave\u2019s web browser and search engine.",
+      "start": 1451.16,
+      "end": 1457.4
+    },
+    {
+      "block": 123,
+      "text": "As well as the BAT cryptocurrency.",
+      "start": 1457.58,
+      "end": 1459.82
+    },
+    {
+      "block": 124,
+      "text": "Once I finally reached my hotel, I was starving.",
+      "start": 1460.0,
+      "end": 1463.2
+    },
+    {
+      "block": 124,
+      "text": "I downloaded Uber Eats and ordered a pizza, Greek salad, cheese sticks, and some other items, totaling over $100.",
+      "start": 1463.38,
+      "end": 1470.9
+    },
+    {
+      "block": 124,
+      "text": "When the food arrived, I savagely devoured everything in sight.",
+      "start": 1471.08,
+      "end": 1474.68
+    },
+    {
+      "block": 125,
+      "text": "The state of my body after the race",
+      "start": 1474.86,
+      "end": 1477.18
+    },
+    {
+      "block": 126,
+      "text": "What I can only describe as foot trauma was the main issue that I faced during and after the run.",
+      "start": 1477.36,
+      "end": 1482.4
+    },
+    {
+      "block": 126,
+      "text": "Usually when I do anything over 100 mi, I have no blisters.",
+      "start": 1482.58,
+      "end": 1486.74
+    },
+    {
+      "block": 126,
+      "text": "I sometimes lose a toenail or two or have blackened toenails.",
+      "start": 1486.92,
+      "end": 1490.68
+    },
+    {
+      "block": 126,
+      "text": "This time my feet had a dozen blisters and one of them I\u2019d describe as beyond a blister with tissue damage just below my toe box on the pad of my foot.",
+      "start": 1490.86,
+      "end": 1498.78
+    },
+    {
+      "block": 127,
+      "text": "What changed is that the course was full of rocks and was very technical, my feet were turning every which way when I ran.",
+      "start": 1498.96,
+      "end": 1505.04
+    },
+    {
+      "block": 127,
+      "text": "I was literally in the desert and there was sand and sediments that got in.",
+      "start": 1505.22,
+      "end": 1509.06
+    },
+    {
+      "block": 127,
+      "text": "Even after cleaning my feet and changing my socks at each drop bag location, it just wasn\u2019t enough.",
+      "start": 1509.24,
+      "end": 1514.6
+    },
+    {
+      "block": 127,
+      "text": "Without foot issues, I\u2019d have probably saved at least half a day on my time.",
+      "start": 1514.78,
+      "end": 1519.1
+    },
+    {
+      "block": 127,
+      "text": "It made running the last day of the race extremely painful on each step.",
+      "start": 1519.28,
+      "end": 1523.36
+    },
+    {
+      "block": 128,
+      "text": "This was the first long run that I didn\u2019t have stomach issues.",
+      "start": 1523.54,
+      "end": 1526.9
+    },
+    {
+      "block": 128,
+      "text": "I usually need Gravol to control my stomach being upset.",
+      "start": 1527.08,
+      "end": 1530.52
+    },
+    {
+      "block": 128,
+      "text": "As you do these types of long runs, your body sometimes surprises you, then you need to think back about, \u201cOK, what\u2019s different?\u201d There were 2 differences, the aid stations had loads of cooked real food, which I mostly ate instead of running food.",
+      "start": 1530.7,
+      "end": 1544.06
+    },
+    {
+      "block": 128,
+      "text": "And a lot of the running was at a lower intensity, because several sections of the course were simply not runnable because it was too technical.",
+      "start": 1544.24,
+      "end": 1550.96
+    },
+    {
+      "block": 129,
+      "text": "I flew out the morning after finishing the race at 6am.",
+      "start": 1551.14,
+      "end": 1554.34
+    },
+    {
+      "block": 129,
+      "text": "The trip through the airport was extremely painful.",
+      "start": 1554.52,
+      "end": 1557.48
+    },
+    {
+      "block": 129,
+      "text": "I had a walking pace of around 20s / meter.",
+      "start": 1557.66,
+      "end": 1560.78
+    },
+    {
+      "block": 129,
+      "text": "I had several people give me looks and one kind couple actually stopped to do a full-on preaching service for me to heal my body.",
+      "start": 1560.96,
+      "end": 1567.12
+    },
+    {
+      "block": 130,
+      "text": "I can\u2019t walk without crutches now, but I think I will be able to in about a week.",
+      "start": 1567.3,
+      "end": 1571.38
+    },
+    {
+      "block": 130,
+      "text": "My right ankle is very swollen and won\u2019t fit in my shoe and the bottom of my right foot hurts 10 out of 10 pain level when I put pressure on it.",
+      "start": 1571.56,
+      "end": 1578.68
+    },
+    {
+      "block": 131,
+      "text": "Tracking and stats",
+      "start": 1578.86,
+      "end": 1580.7
+    },
+    {
+      "block": 132,
+      "text": "The stats on my watch ended up being:",
+      "start": 1580.88,
+      "end": 1583.28
+    },
+    {
+      "block": 133,
+      "text": "Time duration: 102 hours, 41 minutes",
+      "start": 1583.46,
+      "end": 1587.38
+    },
+    {
+      "block": 134,
+      "text": "Distance: 262.461mi",
+      "start": 1587.56,
+      "end": 1592.12
+    },
+    {
+      "block": 135,
+      "text": "Elevation gain: 11,621m",
+      "start": 1592.3,
+      "end": 1596.54
+    },
+    {
+      "block": 136,
+      "text": "Average heart rate: 105 bpm",
+      "start": 1596.72,
+      "end": 1599.76
+    },
+    {
+      "block": 137,
+      "text": "Max heart rate: 185 bpm (I believe the last part of the race)",
+      "start": 1599.94,
+      "end": 1604.9
+    },
+    {
+      "block": 138,
+      "text": "Total calories burned: 33,501",
+      "start": 1605.08,
+      "end": 1609.08
+    },
+    {
+      "block": 139,
+      "text": "It wasn\u2019t until a couple of days after the race that I finally weighed myself.",
+      "start": 1609.26,
+      "end": 1613.5
+    },
+    {
+      "block": 139,
+      "text": "Despite consuming a significant amount of food, I found that I had lost around 5 pounds.",
+      "start": 1613.68,
+      "end": 1618.56
+    },
+    {
+      "block": 139,
+      "text": "This weight loss is likely to continue over the next few days as my body flushes out excess water and sodium while working to recover and rejuvenate itself.",
+      "start": 1618.74,
+      "end": 1626.66
+    },
+    {
+      "block": 140,
+      "text": "You can find the Strava activity here along with many more pictures.",
+      "start": 1626.84,
+      "end": 1630.44
+    },
+    {
+      "block": 141,
+      "text": "Props to Garmin for being able to track this activity completely with minimal problems.",
+      "start": 1630.62,
+      "end": 1635.18
+    },
+    {
+      "block": 141,
+      "text": "It did lock up once and I had to watch a YouTube video on how to force reboot my watch.",
+      "start": 1635.36,
+      "end": 1640.16
+    },
+    {
+      "block": 141,
+      "text": "But when I did it asked me if I wanted to continue my activity.",
+      "start": 1640.34,
+      "end": 1643.54
+    },
+    {
+      "block": 142,
+      "text": "The race itself had a live stream for the race duration as well as a couple different sites where you could see runners.",
+      "start": 1643.72,
+      "end": 1649.16
+    },
+    {
+      "block": 142,
+      "text": "Sometimes the sites would show runners as off course but they were actually on course.",
+      "start": 1649.34,
+      "end": 1653.9
+    },
+    {
+      "block": 143,
+      "text": "The inevitable question: Will I do it again?",
+      "start": 1654.08,
+      "end": 1657.12
+    },
+    {
+      "block": 144,
+      "text": "My answer is a resounding yes, as long as it doesn\u2019t impose too much on my wife and family.",
+      "start": 1657.3,
+      "end": 1662.5
+    },
+    {
+      "block": 145,
+      "text": "This extraordinary experience has enriched my very soul, leaving me with a deep sense of fulfillment.",
+      "start": 1662.68,
+      "end": 1668.36
+    },
+    {
+      "block": 145,
+      "text": "My hope is that it also serves as an inspiration for others to embrace life and utilize the unique gifts we\u2019ve been given to make the most of the time we have.",
+      "start": 1668.54,
+      "end": 1676.54
+    },
+    {
+      "block": 146,
+      "text": "I am so thankful for my health, my family, my friends, and for this experience.",
+      "start": 1676.72,
+      "end": 1681.76
+    },
+    {
+      "block": 146,
+      "text": "It is truly life changing.",
+      "start": 1681.94,
+      "end": 1684.02
+    }
+  ]
+}

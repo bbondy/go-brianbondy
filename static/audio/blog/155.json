@@ -1,0 +1,333 @@
+{
+  "post": 155,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "76c77c9aefdceb5cfbd814af30732718496635736646bb0ceb207b14f3dc7558",
+  "audioSHA256": "6376e1630e85c8070a30275af02f6a069ad04ee43c6feed3e15a95abe792f015",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "Up until recently, Metro Firefox was designed to use a separate profile from desktop Firefox.",
+      "start": 0.0,
+      "end": 5.76
+    },
+    {
+      "block": 0,
+      "text": "We had planned to rely on sync to bring the data from the 2 profiles together.",
+      "start": 5.94,
+      "end": 10.18
+    },
+    {
+      "block": 1,
+      "text": "We\u2019ve had feedback around this, and we\u2019ve found that a better experience would be obtained by sharing a single profile.",
+      "start": 10.36,
+      "end": 16.28
+    },
+    {
+      "block": 2,
+      "text": "We\u2019re in the process of implementing shared profiles.",
+      "start": 16.46,
+      "end": 19.5
+    },
+    {
+      "block": 3,
+      "text": "What is a profile?",
+      "start": 19.68,
+      "end": 21.44
+    },
+    {
+      "block": 4,
+      "text": "A profile in Firefox stores all of your personal settings, including: bookmarks, preferences, extensions, passwords, history, and more.",
+      "start": 21.62,
+      "end": 30.74
+    },
+    {
+      "block": 5,
+      "text": "We\u2019ll be sharing profiles from both applications, but there are some exceptions:",
+      "start": 30.92,
+      "end": 35.32
+    },
+    {
+      "block": 6,
+      "text": "Since addons are not initially supported in Metro Firefox, they won\u2019t be used in Metro Firefox even if they exist in the profile.",
+      "start": 35.5,
+      "end": 42.38
+    },
+    {
+      "block": 7,
+      "text": "To avoid unexpected problems with changed preferences exposed in one environment but not in the other, we\u2019re planning to keep most preferences separate.",
+      "start": 42.56,
+      "end": 50.32
+    },
+    {
+      "block": 8,
+      "text": "What are the upsides of having a shared profile?",
+      "start": 50.5,
+      "end": 53.38
+    },
+    {
+      "block": 9,
+      "text": "Sharing a single profile would allow you to instantly retain bookmarks, login status, cookies, and other profile data between environments.",
+      "start": 53.56,
+      "end": 61.32
+    },
+    {
+      "block": 10,
+      "text": "You would never need to wait for some kind of \u2018sync service\u2019 to complete its work to see your data in the other environment.",
+      "start": 61.5,
+      "end": 66.78
+    },
+    {
+      "block": 11,
+      "text": "Another task highly related to sharing a single profile is adding a \u201cRelaunch in Desktop\u201d option from Metro Firefox and a \u201cRelaunch in Metro\u201d option from Desktop Firefox.",
+      "start": 66.96,
+      "end": 76.16
+    },
+    {
+      "block": 12,
+      "text": "Are there any downsides to having a shared profile?",
+      "start": 76.34,
+      "end": 79.3
+    },
+    {
+      "block": 13,
+      "text": "Yes, but we believe them to be corner case issues that the user can work around, see below.",
+      "start": 79.48,
+      "end": 84.76
+    },
+    {
+      "block": 14,
+      "text": "The main disadvantage is that before you could run both Metro and Desktop browsers at the same time.",
+      "start": 84.94,
+      "end": 90.3
+    },
+    {
+      "block": 14,
+      "text": "This will change so that you can only run either one or the other at any given time.",
+      "start": 90.48,
+      "end": 94.72
+    },
+    {
+      "block": 15,
+      "text": "Windows 8 is a clash of 2 environments:",
+      "start": 94.9,
+      "end": 97.78
+    },
+    {
+      "block": 16,
+      "text": "a Desktop environment which is optimized for mouse and keyboard",
+      "start": 97.96,
+      "end": 101.72
+    },
+    {
+      "block": 17,
+      "text": "an immersive environment which is optimized for touch",
+      "start": 101.9,
+      "end": 104.94
+    },
+    {
+      "block": 18,
+      "text": "If you\u2019re using a keyboard and mouse, and since we will be having a shared profile, there is no reason you\u2019d want to use the Metro browser.",
+      "start": 105.12,
+      "end": 111.76
+    },
+    {
+      "block": 18,
+      "text": "If you really want to you can, but surely you don\u2019t need to use both Desktop and Metro at the same time.",
+      "start": 111.94,
+      "end": 117.54
+    },
+    {
+      "block": 19,
+      "text": "The opposite argument is also true for touch.",
+      "start": 117.72,
+      "end": 120.6
+    },
+    {
+      "block": 19,
+      "text": "Most of the time when using touch you\u2019ll want to use the Metro browser, but there are special cases where you\u2019ll want to switch, like if you need an addon or plugin to take effect.",
+      "start": 120.78,
+      "end": 129.02
+    },
+    {
+      "block": 20,
+      "text": "For users who really want to run both at the same time, they can force the use of a different profile using the -ProfileManager command line argument from Desktop Firefox.",
+      "start": 129.2,
+      "end": 138.32
+    },
+    {
+      "block": 21,
+      "text": "Will having a shared profile change the release date?",
+      "start": 138.5,
+      "end": 141.54
+    },
+    {
+      "block": 22,
+      "text": "Having a shared profile is not expected to change the release of Metro Firefox.",
+      "start": 141.72,
+      "end": 146.2
+    },
+    {
+      "block": 22,
+      "text": "A smooth async panning and zooming experience is being worked on before we want to release, and during that time we\u2019re implementing shared profiles.",
+      "start": 146.38,
+      "end": 153.9
+    },
+    {
+      "block": 23,
+      "text": "The switch to Desktop / Metro feature may not retain all opened tabs and filled in form status in v1 if time does not permit.",
+      "start": 154.08,
+      "end": 161.6
+    },
+    {
+      "block": 23,
+      "text": "We plan to use session restore to do this, but there\u2019s some non trivial work to do there.",
+      "start": 161.78,
+      "end": 166.74
+    },
+    {
+      "block": 24,
+      "text": "Where is this work being tracked?",
+      "start": 166.92,
+      "end": 169.0
+    },
+    {
+      "block": 25,
+      "text": "Shared profile work is being tracked in bug 924860.",
+      "start": 169.18,
+      "end": 174.06
+    },
+    {
+      "block": 26,
+      "text": "Other implementation details",
+      "start": 174.24,
+      "end": 176.56
+    },
+    {
+      "block": 27,
+      "text": "Browser chrome cache (not HTTP content cache) will be stored separately to avoid unexpected startup problems.",
+      "start": 176.74,
+      "end": 183.7
+    },
+    {
+      "block": 27,
+      "text": "Both browsers use the same User-Agent.",
+      "start": 183.88,
+      "end": 186.6
+    },
+    {
+      "block": 28,
+      "text": "We\u2019ll be using session restore to accomplish the Metro -> Desktop and Desktop -> Metro switch should time permit.",
+      "start": 186.78,
+      "end": 192.62
+    },
+    {
+      "block": 29,
+      "text": "If the Metro browser is already open, and you open a link from either Metro or Desktop, it will open in the already opened Metro browser.",
+      "start": 192.8,
+      "end": 200.08
+    },
+    {
+      "block": 29,
+      "text": "You have to switch to Desktop from within Metro to move environments.",
+      "start": 200.26,
+      "end": 203.86
+    },
+    {
+      "block": 30,
+      "text": "The same is true for the Desktop browser when already opened, and opening links from either environment.",
+      "start": 204.04,
+      "end": 209.4
+    },
+    {
+      "block": 31,
+      "text": "If the browser is not already open, a link click will open a new browser instance in the environment you are currently in.",
+      "start": 209.58,
+      "end": 215.74
+    },
+    {
+      "block": 32,
+      "text": "After the initial work is done, we\u2019ll want to add options to allow users to make their environment choice either i) act like above, or ii) make the mode switch persistent across launches.",
+      "start": 215.92,
+      "end": 226.0
+    },
+    {
+      "block": 33,
+      "text": "Current progress",
+      "start": 226.18,
+      "end": 227.94
+    },
+    {
+      "block": 34,
+      "text": "If you\u2019d like to see general progress of Metro Firefox you should use either the Nightly or Aurora builds.",
+      "start": 228.12,
+      "end": 233.72
+    },
+    {
+      "block": 35,
+      "text": "Current progress for profile sharing can be seen in Oak builds (Not recommended for general use).",
+      "start": 233.9,
+      "end": 239.34
+    },
+    {
+      "block": 35,
+      "text": "These patches will also move to mozilla-central (Nightly builds) after QA\u2019ing is done to ensure there is no harm to the Desktop profile.",
+      "start": 239.52,
+      "end": 247.52
+    },
+    {
+      "block": 36,
+      "text": "The completed list of tasks related to this feature so far include:",
+      "start": 247.7,
+      "end": 251.62
+    },
+    {
+      "block": 37,
+      "text": "Shared base app name which implies a shared profile",
+      "start": 251.8,
+      "end": 254.92
+    },
+    {
+      "block": 38,
+      "text": "Relaunch in Desktop feature (From the Metro browser)",
+      "start": 255.1,
+      "end": 258.54
+    },
+    {
+      "block": 39,
+      "text": "Relaunch in Metro feature (From the Desktop browser)",
+      "start": 258.72,
+      "end": 262.16
+    },
+    {
+      "block": 40,
+      "text": "Split preference files within the same profile",
+      "start": 262.34,
+      "end": 265.3
+    },
+    {
+      "block": 41,
+      "text": "Split startup cache files within the same profile",
+      "start": 265.48,
+      "end": 268.52
+    },
+    {
+      "block": 42,
+      "text": "Feedback",
+      "start": 268.7,
+      "end": 270.14
+    },
+    {
+      "block": 43,
+      "text": "Constructive feedback is appreciated and wanted.",
+      "start": 270.32,
+      "end": 273.36
+    },
+    {
+      "block": 43,
+      "text": "Please feel free to leave a comment here or post in the profile sharing tracking bug: Bug 924860.",
+      "start": 273.54,
+      "end": 280.82
+    }
+  ]
+}

@@ -1,0 +1,105 @@
+{
+  "post": 103,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "d72e6b7caa5cde0c4d0acd7351d0178a7e51415eb6d497078d31e40da950d99f",
+  "audioSHA256": "162e826447a868148068087a1fc92da3eb6539e632a05a5ca494e63e0aec0baa",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "\u2605\u2605\u2605\u2605\u2605 (5 stars out of 5)",
+      "start": 0.0,
+      "end": 3.04
+    },
+    {
+      "block": 1,
+      "text": "As a kid I remember feeling uninspired because there were genius\u2019 out there, and I wasn\u2019t one of them.",
+      "start": 3.22,
+      "end": 8.5
+    },
+    {
+      "block": 2,
+      "text": "How can I ever amount to anything when competing with such people?",
+      "start": 8.68,
+      "end": 12.28
+    },
+    {
+      "block": 3,
+      "text": "Although there are people with amazing mental abilities, most of the people I now consider a genius have no special mental ability, just determination and hard work which enabled their breakthroughs.",
+      "start": 12.46,
+      "end": 22.22
+    },
+    {
+      "block": 4,
+      "text": "I wanted to read this book because I spend a significant amount of time learning and doing work, and I figured this book would inspire me to stay along the same path.",
+      "start": 22.4,
+      "end": 30.4
+    },
+    {
+      "block": 4,
+      "text": "This book did indeed do what I wanted it to do, but the book covered a lot more as well.",
+      "start": 30.58,
+      "end": 35.14
+    },
+    {
+      "block": 5,
+      "text": "We tend to attribute innovation to a moment\u2019s insight or a lucky accident, but the true story behind innovation is much more exciting than the false stories we believe.",
+      "start": 35.32,
+      "end": 43.96
+    },
+    {
+      "block": 5,
+      "text": "There is no magic element which allowed past innovations to happen, simply hard work.",
+      "start": 44.14,
+      "end": 49.18
+    },
+    {
+      "block": 5,
+      "text": "Hard work which is based upon, and combined with existing hard work.",
+      "start": 49.36,
+      "end": 53.44
+    },
+    {
+      "block": 5,
+      "text": "Everyone that does hard work makes mistakes, encounters obstacles, and has failures.",
+      "start": 53.62,
+      "end": 58.82
+    },
+    {
+      "block": 5,
+      "text": "The people who succeed are the people that embrace these mistakes and take the opportunity to learn from them.",
+      "start": 59.0,
+      "end": 64.12
+    },
+    {
+      "block": 6,
+      "text": "This book inspires the reader to not only passively consume information and knowledge, but to be a creator instead.",
+      "start": 64.3,
+      "end": 70.7
+    },
+    {
+      "block": 7,
+      "text": "This book also covers many other topics surrounding ideas and innovations including reasons why ideas fail and succeed.",
+      "start": 70.88,
+      "end": 77.92
+    },
+    {
+      "block": 7,
+      "text": "An idea needs to be able to fit its surrounding environment for it to succeed, and as an innovator we need to frame the correct problems to solve before trying to solve them.",
+      "start": 78.1,
+      "end": 86.26
+    },
+    {
+      "block": 8,
+      "text": "The author (Scott Berkun) does an excellent job of not blindly giving his opinion, but backing up his claims with sources and situations throughout history.",
+      "start": 86.44,
+      "end": 95.0
+    },
+    {
+      "block": 8,
+      "text": "You can see the book The Myths of Innovation here.",
+      "start": 95.18,
+      "end": 97.9
+    }
+  ]
+}

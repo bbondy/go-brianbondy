@@ -1,0 +1,27 @@
+{
+  "post": 48,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "bd27c7ff4f78f104ddd408d50289d1a4c9b64f624db1f35504eebf5122ebe8a9",
+  "audioSHA256": "2d33de890c02567af43a534af29d9be69d6fbfa9d088457771c3a1cae38ad55a",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "I\u2019ve never seen windows work so fast and nicely before.",
+      "start": 0.0,
+      "end": 3.44
+    },
+    {
+      "block": 0,
+      "text": "And of course it\u2019s on apple hardware.",
+      "start": 3.62,
+      "end": 5.7
+    },
+    {
+      "block": 0,
+      "text": "Pretty funny",
+      "start": 5.88,
+      "end": 7.32
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "post": 96,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "4e35adb26d2f61ed6e39d8ca673a7b5d5b83eb9d1d70b406cce0293d801a0cc9",
+  "audioSHA256": "dfd62f9f4765a9b600b22a01660a26e8cb73c001b207ac8bfbc19505ccd86de7",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "July 1st 2010 I was happy to receive an email from Microsoft notifying me that I won one of the Microsoft Most Valuable Professional awards.",
+      "start": 0.0,
+      "end": 8.08
+    },
+    {
+      "block": 0,
+      "text": "Specifically I was awarded for Visual C++.",
+      "start": 8.26,
+      "end": 11.62
+    },
+    {
+      "block": 1,
+      "text": "From the award website:",
+      "start": 11.8,
+      "end": 13.8
+    },
+    {
+      "block": 2,
+      "text": "The Microsoft MVP Award recognizes exceptional technical community leaders from around the world who voluntarily share their high quality, real world expertise with others.",
+      "start": 13.98,
+      "end": 23.26
+    },
+    {
+      "block": 2,
+      "text": "Microsoft MVPs are a highly select group of experts representing technology\u2019s best and brightest who share a deep commitment to community and a willingness to help others.",
+      "start": 23.44,
+      "end": 32.24
+    },
+    {
+      "block": 2,
+      "text": "Worldwide, there are over 100 million participants in technical communities; of these participants, there are fewer than 4,000 active Microsoft MVPs.",
+      "start": 32.42,
+      "end": 41.46
+    },
+    {
+      "block": 3,
+      "text": "The award is well known and recognized in the tech industry and I\u2019m very honored to have received it.",
+      "start": 41.64,
+      "end": 47.0
+    },
+    {
+      "block": 4,
+      "text": "The award comes with many perks but the recognition and other MVP contacts that you make are invaluable.",
+      "start": 47.18,
+      "end": 52.78
+    },
+    {
+      "block": 5,
+      "text": "It seems that the primary reasons for winning the award was for contributions to stackoverflow (Q&A site for programmers), my blog website, MSDN related forums, and codeproject (Q&A)",
+      "start": 52.96,
+      "end": 64.48
+    }
+  ]
+}

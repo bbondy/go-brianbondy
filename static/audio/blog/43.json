@@ -1,0 +1,63 @@
+{
+  "post": 43,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "8edb0c0737de98a2035d6c10f12aa2e6c8c4c3edce6f6c796b81f9ab18adc09e",
+  "audioSHA256": "fb94f3de0e7056fac6fbeee3954abcb7cd04a36fc395872f2199f7a502b0034b",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "We\u2019re starting to see more and more contests which propel technology beyond their current boundaries.",
+      "start": 0.0,
+      "end": 5.12
+    },
+    {
+      "block": 0,
+      "text": "In these contents, an objective is given which has never been accomplished, and a cash prize is given for the first person or team of people to figure out the objective.",
+      "start": 5.3,
+      "end": 13.78
+    },
+    {
+      "block": 0,
+      "text": "This is a great thing, and wealthy people should be doing this same thing for their fields of interest.",
+      "start": 13.96,
+      "end": 19.0
+    },
+    {
+      "block": 0,
+      "text": "In 10 years or so, I plan to setup some similar prizes.",
+      "start": 19.18,
+      "end": 22.94
+    },
+    {
+      "block": 0,
+      "text": "It?s a good way to make your life useful and help advance civilization.",
+      "start": 23.12,
+      "end": 28.48
+    },
+    {
+      "block": 0,
+      "text": "I believe that this type of prize system will only increase in the future.",
+      "start": 28.66,
+      "end": 32.58
+    },
+    {
+      "block": 0,
+      "text": "It will become people?s full time careers to pursue some of these breakthroughs, or be sponsored by a company that is pursuing them.",
+      "start": 32.76,
+      "end": 39.72
+    },
+    {
+      "block": 0,
+      "text": "A good example of this is the Ansari X prize.",
+      "start": 39.9,
+      "end": 43.26
+    },
+    {
+      "block": 0,
+      "text": "Other more recent examples are the Hutter prize for compression human knowledge, and the anti-aging research prize.",
+      "start": 43.44,
+      "end": 49.52
+    }
+  ]
+}

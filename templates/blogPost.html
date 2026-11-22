@@ -9,8 +9,23 @@
     <div class="post-meta">
       <div class="datePosted">{{t "Posted on %s" (formatDate .BlogPost.Created)}}</div>
       <div class="reading-time">{{t "%d min read" .ReadingTime}}</div>
+      {{if .AudioURL}}
+      <div class="blog-audio-player" data-timings="{{.AudioTimingURL}}">
+        <audio controls preload="none" src="{{.AudioURL}}" aria-label="Listen to this post"></audio>
+        <div class="blog-audio-controls" hidden>
+          <button class="blog-audio-toggle" type="button" aria-label="Play narration" title="Play narration">▶</button>
+          <span class="blog-audio-label">Listen</span>
+          <input class="blog-audio-seek" type="range" min="0" max="1000" value="0" aria-label="Seek narration">
+          <span class="blog-audio-time" aria-live="off">0:00</span>
+        </div>
+      </div>
+      {{end}}
     </div>
-    <div>
+    {{if .AudioURL}}
+    <link rel="stylesheet" href="/static/css/blog-audio.css?v=2">
+    <script defer src="/static/js/blog-audio.js?v=2"></script>
+    {{end}}
+    <div class="blog-post-body"{{if .AudioURL}} id="narrated-post"{{end}}>
       {{optimizeImages .BlogPostBody}}
     </div>
     <div class="tags">

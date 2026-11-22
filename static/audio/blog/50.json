@@ -1,0 +1,27 @@
+{
+  "post": 50,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "e7cf26e7c23eab090dfab69e40743ffadd1d8377a37ba3374a549807e87ca0cd",
+  "audioSHA256": "c44e373da477cbb66af2798010c8bf45e3e3a478ed2ca1689fdf2acfcf6d1ece",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "Web tracking tool Google analytics is now open [here1.",
+      "start": 0.0,
+      "end": 3.6
+    },
+    {
+      "block": 0,
+      "text": "I tried it out and it is far superior to any other website tracking tool I\u2019ve used.",
+      "start": 3.78,
+      "end": 8.26
+    },
+    {
+      "block": 0,
+      "text": "It is still a little buggy though, but I\u2019m sure the bugs will be worked out soon.",
+      "start": 8.44,
+      "end": 12.68
+    }
+  ]
+}

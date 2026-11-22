@@ -1,0 +1,561 @@
+{
+  "post": 110,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "6e84231bec28a5f178fa9998c0bdee5269cdc04d531a9c99065e9c6db9df7f5e",
+  "audioSHA256": "0d70a128fb75728430073a470b2ec49d6abc4561e1f3dc161efd23b85be2ea5c",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "Most web developers have heard of, and used Firebug, but perhaps don\u2019t know its full power.",
+      "start": 0.0,
+      "end": 5.2
+    },
+    {
+      "block": 0,
+      "text": "Firebug is a debugger, editor, and monitor for websites, CSS, HTML, DOM, JavaScript, and HTTP.",
+      "start": 5.38,
+      "end": 13.86
+    },
+    {
+      "block": 0,
+      "text": "It was created by one of the original Firefox creators Joe Hewitt.",
+      "start": 14.04,
+      "end": 18.12
+    },
+    {
+      "block": 1,
+      "text": "Below I will list 12 of the most important things I feel web developers should know about Firebug.",
+      "start": 18.3,
+      "end": 23.42
+    },
+    {
+      "block": 2,
+      "text": "1.",
+      "start": 23.6,
+      "end": 24.8
+    },
+    {
+      "block": 2,
+      "text": "You can instantly find any part of the page\u2019s HTML with Firebug",
+      "start": 24.98,
+      "end": 29.06
+    },
+    {
+      "block": 3,
+      "text": "Have you ever used a background color property in HTML simply to see how big the element is?",
+      "start": 29.24,
+      "end": 34.28
+    },
+    {
+      "block": 3,
+      "text": "If so then you are wasting time.",
+      "start": 34.46,
+      "end": 36.62
+    },
+    {
+      "block": 4,
+      "text": "After Firebug is installed simply right click on any place of any web page and select Inspect Element.",
+      "start": 36.8,
+      "end": 42.24
+    },
+    {
+      "block": 4,
+      "text": "This will instantly bring up the HTML inspector along with the styling information on the right hand side.",
+      "start": 42.42,
+      "end": 47.86
+    },
+    {
+      "block": 5,
+      "text": "Once Firebug is open you can also click on the top left corner within Firebug, where the arrow is, and then use your mouse to hover over any part of the HTML page.",
+      "start": 48.04,
+      "end": 56.84
+    },
+    {
+      "block": 5,
+      "text": "Hovering over any HTML element will automatically highlight it for you in the actual HTML rendering.",
+      "start": 57.02,
+      "end": 62.54
+    },
+    {
+      "block": 6,
+      "text": "2.",
+      "start": 62.72,
+      "end": 63.92
+    },
+    {
+      "block": 6,
+      "text": "You can modify HTML and CSS with Firebug",
+      "start": 64.1,
+      "end": 67.54
+    },
+    {
+      "block": 7,
+      "text": "This includes editing HTML directly, adding attributes, removing elements, adding CSS styles, and more.",
+      "start": 67.72,
+      "end": 75.0
+    },
+    {
+      "block": 7,
+      "text": "When you change HTML the change will take place immediately on the rendered page.",
+      "start": 75.18,
+      "end": 79.42
+    },
+    {
+      "block": 8,
+      "text": "For bigger changes, you can even modify the entire HTML source at once instead of one element at a time.",
+      "start": 79.6,
+      "end": 85.68
+    },
+    {
+      "block": 9,
+      "text": "3.",
+      "start": 85.86,
+      "end": 87.14
+    },
+    {
+      "block": 9,
+      "text": "You can discover what properties a DOM element has and work with XML",
+      "start": 87.32,
+      "end": 91.4
+    },
+    {
+      "block": 10,
+      "text": "OK this one is actually two different items, but I messed up and put three twice :).",
+      "start": 91.58,
+      "end": 96.3
+    },
+    {
+      "block": 10,
+      "text": "Both features in #3 are independent though.",
+      "start": 96.48,
+      "end": 99.6
+    },
+    {
+      "block": 11,
+      "text": "After inspecting an HTML element you can click on the right tab called DOM and see a list of every property available to you in JavaScript to iterate over the DOM.",
+      "start": 99.78,
+      "end": 108.26
+    },
+    {
+      "block": 11,
+      "text": "You can also go to the JavaScript editor and use the auto complete by typing in any JavaScript code and pressing Tab to iterate over the DOM elements.",
+      "start": 108.44,
+      "end": 116.36
+    },
+    {
+      "block": 12,
+      "text": "To work with XML, simply open up an XML file and right click on any element.",
+      "start": 116.54,
+      "end": 121.5
+    },
+    {
+      "block": 12,
+      "text": "Select inspect element.",
+      "start": 121.68,
+      "end": 123.68
+    },
+    {
+      "block": 12,
+      "text": "Right clicking on the element in Firebug will then allow you to copy out the XPath location of the selected element.",
+      "start": 123.86,
+      "end": 129.78
+    },
+    {
+      "block": 13,
+      "text": "Of course this feature is also useful for HTML pages.",
+      "start": 129.96,
+      "end": 133.64
+    },
+    {
+      "block": 14,
+      "text": "4.You can use Firebug to execute arbitrary JavaScript code",
+      "start": 133.82,
+      "end": 138.22
+    },
+    {
+      "block": 15,
+      "text": "Want to execute new code within the context of the current page without reloading the current page?",
+      "start": 138.4,
+      "end": 143.36
+    },
+    {
+      "block": 16,
+      "text": "With Firebug open, simply click on the Console tab.",
+      "start": 143.54,
+      "end": 146.98
+    },
+    {
+      "block": 16,
+      "text": "You will see at the bottom of this window a prompt with 3 arrows: >>> These arrows allow you to type any arbitrary JavaScript code and execute it immediately.",
+      "start": 147.16,
+      "end": 156.84
+    },
+    {
+      "block": 16,
+      "text": "There is a small red button on the bottom right which allows you to execute a multiline JavaScript code.",
+      "start": 157.02,
+      "end": 162.46
+    },
+    {
+      "block": 17,
+      "text": "The JavaScript code even supports auto complete with all of the DOM elements that you are inspecting.",
+      "start": 162.64,
+      "end": 167.84
+    },
+    {
+      "block": 17,
+      "text": "Press Tab to iterate through (or Shift Tab) to go backwards.",
+      "start": 168.02,
+      "end": 172.1
+    },
+    {
+      "block": 18,
+      "text": "5.Firebug remembers your state across reloads.",
+      "start": 172.28,
+      "end": 175.88
+    },
+    {
+      "block": 19,
+      "text": "You can reload your page at any time and Firebug will automatically go back to the same part of the page it was at on the previous reload.",
+      "start": 176.06,
+      "end": 183.26
+    },
+    {
+      "block": 20,
+      "text": "6.You can use Firebug to try things out easily.",
+      "start": 183.44,
+      "end": 186.88
+    },
+    {
+      "block": 21,
+      "text": "You can use the JavaScript Console to execute code instantly and you have access to special variables like: \\(1 the last element you inspected \\)2 the 2nd last element you inspected",
+      "start": 187.06,
+      "end": 197.06
+    },
+    {
+      "block": 22,
+      "text": "7.",
+      "start": 197.24,
+      "end": 198.52
+    },
+    {
+      "block": 22,
+      "text": "You can use Firebug to visualize how a page is changing state",
+      "start": 198.7,
+      "end": 202.38
+    },
+    {
+      "block": 23,
+      "text": "Firebug will highlight any change in yellow as the change is happening.",
+      "start": 202.56,
+      "end": 206.24
+    },
+    {
+      "block": 23,
+      "text": "This is useful to visualize how the DOM changes after the page is loaded.",
+      "start": 206.42,
+      "end": 210.9
+    },
+    {
+      "block": 24,
+      "text": "8.",
+      "start": 211.08,
+      "end": 212.2
+    },
+    {
+      "block": 24,
+      "text": "Profile your JavaScript code",
+      "start": 212.38,
+      "end": 214.7
+    },
+    {
+      "block": 25,
+      "text": "With Firebug profiling you can start \u007fthe profiler, and then do any operation including a page reload, and then stop the profiler.",
+      "start": 214.88,
+      "end": 222.0
+    },
+    {
+      "block": 26,
+      "text": "On the Console tab simply click on the profile button, and then do whatever you want to measure, and when you are done hit the same button again.",
+      "start": 222.18,
+      "end": 229.06
+    },
+    {
+      "block": 27,
+      "text": "This will create an absolutely awesome list of functions, the amount of calls to each function, The percent of time spent in that function, and the min, max, and average time spent in each function.",
+      "start": 229.24,
+      "end": 239.48
+    },
+    {
+      "block": 28,
+      "text": "9.",
+      "start": 239.66,
+      "end": 240.94
+    },
+    {
+      "block": 28,
+      "text": "Profiling the rest of your web app",
+      "start": 241.12,
+      "end": 243.36
+    },
+    {
+      "block": 29,
+      "text": "For a breakdown of the entire page load time, you can click on the top level Net tab in Firebug.",
+      "start": 243.54,
+      "end": 249.3
+    },
+    {
+      "block": 29,
+      "text": "It will show you a graphical display of how long each HTTP request took and the size of each response.",
+      "start": 249.48,
+      "end": 255.56
+    },
+    {
+      "block": 30,
+      "text": "You can even expand each of these requests and see the request HTTP headers, the response HTTP headers, the actual response, and caching information.",
+      "start": 255.74,
+      "end": 265.1
+    },
+    {
+      "block": 30,
+      "text": "Looking at the response headers would be useful for example to see if compression was used to send your resource as the content encoding.",
+      "start": 265.28,
+      "end": 271.76
+    },
+    {
+      "block": 31,
+      "text": "You can filter this list on the toolbar just under the Net tab and select to only view HTML, CSS, JS, or other types of files.",
+      "start": 271.94,
+      "end": 280.26
+    },
+    {
+      "block": 31,
+      "text": "You can for example filter on images and see just how much data is sent for images.",
+      "start": 280.44,
+      "end": 285.08
+    },
+    {
+      "block": 32,
+      "text": "Even AJAX calls made after your page loads will automatically fill into this Net tab.",
+      "start": 285.26,
+      "end": 289.98
+    },
+    {
+      "block": 33,
+      "text": "10.",
+      "start": 290.16,
+      "end": 291.36
+    },
+    {
+      "block": 33,
+      "text": "Logging one or more JavaScript functions",
+      "start": 291.54,
+      "end": 294.18
+    },
+    {
+      "block": 34,
+      "text": "Every programmer knows that profiling is important, but just as important is logging so you can discover the sequence of calls in your program.",
+      "start": 294.36,
+      "end": 301.48
+    },
+    {
+      "block": 35,
+      "text": "You can right click on any function name in the function definition in the script viewer and select to log the function.",
+      "start": 301.66,
+      "end": 307.26
+    },
+    {
+      "block": 35,
+      "text": "You can do this for several different functions, but the only time I can get the menu item to show up is when I right click the actual function name when the debugger is paused.",
+      "start": 307.44,
+      "end": 315.44
+    },
+    {
+      "block": 36,
+      "text": "The console tab will then be filled with a message every time the log is called, and you can even see which parameter was passed in for each call.",
+      "start": 315.62,
+      "end": 322.82
+    },
+    {
+      "block": 36,
+      "text": "Once you have function logging turned on you can press F8 to run and watch the log tab fill in as you interact with the page.",
+      "start": 323.0,
+      "end": 329.08
+    },
+    {
+      "block": 37,
+      "text": "11.",
+      "start": 329.26,
+      "end": 330.54
+    },
+    {
+      "block": 37,
+      "text": "You can debug in Firebug",
+      "start": 330.72,
+      "end": 332.72
+    },
+    {
+      "block": 38,
+      "text": "In the script tab simply click on the left of the line number you\u2019d like to break on debugging and then reload your page.",
+      "start": 332.9,
+      "end": 338.66
+    },
+    {
+      "block": 39,
+      "text": "Press F10 to go to the next line.",
+      "start": 338.84,
+      "end": 341.16
+    },
+    {
+      "block": 40,
+      "text": "Press F8 to continue execution",
+      "start": 341.34,
+      "end": 343.9
+    },
+    {
+      "block": 41,
+      "text": "Press F11 to step into a function.",
+      "start": 344.08,
+      "end": 346.64
+    },
+    {
+      "block": 42,
+      "text": "Press Shift+F11 to step out of a function.",
+      "start": 346.82,
+      "end": 350.02
+    },
+    {
+      "block": 43,
+      "text": "Other useful things you can do when debugging:",
+      "start": 350.2,
+      "end": 352.76
+    },
+    {
+      "block": 44,
+      "text": "Use the watch window to see any variable\u2019s value while you are paused.",
+      "start": 352.94,
+      "end": 356.86
+    },
+    {
+      "block": 45,
+      "text": "Hover over any variable while the debugger is paused and see its value (as shown in the image above).",
+      "start": 357.04,
+      "end": 362.56
+    },
+    {
+      "block": 46,
+      "text": "When your debugger is paused, you can see the call stack.",
+      "start": 362.74,
+      "end": 366.18
+    },
+    {
+      "block": 46,
+      "text": "The call stack is shown in the toolbar at the top of Firebug, you can click on any item in the list to go to that source code for that function.",
+      "start": 366.36,
+      "end": 373.0
+    },
+    {
+      "block": 47,
+      "text": "12.",
+      "start": 373.18,
+      "end": 374.46
+    },
+    {
+      "block": 47,
+      "text": "You can set conditional breakpoints in Firebug",
+      "start": 374.64,
+      "end": 377.52
+    },
+    {
+      "block": 48,
+      "text": "Breaking every time a line is executed is usually best, but sometimes you know there is a bug only when a certain value occurs.",
+      "start": 377.7,
+      "end": 384.66
+    },
+    {
+      "block": 48,
+      "text": "You can then use conditional breakpoints to filter out when to actually break.",
+      "start": 384.84,
+      "end": 388.76
+    },
+    {
+      "block": 49,
+      "text": "The following are some of the possibilities you can use with Firebug debugging:",
+      "start": 388.94,
+      "end": 392.78
+    },
+    {
+      "block": 50,
+      "text": "Break when a DOM element\u2019s attribute change",
+      "start": 392.96,
+      "end": 395.6
+    },
+    {
+      "block": 51,
+      "text": "Break when a DOM element gets a child added or removed",
+      "start": 395.78,
+      "end": 399.22
+    },
+    {
+      "block": 52,
+      "text": "Break when a DOM element is removed",
+      "start": 399.4,
+      "end": 402.12
+    },
+    {
+      "block": 53,
+      "text": "Break when a certain condition is met, to do this simply right click on any breakpoint to see the conditional window.",
+      "start": 402.3,
+      "end": 408.22
+    },
+    {
+      "block": 54,
+      "text": "Break on errors, when an error happens it will show up on your console and you can then set a breakpoint next to it for the next time the error occurs.",
+      "start": 408.4,
+      "end": 416.32
+    },
+    {
+      "block": 55,
+      "text": "Other Browsers?",
+      "start": 416.5,
+      "end": 418.18
+    },
+    {
+      "block": 56,
+      "text": "Google Chrome offers a Firebug like tool which is included by default.",
+      "start": 418.36,
+      "end": 422.68
+    },
+    {
+      "block": 56,
+      "text": "You can right click on any element and select Inspect Element like in Firebug.",
+      "start": 422.86,
+      "end": 427.02
+    },
+    {
+      "block": 56,
+      "text": "Firebug also makes a lite version for Chrome which is not as good as the one for Firefox.",
+      "start": 427.2,
+      "end": 432.08
+    },
+    {
+      "block": 57,
+      "text": "IE offers a tool called The IE Developers Toolbar.",
+      "start": 432.26,
+      "end": 435.7
+    },
+    {
+      "block": 58,
+      "text": "Although both the built-in Chrome tool and IE Developer Toolbar are great tools, and can even do debugging, they are no match for Firebug+Firefox.",
+      "start": 435.88,
+      "end": 444.12
+    },
+    {
+      "block": 58,
+      "text": "Of course if you have a problem that only occurs in IE or Chrome you need to debug in IE or Chrome respectively.",
+      "start": 444.3,
+      "end": 450.78
+    }
+  ]
+}

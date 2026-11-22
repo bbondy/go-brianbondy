@@ -1,0 +1,207 @@
+{
+  "post": 84,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "a0aeb1f6a5f251356f92b9b115d864e5bb00f30f1a83665d80084205632f4296",
+  "audioSHA256": "6851504604c52ae5ba9938b1485d694bf06f175640a7d76cedb71f5dd950d7d9",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "Vectors, strings, and maps are all part of the C++ standard template library (STL).",
+      "start": 0.0,
+      "end": 6.24
+    },
+    {
+      "block": 0,
+      "text": "You can use them in any C++ program.",
+      "start": 6.42,
+      "end": 9.38
+    },
+    {
+      "block": 0,
+      "text": "It doesn\u2019t matter what operating system you\u2019re programming on, if it has C++ support, then it has STL support.",
+      "start": 9.56,
+      "end": 16.2
+    },
+    {
+      "block": 1,
+      "text": "Before using this tutorial you should have a good grasp at C++ templates, as well as everyting that you should know before templates.",
+      "start": 16.38,
+      "end": 23.26
+    },
+    {
+      "block": 1,
+      "text": "A great tutorial for beginners is at cplusplus.com",
+      "start": 23.44,
+      "end": 27.28
+    },
+    {
+      "block": 2,
+      "text": "To use STL you need the following includes:",
+      "start": 27.46,
+      "end": 30.42
+    },
+    {
+      "block": 3,
+      "text": "And you will need to always prefix string, vector and map with std:: unless you put this:",
+      "start": 30.6,
+      "end": 35.88
+    },
+    {
+      "block": 4,
+      "text": "Here is an example on how to use STL strings:",
+      "start": 36.06,
+      "end": 39.18
+    },
+    {
+      "block": 5,
+      "text": "All character arrays, when holding strings, have a 0 at the end, this is very important.",
+      "start": 39.36,
+      "end": 44.8
+    },
+    {
+      "block": 5,
+      "text": "They don\u2019t have the character \u201c0\u201d at the end, but they have an ascii value of 0 at the end.",
+      "start": 44.98,
+      "end": 50.02
+    },
+    {
+      "block": 5,
+      "text": "This zero is used to indicate the end of the char array.",
+      "start": 50.2,
+      "end": 53.4
+    },
+    {
+      "block": 5,
+      "text": "When you call the string\u2019s c_str() method, it will append a 0 for you at the end of the char array that it returns.",
+      "start": 53.58,
+      "end": 60.3
+    },
+    {
+      "block": 5,
+      "text": "You could have also used s.data(), which means the exact same thing as s.c_str().",
+      "start": 60.48,
+      "end": 65.92
+    },
+    {
+      "block": 6,
+      "text": "Many people don\u2019t know this, but strings can also store binary data.",
+      "start": 66.1,
+      "end": 70.26
+    },
+    {
+      "block": 6,
+      "text": "By binary data I just mean any data that is non text.",
+      "start": 70.44,
+      "end": 74.12
+    },
+    {
+      "block": 6,
+      "text": "I.e. there may be zero\u2019s intermixed througout the string.",
+      "start": 74.3,
+      "end": 77.58
+    },
+    {
+      "block": 7,
+      "text": "So for example:",
+      "start": 77.76,
+      "end": 79.52
+    },
+    {
+      "block": 8,
+      "text": "In the example above s.c_str() will now hold the binary data from both calls.",
+      "start": 79.7,
+      "end": 85.62
+    },
+    {
+      "block": 8,
+      "text": "You no longer have to worry about forgetting to delete binary data that you allocate.",
+      "start": 85.8,
+      "end": 90.2
+    },
+    {
+      "block": 8,
+      "text": "If you created pBinaryData and pMoreBinaryData on the heap, you can delete[] them after the call to append.",
+      "start": 90.38,
+      "end": 96.46
+    },
+    {
+      "block": 8,
+      "text": "Anything that you put in a string will have it\u2019s own memory, you don\u2019t need to worry about freeing it.",
+      "start": 96.64,
+      "end": 101.52
+    },
+    {
+      "block": 9,
+      "text": "Here is an example on how to use STL vectors:",
+      "start": 101.7,
+      "end": 104.82
+    },
+    {
+      "block": 10,
+      "text": "You use a vector to store a list of values.",
+      "start": 105.0,
+      "end": 107.64
+    },
+    {
+      "block": 10,
+      "text": "A value can be a number, string, or any other class object that you create.",
+      "start": 107.82,
+      "end": 112.62
+    },
+    {
+      "block": 10,
+      "text": "This list can grow to any number of elements, unlike an array.",
+      "start": 112.8,
+      "end": 116.56
+    },
+    {
+      "block": 11,
+      "text": "Notice how I wrote vector, that means a vector that holds strings.",
+      "start": 116.74,
+      "end": 120.5
+    },
+    {
+      "block": 11,
+      "text": "You could have also wrote vector, or vector.",
+      "start": 120.68,
+      "end": 123.56
+    },
+    {
+      "block": 12,
+      "text": "Vector of your own class objects:",
+      "start": 123.74,
+      "end": 125.98
+    },
+    {
+      "block": 13,
+      "text": "Here is an example on how to use STL maps:",
+      "start": 126.16,
+      "end": 129.04
+    },
+    {
+      "block": 14,
+      "text": "You use a map to store a lookup table. i.e. to associate something with something else.",
+      "start": 129.22,
+      "end": 134.1
+    },
+    {
+      "block": 15,
+      "text": "You can use a map with other things then a string: map myMap;",
+      "start": 134.28,
+      "end": 137.88
+    },
+    {
+      "block": 16,
+      "text": "FROM can be any type, for example int, Cat, string, TO can be any type, for example int, Cat, string",
+      "start": 138.06,
+      "end": 145.98
+    },
+    {
+      "block": 17,
+      "text": "The type you use for the FROM you use in the brackets to do lookups The type you use in the TO is the value that\u2019s associated with it.",
+      "start": 146.16,
+      "end": 152.88
+    }
+  ]
+}

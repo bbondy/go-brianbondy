@@ -1,0 +1,501 @@
+{
+  "post": 81,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "b04dcfdad3b021cc42bd00bfdbf15abe860f4313a26eb27bd66cd7b82460ecd5",
+  "audioSHA256": "12ddfb4aac52edc881ed9a5e8ecc73bb4102315e9abbe7752f1be37bfd931c7d",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "The official FTP standard is defined in RFC 959 [Postel and Reynolds 1985].",
+      "start": 0.0,
+      "end": 7.28
+    },
+    {
+      "block": 0,
+      "text": "This article is in no way complete nor should it be used as an implementation guide alone.",
+      "start": 7.46,
+      "end": 12.34
+    },
+    {
+      "block": 1,
+      "text": "FTP uses two TCP connections to transfer files:",
+      "start": 12.52,
+      "end": 16.44
+    },
+    {
+      "block": 2,
+      "text": "The control connection",
+      "start": 16.62,
+      "end": 18.54
+    },
+    {
+      "block": 3,
+      "text": "The control connection is made by the server listening to the default port for FTP which is 21.",
+      "start": 18.72,
+      "end": 24.48
+    },
+    {
+      "block": 3,
+      "text": "This port can differ, but the default is 21.",
+      "start": 24.66,
+      "end": 27.94
+    },
+    {
+      "block": 3,
+      "text": "The FTP server waits for a connection from the FTP client.",
+      "start": 28.12,
+      "end": 31.88
+    },
+    {
+      "block": 3,
+      "text": "The client does an active open from any port to port 21.",
+      "start": 32.06,
+      "end": 36.06
+    },
+    {
+      "block": 3,
+      "text": "The control connection once established, remains open for the duration of the communication between client and server.",
+      "start": 36.24,
+      "end": 42.48
+    },
+    {
+      "block": 3,
+      "text": "The control connection is used to specify what to do.",
+      "start": 42.66,
+      "end": 45.78
+    },
+    {
+      "block": 4,
+      "text": "The data connection",
+      "start": 45.96,
+      "end": 47.72
+    },
+    {
+      "block": 5,
+      "text": "Once the control connection is used to specify that it would like to transfer a file, a data connection is established to actually transfer the file.",
+      "start": 47.9,
+      "end": 55.5
+    },
+    {
+      "block": 5,
+      "text": "The data connection is used for sending files, receiving files, and getting a list of files in the current directory.",
+      "start": 55.68,
+      "end": 61.92
+    },
+    {
+      "block": 6,
+      "text": "FTP requests:",
+      "start": 62.1,
+      "end": 64.18
+    },
+    {
+      "block": 7,
+      "text": "All FTP requests are 3 or 4 digit ASCII commands.",
+      "start": 64.36,
+      "end": 68.04
+    },
+    {
+      "block": 7,
+      "text": "Each command can have 0, 1, or more optional arguments.",
+      "start": 68.22,
+      "end": 71.9
+    },
+    {
+      "block": 7,
+      "text": "The most popular FTP commands are as follows:",
+      "start": 72.08,
+      "end": 75.28
+    },
+    {
+      "block": 8,
+      "text": "ABOR - abort a file transfer",
+      "start": 75.46,
+      "end": 78.1
+    },
+    {
+      "block": 9,
+      "text": "ACCT - send account information",
+      "start": 78.28,
+      "end": 81.24
+    },
+    {
+      "block": 10,
+      "text": "APPE - append to a remote file",
+      "start": 81.42,
+      "end": 84.3
+    },
+    {
+      "block": 11,
+      "text": "CDUP - CWD to the parent of the current directory",
+      "start": 84.48,
+      "end": 88.08
+    },
+    {
+      "block": 12,
+      "text": "CWD - change working directory",
+      "start": 88.26,
+      "end": 91.14
+    },
+    {
+      "block": 13,
+      "text": "HELP - return help on using the server",
+      "start": 91.32,
+      "end": 94.12
+    },
+    {
+      "block": 14,
+      "text": "DELE - delete a remote file",
+      "start": 94.3,
+      "end": 96.22
+    },
+    {
+      "block": 15,
+      "text": "LIST - list remote files",
+      "start": 96.4,
+      "end": 98.72
+    },
+    {
+      "block": 16,
+      "text": "MDTM - return the modification time of a file",
+      "start": 98.9,
+      "end": 102.66
+    },
+    {
+      "block": 17,
+      "text": "MKD - make a remote directory",
+      "start": 102.84,
+      "end": 105.72
+    },
+    {
+      "block": 18,
+      "text": "MODE - set transfer mode",
+      "start": 105.9,
+      "end": 108.14
+    },
+    {
+      "block": 19,
+      "text": "NLST - name list of remote directory",
+      "start": 108.32,
+      "end": 111.52
+    },
+    {
+      "block": 20,
+      "text": "NOOP - do nothing",
+      "start": 111.7,
+      "end": 113.62
+    },
+    {
+      "block": 21,
+      "text": "PASS - send password",
+      "start": 113.8,
+      "end": 116.12
+    },
+    {
+      "block": 22,
+      "text": "PASV - enter passive mode",
+      "start": 116.3,
+      "end": 119.1
+    },
+    {
+      "block": 23,
+      "text": "PORT - open a data port",
+      "start": 119.28,
+      "end": 121.52
+    },
+    {
+      "block": 24,
+      "text": "PWD - print working directory",
+      "start": 121.7,
+      "end": 124.5
+    },
+    {
+      "block": 25,
+      "text": "QUIT - terminate the connection",
+      "start": 124.68,
+      "end": 127.0
+    },
+    {
+      "block": 26,
+      "text": "RETR - retrieve a remote file",
+      "start": 127.18,
+      "end": 129.74
+    },
+    {
+      "block": 27,
+      "text": "REIN - reinitialize the connection",
+      "start": 129.92,
+      "end": 132.64
+    },
+    {
+      "block": 28,
+      "text": "RMD - remove a remote directory",
+      "start": 132.82,
+      "end": 135.7
+    },
+    {
+      "block": 29,
+      "text": "RNFR - rename from",
+      "start": 135.88,
+      "end": 138.44
+    },
+    {
+      "block": 30,
+      "text": "RNTO - rename to",
+      "start": 138.62,
+      "end": 141.1
+    },
+    {
+      "block": 31,
+      "text": "STAT - return server status",
+      "start": 141.28,
+      "end": 143.76
+    },
+    {
+      "block": 32,
+      "text": "SITE - site-specific commands -SIZE - return the size of a file",
+      "start": 143.94,
+      "end": 148.5
+    },
+    {
+      "block": 33,
+      "text": "STOR - store a file on the remote host",
+      "start": 148.68,
+      "end": 151.56
+    },
+    {
+      "block": 34,
+      "text": "STOU - store a file uniquely",
+      "start": 151.74,
+      "end": 154.14
+    },
+    {
+      "block": 35,
+      "text": "STRU - set file transfer structure",
+      "start": 154.32,
+      "end": 157.12
+    },
+    {
+      "block": 36,
+      "text": "SYST - return system type",
+      "start": 157.3,
+      "end": 159.7
+    },
+    {
+      "block": 37,
+      "text": "TYPE - set transfer type -USER - send username",
+      "start": 159.88,
+      "end": 164.36
+    },
+    {
+      "block": 38,
+      "text": "FTP replies:",
+      "start": 164.54,
+      "end": 166.54
+    },
+    {
+      "block": 39,
+      "text": "All FTP replies start with 3 digit status code in ASCII.",
+      "start": 166.72,
+      "end": 170.88
+    },
+    {
+      "block": 39,
+      "text": "An optional message can follow this 3 digit status code.",
+      "start": 171.06,
+      "end": 174.66
+    },
+    {
+      "block": 40,
+      "text": "The first (left most) digit in the error code has special meaning.",
+      "start": 174.84,
+      "end": 179.16
+    },
+    {
+      "block": 41,
+      "text": "1xx: Used for positive preliminary replies.",
+      "start": 179.34,
+      "end": 183.18
+    },
+    {
+      "block": 42,
+      "text": "2xx: Used for positive completion replies.",
+      "start": 183.36,
+      "end": 186.88
+    },
+    {
+      "block": 43,
+      "text": "3xx: Used for positive intermediate replies.",
+      "start": 187.06,
+      "end": 190.82
+    },
+    {
+      "block": 43,
+      "text": "Which means everything was OK, but another command is expected.",
+      "start": 191.0,
+      "end": 195.0
+    },
+    {
+      "block": 44,
+      "text": "4xx: Transient negative completion reply.",
+      "start": 195.18,
+      "end": 198.86
+    },
+    {
+      "block": 45,
+      "text": "5xx: Permanent negative completion reply.",
+      "start": 199.04,
+      "end": 202.64
+    },
+    {
+      "block": 46,
+      "text": "The second (middle) digit in the error codes also have special meaning.",
+      "start": 202.82,
+      "end": 207.3
+    },
+    {
+      "block": 47,
+      "text": "x0x: Syntax error",
+      "start": 207.48,
+      "end": 210.36
+    },
+    {
+      "block": 48,
+      "text": "x1x: Information",
+      "start": 210.54,
+      "end": 212.94
+    },
+    {
+      "block": 49,
+      "text": "x2x: Connection related",
+      "start": 213.12,
+      "end": 215.92
+    },
+    {
+      "block": 50,
+      "text": "x3x: Authentication related",
+      "start": 216.1,
+      "end": 219.22
+    },
+    {
+      "block": 51,
+      "text": "x4x: Unspecified",
+      "start": 219.4,
+      "end": 222.28
+    },
+    {
+      "block": 52,
+      "text": "x5x: Filesystem status",
+      "start": 222.46,
+      "end": 225.5
+    },
+    {
+      "block": 53,
+      "text": "The third (right most) digit in the error code, is just used to be more specific.",
+      "start": 225.68,
+      "end": 230.88
+    },
+    {
+      "block": 54,
+      "text": "Most FTP replies are 1 line replies, and can be read up to the first CR LF.",
+      "start": 231.06,
+      "end": 236.26
+    },
+    {
+      "block": 54,
+      "text": "However, some may be multi-line replies and you should therefore check to see if the 4th digit is a hyphen.",
+      "start": 236.44,
+      "end": 242.04
+    },
+    {
+      "block": 54,
+      "text": "If the 4th digit is a hypen, then you should keep reading lines until the 4th digit is not a hypen.",
+      "start": 242.22,
+      "end": 247.74
+    },
+    {
+      "block": 54,
+      "text": "All lines in a multiline reply will start with the same 3 digit status code.",
+      "start": 247.92,
+      "end": 252.24
+    },
+    {
+      "block": 54,
+      "text": "The final line in a multi line reply will not have a hyphen.",
+      "start": 252.42,
+      "end": 255.86
+    },
+    {
+      "block": 55,
+      "text": "Using telnet to communicate with FTP:",
+      "start": 256.04,
+      "end": 258.84
+    },
+    {
+      "block": 56,
+      "text": "As with many other ASCII protocols, you can communicate with an FTP server via telnet alone.",
+      "start": 259.02,
+      "end": 264.46
+    },
+    {
+      "block": 56,
+      "text": "To do this in windows, simply go to start menu | Run | command.com In the prompt type:",
+      "start": 264.64,
+      "end": 269.92
+    },
+    {
+      "block": 57,
+      "text": "> telnet myservername.com 21 220 Microsoft FTP service",
+      "start": 270.1,
+      "end": 274.82
+    },
+    {
+      "block": 58,
+      "text": "> USER brian 331 Password required for user brian",
+      "start": 275.0,
+      "end": 279.32
+    },
+    {
+      "block": 59,
+      "text": "> PASS mypassword 230 User brian logged in.",
+      "start": 279.5,
+      "end": 283.02
+    },
+    {
+      "block": 60,
+      "text": "> SYST 215 Windows_NT",
+      "start": 283.2,
+      "end": 286.56
+    },
+    {
+      "block": 61,
+      "text": "You won\u2019t be able to easily test your data connection this way, but you can test out many of the FTP commands and see the replies that they give.",
+      "start": 286.74,
+      "end": 293.86
+    },
+    {
+      "block": 62,
+      "text": "Debugging FTP:",
+      "start": 294.04,
+      "end": 296.04
+    },
+    {
+      "block": 63,
+      "text": "As with every other protocol, when implementing or learning FTP, it is a good idea to use ethereal.",
+      "start": 296.22,
+      "end": 302.14
+    },
+    {
+      "block": 63,
+      "text": "You can download Ethereal/Wireshark.",
+      "start": 302.32,
+      "end": 304.72
+    },
+    {
+      "block": 63,
+      "text": "If you are using ethereal 0.10.9 or above, you will not need to download winPCAP.",
+      "start": 304.9,
+      "end": 310.5
+    }
+  ]
+}

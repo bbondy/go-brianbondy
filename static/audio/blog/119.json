@@ -1,0 +1,519 @@
+{
+  "post": 119,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "e3c3451a48c9b75cd6ff69e86d2ce6d793c8fc994f19da013441abab1fb913dc",
+  "audioSHA256": "07b64ef00d6a00cef7bbe29bebe8c3e2f2aa08f38c87cc501ee0ddcc646cf6b8",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "This article will cover the following topics:",
+      "start": 0.0,
+      "end": 2.72
+    },
+    {
+      "block": 1,
+      "text": "An overview of the basics of HTTP",
+      "start": 2.9,
+      "end": 5.7
+    },
+    {
+      "block": 2,
+      "text": "What is HTTP pipelining?",
+      "start": 5.88,
+      "end": 8.52
+    },
+    {
+      "block": 3,
+      "text": "What problems can appear with HTTP pipelining?",
+      "start": 8.7,
+      "end": 11.9
+    },
+    {
+      "block": 4,
+      "text": "Why you should care about HTTP pipelining?",
+      "start": 12.08,
+      "end": 14.88
+    },
+    {
+      "block": 5,
+      "text": "Which web servers support HTTP pipelining?",
+      "start": 15.06,
+      "end": 18.18
+    },
+    {
+      "block": 6,
+      "text": "Which browsers support HTTP pipelining? (And how to enable it)",
+      "start": 18.36,
+      "end": 22.76
+    },
+    {
+      "block": 7,
+      "text": "Which programming languages/libraries support HTTP pipelining?",
+      "start": 22.94,
+      "end": 26.94
+    },
+    {
+      "block": 8,
+      "text": "An overview of the basics of HTTP",
+      "start": 27.12,
+      "end": 29.92
+    },
+    {
+      "block": 9,
+      "text": "The HTTP protocol works by sending requests and getting responses back for those requests.",
+      "start": 30.1,
+      "end": 35.38
+    },
+    {
+      "block": 10,
+      "text": "I will not get into the details of the HTTP protocol syntax.",
+      "start": 35.56,
+      "end": 39.8
+    },
+    {
+      "block": 10,
+      "text": "Details about headers, HTTP methods, paths, parameters, etc., as this post would be too long.",
+      "start": 39.98,
+      "end": 47.42
+    },
+    {
+      "block": 10,
+      "text": "Instead I\u2019ll just cover some basics and then dive right into explaining HTTP pipelining.",
+      "start": 47.6,
+      "end": 52.64
+    },
+    {
+      "block": 10,
+      "text": "But I will show a basic HTTP GET request and response.",
+      "start": 52.82,
+      "end": 57.06
+    },
+    {
+      "block": 11,
+      "text": "A typical HTTP request looks something like this:",
+      "start": 57.24,
+      "end": 60.68
+    },
+    {
+      "block": 12,
+      "text": "A typical HTTP response looks something like this:",
+      "start": 60.86,
+      "end": 64.3
+    },
+    {
+      "block": 13,
+      "text": "On a single socket, a single request is sent out, and then a single response is retrieved.",
+      "start": 64.48,
+      "end": 69.92
+    },
+    {
+      "block": 14,
+      "text": "A browser or other HTTP client could create multiple sockets to a server and make multiple requests.",
+      "start": 70.1,
+      "end": 76.1
+    },
+    {
+      "block": 14,
+      "text": "The picture on the right shows 2 HTTP requests and responses on 2 different sockets.",
+      "start": 76.28,
+      "end": 81.48
+    },
+    {
+      "block": 15,
+      "text": "Pretty much all web browsers do multiple connections per server today.",
+      "start": 81.66,
+      "end": 85.58
+    },
+    {
+      "block": 16,
+      "text": "In Firefox you can adjust this amount by going to about:config and adjusting: network.http.max-connections-per-server",
+      "start": 85.76,
+      "end": 94.4
+    },
+    {
+      "block": 17,
+      "text": "Mine was initially defaulted to 15.",
+      "start": 94.58,
+      "end": 97.22
+    },
+    {
+      "block": 18,
+      "text": "Several requests to a single server are very typical.",
+      "start": 97.4,
+      "end": 100.6
+    },
+    {
+      "block": 18,
+      "text": "For example an HTML file can have several referenced images.",
+      "start": 100.78,
+      "end": 104.78
+    },
+    {
+      "block": 19,
+      "text": "To avoid creating several connections, HTTP 1.1 introduced persistent connections.",
+      "start": 104.96,
+      "end": 111.04
+    },
+    {
+      "block": 20,
+      "text": "The picture on the right shows 3 requests and responses on a single persistent connection.",
+      "start": 111.22,
+      "end": 115.86
+    },
+    {
+      "block": 21,
+      "text": "Having several connections can give better speed, but if you need to create a new connection for each and every request, it will use much more resources, require more TCP handshakes, and will be susceptible to TCP slow-start.",
+      "start": 116.04,
+      "end": 127.64
+    },
+    {
+      "block": 22,
+      "text": "If you look back at the example HTTP request above, the HTTP header: \u201cConnection: keep-alive\u201d indicates that you would like to use a persistent connection.",
+      "start": 127.82,
+      "end": 137.1
+    },
+    {
+      "block": 22,
+      "text": "The default is to use a persistent connection, but the server is not forced to do this, and it can send a \u201cConnection: close\u201d header.",
+      "start": 137.28,
+      "end": 144.32
+    },
+    {
+      "block": 23,
+      "text": "What is HTTP pipelining?",
+      "start": 144.5,
+      "end": 147.14
+    },
+    {
+      "block": 24,
+      "text": "HTTP pipelining is a feature of HTTP 1.1 persistent connections.",
+      "start": 147.32,
+      "end": 153.4
+    },
+    {
+      "block": 24,
+      "text": "It means that you can send multiple requests on the same socket without waiting for each response.",
+      "start": 153.58,
+      "end": 158.22
+    },
+    {
+      "block": 25,
+      "text": "The picture on the right shows 6 requests and responses using at most 3 requests at a time.",
+      "start": 158.4,
+      "end": 163.52
+    },
+    {
+      "block": 26,
+      "text": "HTTP is based on TCP, and one of TCP\u2019s guarantees is ordered delivery.",
+      "start": 163.7,
+      "end": 169.3
+    },
+    {
+      "block": 26,
+      "text": "This means that all of the requests sent out on the same socket, will be received in that order on the server.",
+      "start": 169.48,
+      "end": 175.0
+    },
+    {
+      "block": 26,
+      "text": "An HTTP server that supports HTTP pipelining will send its responses in the same order.",
+      "start": 175.18,
+      "end": 180.7
+    },
+    {
+      "block": 27,
+      "text": "HTTPS pipelining is also possible with secure HTTP connections and it gives an even greater degree of speed because of the extra needed SSL/TLS handshakes.",
+      "start": 180.88,
+      "end": 190.8
+    },
+    {
+      "block": 28,
+      "text": "What problems can appear with HTTP pipelining?",
+      "start": 190.98,
+      "end": 194.18
+    },
+    {
+      "block": 29,
+      "text": "Although the HTTP 1.1 RFC indicates that HTTP implementations should support persistent connections, it is possible that they will not.",
+      "start": 194.36,
+      "end": 203.08
+    },
+    {
+      "block": 30,
+      "text": "You can\u2019t be sure if an HTTP server supports HTTP pipelining before making a request.",
+      "start": 203.26,
+      "end": 208.7
+    },
+    {
+      "block": 30,
+      "text": "The server may even send a \u201cConnection: Close\u201d header after your first request is sent indicating it does not want to use a persistent connection.",
+      "start": 208.88,
+      "end": 215.84
+    },
+    {
+      "block": 31,
+      "text": "There could be proxies in between as well which cause problems, making an HTTP client black list approach to determining which servers support persistent connections not ideal.",
+      "start": 216.02,
+      "end": 225.62
+    },
+    {
+      "block": 32,
+      "text": "Based on the HTTP 1.1 RFC, if a client finds that a pipelined connection is not supported, the client should re-attempt the failed requests.",
+      "start": 225.8,
+      "end": 234.36
+    },
+    {
+      "block": 33,
+      "text": "To avoid problems with a server getting 2 of the same requests and the client not knowing it, the client should only use pipelining on HTTP methods which are idempotent.",
+      "start": 234.54,
+      "end": 243.34
+    },
+    {
+      "block": 33,
+      "text": "In general, idempotence means that you can apply the same operation 1 or many times, and it will have the same effect.",
+      "start": 243.52,
+      "end": 250.24
+    },
+    {
+      "block": 33,
+      "text": "Example: setting a variable x to the value of 3 is an idempotent operation.",
+      "start": 250.42,
+      "end": 255.3
+    },
+    {
+      "block": 33,
+      "text": "Setting a variable to one more than its last value is NOT an idempotent operation.",
+      "start": 255.48,
+      "end": 260.28
+    },
+    {
+      "block": 34,
+      "text": "In terms of HTTP, PUT and DELETE are idempotent operations, GET, HEAD, OPTIONS and TRACE should be idempotent and HTTP POST is probably not.",
+      "start": 260.46,
+      "end": 270.54
+    },
+    {
+      "block": 34,
+      "text": "In practice, most browsers that do support pipelining only do so for GET and HEAD requests.",
+      "start": 270.72,
+      "end": 276.48
+    },
+    {
+      "block": 35,
+      "text": "Sometimes it\u2019s hard for a client to determine if the server\u2019s response is valid or garbage.",
+      "start": 276.66,
+      "end": 281.54
+    },
+    {
+      "block": 35,
+      "text": "Requests using pipelining to servers which don\u2019t support pipelining need to be retried and so it would be slower.",
+      "start": 281.72,
+      "end": 287.4
+    },
+    {
+      "block": 36,
+      "text": "It would be nice, but servers do not currently tell a client that they support pipelining.",
+      "start": 287.58,
+      "end": 292.38
+    },
+    {
+      "block": 36,
+      "text": "If all servers did, then only the first request would need to be non-pipelined if the client didn\u2019t already know if the server had support.",
+      "start": 292.56,
+      "end": 299.44
+    },
+    {
+      "block": 37,
+      "text": "Why you should care about HTTP pipelining?",
+      "start": 299.62,
+      "end": 302.42
+    },
+    {
+      "block": 38,
+      "text": "TCP/IP packets can be reduced.",
+      "start": 302.6,
+      "end": 305.48
+    },
+    {
+      "block": 38,
+      "text": "The typical maximum segment size (MSS) is in the range of 536 to 1460 bytes, and so several HTTP requests could fit into a single packet.",
+      "start": 305.66,
+      "end": 315.9
+    },
+    {
+      "block": 38,
+      "text": "It would also reduce the total number of packets.",
+      "start": 316.08,
+      "end": 319.04
+    },
+    {
+      "block": 38,
+      "text": "Also there are wins with the congestion control strategy, connection handshake, connection teardown and SSL handshake.",
+      "start": 319.22,
+      "end": 325.86
+    },
+    {
+      "block": 39,
+      "text": "What this means is that you can get much faster page loads by using HTTP pipelining.",
+      "start": 326.04,
+      "end": 331.24
+    },
+    {
+      "block": 40,
+      "text": "I\u2019ve been using it in Opera and Firefox and have not run into problems.",
+      "start": 331.42,
+      "end": 335.42
+    },
+    {
+      "block": 41,
+      "text": "Which web servers support HTTP pipelining",
+      "start": 335.6,
+      "end": 338.72
+    },
+    {
+      "block": 42,
+      "text": "Most modern web servers support HTTP pipelining.",
+      "start": 338.9,
+      "end": 342.42
+    },
+    {
+      "block": 42,
+      "text": "IIS 4.0 is said to not have support for it.",
+      "start": 342.6,
+      "end": 346.36
+    },
+    {
+      "block": 43,
+      "text": "Which browsers support HTTP pipelining? (And how to enable it)",
+      "start": 346.54,
+      "end": 350.94
+    },
+    {
+      "block": 44,
+      "text": "Google Chrome: No",
+      "start": 351.12,
+      "end": 353.12
+    },
+    {
+      "block": 45,
+      "text": "Safari: No",
+      "start": 353.3,
+      "end": 355.14
+    },
+    {
+      "block": 46,
+      "text": "Internet Explorer: No",
+      "start": 355.32,
+      "end": 357.48
+    },
+    {
+      "block": 47,
+      "text": "Opera: Yes",
+      "start": 357.66,
+      "end": 359.34
+    },
+    {
+      "block": 48,
+      "text": "Firefox: Yes, but you need to enable it by following the below steps.",
+      "start": 359.52,
+      "end": 363.76
+    },
+    {
+      "block": 49,
+      "text": "You can adjust HTTP pipelining settings in Firefox by changing the following settings in about:config",
+      "start": 363.94,
+      "end": 369.7
+    },
+    {
+      "block": 50,
+      "text": "For HTTP pipelining: Set network.http.pipelining to true",
+      "start": 369.88,
+      "end": 375.16
+    },
+    {
+      "block": 51,
+      "text": "For HTTP proxy pipelining: (Use this if you want to try pipelining and you use a proxy server) Set network.http.proxy.pipelining to true",
+      "start": 375.34,
+      "end": 385.02
+    },
+    {
+      "block": 52,
+      "text": "For HTTPS pipelining: Set network.http.pipelining.ssl to true",
+      "start": 385.2,
+      "end": 391.44
+    },
+    {
+      "block": 53,
+      "text": "To adjust the number of requests to send at once: Set network.http.pipelining.maxrequests to 8.",
+      "start": 391.62,
+      "end": 398.82
+    },
+    {
+      "block": 53,
+      "text": "The pipelining picture above would have a value of 3 here.",
+      "start": 399.0,
+      "end": 402.52
+    },
+    {
+      "block": 54,
+      "text": "Note:",
+      "start": 402.7,
+      "end": 403.9
+    },
+    {
+      "block": 55,
+      "text": "The network.http.max-connections-per-server setting is clamped between 1 and 255. (This setting has nothing to do with pipelining but you can adjust it)",
+      "start": 404.08,
+      "end": 414.72
+    },
+    {
+      "block": 56,
+      "text": "The network.http.pipelining.maxrequests setting is clamped between 1 and NS_HTTP_MAX_PIPELINED_REQUESTS which is defined to be 8.",
+      "start": 414.9,
+      "end": 427.86
+    },
+    {
+      "block": 56,
+      "text": "Unless you compile your own builds, a value of 8 is the most you can try with Firefox.",
+      "start": 428.04,
+      "end": 433.16
+    },
+    {
+      "block": 57,
+      "text": "Which programming languages/libraries support HTTP pipelining?",
+      "start": 433.34,
+      "end": 437.34
+    },
+    {
+      "block": 58,
+      "text": "Many popular programming libraries across most programming languages support pipelining.",
+      "start": 437.52,
+      "end": 442.32
+    },
+    {
+      "block": 59,
+      "text": "For example, here\u2019s a small subset list of libraries that support pipelining:",
+      "start": 442.5,
+      "end": 446.9
+    },
+    {
+      "block": 60,
+      "text": "Python: httplib2, Twisted",
+      "start": 447.08,
+      "end": 450.6
+    },
+    {
+      "block": 61,
+      "text": ".NET Framework: System.Net.HttpWebRequest",
+      "start": 450.78,
+      "end": 454.94
+    },
+    {
+      "block": 62,
+      "text": "C++: Qt\u2019s QNetworkRequest, libcurl",
+      "start": 455.12,
+      "end": 458.96
+    }
+  ]
+}

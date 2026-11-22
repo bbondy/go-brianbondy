@@ -1,0 +1,555 @@
+{
+  "post": 111,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "3de35384c988a152c4512347d340f2eddf9e98ccff271d2e0fcbb34d96d711d2",
+  "audioSHA256": "68729366efcc0a6efca05eba5e51a02638f28efe8aa12fbb1e7d8f1d026e901e",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "Believe it or not the Windows 1.0 taskbar looked very similar to the Windows 7 taskbar.",
+      "start": 0.0,
+      "end": 5.36
+    },
+    {
+      "block": 0,
+      "text": "But it obviously didn\u2019t have anywhere near same functionality.",
+      "start": 5.54,
+      "end": 8.9
+    },
+    {
+      "block": 1,
+      "text": "indows 1.0:",
+      "start": 9.08,
+      "end": 11.24
+    },
+    {
+      "block": 2,
+      "text": "Windows 7:",
+      "start": 11.42,
+      "end": 13.1
+    },
+    {
+      "block": 3,
+      "text": "The Windows 7 taskbar is pretty awesome.",
+      "start": 13.28,
+      "end": 16.0
+    },
+    {
+      "block": 3,
+      "text": "And it has some great functionality available to developers who wish to take advantage of it.",
+      "start": 16.18,
+      "end": 20.74
+    },
+    {
+      "block": 4,
+      "text": "The 5 features\u2026",
+      "start": 20.92,
+      "end": 22.68
+    },
+    {
+      "block": 5,
+      "text": "1) Application progress in the taskbar: Progress for anything with visual displays of errors and warnings.",
+      "start": 22.86,
+      "end": 29.02
+    },
+    {
+      "block": 6,
+      "text": "2) Overlay icons: Small icons within your icon for any type of user notification (below shows the online status as an overlay)",
+      "start": 29.2,
+      "end": 36.8
+    },
+    {
+      "block": 7,
+      "text": "3) Custom thumbnail preview groupings: Thumbnail previews across processes or within a single process with tabs",
+      "start": 36.98,
+      "end": 43.7
+    },
+    {
+      "block": 8,
+      "text": "4) Taskbar action buttons (Thumbnail toolbars): Buttons inside the taskbar icon\u2019s thumbnail preview",
+      "start": 43.88,
+      "end": 50.36
+    },
+    {
+      "block": 9,
+      "text": "5) Jump lists: Easily create shortcuts to different startup types and other custom actions.",
+      "start": 50.54,
+      "end": 56.3
+    },
+    {
+      "block": 10,
+      "text": "Before you start\u2026",
+      "start": 56.48,
+      "end": 58.08
+    },
+    {
+      "block": 11,
+      "text": "Before jumping into the interesting stuff, you need to get notified that the taskbar button was created.",
+      "start": 58.26,
+      "end": 63.46
+    },
+    {
+      "block": 12,
+      "text": "There is a new message sent to your application called TaskbarButtonCreated, it is sent when Windows creates a taskbar button for your application on your application\u2019s behalf.",
+      "start": 63.64,
+      "end": 72.52
+    },
+    {
+      "block": 13,
+      "text": "And once this message is sent to you, you can interact with your taskbar button (Not before!).",
+      "start": 72.7,
+      "end": 77.5
+    },
+    {
+      "block": 13,
+      "text": "To get the identifier of the message you need to call RegisterWindowMessage .",
+      "start": 77.68,
+      "end": 81.68
+    },
+    {
+      "block": 14,
+      "text": "The important elements here in a typical MFC application would look like so:",
+      "start": 81.86,
+      "end": 86.1
+    },
+    {
+      "block": 15,
+      "text": "1) Application progress in the taskbar",
+      "start": 86.28,
+      "end": 89.16
+    },
+    {
+      "block": 16,
+      "text": "To show progress in your application icon you need to use 2 simple API calls: ITaskbarList3::SetProgressState and ITaskbarList3::SetProgressValue.",
+      "start": 89.34,
+      "end": 100.06
+    },
+    {
+      "block": 17,
+      "text": "Your taskbar icon can have one of the following states:",
+      "start": 100.24,
+      "end": 103.36
+    },
+    {
+      "block": 18,
+      "text": "No progress (default)",
+      "start": 103.54,
+      "end": 105.86
+    },
+    {
+      "block": 19,
+      "text": "Intermediate (green and cycles repeatedly along the length of the taskbar button)",
+      "start": 106.04,
+      "end": 110.6
+    },
+    {
+      "block": 20,
+      "text": "Paused (yellow progress bar)",
+      "start": 110.78,
+      "end": 113.5
+    },
+    {
+      "block": 21,
+      "text": "error (red progress bar)",
+      "start": 113.68,
+      "end": 116.16
+    },
+    {
+      "block": 22,
+      "text": "normal (green progress bar)",
+      "start": 116.34,
+      "end": 118.74
+    },
+    {
+      "block": 23,
+      "text": "You can see this in action yourself when Windows explorer is copying a set of files and it encounters a locked file, the windows explorer icon will change to the error progress status which is red.",
+      "start": 118.92,
+      "end": 128.76
+    },
+    {
+      "block": 24,
+      "text": "When you use SHFileOperation or the IFileOperation interface your taskbar icon will automatically update as well with progress.",
+      "start": 128.94,
+      "end": 135.9
+    },
+    {
+      "block": 25,
+      "text": "To get your application icon to show progress for an indeterminate amount of time:",
+      "start": 136.08,
+      "end": 140.24
+    },
+    {
+      "block": 26,
+      "text": "To set determinate progress you use one of TBPF_NORMAL, TBPF_ERROR, or TBPF_PAUSED.",
+      "start": 140.42,
+      "end": 148.98
+    },
+    {
+      "block": 26,
+      "text": "For example:",
+      "start": 149.16,
+      "end": 150.76
+    },
+    {
+      "block": 27,
+      "text": "The last parameter of SetProgressValue is the number of steps in your operation total, the second last parameter is the current number of steps already completed.",
+      "start": 150.94,
+      "end": 159.02
+    },
+    {
+      "block": 28,
+      "text": "2) Overlay icons",
+      "start": 159.2,
+      "end": 161.36
+    },
+    {
+      "block": 29,
+      "text": "Icon overlays on the actual taskbar icon can be accomplished by calling TaskbarList3::SetOverlayIcon.",
+      "start": 161.54,
+      "end": 168.58
+    },
+    {
+      "block": 30,
+      "text": "The overlay icon should be a small icon, measuring 16x16 pixels at 96 dpi.",
+      "start": 168.76,
+      "end": 174.84
+    },
+    {
+      "block": 30,
+      "text": "In my experience though you can use any icon and Windows will scale it for you.",
+      "start": 175.02,
+      "end": 179.18
+    },
+    {
+      "block": 30,
+      "text": "Every time this method is called, the previous icons get removed.",
+      "start": 179.36,
+      "end": 183.44
+    },
+    {
+      "block": 31,
+      "text": "3) Custom thumbnail preview groupings:",
+      "start": 183.62,
+      "end": 186.66
+    },
+    {
+      "block": 32,
+      "text": "A single application which has a single process with tabs (Or an MDI application) can have multiple previews available to it.",
+      "start": 186.84,
+      "end": 194.2
+    },
+    {
+      "block": 33,
+      "text": "Chrome 10 Beta does not take advantage of tab/thumbnail yet; however, IE9 does (as seen in my screenshot above in section #3).",
+      "start": 194.38,
+      "end": 202.3
+    },
+    {
+      "block": 34,
+      "text": "Every time a tab is created you would call both RegisterTab and SetTabOrder like so:",
+      "start": 202.48,
+      "end": 207.68
+    },
+    {
+      "block": 35,
+      "text": "SetTabOrder can be used to specify the order of previews, passing in NULL appends the tab to the end of the list of previews.",
+      "start": 207.86,
+      "end": 214.82
+    },
+    {
+      "block": 36,
+      "text": "You can remove a tab preview from your taskbar icon by calling UnregisterTab:",
+      "start": 215.0,
+      "end": 219.64
+    },
+    {
+      "block": 37,
+      "text": "But sometimes applications today span multiple processes.",
+      "start": 219.82,
+      "end": 223.5
+    },
+    {
+      "block": 37,
+      "text": "Both IE 9 and Chrome use one process per tab, and I believe that Firefox will eventually go this way too (They already do this for mobile phones).",
+      "start": 223.68,
+      "end": 231.84
+    },
+    {
+      "block": 37,
+      "text": "The Windows 7 taskbar has this architecture covered (People bust Microsoft\u2019s ass a lot but in many cases they really deliver).",
+      "start": 232.02,
+      "end": 238.66
+    },
+    {
+      "block": 38,
+      "text": "In this previous blog post, I talked about Sessions, Windows Stations, and Desktops.",
+      "start": 238.84,
+      "end": 244.36
+    },
+    {
+      "block": 38,
+      "text": "Well as of Windows 7 there is also something called Application IDs.",
+      "start": 244.54,
+      "end": 248.78
+    },
+    {
+      "block": 38,
+      "text": "Application IDs allows Windows to know what you view as an individual application.",
+      "start": 248.96,
+      "end": 253.44
+    },
+    {
+      "block": 38,
+      "text": "With multi process applications on the rise this becomes important.",
+      "start": 253.62,
+      "end": 257.38
+    },
+    {
+      "block": 38,
+      "text": "Application IDs can be associated with individual Windows.",
+      "start": 257.56,
+      "end": 261.16
+    },
+    {
+      "block": 38,
+      "text": "An application ID is a string of up to 128 characters.",
+      "start": 261.34,
+      "end": 265.5
+    },
+    {
+      "block": 39,
+      "text": "The default application ID for a window is the same as the application ID for the process to which the Window belongs.",
+      "start": 265.68,
+      "end": 272.08
+    },
+    {
+      "block": 39,
+      "text": "Applications with the same application ID are grouped to the same taskbar icon.",
+      "start": 272.26,
+      "end": 276.66
+    },
+    {
+      "block": 40,
+      "text": "You can set the application ID of a process using the Win32 API SetCurrentProcessExplicitAppUserModelID You can set the application ID of a window using the Win32 API SHGetPropertyStoreForWindow and then calling functions on the return result which is of type IPropertyStore.",
+      "start": 276.84,
+      "end": 292.52
+    },
+    {
+      "block": 41,
+      "text": "Application IDs are assigned dynamically so they can be changed at any time which means you could do some pretty interesting things.",
+      "start": 292.7,
+      "end": 299.1
+    },
+    {
+      "block": 42,
+      "text": "4) Taskbar action buttons (Thumbnail toolbars):",
+      "start": 299.28,
+      "end": 303.04
+    },
+    {
+      "block": 43,
+      "text": "Thumbnail toolbars allow you to add functionality and buttons available to the user without switching their current application.",
+      "start": 303.22,
+      "end": 309.3
+    },
+    {
+      "block": 43,
+      "text": "For example Windows Media Player adds previous, pause, and next button support.",
+      "start": 309.48,
+      "end": 315.0
+    },
+    {
+      "block": 43,
+      "text": "To do this you create an array of THUMBBUTTON structures.",
+      "start": 315.18,
+      "end": 318.78
+    },
+    {
+      "block": 44,
+      "text": "When a thumbnail button is clicked you receive a WM_COMMAND message with the high word of the wParam set to THBN_CLICKED and the low word set the button ID.",
+      "start": 318.96,
+      "end": 328.16
+    },
+    {
+      "block": 45,
+      "text": "Each button can have either an individual icon being used or a bitmap from the taskbar\u2019s image list which was set through ITaskbarList3::ThumbBarSetImageList.",
+      "start": 328.34,
+      "end": 337.22
+    },
+    {
+      "block": 46,
+      "text": "Each tab thumbnail preview can have its own set of thumbnail buttons.",
+      "start": 337.4,
+      "end": 341.32
+    },
+    {
+      "block": 47,
+      "text": "You may notice that the first button above has the THBF_DISMISSONCLICK flag but the second does not.",
+      "start": 341.5,
+      "end": 347.9
+    },
+    {
+      "block": 47,
+      "text": "The difference is that when the first button is clicked the thumbnail preview will be closed, whereas if the second button is clicked, the thumbnail preview remains open.",
+      "start": 348.08,
+      "end": 356.24
+    },
+    {
+      "block": 47,
+      "text": "Other important flags are THBF_HIDDEN, THBF_ENABLED, and THBF_DISABLED.",
+      "start": 356.42,
+      "end": 363.7
+    },
+    {
+      "block": 48,
+      "text": "After the buttons are created, they can be updated by using ITaskbarList3::ThumbBarUpdateButtons.",
+      "start": 363.88,
+      "end": 370.12
+    },
+    {
+      "block": 48,
+      "text": "You would want to update an existing button to for example disable it.",
+      "start": 370.3,
+      "end": 373.98
+    },
+    {
+      "block": 49,
+      "text": "Each time a button is clicked the OnCommand virtual function of your dialog is specified:",
+      "start": 374.16,
+      "end": 378.72
+    },
+    {
+      "block": 50,
+      "text": "So you simply need to override this function for the window that is associated with the thumbnail preview:",
+      "start": 378.9,
+      "end": 383.86
+    },
+    {
+      "block": 51,
+      "text": "5) Jump lists:",
+      "start": 384.04,
+      "end": 386.04
+    },
+    {
+      "block": 52,
+      "text": "There is a great article here on Jump lists, but I will give a quick overview.",
+      "start": 386.22,
+      "end": 390.38
+    },
+    {
+      "block": 53,
+      "text": "Each application is associated with a Jump List.",
+      "start": 390.56,
+      "end": 393.68
+    },
+    {
+      "block": 54,
+      "text": "You can customize the tasks area which is a set of actions.",
+      "start": 393.86,
+      "end": 397.22
+    },
+    {
+      "block": 54,
+      "text": "You can also customize the destination area which is a list of Recent items or Frequent items.",
+      "start": 397.4,
+      "end": 402.36
+    },
+    {
+      "block": 55,
+      "text": "The recent items is calculated for you automatically as long as your application is the default handler for the associated document type.",
+      "start": 402.54,
+      "end": 409.5
+    },
+    {
+      "block": 55,
+      "text": "If you want to add somethign to the list you can use the Win32 API SHAddToRecentDocs.",
+      "start": 409.68,
+      "end": 414.8
+    },
+    {
+      "block": 56,
+      "text": "You can customize custom areas of the jump list, for example Chrome includes a \u201cMost visited section\u201d and a \u201cRecently closed\u201d section.",
+      "start": 414.98,
+      "end": 422.18
+    },
+    {
+      "block": 57,
+      "text": "Custom destinations are controlled by: ICustomDestinationList.",
+      "start": 422.36,
+      "end": 426.36
+    },
+    {
+      "block": 58,
+      "text": "A couple other things you can do:",
+      "start": 426.54,
+      "end": 428.54
+    },
+    {
+      "block": 59,
+      "text": "You can customize your taskbar thumbnails by specifying a clipped rectangle of your window:",
+      "start": 428.72,
+      "end": 433.68
+    },
+    {
+      "block": 60,
+      "text": "You can set a tooltip for your thumbnail previews as follows:",
+      "start": 433.86,
+      "end": 437.38
+    },
+    {
+      "block": 61,
+      "text": "Or if you have multiple tab thumbnail previews:",
+      "start": 437.56,
+      "end": 440.52
+    },
+    {
+      "block": 62,
+      "text": "What about managed code?",
+      "start": 440.7,
+      "end": 442.78
+    },
+    {
+      "block": 63,
+      "text": "There are a couple of good resources for tying into the taskbar API from managed languages:",
+      "start": 442.96,
+      "end": 448.08
+    },
+    {
+      "block": 64,
+      "text": "The Windows API Code Pack for the Microsoft .NET Framework: Provides a library that can be used to access new features such as the Taskbar API in Windows 7.",
+      "start": 448.26,
+      "end": 457.06
+    },
+    {
+      "block": 65,
+      "text": "Windows 7 taskbar Interop Sample library: Supplies more features if not available above",
+      "start": 457.24,
+      "end": 462.68
+    },
+    {
+      "block": 66,
+      "text": "Other reading:",
+      "start": 462.86,
+      "end": 464.38
+    },
+    {
+      "block": 67,
+      "text": "Introducing the Taskbar APIs (Nice introductory alternative tutorial covering some different things than I have above)",
+      "start": 464.56,
+      "end": 471.04
+    },
+    {
+      "block": 68,
+      "text": "ITaskbarList3 Interface (The gateway to most of the above features)",
+      "start": 471.22,
+      "end": 475.62
+    },
+    {
+      "block": 69,
+      "text": "ICustomDestinationList Interface (For Jump lists)",
+      "start": 475.8,
+      "end": 479.48
+    }
+  ]
+}

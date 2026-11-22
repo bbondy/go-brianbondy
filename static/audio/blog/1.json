@@ -1,0 +1,15 @@
+{
+  "post": 1,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "f8d734c19ca6988b74967c3c9d544e557e6caf9b1bb4753c21a3a30af5eb9fd7",
+  "audioSHA256": "540a9610b82fb94ef0c98141ab4f74a7fa063cc7d1d2e937e3b50b0eb266eb26",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "Shannon and Brian are having twins, 10 weeks pregnant :)",
+      "start": 0.0,
+      "end": 3.44
+    }
+  ]
+}

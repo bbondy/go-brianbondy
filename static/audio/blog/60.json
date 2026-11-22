@@ -1,0 +1,27 @@
+{
+  "post": 60,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "10351d69983c1f0f06d4a2b4b31885b3499f4e16faa16e6976d495637b01a9e5",
+  "audioSHA256": "3d186f8a2871641ffb38643562c24c42662aab8ba30dcc852333b670a7e88b17",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "I finally signed up for an account at Wikipedia.",
+      "start": 0.0,
+      "end": 2.88
+    },
+    {
+      "block": 0,
+      "text": "I\u2019ve made several anonymous changes in the past.",
+      "start": 3.06,
+      "end": 5.86
+    },
+    {
+      "block": 0,
+      "text": "You can see a list of my contributions here at my wikipedia user page: http://en.wikipedia.org/wiki/User:Netzen",
+      "start": 6.04,
+      "end": 14.2
+    }
+  ]
+}

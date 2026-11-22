@@ -1,0 +1,165 @@
+{
+  "post": 145,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "2d9d01be9bb0c3e5dac962fd6978c83d4e2e5048831a6bb631b30472287a1a4d",
+  "audioSHA256": "1879f87c4193c847686316a85a8d066829a4b3a68d56e74a7bfe01e4a07282cd",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "It\u2019s been a couple months since the last progress update on Firefox for Metro, but things have been progressing at a steady pace.",
+      "start": 0.0,
+      "end": 6.32
+    },
+    {
+      "block": 1,
+      "text": "A new intern working under Frank Yan named Jonathan Wilde started working with us.",
+      "start": 6.5,
+      "end": 11.22
+    },
+    {
+      "block": 1,
+      "text": "He\u2019s focused on the Metro front-end code, and is really tearing through tasks fast.",
+      "start": 11.4,
+      "end": 15.96
+    },
+    {
+      "block": 1,
+      "text": "He\u2019s implemented the new URL bar and tab bar as seen here.",
+      "start": 16.14,
+      "end": 19.74
+    },
+    {
+      "block": 2,
+      "text": "Since the last update we\u2019ve also more or less finished work on the appbar control (the orange bar that appears when doing an edge gesture in Windows 8).",
+      "start": 19.92,
+      "end": 28.24
+    },
+    {
+      "block": 3,
+      "text": "We determined that sharing the same Firefox profile in both Desktop and Metro is out of scope for the initial version, so instead we plan to sync the settings between 2 profiles using Firefox Sync augmented with some key local events to force a sync right away by using Windows Messages, events, and the registry.",
+      "start": 28.42,
+      "end": 44.74
+    },
+    {
+      "block": 4,
+      "text": "We\u2019ve cleaned up and tweaked a lot of the Windows 8 contracts work.",
+      "start": 44.92,
+      "end": 48.44
+    },
+    {
+      "block": 4,
+      "text": "Fixed soft keyboard issues, improved gesture input support, fixed support for invoking external applications, and more.",
+      "start": 48.62,
+      "end": 55.82
+    },
+    {
+      "block": 5,
+      "text": "The graphics code has also been improved by getting rid of the Basic Layers support and moving to LayerManager.",
+      "start": 56.0,
+      "end": 61.92
+    },
+    {
+      "block": 6,
+      "text": "The upgrade from Windows 8 Consumer Preview to Windows 8 Release Preview came with several changes as well that were fixed up.",
+      "start": 62.1,
+      "end": 68.5
+    },
+    {
+      "block": 7,
+      "text": "We removed the XAML interop support because MS decided this was for Metro applications only and not Metro style enabled desktop browsers.",
+      "start": 68.68,
+      "end": 76.44
+    },
+    {
+      "block": 7,
+      "text": "To do this we had to change some startup code, gfx code, and re-implement the appbar using XBL/XUL/JS.",
+      "start": 76.62,
+      "end": 83.98
+    },
+    {
+      "block": 8,
+      "text": "Tim Abraldes finished work on combining metrofirefox.exe with firefox.exe, so now there\u2019s only one shared exe that dynamically determines which front-end to use.",
+      "start": 84.16,
+      "end": 93.12
+    },
+    {
+      "block": 8,
+      "text": "Metro Firefox uses a modified copy of Fennec XUL front-end which is found in browser/metro/.",
+      "start": 93.3,
+      "end": 99.3
+    },
+    {
+      "block": 9,
+      "text": "We also implemented various bugs to support the registration for default browser in Metro.",
+      "start": 99.48,
+      "end": 104.52
+    },
+    {
+      "block": 9,
+      "text": "In particular, Windows itself must be responsible for invoking the default browser UI, so we added code to get Windows to prompt for it.",
+      "start": 104.7,
+      "end": 112.3
+    },
+    {
+      "block": 9,
+      "text": "The code for detecting which browser is the default has also changed in Windows 8, so that was updated too.",
+      "start": 112.48,
+      "end": 118.32
+    },
+    {
+      "block": 10,
+      "text": "An existing open question was how we would distribute one build that worked both with Windows XP and Windows 8.",
+      "start": 118.5,
+      "end": 124.82
+    },
+    {
+      "block": 10,
+      "text": "Microsoft announced that they will be providing support for this, so we won\u2019t have to worry too much about it.",
+      "start": 125.0,
+      "end": 130.2
+    },
+    {
+      "block": 11,
+      "text": "Of particular note is Bug 755724 which is to split up platform and app resources so that they can be loaded individually.",
+      "start": 130.38,
+      "end": 139.02
+    },
+    {
+      "block": 11,
+      "text": "This is probably the main thing holding us up from landing on mozilla-central.",
+      "start": 139.2,
+      "end": 143.36
+    },
+    {
+      "block": 11,
+      "text": "It needs an owner so please reach out to us on #windev if you have time to help out with this task.",
+      "start": 143.54,
+      "end": 148.58
+    },
+    {
+      "block": 12,
+      "text": "A new command line firefox.exe -metrodesktop can be used for viewing the metro front-end in desktop mode.",
+      "start": 148.76,
+      "end": 155.0
+    },
+    {
+      "block": 12,
+      "text": "This is useful for things like debugging since Windows kills your process if you have it paused for too long.",
+      "start": 155.18,
+      "end": 160.54
+    },
+    {
+      "block": 12,
+      "text": "We\u2019re also starting to use this now to get tests running with the Metro front end.",
+      "start": 160.72,
+      "end": 164.96
+    },
+    {
+      "block": 12,
+      "text": "There\u2019s another bug filed but not completed yet to get tests running actually in Metro mode.",
+      "start": 165.14,
+      "end": 169.94
+    }
+  ]
+}

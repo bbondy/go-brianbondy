@@ -1,0 +1,27 @@
+{
+  "post": 25,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "6bd5cc5404dfbb7b67032bfbe99a8bc66603fb2f8d68f69fa9375ea5cccc1ba1",
+  "audioSHA256": "d651d6d5f32e9ecb50e91762f7506c403e531cf2ff963203b8926953c3dea536",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "Linked senses rare in some people, but does exist.",
+      "start": 0.0,
+      "end": 3.36
+    },
+    {
+      "block": 0,
+      "text": "For example hearing music and seeing colors, or having tastes as you see things.",
+      "start": 3.54,
+      "end": 8.18
+    },
+    {
+      "block": 0,
+      "text": "Read here.",
+      "start": 8.36,
+      "end": 9.8
+    }
+  ]
+}

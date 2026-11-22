@@ -1,0 +1,81 @@
+{
+  "post": 124,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "5db3308c0b7d40b7ed09c4603388b13db03c67a564f67d33374a38fd000e4267",
+  "audioSHA256": "025060e26a8028a95087b884ac6aaa85ddaa8942eb094940bbb03cee454c16f6",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "I just wanted to post a quick follow up to my Firefox on Windows 8 post on how Thunderbird works with screenshots.",
+      "start": 0.0,
+      "end": 6.08
+    },
+    {
+      "block": 1,
+      "text": "As with Firefox and other applications, as soon as you install Thunderbird it shows up as a Tile in the metro interface.",
+      "start": 6.26,
+      "end": 12.58
+    },
+    {
+      "block": 2,
+      "text": "Clicking on it exits the tablet metro interface and goes into the old interface and launches Thunderbird.",
+      "start": 12.76,
+      "end": 18.28
+    },
+    {
+      "block": 3,
+      "text": "One important thing is that if you click on a mailto: link in Internet Explorer it won\u2019t launch the default mail client.",
+      "start": 18.46,
+      "end": 24.7
+    },
+    {
+      "block": 3,
+      "text": "Instead it prompts with this error:",
+      "start": 24.88,
+      "end": 27.12
+    },
+    {
+      "block": 4,
+      "text": "Windows Internet Explorer Could not perform this operation because the default mail client is not properly installed.",
+      "start": 27.3,
+      "end": 33.38
+    },
+    {
+      "block": 5,
+      "text": "Here\u2019s a screenshot of that error message:",
+      "start": 33.56,
+      "end": 35.96
+    },
+    {
+      "block": 6,
+      "text": "I assume once this registration problem is fixed it\u2019ll launch the Desktop mode and then launch the email client.",
+      "start": 36.14,
+      "end": 42.38
+    },
+    {
+      "block": 6,
+      "text": "It would be nice to have a metro interface for Thunderbird as well.",
+      "start": 42.56,
+      "end": 46.08
+    },
+    {
+      "block": 7,
+      "text": "Perhaps even a metro style compose email window application only for when a user is browsing in tablet full screen mode and they click to send an email with their default email client.",
+      "start": 46.26,
+      "end": 55.78
+    },
+    {
+      "block": 8,
+      "text": "Related Bug:",
+      "start": 55.96,
+      "end": 57.56
+    },
+    {
+      "block": 9,
+      "text": "Bug 686836 - Launching default email client in Windows 8 results in error",
+      "start": 57.74,
+      "end": 64.38
+    }
+  ]
+}

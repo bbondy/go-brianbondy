@@ -1,0 +1,39 @@
+{
+  "post": 15,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "beb7b45870974b177e493354283988c0b71cf0762e8797b884a14b32d82a8b21",
+  "audioSHA256": "1b073b02dfac76421e2acd40053f89a253e3d5bf195d38c0301600ac9605a086",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "Apple not licensing its OS to other hardware vendors, gives Apple a big advantage overall.",
+      "start": 0.0,
+      "end": 5.2
+    },
+    {
+      "block": 1,
+      "text": "Anytime there is any type of hardware upgrade, Apple gets the credit (and traffic/hits/sales).",
+      "start": 5.38,
+      "end": 10.74
+    },
+    {
+      "block": 1,
+      "text": "When a new processor gets released by Intel (for example today\u2019s 8-core release), Microsoft will not get any new traffic from it; However, Apple will get millions of unique hits (once they release it) because of the hardware release.",
+      "start": 10.92,
+      "end": 23.0
+    },
+    {
+      "block": 2,
+      "text": "The other good part, is that Apple can guarantee that anyone that has an Apple, has a good reliable, fast, non-sluggish experience.",
+      "start": 23.18,
+      "end": 31.02
+    },
+    {
+      "block": 2,
+      "text": "With Microsoft, they can\u2019t guarantee this since Windows runs on any PC hardware which is not sold by Microsoft.",
+      "start": 31.2,
+      "end": 37.68
+    }
+  ]
+}

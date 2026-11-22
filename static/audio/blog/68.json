@@ -1,0 +1,21 @@
+{
+  "post": 68,
+  "voice": "Easton",
+  "model": "phonon",
+  "sourceHash": "7afcb8b56e5ab63a06d9cbb3bb688712bc189341311521a25949e42ef2029f2b",
+  "audioSHA256": "d9826fbbd47f94cc20dee3b8b4ddc74fda8b6a650e3ae2511cf6b66bfdaacde5",
+  "sentences": [
+    {
+      "block": 0,
+      "text": "Added a new submit URL button to the Links page.",
+      "start": 0.0,
+      "end": 2.96
+    },
+    {
+      "block": 0,
+      "text": "It will add the submitted URL to a database for my manual review.",
+      "start": 3.14,
+      "end": 7.06
+    }
+  ]
+}
