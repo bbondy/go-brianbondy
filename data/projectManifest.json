@@ -9,7 +9,7 @@
     "description": "Block ads and trackers, saves data, and speeds up web browsing.",
     "githubStats": {
       "commitCount": 2910,
-      "prCount": 1227
+      "prCount": 1230
     }
   },
   {
@@ -20,8 +20,8 @@
     "github": "https://github.com/brave/bravebot",
     "description": "Open-source, general-purpose AI agent for the terminal, editors, and scripts, with support for hosted and local models. Designed to resist indirect prompt injection by keeping untrusted content out of its planner and processing it in isolated, tool-free agents.",
     "githubStats": {
-      "commitCount": 2577,
-      "prCount": 2046
+      "commitCount": 2584,
+      "prCount": 2054
     }
   },
   {
@@ -33,7 +33,7 @@
     "description": "Secure, native, built-in crypto wallet that supercharges Brave browser for Web3.",
     "githubStats": {
       "commitCount": 249,
-      "prCount": 179
+      "prCount": 181
     },
     "searchKeywords": [
       "wallet",
@@ -129,7 +129,7 @@
     "description": "Deep integration of InterPlanetary File System (IPFS) support in Brave browser, allowing users to access content via content hashes (CIDs) instead of URLs. This enables content distribution without high bandwidth costs, data deduplication, and access to content even if it has been censored. Users can choose between using a local IPFS node or public gateways.",
     "githubStats": {
       "commitCount": 95,
-      "prCount": 36
+      "prCount": 37
     },
     "searchKeywords": [
       "IPFS",
