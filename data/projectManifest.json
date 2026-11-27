@@ -8,8 +8,8 @@
     "blogPostID": 174,
     "description": "Block ads and trackers, saves data, and speeds up web browsing.",
     "githubStats": {
-      "commitCount": 2914,
-      "prCount": 1232
+      "commitCount": 2915,
+      "prCount": 1233
     }
   },
   {
@@ -20,8 +20,8 @@
     "github": "https://github.com/brave/bravebot",
     "description": "Open-source, general-purpose AI agent for the terminal, editors, and scripts, with support for hosted and local models. Designed to resist indirect prompt injection by keeping untrusted content out of its planner and processing it in isolated, tool-free agents.",
     "githubStats": {
-      "commitCount": 2630,
-      "prCount": 2106
+      "commitCount": 2648,
+      "prCount": 2121
     }
   },
   {
@@ -32,8 +32,8 @@
     "github": "https://github.com/brave/brave-core",
     "description": "Secure, native, built-in crypto wallet that supercharges Brave browser for Web3.",
     "githubStats": {
-      "commitCount": 252,
-      "prCount": 183
+      "commitCount": 253,
+      "prCount": 184
     },
     "searchKeywords": [
       "wallet",
@@ -50,7 +50,7 @@
     "description": "AI-powered assistant built into the Brave browser, offering features like question answering, content summarization, and more—all while maintaining privacy.",
     "githubStats": {
       "commitCount": 26,
-      "prCount": 54
+      "prCount": 55
     },
     "searchKeywords": [
       "Leo",

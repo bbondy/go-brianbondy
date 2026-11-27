@@ -1,7 +1,17 @@
 [
   {
-    "date": "2026-11-25",
+    "date": "2026-11-26",
     "title": "Morning Run",
+    "distance_km": 10.52,
+    "time": "1h 11m",
+    "pace": "6:47 min/km",
+    "activity_id": "21133175761",
+    "type": "Run",
+    "elevation": "125m"
+  },
+  {
+    "date": "2026-11-25",
+    "title": "6x (1km, 1km recover)",
     "distance_km": 13.83,
     "time": "1h 16m",
     "pace": "5:31 min/km",
